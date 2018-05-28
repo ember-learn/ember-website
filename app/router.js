@@ -32,6 +32,7 @@ Router.map(function() {
     this.route('payment-sent');
     this.route('commission-sent');
   });
+  this.route('blog', function() {});
 });
 
 export default Router;
