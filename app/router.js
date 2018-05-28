@@ -7,32 +7,32 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('about');
+  this.route('blog', function() {});
   this.route('community', function() {
     this.route('meetups');
     this.route('meetups-getting-started');
   });
+  this.route('documentation');
+  this.route('ember-users');
+  this.route('guidelines');
   this.route('learn', function() {
     this.route('examples');
   });
+  this.route('legal');
+  this.route('logos');
+  this.route('mascots');
+  this.route('meetup-assets');
   this.route('security');
   this.route('sponsors');
-  this.route('meetup-assets');
-  this.route('mascots');
-  this.route('logos');
-  this.route('legal');
-  this.route('guidelines');
-  this.route('ember-users');
-  this.route('documentation');
-  this.route('about');
-  this.route('zoey');
   this.route('tomster', function() {
+    this.route('commission-sent');
     this.route('commission');
     this.route('faq');
-    this.route('payment');
     this.route('payment-sent');
-    this.route('commission-sent');
+    this.route('payment');
   });
-  this.route('blog', function() {});
+  this.route('zoey');
 });
 
 export default Router;
