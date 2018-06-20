@@ -1,0 +1,510 @@
+@import "variables";
+@import "global/helpers";
+
+/* Deprecating these colors/variables */
+$blue-color: #3c64b6;
+$black-color: #252525;
+$light-brown: #b67d47;
+$brown: #865931;
+$medium-gray: #999;
+$dark-gray: #444545;
+$tan: #fffdf9;
+$creme: #FFFBF5;
+
+@import "fontello";
+@import "legal";
+@import "learn";
+
+$small-max-width: 767px;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: rgba(250,235,232,0.36); //white is too white in contrast to ember orange
+  color: #444444;
+}
+
+
+/**
+  Sidebar
+**/
+.sidebar {
+  @media screen and (min-width: 48em) {
+    margin-top: 3em;
+  }
+}
+#sidebar {
+  font-weight: normal;
+  background: #f4ece9;
+  border-left: 1px solid #d4ccc8;
+  border-right: 1px solid #d4ccc8;
+  position: relative;
+
+  @media (min-width: 48em) {
+    float: left;
+    width: 22.5%;
+    min-height: 475px;
+    margin-bottom: 28px;
+    padding-bottom: 120px;
+
+    &:after {
+      // @include background-image(linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1)));
+      position: absolute;
+      bottom: 0px;
+      left: -1px;
+      width: 220px;
+      height: 120px;
+      content: '';
+    }
+  }
+
+  #back-to-top {
+    padding-left: 13px;
+    text-align: center;
+    display: none;
+    // @include transition(opacity 0.05s linear);
+
+    @media screen and (max-width: 1200px) {
+      padding-left: 0px;
+      height: 20px;
+      width: 30px;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 1020px) {
+      display: none !important;
+    }
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.5em;
+    border-bottom: none;
+    // color: $orange-darker;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      color: $black-color;
+    }
+
+    &.active {
+      color: $black-color;
+    }
+  }
+
+  ol#toc-list {
+    background: #f9e7e4;
+
+    li {
+      font-size: 12px;
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+
+      p {
+        padding-left: 7px;
+      }
+
+      a {
+        padding: 0 0 0 1em;
+        line-height: 1.2em;
+      }
+
+      > ol {
+        display: none;
+        margin: 10px 0;
+
+        &.selected {
+          display: block;
+        }
+
+        li.sub-selected {
+          background-color: #f2d1cb;
+
+          > a {
+            font-weight: bolder;
+            color: #282828;
+          }
+        }
+
+      }
+
+      &.level-1 {
+        text-transform: uppercase;
+
+        > a, .level-1-text {
+          font-weight: bold;
+          display: block;
+          color: #443331;
+          border-top: 1px solid #d5ccc8;
+          border-bottom: 1px solid #d5ccc8;
+          padding: 12px 12px 10px 12px;
+          background-color: rgb(244, 236, 233);
+
+          &:hover {
+            background-color: #ECE3E0;
+          }
+        }
+
+        & + .level-1 > a {
+          margin-top: -1px;
+        }
+
+        &.selected > a {
+          background-color: #f16f58;
+          // @include background-image(linear-gradient(-90deg, #f67862, #e7624b));
+          margin-left: -1px;
+          margin-right: -1px;
+          color: $white;
+          border-top: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        &:last-of-type ol {
+          border-bottom: 1px solid #d5ccc8;
+          padding-bottom: 0.5em;
+        }
+      }
+
+      &.level-2, &.level-3 {
+        a {
+          padding: 6px 1em 6px 1em;
+          display: block;
+          text-transform: none;
+          color: #d84a32;
+
+          &:hover {
+            background-color: #f2d1cb;
+            color: black;
+          }
+
+          &:active {
+            color: rgb(94, 94, 94);
+          }
+        }
+      }
+    }
+  }
+}
+
+#guide_search {
+  background-color: #fbf8f7;
+  border: 1px solid #cccccc;
+  position: relative;
+  color: #423432;
+  display: block;
+  width: 100%;
+  height: 40px;
+
+  label {
+    padding: 0px 0px 5px 15px;
+    padding-right: 10px;
+    margin-left: 10px;
+    background: no-repeat url('/images/search-icon.png');
+  }
+
+  border: 0;
+  input:-webkit-input-placeholder { font-style: italic; }
+  input:         -moz-placeholder { font-style: italic; }
+  input:         -moz-placeholder { font-style: italic; }
+
+  input {
+    background: none;
+    font-size: 12px;
+    border: 0px;
+    padding: 5px 0px 5px 5px;
+    height: 100%;
+    width: 165px;
+    outline: none;
+    font-style: normal;
+  }
+
+  button {
+    background: no-repeat url('/images/search-erase.png');
+    width: 14px;
+    border: 0px;
+    height: 14px;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 15px;
+  }
+}
+
+/* Pages */
+
+/**
+  Header
+**/
+#header {
+  position: absolute;
+  width: 100%;
+  // min-width: $page-width;
+  top: 0;
+  height: 60px;
+  background: $orange top center;
+  // @include hidpi('navigation_background', png);
+  border-bottom: 1px solid $orange-darker;
+  z-index: 10; /* The header is on top to have proper drop-shadow. */
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+
+  #wrapper {
+    // width: $page-width;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #search form {
+    display: inline-block
+  }
+
+  #logo {
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    width: 103px;
+    height: 40px;
+    // @include hidpi('ember_logo', 'png');
+    // @include transform(scale(1));
+    // @include transition(0.2s);
+
+    &:hover,
+    &:focus {
+      // @include transform(scale(1.06));
+      border: 0;
+    }
+  }
+
+  #nav {
+    width: 700px;
+    height: 65px;
+    margin: 0 auto;
+    text-align: center;
+
+    li {
+      line-height: 26px;
+      margin: 18px 0 0;
+      display: inline-block;
+
+      a {
+        font-weight: bold;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #faf2ee;
+        text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
+        display: block;
+        padding: 0px 1em;
+        height: 26px;
+        line-height: 26px;
+        text-decoration: none;
+        border: 1px solid transparent;
+
+        &:hover {
+          color: #ffffff
+        }
+      }
+
+      &.active a {
+        color: #331915;
+        text-shadow: rgba(255, 255, 255, 0.2) 0 1px 0px;
+        background-color: #bf4737;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        border: 1px solid #923c2e;
+        box-shadow:
+          rgba(255, 255, 255, 0.15) 0 1px 0px,
+          inset rgba(0, 0, 0, 0.17) 0 1px 1px;
+
+        &:hover {
+          color: black;
+          background-color: rgba(0, 0, 0, 0.17);
+        }
+      }
+
+    }
+  }
+
+  #search {
+    form input.st-search-input {
+      margin-left: 12px;
+      font-size: 100%;
+      padding: 2px 9px 2px 27px;
+      height: 26px;
+      background-position: 7px 6px;
+      width: 150px;
+    }
+  }
+
+  #github {
+    position: absolute;
+    right: 7px;
+    top: 17px;
+
+    a {
+      img {
+        float: left;
+        margin-top: 7px;
+        margin-right: 6px;
+        display: block;
+      }
+
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #faf2ee;
+      text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
+      display: block;
+      padding: 0px 1em 0 0.5em;
+      height: 28px;
+      line-height: 28px;
+      background-color: #ff6e56;
+      // @include background-image(linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%));
+
+      border: 1px solid #a93926;
+      border-radius: 4px;
+      box-shadow: inset rgba(255, 255, 255, 0.17) 0 1px 1px;
+
+      &:hover {
+        color: #ffffff;
+        background: #f86c55;
+      }
+    }
+
+    .icon-fork {
+      font-size: 1.4em;
+      margin-left: 0;
+      vertical-align: middle;
+    }
+  }
+}
+
+#content-wrapper {
+  &.grid {
+    // background-image: url('/images/grid.png');
+  }
+}
+
+#content {
+  &.has-sidebar {
+    margin-bottom: 90px;
+
+    @media (min-width: 48em) {
+      width: 72.5%;
+      float: left;
+      margin-left: 5%;
+    }
+  }
+
+  figure {
+    width: 100%;
+    background-color: #ffffff;
+    margin: 1.5em 0;
+    text-align: center;
+    border: 1px solid #cccccc;
+    overflow-x: auto;
+  }
+
+  aside {
+    background-color: #ffffff;
+    padding: 1em;
+    color: #666666;
+    code {
+      color: #777777;
+    }
+  }
+}
+
+
+
+/**
+  Ember Users Page
+**/
+// Go look in pages/ember-users
+
+
+/**
+  Tomster FAQ Page
+**/
+
+body.tomster_faq #content {
+  li {
+    margin-bottom: 4px;
+  }
+
+  hr {
+    height: 1px;
+    border: none;
+    margin: 2em 0;
+    background-color: #dfd7d4;
+  }
+
+  .back-to-top {
+    padding-left: 13px;
+    text-align: center;
+    display: none;
+    // @include transition(opacity 0.05s linear);
+
+    @media screen and (max-width: 1200px) {
+      padding-left: 0px;
+      height: 20px;
+      width: 30px;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 1020px) {
+      display: none !important;
+    }
+  }
+}
+
+.tomster-faq {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  // @include clearfix;
+
+  .left-col {
+    // float: left;
+    // width: 491px;
+    flex: 2;
+    flex-flow: row wrap;
+    ol {
+      li {
+        text-align: left;
+      }
+    }
+  }
+
+  .right-col {
+    // float: left;
+    // width: 225px;
+    // margin-left: 40px;
+    // text-align: center;
+    flex: 1;
+    // @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
+    //   display: none;
+    // }
+  }
+}
+
+/**
+  Core Team Page + Guidelines Page + Meetup Assets Page + Legal
+**/
+
+  .rightFloat {
+    float: right;
+    padding: 2px;
+  }
+
+
+.screenshot {
+  margin-left: -60px;
+}
+
+.cta-contribute {
+  text-align: center;
+}
