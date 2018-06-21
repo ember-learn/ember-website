@@ -1,6 +1,9 @@
 @import "variables";
 @import "global/helpers";
 
+@import "typography";
+@import "layout";
+
 /* Deprecating these colors/variables */
 $blue-color: #3c64b6;
 $black-color: #252525;
@@ -494,12 +497,6 @@ body.tomster_faq #content {
 /**
   Core Team Page + Guidelines Page + Meetup Assets Page + Legal
 **/
-
-  .rightFloat {
-    float: right;
-    padding: 2px;
-  }
-
 
 .screenshot {
   margin-left: -60px;
