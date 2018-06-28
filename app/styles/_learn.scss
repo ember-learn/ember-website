@@ -109,9 +109,12 @@
 //   padding: 0 0.5rem;
 // }
 
+main.container section {
+  padding: 1em 0;
+}
+
 //delete these after fixes are in ember-styleguide
 section {
-  padding: 1em 25em;
   h1, p {
     min-width: 100%;
   }
@@ -140,8 +143,7 @@ section {
     img {
       height: 50px;
       width: auto;
-    }  
+    }
   }
 
 }
-
