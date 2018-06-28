@@ -76,11 +76,11 @@
 //   list-style: none;
 // }
 
-// .showcase--item {
-//   display: flex;
+.showcase--item {
+  display: flex;
 
-//   padding: 0.5em;
-// }
+  padding: 0.5em;
+}
 
 // @media screen and (max-width: $small-max-width) {
 //   .showcase--item {
@@ -88,9 +88,9 @@
 //   }
 // }
 
-// .showcase--screenshot {
-//   flex: 2;
-// }
+.showcase--screenshot {
+  flex: 2;
+}
 
 // @media screen and (max-width: $small-max-width) {
 //   .showcase--screenshot {
@@ -99,19 +99,22 @@
 //   }
 // }
 
-// .showcase--image {
-//   height: 200px;
-//   width: 300px;
-// }
+.showcase--image {
+  height: 200px;
+  width: 300px;
+}
 
-// .showcase--description {
-//   flex: 3.2;
-//   padding: 0 0.5rem;
+.showcase--description {
+  flex: 3.2;
+  padding: 0 0.5rem;
+}
+
+// main.container section {
+//   padding: 1em 0;
 // }
 
 //delete these after fixes are in ember-styleguide
 section {
-  padding: 1em 25em;
   h1, p {
     min-width: 100%;
   }
@@ -140,8 +143,7 @@ section {
     img {
       height: 50px;
       width: auto;
-    }  
+    }
   }
 
 }
-
