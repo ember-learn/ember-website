@@ -27,6 +27,11 @@ module.exports = function(environment) {
       algoliaKey: '760969ef081fcadc7e0e60faefdb0907'
     },
 
+    fastboot: {
+      hostWhitelist: [/^localhost:\d+$/]
+    },
+
+    host: 'http://localhost:4200',
   };
 
   if (environment === 'development') {
@@ -50,7 +55,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+    ENV.host = 'http://localhost:7784';
   }
 
   return ENV;

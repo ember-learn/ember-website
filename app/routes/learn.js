@@ -1,9 +1,9 @@
 import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
+import fetch from 'ember-fetch/ajax';
+import config from 'ember-website/config/environment';
 
 export default Route.extend({
-  ajax: service(),
   model() {
-    return this.ajax.request('/data/showcase.json');
+    return fetch(`${config.host}/data/showcase.json`);
   }
 });
