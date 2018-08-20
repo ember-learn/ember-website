@@ -1,10 +1,10 @@
 <section aria-labelledby="learningember">
   <h1 id="learningember">Learning Ember.js</h1>
   <p>
-    <img src="/images/tomsters/teaching-reverse.png" alt="" role="presentation" class="pull-right img-mascot"> 
+    <img src="/images/tomsters/teaching-reverse.png" alt="" role="presentation" class="pull-right img-mascot">
     Are you getting started on your Ember.js adventure? Check out our official reading material:
   <ul>
-    <li> 
+    <li>
       <a href="https://guides.emberjs.com/current/getting-started/quick-start/"><strong>Quick start</strong><i class="icon-link-ext" aria-hidden="true"></i></a>
       : An easy breezy introduction to the framework.</li>
     <li> <a href="https://guides.emberjs.com/current/tutorial/ember-cli/"><strong>Tutorial</strong><i class="icon-link-ext" aria-hidden="true"></i></a>
@@ -72,7 +72,7 @@
     {{#each model as |showcase|}}
       <div class="showcase--item">
         <div class="showcase--screenshot">
-          <img class="showcase--image" src="/images/learn/{{showcase.image.src}}" alt="{{showcase.image.alt}}">
+          <img class="showcase--image" src="{{showcase.image.src}}" alt="{{showcase.image.alt}}">
         </div>
         <div class="showcase--description">
           <h3> <a href={{showcase.demo}}>{{showcase.name}}<i class="icon-link-ext" aria-hidden="true"></i></a></h3>
@@ -149,4 +149,3 @@
     In short, the best way to make sure you have a healthy application is to comment on RFCs, clean up deprecations when you see them, and when possible, test your application against beta and canary releases of Ember.
   </p>
 </section>
- 

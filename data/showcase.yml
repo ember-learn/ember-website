@@ -3,7 +3,7 @@
 #
 - name: Super Rentals
   image:
-    src: showcase-super-rentals.png
+    src: /images/learn/showcase-super-rentals.png
     alt: Super Rentals tutorial application
   repository: https://github.com/ember-learn/super-rentals
   demo: https://ember-learn-super-rentals.herokuapp.com/rentals
@@ -14,7 +14,7 @@
     - Acceptance, integration, and unit tests using <a href="http://www.ember-cli-mirage.com/">Ember CLI Mirage</a>.
 - name: Builds
   image:
-    src: showcase-builds.png
+    src: /images/learn/showcase-builds.png
     alt: Builds page application
   repository: https://github.com/ember-learn/builds
   demo: https://emberjs.com/builds
@@ -25,7 +25,7 @@
     - Loading of an Ember.js application via JavaScript in the <a href="https://github.com/emberjs/website">website</a>.
 - name: API Docs
   image:
-    src: showcase-api-docs.png
+    src: /images/learn/showcase-api-docs.png
     alt: API docs application
   repository: https://github.com/ember-learn/ember-api-docs
   demo: https://emberjs.com/api/
