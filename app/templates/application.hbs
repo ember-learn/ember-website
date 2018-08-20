@@ -1,5 +1,9 @@
 {{#es-header}}
-  {{es-navbar links=links}}
+  {{#es-navbar links=links}}
+    <form>
+      {{search-input projectVersion=page.currentVersion}}
+    </form>
+  {{/es-navbar}}
 {{/es-header}}
 <main>
 {{outlet}}
