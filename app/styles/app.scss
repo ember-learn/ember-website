@@ -1,9 +1,6 @@
 @import "variables";
 @import "global/helpers";
 
-@import "typography";
-@import "layout";
-
 /* Deprecating these colors/variables */
 $blue-color: #3c64b6;
 $black-color: #252525;
@@ -15,7 +12,6 @@ $tan: #fffdf9;
 $creme: #FFFBF5;
 
 @import "fontello";
-@import "legal";
 @import "learn";
 
 $small-max-width: 767px;
