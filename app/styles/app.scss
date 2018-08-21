@@ -12,7 +12,6 @@ $tan: #fffdf9;
 $creme: #FFFBF5;
 
 @import "fontello";
-@import "legal";
 @import "learn";
 
 $small-max-width: 767px;
@@ -494,12 +493,6 @@ body.tomster_faq #content {
 /**
   Core Team Page + Guidelines Page + Meetup Assets Page + Legal
 **/
-
-  .rightFloat {
-    float: right;
-    padding: 2px;
-  }
-
 
 .screenshot {
   margin-left: -60px;

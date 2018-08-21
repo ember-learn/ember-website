@@ -3405,7 +3405,7 @@ ember-source@~3.3.1:
 
 "ember-styleguide@github:ember-learn/ember-styleguide#feature/new-nav-bar":
   version "2.1.0"
-  resolved "https://codeload.github.com/ember-learn/ember-styleguide/tar.gz/5f795ae42f4320782457627f2758898b79e0b002"
+  resolved "https://codeload.github.com/ember-learn/ember-styleguide/tar.gz/def6fc6399e48d7f7cb9bf49296db6d44b56d345"
   dependencies:
     bootstrap "^4.0.0"
     broccoli-funnel "^2.0.1"
