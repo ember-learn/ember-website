@@ -4,7 +4,39 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    prember: {
+      urls: [
+        'about',
+        'blog',
+        'community',
+        'community/meetups',
+        'community/meetups-getting-started',
+        'documentation',
+        'ember-users',
+        'guidelines',
+        'learn',
+        'learn/examples',
+        'legal',
+        'logos',
+        'mascots',
+        'meetup-assets',
+        'security',
+        'sponsors',
+        'team',
+        'tomster',
+        'tomster/commission-sent',
+        'tomster/commission',
+        'tomster/faq',
+        'tomster/payment-sent',
+        'tomster/payment',
+        'zoey',
+      ]
+    },
+    "ember-bootstrap": {
+      bootstrapVersion: 4,
+      importBootstrapFont: false,
+      importBootstrapCSS: false
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated

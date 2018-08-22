@@ -20,7 +20,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    'ember-algolia': {
+      algoliaId: 'BH4D9OD16A',
+      algoliaKey: '760969ef081fcadc7e0e60faefdb0907'
+    },
+
+    fastboot: {
+      hostWhitelist: [/^localhost:\d+$/]
+    },
+
+    host: 'http://localhost:4200',
   };
 
   if (environment === 'development') {
@@ -32,6 +43,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'test') {
+    ENV.host = '';
     // Testem prefers this...
     ENV.locationType = 'none';
 
@@ -44,7 +56,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+    ENV.host = 'http://localhost:7784';
   }
 
   return ENV;

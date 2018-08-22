@@ -1,3 +1,13 @@
-<h2 id="title">Welcome to Ember</h2>
+{{#es-header}}
+  {{#es-navbar links=links}}
+    <form>
+      {{search-input projectVersion=page.currentVersion}}
+    </form>
+  {{/es-navbar}}
+{{/es-header}}
 
-{{outlet}}
+<main class="container">
+  {{outlet}}
+</main>
+
+{{es-footer}}
