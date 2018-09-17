@@ -3902,14 +3902,14 @@ ember-maybe-in-element@^0.1.3:
   dependencies:
     ember-cli-babel "^6.11.0"
 
-ember-percy@^1.4.2:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/ember-percy/-/ember-percy-1.4.4.tgz#8ce56e040368dc6152b8fb23d3f20f678917e0a2"
+ember-percy@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/ember-percy/-/ember-percy-1.5.0.tgz#c70d66f7cdcc6078d2b7e18de04e545ac4da9818"
   dependencies:
     body-parser "^1.15.0"
     ember-cli-babel "^6.10.0"
     es6-promise-pool "^2.4.1"
-    percy-client "^2.10.0"
+    percy-client "^3.0.0"
     walk "^2.3.9"
 
 ember-popper@^0.9.0:
@@ -7490,9 +7490,9 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-percy-client@^2.10.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/percy-client/-/percy-client-2.11.0.tgz#65e912b4ae4d2d0937360d43b8cdcd2c86ae0ed0"
+percy-client@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/percy-client/-/percy-client-3.0.0.tgz#86289f8224817cf550c9b21aaf994b7fa16f291d"
   dependencies:
     base64-js "^1.2.3"
     bluebird "^3.5.1"
