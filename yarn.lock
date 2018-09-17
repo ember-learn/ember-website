@@ -3327,11 +3327,12 @@ elliptic@^6.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
-ember-ajax@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/ember-ajax/-/ember-ajax-3.1.0.tgz#3db36e67357ef447639517656aeac4bb13e73a9c"
+ember-ajax@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/ember-ajax/-/ember-ajax-3.1.1.tgz#dcb55aaf1a9fe8b2ce04206863384709ebc2358b"
   dependencies:
-    ember-cli-babel "^6.6.0"
+    ember-cli-babel "^6.16.0"
+    najax "^1.0.3"
 
 ember-algolia@0.0.10:
   version "0.0.10"
@@ -3778,9 +3779,9 @@ ember-copy@^1.0.0:
   dependencies:
     ember-cli-babel "^6.6.0"
 
-ember-data@~3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-3.4.0.tgz#d303057d560b0002f5b1490a7c24c4bfb74cd2fa"
+ember-data@~3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-3.4.2.tgz#675cc4f1be8df1f5c0bfe4191afa6986377721c0"
   dependencies:
     "@ember/ordered-set" "^2.0.0"
     babel-plugin-feature-flags "^0.3.1"
@@ -6925,7 +6926,7 @@ mute-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
 
-najax@^1.0.2:
+najax@^1.0.2, najax@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/najax/-/najax-1.0.4.tgz#63fd8dbf15d18f24dc895b3a16fec66c136b8084"
   dependencies:
