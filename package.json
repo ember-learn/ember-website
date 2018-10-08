@@ -21,7 +21,7 @@
     "broccoli-asset-rev": "^3.0.0",
     "ember-ajax": "^3.1.1",
     "ember-algolia": "0.0.10",
-    "ember-body-class": "^1.0.1",
+    "ember-body-class": "^1.0.3",
     "ember-browserify": "^1.2.2",
     "ember-cli": "~3.4.3",
     "ember-cli-app-version": "^3.0.0",
