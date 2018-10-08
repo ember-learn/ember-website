@@ -3355,11 +3355,11 @@ ember-assign-polyfill@^2.0.1:
     ember-cli-babel "^6.6.0"
     ember-cli-version-checker "^2.0.0"
 
-ember-body-class@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ember-body-class/-/ember-body-class-1.0.1.tgz#e6b9a12eaf8fe12de521a0bca2669486a1ca8228"
+ember-body-class@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/ember-body-class/-/ember-body-class-1.0.3.tgz#c9165c89a187ce7917152f643c398c7d6eb129d5"
   dependencies:
-    ember-cli-babel "^6.6.0"
+    ember-cli-babel "^6.16.0"
 
 ember-bootstrap@^1.2.0:
   version "1.2.2"
