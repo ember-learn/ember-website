@@ -1,6 +1,8 @@
 @import "variables";
 @import "global/helpers";
 
+@import 'pages/_faq';
+
 /* Deprecating these colors/variables */
 $blue-color: #3c64b6;
 $black-color: #252525;
@@ -460,35 +462,6 @@ body.tomster_faq #content {
   }
 }
 
-.tomster-faq {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  // @include clearfix;
-
-  .left-col {
-    // float: left;
-    // width: 491px;
-    flex: 2;
-    flex-flow: row wrap;
-    ol {
-      li {
-        text-align: left;
-      }
-    }
-  }
-
-  .right-col {
-    // float: left;
-    // width: 225px;
-    // margin-left: 40px;
-    // text-align: center;
-    flex: 1;
-    // @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
-    //   display: none;
-    // }
-  }
-}
 
 /**
   Core Team Page + Guidelines Page + Meetup Assets Page + Legal
