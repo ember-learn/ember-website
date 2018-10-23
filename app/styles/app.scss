@@ -2,6 +2,7 @@
 @import "global/helpers";
 
 @import 'pages/_faq';
+@import 'pages/_logos';
 
 /* Deprecating these colors/variables */
 $blue-color: #3c64b6;
@@ -473,4 +474,10 @@ body.tomster_faq #content {
 
 .cta-contribute {
   text-align: center;
+}
+
+// TODO: remove this one it's fixed in ember-styleguides
+
+section {
+  display: contents;
 }
