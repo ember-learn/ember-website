@@ -1,4 +1,10 @@
 .tomster-faq {
+
+  main > section {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
   ol {
     li {
       margin: 15px 0 10px 0;
