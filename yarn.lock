@@ -1677,7 +1677,7 @@ boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
 
-bootstrap@^4.0.0:
+bootstrap@^4.1.3:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.1.3.tgz#0eb371af2c8448e8c210411d0cb824a6409a12be"
 
@@ -2095,6 +2095,16 @@ broccoli-sass-source-maps@^2.1.0:
     object-assign "^2.0.0"
     rsvp "^3.0.6"
 
+broccoli-sass-source-maps@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/broccoli-sass-source-maps/-/broccoli-sass-source-maps-4.0.0.tgz#1ee4c10a810b10955b0502e28f85ab672f5961a2"
+  dependencies:
+    broccoli-caching-writer "^3.0.3"
+    include-path-searcher "^0.1.0"
+    mkdirp "^0.3.5"
+    object-assign "^2.0.0"
+    rsvp "^3.0.6"
+
 broccoli-slow-trees@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/broccoli-slow-trees/-/broccoli-slow-trees-3.0.1.tgz#9bf2a9e2f8eb3ed3a3f2abdde988da437ccdc9b4"
@@ -2115,7 +2125,7 @@ broccoli-sri-hash@^2.1.0:
     sri-toolbox "^0.2.0"
     symlink-or-copy "^1.0.1"
 
-broccoli-stew@^1.4.0, broccoli-stew@^1.5.0:
+broccoli-stew@^1.5.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/broccoli-stew/-/broccoli-stew-1.6.0.tgz#01f6d92806ed6679ddbe48d405066a0e164dfbef"
   dependencies:
@@ -3391,7 +3401,7 @@ ember-algolia@0.0.10:
     ember-cli-babel "^6.8.2"
     rsvp "^4.7.0"
 
-ember-assign-polyfill@^2.0.1:
+ember-assign-polyfill@^2.0.1, ember-assign-polyfill@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/ember-assign-polyfill/-/ember-assign-polyfill-2.5.0.tgz#0dc7079addbdbad7984ba3f35d970cf07a73f704"
   dependencies:
@@ -3411,19 +3421,19 @@ ember-body-class@^1.0.3:
   dependencies:
     ember-cli-babel "^6.16.0"
 
-ember-bootstrap@^1.2.0:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/ember-bootstrap/-/ember-bootstrap-1.2.2.tgz#768380b746c79811dd2fb508c81ac0eeb024a114"
+ember-bootstrap@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/ember-bootstrap/-/ember-bootstrap-2.1.2.tgz#99fc88b32479e364e793a673f022962c81fb8565"
   dependencies:
     broccoli-debug "^0.6.3"
     broccoli-funnel "^2.0.0"
-    broccoli-merge-trees "^2.0.0"
-    broccoli-stew "^1.4.0"
+    broccoli-merge-trees "^3.0.1"
+    broccoli-stew "^2.0.0"
     chalk "^2.1.0"
     ember-assign-polyfill "^2.0.1"
     ember-cli-babel "^6.8.2"
     ember-cli-build-config-editor "0.5.0"
-    ember-cli-htmlbars "^2.0.2"
+    ember-cli-htmlbars "^3.0.0"
     ember-cli-version-checker "^2.1.0"
     ember-concurrency "^0.8.7"
     ember-in-element-polyfill "^0.1.2"
@@ -3585,7 +3595,7 @@ ember-cli-htmlbars-inline-precompile@^1.0.0, ember-cli-htmlbars-inline-precompil
     heimdalljs-logger "^0.1.9"
     silent-error "^1.1.0"
 
-ember-cli-htmlbars@^2.0.1, ember-cli-htmlbars@^2.0.2, ember-cli-htmlbars@^2.0.3:
+ember-cli-htmlbars@^2.0.1, ember-cli-htmlbars@^2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-2.0.4.tgz#0bcda483f14271663c38756e1fd1cb89da6a50cf"
   dependencies:
@@ -3594,7 +3604,7 @@ ember-cli-htmlbars@^2.0.1, ember-cli-htmlbars@^2.0.2, ember-cli-htmlbars@^2.0.3:
     json-stable-stringify "^1.0.0"
     strip-bom "^3.0.0"
 
-ember-cli-htmlbars@^3.0.1:
+ember-cli-htmlbars@^3.0.0, ember-cli-htmlbars@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-3.0.1.tgz#01e21f0fd05e0a6489154f26614b1041769e3e58"
   dependencies:
@@ -3662,13 +3672,22 @@ ember-cli-qunit@^4.4.0:
     ember-cli-babel "^6.11.0"
     ember-qunit "^3.5.0"
 
-ember-cli-sass@^7.1.4, ember-cli-sass@^7.1.5, ember-cli-sass@^7.1.7:
+ember-cli-sass@^7.1.5, ember-cli-sass@^7.1.7:
   version "7.1.7"
   resolved "https://registry.yarnpkg.com/ember-cli-sass/-/ember-cli-sass-7.1.7.tgz#66899134788ec8d2406a45f5346d4db47a2aa012"
   dependencies:
     broccoli-funnel "^1.0.0"
     broccoli-merge-trees "^1.1.0"
     broccoli-sass-source-maps "^2.1.0"
+    ember-cli-version-checker "^2.1.0"
+
+ember-cli-sass@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-sass/-/ember-cli-sass-8.0.1.tgz#22730bb8eee1eedc6ddd0cf2e51f5405a09b9139"
+  dependencies:
+    broccoli-funnel "^1.0.0"
+    broccoli-merge-trees "^1.1.0"
+    broccoli-sass-source-maps "^4.0.0"
     ember-cli-version-checker "^2.1.0"
 
 ember-cli-shims@^1.2.0:
@@ -3832,12 +3851,6 @@ ember-concurrency@^0.8.7:
     babel-core "^6.24.1"
     ember-cli-babel "^6.8.2"
     ember-maybe-import-regenerator "^0.1.5"
-
-ember-copy@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ember-copy/-/ember-copy-1.0.0.tgz#426554ba6cf65920f31d24d0a3ca2cb1be16e4aa"
-  dependencies:
-    ember-cli-babel "^6.6.0"
 
 ember-data@~3.5.0:
   version "3.5.0"
@@ -4068,23 +4081,24 @@ ember-source@~3.3.1:
     resolve "^1.6.0"
 
 "ember-styleguide@github:ember-learn/ember-styleguide#feature/new-nav-bar":
-  version "2.1.0"
-  resolved "https://codeload.github.com/ember-learn/ember-styleguide/tar.gz/def6fc6399e48d7f7cb9bf49296db6d44b56d345"
+  version "2.3.1"
+  resolved "https://codeload.github.com/ember-learn/ember-styleguide/tar.gz/9c8714edeebb214c4d1621c86af03e38a566933a"
   dependencies:
-    bootstrap "^4.0.0"
+    bootstrap "^4.1.3"
     broccoli-funnel "^2.0.1"
-    broccoli-merge-trees "^2.0.0"
-    ember-bootstrap "^1.2.0"
-    ember-cli-babel "^6.6.0"
+    broccoli-merge-trees "^3.0.1"
+    ember-bootstrap "^2.1.2"
+    ember-cli-babel "^7.1.2"
     ember-cli-google-fonts "^2.16.2"
-    ember-cli-htmlbars "^2.0.1"
-    ember-cli-sass "^7.1.4"
-    ember-svg-jar "^1.2.0"
-    ember-truth-helpers "^2.0.0"
+    ember-cli-htmlbars "^3.0.0"
+    ember-cli-sass "^8.0.1"
+    ember-svg-jar "^1.2.2"
+    ember-truth-helpers "^2.1.0"
+    node-sass "^4.9.4"
 
-ember-svg-jar@^1.2.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/ember-svg-jar/-/ember-svg-jar-1.2.1.tgz#a6f2c2404eec72aaa819b66407cec0ebe72be99b"
+ember-svg-jar@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/ember-svg-jar/-/ember-svg-jar-1.2.2.tgz#065d9a462353dbf3b1b4f57fb653859bfbe52022"
   dependencies:
     broccoli-caching-writer "^3.0.3"
     broccoli-funnel "^2.0.1"
@@ -4093,8 +4107,8 @@ ember-svg-jar@^1.2.0:
     broccoli-svg-optimizer "1.1.0"
     broccoli-symbolizer "^0.6.0"
     cheerio "^0.22.0"
+    ember-assign-polyfill "^2.5.0"
     ember-cli-babel "^6.6.0"
-    ember-copy "^1.0.0"
     lodash "^4.13.1"
     mkdirp "^0.5.1"
     path-posix "^1.0.0"
@@ -4107,7 +4121,7 @@ ember-tether@^1.0.0:
     ember-cli-node-assets "^0.2.2"
     tether "^1.4.0"
 
-ember-truth-helpers@^2.0.0:
+ember-truth-helpers@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ember-truth-helpers/-/ember-truth-helpers-2.1.0.tgz#d4dab4eee7945aa2388126485977baeb33ca0798"
   dependencies:
@@ -7285,6 +7299,30 @@ node-sass@^4.7.2:
     stdout-stream "^1.4.0"
     "true-case-path" "^1.0.2"
 
+node-sass@^4.9.4:
+  version "4.9.4"
+  resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.9.4.tgz#349bd7f1c89422ffe7e1e4b60f2055a69fbc5512"
+  dependencies:
+    async-foreach "^0.1.3"
+    chalk "^1.1.1"
+    cross-spawn "^3.0.0"
+    gaze "^1.0.0"
+    get-stdin "^4.0.1"
+    glob "^7.0.3"
+    in-publish "^2.0.0"
+    lodash.assign "^4.2.0"
+    lodash.clonedeep "^4.3.2"
+    lodash.mergewith "^4.6.0"
+    meow "^3.7.0"
+    mkdirp "^0.5.1"
+    nan "^2.10.0"
+    node-gyp "^3.8.0"
+    npmlog "^4.0.0"
+    request "^2.88.0"
+    sass-graph "^2.2.4"
+    stdout-stream "^1.4.0"
+    "true-case-path" "^1.0.2"
+
 "nopt@2 || 3", nopt@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
@@ -8263,7 +8301,7 @@ request@2.87.0:
     tunnel-agent "^0.6.0"
     uuid "^3.1.0"
 
-request@^2.81.0, request@^2.85.0, request@^2.87.0:
+request@^2.81.0, request@^2.85.0, request@^2.87.0, request@^2.88.0:
   version "2.88.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   dependencies:
