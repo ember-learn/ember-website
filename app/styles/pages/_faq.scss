@@ -1,0 +1,23 @@
+.tomster-faq {
+  ol {
+    li {
+      margin: 15px 0 10px 0;
+    }
+  }
+
+  hr {
+    height: 1px;
+    border: none;
+    margin: 2em 0;
+    background-color: #dfd7d4;
+  }
+
+  .left-col {
+    flex: 2;
+    flex-flow: row wrap;
+  }
+
+  .right-col {
+    flex: 1;
+  }
+}
