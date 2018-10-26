@@ -209,10 +209,13 @@ body {
     background: no-repeat url('/images/search-icon.png');
   }
 
-  border: 0;
-  input:-webkit-input-placeholder { font-style: italic; }
-  input:         -moz-placeholder { font-style: italic; }
-  input:         -moz-placeholder { font-style: italic; }
+  ::-webkit-input-placeholder {
+    font-style: italic;
+  }
+  
+  ::-moz-placeholder {
+    font-style: italic;
+  }
 
   input {
     background: none;
