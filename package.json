@@ -54,6 +54,7 @@
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.5.0",
     "ember-styleguide": "github:ember-learn/ember-styleguide#feature/new-nav-bar",
+    "ember-template-lint": "^v1.0.0-beta.6",
     "ember-tether": "^1.0.0",
     "eslint-plugin-ember": "^5.2.0",
     "loader.js": "^4.7.0",

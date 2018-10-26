@@ -25,7 +25,7 @@ before_install:
   - yarn install --non-interactive
 
 script:
-  #- yarn lint:hbs
+  - yarn lint:hbs
   - yarn lint:style
   - yarn lint:js
   - yarn test
