@@ -26,5 +26,6 @@ before_install:
 
 script:
   #- yarn lint:hbs
+  - yarn lint:style
   - yarn lint:js
   - yarn test

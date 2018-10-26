@@ -16,6 +16,7 @@
   "scripts": {
     "build": "ember build",
     "lint:hbs": "ember-template-lint .",
+    "lint:style": "stylelint 'app/**/*.scss'",
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test"
@@ -41,6 +42,7 @@
     "ember-cli-qunit": "^4.4.0",
     "ember-cli-sass": "^8.0.1",
     "ember-cli-sri": "^2.1.1",
+    "ember-cli-stylelint": "^2.1.0",
     "ember-cli-uglify": "^2.1.0",
     "ember-data": "~3.5.0",
     "ember-export-application-global": "^2.0.0",
@@ -57,7 +59,10 @@
     "loader.js": "^4.7.0",
     "prember": "^0.4.0",
     "qunit-dom": "^0.8.0",
-    "sass": "^1.14.3"
+    "sass": "^1.14.3",
+    "stylelint": "^9.5.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-scss": "^3.3.0"
   },
   "engines": {
     "node": "8.* || >= 10.* || >= 11.*"
