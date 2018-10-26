@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "description": "Small description for ember-website goes here",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ember-learn/ember-website.git"
+  },
   "license": "MIT",
   "author": "",
   "directories": {
