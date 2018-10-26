@@ -1,14 +1,10 @@
 ---
 language: node_js
 node_js:
-  - "8"
+  - "6"
 
 sudo: false
 dist: trusty
-
-branches:
-  only:
-    - master
 
 addons:
   chrome: stable
@@ -22,12 +18,9 @@ env:
     - JOBS=1
 
 before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH=$HOME/.yarn/bin:$PATH
-
-install:
   - yarn install --non-interactive
 
 script:
+  - yarn lint:hbs
   - yarn lint:js
   - yarn test
