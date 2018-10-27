@@ -10,9 +10,9 @@
   &-item {
     align-items: center;
     display: flex;
+    flex: 1 1 1;
     flex-flow: row wrap;
     flex-grow: 1;
-    flex: 1 1 1;
     height: 175px;
     justify-content: center;
     margin: 1.5em 0.75em;
