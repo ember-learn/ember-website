@@ -1,0 +1,21 @@
+.meetup-video {
+  margin-top: 4rem;
+  padding-top: 64px;
+}
+
+.section-image {
+  margin: 15px 20px 15px 0;
+  width: 220px;
+  height: 142px;
+
+  &.pull-right {
+    margin: 15px 0 15px 20px;
+  }
+}
+
+.section-split {
+  &-item {
+    flex: 1;
+    padding: 0 1rem;
+  }
+}
