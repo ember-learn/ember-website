@@ -4,6 +4,7 @@
 
 @import 'pages/_faq';
 @import 'pages/_logos';
+@import 'pages/ember-users';
 
 /* Deprecating these colors/variables */
 $blue-color: #3c64b6;
@@ -213,7 +214,7 @@ body {
   ::-webkit-input-placeholder {
     font-style: italic;
   }
-  
+
   ::-moz-placeholder {
     font-style: italic;
   }
