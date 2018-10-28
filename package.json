@@ -22,7 +22,6 @@
     "test": "ember test"
   },
   "devDependencies": {
-    "@ember/jquery": "^0.5.2",
     "@ember/optional-features": "^0.7.0",
     "algoliasearch": "^3.30.0",
     "broccoli-asset-rev": "^3.0.0",
