@@ -60,7 +60,7 @@
     "prember": "^1.0.0",
     "qunit-dom": "^0.8.0",
     "sass": "^1.14.3",
-    "stylelint": "^9.5.0",
+    "stylelint": "^9.7.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-scss": "^3.3.0"
   },
