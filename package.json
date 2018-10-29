@@ -57,7 +57,7 @@
     "ember-tether": "^1.0.0",
     "eslint-plugin-ember": "^5.2.0",
     "loader.js": "^4.7.0",
-    "prember": "^0.4.0",
+    "prember": "^1.0.0",
     "qunit-dom": "^0.8.0",
     "sass": "^1.14.3",
     "stylelint": "^9.5.0",
