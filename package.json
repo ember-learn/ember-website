@@ -25,6 +25,7 @@
     "@ember/optional-features": "^0.7.0",
     "algoliasearch": "^3.30.0",
     "broccoli-asset-rev": "^3.0.0",
+    "broccoli-static-site-json": "^2.1.2",
     "ember-ajax": "^4.0.0",
     "ember-algolia": "0.0.10",
     "ember-body-class": "^1.1.0",
