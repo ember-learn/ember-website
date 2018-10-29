@@ -664,16 +664,6 @@
     ember-cli-babel "^6.6.0"
     ember-compatibility-helpers "^1.0.0"
 
-"@ember/jquery@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@ember/jquery/-/jquery-0.5.2.tgz#fe312c03ada0022fa092d23f7cd7e2eb0374b53a"
-  integrity sha1-/jEsA62gAi+gktI/fNfi6wN0tTo=
-  dependencies:
-    broccoli-funnel "^2.0.1"
-    ember-cli-babel "^6.6.0"
-    jquery "^3.3.1"
-    resolve "^1.7.1"
-
 "@ember/optional-features@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@ember/optional-features/-/optional-features-0.7.0.tgz#f65a858007020ddfb8342f586112750c32abd2d9"
@@ -9671,10 +9661,10 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prember@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/prember/-/prember-0.4.0.tgz#55607d74babe74958e0c08d78da66e002dc02bea"
-  integrity sha512-gqnPdeOQcFa/F1ydOqKXTLgIWUoCqQqsII9crCEO4KDDazcRkaKBeBSmLPdBWZat93h60Sa7SBXhSPRMGZWfBA==
+prember@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prember/-/prember-1.0.0.tgz#56817e8880fdb8d339d6882676852e2b5febb403"
+  integrity sha512-Y980q2bBCnT94YRD63QnfcOWqZTlwtLS9h1GYTHXPoiwIpU1P1SXly36rJcL/zrXplG5ELNhNNEqf/3SuuIQTg==
   dependencies:
     broccoli-debug "^0.6.3"
     broccoli-merge-trees "^2.0.0"
@@ -10440,7 +10430,7 @@ resolve@1.5.0:
   dependencies:
     path-parse "^1.0.5"
 
-resolve@^1.1.3, resolve@^1.1.4, resolve@^1.1.6, resolve@^1.1.7, resolve@^1.3.2, resolve@^1.3.3, resolve@^1.4.0, resolve@^1.5.0, resolve@^1.6.0, resolve@^1.7.1, resolve@^1.8.1:
+resolve@^1.1.3, resolve@^1.1.4, resolve@^1.1.6, resolve@^1.1.7, resolve@^1.3.2, resolve@^1.3.3, resolve@^1.4.0, resolve@^1.5.0, resolve@^1.6.0, resolve@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.8.1.tgz#82f1ec19a423ac1fbd080b0bab06ba36e84a7a26"
   integrity sha512-AicPrAC7Qu1JxPCZ9ZgCZlY35QgFnNqc+0LtbRNxnVw4TXvjQ72wnuL9JQcEBgXkI9JM8MsT9kaQoHcpCRJOYA==
