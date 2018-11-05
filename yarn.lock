@@ -4222,10 +4222,10 @@ ember-assign-polyfill@~2.4.0:
     ember-cli-babel "^6.6.0"
     ember-cli-version-checker "^2.0.0"
 
-ember-body-class@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/ember-body-class/-/ember-body-class-1.0.3.tgz#c9165c89a187ce7917152f643c398c7d6eb129d5"
-  integrity sha512-ghNxDBWjBS1ijhZCOQ+uv1dJ0BR3vhx7SW+SRatz1KOMdaXISnVK5zyl3t+DmiUzYk3tTg956/bsT9Bfqw3zIw==
+ember-body-class@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ember-body-class/-/ember-body-class-1.1.0.tgz#1cc83c6dde9f867dd4803990ce63b67e74fb06e7"
+  integrity sha512-wRXreJl9rCK2QOFgbMsa+eeIcyOg0erLwCvoWvZlUpH4tzg2y7P67xI2t2dawGSrAotYhGmgofLT+DgvyAsURw==
   dependencies:
     ember-cli-babel "^6.16.0"
 
