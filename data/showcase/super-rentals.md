@@ -1,4 +1,5 @@
 ---
+id: 1
 name: Super Rentals
 image:
   src: /images/learn/showcase-super-rentals.png
