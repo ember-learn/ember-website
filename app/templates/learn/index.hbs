@@ -90,7 +90,7 @@
   <p>Whether you're simply interested in checking out how some feature is implemented, or you're looking to contribute, one of these projects might pique your interest!</p>
 
   <div class="showcase">
-    {{#each model as |showcase|}}
+    {{#each sortedModel as |showcase|}}
       <div class="showcase--item">
         <div class="showcase--screenshot">
           <img
@@ -105,7 +105,7 @@
           <p>Repository: <a href={{showcase.repository}}>{{showcase.repository}}</a></p>
 
           <p>
-            {{{showcase.description}}}
+            {{{showcase.html}}}
             <ul>
               {{#each showcase.features as |feature|}}
                 <li>{{{feature}}}</li>
