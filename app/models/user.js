@@ -6,4 +6,6 @@ export default DS.Model.extend({
   url: DS.attr(),
   inactive: DS.attr(),
   content: DS.attr(),
+  added: DS.attr('date'),
+  featured: DS.attr(),
 });

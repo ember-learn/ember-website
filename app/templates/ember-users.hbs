@@ -12,7 +12,7 @@
 
 <section aria-labelledby="Ember user list">
   <ul class="user-showcase">
-    {{#each model as |user|}}
+    {{#each sortedModel as |user|}}
       <li>
         <a
           class="user-showcase__link"
@@ -20,7 +20,7 @@
           rel="nofollow noopener"
           target="_blank"
         >
-          <img src="/images/about/{{user.image}}" alt={{user.name}}>
+          <img src="/images/users/{{user.image}}" alt={{user.name}}>
         </a>
       </li>
     {{/each}}
