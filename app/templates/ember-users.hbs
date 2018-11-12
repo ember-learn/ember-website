@@ -21,7 +21,7 @@
           target="_blank"
         >
           <img
-            src={{asset-map (concat "images/users/" user.image)}}
+            src="{{unless fastboot.isFastBoot "/"}}{{asset-map (concat "images/users/" user.image)}}"
             alt={{user.name}}
           >
         </a>
