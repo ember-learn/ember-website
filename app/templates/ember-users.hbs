@@ -20,7 +20,10 @@
           rel="nofollow noopener"
           target="_blank"
         >
-          <img src="/images/users/{{user.image}}" alt={{user.name}}>
+          <img
+            src={{asset-map (concat "images/users/" user.image)}}
+            alt={{user.name}}
+          >
         </a>
       </li>
     {{/each}}

@@ -4,6 +4,14 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
+    ifa: {
+      enabled: true,
+      inline: true,
+    },
+    fingerprint: {
+      generateAssetMap: true,
+      fingerprintAssetMap: true
+    },
     prember: {
       urls: [
         'about',
