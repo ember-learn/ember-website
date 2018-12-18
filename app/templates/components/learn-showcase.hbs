@@ -1,0 +1,29 @@
+<div class="showcase">
+  {{#each showcase as |showcase|}}
+    <div class="showcase--item">
+      <div class="showcase--screenshot">
+        <img
+          class="showcase--image"
+          src="/images/learn/{{showcase.image.src}}"
+          alt={{showcase.image.alt}}
+        >
+      </div>
+      <div class="showcase--description">
+        <h3>
+          <a href={{replace-current-version showcase.demo}}>{{showcase.name}}<i class="icon-link-ext"></i></a>
+        </h3>
+
+        <p>Repository: <a href={{showcase.repository}}>{{showcase.repository}}</a></p>
+
+        <p>
+          {{replace-current-version showcase.description}}
+          <ul>
+            {{#each showcase.features as |feature|}}
+              <li>{{html-safe feature}}</li>
+            {{/each}}
+          </ul>
+        </p>
+      </div>
+    </div>
+  {{/each}}
+</div>
