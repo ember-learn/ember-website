@@ -30,6 +30,6 @@ export default Controller.extend({
   }),
 
   _filteredList(filterCriteria) {
-    return this.teamMembers.filter((member) => member.teams.includes(filterCriteria)).sortBy('last');
+    return this.teamMembers.filter((member) => member.teams.includes(filterCriteria)).sort((a, b) => a.last > b.last);
   }
 });
