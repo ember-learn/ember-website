@@ -1,1 +1,90 @@
-{{outlet}}
+
+<div class="call-to-action">
+  <div class="call-to-action__box">
+    <div class="call-to-action__top">
+      <h1>Try it out!</h1>
+      <div class="cta-copy">
+        <p>Build your first Ember application with our 5 minute tutorial.</p>
+      </div>
+      <a href="https://guides.emberjs.com/current/getting-started/quick-start/">View Quick Start guide</a>
+    </div>
+    <div class="call-to-action__bottom">
+      <p>$ npm install -g ember-cli</p>
+      <p>$ ember new ember-quickstart</p>
+    </div>
+  </div>
+</div>
+
+<div class="features section">
+  <h2 class="text-center">Highly Productive Out of the Box</h2>
+  <div class="feature">
+    <div class="handlebars feature-img"></div>
+    <p>Developers write dramatically less code with integrated templates that update automatically when the underlying data changes.</p>
+  </div>
+  <div class="feature">
+    <div class="structure feature-img"></div>
+    <p>No need to waste time on trivial choices. Ember's abstractions allow developers to focus on what makes your app <i>unique</i>.</p>
+  </div>
+  <div class="feature">
+    <div class="productivity feature-img"></div>
+    <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help developers <i>efficiently</i> get the job done.</p>
+  </div>
+</div>
+
+<div class="users section">
+  <h2 class="text-center">Who's Using Ember.js?</h2>
+  <div class="surround">
+    <ul id="slider">
+      {{#each users as |user index|}}
+        <li class={{concat "user " (if (gte index 4) "desktop-only")}}>
+          <a href={{user.url}} rel="nofollow">
+            <img
+              src="/images/about/{{user.name}}"
+              width="210"
+              height="103"
+              alt={{user.alt}}
+            >
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <a class="ember-button ember-button--centered" href="/ember-users">
+    Meet More Users
+  </a>
+</div>
+<div class="gears section">
+  <h2 class="text-center">Buy Ember.js Gear and Support Development</h2>
+  <div class="gear">
+    <a href="http://devswag.com/products/ember-sticker">
+      <img src="/images/about/ember-sticker.png" alt="ember stickers">
+    </a>
+    <a href="http://devswag.com/products/ember-js-tshirt">
+      <img src="/images/about/ember-shirt.png" alt="ember tee shirt">
+    </a>
+    <a href="http://devswag.com/products/ember-mascot-stickers-4">
+      <img src="/images/about/ember-hamster-sticker.png" alt="tomster stickers">
+    </a>
+    <a href="http://devswag.com/products/ember-mascot-tomster">
+      <img src="/images/about/ember-tomster-plush-2.png" alt="tomster plush toys">
+    </a>
+  </div>
+</div>
+<div class="about__listing-button-group">
+  <div class="about__listing-button">
+    <a
+      class="ember-button ember-button--centered"
+      href="https://devswag.com/collections/ember"
+    >
+      Buy Ember Gear
+    </a>
+  </div>
+  <div class="about__listing-button">
+    <a
+      class="ember-button ember-button--centered"
+      href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QRRZTQ5GM7PSY"
+    >
+      Donate
+    </a>
+  </div>
+</div>
