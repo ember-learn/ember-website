@@ -5,6 +5,7 @@ last: Glowack
 github: 'https://github.com/trek'
 twitter: 'https://twitter.com/trek'
 image: tglowaki.jpg
+added: 2013-04-02T09:03:00.000Z
 teams:
   - alumni
 ---

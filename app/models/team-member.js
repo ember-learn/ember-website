@@ -8,4 +8,5 @@ export default DS.Model.extend({
   twitter: DS.attr(),
   image: DS.attr(),
   teams: DS.attr(),
+  added: DS.attr('date'),
 });
