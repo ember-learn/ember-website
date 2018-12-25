@@ -1,4 +1,8 @@
-<img src="/images/team/{{image}}" alt={{name}} class="team-member-image">
+<img 
+  src={{asset-map (concat "images/team/" image)}}
+  alt={{name}}
+  class="team-member-image"
+>
 <div class="team-member-name">
   {{name}}
 </div>
