@@ -8,15 +8,15 @@
 
 <section>
   <div class="meetup-locations-grid">
-    {{#each model.locations as |location|}}
+    {{#each meetupsByArea as |area|}}
       <div class="meetup-locations-grid-item">
         <h3>
-          {{location.area}}
+          {{area.value}}
         </h3>
         <ul class="meetup-locations">
-          {{#each location.groups as |area|}}
+          {{#each area.items as |meetup|}}
             <li>
-              <a href={{area.url}}>{{area.location}}</a>
+              <a href={{meetup.url}}>{{meetup.location}}</a>
             </li>
           {{/each}}
         </ul>
