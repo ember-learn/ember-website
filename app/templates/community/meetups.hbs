@@ -1,1 +1,66 @@
-{{outlet}}
+<section aria-labelledby="Meetups">
+  <h1>Meetups Around the World</h1>
+
+  <h2>Find a meetup in your city</h2>
+
+
+  {{#leaflet-map class="leaflet-container" lat=lat lng=lng zoom=zoom}}
+    {{tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+    {{#each model as |meetup|}}
+      {{#marker-layer lat=meetup.lat lng=meetup.lng}}
+        {{#popup-layer}}
+          <a
+            href={{meetup.url}}
+            target="_blank"
+            rel="noopener"
+          >
+            {{meetup.location}}
+          </a>
+
+          {{!-- image: 02boston.png --}}
+        {{/popup-layer}}
+      {{/marker-layer}}
+    {{/each}}
+  {{/leaflet-map}}
+
+</section>
+
+<section>
+  <div class="meetup-locations-grid">
+    {{#each sortedMeetupsByArea as |area|}}
+      <div class="meetup-locations-grid-item">
+        <h3>
+          {{area.value}}
+        </h3>
+        <ul class="meetup-locations">
+          {{#each area.items as |meetup|}}
+            <li>
+              <a href={{meetup.url}}>{{meetup.location}}</a>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/each}}
+  </div>
+</section>
+
+<section>
+  <h2>Start your own meetup</h2>
+  <div>
+    <img alt="Meetup" class="pull-left" src="/images/community/meetup.png">
+    <p>
+      Ready to start a Meetup in your area? Fantastic news—appreciate you stepping up! Running a solid meetup isn't all that complicated, but it <em>can</em> be intimidating:<br>
+      we'd love to help you ease into it.
+    </p>
+    <p>
+      {{#link-to "community.meetups-getting-started"}}We've put together some tips for first-time organizers{{/link-to}} that should hopefully help you get off your feet. There's also a handy page of {{#link-to "meetup-assets"}}Resources and Assets for organizers{{/link-to}}.
+    </p>
+    <p>
+      <a href="mailto:meetups@emberjs.com">Send us a note</a> if you have questions or need a hand.
+    </p>
+  </div>
+  <div class="clearfix">
+
+  </div>
+</section>

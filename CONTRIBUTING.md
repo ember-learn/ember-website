@@ -8,3 +8,8 @@ To add a company to the list of [Ember Users](https://emberjs.com/ember-users/) 
 To add a new team member you can run `ember g team-member firstname-lastname` and make sure that all the fields are filled in.
 
 If you want to add an existing Team Member to another team or change their team membership you can find that person in the `data/team-member/` folder and edit the `teams` array.
+
+### Adding a Meetup
+To add a new team member you can run `ember g meetup city-country` and make sure that all the fields are filled in.
+
+The generated meetup will have two organisers but you can have as many, or as few as you need or want. 

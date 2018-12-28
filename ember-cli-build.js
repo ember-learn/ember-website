@@ -10,7 +10,14 @@ module.exports = function(defaults) {
     },
     fingerprint: {
       generateAssetMap: true,
-      fingerprintAssetMap: true
+      fingerprintAssetMap: true,
+      exclude: [
+        'images/layers-2x.png',
+        'images/layers.png',
+        'images/marker-icon-2x.png',
+        'images/marker-icon.png',
+        'images/marker-shadow.png'
+      ]
     },
     prember: {
       urls: [
