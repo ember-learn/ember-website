@@ -1,10 +1,13 @@
 @import "ember-styleguide/globals/variables";
 @import "variables";
 @import "global/helpers";
+@import 'global/typography';
 
 @import 'pages/_faq';
 @import 'pages/_logos';
 @import 'pages/meetup-locations';
+@import 'pages/ember-users';
+@import 'pages/team';
 
 /* Deprecating these colors/variables */
 $blue-color: #3c64b6;
