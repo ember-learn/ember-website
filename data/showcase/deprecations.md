@@ -2,7 +2,7 @@
 id: 4
 name: Deprecations
 image:
-  src: /images/learn/showcase-deprecations.png
+  src: deprecations.png
   alt: Deprecations application
 repository: https://github.com/ember-learn/deprecation-app
 demo: https://emberjs.com/deprecations

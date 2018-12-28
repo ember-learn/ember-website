@@ -2,7 +2,7 @@
 id: 1
 name: Super Rentals
 image:
-  src: /images/learn/showcase-super-rentals.png
+  src: super-rentals.png
   alt: Super Rentals tutorial application
 repository: https://github.com/ember-learn/super-rentals
 demo: https://ember-learn-super-rentals.herokuapp.com/rentals
