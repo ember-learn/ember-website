@@ -7973,8 +7973,9 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
 
 prember@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/prember/-/prember-1.0.0.tgz#56817e8880fdb8d339d6882676852e2b5febb403"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/prember/-/prember-1.0.1.tgz#6031292a09aa8db4aa5dc5e8bd74bb01647d9343"
+  integrity sha512-ERfTPOXihqVOr4eZ4mY+mXSQoxyYVD1DI+YM1YYnmw1avRXqf+VG1NWHh6u4E446QklGXQNqON50XCP9jyaq8A==
   dependencies:
     broccoli-debug "^0.6.3"
     broccoli-merge-trees "^2.0.0"

@@ -1,1 +1,34 @@
-{{outlet}}
+<h1 id="examples">Examples</h1>
+
+<p>In this section you will find applications that are maintained by the Ember.js teams with the help of contributors. While software is always a work in progress, the goal is to showcase patterns and solutions applied in real-world applications.</p>
+<p>Whether you're simply interested in checking out how some feature is implemented, or you're looking to contribute, one of these projects might pique your interest!</p>
+
+<div class="showcase">
+  {{#each model as |showcase|}}
+    <div class="showcase--item">
+      <div class="showcase--screenshot">
+        <img
+          class="showcase--image"
+          src={{asset-map (concat "images/showcase/" showcase.image.src)}}
+          alt={{showcase.image.alt}}
+        >
+      </div>
+      <div class="showcase--description">
+        <h3>
+          <a href={{showcase.demo}}>{{showcase.name}}<i class="icon-link-ext"></i></a>
+        </h3>
+
+        <p>Repository: <a href={{showcase.repository}}>{{showcase.repository}}</a></p>
+
+        <p>
+          {{showcase.description}}
+          <ul>
+            {{#each showcase.features as |feature|}}
+              <li>{{html-safe feature}}</li>
+            {{/each}}
+          </ul>
+        </p>
+      </div>
+    </div>
+  {{/each}}
+</div>
