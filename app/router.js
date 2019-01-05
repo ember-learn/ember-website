@@ -34,6 +34,19 @@ Router.map(function() {
     this.route('payment');
   });
   this.route('zoey');
+  this.route('deprecations', function() {
+    this.route('ember-data', function() {
+      this.route('v2', { path: 'v2.x' });
+    });
+    this.route('ember-cli', function() {
+      this.route('v2', { path: 'v2.x' });
+    });
+    this.route('ember', function() {
+      this.route('v1', { path: 'v1.x' });
+      this.route('v2', { path: 'v2.x' });
+      this.route('v3', { path: 'v3.x' });
+    });
+  });
 });
 
 export default Router;
