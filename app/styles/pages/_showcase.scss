@@ -1,0 +1,128 @@
+.project-showcase {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1280px;
+  min-width: 310px;
+  padding: 0 20px;
+  position: relative;
+  width: 100%;
+  &__item {
+    width: 350px;
+    flex-direction: column;
+    background-color: white;
+    margin: 0 10px 4% 0;
+    box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
+    display: block;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  
+    &--info {
+      padding: 10px 5px;
+      h3 {
+        color: #525252;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out;
+        text-align: center;
+        @media only screen and (max-width: 540px) {
+          margin-top: 10px;
+          line-height: 38px;
+          max-height: 76px;
+        }
+      }
+    }
+    &--thumbnail {
+      height: 220px;
+      width: 100%;
+      display: block;
+      img {
+        display: block;
+        height: 220px;
+        width: 60%;
+        margin: 0 20% 0;
+        object-fit: contain;
+        background-color: white;
+        position: absolute;
+      }
+    }
+    &:hover {
+      box-shadow: 0 22px 43px rgba(0,0,0,0.15);
+      -webkit-box-shadow: 0 22px 43px rgba(0,0,0,0.15);
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+      -moz-transform: none;
+    }
+    
+  }
+  
+  @media(max-width: 768px){
+    flex-direction: row;
+    // &__item {
+    //   width: 50%;
+    // }
+  }
+
+  @media(max-width: 468px){
+    flex-direction: column;
+    &__item {
+      width: 100%;
+    }
+  }
+  
+}
+
+
+.project-showcase__show {
+  
+  &--hero {
+    height: 65vh;
+    img {
+      width: 100%;
+      max-width: 1000px;
+      border-radius: 0 0 4px 4px;
+      height: 100%;
+    }
+  }
+
+  &--info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    min-height: 20rem;
+    flex-wrap: wrap;
+    &_content {
+      width: 65%;
+    }
+
+    &_link {
+      width: 35%;
+      padding: 10px;
+    }
+
+  }
+}
+
+
+.ember-button {
+  background-color: #E04E39;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.35);
+  color: #fdfdfd;
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  height: 40px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out 0s;
+  width: 220px;
+}
