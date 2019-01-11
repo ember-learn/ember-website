@@ -5,6 +5,7 @@
 
 @import 'pages/_faq';
 @import 'pages/_logos';
+@import 'pages/meetup-locations';
 @import 'pages/ember-users';
 @import 'pages/team';
 
@@ -481,4 +482,8 @@ body.tomster_faq #content {
 
 .cta-contribute {
   text-align: center;
+}
+
+.clearfix {
+  clear: both;
 }

@@ -2,7 +2,7 @@
 name: The name of the application
 image:
   src: The filename of the image, without the path. The image
-       should be at source/images/learn and should be 512x320px
+       should be at source/images/showcase and should be 512x320px
        of size.
   alt: Description of the image for accessibility
 repository: Link to the repository with the source code

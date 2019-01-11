@@ -21,7 +21,7 @@
           target="_blank"
         >
           <img
-            src="{{unless fastboot.isFastBoot "/"}}{{asset-map (concat "images/users/" user.image)}}"
+            src={{asset-map (concat "images/users/" user.image)}}
             alt={{user.name}}
           >
         </a>
@@ -34,11 +34,11 @@
     Be sure that your logo has a transparent background and includes adequate white space.<br>
     Additional instructions are in the
     <a
-      href="https://github.com/ember-learn/ember-website/blob/master/data/users.yml#L1"
+      href="https://github.com/ember-learn/ember-website/blob/master/CONTRIBUTING.md#adding-a-user"
       rel="nofollow noopener"
       target="_blank"
     >
-      code
+      contributing guide
     </a>.
   </p>
 </section>
