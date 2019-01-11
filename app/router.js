@@ -26,7 +26,8 @@ Router.map(function() {
   this.route('security');
   this.route('sponsors');
   this.route('team');
-  this.route('tomster', function() {
+  this.route('tomster', { path: '/*mascots' });
+  this.route('mascots', function() {
     this.route('commission-sent');
     this.route('commission');
     this.route('faq');
