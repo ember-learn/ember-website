@@ -3547,6 +3547,13 @@ ember-cli-lodash-subset@^1.0.7:
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-1.0.12.tgz#af2e77eba5dcb0d77f3308d3a6fd7d3450f6e537"
 
+ember-cli-netlify@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-netlify/-/ember-cli-netlify-0.1.0.tgz#8255c63055975fc2f59b41f2075de05832938e97"
+  integrity sha512-SCmMvXI3WN9cCU7Zuz7mM0wCfXNeovBLA1dxPxdQeFS9UI4cuKaZqRgYS46ame/9/H6diBDDtaSASZR3IMcSng==
+  dependencies:
+    fs-extra "^5.0.0"
+
 ember-cli-node-assets@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/ember-cli-node-assets/-/ember-cli-node-assets-0.2.2.tgz#d2d55626e7cc6619f882d7fe55751f9266022708"
