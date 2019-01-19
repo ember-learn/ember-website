@@ -37,6 +37,7 @@
     "ember-cli-htmlbars-inline-precompile": "^1.0.5",
     "ember-cli-ifa": "^0.7.0",
     "ember-cli-inject-live-reload": "^2.0.1",
+    "ember-cli-netlify": "^0.1.0",
     "ember-cli-qunit": "^4.4.0",
     "ember-cli-sass": "^8.0.1",
     "ember-cli-stylelint": "^2.1.0",
