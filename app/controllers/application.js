@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
-import links from '../links';
+import styleguideLinks from 'ember-styleguide/constants/links';
 
 export default Controller.extend({
-  links,
+  links: styleguideLinks,
 });
