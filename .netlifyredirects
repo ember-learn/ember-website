@@ -1,4 +1,4 @@
 /internal   /api
 /tomster/*  /mascots/:splat
 /dasboard   /statusboard
-/guides/*   https://guides.emberjs.com/:splat
+/guides/*   https://guides.emberjs.com/release/:splat
