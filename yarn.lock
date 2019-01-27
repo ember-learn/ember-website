@@ -4058,9 +4058,9 @@ ember-source@~3.5.0:
     jquery "^3.3.1"
     resolve "^1.6.0"
 
-"ember-styleguide@github:ember-learn/ember-styleguide#feature/new-nav-bar":
+"ember-styleguide@github:ember-learn/ember-styleguide":
   version "2.5.0"
-  resolved "https://codeload.github.com/ember-learn/ember-styleguide/tar.gz/a24bf1703bb52c33188e3a0e5c58da8c57ecd6a8"
+  resolved "https://codeload.github.com/ember-learn/ember-styleguide/tar.gz/caa8511edfaed19bdf801164d6318cc220ad97a1"
   dependencies:
     bootstrap "^4.1.3"
     broccoli-funnel "^2.0.1"
