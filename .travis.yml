@@ -29,3 +29,4 @@ script:
   - yarn lint:style
   - yarn lint:js
   - yarn test
+  - yarn build --environment production

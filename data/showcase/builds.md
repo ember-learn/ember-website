@@ -2,7 +2,7 @@
 id: 2
 name: Builds
 image:
-  src: /images/learn/showcase-builds.png
+  src: builds.png
   alt: Builds page application
 repository: https://github.com/ember-learn/builds
 demo: https://emberjs.com/builds

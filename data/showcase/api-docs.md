@@ -2,7 +2,7 @@
 id: 3
 name: API Docs
 image:
-  src: /images/learn/showcase-api-docs.png
+  src: api-docs.png
   alt: API docs application
 repository: https://github.com/ember-learn/ember-api-docs
 demo: https://emberjs.com/api/

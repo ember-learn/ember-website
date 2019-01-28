@@ -1,35 +1,22 @@
 import Controller from '@ember/controller';
-import { alias, filter } from '@ember/object/computed'
+import { sort } from '@ember/object/computed'
 import { computed } from '@ember/object';
 
+function inTeam(team) {
+  return computed('sortedModel.[]', function() {
+    return this.sortedModel
+      .filter((member) => member.teams.includes(team))
+  })
+}
+
 export default Controller.extend({
-  teamMembers: alias('model'),
+  sortingKeys: Object.freeze(['added']),
+  sortedModel: sort('model', 'sortingKeys'),
 
-  alumniTeamMembers: computed('teamMembers', function() {
-    return this._filteredList('alumni');
-  }),
-
-  coreCLITeamMembers: computed('teamMembers', function() {
-    return this._filteredList('cli');
-  }),
-
-  coreTeamMembers: computed('teamMembers', function() {
-    return this._filteredList('corejs');
-  }),
-
-  dataTeamMembers: computed('teamMembers', function() {
-    return this._filteredList('data');
-  }),
-
-  learningTeamMembers: computed('teamMembers', function() {
-    return this._filteredList('learning');
-  }),
-
-  steeringCommitteeMembers: filter('teamMembers', function(member) {
-    return member.teams.includes('steering');
-  }),
-
-  _filteredList(filterCriteria) {
-    return this.teamMembers.filter((member) => member.teams.includes(filterCriteria)).sort((a, b) => a.last > b.last);
-  }
+  alumniTeamMembers: inTeam('alumni'),
+  coreCLITeamMembers: inTeam('cli'),
+  coreTeamMembers: inTeam('corejs'),
+  dataTeamMembers: inTeam('data'),
+  learningTeamMembers: inTeam('learning'),
+  steeringCommitteeMembers: inTeam('steering'),
 });
