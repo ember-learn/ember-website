@@ -4060,7 +4060,7 @@ ember-source@~3.5.0:
 
 "ember-styleguide@github:ember-learn/ember-styleguide":
   version "2.5.0"
-  resolved "https://codeload.github.com/ember-learn/ember-styleguide/tar.gz/caa8511edfaed19bdf801164d6318cc220ad97a1"
+  resolved "https://codeload.github.com/ember-learn/ember-styleguide/tar.gz/eb8c8cd4452bff84d2424e34da7b8e5c59b6dedd"
   dependencies:
     bootstrap "^4.1.3"
     broccoli-funnel "^2.0.1"
