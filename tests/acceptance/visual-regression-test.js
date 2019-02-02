@@ -23,8 +23,8 @@ module('Acceptance | visual regression', function(hooks) {
       { route: '/community/meetups/', title: '/community/meetups.html' },
       { route: '/community/', title: '/community/index.html' },
       { route: '/community/meetups-getting-started/', title: '/community/meetups-getting-started.html' },
-      { route: '/tomster/faq/', title: '/tomster/faq.html' },
-      { route: '/tomster/commission/', title: '/tomster/commission/index.html' },
+      { route: '/mascots/faq/', title: '/mascots/faq.html' },
+      { route: '/mascots/commission/', title: '/mascots/commission/index.html' },
     ]
 
     await pages.reduce(async (prev, config) => {
