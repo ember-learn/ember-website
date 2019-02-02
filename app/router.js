@@ -21,7 +21,6 @@ Router.map(function() {
   });
   this.route('legal');
   this.route('logos');
-  this.route('mascots');
   this.route('meetup-assets');
   this.route('security');
   this.route('sponsors');
