@@ -3,7 +3,7 @@
   <h4>Added on: {{model.date}}</h4>
   <div class="project-showcase__show">
     <div class="project-showcase__show--hero">
-      <img src='{{model.thumbnail.src}}' alt='{{model.thumbnail.alt}}'>
+      <img src={{model.thumbnail.src}} alt={{model.thumbnail.alt}}>
     </div>
     <div class="project-showcase__show--info">
       <div class="project-showcase__show--info_content">
@@ -11,7 +11,7 @@
         <p>{{model.description}}</p>
       </div>
       <div class="project-showcase__show--info_link">
-        <a href="{{unbound model.link}}" target="_blank" class="ember-button">View project</a>
+        <a href={{unbound model.link}} target="_blank" class="ember-button">View project</a>
       </div>
 
     </div>
