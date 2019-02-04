@@ -3,3 +3,5 @@
 /dasboard   /statusboard
 /guides/*   https://guides.emberjs.com/release/:splat
 /builds/*   /releases/:splat
+
+/*          /_empty.html       404
