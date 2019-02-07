@@ -105,10 +105,10 @@
           <p>Repository: <a href={{showcase.repository}}>{{showcase.repository}}</a></p>
 
           <p>
-            {{{showcase.html}}}
+            {{html-safe showcase.html}}
             <ul>
               {{#each showcase.features as |feature|}}
-                <li>{{{feature}}}</li>
+                <li>{{html-safe feature}}</li>
               {{/each}}
             </ul>
           </p>
