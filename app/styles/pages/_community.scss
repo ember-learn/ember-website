@@ -3,6 +3,10 @@
   padding-top: 64px;
 }
 
+.community-index main section {
+  margin: 4rem 0;
+}
+
 .section-image {
   margin: 15px 20px 15px 0;
   width: 220px;
@@ -14,8 +18,14 @@
 }
 
 .section-split {
+  display: flex;
   &-item {
     flex: 1;
     padding: 0 1rem;
   }
+}
+
+body.community-index main .video {
+    max-width: 640px;
+    margin: 0 auto;
 }
