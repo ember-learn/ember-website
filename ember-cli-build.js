@@ -45,6 +45,7 @@ module.exports = function(defaults) {
         'mascots/payment-sent',
         'mascots/payment',
         'zoey',
+        'statusboard',
       ]
     },
     "ember-bootstrap": {

@@ -29,6 +29,7 @@ module('Acceptance | visual regression', function(hooks) {
       { route: '/community/meetups-getting-started/', title: '/community/meetups-getting-started.html' },
       { route: '/mascots/faq/', title: '/tomster/faq.html' },
       { route: '/mascots/commission/', title: '/tomster/commission/index.html' },
+      { route: '/statusboard', title: '/statusboard.html' },
     ]
 
     await pages.reduce(async (prev, config) => {
