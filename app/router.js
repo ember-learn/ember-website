@@ -16,7 +16,9 @@ Router.map(function() {
   this.route('about');
   this.route('blog', function() {});
   this.route('community', function() {
-    this.route('meetups');
+    this.route('meetups', function() {
+      this.route('assets');
+    });
     this.route('meetups-getting-started');
   });
   this.route('documentation');
