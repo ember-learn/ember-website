@@ -9,7 +9,6 @@ function replaceUrlPrefix(url) {
     || url.endsWith('/api')
     || url.endsWith('/builds')
     || url.match(/\/builds\/.*$/)
-    || url.endsWith('/statusboard')
   ) {
     return url;
   }
