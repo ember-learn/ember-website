@@ -5,7 +5,7 @@ module('Unit | Route | community/meetups', function(hooks) {
   setupTest(hooks);
 
   test('it exists', function(assert) {
-    let route = this.owner.lookup('route:community/meetups');
+    let route = this.owner.lookup('route:community/meetups/index');
     assert.ok(route);
   });
 });
