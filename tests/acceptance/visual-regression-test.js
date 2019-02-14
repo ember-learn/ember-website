@@ -26,6 +26,10 @@ module('Acceptance | visual regression', function(hooks) {
       { route: '/community/meetups/', title: '/community/meetups.html' },
       { route: '/community/', title: '/community/index.html' },
       {
+        route: '/community/meetups/assets',
+        title: '/meetup-assets.html'
+      },
+      {
         route: '/community/meetups-getting-started/',
         title: '/community/meetups-getting-started.html'
       },
