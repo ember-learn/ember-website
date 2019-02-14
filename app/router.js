@@ -12,9 +12,6 @@ Router.map(function() {
   this.route('community', function() {
     this.route('meetups');
     this.route('meetups-getting-started');
-    this.route('projects', function() {
-      this.route('project', {path: '/:project_id'});
-    });
   });
   this.route('documentation');
   this.route('ember-users');
