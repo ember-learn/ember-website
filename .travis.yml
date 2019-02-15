@@ -14,7 +14,7 @@ addons:
   chrome: stable
 
 cache:
-  yarn: true
+  npm: true
 
 env:
   global:
@@ -22,11 +22,11 @@ env:
     - JOBS=1
 
 before_install:
-  - yarn install --non-interactive
+  - npm install
 
 script:
-  - yarn lint:hbs
-  - yarn lint:style
-  - yarn lint:js
-  - yarn test
-  - yarn build --environment production
+  - npm run lint:hbs
+  - npm run lint:style
+  - npm run lint:js
+  - npm run test
+  - npm run build --environment production
