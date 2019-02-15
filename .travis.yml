@@ -22,11 +22,11 @@ env:
     - JOBS=1
 
 before_install:
-  - yarn install --non-interactive
+  - npm install
 
 script:
-  - yarn lint:hbs
-  - yarn lint:style
-  - yarn lint:js
-  - yarn test
-  - yarn build --environment production
+  - npm lint:hbs
+  - npm lint:style
+  - npm lint:js
+  - npm test
+  - npm build --environment production
