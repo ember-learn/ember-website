@@ -9,13 +9,13 @@ module('Acceptance | navbar', function(hooks) {
     await visit('/');
     let communityLink = findAll('.es-navbar li.dropdown')[2];
     let communityLinkDropdown = communityLink.querySelector('ul.dropdown');
-    assert.dom(communityLinkDropdown).isNotVisible('The dropdown is not initially visible');
+    assert.notOk(communityLinkDropdown.getClientRects().length, 'The dropdown is not initially visible');
 
     await click(communityLink.querySelector('a'));
-    assert.dom(communityLinkDropdown).isVisible('The dropdown is visible after clicking');
+    assert.ok(communityLinkDropdown.getClientRects().length, 'The dropdown is visible after clicking');
 
     await click(communityLinkDropdown.querySelector('a[role="menuitem"]'));
-    assert.dom(communityLinkDropdown).isNotVisible('The dropdown is not visible after transitioning');
+    assert.notOk(communityLinkDropdown.getClientRects().length, 'The dropdown is not visible after transitioning');
     assert.equal(currentRouteName(), 'community.index', 'The community page is shown');
   });
 });
