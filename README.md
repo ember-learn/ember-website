@@ -1,14 +1,13 @@
 # ember-website
 
-This is the primary effort to change the current emberjs.com website to use Ember. Components come from [ember-styleguide](https://github.com/ember-learn/ember-styleguide). 
+This is the primary effort to change the current emberjs.com website to use Ember. Components come from [ember-styleguide](https://github.com/ember-learn/ember-styleguide).
 
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/)
-* [Yarn](https://yarnpkg.com/)
+* [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
 
@@ -16,7 +15,7 @@ You will need the following things properly installed on your computer.
 
 * `git clone <repository-url>` this repository
 * `cd ember-website`
-* `yarn install`
+* `npm install`
 
 ## Running / Development
 
@@ -35,10 +34,10 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Linting
 
-* `yarn lint:hbs`
-* `yarn lint:style`
-* `yarn lint:js`
-* `yarn lint:js --fix`
+* `npm run lint:hbs`
+* `npm run lint:style`
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
 
 ### Building
 

@@ -14,7 +14,8 @@ addons:
   chrome: stable
 
 cache:
-  npm: true
+  directories:
+    - $HOME/.npm
 
 env:
   global:
@@ -22,11 +23,11 @@ env:
     - JOBS=1
 
 before_install:
-  - npm install
+  - npm config set spin false
 
 script:
   - npm run lint:hbs
   - npm run lint:style
   - npm run lint:js
-  - npm run test
   - npm run build --environment production
+  - npm test
