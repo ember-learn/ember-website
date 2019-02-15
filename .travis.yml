@@ -25,8 +25,8 @@ before_install:
   - npm install
 
 script:
-  - npm lint:hbs
-  - npm lint:style
-  - npm lint:js
-  - npm test
-  - npm build --environment production
+  - npm run lint:hbs
+  - npm run lint:style
+  - npm run lint:js
+  - npm run test
+  - npm run build --environment production
