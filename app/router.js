@@ -33,6 +33,7 @@ Router.map(function() {
     this.route('payment');
   });
   this.route('zoey');
+  this.route('statusboard');
 });
 
 export default Router;

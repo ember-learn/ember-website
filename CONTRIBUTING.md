@@ -12,4 +12,7 @@ If you want to add an existing Team Member to another team or change their team 
 ### Adding a Meetup
 To add a new team member you can run `ember g meetup city-country` and make sure that all the fields are filled in.
 
-The generated meetup will have two organisers but you can have as many, or as few as you need or want. 
+The generated meetup will have two organisers but you can have as many, or as few as you need or want.
+
+### Adding a Feature to the Statusboard
+To add a new feature to the Statusboard you can run `ember g feature name-of-feature` and make sure that all the fields are filled in. 
