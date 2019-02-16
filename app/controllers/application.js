@@ -7,8 +7,8 @@ function replaceUrlPrefix(url) {
     url.endsWith('/blog')
     || url.endsWith('/deprecations')
     || url.endsWith('/api')
-    || url.endsWith('/builds')
-    || url.match(/\/builds\/.*$/)
+    || url.endsWith('/releases')
+    || url.match(/\/releases\/.*$/)
     || url.endsWith('/statusboard')
   ) {
     return url;
