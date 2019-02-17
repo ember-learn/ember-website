@@ -11,7 +11,10 @@ function replaceUrlPrefix(url) {
     return url;
   }
 
-  return url.replace(/^https:\/\/emberjs.com\//, '/');
+  return url
+    .replace(/^https:\/\/emberjs.com\//, '/')
+    .replace(/^\/builds(\/\w+)$/, '/releases$1')
+    .replace(/\/builds$/, '/releases');
 }
 
 function replaceLinks(links) {
