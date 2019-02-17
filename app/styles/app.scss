@@ -3,12 +3,14 @@
 @import "global/helpers";
 @import 'global/typography';
 @import 'global/form';
+@import 'global/solarized_light';
 
 @import 'pages/_logos';
 @import 'pages/meetup-locations';
 @import 'pages/ember-users';
 @import 'pages/team';
 @import 'pages/mascots';
+@import 'pages/releases';
 @import 'pages/sponsors';
 
 /* Deprecating these colors/variables */
