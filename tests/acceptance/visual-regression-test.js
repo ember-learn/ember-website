@@ -3,10 +3,10 @@ import { module, test } from 'qunit';
 import { setupApplicationTest } from 'ember-qunit';
 import { percySnapshot } from 'ember-percy';
 
-module('Acceptance | visual regression', function(hooks) {
+module('Acceptance | visual regression', function (hooks) {
   setupApplicationTest(hooks);
 
-  test(`visiting visual regressions with Percy`, async function(assert) {
+  test(`visiting visual regressions with Percy`, async function (assert) {
     assert.expect(0);
 
     // this is used to map the current **new** routes to what they used to be in the
@@ -18,7 +18,6 @@ module('Acceptance | visual regression', function(hooks) {
       { route: '/legal/', title: '/legal.html' },
       { route: '/', title: '/index.html' },
       { route: '/mascots/', title: '/mascots.html' },
-      { route: '/meetup-assets/', title: '/meetup-assets.html' },
       { route: '/learn/', title: '/learn.html' },
       { route: '/guidelines/', title: '/guidelines.html' },
       { route: '/logos/', title: '/logos.html' },
