@@ -1,9 +1,4 @@
-.index {
-  main {
-    margin: 3em auto 0;
-  }
-
-
+.home {
   background: no-repeat top center #faf4f1;
   background-image: url('/images/background-shades.png');
   background-image: url('/images/background-shades.svg'), none; // See: http://css-tricks.com/svg-fallbacks/
@@ -14,6 +9,7 @@
 
   .about-page {
     &--header {
+      margin: 1em auto 0;
       display: block;
       clear: both;
       color: black;
@@ -21,7 +17,6 @@
       font-size: 3rem;
       font-weight: 300;
       line-height: 1.15;
-      margin: 0 auto;
       max-width: 100%;
       text-align: center;
 
