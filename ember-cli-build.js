@@ -46,6 +46,10 @@ module.exports = function(defaults) {
         'mascots/payment',
         'zoey',
         'statusboard',
+        'releases',
+        'releases/release',
+        'releases/canary',
+        'releases/beta'
       ]
     },
     "ember-bootstrap": {

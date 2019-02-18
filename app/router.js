@@ -28,6 +28,11 @@ Router.map(function() {
   this.route('legal');
   this.route('logos');
   this.route('meetup-assets');
+  this.route('releases', function() {
+    this.route('release');
+    this.route('beta');
+    this.route('canary');
+  });
   this.route('security');
   this.route('sponsors');
   this.route('team');
