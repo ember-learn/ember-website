@@ -7,13 +7,14 @@ function replaceUrlPrefix(url) {
     url.endsWith('/blog')
     || url.endsWith('/deprecations')
     || url.endsWith('/api')
-    || url.endsWith('/builds')
-    || url.match(/\/builds\/.*$/)
   ) {
     return url;
   }
 
-  return url.replace(/^https:\/\/emberjs.com\//, '/');
+  return url
+    .replace(/^https:\/\/emberjs.com\//, '/')
+    .replace(/^\/builds(\/\w+)$/, '/releases$1')
+    .replace(/\/builds$/, '/releases');
 }
 
 function replaceLinks(links) {

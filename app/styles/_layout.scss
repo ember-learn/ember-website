@@ -1,4 +1,4 @@
-body > div.ember-view {
+body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -6,4 +6,13 @@ body > div.ember-view {
 
 main {
   flex-grow: 1;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-start {
+  align-items: flex-start;
 }

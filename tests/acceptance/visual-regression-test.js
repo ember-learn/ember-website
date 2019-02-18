@@ -33,6 +33,10 @@ module('Acceptance | visual regression', function(hooks) {
       { route: '/mascots/payment/', title: '/tomster/payment/index.html' },
       { route: '/mascots/payment-sent/', title: '/tomster/payment-sent.html' },
       { route: '/statusboard', title: '/statusboard.html' },
+      { route: '/releases', title: '/releases.html' },
+      { route: '/releases/release', title: '/releases/release.html' },
+      { route: '/releases/canary', title: '/releases/canary.html' },
+      { route: '/releases/beta', title: '/releases/beta.html' },
     ]
 
     await pages.reduce(async (prev, config) => {

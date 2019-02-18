@@ -1,0 +1,21 @@
+<div class="ember-view">
+  <div id="sidebar">
+    <ol id="toc-list">
+      <li class="level-1 {{if isIndexActive "selected"}}">{{#link-to "index"}}Home{{/link-to}}</li>
+      <li class="level-1 {{if isChannelsActive "selected"}}">
+        <a>Channels</a>
+        <ol class="block">
+          <li class="level-3 {{if isReleaseActive "sub-selected"}}">{{#link-to "release"}}Release{{/link-to}}</li>
+          <li class="level-3 {{if isBetaActive "sub-selected"}}">{{#link-to "beta"}}Beta{{/link-to}}</li>
+          <li class="level-3 {{if isCanaryActive "sub-selected"}}">{{#link-to "canary"}}Canary{{/link-to}}</li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+
+  <div id="subcontent" class="has-sidebar">
+    {{outlet}}
+  </div>
+
+  {{remove-spinner}}
+</div>
