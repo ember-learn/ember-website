@@ -29,6 +29,9 @@ module('Acceptance | visual regression', function(hooks) {
       { route: '/community/meetups-getting-started/', title: '/community/meetups-getting-started.html' },
       { route: '/mascots/faq/', title: '/tomster/faq.html' },
       { route: '/mascots/commission/', title: '/tomster/commission/index.html' },
+      { route: '/mascots/commission-sent/', title: '/tomster/commission-sent.html' },
+      { route: '/mascots/payment/', title: '/tomster/payment/index.html' },
+      { route: '/mascots/payment-sent/', title: '/tomster/payment-sent.html' },
       { route: '/statusboard', title: '/statusboard.html' },
     ]
 
