@@ -1,7 +1,9 @@
 //breakpoints (1 of 3)
+$screen-sm-max: 991px;
 $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
+$small-max-width: 767px;
 //colors (2 of 3)
 $primary: #E34C32;
 $primary-light: lighten($primary, 30%);

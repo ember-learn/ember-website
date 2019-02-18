@@ -52,7 +52,7 @@ module.exports = function(defaults) {
         'releases/beta'
       ]
     },
-    "ember-bootstrap": {
+    'ember-bootstrap': {
       bootstrapVersion: 4,
       importBootstrapFont: false,
       importBootstrapCSS: false

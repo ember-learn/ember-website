@@ -1,11 +1,14 @@
-@import "ember-styleguide/globals/variables";
-@import "variables";
-@import "global/helpers";
+@import 'ember-styleguide/globals/variables';
+@import 'variables';
+@import 'global/helpers';
 @import 'global/typography';
 @import 'global/form';
 @import 'global/solarized_light';
 
-@import 'pages/_logos';
+@import 'mixins/hidpi';
+
+@import 'pages/home';
+@import 'pages/logos';
 @import 'pages/meetup-locations';
 @import 'pages/ember-users';
 @import 'pages/team';
@@ -14,6 +17,8 @@
 @import 'pages/sponsors';
 @import 'pages/community';
 @import 'pages/statusboard';
+
+@import 'components/job-board-banner';
 
 @import 'layout';
 
@@ -111,7 +116,7 @@ body {
   top: 0;
   height: 60px;
   background: $orange top center;
-  // @include hidpi('navigation_background', png);
+  @include hidpi('navigation_background', png);
   border-bottom: 1px solid $orange-darker;
   z-index: 10; /* The header is on top to have proper drop-shadow. */
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
@@ -132,7 +137,7 @@ body {
     top: 6px;
     width: 103px;
     height: 40px;
-    // @include hidpi('ember_logo', 'png');
+    @include hidpi('ember_logo', 'png');
     // @include transform(scale(1));
     // @include transition(0.2s);
 
