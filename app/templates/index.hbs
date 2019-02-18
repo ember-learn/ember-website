@@ -46,7 +46,7 @@
       <li class={{concat "user " (if (gte index 4) "desktop-only")}}>
         <a href={{user.url}} rel="nofollow">
           <img
-            src="/images/home/{{user.file}}"
+            src={{asset-map (concat "images/home/" user.file)}}
             width="210"
             height="103"
             alt={{user.alt}}
