@@ -2,7 +2,7 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     ifa: {
       enabled: true,
@@ -25,6 +25,7 @@ module.exports = function(defaults) {
         'blog',
         'community',
         'community/meetups',
+        'community/meetups/assets',
         'community/meetups-getting-started',
         'documentation',
         'ember-users',
@@ -34,7 +35,6 @@ module.exports = function(defaults) {
         'legal',
         'logos',
         'mascots',
-        'meetup-assets',
         'security',
         'sponsors',
         'team',

@@ -1,5 +1,6 @@
 import EmberRouter from '@ember/routing/router';
 import config from './config/environment';
+
 import { inject as service } from '@ember/service';
 
 const Router = EmberRouter.extend({
@@ -16,7 +17,9 @@ Router.map(function() {
   this.route('about');
   this.route('blog', function() {});
   this.route('community', function() {
-    this.route('meetups');
+    this.route('meetups', function() {
+      this.route('assets');
+    });
     this.route('meetups-getting-started');
   });
   this.route('documentation');
@@ -27,7 +30,6 @@ Router.map(function() {
   });
   this.route('legal');
   this.route('logos');
-  this.route('meetup-assets');
   this.route('releases', function() {
     this.route('release');
     this.route('beta');
@@ -36,6 +38,7 @@ Router.map(function() {
   this.route('security');
   this.route('sponsors');
   this.route('team');
+
   this.route('mascots', function() {
     this.route('commission-sent');
     this.route('commission');
