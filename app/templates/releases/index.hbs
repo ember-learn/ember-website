@@ -101,30 +101,30 @@
 
 <div class="channels section">
   <div class="channel canary">
-    {{#link-to 'releases.canary' class='tomster'}}
+    {{#link-to "releases.canary" class="tomster"}}
       <div class="canary" title="Canary Builds"></div>
     {{/link-to}}
     <div class="description">
       <h3>
-        {{#link-to 'releases.canary'}}Canary{{/link-to}}
+        {{#link-to "releases.canary"}}Canary{{/link-to}}
       </h3>
-      <p>Canary builds are the bleeding edge of Ember development. Please do
-      not use these builds unless you want to try out and offer
-      feedback on new features and fixes not available in the Release or
-      Beta builds.</p>
+      <p>
+        Canary builds are the bleeding edge of Ember development. Please do not use these builds unless you want to try out and offer feedback on new features and fixes not available in the Release or Beta builds.
+      </p>
     </div>
   </div>
   <div class="channel beta">
-    {{#link-to 'releases.beta' class='tomster'}}
+    {{#link-to "releases.beta" class="tomster"}}
       <div class="beta" title="Beta Builds"></div>
     {{/link-to}}
     <div class="description">
       <h3>
-        {{#link-to 'releases.beta'}}Beta{{/link-to}}
+        {{#link-to "releases.beta"}}Beta{{/link-to}}
       </h3>
       <p>
-      <em>The latest beta release is {{model.beta.lastRelease}}, made
-        {{format-date-time model.beta.date}}</em>
+        <em>
+          The latest beta release is {{model.beta.lastRelease}}, made {{format-date-time model.beta.date}}
+        </em>
       </p>
       <p>
         Beta builds incorporate new features that are ready for evaluation in
@@ -133,16 +133,17 @@
     </div>
   </div>
   <div class="channel release">
-    {{#link-to 'releases.release' class='tomster'}}
+    {{#link-to "releases.release" class="tomster"}}
       <div class="release" title="Release Builds"></div>
     {{/link-to}}
     <div class="description">
       <h3>
-        {{#link-to 'releases.release'}}Release{{/link-to}}
+        {{#link-to "releases.release"}}Release{{/link-to}}
       </h3>
       <p>
-      <em>The latest stable release is {{model.release.lastRelease}}, made
-        on {{format-date-time model.release.date 'MMMM Do, YYYY'}}</em>
+        <em>
+          The latest stable release is {{model.release.lastRelease}}, made on {{format-date-time model.release.date "MMMM Do, YYYY"}}
+        </em>
       </p>
       <p>
         Release builds have been hardened through our multi-tiered release
@@ -157,8 +158,10 @@
     <div class="description last">
       <h3>Long-Term Support (LTS)</h3>
       <p>
-        <em>The latest LTS release is {{model.lts.lastRelease}}, made on
-          {{format-date-time model.lts.date 'MMMM Do, YYYY'}}</em>
+        <em>
+          The latest LTS release is {{model.lts.lastRelease}}, made on
+          {{format-date-time model.lts.date "MMMM Do, YYYY"}}
+        </em>
       </p>
       <p>
         The LTS channel provides a longer support timeframe but receives
