@@ -27,7 +27,6 @@ module.exports = function (defaults) {
         'community/meetups',
         'community/meetups/assets',
         'community/meetups-getting-started',
-        'documentation',
         'ember-users',
         'guidelines',
         'learn',

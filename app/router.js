@@ -22,7 +22,6 @@ Router.map(function() {
     });
     this.route('meetups-getting-started');
   });
-  this.route('documentation');
   this.route('ember-users');
   this.route('guidelines');
   this.route('learn', function() {
