@@ -18,6 +18,8 @@
 /testem.log
 /yarn-error.log
 .DS_Store
+.vscode
+jsconfig.json
 
 # ember-try
 /.node_modules.ember-try/
