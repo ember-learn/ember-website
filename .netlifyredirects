@@ -5,3 +5,4 @@
 /documentation/*   https://guides.emberjs.com/release/:splat
 /builds/*   /releases/:splat
 /about   /
+/zoey   /mascots

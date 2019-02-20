@@ -44,7 +44,6 @@ Router.map(function() {
     this.route('payment-sent');
     this.route('payment');
   });
-  this.route('zoey');
   this.route('statusboard');
 });
 
