@@ -14,7 +14,6 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('about');
   this.route('blog', function() {});
   this.route('community', function() {
     this.route('meetups', function() {
