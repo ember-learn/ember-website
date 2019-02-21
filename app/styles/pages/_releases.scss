@@ -1,5 +1,12 @@
 @import "../mixins/hidpi";
 
+@media only percy {
+  .releases-canary code {
+    visibility: hidden;
+  }
+}
+
+
 .lts-schedule td, .lts-schedule th {
   padding: 10px;
   text-align: center;
