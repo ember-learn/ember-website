@@ -21,7 +21,6 @@ module.exports = function (defaults) {
     },
     prember: {
       urls: [
-        'about',
         'blog',
         'community',
         'community/meetups',
@@ -43,7 +42,6 @@ module.exports = function (defaults) {
         'mascots/faq',
         'mascots/payment-sent',
         'mascots/payment',
-        'zoey',
         'statusboard',
         'releases',
         'releases/release',
