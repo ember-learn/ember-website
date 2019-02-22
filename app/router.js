@@ -26,7 +26,9 @@ Router.map(function() {
   this.route('learn', function() {
     this.route('examples');
   });
-  this.route('legal');
+  this.route('about', function() {
+    this.route('legal');
+  });
   this.route('logos');
   this.route('releases', function() {
     this.route('release');

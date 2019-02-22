@@ -15,7 +15,7 @@ module('Acceptance | visual regression', function (hooks) {
     // of these objects
     const pages = [
       { route: '/team/', title: '/team.html' },
-      { route: '/legal/', title: '/legal.html' },
+      { route: '/about/legal/', title: '/legal.html' },
       { route: '/', title: '/index.html' },
       { route: '/mascots/', title: '/mascots.html' },
       { route: '/learn/', title: '/learn.html' },
