@@ -32,6 +32,11 @@ module.exports = function(environment) {
     },
 
     host: 'http://localhost:4200',
+
+    survey: {
+      link: 'https://emberjs.com/ember-community-survey-2019/',
+      title: '2019 Ember Community Survey'
+    },
   };
 
   if (environment === 'development') {
