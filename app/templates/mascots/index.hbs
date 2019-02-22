@@ -25,7 +25,7 @@
     {{#each sortedModel as |tomster|}}
       <div class="tomster-container">
         <div class="tomster-image">
-          <img src={{asset-map (concat "images/tomsters/" tomster.image)}}>
+          <img alt={{tomster.title}} src={{asset-map (concat "images/tomsters/" tomster.image)}}>
         </div>
         <div class="tomster-info">
           {{#if tomster.url}}
