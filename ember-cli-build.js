@@ -47,7 +47,10 @@ module.exports = function (defaults) {
         'releases',
         'releases/release',
         'releases/canary',
-        'releases/beta'
+        'releases/beta',
+        'ember-community-survey-2016',
+        'ember-community-survey-2017',
+        'ember-community-survey-2018',
       ]
     },
     'ember-bootstrap': {
