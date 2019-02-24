@@ -47,6 +47,7 @@ Router.map(function() {
     this.route('payment');
   });
   this.route('statusboard');
+  this.route('ember-community-survey-2019');
 });
 
 export default Router;
