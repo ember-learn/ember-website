@@ -1,0 +1,7 @@
+{{#if (and config.route (not-eq router.currentRouteName config.route))}}
+  <div class="survey-reminder-wrapper">
+    <div class="survey-reminder-container">
+      Take the {{#link-to config.route}}{{config.title}}{{/link-to}}
+    </div>
+  </div>
+{{/if}}
