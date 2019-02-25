@@ -30,7 +30,7 @@ module.exports = function (defaults) {
         'guidelines',
         'learn',
         'learn/examples',
-        'legal',
+        'about/legal',
         'logos',
         'mascots',
         'security',
