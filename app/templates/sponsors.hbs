@@ -11,7 +11,7 @@
     {{#each currentSponsors as |user|}}
       <li class="sponsors-list-item">
         <a href={{user.url}}>
-          <img src={{asset-map (concat "images/users/" user.image)}}>
+          <img alt={{user.term}} src={{asset-map (concat "images/users/" user.image)}}>
         </a>
         <h3>{{user.term}}</h3>
         <p id="sponsorType">{{user.content}}</p>
@@ -25,7 +25,7 @@
     {{#each pastSponsors as |user|}}
       <li class="sponsors-list-item">
         <a href={{user.url}}>
-          <img src={{asset-map (concat "images/users/" user.image)}}>
+          <img alt={{user.term}} src={{asset-map (concat "images/users/" user.image)}}>
         </a>
         <h3>{{user.term}}</h3>
         <p id="sponsorType">{{user.content}}</p>
