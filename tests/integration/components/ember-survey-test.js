@@ -15,9 +15,10 @@ module('Integration | Component | ember-survey', function(hooks) {
       this.owner.register('config:environment', {
         survey: {
           route: 'annual-survey',
-          title: 'Our annual survey'
+          title: 'Our annual survey',
+          endDate: '2019-03-12'
         }
-      })
+      });
     });
 
     test("it renders when it's not the current survey page", async function(assert) {
@@ -28,32 +29,29 @@ module('Integration | Component | ember-survey', function(hooks) {
       assert.dom(surveySelector).exists();
     });
 
-    module('on the survey page', function() {
+    module('on the survey page', function(hooks) {
       
-      let templateWithToday = hbs`{{ember-survey today=today}}`;
-
-      test("it renders the time remaining to take the survey when it is the current survey page", async function(assert) {
+      hooks.beforeEach(function() {
         this.owner.register('service:router', Service.extend({
           currentRouteName: 'annual-survey'
         }));
+      });
+
+      let templateWithToday = hbs`{{ember-survey today=today}}`;
+
+      test("it renders the time remaining to take the survey when it is the current survey page", async function(assert) {
         this.set('today', Date.UTC(2019, 2, 1));
         await render(templateWithToday);
         assert.dom(surveySelector).hasText('You have 11 days left to submit your response!');
       });
 
       test("with one day left to submit", async function(assert) {
-        this.owner.register('service:router', Service.extend({
-          currentRouteName: 'annual-survey'
-        }));
         this.set('today', Date.UTC(2019, 2, 11));
         await render(templateWithToday);
         assert.dom(surveySelector).hasText('You have 1 day left to submit your response!');
       });
 
       test("with 0 days left to submit", async function(assert) {
-        this.owner.register('service:router', Service.extend({
-          currentRouteName: 'annual-survey'
-        }));
         this.set('today', Date.UTC(2019, 2, 12));
         await render(templateWithToday);
         assert.dom(surveySelector).hasText('You have today left to submit your response!');

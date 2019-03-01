@@ -15,6 +15,12 @@ export default Component.extend({
       this.set('today', Date.now());
     }
   },
+  endOfSurveyDate: computed('config.endDate', function() {
+    let dateRegex = /(\d{4})-(\d+)-(\d+)/g;
+    // eslint-disable-next-line no-unused-vars
+    let [_, year, month, day] = dateRegex.exec(this.config.endDate);
+    return Date.UTC(year, month - 1, day);
+  }),
   daysLeftText: computed('daysLeft', function() {
     if (this.daysLeft > 0) {
       return pluralize(this.daysLeft, 'day');
@@ -24,8 +30,7 @@ export default Component.extend({
   }),
   daysLeft: computed('today', function() {
     const MS_IN_A_DAY = 8.64e7;
-    const END_DATE_OF_SURVEY = Date.UTC(2019, 2, 12);
-    var diff = new Date(+END_DATE_OF_SURVEY) - new Date(+this.today);
+    var diff = new Date(+this.endOfSurveyDate) - new Date(+this.today);
     return Math.ceil(diff / MS_IN_A_DAY );
   }),
 });
