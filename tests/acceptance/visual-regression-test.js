@@ -37,6 +37,7 @@ module('Acceptance | visual regression', function (hooks) {
       { route: '/releases/release', title: '/releases/release.html' },
       { route: '/releases/canary', title: '/releases/canary.html' },
       { route: '/releases/beta', title: '/releases/beta.html' },
+      { route: '/ember-community-survey-2019/', title: '/rember-community-survey-2019.html' },
     ];
 
     await pages.reduce(async (prev, config) => {

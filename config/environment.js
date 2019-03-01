@@ -35,7 +35,8 @@ module.exports = function(environment) {
 
     survey: {
       route: 'ember-community-survey-2019',
-      title: '2019 Ember Community Survey'
+      title: '2019 Ember Community Survey',
+      endDate: '2019-03-12'
     },
   };
 

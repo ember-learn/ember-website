@@ -26,6 +26,7 @@ module.exports = function (defaults) {
         'community/meetups',
         'community/meetups/assets',
         'community/meetups-getting-started',
+        'ember-community-survey-2019',
         'ember-users',
         'guidelines',
         'learn',
