@@ -9,10 +9,9 @@ module('Acceptance | visual regression', function (hooks) {
   test(`visiting visual regressions with Percy`, async function (assert) {
     assert.expect(0);
 
-    // this is used to map the current **new** routes to what they used to be in the
+    // This is used to map the current **new** routes to what they used to be in the
     // old ruby app. This is to allow us to compare what the new app looks like
-    // vs the old app. It is unlikely that you should need to change the title side
-    // of these objects
+    // vs the old app.
     const pages = [
       { title: '/builds/', route: '/releases' },
       { title: '/builds/beta/', route: '/releases/beta' },
