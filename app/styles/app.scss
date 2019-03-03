@@ -22,6 +22,7 @@
 
 @import 'components/job-board-banner';
 @import 'components/survey-banner';
+@import 'components/ember-conf';
 
 @import 'layout';
 
@@ -305,3 +306,5 @@ body {
 .clearfix {
   clear: both;
 }
+
+@import "percy-fixes";

@@ -1,0 +1,114 @@
+// This file is essentially a giant TODO and should be progressively deleted
+// as we improve the implementation of the website. This is being used to make
+// https://github.com/ember-learn/ember-website/pull/185 pass ahead of
+// deployment
+
+body {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+header {
+  height: 52px;
+}
+
+a.navbar-brand {
+  margin-top: 1px;
+}
+
+main.container {
+  padding: 3em 0;
+}
+
+ul[role="menubar"] a[role="menuitem"] {
+  font-size: 18px;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+    max-width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    max-width: 1170px !important;
+  }
+}
+
+.ember-button {
+    background-color: #E04E39;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.35);
+    color: #fdfdfd;
+    display: block;
+    font-size: 0.8em;
+    font-weight: bold;
+    height: 40px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out 0s;
+    width: 220px;
+}
+
+.ember-button--centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.emberconf-callout h2 {
+    margin-top: 15px !important;
+    margin-bottom: 0 !important;
+}
+
+.emberconf-callout p {
+    margin-top: 5px !important;
+}
+
+.emberconf-callout h2 {
+    margin-top: 18px !important;
+    margin-bottom: 8px !important;
+}
+
+.emberconf-callout .ember-button {
+    margin-top: 33px !important;
+}
+
+.section {
+    margin: 4rem 0;
+    overflow: hidden;
+}
+
+h2 {
+    margin: 1.25em 0 0.75em 0 !important;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ul.homepage.users .user a {
+    display: block;
+    height: 103px;
+    width: 210px;
+}
+
+ul.homepage.users {
+  max-width: 920px;
+  margin: 2em auto;
+}
+
+.about__listing-button-group .ember-button {
+  margin: 0 10px;
+}
