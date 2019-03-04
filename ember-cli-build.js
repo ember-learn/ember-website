@@ -64,6 +64,11 @@ module.exports = function (defaults) {
         }
       }
     },
+    emberHighCharts: {
+      includeHighCharts: true,
+      includeHighChartsMore: true,
+      includeModules: ['drilldown'],
+    },
   });
 
   app.import("node_modules/highlightjs/highlight.pack.js");
