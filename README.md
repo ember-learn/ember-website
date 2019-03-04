@@ -1,6 +1,6 @@
 # ember-website
 
-This is the primary effort to change the current emberjs.com website to use Ember. Components come from [ember-styleguide](https://github.com/ember-learn/ember-styleguide).
+This branch is intended to be used to implement a demo for the landing page of the [Website Redesign RFC](https://github.com/wifelette/rfcs/blob/master/text/0425-website-redesign.md)
 
 ## Prerequisites
 
