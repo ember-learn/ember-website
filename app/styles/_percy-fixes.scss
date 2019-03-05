@@ -5,6 +5,7 @@
 
 body {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
 }
 
 header {
@@ -67,11 +68,6 @@ p {
     margin-right: auto;
 }
 
-.emberconf-callout h2 {
-    margin-top: 15px !important;
-    margin-bottom: 0 !important;
-}
-
 .emberconf-callout p {
     margin-top: 5px !important;
 }
@@ -92,10 +88,6 @@ p {
 
 h2 {
     margin: 1.25em 0 0.75em 0 !important;
-}
-
-body {
-  line-height: 1.5;
 }
 
 ul.homepage.users .user a {
