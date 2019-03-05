@@ -4,6 +4,7 @@
 
 ## Important notes - read before claiming this issue
 
+- This task refers to making the **Percy** build of a page show no differences between the new implementation and what is in production. You should look at the latest Percy build on https://percy.io/Ember/Ember-Website before starting this work
 - when staring your PR on this issue, branch off `percy-magic` instead of master.
 - please do not claim one of these tasks unless you expect to be able to achieve the required outcome within 24 hours.
   - We have a number of people working on this and a very tight deadline for release so we need a quick turnaround. Don't worry, there will be plenty of work with less stressful timelines as a result of the upcoming Website Redesign project 👍
