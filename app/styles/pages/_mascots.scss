@@ -1,10 +1,12 @@
 #tomster-filter ul li {
-    display: inline-block;
+  display: inline-block;
 }
 
 #tomster-filter ul {
-    text-align: center;
-    list-style-type: none;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 1em 1.5em;
 }
 
 .tomster.section.list .tomster-container {
@@ -17,24 +19,25 @@
 }
 
 .tomster.section.list .tomster-image {
-    text-align: center;
-    height: 438px;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+  height: 438px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tomster.section.list .tomster-image img {
-    margin-bottom: -4px;
-    max-width: 100%;
-    max-height: 100%;
+  margin-bottom: -4px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .tomster-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 40px 40px;
+  padding: 15px;
 }
 
 @media (min-width: 576px) {
@@ -45,34 +48,34 @@
 
 @media (min-width: 1200px) {
   .tomster-list {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 .tomster.section.list .tomster-info {
-    display: flex;
-    padding: 6px 12px;
+  display: flex;
+  padding: 6px 12px;
 }
 
 .tomster.section.list .tomster-info .title {
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    flex-grow: 1;
-    text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  flex-grow: 1;
+  text-align: left;
 }
 
 .tomster.section.list .tomster-info p.not-yet-url {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .tomster.section.list .tomster-info .date {
-    text-align: right;
+  text-align: right;
 }
 
 .tomster.section.list .tomster-info p {
-    min-width: inherit;
+  min-width: inherit;
 }
 
 .mascots {
