@@ -6,38 +6,64 @@
   text-align: center;
   list-style-type: none;
   padding: 0;
-  margin: 1em 1.5em;
-}
-
-.tomster.section.list .tomster-container {
-  border-radius: 2px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-}
-
-.tomster.section.list .tomster-image {
-  text-align: center;
-  height: 438px;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tomster.section.list .tomster-image img {
-  margin-bottom: -4px;
-  max-width: 100%;
-  max-height: 100%;
+  margin: 5.5em 1.5em 1.2em;
 }
 
 .tomster-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px 40px;
-  padding: 15px;
+  padding: 20px;
+
+  .tomster-container {
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  }
+
+  .tomster-image {
+    text-align: center;
+    height: 438px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tomster-image img {
+    margin-bottom: -4px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .tomster-info {
+    display: flex;
+    padding: 6px 12px;
+  }
+
+  .tomster-info .title {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .tomster-info p.not-yet-url {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .tomster-info .date {
+    text-align: right;
+  }
+
+  .tomster-info p {
+    min-width: inherit;
+  }
 }
 
 @media (min-width: 576px) {
@@ -52,38 +78,7 @@
   }
 }
 
-.tomster.section.list .tomster-info {
-  display: flex;
-  padding: 6px 12px;
-}
-
-.tomster.section.list .tomster-info .title {
-  font-size: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  flex-grow: 1;
-  text-align: left;
-}
-
-.tomster.section.list .tomster-info p.not-yet-url {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.tomster.section.list .tomster-info .date {
-  text-align: right;
-}
-
-.tomster.section.list .tomster-info p {
-  min-width: inherit;
-}
-
 .mascots {
-  main > section {
-    display: flex;
-    flex-flow: row wrap;
-  }
-
   ol {
     li {
       margin: 15px 0 10px 0;
