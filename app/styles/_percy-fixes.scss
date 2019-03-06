@@ -158,3 +158,61 @@ ul.homepage.users {
   flex-flow: row wrap;
   justify-content: flex-start;
 }
+
+h1 {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  margin: 1.25em 0 0.75em 0;
+}
+
+section {
+  overflow: hidden;
+}
+
+.logos section {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.learn-index {
+  main {
+    max-width: 960px !important;
+    padding: 3em 1rem
+  }
+
+  ul {
+    padding-left: 1.5em;
+  }
+
+  .img-mascot {
+    margin-left: 1em;
+  }
+
+}
+
+.team {
+  section {
+    margin: 0;
+    overflow: inherit;
+  }
+
+  hr {
+    margin: 20px 0;
+  }
+}
+
+.users {
+  section p.text-center {
+    text-align: left;
+  }
+}
+
+.ember-community-survey-2019 {
+  main.container {
+    padding: 0;
+    max-width: 100% !important;
+  }
+}
