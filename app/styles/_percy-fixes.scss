@@ -46,16 +46,33 @@ p {
 }
 
 @media screen and (max-width: 991px) and (min-width: 0) {
-  .page__mascots {
+  .page__mascots,
+  .page__mascots_faq,
+  .page__mascots_commission {
     p {
       margin: 0 auto;
       padding: 0.5em;
+    }
+
+    h3 {
+      margin-left: .5rem;
+      margin-right: .5rem;
     }
   }
 
   main.container {
     padding: 1em 10px;
     min-height: auto;
+  }
+
+  .split-pane {
+    .left-col {
+      width: 100%;
+    }
+
+    .right-col {
+      display: none;
+    }
   }
 }
 
