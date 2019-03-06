@@ -1,7 +1,7 @@
 ---
 title: Stable Release Bust
 url: 'http://www.emberjs.com/builds'
-date: 'December 2, 2013'
+date: 2013-12-02T09:02:00Z
 image: 3-release.png
 tags:
   - all
