@@ -1,7 +1,7 @@
 ---
 title: Canary Release Bust
 url: 'http://www.emberjs.com/builds'
-date: 'December 2, 2013'
+date: 2013-12-02T09:01:00Z
 image: 1-canary.png
 tags:
   - all

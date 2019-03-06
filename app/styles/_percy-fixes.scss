@@ -1,0 +1,214 @@
+// This file is essentially a giant TODO and should be progressively deleted
+// as we improve the implementation of the website. This is being used to make
+// https://github.com/ember-learn/ember-website/pull/185 pass ahead of
+// deployment
+
+body {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  height: 52px;
+}
+
+a.navbar-brand {
+  margin-top: 1px;
+}
+
+ul[role="menubar"] a[role="menuitem"] {
+  font-size: 18px;
+  padding: 0 15px;
+}
+
+p {
+  margin: 1em 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+    max-width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    max-width: 1170px !important;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 0) {
+  .page__mascots,
+  .page__mascots_faq,
+  .page__mascots_commission {
+    p {
+      margin: 0 auto;
+      padding: 0.5em;
+    }
+
+    h3 {
+      margin-left: .5rem;
+      margin-right: .5rem;
+    }
+  }
+
+  main.container {
+    padding: 1em 10px;
+    min-height: auto;
+  }
+
+  .split-pane {
+    .left-col {
+      width: 100%;
+    }
+
+    .right-col {
+      display: none;
+    }
+  }
+}
+
+.ember-button {
+    background-color: #E04E39;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.35);
+    color: #fdfdfd;
+    display: block;
+    font-size: 0.8em;
+    font-weight: bold;
+    height: 40px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out 0s;
+    width: 220px;
+}
+
+.ember-button--centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.emberconf-callout p {
+    margin-top: 5px !important;
+}
+
+.emberconf-callout h2 {
+    margin-top: 18px !important;
+    margin-bottom: 8px !important;
+}
+
+.emberconf-callout .ember-button {
+    margin-top: 33px !important;
+}
+
+.section {
+    margin: 4rem 0;
+    overflow: hidden;
+}
+
+h2 {
+    margin: 1.25em 0 0.75em 0 !important;
+}
+
+ul.homepage.users .user a {
+    display: block;
+    height: 103px;
+    width: 210px;
+}
+
+ul.homepage.users {
+  max-width: 920px;
+  margin: 2em auto;
+}
+
+.about__listing-button-group .ember-button {
+  margin: 0 10px;
+}
+
+.page__mascots_faq,
+.page__mascots_commission {
+  margin: 0;
+
+  h1 {
+    margin: 0 0 4rem;
+  }
+
+  ol {
+    margin: 1em 1.5em;
+    padding: 0;
+    > li {
+      margin: 0 0 4px;
+    }
+  }
+}
+
+.split-pane {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+section {
+  overflow: hidden;
+}
+
+.logos section {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.learn-index {
+  main {
+    max-width: 960px !important;
+    padding: 3em 1rem
+  }
+
+  ul {
+    padding-left: 1.5em;
+  }
+
+  .img-mascot {
+    margin-left: 1em;
+  }
+
+}
+
+.team {
+  section {
+    margin: 0;
+    overflow: inherit;
+  }
+
+  hr {
+    margin: 20px 0;
+  }
+}
+
+.users {
+  section p.text-center {
+    text-align: left;
+  }
+}
+
+.ember-community-survey-2019 {
+  main.container {
+    padding: 0;
+    max-width: 100% !important;
+  }
+}

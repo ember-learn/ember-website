@@ -22,6 +22,7 @@
 
 @import 'components/job-board-banner';
 @import 'components/survey-banner';
+@import 'components/ember-conf';
 
 @import 'layout';
 
@@ -46,8 +47,11 @@ $small-max-width: 767px;
 
 body {
   -webkit-font-smoothing: antialiased;
-  background-color: rgba(250,235,232,0.36); //white is too white in contrast to ember orange
+  background-color: #fdfdfd;
   color: #444444;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
 }
 
 
@@ -299,9 +303,13 @@ body {
 }
 
 .cta-contribute {
+  font-size: 0.9em;
+  margin: 3em auto 0 auto;
   text-align: center;
 }
 
 .clearfix {
   clear: both;
 }
+
+@import "percy-fixes";

@@ -9,35 +9,33 @@ module('Acceptance | visual regression', function (hooks) {
   test(`visiting visual regressions with Percy`, async function (assert) {
     assert.expect(0);
 
-    // this is used to map the current **new** routes to what they used to be in the
+    // This is used to map the current **new** routes to what they used to be in the
     // old ruby app. This is to allow us to compare what the new app looks like
-    // vs the old app. It is unlikely that you should need to change the title side
-    // of these objects
+    // vs the old app.
     const pages = [
-      { route: '/team/', title: '/team.html' },
-      { route: '/about/legal/', title: '/legal.html' },
-      { route: '/', title: '/index.html' },
-      { route: '/mascots/', title: '/mascots.html' },
-      { route: '/learn/', title: '/learn.html' },
-      { route: '/guidelines/', title: '/guidelines.html' },
-      { route: '/logos/', title: '/logos.html' },
-      { route: '/sponsors/', title: '/sponsors.html' },
-      { route: '/ember-users/', title: '/ember-users.html' },
-      { route: '/community/', title: '/community/index.html' },
-      { route: '/community/meetups/', title: '/community/meetups.html' },
-      { route: '/community/meetups/assets/', title: '/meetup-assets.html' },
-      { route: '/community/meetups-getting-started/', title: '/community/meetups-getting-started.html' },
-      { route: '/mascots/faq/', title: '/tomster/faq.html' },
-      { route: '/mascots/commission/', title: '/tomster/commission/index.html' },
-      { route: '/mascots/commission-sent/', title: '/tomster/commission-sent.html' },
-      { route: '/mascots/payment/', title: '/tomster/payment/index.html' },
-      { route: '/mascots/payment-sent/', title: '/tomster/payment-sent.html' },
-      { route: '/statusboard', title: '/statusboard.html' },
-      { route: '/releases', title: '/releases.html' },
-      { route: '/releases/release', title: '/releases/release.html' },
-      { route: '/releases/canary', title: '/releases/canary.html' },
-      { route: '/releases/beta', title: '/releases/beta.html' },
-      { route: '/ember-community-survey-2019/', title: '/rember-community-survey-2019.html' },
+      { title: '/builds/', route: '/releases' },
+      { title: '/builds/beta/', route: '/releases/beta' },
+      { title: '/builds/canary/', route: '/releases/canary' },
+      { title: '/builds/release/', route: '/releases/release' },
+      { title: '/community/index.html', route: '/community/' },
+      { title: '/community/meetups-getting-started.html', route: '/community/meetups-getting-started/' },
+      { title: '/community/meetups.html', route: '/community/meetups/' },
+      { title: '/ember-community-survey-2019.html', route: '/ember-community-survey-2019/' },
+      { title: '/ember-users.html', route: '/ember-users/' },
+      { title: '/guidelines.html', route: '/guidelines/' },
+      { title: '/index.html', route: '/' },
+      { title: '/learn.html', route: '/learn/' },
+      { title: '/legal.html', route: '/about/legal/' },
+      { title: '/logos.html', route: '/logos/' },
+      { title: '/mascots.html', route: '/mascots/' },
+      { title: '/meetup-assets.html', route: '/community/meetups/assets/' },
+      { title: '/security.html', route: '/security/' },
+      { title: '/sponsors.html', route: '/sponsors/' },
+      { title: '/statusboard.html', route: '/statusboard' },
+      { title: '/team.html', route: '/team/' },
+      { title: '/tomster/index.html', route: '/mascots/' },
+      { title: '/tomster/commission/index.html', route: '/mascots/commission/' },
+      { title: '/tomster/faq.html', route: '/mascots/faq/' },
     ];
 
     await pages.reduce(async (prev, config) => {

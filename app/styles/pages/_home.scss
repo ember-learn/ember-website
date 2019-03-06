@@ -7,13 +7,8 @@
     background-size: 100% auto;
   }
 
-  h2 {
-    margin: 1.25em 0 0.75em 0 !important;
-  }
-
   .about-page {
     &--header {
-      margin: 1em auto 0;
       display: block;
       clear: both;
       color: black;
@@ -167,7 +162,6 @@
 
     li a {
       display: block;
-      margin: 1rem 1.5rem;
     }
   }
 
