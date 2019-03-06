@@ -1,7 +1,7 @@
 ---
 title: Construction Tomster
 url: null
-date: 'March 24, 2013'
+date: 2013-03-24T09:00:00Z
 image: construction.png
 tags:
   - all

@@ -1,7 +1,7 @@
 ---
 title: Deprecated Tomster
 url: null
-date: 'March 24, 2013'
+date: 2013-03-24T09:01:00Z
 image: deprecated.png
 tags:
   - all
