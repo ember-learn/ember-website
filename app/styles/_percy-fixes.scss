@@ -45,6 +45,20 @@ p {
   }
 }
 
+@media screen and (max-width: 991px) and (min-width: 0) {
+  .page__mascots {
+    p {
+      margin: 0 auto;
+      padding: 0.5em;
+    }
+  }
+
+  main.container {
+    padding: 1em 10px;
+    min-height: auto;
+  }
+}
+
 .ember-button {
     background-color: #E04E39;
     border-radius: 5px;
