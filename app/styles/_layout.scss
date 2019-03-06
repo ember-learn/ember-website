@@ -6,6 +6,16 @@ body {
 
 main {
   flex-grow: 1;
+
+  > section {
+    margin: 4rem 0;
+  }
+
+  &.container {
+    padding: 3em 10px;
+    max-width: 1200px !important;
+    width: 100%;
+  }
 }
 
 .columns {

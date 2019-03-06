@@ -5,6 +5,7 @@
 
 body {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
 }
 
 header {
@@ -15,13 +16,13 @@ a.navbar-brand {
   margin-top: 1px;
 }
 
-main.container {
-  padding: 3em 0;
-}
-
 ul[role="menubar"] a[role="menuitem"] {
   font-size: 18px;
   padding: 0 15px;
+}
+
+p {
+  margin: 1em 0;
 }
 
 @media (min-width: 768px) {
@@ -41,6 +42,37 @@ ul[role="menubar"] a[role="menuitem"] {
   .container {
     width: 1170px;
     max-width: 1170px !important;
+  }
+}
+
+@media screen and (max-width: 991px) and (min-width: 0) {
+  .page__mascots,
+  .page__mascots_faq,
+  .page__mascots_commission {
+    p {
+      margin: 0 auto;
+      padding: 0.5em;
+    }
+
+    h3 {
+      margin-left: .5rem;
+      margin-right: .5rem;
+    }
+  }
+
+  main.container {
+    padding: 1em 10px;
+    min-height: auto;
+  }
+
+  .split-pane {
+    .left-col {
+      width: 100%;
+    }
+
+    .right-col {
+      display: none;
+    }
   }
 }
 
@@ -67,11 +99,6 @@ ul[role="menubar"] a[role="menuitem"] {
     margin-right: auto;
 }
 
-.emberconf-callout h2 {
-    margin-top: 15px !important;
-    margin-bottom: 0 !important;
-}
-
 .emberconf-callout p {
     margin-top: 5px !important;
 }
@@ -94,10 +121,6 @@ h2 {
     margin: 1.25em 0 0.75em 0 !important;
 }
 
-body {
-  line-height: 1.5;
-}
-
 ul.homepage.users .user a {
     display: block;
     height: 103px;
@@ -111,4 +134,27 @@ ul.homepage.users {
 
 .about__listing-button-group .ember-button {
   margin: 0 10px;
+}
+
+.page__mascots_faq,
+.page__mascots_commission {
+  margin: 0;
+
+  h1 {
+    margin: 0 0 4rem;
+  }
+
+  ol {
+    margin: 1em 1.5em;
+    padding: 0;
+    > li {
+      margin: 0 0 4px;
+    }
+  }
+}
+
+.split-pane {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }

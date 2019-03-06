@@ -6,10 +6,6 @@ node_js:
 sudo: false
 dist: trusty
 
-branches:
-  only:
-    - master
-
 addons:
   chrome: stable
 
