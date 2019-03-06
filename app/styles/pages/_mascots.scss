@@ -93,11 +93,13 @@
   }
 
   .left-col {
-    flex: 2;
+    width: 70%;
     flex-flow: row wrap;
   }
 
   .right-col {
-    flex: 1;
+    width: 24%;
+    margin-left: 15px;
+    text-align: center;
   }
 }

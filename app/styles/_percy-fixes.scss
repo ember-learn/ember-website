@@ -118,3 +118,26 @@ ul.homepage.users {
 .about__listing-button-group .ember-button {
   margin: 0 10px;
 }
+
+.page__mascots_faq,
+.page__mascots_commission {
+  margin: 0;
+
+  h1 {
+    margin: 0 0 4rem;
+  }
+
+  ol {
+    margin: 1em 1.5em;
+    padding: 0;
+    > li {
+      margin: 0 0 4px;
+    }
+  }
+}
+
+.split-pane {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
