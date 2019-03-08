@@ -51,6 +51,7 @@ module.exports = function (defaults) {
         'ember-community-survey-2016',
         'ember-community-survey-2017',
         'ember-community-survey-2018',
+        'ember-community-survey-2019',
       ]
     },
     'ember-bootstrap': {

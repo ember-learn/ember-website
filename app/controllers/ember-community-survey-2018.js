@@ -11,13 +11,6 @@ var color2017 = darkGrayColor;
 var color2018 = emberOrange;
 var colorFutureYear = lightGreenColor;
 
-var theme = {
-  colors: [color2016, color2017, color2018, lightGreenColor],
-  credits: {
-    enabled: false
-  }
-};
-
 const overallAdoption = {
   options: {
     chart: { type: 'column' },
