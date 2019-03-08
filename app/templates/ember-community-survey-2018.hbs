@@ -336,7 +336,11 @@
     <a href="#browser-requirements" id="browser-requirements" class="survey-h2">
       Browser Requirements
     </a>
-    <div id="chart-browser-requirements" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{browserRequirements.options}}
+      @content={{browserRequirements.data}}
+      @theme={{theme}}
+    />
     <p class="large">
       Developers need to support browsers before IE11 less than ever before.
       As Ember 3.0 only supports IE11 and up, most developers now have

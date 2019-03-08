@@ -302,6 +302,50 @@ const serverSideFrameworks = {
   }]
 }
 
+const browserRequirements = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Which browser versions do your applications target?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        'Modern browsers',
+        'Mobile browsers',
+        'IE 11',
+        'IE 10',
+      ]
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+  },
+  data: [{
+    name: '2016',
+    color: color2016,
+    data: [ 93.6, 49.0, 39.6, 27.7, ]
+  }, {
+    name: '2017',
+    color: color2017,
+    data: [ 94.26, 44.2, 38.5, 19.2 ],
+  }, {
+    name: '2018',
+    color: color2018,
+    data: [ 96.5, 52, 45.8, 10.1 ]
+  }, {
+    name: 'Expected for 2019',
+    color: colorFutureYear,
+    data: [ 97.7, 57.3, 29.7, 3.7 ]
+  }]
+}
+
 const recommendingEmber = {
   options: {
     chart: { type: 'spline' },
@@ -763,4 +807,5 @@ export default Controller.extend({
   serverSide,
   serverSideFrameworks,
   editorTool,
+  browserRequirements,
 });
