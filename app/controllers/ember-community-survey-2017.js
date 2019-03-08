@@ -276,67 +276,70 @@ const emberDevelopers = {
   }]
 }
 
-// $('#e-s-g5').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'How old are your Ember applications?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     categories: [
-//       '> 24 Months',
-//       '18–24 Months',
-//       '12–18 Months',
-//       '9–12 Months',
-//       '6–9 Months',
-//       '3–6 Months',
-//       '< 3 Months'
-//     ]
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2015',
-//     data: [
-//       1.9, // '> 24 Months',
-//       9.2, // '18–24 Months',
-//       18.4, // '12–18 Months',
-//       20, // '9–12 Months',
-//       20, // '6–9 Months',
-//       25.8, // '3–6 Months',
-//       38.8 // '< 3 Months',
-//     ]
-//   }, {
-//     name: '2016',
-//     data: [
-//       15, // '> 24 Months',
-//       16, // '18–24 Months',
-//       23, // '12–18 Months',
-//       21, // '9–12 Months',
-//       18, // '6–9 Months',
-//       20, // '3–6 Months',
-//       27 // '< 3 Months',
-//     ]
-//   }, {
-//     name: '2017',
-//     data: [
-//       33.7, // '> 24 Months',
-//       22, // '18–24 Months',
-//       15.8, // '12–18 Months',
-//       13.7, // '9–12 Months',
-//       13, // '6–9 Months',
-//       15.8, // '3–6 Months',
-//       19.8 // '< 3 Months',
-//     ]
-//   }]
-// });
+const longLived = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'How old are your Ember applications?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        '> 24 Months',
+        '18–24 Months',
+        '12–18 Months',
+        '9–12 Months',
+        '6–9 Months',
+        '3–6 Months',
+        '< 3 Months'
+      ]
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+  },
+  data: [{
+    name: '2015',
+    data: [
+      1.9, // '> 24 Months',
+      9.2, // '18–24 Months',
+      18.4, // '12–18 Months',
+      20, // '9–12 Months',
+      20, // '6–9 Months',
+      25.8, // '3–6 Months',
+      38.8 // '< 3 Months',
+    ]
+  }, {
+    name: '2016',
+    data: [
+      15, // '> 24 Months',
+      16, // '18–24 Months',
+      23, // '12–18 Months',
+      21, // '9–12 Months',
+      18, // '6–9 Months',
+      20, // '3–6 Months',
+      27 // '< 3 Months',
+    ]
+  }, {
+    name: '2017',
+    data: [
+      33.7, // '> 24 Months',
+      22, // '18–24 Months',
+      15.8, // '12–18 Months',
+      13.7, // '9–12 Months',
+      13, // '6–9 Months',
+      15.8, // '3–6 Months',
+      19.8 // '< 3 Months',
+    ]
+  }]
+}
+
 //
 // $('#e-s-g6').highcharts({
 //   chart: {
@@ -1189,4 +1192,5 @@ export default Controller.extend({
   employmentSituation,
   emberDevelopers,
   productionUsers,
+  longLived,
 });

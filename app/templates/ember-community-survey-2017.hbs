@@ -329,7 +329,11 @@
       </a>
     </h2>
 
-    <div id="e-s-g5" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{longLived.options}}
+      @content={{longLived.data}}
+      @theme={{theme}}
+    />
 
     <p class="large">
       Nearly one thirds of Ember developers work with an app that is more than
