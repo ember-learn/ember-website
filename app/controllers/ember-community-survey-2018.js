@@ -264,7 +264,61 @@ var emberVersionData = [{year: '2015',
 ]}];
 
 const newReleaseAdoption = makeVersionChart(emberVersionData, 'Which version(s) of Ember are used in your apps?');
+
+var emberDataVersionData = [{year:
+  '2016',
+  color: color2016,
+  data:[
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  {value: 27, label: '1.13'},
+  {value: 6, label: '2.0'},
+  {value: 4, label: '2.1'},
+  {value: 8, label: '2.2'},
+  {value: 21, label: '2.3'},
+  {value: 42, label: '2.4'},
+  null,
+]}, {year: '2017', color: color2017, data: [
+  {value: 9, label: '1.13'},
+  {value: 2.15, label: '2.0'},
+  {value: 2.1, label: '2.1'},
+  {value: 1.5, label: '2.2'},
+  {value: 2.8, label: '2.3'},
+  {value: 7, label: '2.4'},
+  {value: 3, label: '2.5'},
+  {value: 4, label: '2.6'},
+  {value: 4, label: '2.7'},
+  {value: 13.8, label: '2.8'},
+  {value: 7, label: '2.9'},
+  {value: 21.6, label: '2.10'},
+  {value: 34.9, label: '2.11'},
+  {value: 17, label: 'stable (2.12)'}
+]}, {year: '2018', color: color2018, data: [
+  {value: 5.9, label: '2.0-2.6'},
+  {value: 1, label: '2.7'},
+  {value: 5.2, label: '2.8'},
+  {value: 2, label: '2.9'},
+  {value: 2.3, label: '2.10'},
+  {value: 2.5, label: '2.11'},
+  {value: 12.5, label: '2.12'},
+  {value: 6.2, label: '2.13'},
+  {value: 6.2, label: '2.14'},
+  {value: 0, label: '2.15'},
+  {value: 17.2, label: '2.16'},
+  {value: 6.8, label: '2.17'},
+  {value: 35.8, label: '2.18'},
+  {value: 21.5, label: '3.0'},
+]}];
+
+const emberDataAdoption = makeVersionChart(emberDataVersionData, 'Which versions of Ember Data are used in your apps?');
+
 export default Controller.extend({
   newReleaseAdoption,
   overallAdoption,
+  emberDataAdoption,
 });
