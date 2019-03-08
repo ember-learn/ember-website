@@ -164,6 +164,34 @@ const recommendingEmber = {
 }
 
 
+const productionApps = {
+  options: {
+    chart: { type: 'column' },
+    title: {
+      text: 'Which of these best describes your use of Ember in production applications?'
+    },
+    subtitle: { text: '2018 Results Only' },
+    xAxis: {
+      categories: [
+        'Prototypes only',
+        'Tens of users',
+        'Hundreds of users',
+        'Thousands of users',
+        '10s of Thousands of users',
+        '100s of Thousands of users',
+        'Millions of users'
+      ]
+    },
+    yAxis: { title: { text: 'Percent' } },
+  },
+  data: [{
+    name: '2018',
+    color: color2018,
+    data: [ 9.1, 23.3, 34.5, 30.7, 17.7, 11.1, 9.8 ]
+  }]
+}
+
+
 const employerUsingEmber = {
   options: {
     chart: { type: 'column' },
@@ -409,4 +437,7 @@ export default Controller.extend({
   overallAdoption,
   emberDataAdoption,
   recommendingEmber,
+  employerUsingEmber,
+  gettingHired,
+  productionApps,
 });

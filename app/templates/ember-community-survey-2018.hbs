@@ -218,7 +218,11 @@
     <a href="#ember-in-the-enterprise" id="ember-in-the-enterprise" class="survey-h2">
       Ember In the Enterprise
     </a>
-    <div id="chart-ember-production-apps-detail" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{productionApps.options}}
+      @content={{productionApps.data}}
+      @theme={{theme}}
+    />
     <p class="large">
       Ember apps with large user bases have grown again this year, with a large increase in apps that have thousands of users.
       This year the survey included 2 additional responses: "Tens of Thousands" and "Hundreds of Thousands".
