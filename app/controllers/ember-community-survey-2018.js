@@ -136,6 +136,35 @@ const overallAdoption = {
 }
 
 
+const longLivedCodebases = {
+  options: {
+    chart: { type: 'column' },
+    title: { text: 'Do you maintain an app started between March 2014 and March 2015?' },
+    subtitle: { text:
+      'Percent of Survey Participants Currently Maintaining an Ember App Created in 2014' },
+    xAxis: { },
+    tooltip: { enabled: false },
+    yAxis: { title: { text: 'Percent' } },
+  },
+  data: [{
+    color: color2015,
+    name: '2015',
+    data: [ 79.5 ]
+  }, {
+    color: color2016,
+    name: '2016',
+    data: [ 38.6, ]
+  }, {
+    color: color2017,
+    name: '2017',
+    data: [ 34.3, ]
+  }, {
+    color: color2018,
+    name: '2018',
+    data: [ 31.3, ]
+  }]
+}
+
 const recommendingEmber = {
   options: {
     chart: { type: 'spline' },
@@ -558,4 +587,5 @@ export default Controller.extend({
   emberenoEmployment,
   applicationUsers,
   teamSize,
+  longLivedCodebases,
 });

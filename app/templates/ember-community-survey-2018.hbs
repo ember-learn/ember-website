@@ -262,7 +262,11 @@
     <a href="#long-lived-codebases" id="long-lived-codebases" class="survey-h2">
       Long-Lived Codebases
     </a>
-    <div id="chart-long-lived-codebases" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{longLivedCodebases.options}}
+      @content={{longLivedCodebases.data}}
+      @theme={{theme}}
+    />
     <p class="large">
       This chart shows the percentage of respondents who were maintaining an Ember app created
       in 2014 (technically, between March 2014 and March 2015) at the time they answered this question.
