@@ -163,6 +163,34 @@ const recommendingEmber = {
   }]
 }
 
+
+const employerUsingEmber = {
+  options: {
+    chart: { type: 'column' },
+    title: { text: 'When starting your most recent job...' },
+    subtitle: { text: '' },
+    xAxis: { type: 'category', },
+    yAxis: { title: { text: 'Percent' } },
+  },
+  data: [{
+    name: '2017',
+    color: color2017,
+    data: [
+      {name: 'My employer was not using Ember', y: 53.63},
+      {name: 'My employer was already using Ember', y: 38.74},
+      {name: 'Does not apply (e.g. I am a student)', y: 6.56}
+    ]
+  }, {
+    name: '2018',
+    color: color2018,
+    data: [
+      {name: 'My employer was not using Ember', y: 43.1},
+      {name: 'My employer was already using Ember', y: 52.3},
+      {name: 'Does not apply (e.g. I am a student)', y: 4.5}
+    ]
+  }]
+}
+
 function makeVersionChart(versionData, title) {
   var seriesData = [];
 
