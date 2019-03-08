@@ -1,0 +1,463 @@
+<div class="survey-wrapper survey-wrapper-header">
+  <div class="survey-header survey-container">
+
+    <h1 class="survey-h1">
+      <img class="survey-logo" src="/images/survey/logo2017.png" alt="Ember Community Survey 2017">
+    </h1>
+
+    <h2 class="survey-tagline">
+      A project to learn
+      who is using Ember, and how
+    </h2>
+
+    <h3>With nearly 1600 responses, here are the 2017 survey results!</h3>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+    <h2>
+      <a href="#new-release-adoption" id="new-release-adoption" class="survey-h2">
+        New Release Adoption
+      </a>
+    </h2>
+
+    <HighCharts
+      @chartOptions={{chartHowlong.options}}
+      @content={{chartHowlong.data}}
+      @theme={{theme}}
+    />
+
+    <p class="large">
+      During the course of the survey, Ember 2.12 became the latest stable
+      release of the framework. The 2.x release cycle began in August
+      2015, and although 14% of developers still maintain a 1.13 app the
+      largest segment of developers work with the last one or two
+      Ember releases.
+    </p>
+    <p class="large">
+      Ember's Long-Term Support releases have emerged as a visible trend, and 21% of participants use the
+      2.8-LTS release (the most recent during the survey).
+    </p>
+
+    <div class="survey-row">
+      <div class="survey-column half">
+        <HighCharts
+          @chartOptions={{chartBreakdownByVersion.options}}
+          @content={{chartBreakdownByVersion.data}}
+          @theme={{theme}}
+        />
+      </div>
+      <div class="survey-column half">
+        <HighCharts
+          @chartOptions={{priorVersionsData.options}}
+          @content={{priorVersionsData.data}}
+          @theme={{theme}}
+        />
+      </div>
+    </div>
+    <p>&nbsp;</p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+
+    <h2>
+      <a href="#how-likely-to-recommend-ember" id="how-likely-to-recommend-ember" class="survey-h2">
+        Recommending Ember
+      </a>
+    </h2>
+
+    <HighCharts
+      @chartOptions={{recommendingEmber.options}}
+      @content={{recommendingEmber.data}}
+      @theme={{theme}}
+    />
+
+    <p class="large">
+      We asked respondents how likely they were to recommend Ember to a friend or colleague.
+      An average recommendation score is 8.4, and the calculated <a href="https://en.wikipedia.org/wiki/Net_Promoter">Net Promoter Score</a> is 42.
+      The majority of responses were a perfect 10.
+    </p>
+
+    <p class="large">
+      Using the recommendation scores we created three segments of Detractors (1-6), Passives (7-8), and Promoters (9-10).
+      Participants reported their reasoning for their score as free-form text,
+      and below we've provided the most frequent category of responses in
+      each segment based on similarity analysis.
+    </p>
+
+    <div class="nps">
+      <div class="nps-row">
+        <div class="nps-cell nps-cell-header">Detractors</div>
+        <div class="nps-cell nps-cell-header">Passives</div>
+        <div class="nps-cell nps-cell-header">Promoters</div>
+      </div>
+      <div class="nps-row">
+        <div class="nps-cell">Learning Curve</div>
+        <div class="nps-cell">Learning Curve</div>
+        <div class="nps-cell">Community</div>
+      </div>
+      <div class="nps-row">
+        <div class="nps-cell">React</div>
+        <div class="nps-cell">Not always the right tool for the job</div>
+        <div class="nps-cell">Ember CLI</div>
+      </div>
+      <div class="nps-row">
+        <div class="nps-cell">Easy to use</div>
+        <div class="nps-cell">Convention over configuration</div>
+        <div class="nps-cell">Convention over configuration</div>
+      </div>
+      <div class="nps-row">
+        <div class="nps-cell">Hard to learn</div>
+        <div class="nps-cell">Ember CLI</div>
+        <div class="nps-cell">I love it!</div>
+      </div>
+    </div>
+
+    <p class="large">
+      Here is a flavor of what reasons participants gave for their scoring:
+    </p>
+
+    <div class="cluster">
+      <h4>Score: 9</h4>
+      <aside class="quote">
+        I've worked with Ember professionally now for over 3 years, and select employment opportunities around whether or not I can continue working with it. While the community is smaller, the seamlessness of all the tooling and
+        the overall developer experience is simply the best the open source community has to offer. My out of the box productivity on a new project and onboarding experience to new projects reaffirms so many decisions I didn't have to make.
+      </aside>
+    </div>
+
+    <div class="cluster">
+      <h4>Score: 2</h4>
+      <aside class="quote">
+        I haven't found a scale of project for which Ember is suitable. The sheer amount of files and project complexity makes it impractical for small projects, and Ember Data doesn't scale for large projects. Documentation is
+        often incomplete, types are often not specified, everything is mutable and unpredictable.
+      </aside>
+    </div>
+
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+
+    <h2>
+      <a href="#how-can-we-improve-ember" id="how-can-we-improve-ember" class="survey-h2">
+        How Can We Improve Ember?
+      </a>
+    </h2>
+
+    <p class="large">
+      As the last question
+      of the survey we asked participants: "What is the most important thing
+      the Ember project can do today?" Using text similarity analysis, we identified the most
+      commonly mentioned topics. Here they are with a selected quote.
+    </p>
+
+    <div class="cluster">
+      <h4>Better Documentation, Examples and Guides</h4>
+      <aside class="quote">
+        Documentation is getting better, but I would love to see more detailed documentation of framework methods and properties and an easier way to know what the core team is currently working or focusing on... I would also love
+        to understand more about broccoli, which continues to be a confusing part of the cli that I don't quite understand how to extend.
+      </aside>
+    </div>
+
+    <div class="cluster">
+      <h4>Ember Data</h4>
+      <aside class="quote">
+        I'd like to see more stability/maturity from Ember Data. We've been able to get our API/back-end team to (sometimes reluctantly) adhere to JSON-API, but there are some features that we'd like a more complete answer for:
+        multiple record updates/creates in one transaction, optimistic concurrency control (using ETag headers), and relationship updating/rollback on errors.
+      </aside>
+    </div>
+
+    <div class="cluster">
+      <h4>Routable Components</h4>
+      <aside class="quote">Provide more updates on the future direction of the project, especially when it comes to routable components and how they will replace controllers.</aside>
+    </div>
+
+    <div class="cluster">
+      <h4>Performance</h4>
+      <aside class="quote">Cut down Ember's size, allow code splitting, improve performance and keep on stealing good ideas from other frameworks.</aside>
+    </div>
+
+    <div class="cluster">
+      <h4>Marketing Ember</h4>
+      <aside class="quote">Communication / marketing. Ember is a great framework, but it's sometimes difficult to show that greatness to non-Ember devs, or to business folks making decisions.</aside>
+    </div>
+
+    <div class="cluster">
+      <h4>Tree shaking</h4>
+      <aside class="quote">
+        In general I think that reducing the size and boot-up time of the application hasn't gotten enough attention. Tree-shaking and lazy code evaluation are important features to have these days, especially for larger
+        applications. Also, bundling everything in one minified file maybe doesn't make as much sense anymore in an HTTP2 age.
+      </aside>
+    </div>
+
+    <p class="large">
+      We were curious how important these topics were to participants with different
+      amounts of experience. The following chart shows how experienced with Ember developers
+      mentioning each topic are:
+    </p>
+
+    <HighCharts
+      @chartOptions={{howCanWeApprove.options}}
+      @content={{howCanWeApprove.data}}
+      @theme={{theme}}
+    />
+
+    <p class="large">
+      Performance was a common theme regardless of experience with Ember.
+      Documentation and guide improvement requests were more common from developers with less Ember experience
+      while requests for tree shaking, routable components and mobile support were more prevalent among experienced Ember developers.
+    </p>
+  </div>
+</div>
+
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+
+    <h2>
+      <a href="#ember-for-hire" id="ember-for-hire" class="survey-h2">
+        Ember for Hire
+      </a>
+    </h2>
+
+    <div class="survey-row">
+      <div class="survey-column half">
+        <HighCharts
+          @chartOptions={{whenStarting.options}}
+          @content={{whenStarting.data}}
+          @theme={{theme}}
+        />
+      </div>
+      <div class="survey-column half">
+        <HighCharts
+          @chartOptions={{preExistingKnowledge.options}}
+          @content={{preExistingKnowledge.data}}
+          @theme={{theme}}
+        />
+      </div>
+    </div>
+
+    <p class="large">
+      Employers are choosing Ember despite challenges in finding experienced Ember developers in the job market. Among
+      survey participants, 66% of developers who learned Ember this year did not know Ember when they were hired to their current job,
+      and 49% of developers who learned Ember this year were hired by a company that adopted Ember after they were hired.
+      Companies clearly believe in the benefits that Ember can bring their business and are willing to invest in training their developers.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+
+    <h2>
+      <a href="#ember-at-the-office" id="ember-at-the-office" class="survey-h2">
+        Ember at the Office
+      </a>
+    </h2>
+
+    <div class="survey-row">
+      <div class="survey-column half">
+        <HighCharts
+          @chartOptions={{employmentSituation.options}}
+          @content={{employmentSituation.data}}
+          @theme={{theme}}
+        />
+      </div>
+      <div class="survey-column half">
+        <HighCharts
+          @chartOptions={{emberDevelopers.options}}
+          @content={{emberDevelopers.data}}
+          @theme={{theme}}
+        />
+      </div>
+    </div>
+
+    <p class="large">
+      Ember developers continue to most commonly work on product with a small team.
+      However their roles are becoming more focused on the framework over time:
+      In another question participants reported 45% of them now work with Ember
+      "all the time". This number is up from 32% in 2016.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+
+    <h2>
+      <a href="#how-long-have-you-been-working-with-ember" id="how-long-have-you-been-working-with-ember" class="survey-h2">
+        A Snapshot of Ember Developers
+      </a>
+    </h2>
+
+    <HighCharts
+      @chartOptions={{chartSnapshotEmberDevelopers.options}}
+      @content={{chartSnapshotEmberDevelopers.data}}
+      @theme={{theme}}
+    />
+
+    <p class="large">
+      Almost half of survey participants have been using Ember for over two years.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+
+    <h2>
+      <a href="#ember-and-the-end-user" id="ember-and-the-end-user" class="survey-h2">
+        Ember and the End-User
+      </a>
+    </h2>
+
+    <HighCharts
+      @chartOptions={{productionUsers.options}}
+      @content={{productionUsers.data}}
+      @theme={{theme}}
+    />
+
+    <p class="large">
+      Most developers work on an Ember application that targets hundreds or
+      thousands of users. In responses to another question in the survey, we
+      noted that more developers work on B2B or B2C apps than internal
+      tools compared to last year.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+
+    <h2>
+      <a href="#long-lived-codebases" id="long-lived-codebases" class="survey-h2">
+        Long-Lived Codebases
+      </a>
+    </h2>
+
+    <HighCharts
+      @chartOptions={{longLived.options}}
+      @content={{longLived.data}}
+      @theme={{theme}}
+    />
+
+    <p class="large">
+      Nearly one thirds of Ember developers work with an app that is more than
+      two years old. One in five Ember developers is working with an app
+      create in the last three months.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+
+    <h2>
+      <a href="#server-side" id="server-side" class="survey-h2">
+        Server-side & Tools
+      </a>
+    </h2>
+
+    <div class="survey-row">
+      <div class="survey-column half">
+        <HighCharts
+          @chartOptions={{serverLanguage.options}}
+          @content={{serverLanguage.data}}
+          @theme={{theme}}
+        />
+      </div>
+      <div class="survey-column half">
+        <HighCharts
+          @chartOptions={{textEditor.options}}
+          @content={{textEditor.data}}
+          @theme={{theme}}
+        />
+      </div>
+    </div>
+
+    <p class="large">
+      Ruby retains the top spot in desired and actual server-side languages, however it also dropped 4% as a production platform.
+      The only notable mover further down the list is Java, which jumped almost 4% in popularity over the past year.
+    </p>
+    <p class="large">
+      Atom moved up a spot to become the editor of choice primarily due to a drop in Sublime share. Interestingly,
+      VS Code saw a 13% surge over the past year.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+
+    <h2>
+      <a href="#browser-requirements" id="browser-requirements" class="survey-h2">
+        Browser Requirements
+      </a>
+    </h2>
+
+    <HighCharts
+      @chartOptions={{browserRequirements.options}}
+      @content={{browserRequirements.data}}
+      @theme={{theme}}
+    />
+
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+
+    <h2>
+      <a href="#demographics" id="demographics" class="survey-h2">
+        Demographics
+      </a>
+    </h2>
+
+    <HighCharts
+      @chartOptions={{demographics.options}}
+      @content={{demographics.data}}
+      @theme={{theme}}
+    />
+
+    <p class="large">
+      Additionally 3% of participants report a disability and 92% of
+      participants were male.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+
+    <h2>
+      <a href="#closing-thoughts" id="closing-thoughts" class="survey-h2 mono">
+        Closing Thoughts
+      </a>
+    </h2>
+
+    <p class="large">
+      We would like to thank everyone who took the time to participate in the 2017 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
+    </p>
+
+    <p class="large">
+      You can view a <a href="https://embersurvey.typeform.com/report/GmJTvy/S9Nt">summary of the responses to all questions</a>
+      from the survey, and you can view the <a href="/ember-community-survey-2017/ember-community-survey-2017-results.csv">raw survey data</a>.
+      You can also view the <a href="/ember-community-survey-2017/ember-community-survey-2017-demographics.csv">demographic data</a>, which has been decoupled from the primary corpora.
+    </p>
+
+    <p class="large">
+      Questions? Feedback? Please email <a href="mailto:survey@201-created.com">survey@201-created.com</a>
+    </p>
+
+  </div>
+  <div class="survey-credits">
+    <p>Brought to you by</p>
+    <a href="http://www.201-created.com/">
+      <img alt="201 created logo" src="/images/survey/201-Created-Square@1x.png">
+    </a>
+  </div>
+</div>

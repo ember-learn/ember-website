@@ -1,0 +1,268 @@
+<div class="survey-wrapper survey-wrapper-header">
+  <div class="survey-header survey-container">
+    <h1 class="survey-h1">
+      <img src="/images/survey/logo.png" alt="Ember Community Survey 2016">
+    </h1>
+
+    <h2 class="survey-tagline">
+      A project to learn
+      who is using Ember, and how
+    </h2>
+
+    <h3>With over 1800 responses, here are the 2016 survey results!</h3>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-container">
+    <h2>
+      <a href="#how-long-have-you-been-working-with-ember" id="how-long-have-you-been-working-with-ember" class="survey-h2">
+        How long have you been working with Ember?
+      </a>
+    </h2>
+
+    <HighCharts
+      @chartOptions={{chartHowlong.options}}
+      @content={{chartHowlong.data}}
+      @theme={{theme}}
+    />
+
+    <p class="large">
+      Ember's growth remains steady, however the survey reached more experienced
+      users this year than last year. Over half of our participants self-identify as being quite familiar with both JavaScript (70%) and with Ember itself (63%). The vast majority (84%) live in North America or Europe and prefer Sublime (39%), Atom
+      (39%), VIM (29%) or WebStorm/Other Jetbrains (21%).
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-container">
+    <h2>
+      <a href="#ember-in-the-enterprise" id="ember-in-the-enterprise" class="survey-h2">
+        Ember at the Office
+      </a>
+    </h2>
+
+    <div class="survey-row">
+      {{#each chartEmberAtTheOffice as |chart|}}
+        <div class="survey-column half">
+          <HighCharts
+            @chartOptions={{chart.options}}
+            @content={{chart.data}}
+            @theme={{theme}}
+          />
+        </div>
+      {{/each}}
+    </div>
+
+    <p class="large">
+      The vast majority (87%) of participants self-identified as a developer. 92% of participants used Ember at work. Last year 62% of participants had a development staff under 10, this year that dropped to 56% of respondents. The number of
+      participants at a company having over 50 developers rose from 18% to 22%. This, along with the two graphs above showing how development roles have changed and Ember staff size has changed, points to a small shift toward larger companies. 85%
+      of participants have an Ember application in production, 8% of participants work on an Ember application used by <em>millions</em> of users.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-container">
+
+    <h2>
+      <a href="#new-release-adoption" id="new-release-adoption" class="survey-h2">
+        New Release Adoption
+      </a>
+    </h2>
+
+    <HighCharts
+      @chartOptions={{chartNewReleaseAdoptionEmber.options}}
+      @content={{chartNewReleaseAdoptionEmber.data}}
+      @theme={{theme}}
+    />
+
+    <p class="large">
+      Ember 2.4 was the release version of Ember during this survey. 76% of participants use Ember 2.x in an app, which demonstrates incredible adoption for a major release. However 36% of developers are still managing a codebase on 1.13. Major
+      semver releases include breaking changes, and a spike on the last 1.x release is expected to some degree. Anecdotal evidence
+      suggests many large companies are just now crossing the threshold into 2.x.
+    </p>
+
+    <HighCharts
+      @chartOptions={{chartNewReleaseAdoptionEmberData.options}}
+      @content={{chartNewReleaseAdoptionEmberData.data}}
+      @theme={{theme}}
+    />
+
+    <p class="large">
+      Ember-Data, which did not follow semver until its June release of 1.13, shows a similar trend after that release. Despite a bump at 1.13 (27%) most participants upgrade seamlessly through minor versions. This is a great improvement over
+      <a href="http://www.201-created.com/ember-community-survey-2015#release-adoption">last year</a>.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-container">
+
+    <h2>
+      <a href="#long-lived-codebases" id="long-lived-codebases" class="survey-h2">
+        Long-Lived Codebases
+      </a>
+    </h2>
+
+    <HighCharts
+      @chartOptions={{chartLongLivedCodebases.options}}
+      @content={{chartLongLivedCodebases.data}}
+      @theme={{theme}}
+    />
+
+    <p class="large">
+      Participants reported that their applications trended older this year. More developers are working with long-lived Ember applications than ever before, moving through release versions over time.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-container">
+
+    <h2>
+      <a href="#server-side" id="server-side" class="survey-h2">
+        Server-side
+      </a>
+    </h2>
+
+    <div class="survey-row">
+      {{#each chartServerSide as |chart|}}
+        <div class="survey-column half">
+          <HighCharts
+            @chartOptions={{chart.options}}
+            @content={{chart.data}}
+            @theme={{theme}}
+          />
+        </div>
+      {{/each}}
+    </div>
+
+    <p class="large">
+      Ruby retains the top spot in desired and actual server-side languages, however it also dropped 6% as production platform and 8% as a preferred platform. The only notable mover further down the list is Elixir/Erlang, which lept to surpass the
+      popularity of Go in both use and preference.
+    </p>
+
+    <p class="large">
+      JavaScript retains the largest gap between usage (24%) and preference (47%).
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-container">
+
+    <h2>
+      <a href="#browser-requirements" id="browser-requirements" class="survey-h2">
+        Browser Requirements
+      </a>
+    </h2>
+
+    <div class="survey-row">
+      {{#each chartBrowserSuppor as |chart|}}
+        <div class="survey-column half">
+          <HighCharts
+            @chartOptions={{chart.options}}
+            @content={{chart.data}}
+            @theme={{theme}}
+          />
+        </div>
+      {{/each}}
+    </div>
+
+    <p class="large">
+      Participants overwhelmingly support modern browsers. In a shocking twist, the number of Ember developer who maintain support for mobile browsers <em>dropped</em> from 57% to 49%, and is only projected to return to 57% next year.
+    </p>
+
+    <p class="large">
+      In the past year Microsoft launched its evergreen browser <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Edge</a>, however Edge was not made available on older platforms like Windows 7. Older IE versions will be widely
+      supported until those platforms are all retired, and their last available version of IE with them.
+    </p>
+    <p class="large">
+      Current app support for IE9 is lower than support for IE8 was last year, providing a strong justification for Ember 3.0 (when it arrives) to retire IE9 support. IE10 support is popular despite the relative rarity of that browser (it is <a href="http://www.sitepoint.com/browser-trends-january-2016-12-month-review/">less common that IE9</a>).
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-container">
+
+    <h2>
+      <a href="#the-ember-ecosystem" id="the-ember-ecosystem" class="survey-h2">
+        The Ember Ecosystem
+      </a>
+    </h2>
+
+    <div class="survey-row">
+      {{#each chartEmberEcosystem as |chart|}}
+        <div class="survey-column half">
+          <HighCharts
+            @chartOptions={{chart.options}}
+            @content={{chart.data}}
+            @theme={{theme}}
+          />
+        </div>
+      {{/each}}
+    </div>
+
+    <p class="large">
+      The number of community members who have written an addon grew in the past year. An astonishing 52% of participants have written an addon, and the percentage of participants writing addon unit tests rose by 12% to 64%. 25% of participants
+      report publishing an addon publicly, up from 20% last year.
+    </p>
+
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-container">
+
+    <h2>
+      <a href="#search-engine-optimization" id="search-engine-optimization" class="survey-h2">
+        Search Engine Optimization
+      </a>
+    </h2>
+
+    <HighCharts
+      @chartOptions={{chartSEO.options}}
+      @content={{chartSEO.data}}
+      @theme={{theme}}
+    />
+
+    <p class="large">
+      Concerns about SEO grew this year, if only by 5% of the participants. FastBoot usage remains nascent. Similar to last year, we suspect an element of self-selection in these numbers as it is unlikely that Ember is being chosen for SEO-sensitive
+      applications. The number of Ember apps targeting public consumers rose slightly from 46% to 49%.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-container">
+
+    <h2>
+      <a href="#closing-thoughts" id="closing-thoughts" class="survey-h2">
+        Closing Thoughts
+      </a>
+    </h2>
+
+    <p class="large">
+      We would like to thank everyone who took the time to participate in the 2016 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
+    </p>
+
+    <p class="large">
+      You can view a <a href="https://embersurvey.typeform.com/report/Npq9cY/RqO2">summary of the responses to all questions</a> from the survey, and you can view the
+      <a href="/ember-community-survey-2016/ember-community-survey-2016-results.csv">raw survey data</a>.
+    </p>
+
+    <p class="large">
+      Questions? Feedback? Please email <a href="mailto:survey@201-created.com">survey@201-created.com</a>
+    </p>
+
+  </div>
+  <div class="survey-credits">
+    <p>Brought to you by</p>
+    <a href="http://www.201-created.com/">
+      <img alt="201 created logo" src="/images/survey/201-Created-Square@1x.png">
+    </a>
+  </div>
+</div>
