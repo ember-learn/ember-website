@@ -284,7 +284,6 @@
       </a>
     </h2>
 
-    <div id="e-s-g1" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
     <HighCharts
       @chartOptions={{chartSnapshotEmberDevelopers.options}}
       @content={{chartSnapshotEmberDevelopers.data}}
@@ -306,7 +305,11 @@
       </a>
     </h2>
 
-    <div id="e-s-g17" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{productionUsers.options}}
+      @content={{productionUsers.data}}
+      @theme={{theme}}
+    />
 
     <p class="large">
       Most developers work on an Ember application that targets hundreds or

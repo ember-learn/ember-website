@@ -759,53 +759,56 @@ const recommendingEmber = {
 //     ]
 //   }]
 // });
-//
-// $('#e-s-g17').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'Which of these best describes your use of Ember in production applications?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     categories: [
-//       'Prototypes only',
-//       'Tens of users',
-//       'Hundreds of users',
-//       'Thousands of users',
-//       'Millions of users'
-//     ]
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2016',
-//     color: darkGrayColor,
-//     data: [
-//       15.11,
-//       26.2,
-//       34.2,
-//       39.6,
-//       8.2
-//     ]
-//   }, {
-//     name: '2017',
-//     color: emberOrange,
-//     data: [
-//       12.24,
-//       24.42,
-//       36.85,
-//       42.4,
-//       9.27
-//     ]
-//   }]
-// });
+
+const productionUsers = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Which of these best describes your use of Ember in production applications?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        'Prototypes only',
+        'Tens of users',
+        'Hundreds of users',
+        'Thousands of users',
+        'Millions of users'
+      ]
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+  },
+  data: [{
+    name: '2016',
+    color: darkGrayColor,
+    data: [
+      15.11,
+      26.2,
+      34.2,
+      39.6,
+      8.2
+    ]
+  }, {
+    name: '2017',
+    color: emberOrange,
+    data: [
+      12.24,
+      24.42,
+      36.85,
+      42.4,
+      9.27
+    ]
+  }]
+}
+
 //
 // $('#e-s-g18').highcharts({
 //   chart: {
@@ -1185,4 +1188,5 @@ export default Controller.extend({
   preExistingKnowledge,
   employmentSituation,
   emberDevelopers,
+  productionUsers,
 });
