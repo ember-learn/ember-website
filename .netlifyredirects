@@ -9,4 +9,5 @@
 /zoey       /mascots
 /brand          /logos/
 /meetup-assets  /community/meetups/assets/
-/blog/*     https://blog.emberjs.com/:splat
+/blog/*         https://blog.emberjs.com/:splat
+/deprecations/* https://deprecations.emberjs.com/:splat
