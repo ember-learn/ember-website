@@ -190,7 +190,11 @@
       mentioning each topic are:
     </p>
 
-    <div id="e-s-g19" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{howCanWeApprove.options}}
+      @content={{howCanWeApprove.data}}
+      @theme={{theme}}
+    />
 
     <p class="large">
       Performance was a common theme regardless of experience with Ember.
