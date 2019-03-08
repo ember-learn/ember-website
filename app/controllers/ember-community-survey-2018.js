@@ -17,6 +17,124 @@ var theme = {
     enabled: false
   }
 };
+
+const overallAdoption = {
+  options: {
+    chart: { type: 'column' },
+    title: { text: 'Breakdown of Ember use by Version' },
+    subtitle: { text: '' },
+    yAxis: { title: { text: 'Percent' } },
+    xAxis: {
+      categories: [
+        'Pre 1.13',
+        '1.13',
+        '2.0',
+        '2.1',
+        '2.2',
+        '2.3',
+        '2.4 LTS',
+        '2.5',
+        '2.6',
+        '2.7',
+        '2.8 LTS',
+        '2.9',
+        '2.10',
+        '2.11',
+        '2.12',
+        '2.13',
+        '2.14',
+        '2.15',
+        '2.16',
+        '2.17',
+        '2.18',
+        '3.0',
+      ]
+    },
+  },
+  data: [{
+    name: '2016',
+    color: color2016,
+    data: [
+      4 + 2 + 3 + 4 + 3 + 4 + 6 + 6,
+      36,
+      8,
+      6,
+      12,
+      27,
+      47,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+  }, {
+    name: '2017',
+    color: color2017,
+    data: [
+      9.46,
+      14.45,
+      2.97,
+      2.1,
+      2.02,
+      4.48,
+      11.29,
+      4.35,
+      4.48,
+      5.8,
+      21.2,
+      10.09,
+      21.6,
+      40.88,
+      19.31,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+  }, {
+    name: '2018',
+    color: color2018,
+    data: [
+      5,
+      7.8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1.4,
+      7,
+      2,
+      2.7,
+      2.7,
+      11.4, // 2.12
+      7,
+      8,
+      6.6,
+      23.5, // 2.16
+      9.3,
+      43.2,
+      27.8, // 3.0
+    ]
+  }]
+}
+
 function makeVersionChart(versionData, title) {
   var seriesData = [];
 
@@ -148,4 +266,5 @@ var emberVersionData = [{year: '2015',
 const newReleaseAdoption = makeVersionChart(emberVersionData, 'Which version(s) of Ember are used in your apps?');
 export default Controller.extend({
   newReleaseAdoption,
+  overallAdoption,
 });

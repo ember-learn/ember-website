@@ -40,7 +40,11 @@
 
     <div class="survey-row">
       <div class="survey-column half">
-        <div id="chart-ember-overall-adoption" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+        <HighCharts
+          @chartOptions={{overallAdoption.options}}
+          @content={{overallAdoption.data}}
+          @theme={{theme}}
+        />
       </div>
       <div class="survey-column half">
         <div id="chart-ember-data-adoption" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
