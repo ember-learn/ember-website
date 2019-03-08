@@ -320,7 +320,11 @@
 
     </p>
 
-    <div id="chart-editor-tool" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{editorTool.options}}
+      @content={{editorTool.data}}
+      @theme={{theme}}
+    />
     <p class="large">
       VS Code has really taken over, vaulting from 4th place last year (19%) to 38% and first place this year, dethroning last year's editor champion, Atom (now in second place at 28%).
     </p>

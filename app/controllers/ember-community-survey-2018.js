@@ -329,6 +329,40 @@ const recommendingEmber = {
   }]
 }
 
+const editorTool = {
+  options: {
+    chart: { type: 'column' },
+    title: { text: 'What is your preferred text editor?' },
+    subtitle: { text: '' },
+    xAxis: {
+      // TODO: reorganize these to be in decreasing order of 2018 popularity?
+      categories: [
+        'Atom',
+        'Sublime Text',
+        'Vim',
+        'WebStorm / IntelliJ',
+        'VS Code',
+        'Emacs',
+        'Visual Studio',
+        'Notepad++'
+      ]
+    },
+    yAxis: { title: { text: 'Percent' } },
+  },
+  data: [{
+    name: '2016',
+    color: color2016,
+    data: [ 39, 39.2, 29.24, 20.6, 6, 3.9, 5, 3.2 ]
+  }, {
+    name: '2017',
+    color: color2017,
+    data: [ 38.11, 26.56, 26.37, 21.08, 19.31, 4.04, 3.97, 2.27 ]
+  }, {
+    name: '2018',
+    color: color2018,
+    data: [ 28.2, 20.3, 20.5, 19, 37.9, 3.5, 0, 1.9 ]
+  }]
+}
 
 const productionApps = {
   options: {
@@ -728,4 +762,5 @@ export default Controller.extend({
   communityParticipation,
   serverSide,
   serverSideFrameworks,
+  editorTool,
 });
