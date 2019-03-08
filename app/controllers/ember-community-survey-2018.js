@@ -135,6 +135,34 @@ const overallAdoption = {
   }]
 }
 
+
+const recommendingEmber = {
+  options: {
+    chart: { type: 'spline' },
+    title: { text: 'How Likely Are You To Recommend Ember?' },
+    subtitle: { text: '' },
+    xAxis: { type: 'category', },
+    yAxis: { title: { text: 'Responses' }
+    },
+  },
+  data: [{
+    name: '2018',
+    color: color2018,
+    data: [
+        [1, 25],
+        [2, 14],
+        [3, 22],
+        [4, 17],
+        [5, 42],
+        [6, 58],
+        [7, 144],
+        [8, 307],
+        [9, 195],
+        [10, 445]
+    ]
+  }]
+}
+
 function makeVersionChart(versionData, title) {
   var seriesData = [];
 
@@ -321,4 +349,5 @@ export default Controller.extend({
   newReleaseAdoption,
   overallAdoption,
   emberDataAdoption,
+  recommendingEmber,
 });

@@ -67,7 +67,11 @@
     <a href="#how-likely-to-recommend-ember" id="how-likely-to-recommend-ember" class="survey-h2">
       Recommending Ember
     </a>
-    <div id="chart-recommending-ember" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{recommendingEmber.options}}
+      @content={{recommendingEmber.data}}
+      @theme={{theme}}
+    />
     <p class="large">
       We asked respondents how likely they were to recommend Ember to a friend or colleague.
       An average recommendation score is 8.2, and the calculated <a href='https://en.wikipedia.org/wiki/Net_Promoter'>Net Promoter Score</a> is 35.4.
