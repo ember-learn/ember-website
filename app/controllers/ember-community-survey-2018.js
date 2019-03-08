@@ -191,6 +191,36 @@ const productionApps = {
   }]
 }
 
+const emberenoEmployment = {
+  options: {
+    chart: { type: 'bar' },
+    title: { text: 'What Best Describes Your Employment Situation?' },
+    subtitle: { text: 'Top 4 Responses, Year by Year' },
+    xAxis: {
+      categories: [
+        'Working on product(s)',
+        'In a firm doing consulting/client work',
+        'Working on internal Ember tooling/products',
+        'Independent Product Developer'
+      ]
+    },
+    yAxis: { title: { text: 'Percent' } },
+  },
+  data: [{
+    name: '2016',
+    color: color2016,
+    data: [ 59.3, 15.1, 23.4, 16.3 ],
+  }, {
+    name: '2017',
+    color: color2017,
+    data: [ 74.8, 14.1, 12.8, 13.7 ],
+  }, {
+    name: '2018',
+    color: color2018,
+    data: [ 80.2, 12.7, 11.8, 10.6 ]
+  }]
+}
+
 
 const employerUsingEmber = {
   options: {
@@ -440,4 +470,5 @@ export default Controller.extend({
   employerUsingEmber,
   gettingHired,
   productionApps,
+  emberenoEmployment,
 });

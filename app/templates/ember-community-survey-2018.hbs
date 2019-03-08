@@ -229,7 +229,11 @@
       The chart immediately above shows the detailed breakdown of 2018's responses.
     </p>
 
-    <div id="chart-embereno-employment" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{emberenoEmployment.options}}
+      @content={{emberenoEmployment.data}}
+      @theme={{theme}}
+    />
 
     <p class="large">
       More Embereños are working on products than ever before, with 80% of respondents reporting that they work on products.
