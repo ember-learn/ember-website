@@ -135,6 +135,53 @@ const overallAdoption = {
   }]
 }
 
+const communityParticipation = {
+  options: {
+    chart: { type: 'bar' },
+    title: { text: 'How do you stay up to date with Ember?' },
+    subtitle: { text: 'Movers and Shakers from Last Year' },
+    plotOptions: {
+      bar: {
+        dataLabels: {
+          enabled: true,
+          format: '{y}%'
+        }
+      }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: '#FFFFFF',
+        shadow: true
+    },
+    tooltip: {
+      enabled: true,
+      valueSuffix: '%'
+    },
+    yAxis: { min: 0, title: { text: null } },
+    xAxis: {
+      categories: [
+        'Writing RFCs', 'Commenting on RFCs', 'Reading RFCs',
+        'Opening PRs', 'Stack Overflow', 'emberjs.com blog'
+      ],
+      title: { text: null }
+    },
+  },
+  data: [{
+    name: '2017',
+    color: color2017,
+    data: [ 1.9, 5.2, 33.3, 16.4, 41.6, 49.8 ]
+  }, {
+    name: '2018',
+    color: color2018,
+    data: [ 3.0, 9.8, 52.2, 23.8, 34.2, 57.8 ]
+  }]
+}
 
 const longLivedCodebases = {
   options: {
@@ -588,4 +635,5 @@ export default Controller.extend({
   applicationUsers,
   teamSize,
   longLivedCodebases,
+  communityParticipation,
 });

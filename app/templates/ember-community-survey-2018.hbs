@@ -281,7 +281,11 @@
     <a href="#community-participation" id="community-participation" class="survey-h2">
       Community Participation
     </a>
-    <div id="chart-community-participation" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{communityParticipation.options}}
+      @content={{communityParticipation.data}}
+      @theme={{theme}}
+    />
     <p class="large">
       This chart shows some of the biggest changes in response from last year (in both positive and negative directions) to the question of how community members stay up to date with Ember.
       Notably, usage of RFCs (reading, writing, and commenting upon) has grown dramatically this year.
