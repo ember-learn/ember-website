@@ -267,6 +267,41 @@ const serverSide = {
     ]
   }]
 }
+
+const serverSideFrameworks = {
+  options: {
+    chart: { type: 'column' },
+    title: { text: 'Which server-side framework(s) do you use?' },
+    subtitle: { text: 'Top 8' },
+    xAxis: {
+      categories: [
+        'Rails (Ruby)',
+        'Express (JavaScript)',
+        'Phoenix (Elixir)',
+        'Spring / Spring Boot (Java)',
+        'Django (Python)',
+        'MVC (.NET)',
+        'None*',
+        'Flask (Python)'
+      ]
+    },
+    yAxis: { title: { text: 'Percent' } },
+  },
+  data: [{
+    name: '2016',
+    color: color2016,
+    data: [ 46.1, 25.8, 10.6, 11.0, 9, 7.6, 0, 5.7 ]
+  }, {
+    name: '2017',
+    color: color2017,
+    data: [ 37.9, 20.4, 10.1, 8.8, 10.0, 6.2, 0, 5.8 ]
+  }, {
+    name: '2018',
+    color: color2018,
+    data: [ 35.0, 21.6, 12.5, 20.5, 8.2, 7.7, 7.6, 5.7 ]
+  }]
+}
+
 const recommendingEmber = {
   options: {
     chart: { type: 'spline' },
@@ -692,4 +727,5 @@ export default Controller.extend({
   longLivedCodebases,
   communityParticipation,
   serverSide,
+  serverSideFrameworks,
 });

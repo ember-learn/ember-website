@@ -304,7 +304,11 @@
       @content={{serverSide.data}}
       @theme={{theme}}
     />
-    <div id="chart-server-side-frameworks" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{serverSideFrameworks.options}}
+      @content={{serverSideFrameworks.data}}
+      @theme={{theme}}
+    />
     <p class="large">
       Ruby continues to be the dominant server-side language used, but enterprise-focused languages are gaining in prominence this year, reflecting
       the trend borne out by other charts that show more Ember usage in enterprise situations. Participants using .NET increased from 8.8% to 10.5% this year,
