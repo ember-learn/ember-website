@@ -389,7 +389,11 @@
       </a>
     </h2>
 
-    <div id="e-s-g8" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{browserRequirements.options}}
+      @content={{browserRequirements.data}}
+      @theme={{theme}}
+    />
 
   </div>
 </div>

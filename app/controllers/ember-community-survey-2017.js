@@ -398,68 +398,70 @@ const serverLanguage = {
   }]
 }
 
-//
-// $('#e-s-g8').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'Which browser versions do your applications target?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     categories: [
-//       'Modern browsers',
-//       'Mobile browsers',
-//       'IE 11',
-//       'IE 10',
-//       'Legacy Chrome, Firefox, Safari, etc.',
-//       'IE 9',
-//       'IE 8'
-//     ]
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2016',
-//     data: [
-//       94,
-//       49,
-//       40,
-//       28,
-//       13,
-//       12,
-//       3,
-//     ]
-//   }, {
-//     name: '2017',
-//     data: [
-//       94.26,
-//       43.22,
-//       37.67,
-//       18.8,
-//       9.15,
-//       6.37,
-//       1.39
-//     ]
-//   }, {
-//     name: 'What is expected next year?',
-//     data: [
-//       93.69,
-//       51.36,
-//       28.26,
-//       9.84,
-//       7.82,
-//       2.9,
-//       0.76
-//     ]
-//   }]
-// });
+const browserRequirements = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Which browser versions do your applications target?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        'Modern browsers',
+        'Mobile browsers',
+        'IE 11',
+        'IE 10',
+        'Legacy Chrome, Firefox, Safari, etc.',
+        'IE 9',
+        'IE 8'
+      ]
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+  },
+  data: [{
+    name: '2016',
+    data: [
+      94,
+      49,
+      40,
+      28,
+      13,
+      12,
+      3,
+    ]
+  }, {
+    name: '2017',
+    data: [
+      94.26,
+      43.22,
+      37.67,
+      18.8,
+      9.15,
+      6.37,
+      1.39
+    ]
+  }, {
+    name: 'What is expected next year?',
+    data: [
+      93.69,
+      51.36,
+      28.26,
+      9.84,
+      7.82,
+      2.9,
+      0.76
+    ]
+  }]
+}
+
 //
 // $('#e-s-g10').highcharts({
 //   chart: {
@@ -1199,4 +1201,5 @@ export default Controller.extend({
   longLived,
   serverLanguage,
   textEditor,
+  browserRequirements,
 });
