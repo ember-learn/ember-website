@@ -407,7 +407,11 @@
       </a>
     </h2>
 
-    <div id="e-s-g22" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{demographics.options}}
+      @content={{demographics.data}}
+      @theme={{theme}}
+    />
 
     <p class="large">
       Additionally 3% of participants report a disability and 92% of

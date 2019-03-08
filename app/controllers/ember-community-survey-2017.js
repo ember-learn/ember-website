@@ -985,75 +985,74 @@ const preExistingKnowledge = {
   }]
 };
 
-// $('#e-s-g22').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'In which region do you live?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     type: 'category',
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2017',
-//     color: emberOrange,
-//     data: [
-//       {name: 'North America	', y: 49, drilldown: 'North America'},
-//       {name: 'Europe	', y: 33.6, drilldown: 'Europe'},
-//       {name: 'Asia	', y: 7.8, drilldown:'Asia'},
-//       {name: 'Oceania	', y: 3.7},
-//       {name: 'South America	', y: 3.5},
-//       {name: 'Africa	', y: 0.8},
-//       {name: 'Central America	', y: 0.4}
-//     ]
-//   }],
-//   drilldown: {
-//     series: [{
-//       name: 'North America',
-//       id: 'North America',
-//       data: [
-//         {name: 'White', y: 80},
-//         {name: 'Asian', y: 7.2},
-//         {name: 'Prefer not to answer', y: 6.2},
-//         {name: 'Hispanic, Latino, or Spanish origin', y: 6.1},
-//         {name: 'Black or African American', y: 2.2},
-//         {name: 'Middle Eastern or North African', y: 1.1}
-//       ]
-//     },{
-//       name: 'Europe',
-//       id: 'Europe',
-//       data: [
-//         {name: 'White', y: 81},
-//         {name: 'Prefer not to answer', y: 10.1},
-//         {name: 'Hispanic, Latino, or Spanish origin', y: 5.4},
-//         {name: 'American Indian or Alaskan Native', y: 6.1},
-//         {name: 'Middle Eastern or North African', y: 1.9},
-//         {name: 'Asian', y: 1},
-//         {name: 'Black or African American', y: 0.8}
-//       ]
-//     },{
-//       name: 'Asia',
-//       id: 'Asia',
-//       data: [
-//         {name: 'Asian', y: 67},
-//         {name: 'White', y: 12},
-//         {name: 'Prefer not to answer', y: 8.9}
-//       ]
-//     }]
-//   }
-// });
-//
-//
-//
+const demographics = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'In which region do you live?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      type: 'category',
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+    drilldown: {
+      series: [{
+        name: 'North America',
+        id: 'North America',
+        data: [
+          {name: 'White', y: 80},
+          {name: 'Asian', y: 7.2},
+          {name: 'Prefer not to answer', y: 6.2},
+          {name: 'Hispanic, Latino, or Spanish origin', y: 6.1},
+          {name: 'Black or African American', y: 2.2},
+          {name: 'Middle Eastern or North African', y: 1.1}
+        ]
+      },{
+        name: 'Europe',
+        id: 'Europe',
+        data: [
+          {name: 'White', y: 81},
+          {name: 'Prefer not to answer', y: 10.1},
+          {name: 'Hispanic, Latino, or Spanish origin', y: 5.4},
+          {name: 'American Indian or Alaskan Native', y: 6.1},
+          {name: 'Middle Eastern or North African', y: 1.9},
+          {name: 'Asian', y: 1},
+          {name: 'Black or African American', y: 0.8}
+        ]
+      },{
+        name: 'Asia',
+        id: 'Asia',
+        data: [
+          {name: 'Asian', y: 67},
+          {name: 'White', y: 12},
+          {name: 'Prefer not to answer', y: 8.9}
+        ]
+      }]
+    }
+  },
+  data: [{
+    name: '2017',
+    color: emberOrange,
+    data: [
+      {name: 'North America	', y: 49, drilldown: 'North America'},
+      {name: 'Europe	', y: 33.6, drilldown: 'Europe'},
+      {name: 'Asia	', y: 7.8, drilldown:'Asia'},
+      {name: 'Oceania	', y: 3.7},
+      {name: 'South America	', y: 3.5},
+      {name: 'Africa	', y: 0.8},
+      {name: 'Central America	', y: 0.4}
+    ]
+  }]
+}
 
 const versionData = [
   {
@@ -1202,4 +1201,5 @@ export default Controller.extend({
   serverLanguage,
   textEditor,
   browserRequirements,
+  demographics,
 });
