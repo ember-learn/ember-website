@@ -609,6 +609,66 @@ const gettingHired = {
   }]
 }
 
+const demographicsRegion = {
+  options: {
+    chart: { type: 'column' },
+    title: { text: 'In which region do you live?' },
+    subtitle: { text: '' },
+    xAxis: { type: 'category', },
+    yAxis: { title: { text: 'Percent' } },
+    /*
+    TODO get the data for this, add "drilldown" keys above
+    drilldown: {
+      series: [{
+        name: 'North America',
+        id: 'North America',
+        data: [
+          {name: 'White', y: 80},
+          {name: 'Asian', y: 7.2},
+          {name: 'Prefer not to answer', y: 6.2},
+          {name: 'Hispanic, Latino, or Spanish origin', y: 6.1},
+          {name: 'Black or African American', y: 2.2},
+          {name: 'Middle Eastern or North African', y: 1.1}
+        ]
+      },{
+        name: 'Europe',
+        id: 'Europe',
+        data: [
+          {name: 'White', y: 81},
+          {name: 'Prefer not to answer', y: 10.1},
+          {name: 'Hispanic, Latino, or Spanish origin', y: 5.4},
+          {name: 'American Indian or Alaskan Native', y: 6.1},
+          {name: 'Middle Eastern or North African', y: 1.9},
+          {name: 'Asian', y: 1},
+          {name: 'Black or African American', y: 0.8}
+        ]
+      },{
+        name: 'Asia',
+        id: 'Asia',
+        data: [
+          {name: 'Asian', y: 67},
+          {name: 'White', y: 12},
+          {name: 'Prefer not to answer', y: 8.9}
+        ]
+      }]
+    }
+    */
+  },
+  data: [{
+    name: '2018',
+    color: color2018,
+    data: [
+      {name: 'North America	', y: 53.7 },
+      {name: 'Europe	', y: 32.7},
+      {name: 'Asia	', y: 7.8},
+      {name: 'Oceania	', y: 3.4},
+      {name: 'South America	', y: 3.2},
+      {name: 'Africa	', y: 0.5},
+      {name: 'Central America	', y: 0.5},
+      {name: 'Other', y: 0.4}
+    ]
+  }]
+}
 function makeVersionChart(versionData, title) {
   var seriesData = [];
 
@@ -808,4 +868,5 @@ export default Controller.extend({
   serverSideFrameworks,
   editorTool,
   browserRequirements,
+  demographicsRegion,
 });

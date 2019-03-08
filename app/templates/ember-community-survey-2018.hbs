@@ -357,7 +357,11 @@
     <a href="#demographics" id="demographics" class="survey-h2">
       Demographics
     </a>
-    <div id="chart-demographics-region" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{demographicsRegion.options}}
+      @content={{demographicsRegion.data}}
+      @theme={{theme}}
+    />
 
     <p class="large">
       Each year we capture demographic information in addition to details
