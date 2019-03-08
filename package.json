@@ -56,7 +56,7 @@
     "ember-percy": "^1.5.0",
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.5.0",
-    "ember-styleguide": "github:ember-learn/ember-styleguide#e07659345d49080370a74c6524da6d1b19e41369",
+    "ember-styleguide": "github:ember-learn/ember-styleguide",
     "ember-template-lint": "^v1.0.0-beta.6",
     "ember-tether": "^1.0.0",
     "eslint-plugin-ember": "^5.4.0",
