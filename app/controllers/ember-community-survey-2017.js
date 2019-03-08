@@ -340,62 +340,64 @@ const longLived = {
   }]
 }
 
-//
-// $('#e-s-g6').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'What is the primary language of your server-side stack?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     type: 'category'
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2016',
-//     color: darkGrayColor,
-//     data: [
-//       { y: 41, name: 'Ruby' },
-//       { y: 24, name: 'JavaScript' },
-//       { y: 17, name: 'Java' },
-//       { y: 13, name: 'PHP' },
-//       { y: 12, name: 'Python' },
-//       { y: 8, name: '.NET' },
-//       { y: 6, name: 'Elixir / Erlang' },
-//       { y: 5, name: 'Go' },
-//       { y: 2, name: 'Scala' },
-//       { y: 0, name: 'TypeScript' },
-//       { y: 0, name: 'C++' },
-//       { y: 1, name: 'Rust' },
-//       { y: 3, name: 'Other' }
-//     ]
-//   }, {
-//     name: '2017',
-//     color: emberOrange,
-//     data: [
-//       {name: 'Ruby', y:	36.97},
-//       {name: 'JavaScript', y:	24.54},
-//       {name: 'Java', y:	20.57},
-//       {name: 'Python', y:	13.5},
-//       {name: 'PHP', y:	12.43},
-//       {name: '.NET', y:	8.71},
-//       {name: 'Elixir / Erlang', y:	7.95},
-//       {name: 'Go', y:	6.44},
-//       {name: 'Scala', y:	2.65},
-//       {name: 'TypeScript', y:	1.58},
-//       {name: 'C++', y:	1.2},
-//       {name: 'Other', y:	2.97}
-//     ]
-//   }]
-// });
+const serverLanguage = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'What is the primary language of your server-side stack?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      type: 'category'
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+  },
+  data: [{
+    name: '2016',
+    color: darkGrayColor,
+    data: [
+      { y: 41, name: 'Ruby' },
+      { y: 24, name: 'JavaScript' },
+      { y: 17, name: 'Java' },
+      { y: 13, name: 'PHP' },
+      { y: 12, name: 'Python' },
+      { y: 8, name: '.NET' },
+      { y: 6, name: 'Elixir / Erlang' },
+      { y: 5, name: 'Go' },
+      { y: 2, name: 'Scala' },
+      { y: 0, name: 'TypeScript' },
+      { y: 0, name: 'C++' },
+      { y: 1, name: 'Rust' },
+      { y: 3, name: 'Other' }
+    ]
+  }, {
+    name: '2017',
+    color: emberOrange,
+    data: [
+      {name: 'Ruby', y:	36.97},
+      {name: 'JavaScript', y:	24.54},
+      {name: 'Java', y:	20.57},
+      {name: 'Python', y:	13.5},
+      {name: 'PHP', y:	12.43},
+      {name: '.NET', y:	8.71},
+      {name: 'Elixir / Erlang', y:	7.95},
+      {name: 'Go', y:	6.44},
+      {name: 'Scala', y:	2.65},
+      {name: 'TypeScript', y:	1.58},
+      {name: 'C++', y:	1.2},
+      {name: 'Other', y:	2.97}
+    ]
+  }]
+}
+
 //
 // $('#e-s-g8').highcharts({
 //   chart: {
@@ -706,62 +708,64 @@ const recommendingEmber = {
 //     ]
 //   }]
 // });
-//
-// $('#e-s-g16').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'What is your preferred text editor?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     categories: [
-//       'Atom',
-//       'Sublime Text',
-//       'Vim',
-//       'WebStorm / IntelliJ',
-//       'VS Code',
-//       'Emacs',
-//       'Visual Studio',
-//       'Notepad++'
-//     ]
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2016',
-//     color: darkGrayColor,
-//     data: [
-//       39,
-//       39.2,
-//       29.24,
-//       20.6,
-//       6,
-//       3.9,
-//       5,
-//       3.2
-//     ]
-//   }, {
-//     name: '2017',
-//     color: emberOrange,
-//     data: [
-//       38.11,
-//       26.56,
-//       26.37,
-//       21.08,
-//       19.31,
-//       4.04,
-//       3.97,
-//       2.27
-//     ]
-//   }]
-// });
+
+const textEditor = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'What is your preferred text editor?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        'Atom',
+        'Sublime Text',
+        'Vim',
+        'WebStorm / IntelliJ',
+        'VS Code',
+        'Emacs',
+        'Visual Studio',
+        'Notepad++'
+      ]
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+  },
+  data: [{
+    name: '2016',
+    color: darkGrayColor,
+    data: [
+      39,
+      39.2,
+      29.24,
+      20.6,
+      6,
+      3.9,
+      5,
+      3.2
+    ]
+  }, {
+    name: '2017',
+    color: emberOrange,
+    data: [
+      38.11,
+      26.56,
+      26.37,
+      21.08,
+      19.31,
+      4.04,
+      3.97,
+      2.27
+    ]
+  }]
+}
 
 const productionUsers = {
   options: {
@@ -1193,4 +1197,6 @@ export default Controller.extend({
   emberDevelopers,
   productionUsers,
   longLived,
+  serverLanguage,
+  textEditor,
 });
