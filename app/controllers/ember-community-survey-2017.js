@@ -905,66 +905,69 @@ const howCanWeApprove = {
   }],
 }
 
-//
-// $('#e-s-g20').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'When starting your most recent job...'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     type: 'category',
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2017',
-//     color: emberOrange,
-//     data: [
-//       {name: 'My employer was not using Ember', y: 53.63},
-//       {name: 'My employer was already using Ember', y: 38.74},
-//       {name: 'Does not apply (e.g. I am a student)', y: 6.56}
-//     ]
-//   }]
-// });
-//
-// $('#e-s-g21').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'When getting hired to your most recent job, your pre-existing knowledge of Ember was...'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     type: 'category',
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2017',
-//     color: emberOrange,
-//     data: [
-//       {name: 'I did not know Ember', y: 47.13},
-//       {name: 'Unimportant', y: 25.49},
-//       {name: 'Very important', y: 12.87},
-//       {name: 'Important', y: 12.87}
-//     ]
-//   }]
-// });
-//
+const whenStarting = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'When starting your most recent job...'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      type: 'category',
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+  },
+  data: [{
+    name: '2017',
+    color: emberOrange,
+    data: [
+      {name: 'My employer was not using Ember', y: 53.63},
+      {name: 'My employer was already using Ember', y: 38.74},
+      {name: 'Does not apply (e.g. I am a student)', y: 6.56}
+    ]
+  }]
+}
+
+const preExistingKnowledge = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'When getting hired to your most recent job, your pre-existing knowledge of Ember was...'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      type: 'category',
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+  },
+  data: [{
+    name: '2017',
+    color: emberOrange,
+    data: [
+      {name: 'I did not know Ember', y: 47.13},
+      {name: 'Unimportant', y: 25.49},
+      {name: 'Very important', y: 12.87},
+      {name: 'Important', y: 12.87}
+    ]
+  }]
+};
+
 // $('#e-s-g22').highcharts({
 //   chart: {
 //     type: 'column'
@@ -1173,4 +1176,6 @@ export default Controller.extend({
   priorVersionsData,
   recommendingEmber,
   howCanWeApprove,
+  whenStarting,
+  preExistingKnowledge,
 });
