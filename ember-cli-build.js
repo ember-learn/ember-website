@@ -21,7 +21,7 @@ module.exports = function (defaults) {
     },
     prember: {
       urls: [
-        'blog',
+        '/',
         'community',
         'community/meetups',
         'community/meetups/assets',
