@@ -245,7 +245,11 @@
       @theme={{theme}}
     />
 
-    <div id="chart-team-size" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{teamSize.options}}
+      @content={{teamSize.data}}
+      @theme={{theme}}
+    />
     <p class="large">
       Ember-focused developer teams are getting larger. This year the survey included a response to indicate that one's Ember team is greater than 500 developers, and
       2.4% of the respondents reported that they work in teams of 500+ other Ember developers!

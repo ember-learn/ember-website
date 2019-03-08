@@ -261,6 +261,52 @@ const applicationUsers = {
   }],
 }
 
+const teamSize = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'How many developers at your company work with Ember?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        'None',
+        '1–10',
+        '11–20',
+        '21–50',
+        '51–100',
+        'More than 100'
+      ]
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+  },
+  data: [{
+    name: '2015',
+    color: color2015,
+    data: [ 15.5, 78, 3.7, 1.7, 0.8, 0.3 ]
+  }, {
+    name: '2016',
+    color: color2016,
+    data: [ 12, 74, 6, 4, 2, 1 ]
+  }, {
+    name: '2017',
+    color: color2017,
+    data: [ 8.7, 69.8, 6.8, 4.8, 2.5, 2 ]
+  }, {
+    name: '2018',
+    color: color2018,
+    data: [ 7.2, 62.5, 9.4, 5.3, 3.9, 6.4 ]
+  }]
+}
+
 const employerUsingEmber = {
   options: {
     chart: { type: 'column' },
@@ -510,4 +556,6 @@ export default Controller.extend({
   gettingHired,
   productionApps,
   emberenoEmployment,
+  applicationUsers,
+  teamSize,
 });
