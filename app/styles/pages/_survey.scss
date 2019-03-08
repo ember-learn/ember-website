@@ -1,4 +1,4 @@
-.ember-community-survey-2019 main.container {
+.ember-community-survey main.container {
   max-width: none;
   padding-right: 0;
   padding-left: 0;
@@ -41,6 +41,10 @@
       content: close-quote;
     }
   }
+}
+
+.survey-wrapper h2 {
+  margin: 0 !important;
 }
 
 @media screen and (max-width: 360px) {
@@ -129,7 +133,7 @@
 }
 
 .survey-tagline {
-  margin: 20px 0 40px;
+  margin: 20px 0 40px !important;
 }
 
 .survey-h2,
