@@ -1023,38 +1023,135 @@ const chartBreakdownByVersion = {
 //
 //
 //
-// var emberDataVersionData = [{year: '2016', color: darkGrayColor, data:[
-//   null,
-//   null,
-//   null,
-//   null,
-//   null,
-//   null,
-//   null,
-//   {value: 27, label: '1.13'},
-//   {value: 6, label: '2.0'},
-//   {value: 4, label: '2.1'},
-//   {value: 8, label: '2.2'},
-//   {value: 21, label: '2.3'},
-//   {value: 42, label: '2.4'},
-//   null,
-// ]}, {year: '2017', color: emberOrange, data: [
-//   {value: 9, label: '1.13'},
-//   {value: 2.15, label: '2.0'},
-//   {value: 2.1, label: '2.1'},
-//   {value: 1.5, label: '2.2'},
-//   {value: 2.8, label: '2.3'},
-//   {value: 7, label: '2.4'},
-//   {value: 3, label: '2.5'},
-//   {value: 4, label: '2.6'},
-//   {value: 4, label: '2.7'},
-//   {value: 13.8, label: '2.8'},
-//   {value: 7, label: '2.9'},
-//   {value: 21.6, label: '2.10'},
-//   {value: 34.9, label: '2.11'},
-//   {value: 17, label: 'stable (2.12)'}
-// ]}];
-// makeVersionChart(emberDataVersionData, 'Which versions of Ember Data are used in your apps?', '#e-s-g24');
+
+const versionData = [
+  {
+    year: '2016',
+    color: darkGrayColor,
+    data:[
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {value: 27, label: '1.13'},
+      {value: 6, label: '2.0'},
+      {value: 4, label: '2.1'},
+      {value: 8, label: '2.2'},
+      {value: 21, label: '2.3'},
+      {value: 42, label: '2.4'},
+      null,
+    ]
+  }, {
+    year: '2017',
+    color: emberOrange,
+    data: [
+      {value: 9, label: '1.13'},
+      {value: 2.15, label: '2.0'},
+      {value: 2.1, label: '2.1'},
+      {value: 1.5, label: '2.2'},
+      {value: 2.8, label: '2.3'},
+      {value: 7, label: '2.4'},
+      {value: 3, label: '2.5'},
+      {value: 4, label: '2.6'},
+      {value: 4, label: '2.7'},
+      {value: 13.8, label: '2.8'},
+      {value: 7, label: '2.9'},
+      {value: 21.6, label: '2.10'},
+      {value: 34.9, label: '2.11'},
+      {value: 17, label: 'stable (2.12)'}
+    ]
+  }
+]
+
+const priorVersionsData = {
+  options: {
+    title: {
+      text: 'Which versions of Ember Data are used in your apps?'
+    },
+    subtitle: {
+      text: ''
+    },
+    tooltip: {
+      shared: true,
+      crosshairs: true,
+      formatter: function () {
+        var releasesPrior = (+this.x);
+        var s = '<b>' + (+this.x) + ' Release' + (releasesPrior !== 1 ? 's' : '') + ' Prior to Survey</b>';
+        for (var i = 0; i < this.points.length; ++i) {
+          var point = this.points[i],
+            seriesName = point.series.name;
+          s += '<br/><span style="color:' + point.color + '">●</span>' + seriesName + ': ';
+          var labels;
+          for(var j = 0; j < versionData.length; ++j){
+              if (versionData[j].year === seriesName){
+                  labels = versionData[j].data;
+              }
+          }
+          var label = labels[labels.length - 1 - releasesPrior].label;
+          s += label + ' Release (' + point.y + '%)';
+        }
+        return s;
+      }
+    },
+    plotOptions: {
+      series: {
+        marker: {
+          enabled: false
+        }
+      }
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+    xAxis: {
+      categories: [
+        '13',
+        '12',
+        '11',
+        '10',
+        '9',
+        '8',
+        '7',
+        '6',
+        '5',
+        '4',
+        '3',
+        '2',
+        '1',
+        '0',
+      ],
+      title: {
+        text: 'Releases Prior to Survey'
+      }
+    },
+  },
+  data: makeVersionChartData(versionData)
+}
+
+function makeVersionChartData(versionData) {
+  var seriesData = [];
+
+  for (var i = 0; i < versionData.length; ++i){
+      var _series = {
+        name: versionData[i].year,
+        type: 'spline',
+        data: versionData[i].data.map(function (d) {
+          return d && d.value;
+        })
+      };
+      if (versionData[i].color){
+          _series.color = versionData[i].color;
+      }
+      seriesData.push(_series);
+  }
+
+  return seriesData;
+}
 
 
 export default Controller.extend({
@@ -1062,4 +1159,5 @@ export default Controller.extend({
   chartHowlong,
   chartSnapshotEmberDevelopers,
   chartBreakdownByVersion,
+  priorVersionsData,
 });
