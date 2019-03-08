@@ -212,6 +212,61 @@ const longLivedCodebases = {
   }]
 }
 
+const serverSide = {
+  options: {
+    chart: { type: 'column' },
+    title: { text: 'What is the primary language of your server-side stack?' },
+    subtitle: { text: '' },
+    xAxis: { type: 'category' },
+    yAxis: { title: { text: 'Percent' } },
+  },
+  data: [{
+    name: '2016',
+    color: color2016,
+    data: [
+      { y: 41, name: 'Ruby' },
+      { y: 17, name: 'Java' },
+      { y: 24, name: 'JavaScript' },
+      { y: 12, name: 'Python' },
+      { y: 8, name: '.NET' },
+      { y: 13, name: 'PHP' },
+      { y: 6, name: 'Elixir / Erlang' },
+      { y: 5, name: 'Go' },
+      { y: 2, name: 'Scala' },
+      { y: 0, name: 'TypeScript' }
+    ]
+  }, {
+    name: '2017',
+    color: color2017,
+    data: [
+      {name: 'Ruby', y:	36.97},
+      {name: 'Java', y:	20.57},
+      {name: 'JavaScript', y:	24.54},
+      {name: 'Python', y:	13.5},
+      {name: '.NET', y:	8.71},
+      {name: 'PHP', y:	12.43},
+      {name: 'Elixir / Erlang', y:	7.95},
+      {name: 'Go', y:	6.44},
+      {name: 'Scala', y:	2.65},
+      {name: 'TypeScript', y:	1.58}
+    ]
+  }, {
+    name: '2018',
+    color: color2018,
+    data: [
+      {name: 'Ruby', y:	33.7},
+      {name: 'Java', y:	26.4},
+      {name: 'JavaScript', y:	22.1},
+      {name: 'Python', y:	11.9},
+      {name: '.NET', y:	10.5},
+      {name: 'PHP', y:	10.3},
+      {name: 'Elixir / Erlang', y: 9.2},
+      {name: 'Go', y:	6.5},
+      {name: 'Scala', y: 2.6},
+      {name: 'TypeScript', y:	2.6}
+    ]
+  }]
+}
 const recommendingEmber = {
   options: {
     chart: { type: 'spline' },
@@ -636,4 +691,5 @@ export default Controller.extend({
   teamSize,
   longLivedCodebases,
   communityParticipation,
+  serverSide,
 });

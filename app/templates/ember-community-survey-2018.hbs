@@ -299,7 +299,11 @@
       Server-side &amp; Tools
     </a>
 
-    <div id="chart-server-side" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{serverSide.options}}
+      @content={{serverSide.data}}
+      @theme={{theme}}
+    />
     <div id="chart-server-side-frameworks" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
     <p class="large">
       Ruby continues to be the dominant server-side language used, but enterprise-focused languages are gaining in prominence this year, reflecting
