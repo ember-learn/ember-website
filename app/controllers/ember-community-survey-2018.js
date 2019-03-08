@@ -191,6 +191,37 @@ const employerUsingEmber = {
   }]
 }
 
+const gettingHired = {
+  options: {
+    chart: { type: 'column' },
+    title: {
+      text: 'When getting hired to your most recent job, your pre-existing knowledge of Ember was...'
+    },
+    subtitle: { text: '' },
+    xAxis: { type: 'category', },
+    yAxis: { title: { text: 'Percent' } },
+  },
+  data: [{
+    name: '2017',
+    color: color2017,
+    data: [
+      {name: 'I did not know Ember', y: 47.13},
+      {name: 'Unimportant', y: 25.49},
+      {name: 'Very important', y: 12.87},
+      {name: 'Important', y: 12.87}
+    ]
+  }, {
+    name: '2018',
+    color: color2018,
+    data: [
+      {name: 'I did not know Ember', y: 40.9},
+      {name: 'Unimportant', y: 27.2},
+      {name: 'Very important', y: 18.1},
+      {name: 'Important', y: 13.8}
+    ]
+  }]
+}
+
 function makeVersionChart(versionData, title) {
   var seriesData = [];
 

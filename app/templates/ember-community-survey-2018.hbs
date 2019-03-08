@@ -199,7 +199,11 @@
         />
       </div>
       <div class="survey-column half">
-        <div id="chart-ember-getting-hired" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+        <HighCharts
+          @chartOptions={{gettingHired.options}}
+          @content={{gettingHired.data}}
+          @theme={{theme}}
+        />
       </div>
     </div>
 
