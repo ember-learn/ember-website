@@ -615,41 +615,48 @@ const chartBreakdownByVersion = {
 //   }]
 // });
 //
-// $('#e-s-g14').highcharts({
-//   chart: {
-//     type: 'spline'
-//   },
-//   title: {
-//     text: 'How Likely Are You To Recommend Ember?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     type: 'category',
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Responses'
-//     }
-//   },
-//   series: [{
-//     name: '2017',
-//     color: emberOrange,
-//     data: [
-//         [1, 19],
-//         [2, 12],
-//         [3, 23],
-//         [4, 26],
-//         [5, 32],
-//         [6, 79],
-//         [7, 177],
-//         [8, 350],
-//         [9, 265],
-//         [10, 578]
-//     ]
-//   }]
-// });
+
+const recommendingEmber = {
+  options: {
+    chart: {
+      type: 'spline'
+    },
+    title: {
+      text: 'How Likely Are You To Recommend Ember?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      type: 'category',
+    },
+    yAxis: {
+      labels: {
+        format: '{value}',
+      },
+      title: {
+        text: 'Responses'
+      }
+    },
+  },
+  data: [{
+    name: '2017',
+    color: emberOrange,
+    data: [
+        [1, 19],
+        [2, 12],
+        [3, 23],
+        [4, 26],
+        [5, 32],
+        [6, 79],
+        [7, 177],
+        [8, 350],
+        [9, 265],
+        [10, 578]
+    ]
+  }]
+}
+
 //
 // $('#e-s-g15').highcharts({
 //   chart: {
@@ -1160,4 +1167,5 @@ export default Controller.extend({
   chartSnapshotEmberDevelopers,
   chartBreakdownByVersion,
   priorVersionsData,
+  recommendingEmber,
 });

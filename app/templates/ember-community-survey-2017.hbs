@@ -69,7 +69,11 @@
       </a>
     </h2>
 
-    <div id="e-s-g14" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{recommendingEmber.options}}
+      @content={{recommendingEmber.data}}
+      @theme={{theme}}
+    />
 
     <p class="large">
       We asked respondents how likely they were to recommend Ember to a friend or colleague.
