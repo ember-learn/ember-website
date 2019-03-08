@@ -221,6 +221,45 @@ const emberenoEmployment = {
   }]
 }
 
+const applicationUsers = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Who uses your applications?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        'B2B',
+        'B2C',
+        'Internal users'
+      ]
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+    colors: [color2016, color2017, color2018, lightGreenColor],
+    credits: {
+      enabled: false
+    }
+  },
+  data: [{
+    name: '2016',
+    data: [ 62.6, 48.6, 43.8 ]
+  }, {
+    name: '2017',
+    data: [ 65.6, 49, 39 ]
+  }, {
+    name: '2018',
+    data: [ 69.5, 49.4, 39.9 ]
+  }],
+}
 
 const employerUsingEmber = {
   options: {

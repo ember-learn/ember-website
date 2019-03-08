@@ -239,7 +239,11 @@
       More Embereños are working on products than ever before, with 80% of respondents reporting that they work on products.
     </p>
 
-    <div id="chart-application-users" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <HighCharts
+      @chartOptions={{applicationUsers.options}}
+      @content={{applicationUsers.data}}
+      @theme={{theme}}
+    />
 
     <div id="chart-team-size" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
     <p class="large">
