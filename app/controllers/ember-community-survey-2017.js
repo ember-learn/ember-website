@@ -7,7 +7,6 @@ const lightGrayColor = '#cccccc';
 
 theme.colors = [lightGrayColor, darkGrayColor, emberOrange];
 
-
 const makeChartData = (data) => data.map((datum) => ({
     name: datum.year,
     data: datum.data.map(item => ({
@@ -462,172 +461,6 @@ const browserRequirements = {
   }]
 }
 
-//
-// $('#e-s-g10').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'Number of addons written per participant'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     categories: [
-//       '0',
-//       '1-3',
-//       '4-6',
-//       '> 6',
-//     ]
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2016',
-//     data: [
-//       47.6,
-//       35.6,
-//       7.7,
-//       7.5
-//     ]
-//   }, {
-//     name: '2017',
-//     data: [
-//       45.3,
-//       34.3,
-//       8.9,
-//       9
-//     ]
-//   }]
-// });
-//
-// $('#e-s-g11').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'How are your addons tested?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     type: 'category'
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2017',
-//     data: [
-//       {name: 'Unit tests', y: 37.4},
-//       {name: 'Integration tests', y: 31.5},
-//       {name: 'Acceptance tests', y: 21},
-//       {name: 'None', y: 36},
-//       {name: 'Unknown', y: 11}
-//     ]
-//   }]
-// });
-//
-// $('#e-s-g12').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'What method do you rely on for search engine indexing?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     categories: [
-//       'App is private, behind an authentication flow, or this question generally does not apply',
-//       'Search engine JavaScript execution',
-//       'FastBoot or other use of the "visit" API.',
-//       'My apps are indexable, but I don\'t know how',
-//       'phantomjs or other pre-rendering',
-//       'noscript tags'
-//     ]
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2016',
-//     data: [
-//       73, // 'App is private,...',
-//       16, // 'Google\'s Javascript Execution',
-//       5,  // 'FastBoot or other use of the "visit" API',
-//       12, // 'Our app is indexable, but I don\'t know how',
-//       7,  // 'phantomjs or other pre-rendering (including Prerender.io)',
-//       3,  // 'noscript tags',
-//     ]
-//   }, {
-//     name: '2017',
-//     data: [
-//       68.4,
-//       11.2,
-//       9.3,
-//       8.5,
-//       5.3,
-//       1.5
-//     ]
-//   }]
-// });
-//
-// $('#e-s-g13').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'Ember Data'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     type: 'category',
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2017',
-//     data: [
-//       {name: 'Pre 1.13', y: 6.56},
-//       {name: '1.13', y: 9.02},
-//       {name: '2.0', y: 2.15},
-//       {name: '2.1', y: 2.1},
-//       {name: '2.2', y: 1.51},
-//       {name: '2.3', y: 2.78},
-//       {name: '2.4 LTS', y: 7.07},
-//       {name: '2.5', y: 3.03},
-//       {name: '2.6', y: 4.16},
-//       {name: '2.7', y: 4.35},
-//       {name: '2.8 LTS', y: 13.82},
-//       {name: '2.9', y: 7.13},
-//       {name: '2.10', y: 21.6},
-//       {name: '2.11', y: 34.89},
-//       {name: '2.12', y: 17.16},
-//       {name: 'Beta', y: 1.89},
-//       {name: 'Canary (master)', y: 1.07},
-//       {name: 'Custom fork', y: 0.76},
-//       {name: 'I don\'t know', y: 11.55},
-//     ]
-//   }]
-// });
-//
-
 const recommendingEmber = {
   options: {
     chart: {
@@ -668,48 +501,6 @@ const recommendingEmber = {
     ]
   }]
 }
-
-//
-// $('#e-s-g15').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'How do you grade your knowledge?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     categories: [
-//       'Beginner',
-//       'Intermediate',
-//       'Advanced'
-//     ]
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: 'JavaScript',
-//     color: darkGrayColor,
-//     data: [
-//       4.9,
-//       44.4,
-//       49.8
-//     ]
-//   }, {
-//     name: 'Ember',
-//     color: emberOrange,
-//     data: [
-//       13.8,
-//       36.3,
-//       49.3
-//     ]
-//   }]
-// });
 
 const textEditor = {
   options: {
@@ -817,46 +608,6 @@ const productionUsers = {
     ]
   }]
 }
-
-//
-// $('#e-s-g18').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'Who uses your applications?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     categories: [
-//       'B2B',
-//       'B2C',
-//       'Internal users'
-//     ]
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2016',
-//     data: [
-//       62.6,
-//       48.6,
-//       43.8
-//     ]
-//   }, {
-//     name: '2017',
-//     data: [
-//       65.6,
-//       49,
-//       39
-//     ]
-//   }]
-// });
 
 const howCanWeApprove = {
   options: {
