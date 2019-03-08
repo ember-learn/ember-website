@@ -251,10 +251,18 @@
 
     <div class="survey-row">
       <div class="survey-column half">
-        <div id="e-s-g2" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+        <HighCharts
+          @chartOptions={{employmentSituation.options}}
+          @content={{employmentSituation.data}}
+          @theme={{theme}}
+        />
       </div>
       <div class="survey-column half">
-        <div id="e-s-g3" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+        <HighCharts
+          @chartOptions={{emberDevelopers.options}}
+          @content={{emberDevelopers.data}}
+          @theme={{theme}}
+        />
       </div>
     </div>
 

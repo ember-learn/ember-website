@@ -160,116 +160,121 @@ const chartBreakdownByVersion = {
   }],
 };
 
-// $('#e-s-g2').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'What best describes your employment situation?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     categories: [
-//       'Working on product',
-//       'Doing consultant/client work',
-//       'Independent product developer',
-//       'Independent consultant',
-//       'Internal ember products',
-//     ]
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2015',
-//     data: [
-//       67.3,
-//       22.8,
-//       24.4,
-//       13.4,
-//       0
-//     ]
-//   }, {
-//     name: '2016',
-//     data: [
-//       59,
-//       15,
-//       16,
-//       11,
-//       23
-//     ]
-//   }, {
-//     name: '2017',
-//     data: [
-//       74.2,
-//       13.9,
-//       13.6,
-//       10.4,
-//       12.7
-//     ]
-//   }]
-// });
-// $('#e-s-g3').highcharts({
-//   chart: {
-//     type: 'column'
-//   },
-//   title: {
-//     text: 'How many developers at your company work with Ember?'
-//   },
-//   subtitle: {
-//     text: ''
-//   },
-//   xAxis: {
-//     categories: [
-//       'None',
-//       '1–10',
-//       '11–20',
-//       '21–50',
-//       '51–100',
-//       'More than 100'
-//     ]
-//   },
-//   yAxis: {
-//     title: {
-//       text: 'Percent'
-//     }
-//   },
-//   series: [{
-//     name: '2015',
-//     data: [
-//       15.5,
-//       78,
-//       3.7,
-//       1.7,
-//       0.8,
-//       0.3
-//     ]
-//   }, {
-//     name: '2016',
-//     data: [
-//       12,
-//       74,
-//       6,
-//       4,
-//       2,
-//       1
-//     ]
-//   }, {
-//     name: '2017',
-//     data: [
-//       8.7,
-//       69.8,
-//       6.8,
-//       4.8,
-//       2.5,
-//       2
-//     ]
-//   }]
-// });
+const employmentSituation = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'What best describes your employment situation?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        'Working on product',
+        'Doing consultant/client work',
+        'Independent product developer',
+        'Independent consultant',
+        'Internal ember products',
+      ]
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+  },
+  data: [{
+    name: '2015',
+    data: [
+      67.3,
+      22.8,
+      24.4,
+      13.4,
+      0
+    ]
+  }, {
+    name: '2016',
+    data: [
+      59,
+      15,
+      16,
+      11,
+      23
+    ]
+  }, {
+    name: '2017',
+    data: [
+      74.2,
+      13.9,
+      13.6,
+      10.4,
+      12.7
+    ]
+  }]
+}
+
+const emberDevelopers = {
+  options: {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'How many developers at your company work with Ember?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        'None',
+        '1–10',
+        '11–20',
+        '21–50',
+        '51–100',
+        'More than 100'
+      ]
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+  },
+  data: [{
+    name: '2015',
+    data: [
+      15.5,
+      78,
+      3.7,
+      1.7,
+      0.8,
+      0.3
+    ]
+  }, {
+    name: '2016',
+    data: [
+      12,
+      74,
+      6,
+      4,
+      2,
+      1
+    ]
+  }, {
+    name: '2017',
+    data: [
+      8.7,
+      69.8,
+      6.8,
+      4.8,
+      2.5,
+      2
+    ]
+  }]
+}
 
 // $('#e-s-g5').highcharts({
 //   chart: {
@@ -1178,4 +1183,6 @@ export default Controller.extend({
   howCanWeApprove,
   whenStarting,
   preExistingKnowledge,
+  employmentSituation,
+  emberDevelopers,
 });
