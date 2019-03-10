@@ -38,6 +38,17 @@ module.exports = function(environment) {
       title: '2019 Ember Community Survey',
       endDate: '2019-03-12'
     },
+
+    metricsAdapters: [
+      {
+        name: 'GoogleAnalytics',
+        environments: ['production'],
+        config: {
+          id: 'UA-27675533-1',
+          require: ['linkid']
+        }
+      },
+    ],
   };
 
   if (environment === 'development') {
