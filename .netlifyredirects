@@ -11,4 +11,13 @@
 /meetup-assets  /community/meetups/assets/
 /blog/*         https://blog.emberjs.com/:splat
 /deprecations/* https://deprecations.emberjs.com/:splat
-/api/*          https://api.emberjs.com/:splat
+
+### API Redirects
+
+# query params
+/api/* anchor=:anchor type=:type  https://api.emberjs.com/:splat?anchor=:anchor&type=:type
+/api/* anchor=:anchor             https://api.emberjs.com/:splat?anchor=:anchor
+/api/* type=:type                 https://api.emberjs.com/:splat?type=:type
+
+# base case
+/api/*                            https://api.emberjs.com/:splat
