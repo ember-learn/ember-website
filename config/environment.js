@@ -33,12 +33,6 @@ module.exports = function(environment) {
 
     host: 'http://localhost:4200',
 
-    survey: {
-      route: 'ember-community-survey-2019',
-      title: '2019 Ember Community Survey',
-      endDate: '2019-03-12'
-    },
-
     metricsAdapters: [
       {
         name: 'GoogleAnalytics',
