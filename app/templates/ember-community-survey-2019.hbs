@@ -38,27 +38,23 @@
       report working with a 1.13 app and 5% using a pre-1.13 version.
     </p>
 
-    <div class="survey-row">
-      <div class="survey-column half">
-        <HighCharts
-          @chartOptions={{overallAdoption.options}}
-          @content={{overallAdoption.data}}
-          @theme={{theme}}
-        />
-      </div>
-      <div class="survey-column half">
-        <HighCharts
-          @chartOptions={{emberDataAdoption.options}}
-          @content={{emberDataAdoption.data}}
-          @theme={{theme}}
-        />
-      </div>
+    <HighCharts
+      @chartOptions={{overallAdoption.options}}
+      @content={{overallAdoption.data}}
+      @theme={{theme}}
+    />
 
-      <p class="large">
-        Ember Data adoption follows a similar curve to Ember, with the majority of respondents on 3.0 or 2.18. Older Ember Data usage also continues to drop, with respondents on 1.13 at 7% (down from 10% last year) and on pre-1.13 at 4% (down from
-        7% last year).
-      </p>
-    </div>
+    <HighCharts
+      @chartOptions={{emberDataAdoption.options}}
+      @content={{emberDataAdoption.data}}
+      @theme={{theme}}
+    />
+    
+    <p class="large">
+      Ember Data adoption follows a similar curve to Ember, with the majority of respondents on 3.0 or 2.18. Older Ember Data usage also continues to drop, with respondents on 1.13 at 7% (down from 10% last year) and on pre-1.13 at 4% (down from
+      7% last year).
+    </p>
+
   </div>
 </div>
 
@@ -196,26 +192,23 @@
     <a href="#ember-for-hire" id="ember-for-hire" class="survey-h2">
       Ember for Hire
     </a>
-    <div class="survey-row">
-      <div class="survey-column half">
-        <HighCharts
-          @chartOptions={{employerUsingEmber.options}}
-          @content={{employerUsingEmber.data}}
-          @theme={{theme}}
-        />
-      </div>
-      <div class="survey-column half">
-        <HighCharts
-          @chartOptions={{gettingHired.options}}
-          @content={{gettingHired.data}}
-          @theme={{theme}}
-        />
-      </div>
-    </div>
+
+    <HighCharts
+      @chartOptions={{employerUsingEmber.options}}
+      @content={{employerUsingEmber.data}}
+      @theme={{theme}}
+    />
+
+    <HighCharts
+      @chartOptions={{gettingHired.options}}
+      @content={{gettingHired.data}}
+      @theme={{theme}}
+    />
 
     <p class="large">
       The number of employers already using Ember rose this year, up to 52% from 39% last year, and the numbers for whom Ember knowledge was important or very important also both grew.
     </p>
+
   </div>
 </div>
 
