@@ -314,3 +314,31 @@ body {
 }
 
 @import "percy-fixes";
+
+.decorative-boxes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  line-height: 3;
+  list-style: none;
+  margin: 0.5em auto;
+  padding: 0;
+  li {
+    align-content: center;
+    display: flex;
+    display: inline;
+    justify-content: center;
+    a {
+      border: 1px solid $orange;
+      color: $orange-darker;
+      font-size: 1.25em;
+      margin: 1em 0.25em;
+      padding: 1em;
+      transition: all 0.3s ease-in-out;
+      &:hover, :focus {
+        background-color: $orange;
+        color: white;
+      }
+    }
+  }
+}
