@@ -335,7 +335,8 @@ body {
       margin: 1em 0.25em;
       padding: 1em;
       transition: all 0.3s ease-in-out;
-      &:hover, :focus {
+      &:hover, 
+      &:focus {
         background-color: $orange;
         color: white;
       }
