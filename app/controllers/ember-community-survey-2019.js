@@ -5,11 +5,27 @@ var emberOrange = '#f23818',
     lightGrayColor = '#c0c0c0',
     lighterGrayColor = '#dedede',
     lightGreenColor = '#489a6e';
-var color2015 = lighterGrayColor;
-var color2016 = lightGrayColor;
-var color2017 = darkGrayColor;
-var color2018 = emberOrange;
-var colorFutureYear = lightGreenColor;
+
+const emberColors = {
+    ember: '#E04E39',
+    burntEmber: '#9B2918',
+    blue: '#1E719B',
+    lightBlue: '#74B0CE',
+    yellow: '#FBC840',
+    black: '#212121',
+    gray: '#817F7F',
+    faintGray: '#EFEBEA',
+    linen: '#FDF7F6',
+    white: '#FDFDFD'
+}
+
+var color2015 = emberColors.gray;
+var color2016 = emberColors.lightBlue;
+var color2017 = emberColors.blue;
+var color2018 = emberColors.burntEmber;
+var color2019 = emberColors.ember;
+var colorFutureYear = emberColors.yellow;
+
 
 const overallAdoption = {
   options: {
