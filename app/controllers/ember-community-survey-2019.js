@@ -19,6 +19,8 @@ const emberColors = {
     white: '#FDFDFD'
 }
 
+
+
 var color2015 = emberColors.gray;
 var color2016 = emberColors.lightBlue;
 var color2017 = emberColors.blue;
@@ -26,6 +28,39 @@ var color2018 = emberColors.burntEmber;
 var color2019 = emberColors.ember;
 var colorFutureYear = emberColors.yellow;
 
+const stackColors = {
+    htmlDark: '#E45126',
+    htmlLight: '#F2682A',
+    cssDark: '#0D72B8',
+    cssLight: '#32AADE',
+    jsDark: '#E4A228',
+    jsLight: '#F1BF28',
+    ariaDark: '#1A5E9A'
+}
+
+const stackData = {
+    htmlData: [ 1.4, 26.1, 72.5 ],
+    cssData: [ 6.5, 42, 51.4 ],
+    jsData: [ 2.7, 32.6, 64.7 ],
+    ariaData: [ 69.5, 26, 4.5 ],
+    emberData: [ 11.3, 40.7, 48 ]
+}
+
+const stackSkillsChart = {
+  options: {
+    chart: { type: 'column' },
+    title: { text: 'What Does Your Stack Look Like?'},
+    yAxis: { title: { text: 'Percent' } },
+    xAxis: { categories: [ 'Beginner', 'Intermediate', 'Advanced' ] },
+  },
+  data: [
+      { name: 'HTML',   color: stackColors.htmlLight, data: stackData.htmlData},
+      { name: 'CSS', color: stackColors.cssLight, data: stackData.cssData},
+      { name: 'JavaScript', color: stackColors.jsLight, data: stackData.jsData},
+      { name: 'ARIA', color: stackColors.ariaDark, data: stackData.ariaData},
+      { name: 'Ember.js', color: emberColors.ember, data: stackData.emberData}
+  ]
+}
 
 const overallAdoption = {
   options: {
@@ -894,4 +929,5 @@ export default Controller.extend({
   editorTool,
   browserRequirements,
   demographicsRegion,
+  stackSkillsChart
 });
