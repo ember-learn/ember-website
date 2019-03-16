@@ -20,6 +20,23 @@
 
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
+    <a href="#stack-skills" id="stack-skills" class="survey-h2">
+      Stack Skillset Self-Appraisal
+    </a>
+    <HighCharts
+      @chartOptions={{stackSkillsChart.options}}
+      @content={{stackSkillsChart.data}}
+      @theme={{theme}}
+    />
+    <p class="large">
+      This is placeholder text.
+    </p>
+  </div>
+</div>
+
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
     <a href="#new-release-adoption" id="new-release-adoption" class="survey-h2">
       New Release Adoption
     </a>
@@ -49,7 +66,7 @@
       @content={{emberDataAdoption.data}}
       @theme={{theme}}
     />
-    
+
     <p class="large">
       Ember Data adoption follows a similar curve to Ember, with the majority of respondents on 3.0 or 2.18. Older Ember Data usage also continues to drop, with respondents on 1.13 at 7% (down from 10% last year) and on pre-1.13 at 4% (down from
       7% last year).
