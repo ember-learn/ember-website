@@ -343,3 +343,27 @@ body {
     }
   }
 }
+
+.list-imgs {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    max-width: 100%;
+    width: 200px;
+    img {
+      display: inline-block;
+      max-width: 200px;
+    }
+  }
+}
