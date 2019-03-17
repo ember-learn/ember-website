@@ -392,3 +392,10 @@ body {
     }
   }
 }
+.survey-wrapper {
+  width: 100%;
+  @media print {
+    page-break-before: always !important;
+    break-before: always;
+  }
+}
