@@ -38,10 +38,129 @@
 
  -->
 
+
+  <div class="survey-wrapper survey-border-top">
+    <div class="survey-body survey-container">
+      <a href="#how-likely-to-recommend-ember" id="how-likely-to-recommend-ember" class="survey-h2">
+        Recommending Ember
+      </a>
+      <HighCharts
+        @chartOptions={{recommendingEmber.options}}
+        @content={{recommendingEmber.data}}
+        @theme={{theme}}
+      />
+      <p class="large">
+        We asked respondents how likely they were to recommend Ember to a friend or colleague.
+        The mean recommendation score is <b>8/10</b>.
+      </p>
+
+      <p class="large">
+        Participants reported their reasoning for their score as free-form text,
+        and below, we've provided a sample of responses alongside their corresponding recommendation score.
+      </p>
+      <p class="large">
+        We did not observe a great deal of variety in the written responses that corresponded to values of five or less.
+        However, we were thrilled to see the opposite effect in the upper ranges -- that is, <b> people
+        simply have a lot of different reasons to recommend Ember.js </b> to a friend or colleague!
+
+      </p>
+      <p class="large">
+        Here is a flavor of what reasons participants gave for their scoring:
+      </p>
+
+      <div class="cluster">
+        <h4>Score: 10</h4>
+        <aside class="quote">
+          Ember is a modern, opinionated framework with a great community & core teams who put a lot of consideration in to all decisions to maintain stability while keeping it up-to-date. This is essential for business users like myself because I can relax knowing that deprecations & breaking changes will be flagged up months/years in advance.
+        </aside>
+      </div>
+
+      <div class="cluster">
+        <h4>Score: 10</h4>
+        <aside class="quote">
+          We use Ember for nearly all the products we produce. We’ve managed to solve so many issues and roadblocks we’ve run into with other frameworks; it not only allows us to write more robust applications, it has been a huge time saver as well.
+        </aside>
+      </div>
+
+      <div class="cluster">
+        <h4>Score: 10</h4>
+        <aside class="quote">
+          You can learn Ember once and apply your knowledge in any other Ember project. That is an achievement which can't even be remotely accomplished by Vue or React. Ember is always a coherent experience as all addons can be authored and consumed via the same tools. Spending less brainpower on tooling, setting up a testing environment, or writing testable code is a very good thing.
+        </aside>
+      </div>
+
+      <div class="cluster">
+        <h4>Score: 4</h4>
+        <aside class="quote">
+           It just isn't used broadly enough in my part of the country to encourage people in that direction. The exception is for a large team that is starting from scratch - there I would recommend it still.
+        </aside>
+      </div>
+
+    </div>
+  </div>
+
+ <div class="survey-wrapper survey-border-top">
+   <div class="survey-body survey-container">
+     <a href="#MS_Q401" id="MS_Q401" class="survey-h2">
+       Which version(s) of Ember are in use in your apps?
+     </a>
+     <HighCharts
+       @chartOptions={{MS_Q401.options}}
+       @content={{MS_Q401.data}}
+       @theme={{theme}}
+     />
+     <p class="large">
+       This is placeholder text for chart MS_Q401.
+     </p>
+   </div>
+ </div>
+
+
+
+
+ <div class="survey-wrapper survey-border-top">
+   <div class="survey-body survey-container">
+     <a href="#MS_Q402" id="MS_Q402" class="survey-h2">
+       If you use Ember Data, which version(s) are used in your apps?
+     </a>
+     <HighCharts
+       @chartOptions={{MS_Q402.options}}
+       @content={{MS_Q402.data}}
+       @theme={{theme}}
+     />
+     <p class="large">
+       This is placeholder text for chart MS_Q402.
+     </p>
+   </div>
+ </div>
+
+
+ <!--
+ Goes in prose of Q4.02
+ <div class="survey-wrapper survey-border-top">
+   <div class="survey-body survey-container">
+     <a href="#MS_Q403" id="MS_Q403" class="survey-h2">
+       If you use Ember CLI, which version(s) are used in your apps?
+     </a>
+     <HighCharts
+       @chartOptions={{MS_Q403.options}}
+       @content={{MS_Q403.data}}
+       @theme={{theme}}
+     />
+     <p class="large">
+       This is placeholder text for chart MS_Q403.
+     </p>
+   </div>
+ </div>
+
+  -->
+
+
+
  <div class="survey-wrapper survey-border-top">
    <div class="survey-body survey-container">
      <a href="#SS_Q104" id="SS_Q104" class="survey-h2">
-       Q1.04: How long have you been working with Ember?
+       How long have you been working with Ember?
      </a>
      <HighCharts
        @chartOptions={{SS_Q104.options}}
@@ -60,7 +179,7 @@
  <div class="survey-wrapper survey-border-top">
    <div class="survey-body survey-container">
      <a href="#MS_Q103" id="MS_Q103" class="survey-h2">
-       Q1.03: What are the ways you learn about and stay up to date with Ember?
+       What are the ways you learn about and stay up to date with Ember?
      </a>
      <HighCharts
        @chartOptions={{MS_Q103.options}}
@@ -100,7 +219,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q105" id="SS_Q105" class="survey-h2">
-      Q1.05: Grade your knowledge of HTML:
+      Grade your knowledge of HTML:
     </a>
     <HighCharts
       @chartOptions={{SS_Q105.options}}
@@ -119,7 +238,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q106" id="SS_Q106" class="survey-h2">
-      Q1.06: Grade your knowledge of CSS:
+      Grade your knowledge of CSS:
     </a>
     <HighCharts
       @chartOptions={{SS_Q106.options}}
@@ -138,7 +257,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q107" id="SS_Q107" class="survey-h2">
-      Q1.07: Grade your knowledge of JavaScript:
+      Grade your knowledge of JavaScript:
     </a>
     <HighCharts
       @chartOptions={{SS_Q107.options}}
@@ -157,7 +276,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q108" id="SS_Q108" class="survey-h2">
-      Q1.08: Grade your knowledge of ARIA:
+      Grade your knowledge of ARIA:
     </a>
     <HighCharts
       @chartOptions={{SS_Q108.options}}
@@ -176,7 +295,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q109" id="SS_Q109" class="survey-h2">
-      Q1.09: Grade your knowledge of Ember.js:
+      Grade your knowledge of Ember.js:
     </a>
     <HighCharts
       @chartOptions={{SS_Q109.options}}
@@ -198,7 +317,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q502" id="SS_Q502" class="survey-h2">
-      Q5.02: Do you have a disability?
+      Do you have a disability?
     </a>
     <HighCharts
       @chartOptions={{SS_Q502.options}}
@@ -220,7 +339,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q110" id="MS_Q110" class="survey-h2">
-      Q1.10: When learning Ember yourself, or teaching it to someone new, what topics were difficult to understand?
+      When learning Ember yourself, or teaching it to someone new, what topics were difficult to understand?
     </a>
     <HighCharts
       @chartOptions={{MS_Q110.options}}
@@ -239,7 +358,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q111" id="MS_Q111" class="survey-h2">
-      Q1.11: Which text editors do you use for development?
+      Which text editors do you use for development?
     </a>
     <HighCharts
       @chartOptions={{MS_Q111.options}}
@@ -258,7 +377,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q112" id="MS_Q112" class="survey-h2">
-      Q1.12: Describe your participation in the Ember community:
+      Describe your participation in the Ember community:
     </a>
     <HighCharts
       @chartOptions={{MS_Q112.options}}
@@ -277,7 +396,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q113" id="MS_Q113" class="survey-h2">
-      Q1.13: Which operating system(s) do you use for development?
+      Which operating system(s) do you use for development?
     </a>
     <HighCharts
       @chartOptions={{MS_Q113.options}}
@@ -296,7 +415,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q114" id="MS_Q114" class="survey-h2">
-      Q1.14: With which of these other front-end framework(s) do you have some level of experience?
+      With which of these other front-end framework(s) do you have some level of experience?
     </a>
     <HighCharts
       @chartOptions={{MS_Q114.options}}
@@ -315,7 +434,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q115" id="MS_Q115" class="survey-h2">
-      Q1.15: With which of these other front-end framework(s) do you have an advanced level of experience?
+      With which of these other front-end framework(s) do you have an advanced level of experience?
     </a>
     <HighCharts
       @chartOptions={{MS_Q115.options}}
@@ -334,7 +453,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q201" id="MS_Q201" class="survey-h2">
-      Q2.01: What best describes your role at work?
+      What best describes your role at work?
     </a>
     <HighCharts
       @chartOptions={{MS_Q201.options}}
@@ -353,7 +472,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q202" id="MS_Q202" class="survey-h2">
-      Q2.02: Choose the option(s) that best describe your employment situation:
+      Choose the option(s) that best describe your employment situation:
     </a>
     <HighCharts
       @chartOptions={{MS_Q202.options}}
@@ -372,7 +491,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q203" id="SS_Q203" class="survey-h2">
-      Q2.03: I use Ember for work:
+      I use Ember for work:
     </a>
     <HighCharts
       @chartOptions={{SS_Q203.options}}
@@ -391,7 +510,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q204" id="SS_Q204" class="survey-h2">
-      Q2.04: When taking your most recent job:
+      When taking your most recent job:
     </a>
     <HighCharts
       @chartOptions={{SS_Q204.options}}
@@ -410,7 +529,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q205" id="SS_Q205" class="survey-h2">
-      Q2.05: When taking your most recent job your pre-existing knowledge of Ember.js was:
+      When taking your most recent job your pre-existing knowledge of Ember.js was:
     </a>
     <HighCharts
       @chartOptions={{SS_Q205.options}}
@@ -429,7 +548,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q301" id="SS_Q301" class="survey-h2">
-      Q3.01: How many developers at your company are responsible for writing Front-End code?
+      How many developers at your company are responsible for writing Front-End code?
     </a>
     <HighCharts
       @chartOptions={{SS_Q301.options}}
@@ -448,7 +567,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q302" id="SS_Q302" class="survey-h2">
-      Q3.02: How many developers at your company are responsible for writing Ember code?
+      How many developers at your company are responsible for writing Ember code?
     </a>
     <HighCharts
       @chartOptions={{SS_Q302.options}}
@@ -467,7 +586,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q303" id="SS_Q303" class="survey-h2">
-      Q3.03: At this time next year, how many Ember developers does your company plan to employ?
+      At this time next year, how many Ember developers does your company plan to employ?
     </a>
     <HighCharts
       @chartOptions={{SS_Q303.options}}
@@ -481,16 +600,10 @@
 </div>
 
 
-
-
-
-
-
-
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q304" id="MS_Q304" class="survey-h2">
-      Q3.04: What are the accessibility requirements for your business?
+      What are the accessibility requirements for your business?
     </a>
     <HighCharts
       @chartOptions={{MS_Q304.options}}
@@ -509,7 +622,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q305" id="SS_Q305" class="survey-h2">
-      Q3.05: What is the primary language of apps developed at your business?
+      What is the primary language of apps developed at your business?
     </a>
     <HighCharts
       @chartOptions={{SS_Q305.options}}
@@ -530,7 +643,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q306" id="SS_Q306" class="survey-h2">
-      Q3.06: Does your business require applications to be internationalized?
+      Does your business require applications to be internationalized?
     </a>
     <HighCharts
       @chartOptions={{SS_Q306.options}}
@@ -548,7 +661,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q307" id="MS_Q307" class="survey-h2">
-      Q3.07: In which sector(s) do you  operate?
+      In which sector(s) do you  operate?
     </a>
     <HighCharts
       @chartOptions={{MS_Q307.options}}
@@ -566,65 +679,8 @@
 
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
-    <a href="#MS_Q401" id="MS_Q401" class="survey-h2">
-      Q4.01: Which version(s) of Ember are in use in your apps?
-    </a>
-    <HighCharts
-      @chartOptions={{MS_Q401.options}}
-      @content={{MS_Q401.data}}
-      @theme={{theme}}
-    />
-    <p class="large">
-      This is placeholder text for chart MS_Q401.
-    </p>
-  </div>
-</div>
-
-
-
-
-<div class="survey-wrapper survey-border-top">
-  <div class="survey-body survey-container">
-    <a href="#MS_Q402" id="MS_Q402" class="survey-h2">
-      Q4.02: If you use Ember Data, which version(s) are used in your apps?
-    </a>
-    <HighCharts
-      @chartOptions={{MS_Q402.options}}
-      @content={{MS_Q402.data}}
-      @theme={{theme}}
-    />
-    <p class="large">
-      This is placeholder text for chart MS_Q402.
-    </p>
-  </div>
-</div>
-
-
-<!--
-Goes in prose of Q4.02
-<div class="survey-wrapper survey-border-top">
-  <div class="survey-body survey-container">
-    <a href="#MS_Q403" id="MS_Q403" class="survey-h2">
-      Q4.03: If you use Ember CLI, which version(s) are used in your apps?
-    </a>
-    <HighCharts
-      @chartOptions={{MS_Q403.options}}
-      @content={{MS_Q403.data}}
-      @theme={{theme}}
-    />
-    <p class="large">
-      This is placeholder text for chart MS_Q403.
-    </p>
-  </div>
-</div>
-
- -->
-
-
-<div class="survey-wrapper survey-border-top">
-  <div class="survey-body survey-container">
     <a href="#SS_Q405" id="SS_Q405" class="survey-h2">
-      Q4.05: What is the primary language of your server-side stack?
+      What is the primary language of your server-side stack?
     </a>
     <HighCharts
       @chartOptions={{SS_Q405.options}}
@@ -644,7 +700,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q406" id="MS_Q406" class="survey-h2">
-      Q4.06: Which of these server-side frameworks do you use?
+      Which of these server-side frameworks do you use?
     </a>
     <HighCharts
       @chartOptions={{MS_Q406.options}}
@@ -663,7 +719,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q407" id="MS_Q407" class="survey-h2">
-      Q4.07: What standards do you follow for API design?
+      What standards do you follow for API design?
     </a>
     <HighCharts
       @chartOptions={{MS_Q407.options}}
@@ -682,7 +738,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q408" id="MS_Q408" class="survey-h2">
-      Q4.08: What testing framework(s) do you use in your Ember apps?
+      What testing framework(s) do you use in your Ember apps?
     </a>
     <HighCharts
       @chartOptions={{MS_Q408.options}}
@@ -701,7 +757,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q409" id="MS_Q409" class="survey-h2">
-      Q4.09: How old are your Ember applications?
+      How old are your Ember applications?
     </a>
     <HighCharts
       @chartOptions={{MS_Q409.options}}
@@ -718,7 +774,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q410" id="SS_Q410" class="survey-h2">
-      Q4.10: How many Ember apps do you work on?
+      How many Ember apps do you work on?
     </a>
     <HighCharts
       @chartOptions={{SS_Q410.options}}
@@ -738,7 +794,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q411" id="MS_Q411" class="survey-h2">
-      Q4.11: What technologies are part of your deployment stack?
+      What technologies are part of your deployment stack?
     </a>
     <HighCharts
       @chartOptions={{MS_Q411.options}}
@@ -757,7 +813,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q412" id="MS_Q412" class="survey-h2">
-      Q4.12: What is the primary target platform for your Ember apps?
+      What is the primary target platform for your Ember apps?
     </a>
     <HighCharts
       @chartOptions={{MS_Q412.options}}
@@ -776,7 +832,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q413" id="MS_Q413" class="survey-h2">
-      Q4.13: Who uses your application(s)?
+      Who uses your application(s)?
     </a>
     <HighCharts
       @chartOptions={{MS_Q413.options}}
@@ -795,7 +851,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q414" id="MS_Q414" class="survey-h2">
-      Q4.14: What browser versions do your applications target?
+      What browser versions do your applications target?
     </a>
     <HighCharts
       @chartOptions={{MS_Q414.options}}
@@ -814,7 +870,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q415" id="MS_Q415" class="survey-h2">
-      Q4.15: At this time next year, what browser versions do you expect your applications to target?
+      At this time next year, what browser versions do you expect your applications to target?
     </a>
     <HighCharts
       @chartOptions={{MS_Q415.options}}
@@ -833,7 +889,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q416" id="MS_Q416" class="survey-h2">
-      Q4.16: Which of these best describes your use of Ember in production applications?
+      Which of these best describes your use of Ember in production applications?
     </a>
     <HighCharts
       @chartOptions={{MS_Q416.options}}
@@ -852,7 +908,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q417" id="MS_Q417" class="survey-h2">
-      Q4.17: What method do you rely on for search engine indexing?
+      What method do you rely on for search engine indexing?
     </a>
     <HighCharts
       @chartOptions={{MS_Q417.options}}
@@ -869,7 +925,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q418" id="SS_Q418" class="survey-h2">
-      Q4.18: How many addons have you written?
+      How many addons have you written?
     </a>
     <HighCharts
       @chartOptions={{SS_Q418.options}}
@@ -886,7 +942,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q419" id="SS_Q419" class="survey-h2">
-      Q4.19: How many addons have you published publicly?
+      How many addons have you published publicly?
     </a>
     <HighCharts
       @chartOptions={{SS_Q419.options}}
@@ -903,7 +959,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q501" id="SS_Q501" class="survey-h2">
-      Q5.01: In which region do you live?
+      In which region do you live?
     </a>
     <HighCharts
       @chartOptions={{SS_Q501.options}}
@@ -922,7 +978,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q504" id="MS_Q504" class="survey-h2">
-      Q5.04: Which categories describe you?
+      Which categories describe you?
     </a>
     <HighCharts
       @chartOptions={{MS_Q504.options}}
@@ -941,7 +997,7 @@ Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q601" id="MS_Q601" class="survey-h2">
-      Q6.01: Did you participate in any of the following surveys?
+      Did you participate in any of the following surveys?
     </a>
     <HighCharts
       @chartOptions={{MS_Q601.options}}
@@ -956,7 +1012,10 @@ Goes in prose of Q4.02
 
 
 <!--========================================================================-->
+<!--
+2018 Starts here -->
 
+<!--
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#new-release-adoption" id="new-release-adoption" class="survey-h2">
@@ -997,112 +1056,8 @@ Goes in prose of Q4.02
   </div>
 </div>
 
-<div class="survey-wrapper survey-border-top">
-  <div class="survey-body survey-container">
-    <a href="#how-likely-to-recommend-ember" id="how-likely-to-recommend-ember" class="survey-h2">
-      Recommending Ember
-    </a>
-    <HighCharts
-      @chartOptions={{recommendingEmber.options}}
-      @content={{recommendingEmber.data}}
-      @theme={{theme}}
-    />
-    <p class="large">
-      We asked respondents how likely they were to recommend Ember to a friend or colleague.
-      The mean recommendation score is 8/10.
-    </p>
 
-    <p class="large">
-      Participants reported their reasoning for their score as free-form text,
-      and below, we've provided a representative sample of responses for several recommendation scores.
-    </p>
-    <p class="large">
-      Here is a flavor of what reasons participants gave for their scoring:
-    </p>
 
-    <div class="cluster">
-      <h4>Score: 10</h4>
-      <aside class="quote">
-        ...
-      </aside>
-    </div>
-
-    <div class="cluster">
-      <h4>Score: 2</h4>
-      <aside class="quote">
-        ...
-      </aside>
-    </div>
-
-    <div class="cluster">
-      <h4>Score: 10</h4>
-      <aside class="quote">
-        ...
-      </aside>
-    </div>
-
-    <div class="cluster">
-      <h4>Score: 10</h4>
-      <aside class="quote">
-        ...
-      </aside>
-    </div>
-
-  </div>
-</div>
-
-<div class="survey-wrapper survey-border-top">
-  <div class="survey-body survey-container">
-    <a href="#how-can-we-improve-ember" id="how-can-we-improve-ember" class="survey-h2">
-      How Can We Improve Ember?
-    </a>
-    <p class="large">
-      As the last question of the survey we asked participants:
-      "What would it take for you to feel great about using and recommending Ember for new projects?" Using text similarity analysis, we identified the most commonly mentioned topics. Here they are, in descending order.
-    </p>
-
-    <div class="cluster">
-      <h4>Ember Data</h4>
-      <aside class="quote">
-        ...
-      </aside>
-    </div>
-
-    <div class="cluster">
-      <h4>Documentation</h4>
-      <aside class="quote">
-        ...
-      </aside>
-
-      <br>
-
-      <aside class="quote">
-        ...
-      </aside>
-    </div>
-
-    <div class="cluster">
-      <h4>Glimmer</h4>
-      <aside class="quote">
-        ...
-      </aside>
-    </div>
-
-    <div class="cluster">
-      <h4>Community</h4>
-      <aside class="quote">
-        ...
-      </aside>
-
-      <br>
-
-      <aside class="quote">
-        ...
-      </aside>
-    </div>
-  </div>
-</div>
-<!--
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#ember-for-hire" id="ember-for-hire" class="survey-h2">
@@ -1129,7 +1084,7 @@ Goes in prose of Q4.02
 </div>
 -->
 
-<div class="survey-wrapper survey-border-top">
+<!-- <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#ember-in-the-enterprise" id="ember-in-the-enterprise" class="survey-h2">
       Ember In the Enterprise
@@ -1190,8 +1145,9 @@ Goes in prose of Q4.02
       number of respondents still do work on these apps, indicating that some Ember codebases can really stand the test of time.
     </p>
   </div>
-</div>
+</div> -->
 
+<!--
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#community-participation" id="community-participation" class="survey-h2">
@@ -1268,6 +1224,8 @@ Goes in prose of Q4.02
   </div>
 </div>
 
+ -->
+
 <!--
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
@@ -1297,6 +1255,62 @@ Goes in prose of Q4.02
 </div>
 -->
 
+ <div class="survey-wrapper survey-border-top">
+   <div class="survey-body survey-container">
+     <a href="#how-can-we-improve-ember" id="how-can-we-improve-ember" class="survey-h2">
+       How Can We Improve Ember?
+     </a>
+     <p class="large">
+       As the last question of the survey we asked participants:
+       "What would it take for you to feel great about using and recommending Ember for new projects?" Using text similarity analysis, we identified the most commonly mentioned topics. Here they are, in descending order.
+     </p>
+
+     <div class="cluster">
+       <h4>Ember Data</h4>
+       <aside class="quote">
+         ...
+       </aside>
+     </div>
+
+     <div class="cluster">
+       <h4>Documentation</h4>
+       <aside class="quote">
+         ...
+       </aside>
+
+       <br>
+
+       <aside class="quote">
+         ...
+       </aside>
+     </div>
+
+     <div class="cluster">
+       <h4>Glimmer</h4>
+       <aside class="quote">
+         ...
+       </aside>
+     </div>
+
+     <div class="cluster">
+       <h4>Community</h4>
+       <aside class="quote">
+         ...
+       </aside>
+
+       <br>
+
+       <aside class="quote">
+         ...
+       </aside>
+     </div>
+   </div>
+ </div>
+
+
+
+
+
 
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
@@ -1315,7 +1329,7 @@ Goes in prose of Q4.02
     </p>
 
     <p class="large">
-      If you have any questions or other feedback, feel free to email us at <a href="survey@emberjs.com">survey@emberjs.com</a>
+      If you have any questions or other feedback, please to email us at <a href="survey@emberjs.com">survey@emberjs.com</a>
     </p>
   </div>
   <div class="survey-credits">
