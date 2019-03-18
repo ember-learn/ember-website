@@ -880,6 +880,7 @@ var emberVersionData = [{year: '2015',
 
 const newReleaseAdoption = makeVersionChart(emberVersionData, 'Which version(s) of Ember are used in your apps?');
 
+
 var emberDataVersionData = [{year:
   '2016',
   color: color2016,
@@ -928,7 +929,9 @@ var emberDataVersionData = [{year:
   {value: 6.8, label: '2.17'},
   {value: 35.8, label: '2.18'},
   {value: 21.5, label: '3.0'},
-]}];
+]}
+];
+
 
 const emberDataAdoption = makeVersionChart(emberDataVersionData, 'Which versions of Ember Data are used in your apps?');
 
@@ -1466,12 +1469,13 @@ const SS_Q501 = {
       {name: 'Africa', y: (100/1232)*5},
       {name: 'Asia', y: (100/1232)*87},
       {name: 'Oceania', y: (100/1232)*40},
-      {name: 'Europe', y: (100/1232)*0},
+      {name: 'Europe', y: (100/1232)*468},
       {name: 'North America', y: (100/1232)*566},
       {name: 'Central America', y: (100/1232)*2},
       {name: 'South America', y: (100/1232)*32},
       {name: 'Other', y: (100/1232)*10}]}
 ]}
+
 
 
 // Q5.02: Do you have a disability?
@@ -1512,16 +1516,16 @@ const MS_Q103 = {
     {name: '2017', color: color2017, data: [
       // {name: 'Writing RFCs', y:1.9},
       // {name: 'Commenting on RFCs', y:5.2},
-      {name: 'Ember RFCs', y:33.3},
-      {name: 'Ember Github PRs', y:16.4},
+      {name: 'RFCs', y:33.3},
+      {name: 'Github PRs', y:16.4},
       {name: 'Stack Overflow', y:41.6},
       {name: 'emberjs.com blog', y:49.8}
     ]},
     {name: '2018', color: color2018, data: [
       // {name: 'Writing RFCs', y:3.0},
       // {name: 'Commenting on RFCs', y:9.8},
-      {name: 'Ember RFCs', y:52.2},
-      {name: 'Ember Github PRs', y:23.8},
+      {name: 'RFCs', y:52.2},
+      {name: 'Github PRs', y:23.8},
       {name: 'Stack Overflow', y:34.2},
       {name: 'emberjs.com blog', y:57.8}
     ]},
@@ -1530,21 +1534,21 @@ const MS_Q103 = {
       // {name: 'Attending conferences', y: (100/1232)*313},
       // {name: 'discuss.emberjs.com', y: (100/1232)*349},
       // {name: 'Ember Core Notes Repo', y: (100/1232)*154},
-      {name: 'Ember Github PRs', y: (100/1232)*372},
-      {name: 'Ember Guides & API Docs', y: (100/1232)*878},
-      {name: 'Ember RFCs', y: (100/1232)*638},
-      {name: 'Ember community Discord channel', y: (100/1232)*398},
+      {name: 'Github PRs', y: (100/1232)*372},
+      {name: 'Guides & API Docs', y: (100/1232)*878},
+      {name: 'RFCs', y: (100/1232)*638},
+      {name: 'Discord server (chat)', y: (100/1232)*398},
       {name: 'emberjs.com blog', y: (100/1232)*669},
       {name: 'Blog posts', y: (100/1232)*575},
       // {name: 'In-person or other formal training', y: (100/1232)*142},
       // {name: 'Local meetups', y: (100/1232)*218},
       {name: 'Newsletters', y: (100/1232)*413},
       // {name: 'Podcasts', y: (100/1232)*248},
-      {name: 'Reading code and examples', y: (100/1232)*626},
+      {name: 'Code Samples', y: (100/1232)*626},
       // {name: 'Reddit', y: (100/1232)*124},
       // {name: 'Screencasts or video training', y: (100/1232)*255},
       {name: 'Stack Overflow', y: (100/1232)*419},
-      {name: 'Twitter', y: (100/1232)*398}
+      {name: 'Social Media', y: (100/1232)*398}
       //{name: 'Other', y: (100/1232)*75}
     ]}
 ]}
@@ -2021,7 +2025,46 @@ const MS_Q402 = {
     yAxis: { title: { text: 'Percent' } },
   },
   data: [
-
+    {name: '2016', color: color2016, data:[
+      {y: 27, name: '1.13'},
+      // {y: 6, name: '2.0'},
+      // {y: 4, name: '2.1'},
+      // {y: 8, name: '2.2'},
+      {y: 21, name: '2.3'},
+      {y: 42, name: '2.4'}
+    ]},
+    {name: '2017', color: color2017, data: [
+      // {y: 9, name: '1.13'},
+      // {y: 2.15, name: '2.0'},
+      // {y: 2.1, name: '2.1'},
+      // {y: 1.5, name: '2.2'},
+      // {y: 2.8, name: '2.3'},
+      // {y: 7, name: '2.4'},
+      // {y: 3, name: '2.5'},
+      // {y: 4, name: '2.6'},
+      // {y: 4, name: '2.7'},
+      {y: 13.8, name: '2.8'},
+      // {y: 7, name: '2.9'},
+      {y: 21.6, name: '2.10'},
+      {y: 34.9, name: '2.11'},
+      {y: 17, name: '2.12'}
+    ]},
+    {name: '2018', color: color2018, data: [
+      // {y: 5.9, name: '2.0-2.6'},
+      // {y: 1, name: '2.7'},
+      // {y: 5.2, name: '2.8'},
+      // {y: 2, name: '2.9'},
+      // {y: 2.3, name: '2.10'},
+      // {y: 2.5, name: '2.11'},
+      {y: 12.5, name: '2.12'},
+      // {y: 6.2, name: '2.13'},
+      // {y: 6.2, name: '2.14'},
+      // {y: 0, name: '2.15'},
+      {y: 17.2, name: '2.16'},
+      // {y: 6.8, name: '2.17'},
+      {y: 35.8, name: '2.18'},
+      {y: 21.5, name: '3.0'},
+    ]},
     {name: '2019', color: color2019, data: [
       // {name: '1.13', y: (100/1232)*50},
       // {name: '2.0-2.6', y: (100/1232)*40},
@@ -2037,13 +2080,13 @@ const MS_Q402 = {
       // {name: '3.3', y: (100/1232)*70},
       {name: '3.4', y: (100/1232)*253},
       {name: '3.5', y: (100/1232)*156},
-      {name: '3.6', y: (100/1232)*121},
+      // {name: '3.6', y: (100/1232)*121},
       {name: '3.7', y: (100/1232)*260},
       {name: '3.8', y: (100/1232)*154},
       // {name: 'Beta', y: (100/1232)*7},
       // {name: 'Canary (master)', y: (100/1232)*5},
       // {name: 'Custom fork', y: (100/1232)*10},
-      {name: 'I don’t know', y: (100/1232)*123}
+      // {name: 'I don’t know', y: (100/1232)*123}
       // {name: 'Other', y: (100/1232)*28}
     ]}
 ]}
