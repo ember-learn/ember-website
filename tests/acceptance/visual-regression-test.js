@@ -36,6 +36,8 @@ module('Acceptance | visual regression', function (hooks) {
       { title: '/tomster/index.html', route: '/mascots/' },
       { title: '/tomster/commission/index.html', route: '/mascots/commission/' },
       { title: '/tomster/faq.html', route: '/mascots/faq/' },
+      { title: '/editions/', route: '/editions/' },
+      { title: '/editions/octane', route: '/editions/octane' },
     ];
 
     await pages.reduce(async (prev, config) => {

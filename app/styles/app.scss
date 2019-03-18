@@ -314,3 +314,81 @@ body {
 }
 
 @import "percy-fixes";
+
+.decorative-boxes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  line-height: 1;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    line-height: 3;
+  }
+  li {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      width: auto;
+    }
+    a {
+      border: 1px solid $orange;
+      color: $orange-darker;
+      font-size: 1em;
+      margin: 0.25em;
+      padding: 1em;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      @media screen and (min-width: 768px) {
+        width: auto;
+      }
+      &:hover, 
+      &:focus {
+        background-color: $orange;
+        color: white;
+      }
+    }
+  }
+}
+.dl-faq {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  dt {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 0.5em;
+  }
+  dd {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+.list-imgs {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    max-width: 100%;
+    width: 200px;
+    img {
+      display: inline-block;
+      max-width: 200px;
+    }
+  }
+}
