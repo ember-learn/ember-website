@@ -9,10 +9,9 @@
     <h1 class="survey-h1">
       <img src="/images/survey/logo2019.png" alt="Ember Community Survey 2019">
     </h1>
-
-    <h4 class="survey-tagline">
+    <p class="survey-tagline">
       A project to learn who is using Ember, and how.
-    </h4>
+    </p>
 
   </div>
 </div>
@@ -41,6 +40,25 @@
 
  <div class="survey-wrapper survey-border-top">
    <div class="survey-body survey-container">
+     <a href="#SS_Q104" id="SS_Q104" class="survey-h2">
+       Q1.04: How long have you been working with Ember?
+     </a>
+     <HighCharts
+       @chartOptions={{SS_Q104.options}}
+       @content={{SS_Q104.data}}
+       @theme={{theme}}
+     />
+     <p class="large">
+       This is placeholder text for chart SS_Q104.
+     </p>
+   </div>
+ </div>
+
+
+
+
+ <div class="survey-wrapper survey-border-top">
+   <div class="survey-body survey-container">
      <a href="#MS_Q103" id="MS_Q103" class="survey-h2">
        Q1.03: What are the ways you learn about and stay up to date with Ember?
      </a>
@@ -54,24 +72,6 @@
      </p>
    </div>
  </div>
-
-
-
-<div class="survey-wrapper survey-border-top">
-  <div class="survey-body survey-container">
-    <a href="#SS_Q104" id="SS_Q104" class="survey-h2">
-      Q1.04: How long have you been working with Ember?
-    </a>
-    <HighCharts
-      @chartOptions={{SS_Q104.options}}
-      @content={{SS_Q104.data}}
-      @theme={{theme}}
-    />
-    <p class="large">
-      This is placeholder text for chart SS_Q104.
-    </p>
-  </div>
-</div>
 
 
 
@@ -215,7 +215,7 @@
 <!--========================================================================-->
 
 
-
+<!--
 
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
@@ -233,7 +233,7 @@
   </div>
 </div>
 
-
+ -->
 
 
 <div class="survey-wrapper survey-border-top">
@@ -258,7 +258,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q112" id="MS_Q112" class="survey-h2">
-      Q1.12: Choose the option(s) that best describe your participation in the Ember community:
+      Q1.12: Describe your participation in the Ember community:
     </a>
     <HighCharts
       @chartOptions={{MS_Q112.options}}
@@ -272,7 +272,7 @@
 </div>
 
 
-
+<!--
 
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
@@ -291,7 +291,7 @@
 </div>
 
 
-
+ -->
 
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
@@ -329,7 +329,7 @@
 </div>
 
  -->
-
+<!--
 
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
@@ -347,7 +347,7 @@
   </div>
 </div>
 
-
+ -->
 
 
 <div class="survey-wrapper survey-border-top">
@@ -424,7 +424,7 @@
 </div>
 
 
-
+<!--
 
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
@@ -441,7 +441,7 @@
     </p>
   </div>
 </div>
-
+ -->
 
 
 
@@ -505,7 +505,7 @@
 
 
 
-
+<!-- Prose for Q3.06
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q305" id="SS_Q305" class="survey-h2">
@@ -522,9 +522,11 @@
   </div>
 </div>
 
+ -->
 
 
 
+<!-- TODO Pie Chart -->
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q306" id="SS_Q306" class="survey-h2">
@@ -536,7 +538,7 @@
       @theme={{theme}}
     />
     <p class="large">
-      This is placeholder text for chart SS_Q306.
+      //Prose from Q3.05: This is placeholder text for chart SS_Q306.
     </p>
   </div>
 </div>
@@ -546,7 +548,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q307" id="MS_Q307" class="survey-h2">
-      Q3.07: In which sector(s) does your employer operate? Select all that apply:
+      Q3.07: In which sector(s) do you  operate?
     </a>
     <HighCharts
       @chartOptions={{MS_Q307.options}}
@@ -598,8 +600,8 @@
 </div>
 
 
-
-
+<!--
+Goes in prose of Q4.02
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q403" id="MS_Q403" class="survey-h2">
@@ -616,7 +618,7 @@
   </div>
 </div>
 
-
+ -->
 
 
 <div class="survey-wrapper survey-border-top">
@@ -661,7 +663,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q407" id="MS_Q407" class="survey-h2">
-      Q4.07: What standards do you follow for HTTP API design?
+      Q4.07: What standards do you follow for API design?
     </a>
     <HighCharts
       @chartOptions={{MS_Q407.options}}
@@ -867,7 +869,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q418" id="SS_Q418" class="survey-h2">
-      Q4.18: How many addons have you written (including private, unpublished libraries)?
+      Q4.18: How many addons have you written?
     </a>
     <HighCharts
       @chartOptions={{SS_Q418.options}}
@@ -1007,17 +1009,13 @@
     />
     <p class="large">
       We asked respondents how likely they were to recommend Ember to a friend or colleague.
-      An average recommendation score is 8.2, and the calculated <a href="https://en.wikipedia.org/wiki/Net_Promoter">Net Promoter Score</a> is 35.4.
-      The plurality of responses were a 10.
+      The mean recommendation score is 8/10.
     </p>
 
     <p class="large">
-      Using the recommendation scores we created three segments of Detractors (1-5), Passives (6-7), and Promoters (8-10).
       Participants reported their reasoning for their score as free-form text,
-      and below we've provided the most frequent category of responses in
-      each segment based on similarity analysis.
+      and below, we've provided a representative sample of responses for several recommendation scores.
     </p>
-
     <p class="large">
       Here is a flavor of what reasons participants gave for their scoring:
     </p>
@@ -1311,19 +1309,13 @@
     </p>
 
     <p class="large">
-      You can view a <a href="https://embersurvey.typeform.com/report/tKfRLF/bty0Y6WzPoKB2Whw">summary of the responses to all questions</a>
-      from the survey, and you can view the <a href="/ember-community-survey-2019/ember-community-survey-2018-results-shuffled.csv">raw survey data</a>.
-      You can also view the <a href="/ember-community-survey-2018/ember-community-survey-2019-demographics-shuffled.csv">demographic data</a>, which has been decoupled from the primary corpora.
-    </p>
-
-    <p class="large">
       This is the fifth year of the Ember Community Survey. To see results for previous years, you can visit the
       <a href="https://www.emberjs.com/ember-community-survey-2018/">2018</a>, <a href="https://www.emberjs.com/ember-community-survey-2017/">2017</a>, <a href="https://www.emberjs.com/ember-community-survey-2016/">2016</a>
       and <a href="https://www.201-created.com/ember-community-survey-2015/">2015</a> survey results pages.
     </p>
 
     <p class="large">
-      Questions? Feedback? Please email <a href="survey@emberjs.com">survey@emberjs.com</a>
+      If you have any questions or other feedback, feel free to email us at <a href="survey@emberjs.com">survey@emberjs.com</a>
     </p>
   </div>
   <div class="survey-credits">

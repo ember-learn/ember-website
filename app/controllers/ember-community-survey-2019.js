@@ -21,11 +21,18 @@ const emberColors = {
     white: '#FDFDFD'
 }
 
+const orangePalette = {
+  orange: '#e04e39',
+  orangeDarker: '#c7341f',
+  orangeDarkest: '#9b2918',
+  orangeLighter: '#e77565'
+}
+
 // Default Color Assignments for Yearly Graph Data Series
-var color2015 = emberColors.gray;
-var color2016 = emberColors.black;
-var color2017 = emberColors.ember;
-var color2018 = emberColors.burntEmber;
+var color2015 = orangePalette.orangeLighter;
+var color2016 = darkGrayColor;
+var color2017 = orangePalette.orangeDarkest;
+var color2018 = orangePalette.orange;
 var color2019 = emberColors.blue;
 var colorFutureYear = emberColors.yellow;
 
@@ -412,7 +419,9 @@ const recommendingEmber = {
     yAxis: { title: { text: 'Responses' }
     },
   },
-  data: [{
+  data: [
+// Remove
+    {
     name: '2018',
     color: color2018,
     data: [
@@ -427,7 +436,8 @@ const recommendingEmber = {
         [9, 195],
         [10, 445]
     ]
-  }, {
+  },
+  {
     name: '2019',
     color: color2019,
     data: [
@@ -984,15 +994,17 @@ const SS_Q104 = {
   data: [
 
     {name: '2019', color: color2019, data: [
-      {name: '< 3 months', y: (100/1232)*47},
-      {name: '3 - 6 months', y: (100/1232)*56},
-      {name: '6 - 12 months', y: (100/1232)*78},
+      // {name: '< 3 months', y: (100/1232)*47},
+      // {name: '3 - 6 months', y: (100/1232)*56},
+      // {name: '6 - 12 months', y: (100/1232)*78},
+      {name: '< 1 year', y: (100/1232)*181},
       {name: '1 - 2 years', y: (100/1232)*173},
       {name: '2 - 3 years', y: (100/1232)*213},
       {name: '3 - 4 years', y: (100/1232)*209},
       {name: '4 - 5 years', y: (100/1232)*200},
-      {name: '5+ years', y: (100/1232)*219},
-      {name: 'Started on Sproutcore 2 (or before!)', y: (100/1232)*34}]}
+      {name: '5+ years', y: (100/1232)*253}
+      // {name: 'Started on Sproutcore 2 (or before!)', y: (100/1232)*34}
+    ]}
 ]}
 
 
@@ -1100,7 +1112,10 @@ const SS_Q109 = {
 //------------------------------------------------
 
 const SS_Q203 = {
-  options: { chart: { type: 'column' },
+  options: { chart: { type:
+    'column'
+
+    },
     title: { text: 'Q2.03: I use Ember for work:' },
     subtitle: { text: '' },
     tooltip: {pointFormat: '{point.y:.2f}%'},
@@ -1113,8 +1128,10 @@ const SS_Q203 = {
       {name: 'All of the time', y: (100/1232)*564},
       {name: 'Most of the time', y: (100/1232)*406},
       {name: 'Some of the time', y: (100/1232)*209},
-      {name: 'Never', y: (100/1232)*43}]}
+      {name: 'Never', y: (100/1232)*42}]}
 ]}
+// Yes / No? 96% / 4%
+
 
 
 // Q2.04: When taking your most recent job:
@@ -1259,6 +1276,7 @@ const SS_Q303 = {
 ]}
 
 
+// Prose for Q3.06
 // Q3.05: What is the primary language of apps developed at your business?
 //------------------------------------------------
 
@@ -1402,7 +1420,7 @@ const SS_Q410 = {
 
 const SS_Q418 = {
   options: { chart: { type: 'column' },
-    title: { text: 'Q4.18: How many addons have you written (including private, unpublished libraries)?' },
+    title: { text: 'Q4.18: How many addons have you written?' },
     subtitle: { text: '' },
     tooltip: {pointFormat: '{point.y:.2f}%'},
     xAxis: { type: 'category', },
@@ -1460,20 +1478,20 @@ const SS_Q501 = {
       {name: 'Asia', y: 7.8},
       {name: 'Oceania', y: 3.4},
       {name: 'South America', y: 3.2},
-      {name: 'Africa', y: 0.5},
-      {name: 'Central America', y: 0.5},
-      {name: 'Other', y: 0.4}
+      // {name: 'Africa', y: 0.5},
+      // {name: 'Central America', y: 0.5},
+      {name: 'Other', y: 1.4}
     ]
   },
     {name: '2019', color: color2019, data: [
-      {name: 'Africa', y: (100/1232)*5},
+      // {name: 'Africa', y: (100/1232)*5},
       {name: 'Asia', y: (100/1232)*87},
       {name: 'Oceania', y: (100/1232)*40},
       {name: 'Europe', y: (100/1232)*468},
       {name: 'North America', y: (100/1232)*566},
-      {name: 'Central America', y: (100/1232)*2},
+      // {name: 'Central America', y: (100/1232)*2},
       {name: 'South America', y: (100/1232)*32},
-      {name: 'Other', y: (100/1232)*10}]}
+      {name: 'Other', y: (100/1232)*17}]}
 ]}
 
 
@@ -1642,7 +1660,7 @@ const MS_Q111 = {
 
 const MS_Q112 = {
   options: { chart: { type: 'column' },
-    title: { text: 'Q1.12: Choose the option(s) that best describe your participation in the Ember community:' },
+    title: { text: 'Q1.12: Describe your participation in the Ember community:' },
     subtitle: { text: '' },
     tooltip: {pointFormat: '{point.y:.2f}%'},
     xAxis: { type: 'category', },
@@ -1651,16 +1669,16 @@ const MS_Q112 = {
   data: [
 
     {name: '2019', color: color2019, data: [
-      {name: 'Answering questions in Ember discussion forums', y: (100/1232)*194},
+      {name: 'Answering community questions', y: (100/1232)*194},
       {name: 'Attending meetups / conferences', y: (100/1232)*437},
       {name: 'Maintaining a library or addon', y: (100/1232)*327},
-      {name: 'Opening issues (on Ember.js or community projects)', y: (100/1232)*436},
-      {name: 'Opening PRs (on Ember.js or community projects)', y: (100/1232)*299},
-      {name: 'Creating RFCs (on Ember.js or community projects)', y: (100/1232)*42},
+      {name: 'Opening issues', y: (100/1232)*436},
+      {name: 'Opening PRs', y: (100/1232)*299},
+      {name: 'Creating RFCs', y: (100/1232)*42},
       {name: 'Commenting on RFCs', y: (100/1232)*160},
       {name: 'Presenting at events / lectures', y: (100/1232)*152},
       {name: 'Writing blog posts / articles', y: (100/1232)*178},
-      {name: 'None of these', y: (100/1232)*396},
+      // {name: 'None of these', y: (100/1232)*396},
       {name: 'Other', y: (100/1232)*75}]}
 ]}
 
@@ -1869,7 +1887,7 @@ const MS_Q304 = {
 
 const MS_Q307 = {
   options: { chart: { type: 'column' },
-    title: { text: 'Q3.07: In which sector(s) does your employer operate? Select all that apply:' },
+    title: { text: 'Q3.07: In which sector(s) do you  operate?' },
     subtitle: { text: '' },
     tooltip: {pointFormat: '{point.y:.2f}%'},
     xAxis: { type: 'category', },
@@ -2270,13 +2288,14 @@ const MS_Q409 = {
       {name: '1 - 2 years', y: (100/1232)*361},
       {name: '2 - 3 years', y: (100/1232)*399},
       {name: '3 - 4 years', y: (100/1232)*312},
-      {name: '> 4 years', y: (100/1232)*336}]}
+      {name: '4+ years', y: (100/1232)*336}]}
 ]}
 
 
 // Q4.11: What technologies are part of your deployment stack?
 //------------------------------------------------
 
+// Not certain to keep or not
 const MS_Q411 = {
   options: { chart: { type: 'column' },
     title: { text: 'Q4.11: What technologies are part of your deployment stack?' },
@@ -2337,9 +2356,9 @@ const MS_Q412 = {
   data: [
 
     {name: '2019', color: color2019, data: [
-      {name: 'Desktop and mobile (fully responsive)', y: (100/1232)*784},
-      {name: 'Desktop (not responsive)', y: (100/1232)*543},
-      {name: 'Mobile web (not responsive)', y: (100/1232)*91},
+      {name: 'Desktop and mobile', y: (100/1232)*784},
+      {name: 'Desktop only', y: (100/1232)*543},
+      {name: 'Mobile web', y: (100/1232)*91},
       // {name: 'Legacy desktop (Point-of-sale units/embedded devices)', y: (100/1232)*25},
       // {name: 'Browser extension (Chrome/Firefox etc.)', y: (100/1232)*37},
       {name: 'Mobile native (Cordova/Phonegap/Crosswalk)', y: (100/1232)*97}]}
@@ -2399,7 +2418,10 @@ const MS_Q414 = {
       {name: 'Legacy Chrome/Firefox/Safari/etc.', y: (100/1232)*191},
       {name: 'IE 11', y: (100/1232)*517},
       {name: 'Other', y: (100/1232)*19},
-      {name: 'IE 10', y: (100/1232)*62}]}
+      {name: 'IE 10', y: (100/1232)*62}]
+
+
+    }
 ]}
 
 
@@ -2417,7 +2439,7 @@ const MS_Q415 = {
   data: [
 
     {name: '2019', color: color2019, data: [
-      {name: 'Mobile (Android Chrome/iOS Safari/UC Browser/etc.)', y: (100/1232)*676},
+      {name: ' (Android Chrome/iOS Safari/UC Browser/etc.)', y: (100/1232)*676},
       {name: 'Modern (last 2 vers. Chrome/Firefox/Edge/Safari/etc.)', y: (100/1232)*1143},
       {name: 'Legacy Chrome/Firefox/Safari/etc.', y: (100/1232)*168},
       {name: 'IE 11', y: (100/1232)*313},
@@ -2480,10 +2502,10 @@ const MS_Q417 = {
   data: [
 
     {name: '2019', color: color2019, data: [
-      {name: 'FastBoot serving production requests', y: (100/1232)*158},
-      {name: 'FastBoot for prerendering (prember)', y: (100/1232)*64},
-      {name: 'phantomjs or other pre-rendering', y: (100/1232)*32},
-      {name: 'noscript tags', y: (100/1232)*17},
+      {name: 'FastBoot', y: (100/1232)*158},
+      // {name: 'FastBoot for prerendering (prember)', y: (100/1232)*64},
+      // {name: 'phantomjs or other pre-rendering', y: (100/1232)*32},
+      // {name: 'noscript tags', y: (100/1232)*17},
       {name: 'Search engine JavaScript execution (no pre-render)', y: (100/1232)*114},
       {name: 'Private app behind an authentication flow', y: (100/1232)*532},
       {name: 'I do not know', y: (100/1232)*308},
@@ -2534,9 +2556,11 @@ const MS_Q601 = {
       {name: '2018 NPM JavaScript EcoSystem Survey', y: (100/1232)*261},
       {name: '2018 StackOverflow Developer Survey', y: (100/1232)*311},
       {name: 'GitLab 2018 Global Developer Survey', y: (100/1232)*45},
-      {name: 'The State of JavaScript 2018', y: (100/1232)*484},
-      {name: 'Other(s)', y: (100/1232)*0}]}
+      {name: 'The State of JavaScript 2018', y: (100/1232)*484}
+      // {name: 'Other(s)', y: (100/1232)*0}
+    ]}
 ]}
+
 
 //=============================================================================
 export default Controller.extend({
