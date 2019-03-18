@@ -79,17 +79,19 @@
   </div>
 </div>
 
-<div class="survey-wrapper survey-border-top">
-  <div class="survey-body survey-container">
-    <a href="#MS_Q401" id="MS_Q401" class="survey-h2">
-      Which version(s) of Ember are in use in your apps?
-    </a>
-    <HighCharts @chartOptions={{MS_Q401.options}} @content={{MS_Q401.data}} @theme={{theme}} />
-    <p class="large">
-      We asked this question for ember.js, ember-cli, and ember-data. However, we chose not to include the results here for ember-cli as the data suggested similar trends between the responses for ember.js and ember-cli. During the course of the survey, Ember 3.8 became the latest stable release of the framework. Despite the nature of the changes being released for the Octane edition of Ember, 28% of developers reported working with Ember 3.7, and 12.5% reported working with 3.8 (only released a few weeks ago). Ember 1.13 usage continues to drop, and this year only 4% of developers report working with a 1.13 app.
-    </p>
+{{#each model as |surveySection|}}
+  <div class="survey-wrapper survey-border-top">
+    <div class="survey-body survey-container">
+      <a href="#{{surveySection.questionId}}" id={{surveySection.questionId}} class="survey-h2">
+        {{surveySection.title}}
+      </a>
+      <HighCharts @chartOptions={{get this (concat surveySection.questionId ".options")}} @content={{get this (concat surveySection.questionId ".data")}} @theme={{theme}} />
+      <p class="large">
+        {{surveySection.content}}
+      </p>
+    </div>
   </div>
-</div>
+{{/each}}
 
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
@@ -98,7 +100,7 @@
     </a>
     <HighCharts @chartOptions={{MS_Q402.options}} @content={{MS_Q402.data}} @theme={{theme}} />
     <p class="large">
-      TODO 
+      TODO
       {{!-- Ember Data adoption follows a similar curve to Ember, with the majority of respondents on 3.0 or 2.18. Older Ember Data usage also continues to drop, with respondents on 1.13 at 7% (down from 10% last year) and on pre-1.13 at 4% (down from
       7% last year). --}}
     </p>
@@ -124,7 +126,7 @@
     </a>
     <HighCharts @chartOptions={{MS_Q103.options}} @content={{MS_Q103.data}} @theme={{theme}} />
     <p class="large">
-      We added more options this year, as there are more ways than ever before to keep up with all things Ember. 
+      We added more options this year, as there are more ways than ever before to keep up with all things Ember.
       We'll be interested to see what directions the trends go in the coming years!
     </p>
   </div>
@@ -137,7 +139,7 @@
     </a>
     <HighCharts @chartOptions={{stackSkillsChart.options}} @content={{stackSkillsChart.data}} @theme={{theme}} />
     <p class="large">
-      Accessibility has very clearly been self-identified as "the final frontieer" for Ember developers! 
+      Accessibility has very clearly been self-identified as "the final frontieer" for Ember developers!
       Our community has proven over time that shared solutions work well, and this area is a great opportunity to provide accessible applications to <em>everyone</em> who uses an Ember app- which, these days, includes websites to pay your utilities, do your banking, and more!
     </p>
   </div>
@@ -234,7 +236,7 @@
     </a>
     <HighCharts @chartOptions={{SS_Q302.options}} @content={{SS_Q302.data}} @theme={{theme}} />
     <p class="large">
-      We also asked "how many developers at your company are responsible for writing front-end code?" and saw that there were similar trends between the answers for these two questions. Ember developers are overwhelmingly front-end developers! 
+      We also asked "how many developers at your company are responsible for writing front-end code?" and saw that there were similar trends between the answers for these two questions. Ember developers are overwhelmingly front-end developers!
     </p>
   </div>
 </div>
@@ -475,13 +477,13 @@
     <HighCharts @chartOptions={{SS_Q501.options}} @content={{SS_Q501.data}} @theme={{theme}} />
     <p class="large">
       Each year we provide the opportunity for community members to provide demographic information in addition to details
-      about how the community interacts with the Ember project. 
+      about how the community interacts with the Ember project.
       The summary of locations participants call home, while largely the same for the past two years, saw a significant jump this year in developers in Europe!
     </p>
 
     <p class="large">
       The percentage of participants who identified as women this year was 7%, an increase of 3% from last year.
-      Improving the diversity of our community is important to many of us. 
+      Improving the diversity of our community is important to many of us.
       Programs in the community like <a href="http://emberwomen.com/">Women Helping Women</a>
       make a difference.
     </p>
@@ -495,7 +497,7 @@
     </a>
     <HighCharts @chartOptions={{MS_Q601.options}} @content={{MS_Q601.data}} @theme={{theme}} />
     <p class="large">
-      We wanted to know if our community was as well-represented in other popular surveys as they were in maintstream surveys that were published in 2018. The data suggests that the Ember community is not well-represented in other surveys (only 39% of respondents also participated in the most popular of the other surveys). We believe this is due to specific outreach methods we use to ensure a wide-range of participation. We think that this data could be useful to other tech survey writers, and we will attempt to share our outreach methods, in order to help them obtain a more accurate sampling of the Ember community at large. 
+      We wanted to know if our community was as well-represented in other popular surveys as they were in maintstream surveys that were published in 2018. The data suggests that the Ember community is not well-represented in other surveys (only 39% of respondents also participated in the most popular of the other surveys). We believe this is due to specific outreach methods we use to ensure a wide-range of participation. We think that this data could be useful to other tech survey writers, and we will attempt to share our outreach methods, in order to help them obtain a more accurate sampling of the Ember community at large.
     </p>
   </div>
 </div>
@@ -566,14 +568,14 @@
 
     <p class="large">
       This is the fifth year of the Ember Community Survey. To see results for previous years, you can visit the
-      <a href="https://www.emberjs.com/ember-community-survey-2018/">2018</a>, 
-      <a href="https://www.emberjs.com/ember-community-survey-2017/">2017</a>, 
+      <a href="https://www.emberjs.com/ember-community-survey-2018/">2018</a>,
+      <a href="https://www.emberjs.com/ember-community-survey-2017/">2017</a>,
       <a href="https://www.emberjs.com/ember-community-survey-2016/">2016</a>
       and <a href="https://www.201-created.com/ember-community-survey-2015/">2015</a> survey results pages.
     </p>
 
     <p class="large">
-      If you have any questions about this survey, the data, the methods used, or any other feedback, please email us at 
+      If you have any questions about this survey, the data, the methods used, or any other feedback, please email us at
       <a href="survey@emberjs.com">survey@emberjs.com</a>.
     </p>
   </div>
