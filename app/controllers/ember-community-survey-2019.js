@@ -1,3 +1,13 @@
+// DONE: Merging / Updating Browser Questions
+// DONE: Remove Question IDs from Title
+// DONE Removing old graphs
+// ~DONE: Updating Order to Match 2018
+// ~SOME: Adding prose, especially for FFS: Discord + Gmail
+// Adding pattern textures in highcharts
+
+
+
+
 import Controller from '@ember/controller';
 
 // 2018 Color Palette
@@ -406,7 +416,8 @@ const browserRequirements = {
     name: '2019',
     color: color2019,
     data: [ 92.7, 54.8, 25.4, 2.5 ]
-  }]
+  }
+]
 }
 
 // Data Updated
@@ -420,23 +431,6 @@ const recommendingEmber = {
     },
   },
   data: [
-// Remove
-    {
-    name: '2018',
-    color: color2018,
-    data: [
-        [1, 25],
-        [2, 14],
-        [3, 22],
-        [4, 17],
-        [5, 42],
-        [6, 58],
-        [7, 144],
-        [8, 307],
-        [9, 195],
-        [10, 445]
-    ]
-  },
   {
     name: '2019',
     color: color2019,
@@ -1921,7 +1915,7 @@ const MS_Q307 = {
 //------------------------------------------------
 
 const MS_Q401 = {
-  options: { chart: { type: 'column' },
+  options: { chart: { type: 'areaspline' },
     title: { text: 'Q4.01: Which version(s) of Ember are in use in your apps?' },
     subtitle: { text: '' },
     tooltip: {pointFormat: '{point.y:.2f}%'},
@@ -1932,8 +1926,8 @@ const MS_Q401 = {
     {name: '2016', color: color2016, data: [
     {name: 'Pre 1.13', y:32},
     {name: '1.13', y:36},
-    // {name: '2.0', y:8},
-    // {name: '2.1', y:6},
+    {name: '2.0', y:8},
+    {name: '2.1', y:6},
     {name: '2.2', y:12},
     {name: '2.3', y:27},
     {name: '2.4 LTS', y:47},
@@ -1954,18 +1948,18 @@ const MS_Q401 = {
     // {name: '3.0', y:0}
     ]},
     {name: '2017', color: color2017, data: [
-    // {name: 'Pre 1.13', y:9.46},
+    {name: 'Pre 1.13', y:9.46},
     {name: '1.13', y:14.45},
-    // {name: '2.0', y:2.97},
-    // {name: '2.1', y:2.1},
-    // {name: '2.2', y:2.02},
-    // {name: '2.3', y:4.48},
-    // {name: '2.4 LTS', y:11.29},
-    // {name: '2.5', y:4.35},
-    // {name: '2.6', y:4.48},
-    // {name: '2.7', y:5.8},
+    {name: '2.0', y:2.97},
+    {name: '2.1', y:2.1},
+    {name: '2.2', y:2.02},
+    {name: '2.3', y:4.48},
+    {name: '2.4 LTS', y:11.29},
+    {name: '2.5', y:4.35},
+    {name: '2.6', y:4.48},
+    {name: '2.7', y:5.8},
     {name: '2.8 LTS', y:21.2},
-    // {name: '2.9', y:10.09},
+    {name: '2.9', y:10.09},
     {name: '2.10', y:21.6},
     {name: '2.11', y:40.88},
     {name: '2.12', y:19.31},
@@ -1980,47 +1974,59 @@ const MS_Q401 = {
     // {name: '3.0', y:0}
     ]},
     {name: '2018', color: color2018, data: [
-    // {name: 'Pre 1.13', y:5},
-//    {name: '1.13', y:7.8},
-    // {name: '2.0', y:0},
-    // {name: '2.1', y:0},
-    // {name: '2.2', y:0},
-    // {name: '2.3', y:0},
-    // {name: '2.4 LTS', y:0},
-    // {name: '2.5', y:0},
-    // {name: '2.6', y:0},
-    // {name: '2.7', y:1.4},
-    // {name: '2.8 LTS', y:7},
-    // {name: '2.9', y:2},
-    // {name: '2.10', y:2.7},
-    // {name: '2.11', y:2.7},
-    // {name: '2.12', y:11.4},
-    // {name: '2.13', y:7},
-    // {name: '2.14', y:8},
-    // {name: '2.15', y:6.6},
+    {name: 'Pre 1.13', y:5},
+   {name: '1.13', y:7.8},
+    {name: '2.0', y:0},
+    {name: '2.1', y:0},
+    {name: '2.2', y:0},
+    {name: '2.3', y:0},
+    {name: '2.4 LTS', y:0},
+    {name: '2.5', y:0},
+    {name: '2.6', y:0},
+    {name: '2.7', y:1.4},
+    {name: '2.8 LTS', y:7},
+    {name: '2.9', y:2},
+    {name: '2.10', y:2.7},
+    {name: '2.11', y:2.7},
+    {name: '2.12', y:11.4},
+    {name: '2.13', y:7},
+    {name: '2.14', y:8},
+    {name: '2.15', y:6.6},
     {name: '2.16', y:23.5},
-//    {name: '2.17', y:9.3},
+   {name: '2.17', y:9.3},
     {name: '2.18', y:43.2},
     {name: '3.0', y:27.8}
     ]},
     {name: '2019', color: color2019, data: [
-      // {name: '1.13', y: (100/1232)*79},
-      // {name: '2.0-2.6', y: (100/1232)*48},
-      // {name: '2.7-2.13', y: (100/1232)*102},
-      // {name: '2.14', y: (100/1232)*48},
-      // {name: '2.15', y: (100/1232)*30},
-      // {name: '2.16', y: (100/1232)*57},
-      // {name: '2.17', y: (100/1232)*36},
+      {name: '1.13', y: (100/1232)*79},
+      {name: '2.0', y:0},
+      {name: '2.1', y:0},
+      {name: '2.2', y:0},
+      {name: '2.3', y:0},
+      {name: '2.4 LTS', y: (100/1232)*48},
+      {name: '2.5', y:1},
+      {name: '2.6', y:0},
+      {name: '2.7', y:1},
+      {name: '2.8 LTS', y: (100/1232)*102},
+      {name: '2.9', y:2},
+      {name: '2.10', y:1},
+      {name: '2.11', y:1},
+      {name: '2.12', y:2},
+      {name: '2.13', y:2},
+      {name: '2.14', y: (100/1232)*48},
+      {name: '2.15', y: (100/1232)*30},
+      {name: '2.16', y: (100/1232)*57},
+      {name: '2.17', y: (100/1232)*36},
       {name: '2.18', y: (100/1232)*282},
-      // {name: '3.0', y: (100/1232)*80},
-      // {name: '3.1', y: (100/1232)*111},
-      // {name: '3.2', y: (100/1232)*75},
-      // {name: '3.3', y: (100/1232)*80},
-      // {name: '3.4', y: (100/1232)*289},
+      {name: '3.0', y: (100/1232)*80},
+      {name: '3.1', y: (100/1232)*111},
+      {name: '3.2', y: (100/1232)*75},
+      {name: '3.3', y: (100/1232)*80},
+      {name: '3.4', y: (100/1232)*289},
       {name: '3.5', y: (100/1232)*200},
       {name: '3.6', y: (100/1232)*179},
       {name: '3.7', y: (100/1232)*356},
-      {name: '3.8', y: (100/1232)*214},
+      {name: '3.8', y: (100/1232)*214}
       // {name: 'Beta', y: (100/1232)*13},
       // {name: 'Canary (master)', y: (100/1232)*14},
       // {name: 'Custom fork', y: (100/1232)*4},
@@ -2035,7 +2041,7 @@ const MS_Q401 = {
 //------------------------------------------------
 
 const MS_Q402 = {
-  options: { chart: { type: 'column' },
+  options: { chart: { type: 'areaspline' },
     title: { text: 'Q4.02: If you use Ember Data, which version(s) are used in your apps?' },
     subtitle: { text: '' },
     tooltip: {pointFormat: '{point.y:.2f}%'},
@@ -2045,60 +2051,74 @@ const MS_Q402 = {
   data: [
     {name: '2016', color: color2016, data:[
       {y: 27, name: '1.13'},
-      // {y: 6, name: '2.0'},
-      // {y: 4, name: '2.1'},
-      // {y: 8, name: '2.2'},
+      {y: 6, name: '2.0'},
+      {y: 4, name: '2.1'},
+      {y: 8, name: '2.2'},
       {y: 21, name: '2.3'},
       {y: 42, name: '2.4'}
     ]},
     {name: '2017', color: color2017, data: [
-      // {y: 9, name: '1.13'},
-      // {y: 2.15, name: '2.0'},
-      // {y: 2.1, name: '2.1'},
-      // {y: 1.5, name: '2.2'},
-      // {y: 2.8, name: '2.3'},
-      // {y: 7, name: '2.4'},
-      // {y: 3, name: '2.5'},
-      // {y: 4, name: '2.6'},
-      // {y: 4, name: '2.7'},
+      {y: 9, name: '1.13'},
+      {y: 2.15, name: '2.0'},
+      {y: 2.1, name: '2.1'},
+      {y: 1.5, name: '2.2'},
+      {y: 2.8, name: '2.3'},
+      {y: 7, name: '2.4'},
+      {y: 3, name: '2.5'},
+      {y: 4, name: '2.6'},
+      {y: 4, name: '2.7'},
       {y: 13.8, name: '2.8'},
-      // {y: 7, name: '2.9'},
+      {y: 7, name: '2.9'},
       {y: 21.6, name: '2.10'},
       {y: 34.9, name: '2.11'},
       {y: 17, name: '2.12'}
     ]},
     {name: '2018', color: color2018, data: [
-      // {y: 5.9, name: '2.0-2.6'},
-      // {y: 1, name: '2.7'},
-      // {y: 5.2, name: '2.8'},
-      // {y: 2, name: '2.9'},
-      // {y: 2.3, name: '2.10'},
-      // {y: 2.5, name: '2.11'},
+      {y: 5.9, name: '2.4'},
+      {name: '2.5', y:0},
+      {name: '2.6', y:0},
+      {y: 1, name: '2.7'},
+      {y: 5.2, name: '2.8'},
+      {y: 2, name: '2.9'},
+      {y: 2.3, name: '2.10'},
+      {y: 2.5, name: '2.11'},
       {y: 12.5, name: '2.12'},
-      // {y: 6.2, name: '2.13'},
-      // {y: 6.2, name: '2.14'},
-      // {y: 0, name: '2.15'},
+      {y: 6.2, name: '2.13'},
+      {y: 6.2, name: '2.14'},
+      {y: 0, name: '2.15'},
       {y: 17.2, name: '2.16'},
-      // {y: 6.8, name: '2.17'},
+      {y: 6.8, name: '2.17'},
       {y: 35.8, name: '2.18'},
       {y: 21.5, name: '3.0'},
     ]},
     {name: '2019', color: color2019, data: [
-      // {name: '1.13', y: (100/1232)*50},
-      // {name: '2.0-2.6', y: (100/1232)*40},
-      // {name: '2.7-2.13', y: (100/1232)*84},
-      // {name: '2.14', y: (100/1232)*46},
-      // {name: '2.15', y: (100/1232)*19},
-      // {name: '2.16', y: (100/1232)*49},
-      // {name: '2.17', y: (100/1232)*33},
+      {name: '1.13', y: (100/1232)*50},
+      {name: '2.0', y:0},
+      {name: '2.1', y:0},
+      {name: '2.2', y:0},
+      {name: '2.3', y:0},
+      {name: '2.4', y: (100/1232)*40},
+      {name: '2.5', y:0},
+      {name: '2.6', y:0},
+      {name: '2.7', y:0},
+      {name: '2.8', y: (100/1232)*84},
+      {name: '2.9', y:2},
+      {name: '2.10', y:1},
+      {name: '2.11', y:1},
+      {name: '2.12', y:2},
+      {name: '2.13', y:2},
+      {name: '2.14', y: (100/1232)*46},
+      {name: '2.15', y: (100/1232)*19},
+      {name: '2.16', y: (100/1232)*49},
+      {name: '2.17', y: (100/1232)*33},
       {name: '2.18', y: (100/1232)*193},
-      // {name: '3.0', y: (100/1232)*61},
-      // {name: '3.1', y: (100/1232)*82},
-      // {name: '3.2', y: (100/1232)*52},
-      // {name: '3.3', y: (100/1232)*70},
+      {name: '3.0', y: (100/1232)*61},
+      {name: '3.1', y: (100/1232)*82},
+      {name: '3.2', y: (100/1232)*52},
+      {name: '3.3', y: (100/1232)*70},
       {name: '3.4', y: (100/1232)*253},
       {name: '3.5', y: (100/1232)*156},
-      // {name: '3.6', y: (100/1232)*121},
+      {name: '3.6', y: (100/1232)*121},
       {name: '3.7', y: (100/1232)*260},
       {name: '3.8', y: (100/1232)*154},
       // {name: 'Beta', y: (100/1232)*7},
@@ -2407,20 +2427,32 @@ const MS_Q414 = {
     title: { text: 'Q4.14: What browser versions do your applications target?' },
     subtitle: { text: '' },
     tooltip: {pointFormat: '{point.y:.2f}%'},
-    xAxis: {   type: 'category',  },
+    xAxis: {         categories: [
+            'Modern browsers',
+            'Mobile browsers',
+            'IE 11',
+            'IE 10',
+          ] },
     yAxis: { title: { text: 'Percent' } },
   },
   data: [
 
-    {name: '2019', color: color2019, data: [
-      {name: 'Mobile (Android Chrome/iOS Safari/UC Browser/etc.)', y: (100/1232)*627},
-      {name: 'Modern (last 2 vers. Chrome/Firefox/Edge/Safari/etc.)', y: (100/1232)*1161},
-      {name: 'Legacy Chrome/Firefox/Safari/etc.', y: (100/1232)*191},
-      {name: 'IE 11', y: (100/1232)*517},
-      {name: 'Other', y: (100/1232)*19},
-      {name: 'IE 10', y: (100/1232)*62}]
-
-
+    {
+      name: '2016',
+      color: color2016,
+      data: [ 93.6, 49.0, 39.6, 27.7, ]
+    }, {
+      name: '2017',
+      color: color2017,
+      data: [ 94.26, 44.2, 38.5, 19.2 ],
+    }, {
+      name: '2018',
+      color: color2018,
+      data: [ 96.5, 52, 45.8, 10.1 ]
+    }, {
+      name: '2019',
+      color: color2019,
+      data: [ 92.7, 54.8, 25.4, 2.5 ]
     }
 ]}
 
@@ -2439,11 +2471,11 @@ const MS_Q415 = {
   data: [
 
     {name: '2019', color: color2019, data: [
-      {name: ' (Android Chrome/iOS Safari/UC Browser/etc.)', y: (100/1232)*676},
-      {name: 'Modern (last 2 vers. Chrome/Firefox/Edge/Safari/etc.)', y: (100/1232)*1143},
-      {name: 'Legacy Chrome/Firefox/Safari/etc.', y: (100/1232)*168},
+      {name: 'Modern browsers', y: (100/1232)*1143},
+      {name: 'Mobile browsers', y: (100/1232)*676},
+      // {name: 'Legacy Chrome/Firefox/Safari/etc.', y: (100/1232)*168},
       {name: 'IE 11', y: (100/1232)*313},
-      {name: 'Other', y: (100/1232)*17},
+      // {name: 'Other', y: (100/1232)*17},
       {name: 'IE 10', y: (100/1232)*32}]}
 ]}
 
@@ -2458,13 +2490,13 @@ const MS_Q416 = {
     tooltip: {pointFormat: '{point.y:.2f}%'},
     xAxis: {
           categories: [
-            'Prototypes only',
-            'An app that is used by tens of users',
-            'An app that is used by hundreds of users',
-            'An app that is used by thousands of users',
-            'An app that is used by tens of thousands of users',
-            'An app that is used by hundreds of thousands of users',
-            'An app that is used by millions of users'
+            'None / Prototypes only',
+            'Tens',
+            'Hundreds',
+            'Thousands',
+            'Tens of thousands',
+            'Hundreds of thousands',
+            'Millions'
           ]
     },
     yAxis: { title: { text: 'Percent' } },
@@ -2478,13 +2510,13 @@ const MS_Q416 = {
     },
 
     {name: '2019', color: color2019, data: [
-      {name: 'Prototypes only', y: (100/1232)*92},
-      {name: 'An app that is used by tens of users', y: (100/1232)*242},
-      {name: 'An app that is used by hundreds of users', y: (100/1232)*405},
-      {name: 'An app that is used by thousands of users', y: (100/1232)*400},
-      {name: 'An app that is used by tens of thousands of users', y: (100/1232)*289},
-      {name: 'An app that is used by hundreds of thousands of users', y: (100/1232)*170},
-      {name: 'An app that is used by millions of users', y: (100/1232)*117}]}
+      {name: 'None / Prototypes only', y: (100/1232)*92},
+      {name: 'Tens', y: (100/1232)*242},
+      {name: 'Hundreds', y: (100/1232)*405},
+      {name: 'Thousands', y: (100/1232)*400},
+      {name: 'Tens of thousands', y: (100/1232)*289},
+      {name: 'Hundreds of thousands', y: (100/1232)*170},
+      {name: 'Millions', y: (100/1232)*117}]}
 ]}
 
 
