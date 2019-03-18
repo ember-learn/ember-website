@@ -220,3 +220,21 @@ a.survey-h2:active:after {
   background-color: $white;
   font-weight: bold;
 }
+
+.survey-wrapper {
+  width: 100%;
+  @media print {
+    page-break-before: always !important;
+    break-before: always;
+  }
+}
+
+text.highcharts-title {
+    display: none;
+}
+
+footer {
+  @media print {
+    display: none;
+  }
+}
