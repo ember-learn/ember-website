@@ -3,10 +3,8 @@
     <h1 class="survey-h1">
       <img src="/images/survey/logo2019.png" alt="Ember Community Survey 2019">
     </h1>
-    <p class="survey-tagline">
-      A project to learn who is using Ember, and how.
-    </p>
 
+    <h3>With over 1200 responses, here are the 2019 survey results!</h3>
   </div>
 </div>
 
@@ -27,7 +25,7 @@
     </p>
     <p class="large">
       We did not observe a great deal of variety in the written responses that corresponded to values of five or less.
-      However, we were thrilled to see the opposite effect in the upper ranges -- that is, <b>community members simply have a lot of different reasons to recommend Ember.js</b> to a friend or colleague!
+      However, we were thrilled to see the opposite effect in the upper ranges -- that is, <b>community members simply have a lot of different reasons to recommend Ember</b> to a friend or colleague!
 
     </p>
     <p class="large">
@@ -76,25 +74,11 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#MS_Q401" id="MS_Q401" class="survey-h2">
-      Which version(s) of Ember are in use in your apps?
+      Which version(s) of Ember are in used in your apps?
     </a>
     <HighCharts @chartOptions={{MS_Q401.options}} @content={{MS_Q401.data}} @theme={{theme}} />
     <p class="large">
-      We asked this question for ember.js, ember-cli, and ember-data. However, we chose not to include the results here for ember-cli as the data suggested similar trends between the responses for ember.js and ember-cli. During the course of the survey, Ember 3.8 became the latest stable release of the framework. Despite the nature of the changes being released for the Octane edition of Ember, 28% of developers reported working with Ember 3.7, and 12.5% reported working with 3.8 (only released a few weeks ago). Ember 1.13 usage continues to drop, and this year only 4% of developers report working with a 1.13 app.
-    </p>
-  </div>
-</div>
-
-<div class="survey-wrapper survey-border-top">
-  <div class="survey-body survey-container">
-    <a href="#MS_Q402" id="MS_Q402" class="survey-h2">
-      If you use Ember Data, which version(s) are used in your apps?
-    </a>
-    <HighCharts @chartOptions={{MS_Q402.options}} @content={{MS_Q402.data}} @theme={{theme}} />
-    <p class="large">
-      TODO 
-      {{!-- Ember Data adoption follows a similar curve to Ember, with the majority of respondents on 3.0 or 2.18. Older Ember Data usage also continues to drop, with respondents on 1.13 at 7% (down from 10% last year) and on pre-1.13 at 4% (down from
-      7% last year). --}}
+      During the course of the survey, Ember 3.8 became the latest stable release of the framework. 28% of developers reported working with Ember 3.7, and 12.5% reported working with 3.8 (only released a few weeks ago). Some legacy 2.x versions of Ember rose in usage as a percentage of participants, but the 1.13 number dropped indicating a continued upgrade process for developers on legacy versions of Ember.
     </p>
   </div>
 </div>
@@ -144,7 +128,7 @@
     </a>
     <HighCharts @chartOptions={{MS_Q111.options}} @content={{MS_Q111.data}} @theme={{theme}} />
     <p class="large">
-      This is placeholder text for chart MS_Q111.
+      In a shocking result VS Code is the first ever editor to break 50% of the Ember community in survey results. At roughly 57% of participants VS Code is now clearly the dominant editor to consider when creating tooling for Ember.
     </p>
   </div>
 </div>
@@ -212,7 +196,7 @@
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
     <a href="#SS_Q205" id="SS_Q205" class="survey-h2">
-      When taking your most recent job your pre-existing knowledge of Ember.js was:
+      When taking your most recent job your pre-existing knowledge of Ember was:
     </a>
     <HighCharts @chartOptions={{SS_Q205.options}} @content={{SS_Q205.data}} @theme={{theme}} />
     <p class="large">
@@ -228,7 +212,7 @@
     </a>
     <HighCharts @chartOptions={{SS_Q302.options}} @content={{SS_Q302.data}} @theme={{theme}} />
     <p class="large">
-      We also asked "how many developers at your company are responsible for writing front-end code?" and saw that there were similar trends between the answers for these two questions. Ember developers are overwhelmingly front-end developers! 
+      A notable change in 2019 is Ember's growth in organizations with 1-10 developers using the framework. This increase could be explained by a corresponding decrease in developers with 0 engineers responsible for writing Ember code.
     </p>
   </div>
 </div>
@@ -501,49 +485,33 @@
     </a>
     <p class="large">
       As the last question of the survey we asked participants:
-      "What would it take for you to feel great about using and recommending Ember for new projects?" Using text
-      similarity analysis, we identified the most commonly mentioned topics. Here they are, in descending order.
+      "What would it take for you to feel great about using and recommending Ember for new projects?" 1229 participants respond to the question. Here are a few responses:
     </p>
 
     <div class="cluster">
-      <p>Topic Title</p>
       <blockquote>
-        ...
+        I already feel pretty great about using and recommending Ember for new projects. The Ember community is awesome, and while I don't contribute, I'm glad that Ember feels like it's driven by community consensus, not just 1 company or voice. I also think it's great that the Core team has recognized that marketing the framework is important and taken initiatives around redesigning the emberjs.com and doing larger named releases like Octane. I think the more interest and differing opinions that are brought in, the stronger we'll be as a community.
       </blockquote>
     </div>
 
     <div class="cluster">
-      <p>Topic Title</p>
       <blockquote>
-        ...
-      </blockquote>
-
-      <br>
-
-      <blockquote>
-        ...
+        The only negative thing I have to say about Ember is it could be more lightweight. Shipping performant mobile apps should be easier. From my experience if we could have code splitting and tree shaking of Ember and of app code, that would help a lot. Other than that, Octane is going to be a big leap forward, can't wait for it to ship!
       </blockquote>
     </div>
 
     <div class="cluster">
-      <p>Topic Title</p>
       <blockquote>
-        ...
+        Ember octane is a huge step in the right direction. The biggest hang ups for non-Ember people seem to be custom Ember syntax (Ember object, prototypal object syntax) and Ember Data is packaged with Ember. I think svelte builds would be awesome. 
       </blockquote>
     </div>
 
     <div class="cluster">
-      <p>Topic Title</p>
       <blockquote>
-        ...
-      </blockquote>
-
-      <br>
-
-      <blockquote>
-        ...
+        It would have to offer me something that React does not. I don't think I benefit much from the "magic" features of it because in my job, I spend very little time generating new applications, or new files even. I spend a lot of time debugging and modifying files. In these use cases the magic and implicit nature of Ember hampers my ability to understand the application. It also hampers tooling. I want my application to be easier to statically analyze so I can refactor with confidence, or I can hover over a component reference in a template and jump to its definition. I know React can do this, but I can't seem to get Ember to do it. I want to be able to save a file and have my test runner automatically determine the which tests need to run and run only those tests without having to recompile the entire application so every test can run. I know Jest can do this but QUnit cannot.
       </blockquote>
     </div>
+
   </div>
 </div>
 
