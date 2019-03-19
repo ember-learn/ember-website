@@ -141,20 +141,32 @@
 
 .survey-h2,
 a.survey-h2:link,
-a.survey-h2:visited {
+a.survey-h2:visited,
+.survey-h3,
+a.survey-h3:link,
+a.survey-h3:visited {
   position: relative;
   color: #252525;
   // font-family: 'Maven Pro';
   font-weight: bold;
   line-height: 1.2;
-  font-size: 1.5em;
   @media screen and (min-width: 768px) {
     line-height: 2;
   }
 }
 
+.survey-h2 {
+  font-size: 1.5em;
+}
+
+.survey-h3 {
+  font-size: 1.2em;
+}
+
 a.survey-h2:hover:after,
-a.survey-h2:active:after {
+a.survey-h2:active:after,
+a.survey-h3:hover:after,
+a.survey-h3:active:after {
   // stylelint-disable-next-line font-family-no-missing-generic-family-keyword
   font-family: 'fontello';
   content: '\e802';
@@ -169,6 +181,9 @@ a.survey-h2:active:after {
 @media screen and (max-width: 460px) {
   .survey-h2 {
     font-size: 22px;
+  }
+  .survey-h3 {
+    font-size: 18px;
   }
 }
 

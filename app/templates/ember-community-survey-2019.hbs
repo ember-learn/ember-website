@@ -283,24 +283,24 @@
 
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
-    <a href="#MS_Q409" id="MS_Q409" class="survey-h2">
-      How old are your Ember applications?
-    </a>
-    <HighCharts @chartOptions={{MS_Q409.options}} @content={{MS_Q409.data}} @theme={{theme}} />
+    <div class="survey-row">
+      <div class="survey-column half">
+        <a href="#MS_Q409" id="MS_Q409" class="survey-h3">
+          How old are your Ember applications?
+        </a>
+        <HighCharts @chartOptions={{MS_Q409.options}} @content={{MS_Q409.data}} @theme={{theme}} />
+      </div>
+      <div class="survey-column half">
+        <a href="#SS_Q410" id="SS_Q410" class="survey-h3">
+          How many Ember apps do you work on?
+        </a>
+        <HighCharts @chartOptions={{SS_Q410.options}} @content={{SS_Q410.data}} @theme={{theme}} />
+      </div>
+    </div>
     <p>
-      Ember definitely is a way to opt out of re-writing your app every few months! Ember apps seem to live for a long time. 
-    </p>
-  </div>
-</div>
-
-<div class="survey-wrapper survey-border-top">
-  <div class="survey-body survey-container">
-    <a href="#SS_Q410" id="SS_Q410" class="survey-h2">
-      How many Ember apps do you work on?
-    </a>
-    <HighCharts @chartOptions={{SS_Q410.options}} @content={{SS_Q410.data}} @theme={{theme}} />
-    <p>
-      The data suggests that if you build with Ember once, you'll build with it again! Most of us seem to work on more than just one Ember app.
+      Ember developers work on codebases with a wide range of ages, and
+      most developers work on several applications.
+      The data suggests that if you build with Ember once, you'll build with it again!
     </p>
   </div>
 </div>
