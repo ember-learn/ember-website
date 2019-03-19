@@ -141,7 +141,10 @@ a.survey-h2:visited {
   // font-family: 'Maven Pro';
   font-weight: bold;
   line-height: 1.2;
-  font-size: 28px;
+  font-size: 1.5em;
+  @media screen and (min-width: 768px) {
+    line-height: 2;
+  }
 }
 
 a.survey-h2:hover:after,
@@ -237,4 +240,8 @@ footer {
   @media print {
     display: none;
   }
+}
+.survey-intro {
+  margin: 1em auto 0 auto;
+  font-size: 1.25em;
 }
