@@ -2,5 +2,7 @@
 
 module.exports = {
   extends: 'recommended',
-  rules: {},
+  rules: {
+    'no-html-comments': false
+  },
 };

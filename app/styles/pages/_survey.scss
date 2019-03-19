@@ -7,19 +7,16 @@
 .survey-wrapper {
   padding: 40px 0;
   text-align: center;
-  background: $white;
-  color: #747474;
   padding-left: 10px;
   padding-right: 10px;
 
-  p {
-    line-height: 1.8;
-  }
+  // p {
+  //   line-height: 1.8;
+  // }
 
   p.large,
   p.quote {
-    line-height: 1.6;
-    font-size: 18px;
+    font-size: 1.25em;
     max-width: 38em;
     margin-left: auto;
     margin-right: auto;
@@ -40,6 +37,12 @@
     &:after {
       content: close-quote;
     }
+  }
+
+  width: 100%;
+  @media print {
+    page-break-before: always !important;
+    break-before: always;
   }
 }
 
@@ -138,17 +141,32 @@
 
 .survey-h2,
 a.survey-h2:link,
-a.survey-h2:visited {
+a.survey-h2:visited,
+.survey-h3,
+a.survey-h3:link,
+a.survey-h3:visited {
   position: relative;
   color: #252525;
   // font-family: 'Maven Pro';
   font-weight: bold;
   line-height: 1.2;
-  font-size: 28px;
+  @media screen and (min-width: 768px) {
+    line-height: 2;
+  }
+}
+
+.survey-h2 {
+  font-size: 1.5em;
+}
+
+.survey-h3 {
+  font-size: 1.2em;
 }
 
 a.survey-h2:hover:after,
-a.survey-h2:active:after {
+a.survey-h2:active:after,
+a.survey-h3:hover:after,
+a.survey-h3:active:after {
   // stylelint-disable-next-line font-family-no-missing-generic-family-keyword
   font-family: 'fontello';
   content: '\e802';
@@ -163,6 +181,9 @@ a.survey-h2:active:after {
 @media screen and (max-width: 460px) {
   .survey-h2 {
     font-size: 22px;
+  }
+  .survey-h3 {
+    font-size: 18px;
   }
 }
 
@@ -222,4 +243,18 @@ a.survey-h2:active:after {
 .nps-cell-header {
   background-color: $white;
   font-weight: bold;
+}
+
+text.highcharts-title {
+    display: none;
+}
+
+footer {
+  @media print {
+    display: none;
+  }
+}
+.survey-intro {
+  margin: 1em auto 0 auto;
+  font-size: 1.25em;
 }
