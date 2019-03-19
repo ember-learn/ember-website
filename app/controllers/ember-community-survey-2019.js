@@ -11,11 +11,15 @@
 import Controller from '@ember/controller';
 
 // 2018 Color Palette
-var emberOrange = '#f23818',
-    darkGrayColor = '#4b4b4b',
-    lightGrayColor = '#c0c0c0',
-    lighterGrayColor = '#dedede',
-    lightGreenColor = '#489a6e';
+// eslint-disable-next-line no-unused-vars
+const emberOrange = '#f23818';
+const darkGrayColor = '#4b4b4b';
+// eslint-disable-next-line no-unused-vars
+const lightGrayColor = '#c0c0c0';
+// eslint-disable-next-line no-unused-vars
+const lighterGrayColor = '#dedede';
+// eslint-disable-next-line no-unused-vars
+const lightGreenColor = '#489a6e';
 
 // Ember Branding Color Palette
 const emberColors = {

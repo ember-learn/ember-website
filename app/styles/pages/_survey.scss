@@ -38,6 +38,12 @@
       content: close-quote;
     }
   }
+
+  width: 100%;
+  @media print {
+    page-break-before: always !important;
+    break-before: always;
+  }
 }
 
 .survey-wrapper h2 {
@@ -222,14 +228,6 @@ a.survey-h2:active:after {
 .nps-cell-header {
   background-color: $white;
   font-weight: bold;
-}
-
-.survey-wrapper {
-  width: 100%;
-  @media print {
-    page-break-before: always !important;
-    break-before: always;
-  }
 }
 
 text.highcharts-title {
