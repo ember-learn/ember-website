@@ -2304,7 +2304,7 @@ const MS_Q409 = {
     title: { text: 'Q4.09: How old are your Ember applications?' },
     subtitle: { text: '' },
     tooltip: {pointFormat: '{point.y:.2f}%'},
-    xAxis: { type: 'category', },
+    xAxis: { type: 'category', labels: { autoRotation: false } },
     yAxis: { title: { text: 'Percent' } },
   },
   data: [
