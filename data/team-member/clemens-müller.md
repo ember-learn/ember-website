@@ -7,5 +7,5 @@ twitter: 'https://twitter.com/pangratz'
 image: cmueller.jpg
 added: 2016-04-15T09:01:00.000Z
 teams:
-  - data
+  - alumni
 ---
