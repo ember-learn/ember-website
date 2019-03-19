@@ -1,3 +1,5 @@
+import { sort } from '@ember/object/computed';
+
 // DONE: Merging / Updating Browser Questions
 // DONE: Remove Question IDs from Title
 // DONE Removing old graphs
@@ -1298,6 +1300,7 @@ const SS_Q305 = {
 // Q3.06: Does your business require applications to be internationalized?
 //------------------------------------------------
 
+// TODO: Pie Chart?
 const SS_Q306 = {
   options: { chart: { type: 'column' },
     title: { text: 'Q3.06: Does your business require applications to be internationalized?' },
@@ -2596,6 +2599,9 @@ const MS_Q601 = {
 
 //=============================================================================
 export default Controller.extend({
+  modelSorting: Object.freeze(['id']),
+  sortedModel: sort('model', 'modelSorting'),
+
   newReleaseAdoption,
   overallAdoption,
   emberDataAdoption,
