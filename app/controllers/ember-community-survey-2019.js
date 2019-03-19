@@ -1300,6 +1300,7 @@ const SS_Q305 = {
 // Q3.06: Does your business require applications to be internationalized?
 //------------------------------------------------
 
+// TODO: Pie Chart?
 const SS_Q306 = {
   options: { chart: { type: 'column' },
     title: { text: 'Q3.06: Does your business require applications to be internationalized?' },

@@ -82,7 +82,7 @@
 {{#each sortedModel as |surveySection|}}
   <div class="survey-wrapper survey-border-top">
     <div class="survey-body survey-container">
-      <a href="#{{surveySection.questionId}}" id={{surveySection.questionId}} class="survey-h2">
+      <a href="#{{surveySection.fragment}}" id={{surveySection.questionId}} class="survey-h2">
         {{surveySection.title}}
       </a>
       <HighCharts @chartOptions={{get this (concat surveySection.questionId ".options")}} @content={{get this (concat surveySection.questionId ".data")}} @theme={{theme}} />

@@ -4,4 +4,5 @@ export default DS.Model.extend({
   title: DS.attr(),
   questionId: DS.attr(),
   content: DS.attr(),
+  fragment: DS.attr(),
 });
