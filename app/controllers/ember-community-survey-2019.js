@@ -48,6 +48,7 @@ var color2016 = darkGrayColor;
 var color2017 = orangePalette.orangeDarkest;
 var color2018 = orangePalette.orange;
 var color2019 = emberColors.blue;
+// eslint-disable-next-line no-unused-vars
 var colorFutureYear = emberColors.yellow;
 
 
