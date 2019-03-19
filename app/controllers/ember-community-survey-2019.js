@@ -437,6 +437,7 @@ const recommendingEmber = {
   },
   data: [
   {
+    showInLegend: false,
     name: '2019',
     color: color2019,
     data: [
@@ -1313,7 +1314,7 @@ const SS_Q306 = {
   },
   data: [
 
-    {name: '2019', color: color2019, data: [
+    {showInLegend: false, name: '2019', color: color2019, data: [
       {name: 'Yes', y: (100/1232)*695},
       {name: 'No', y: (100/1232)*472},
       {name: 'I do not know', y: (100/1232)*46}]}
@@ -1406,7 +1407,7 @@ const SS_Q410 = {
   },
   data: [
 
-    {name: '2019', color: color2019, data: [
+    {showInLegend: false, name: '2019', color: color2019, data: [
       {name: '1', y: (100/1232)*354},
       {name: '2 - 5', y: (100/1232)*701},
       {name: '5 - 10', y: (100/1232)*100},
@@ -1667,7 +1668,7 @@ const MS_Q112 = {
   },
   data: [
 
-    {name: '2019', color: color2019, data: [
+    {showInLegend: false, name: '2019', color: color2019, data: [
       {name: 'Answering community questions', y: (100/1232)*194},
       {name: 'Attending meetups / conferences', y: (100/1232)*437},
       {name: 'Maintaining a library or addon', y: (100/1232)*327},
@@ -1873,7 +1874,7 @@ const MS_Q304 = {
   },
   data: [
 
-    {name: '2019', color: color2019, data: [
+    {showInLegend: false, name: '2019', color: color2019, data: [
       {name: 'Required by law to provide accessibility', y: (100/1232)*224},
       {name: 'Self-imposed requirement', y: (100/1232)*473},
       {name: 'No requirements', y: (100/1232)*462},
@@ -1894,7 +1895,7 @@ const MS_Q307 = {
   },
   data: [
 
-    {name: '2019', color: color2019, data: [
+    {showInLegend: false, name: '2019', color: color2019, data: [
       // {name: 'Agriculture', y: (100/1232)*33},
       {name: 'Advertising', y: (100/1232)*101},
       // {name: 'Arts & entertainment', y: (100/1232)*89},
@@ -2309,7 +2310,7 @@ const MS_Q409 = {
   },
   data: [
 
-    {name: '2019', color: color2019, data: [
+    {showInLegend: false, name: '2019', color: color2019, data: [
       {name: '< 6 months', y: (100/1232)*190},
       {name: '6 - 12 months', y: (100/1232)*209},
       {name: '1 - 2 years', y: (100/1232)*361},
@@ -2591,7 +2592,7 @@ const MS_Q601 = {
   },
   data: [
 
-    {name: '2019', color: color2019, data: [
+    {showInLegend: false, name: '2019', color: color2019, data: [
       {name: '2018 NPM JavaScript EcoSystem Survey', y: (100/1232)*261},
       {name: '2018 StackOverflow Developer Survey', y: (100/1232)*311},
       {name: 'GitLab 2018 Global Developer Survey', y: (100/1232)*45},
