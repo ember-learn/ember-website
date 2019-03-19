@@ -235,24 +235,25 @@
 
 <div class="survey-wrapper survey-border-top">
   <div class="survey-body survey-container">
-    <a href="#SS_Q405" id="SS_Q405" class="survey-h2">
-      What is the primary language of your server-side stack?
-    </a>
-    <HighCharts @chartOptions={{SS_Q405.options}} @content={{SS_Q405.data}} @theme={{theme}} />
+    <div class="survey-row">
+      <div class="survey-column half">
+        <a href="#SS_Q405" id="SS_Q405" class="survey-h3">
+          What is the primary language of your server-side stack?
+        </a>
+        <HighCharts @chartOptions={{SS_Q405.options}} @content={{SS_Q405.data}} @theme={{theme}} />
+      </div>
+      <div class="survey-column half">
+        <a href="#MS_Q406" id="MS_Q406" class="survey-h3">
+          Which of these server-side frameworks do you use?
+        </a>
+        <HighCharts @chartOptions={{MS_Q406.options}} @content={{MS_Q406.data}} @theme={{theme}} />
+      </div>
+    </div>
     <p>
-      This is placeholder text for chart SS_Q405.
-    </p>
-  </div>
-</div>
-
-<div class="survey-wrapper survey-border-top">
-  <div class="survey-body survey-container">
-    <a href="#MS_Q406" id="MS_Q406" class="survey-h2">
-      Which of these server-side frameworks do you use?
-    </a>
-    <HighCharts @chartOptions={{MS_Q406.options}} @content={{MS_Q406.data}} @theme={{theme}} />
-    <p>
-      This is placeholder text for chart MS_Q406.
+      Ruby continues to be the most popular pairing with an Ember codebase,
+      but there is a long tail of other languages used by the community for
+      server-side development. We suspect a change in methodology is
+      responsible for the rapid changes in the 2019 data.
     </p>
   </div>
 </div>

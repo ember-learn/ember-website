@@ -2184,15 +2184,17 @@ const MS_Q406 = {
     subtitle: { text: '' },
     tooltip: {pointFormat: '{point.y:.2f}%'},
     xAxis: { categories: [
-      'Rails (Ruby)',
-      'Express (JavaScript)',
-      'Phoenix (Elixir)',
-      'Spring (Java)',
-      'Django (Python)',
-      'MVC or ASP .NET Web API (.NET)',
+      'Rails',
+      'Express',
+      'Phoenix',
+      'Spring',
+      'Django',
+      'MVC/WebAPI',
       // 'None*',
       // 'Flask (Python)'
-    ] },
+    ],
+    labels: { autoRotation: false }
+    },
     yAxis: { title: { text: 'Percent' } },
   },
   data: [
@@ -2217,24 +2219,24 @@ const MS_Q406 = {
     },
     {name: '2019', color: color2019, data: [
 
-      {name: 'Rails (Ruby)', y: (100/1232)*435},
-      {name: 'Express (JavaScript)', y: (100/1232)*239},
+      {name: 'Rails', y: (100/1232)*435},
+      {name: 'Express', y: (100/1232)*239},
       // {name: 'Flask (Python)', y: (100/1232)*74},
       // {name: 'Hapi (JavaScript)', y: (100/1232)*26},
       // {name: 'Koa (JavaScript)', y: (100/1232)*34},
       // {name: 'Laravel (PHP)', y: (100/1232)*63},
       // {name: 'MVC (.NET)', y: (100/1232)*48},
-      {name: 'Phoenix (Elixir)', y: (100/1232)*133},
+      {name: 'Phoenix', y: (100/1232)*133},
       // {name: 'Play (Scala & Java)', y: (100/1232)*71},
       // {name: 'Sails.js (JavaScript)', y: (100/1232)*14},
       // {name: 'Sinatra (Ruby)', y: (100/1232)*37},
-      {name: 'Spring (Java)', y: (100/1232)*115},
+      {name: 'Spring', y: (100/1232)*115},
       // {name: 'Spring Boot (Java)', y: (100/1232)*92},
       // {name: 'Symfony (PHP)', y: (100/1232)*38},
       // {name: 'None (no server-side framework)', y: (100/1232)*61},
       // {name: 'Other', y: (100/1232)*150},
-      {name: 'Django (Python)', y: (100/1232)*93},
-      {name: 'MVC or ASP .NET Web API (.NET)', y: (100/1232)*97}]}
+      {name: 'Django', y: (100/1232)*93},
+      {name: 'MVC/WebAPI', y: (100/1232)*97}]}
 ]}
 
 
