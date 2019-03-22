@@ -7,5 +7,5 @@ twitter: 'https://twitter.com/hone02'
 image: tlee.png
 added: 2017-07-17T09:01:00.000Z
 teams:
-  - learning
+  - alumni
 ---
