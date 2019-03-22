@@ -6,9 +6,9 @@ import { get } from '@ember/object';
 import { scheduleOnce } from '@ember/runloop';
 
 const Router = EmberRouter.extend({
-  navbar: service(),
   location: config.locationType,
   rootURL: config.rootURL,
+  navbar: service(),
   metrics: service(),
   fastboot: service(),
 
