@@ -11,11 +11,12 @@ const Router = EmberRouter.extend({
   navbar: service(),
   metrics: service(),
   fastboot: service(),
+  router: service(),
 
   init() {
     this._super(...arguments);
 
-    this.on('routeDidChange', () => {
+    this.router.on('routeDidChange', () => {
       this.navbar.closePopupMenu();
       this._trackPage();
     })
