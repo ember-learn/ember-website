@@ -1,3 +1,14 @@
+## Where repos are
+You can find the current repositories here:
+- [Main website](https://github.com/ember-learn/ember-website)
+- [Blog](https://github.com/ember-learn/ember-blog)
+- [API Docs](https://github.com/ember-learn/ember-api-docs) 
+- [Deprecations](https://github.com/ember-learn/deprecation-app) 
+- [The Guides](https://github.com/ember-learn/guides-source)
+- Builds and Status Board are now part of the main website.
+
+## How to Add New Content
+
 ### Adding a showcase
 To add an app to the **Showcase** section on the `/learn` page run `ember g showcase name-of-showcase` and replace the placeholder fields with the details of the new item.
 
