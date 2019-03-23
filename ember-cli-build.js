@@ -1,6 +1,7 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const broccoliAssetRevDefaults = require('broccoli-asset-rev/lib/default-options');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
@@ -9,9 +10,9 @@ module.exports = function (defaults) {
       inline: true,
     },
     fingerprint: {
+      extensions: broccoliAssetRevDefaults.extensions.concat(['svg']),
       generateAssetMap: true,
       fingerprintAssetMap: true,
-      extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map', 'svg'],
       exclude: [
         'images/layers-2x.png',
         'images/layers.png',
