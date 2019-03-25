@@ -83,7 +83,7 @@
     }
 
     &__top {
-      padding: 1em;
+      padding: 1em 0;
       padding-bottom: 2em;
 
       h1 {
@@ -107,8 +107,12 @@
       line-height: 0.5;
       margin: 0;
       overflow: hidden;
-      padding-left: 1em;
+      padding: .7em;
       text-align: left;
+
+      svg {
+        fill: $white;
+      }
     }
 
     @media screen and (min-width: $screen-md) {
@@ -120,6 +124,8 @@
       }
 
       &__top {
+        padding: 1em;
+
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
 
