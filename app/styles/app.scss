@@ -26,6 +26,18 @@
 
 @import 'layout';
 
+// any dynamic sections of the site need to be hidden in percy to prevent false
+// positives in the diffs
+@media only percy {
+  .releases-canary code {
+    visibility: hidden;
+  }
+
+  .highcharts-wrapper {
+    visibility: hidden;
+  }
+}
+
 /* Deprecating these colors/variables */
 $blue-color: #3c64b6;
 $black-color: #252525;
