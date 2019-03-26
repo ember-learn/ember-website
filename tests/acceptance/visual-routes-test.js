@@ -11,7 +11,7 @@ module('Acceptance | visual regression', function (hooks) {
   // old ruby app. This is to allow us to compare what the new app looks like
   // vs the old app.
   const pages = [
-    { title: '/builds/', route: '/releases' },
+    { title: '/builds/', route: '/releases'/*, a11y: true */ },  /* set the a11y property of a page object to true to run the audit for this particular route */
     { title: '/builds/beta/', route: '/releases/beta' },
     { title: '/builds/canary/', route: '/releases/canary' },
     { title: '/builds/release/', route: '/releases/release' },
