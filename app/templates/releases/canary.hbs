@@ -1,11 +1,11 @@
-<h1 class="project-name">{{capitalize "canary"}} Channel</h1>
+<h2 class="project-name">{{capitalize "canary"}} Channel</h2>
 
 <p>Canary releases are generated from each commit to the master branch of Ember and Ember Data. These builds are not suitable for use in production, and may contain unstable features disabled behind a flag.</p>
 
 <div class="ember-cli-usage">
   {{#ember-cli-usage
   project=model.ember
-  channel=@channel}}
+  channel="canary"}}
     <pre>
       {{! template-lint-disable block-indentation }}
       <code># Install the latest Ember canary:
@@ -17,5 +17,5 @@ npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com{{model.canary
 <div class="ember-cli-usage">
   {{ember-cli-usage
   project=model.emberData
-  channel=@channel}}
+  channel="canary"}}
 </div>

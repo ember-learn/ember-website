@@ -1,9 +1,9 @@
 ---
-projectName: Ember Data
+name: Ember Data
 baseFileName: ember-data
-projectFilter:
+filter:
   - /ember-data\./
-projectRepo: emberjs/data
+repo: emberjs/data
 channel: canary
 debugFileName: .js
 ---

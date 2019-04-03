@@ -1,10 +1,10 @@
 ---
-projectName: Ember
+name: Ember
 baseFileName: ember
-projectFilter:
+filter:
   - /ember\./
   - /ember-template-compiler/
-projectRepo: emberjs/ember.js
+repo: emberjs/ember.js
 channel: canary
 debugFileName: .debug.js
 ignoreFiles: ember.js
