@@ -1,20 +1,23 @@
-{{#if @project.installWithEmberCLI}}
-  <h4 class="project-name">Using {{@project.projectName}} {{@channel}} builds with Ember CLI</h4>
-  <div>
+<h4 class="project-name">Using {{@project.name}} {{@channel}} builds with Ember CLI</h4>
+<div>
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
     <pre>
-      <code>{{html-safe (printf @project.installWithEmberCLI @project.lastRelease)}}</code>
+      <code>{{html-safe (printf @project.content @project.lastRelease)}}</code>
     </pre>
-    {{#if @project.lastReleaseChangelogUrl}}
-      <p>
-        Read the <a class="debug" href={{@project.lastReleaseChangelogUrl}}>changelog</a>
-        for {{@project.projectName}} {{@project.lastRelease}}.
-      </p>
-    {{else if @project.lastReleaseTestUrl}}
-      <p>
-        <a class="debug" href={{@project.lastReleaseTestUrl}} target="_blank" rel="noopener">Run the tests</a> for {{@project.projectName}} ||| {{@project.lastRelease}} in your browser.
-      </p>
-    {{else}}
-      <p></p>
-    {{/if}}
-  </div>
-{{/if}}
+  {{/if}}
+
+  {{#if @project.lastReleaseChangelogUrl}}
+    <p>
+      Read the <a class="debug" href={{@project.lastReleaseChangelogUrl}}>changelog</a>
+      for {{@project.name}} {{@project.lastRelease}}.
+    </p>
+  {{else if @project.lastReleaseTestUrl}}
+    <p>
+      <a class="debug" href={{@project.lastReleaseTestUrl}} target="_blank" rel="noopener">Run the tests</a> for {{@project.name}} ||| {{@project.lastRelease}} in your browser.
+    </p>
+  {{else}}
+    <p></p>
+  {{/if}}
+</div>
