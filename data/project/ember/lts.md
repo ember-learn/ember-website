@@ -5,12 +5,12 @@ filter:
   - /ember\./
   - /ember-template-compiler/
 repo: emberjs/ember.js
-initialVersion: 3.4.5
-initialReleaseDate: 2018-10-08
-lastRelease: 3.4.7
-futureVersion: 3.4.8
+initialVersion: 3.8.1
+initialReleaseDate: 2019-04-02
+lastRelease: 3.8.1
+futureVersion: 3.8.2
 channel: lts
-date: 2018-12-07
+date: 2018-04-02
 changelogPath: CHANGELOG.md
 debugFileName: .debug.js
 ignoreFiles:
