@@ -1,8 +1,8 @@
 <div class="tiny-beta-image"></div>
 <div class="beta-version">beta {{@version}}</div>
-{{#if @isCurrentBeta}}
+{{#if isCurrentBeta}}
   <div class="beta-current-version">(current beta)</div>
 {{/if}}
-{{#if @isFutureBeta}}
-  <div class="beta-current-version">({{format-date-time @nextDate "MMM Do"}})</div>
+{{#if isNextBeta}}
+  <div class="beta-current-version">({{format-date-time @project.nextDate "MMM Do"}})</div>
 {{/if}}

@@ -1,50 +1,34 @@
 <div class="release-progress clear">
   <div class="left">
     <div class="small-release-image" title={{@project.lastStableVersion}}></div>
-    <div class="release-version">{{@project.lastStableVersion}}</div>
-    <div class="release-date">Released {{format-date-time @project.lastStableDate "MMM Do"}}</div>
+    <div class="release-version">{{@project.initialVersion}}</div>
+    <div class="release-date">Released {{format-date-time @project.date "MMM Do"}}</div>
   </div>
   <div class="float-left-container">
     <div class="release-cycle-title">The path to {{@project.finalVersion}}...</div>
     {{project-listing/beta
         version=1
-        isCompleted=@project.beta1Completed
-        isCurrentBeta=@project.isBeta1
+        project=@project
     }}
     {{project-listing/beta
         version=2
-        isCompleted=@project.beta2Completed
-        isCurrentBeta=@project.isBeta2
-        isFutureBeta=@project.isBeta1
-        nextDate=@project.nextDate
+        project=@project
     }}
     {{project-listing/beta
         version=3
-        isCompleted=@project.beta3Completed
-        isCurrentBeta=@project.isBeta3
-        isFutureBeta=@project.isBeta2
-        nextDate=@project.nextDate
+        project=@project
     }}
     {{project-listing/beta
         version=4
-        isCompleted=@project.beta4Completed
-        isCurrentBeta=@project.isBeta4
-        isFutureBeta=@project.isBeta3
-        nextDate=@project.nextDate
+        project=@project
     }}
     {{project-listing/beta
         version=5
-        isCompleted=@project.beta5Completed
-        isCurrentBeta=@project.isBeta5
-        isFutureBeta=@project.isBeta4
-        nextDate=@project.nextDate
+        project=@project
     }}
     {{project-listing/beta
         version=6
-        isCompleted=@project.beta6Completed
-        isCurrentBeta=@project.isBeta6
-        isFutureBeta=@project.isBeta5
-        nextDate=@project.nextDate
+        project=@project
     }}
   </div>
   <div class="right future-image">

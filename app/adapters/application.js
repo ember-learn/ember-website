@@ -11,15 +11,6 @@ export default DS.JSONAPIAdapter.extend(AdapterFetch, {
     if (this.get('fastboot.isFastBoot')) {
       let protocol = this.get('fastboot.request.protocol');
 
-      if(protocol === 'undefined:') {
-        protocol = 'http:'
-      }
-
-      // fixing bug introduced by fix to above bug :(
-      if(protocol === 'http::') {
-        protocol = 'http:'
-      }
-
       return `${protocol}//${this.get('fastboot.request.host')}`;
     } else {
       return window.location.origin;
