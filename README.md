@@ -1,6 +1,7 @@
 # ember-website
 
-This is the primary effort to change the current emberjs.com website to use Ember. Components come from [ember-styleguide](https://github.com/ember-learn/ember-styleguide).
+This project contains the current emberjs.com website, using server-side rendering techniques to generate a static website.
+Components come from [ember-styleguide](https://github.com/ember-learn/ember-styleguide).
 
 ## Prerequisites
 
