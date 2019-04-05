@@ -396,10 +396,8 @@ hr {
   width: 140px;
   min-width: 140px;
   font-weight: 400;
-  margin-top: 38px;
   float: left;
   min-height: 475px;
-  margin-bottom: 28px;
   padding-bottom: 120px;
   background: #f4ece9;
   border-left: 1px solid #d4ccc8;
@@ -437,7 +435,6 @@ hr {
   text-decoration: none;
   line-height: 1.5em;
   border-bottom: none;
-  color: #d84a32;
   font-weight: 700;
   cursor: pointer
 }
@@ -527,7 +524,7 @@ hr {
   padding: 6px 1em;
   display: block;
   text-transform: none;
-  color: #d84a32
+  color: #443331;
 }
 
 #sidebar ol#toc-list li.level-2 a:hover, #sidebar ol#toc-list li.level-3 a:hover {
@@ -551,5 +548,5 @@ hr {
 }
 
 #content.has-sidebar, .has-sidebar#subcontent {
-  margin: 38px 0 90px 2.1em;
+  margin-left: 2.1em;
 }
