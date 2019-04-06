@@ -1,14 +1,14 @@
-{{#es-header}}
-  {{#es-navbar links=links home="/"}}
+<EsHeader class="dark">
+  <EsNavbar @links={{links}} @home="/">
     {{!-- TODO: add search implementation --}}
-  {{/es-navbar}}
-{{/es-header}}
+  </EsNavbar>
+</EsHeader>
 
 {{ember-survey}}
 
-{{job-board-banner}}
+{{!-- {{job-board-banner}} --}}
 
-<main class="container">
+<main>
   {{outlet}}
 </main>
 
