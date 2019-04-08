@@ -415,3 +415,27 @@ body {
 text.highcharts-title {
     display: none;
 }
+
+// zoey on landing page
+main {
+  position: relative;
+}
+
+.zoey-landing-page {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 991px) {
+  .zoey-landing-page {
+    height: 200px;
+  }
+}
+
+// zoey on landing page
+@media screen and (max-width: 991px) {
+  .zoey-landing-page {
+    height: 100px;
+  }
+}
