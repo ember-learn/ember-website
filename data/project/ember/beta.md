@@ -5,7 +5,7 @@ filter:
   - /ember\./
   - /ember-template-compiler/
 repo: emberjs/ember.js
-initialVersion: 3.8.0
+initialVersion: 3.9.0
 lastRelease: 3.10.0-beta.1
 futureVersion: 3.10.0
 finalVersion: 3.10.0
