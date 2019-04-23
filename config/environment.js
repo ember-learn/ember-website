@@ -43,6 +43,12 @@ module.exports = function(environment) {
         }
       },
     ],
+
+    'ember-a11y-testing': {
+      componentOptions: {
+        turnAuditOff: true,
+      }
+    }
   };
 
   if (environment === 'development') {
