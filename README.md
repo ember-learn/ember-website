@@ -56,3 +56,10 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+  
+## Sponsors
+
+![Bugsnag](./public/images/logos/vendors/bugsnag_logo_navy.svg)
+
+[Bugsnag](https://bugsnag.com) helps us monitor the website's stability.
+
