@@ -7,7 +7,7 @@ Components come from [ember-styleguide](https://github.com/ember-learn/ember-sty
 
 ![Bugsnag](./public/images/logos/vendors/bugsnag_logo_navy.svg)
 
-Bugsnag helps us monitor the website's stability.
+[Bugsnag](https://bugsnag.com) helps us monitor the website's stability.
 
 ## Prerequisites
 
