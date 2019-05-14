@@ -11,8 +11,8 @@ futureVersion: 3.11.0
 finalVersion: 3.11.0
 channel: beta
 cycleEstimatedFinishDate: 2019-06-16
-date: 2019-04-14
-nextDate: 2019-04-20
+date: 2019-05-14
+nextDate: 2019-05-20
 changelogPath: CHANGELOG.md
 debugFileName: .debug.js
 ignoreFiles:
