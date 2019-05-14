@@ -4,12 +4,12 @@ baseFileName: ember-data
 filter:
   - /ember-data\./
 repo: emberjs/data
-initialVersion: 3.8.0
-initialReleaseDate: 2019-02-27
-lastRelease: 3.8.0
-futureVersion: 3.9.0
+initialVersion: 3.10.0
+initialReleaseDate: 2019-05-14
+lastRelease: 3.10.0
+futureVersion: 3.11.0
 channel: release
-date: 2019-02-27
+date: 2019-05-14
 changelogPath: CHANGELOG.md
 debugFileName: .js
 ---
