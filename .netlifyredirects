@@ -1,6 +1,7 @@
 /internal   /api
 /tomster/*  /mascots/:splat
 /dasboard   /statusboard
+/statusboard https://github.com/emberjs/rfc-tracking/issues
 /guides/*   https://guides.emberjs.com/release/:splat
 /documentation/*   https://guides.emberjs.com/release/:splat
 /builds/*   /releases/:splat

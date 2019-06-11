@@ -45,7 +45,6 @@ module.exports = function (defaults) {
         'mascots/faq',
         'mascots/payment-sent',
         'mascots/payment',
-        'statusboard',
         'releases',
         'releases/release',
         'releases/canary',
