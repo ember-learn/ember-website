@@ -41,7 +41,7 @@
     "ember-cli-moment-shim": "^3.7.1",
     "ember-cli-netlify": "^0.1.0",
     "ember-cli-qunit": "^4.4.0",
-    "ember-cli-sass": "^8.0.1",
+    "ember-cli-sass": "^10.0.1",
     "ember-cli-stylelint": "^2.1.0",
     "ember-cli-uglify": "^2.1.0",
     "ember-data": "~3.8.0",
@@ -70,7 +70,7 @@
     "markdown-it": "^8.4.2",
     "prember": "^1.0.0",
     "qunit-dom": "^0.8.0",
-    "sass": "^1.14.3",
+    "sass": "^1.21.0",
     "stylelint": "^9.7.1",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-scss": "^3.3.0"
