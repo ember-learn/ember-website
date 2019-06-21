@@ -29,8 +29,8 @@ Please do not post links directly to pages selling Ember consulting services.
 They will be removed.
 
 These logos are in a particular order, most recently, that being the order in
-which people made their requests. Be respectful to those who came before you
-and add your name to the *bottom*.
+which people made their requests, as such please leave the generated _added_
+value.
 
 As of August 2015, new entries are required to also fill in the "use" field;
 specifically, tell us in a couple words what you use Ember for. This info will
