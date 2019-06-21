@@ -16,7 +16,7 @@ organizers:
     profileImage: https://secure.meetupstatic.com/photos/member/a/f/c/f/highres_288225007.jpeg
   - organizer: Siwalik Mukherjee
     profileImage: https://i.ibb.co/7zxDs7V/Siwalik-Mukherjee.jpg
-  - organizer: Vasantha Kumar R B
+  - organizer: Vasantha Kumar
     profileImage: https://i.ibb.co/MPGXFM0/Vasantha-Kumar.jpg
   - organizer: Gokul K
     profileImage: https://secure.meetupstatic.com/photos/member/3/f/2/8/highres_258136168.jpeg
