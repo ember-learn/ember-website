@@ -31,8 +31,6 @@ module.exports = function(environment) {
       hostWhitelist: [/^localhost:\d+$/]
     },
 
-    host: 'http://localhost:4200',
-
     metricsAdapters: [
       {
         name: 'GoogleAnalytics',
@@ -67,7 +65,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.host = 'http://localhost:7784';
+    // add production config here
   }
 
   return ENV;
