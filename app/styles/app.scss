@@ -419,3 +419,23 @@ body {
 text.highcharts-title {
     display: none;
 }
+
+
+/* hotfix for issues on 6/25/19, should upstream within 24-48 hours */
+
+.es-button {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 24px;
+}
+
+ul[role=menubar][aria-expanded=true] ul[role=menu] {
+  top: 55px!important;
+}
+
+li[aria-expanded=true] ul[role=menu].dropdown {
+  border-radius: 0;
+}
+
+/* end hotfix */
