@@ -14,4 +14,5 @@ changelogPath: CHANGELOG.md
 debugFileName: .js
 ---
 # Install Ember-Data %s:
+<br>
 npm install --save-dev ember-data@%s

@@ -27,6 +27,7 @@ Router.map(function() {
     this.route('release');
     this.route('beta');
     this.route('canary');
+    this.route('lts');
   });
   this.route('security');
   this.route('sponsors');

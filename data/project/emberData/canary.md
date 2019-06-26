@@ -8,4 +8,5 @@ channel: canary
 debugFileName: .js
 ---
 # Install the latest Ember-Data canary:
+<br>
 npm install --save-dev emberjs/data#master

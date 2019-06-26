@@ -3,9 +3,9 @@
   {{#if hasBlock}}
     {{yield}}
   {{else}}
-    <pre>
-      <code>{{html-safe (printf @project.content @project.lastRelease)}}</code>
-    </pre>
+    {{#terminal-code}}
+      {{html-safe (printf @project.content @project.lastRelease)}}
+    {{/terminal-code}}
   {{/if}}
 
   {{#if @project.lastReleaseChangelogUrl}}

@@ -15,4 +15,5 @@ ignoreFiles:
   - ember.js
 ---
 # Install Ember-Data %s:
+<br>
 npm install --save-dev ember-data@%s

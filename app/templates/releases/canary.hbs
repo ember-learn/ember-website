@@ -1,16 +1,16 @@
 <h1 class="project-name">{{capitalize "canary"}} Channel</h1>
 
-<p>Canary releases are generated from each commit to the master branch of Ember and Ember Data. These builds are not suitable for use in production, and may contain unstable features disabled behind a flag.</p>
+<p>Canary releases are generated from each commit to the master branch of Ember and Ember Data. They may contain unstable features.</p>
 
 <div class="ember-cli-usage">
   {{#ember-cli-usage
   project=model.ember
   channel="canary"}}
-    <pre>
-      {{! template-lint-disable block-indentation }}
-      <code># Install the latest Ember canary:
-npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com{{model.canaryInfo.assetPath}}</code>
-    </pre>
+    {{#terminal-code}}
+      # Install the latest Ember canary:
+      <br>
+      npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com{{model.canaryInfo.assetPath}}
+    {{/terminal-code}}
   {{/ember-cli-usage}}
 </div>
 
@@ -19,3 +19,21 @@ npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com{{model.canary
   project=model.emberData
   channel="canary"}}
 </div>
+
+<h2>What is canary?</h2>
+
+<p>
+  "Canary" is whatever code is on the main branch of an Ember project.
+  It is unreleased, and is not recommended for production or new learners.
+  Often, features in canary are a work-in-progress.
+  They may change substantially or be removed before being released,
+  and in rare cases, they may never be released.
+</p>
+
+<p>
+  Canary is used in many test suites, so that any bugs in the framework code
+  are detected quickly and fixed before a beta is released.
+  Some of Ember's key contributors make a habit of working off beta and canary,
+  and even use it in production,
+  in order to volunteer their efforts as early testers.
+</p>
