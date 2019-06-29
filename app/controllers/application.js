@@ -14,8 +14,7 @@ function replaceUrlPrefix(url) {
   return url
     .replace(/^https:\/\/emberjs.com\//, '/')
     .replace(/^\/builds(\/\w+)$/, '/releases$1')
-    .replace(/\/builds$/, '/releases')
-    .replace(/\/legal$/, '/about/legal');
+    .replace(/\/builds$/, '/releases');
 }
 
 function replaceLinks(links) {
