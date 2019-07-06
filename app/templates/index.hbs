@@ -1,102 +1,189 @@
-<div class="about-page--header">
-  A framework for<br>
-  <span class="bold">ambitious</span> web developers.
-</div>
-
-<div class="call-to-action">
-  <div class="call-to-action__box">
-    <div class="call-to-action__top">
-      <h1>Try it out!</h1>
-      <div class="cta-copy">
-        <p>Build your first Ember application with our 5 minute tutorial.</p>
-      </div>
-      <a href="https://guides.emberjs.com/current/getting-started/quick-start/">View Quick Start guide</a>
-    </div>
-    <div class="call-to-action__bottom">
-      <svg viewBox="0 0 310 20">
-        <text x="0" y="15">$ npm install -g ember-cli</text>
-      </svg>
-      <svg viewBox="0 0 310 20">
-        <text x="0" y="15">$ ember new ember-quickstart</text>
-      </svg>
-    </div>
+<div class="es-page-header dark">
+  <div class="container"> <!-- we shouldn't need this-->
+    <h1 class="xlarge light">A framework for <br>ambitious web developers</h1>
+    <p>Ember.js is a productive, battle-tested JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device.</p>
+    <a href="https://guides.emberjs.com/current/getting-started/quick-start/" class="es-button link-as-button">Quickstart</a>
+    <a href="https://guides.emberjs.com/release/tutorial/ember-cli/" class="es-button-secondary link-as-button">Read the Tutorial</a>
   </div>
 </div>
 
-<section class="section">
-  <h2 class="text-center">Highly Productive Out of the Box</h2>
-
-  <div class="features">
-    <div class="feature">
-      <div class="handlebars feature-img"></div>
-      <p>Developers write dramatically less code with integrated templates that update automatically when the underlying data changes.</p>
-    </div>
-    <div class="feature">
-      <div class="structure feature-img"></div>
-      <p>No need to waste time on trivial choices. Ember's abstractions allow developers to focus on what makes your app <i>unique</i>.</p>
-    </div>
-    <div class="feature">
-      <div class="productivity feature-img"></div>
-      <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help developers <i>efficiently</i> get the job done.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2 class="text-center">Who's Using Ember.js?</h2>
-
-  <ul class="homepage users">
-    {{#each model.users as |user index|}}
-      <li class={{concat "user " (if (gte index 4) "desktop-only")}}>
-        <a href={{user.url}} rel="nofollow">
-          <img
-            src={{asset-map (concat "images/home/" user.file)}}
-            width="210"
-            height="103"
-            alt={{user.alt}}
-          >
-        </a>
-      </li>
-    {{/each}}
+<section aria-labelledby="section-users" class="row justify-center">
+  <h2 id="section-users" class="text-center">Build with the teams that never stop shipping</h2>
+  <p>Some of the best teams...</p>
+  <p><strong>It's time to start building from the 20th floor.</strong></p>
+  <ul>
+    <li>
+      <a href="">
+        <img src="" alt="crowdstrike">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="" alt="intercom">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="" alt="microsoft">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="" alt="square">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="" alt="linkedin">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="" alt="apple">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="" alt="heroku">
+      </a>
+    </li>
   </ul>
 
-  <div class="about__listing-button-group">
-    {{#link-to "ember-users" class="ember-button ember-button--centered"}}
-      Meet More Users
-    {{/link-to}}
+
+  <h3>A simple component</h3>
+  <p>description</p>
+  <div>
+    <p>codeblock placeholder</p>
+  </div>
+
+  <h3>A simple component</h3>
+  <p>description</p>
+  <div>
+    <p>codeblock placeholder</p>
+  </div>
+
+  <h3>A simple component</h3>
+  <p>description</p>
+  <div>
+    <p>codeblock placeholder</p>
   </div>
 </section>
 
-<section class="section">
-  <h2 class="text-center">Buy Ember.js Gear and Support Development</h2>
+<section aria-labelledby="section-batteries" class="dark">
+  <h2 id="section-batteries">Batteries are included</h2>
+  <p>text</p>
+  <img src="" alt="code sample">
+  <img src="" alt="code sample rendered">
+</section>
 
-  <div class="gears">
-    <a href="http://devswag.com/products/ember-sticker" class="gear">
-      <img src="/images/home/ember-sticker.png" alt="ember stickers">
-    </a>
-    <a href="http://devswag.com/products/ember-js-tshirt" class="gear">
-      <img src="/images/home/ember-shirt.png" alt="ember tee shirt">
-    </a>
-    <a href="http://devswag.com/products/ember-mascot-stickers-4" class="gear">
-      <img src="/images/home/ember-hamster-sticker.png" alt="tomster stickers">
-    </a>
-    <a href="http://devswag.com/products/ember-mascot-tomster" class="gear">
-      <img src="/images/home/ember-tomster-plush-2.png" alt="tomster plush toys">
-    </a>
+<section aria-labelledby="section-ecosystem">
+  <h2 id="section-ecosystem">The Ember Ecosystem</h2>
+  <div class="media">
+    <p>library text</p>
+    <img src="" alt="packages">
+  </div>
+  <div class="media">
+    <img src="" alt="addons">
+    <p>addon text</p>
+  </div>
+  <div class="media">
+    <p>ember observer</p>
+    <img src="" alt="ember observer placeholder">
   </div>
 
-  <div class="about__listing-button-group">
-    <a
-      class="ember-button"
-      href="https://devswag.com/collections/ember"
-    >
-      Buy Ember Gear
-    </a>
-    <a
-      class="ember-button"
-      href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QRRZTQ5GM7PSY"
-    >
-      Donate
-    </a>
+</section>
+
+<section aria-labelledby="section-community">
+  <h2 id="section-community" class="text-center">A Vibrant, Welcoming Community</h2>
+  <p>Ember's first commit was in 2011....</p>
+  <div class="row align-end">
+    <div class="col">
+      <img class="img-fluid margin-bottom-small" src="https://dummyimage.com/400x500/000/fff" alt="" role="presentation">
+    </div>
+    <div class="col">
+      <img class="img-fluid margin-bottom-small" src="https://dummyimage.com/500x300/000/fff" alt="" role="presentation">
+      <img class="img-fluid margin-bottom-small" src="https://dummyimage.com/600x400/000/fff" alt="" role="presentation">
+    </div>
+    <div class="col">
+      <img class="img-fluid margin-bottom-small" src="https://dummyimage.com/400x500/000/fff" alt="" role="presentation">
+    </div>
+  </div>
+  <a href="">Buy tickets for EmberConf</a>
+  <a href="">Find an Ember Meetup</a>
+  <h3 class="text-center">Other community resources</h3>
+  <div class="row">
+    <div class="col">
+      <div class="card text-center">
+        <div class="card-content">
+          <h3>Podcasts</h3>
+          <p>Rock n' Roll with EmberJS.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-center">
+        <div class="card-content">
+          <h3>Books</h3>
+          <p>Rock n' Roll with EmberJS.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-center">
+        <div class="card-content">
+          <h3>Videos</h3>
+          <p>Rock n' Roll with EmberJS.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{!-- if we used flexbox more diligently, we could remove all these div wrappers --}}
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-content">
+          <h3>Guides</h3>
+          <p>If you're familiar with JavaScript and web application development, our Guides will teach you everything
+            you need to know to get started building with Ember.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-content">
+          <h3>Read Our Blog</h3>
+          <p>Find out about the newest releases and latest work happening in the ecosystem by visiting the official
+            Ember Blog.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section aria-labelledby="section-shipping" class="dark">
+  <h2 id="section-shipping">Ready to start shipping?</h2>
+  <a href="">Quickstart</a>
+  <a href="">Read the Tutorial</a>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-content">
+          <h3>Guides</h3>
+          <p>If you're familiar with JavaScript and web application development, our Guides will teach you everything
+            you need to know to get started building with Ember.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-content">
+          <h3>Read Our Blog</h3>
+          <p>Find out about the newest releases and latest work happening in the ecosystem by visiting the official
+            Ember Blog.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

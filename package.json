@@ -40,6 +40,7 @@
     "ember-cli-inject-live-reload": "^1.8.2",
     "ember-cli-moment-shim": "^3.7.1",
     "ember-cli-netlify": "^0.3.0",
+    "ember-cli-sass": "^10.0.1",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-stylelint": "^3.0.1",
     "ember-cli-template-lint": "^1.0.0-beta.1",
@@ -71,6 +72,7 @@
     "markdown-it": "^8.4.2",
     "prember": "^1.0.3",
     "qunit-dom": "^0.9.0",
+    "sass": "^1.22.3",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0"
   },
@@ -84,5 +86,10 @@
   },
   "fastbootDependencies": [
     "algoliasearch"
-  ]
+  ],
+  "dependencies": {
+    "babel-eslint": "^10.0.2",
+    "ember-svg-jar": "^1.2.2",
+    "rsvp": "^4.8.5"
+  }
 }
