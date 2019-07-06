@@ -41,6 +41,12 @@ module.exports = function(environment) {
         }
       },
     ],
+
+    'ember-a11y-testing': {
+      componentOptions: {
+        turnAuditOff: true,
+      }
+    }
   };
 
   if (environment === 'development') {
@@ -52,7 +58,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'test') {
-    ENV.host = '';
     // Testem prefers this...
     ENV.locationType = 'none';
 
@@ -65,7 +70,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // add production config here
+    // here you can enable a production-specific feature
   }
 
   return ENV;
