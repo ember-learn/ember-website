@@ -79,49 +79,95 @@
   
 </section>
 
-<section aria-labelledby="section-batteries" class="dark">
-  <h2 id="section-batteries">Batteries are included</h2>
-  <p>text</p>
+<section aria-labelledby="section-batteries" class="dark full padding-sides-wide">
+  <h2 id="section-batteries" class="full text-center">Batteries are included</h2>
+  <p class="text-center half center-block">text</p>
   <img src="" alt="code sample">
   <img src="" alt="code sample rendered">
 </section>
 
-<section aria-labelledby="section-ecosystem">
+<section aria-labelledby="section-ecosystem" class="full padding-sides-wide">
   <h2 id="section-ecosystem">The Ember Ecosystem</h2>
-  <div class="media">
-    <p>library text</p>
-    <img src="" alt="packages">
+  <div class="es-media margin-bottom-wide">
+    {{!-- TODO refactor this along with the CSS so it needs fewer divs --}}
+    <div class="half">
+      <h3>Use the modern JavaScript you know and love</h3>
+      <p>there's never been a better time to be a JavaScript developer, and Ember embraces everything that modern JS has to offer. When you're ready for more, choose from hundreds of high-quality, curated community Ember Addons to super-power your application.</p>
+      <p>ES6 classes, fat arrow functions, even decorators- it's easy to use the latest and greatest JavaScript features in your app, zero configuration required. Love Typescript? We've got great support for that too! And tools like Prettier pair perfectly with your Ember app's JavaScript code.</p>
+    </div>
+    <div class="half text-center">
+      <img src="https://dummyimage.com/500x400/000/fff" alt="" role="presentation">
+    </div>
   </div>
-  <div class="media">
-    <img src="" alt="addons">
-    <p>addon text</p>
+
+  <div class="es-media margin-bottom-wide">
+    <div class="half text-center">
+      <img src="https://dummyimage.com/500x400/000/fff" alt="" role="presentation">
+    </div>
+    <div class="half">
+      <h3>Meet Addons: high-quality, curated npm packages that supercharge your app</h3>
+      <p>While Ember CLI makes it easy to add any third-party node module, Ember Addons provide capabilities that go way beyond your typical npm package.</p>
+      <p>By hooking into Ember CLI's standardized tooling, Addons can modify your app's build steps, h elp you out with deployment, inline images and more.</p>
+      <p>With all this power wrapped up into a single install command, and no additional build tool or configuration required, you'll wonder how you could ever go back to wiring up dependencies on your own again.</p>
+    </div>
   </div>
-  <div class="media">
-    <p>ember observer</p>
-    <img src="" alt="ember observer placeholder">
+
+  <div class="es-media margin-bottom-wide">
+    <div class="half">
+      <h3>Ember Observer: your dependency co-pilot</h3>
+      <p>Tired of wondering if your project's next dependency is well-maintained? Have you ever had to make a choice between multiple packages with no clear guidance about which one's better?</p>
+      <p>With Ember Observer, you'll never have to asses the quality of your project's dependencies on your own. Up-to-date rankings make it easy to see an addon's position within the community. Metrics like great documentation, recent releases and automated tests across multiple Ember versions mean you can be confident that your next dependency won't become a liability.</p>
+    </div>
+    <div class="half text-center">
+      <img src="https://dummyimage.com/500x400/000/fff" alt="" role="presentation">
+    </div>
   </div>
 
 </section>
 
-<section aria-labelledby="section-community">
-  <h2 id="section-community" class="text-center">A Vibrant, Welcoming Community</h2>
-  <p>Ember's first commit was in 2011....</p>
-  <div class="row align-end">
+<section aria-labelledby="section-community" class="full padding-sides-wide">
+  <h2 id="section-community" class="full text-center">A Vibrant, Welcoming Community</h2>
+  <p class="half text-center center-block">Ember's first commit was in 2011, but today our community is more active than ever. Whether it's one of our annual conferences, dozens of Meetup groups, or initiatives like Women Helping Women, we're always working hard to foster a friendly, professional, and welcoming environment for our developers.</p>
+  <div class="full margin-sides-wide margin-top-bottom-wide text-center">
+    <ul class="es-list-hero-images">
+      <li>
+        <img class="" src="https://dummyimage.com/300x400/000/fff" alt="" role="presentation">
+      </li>
+      <li>
+        <img class="" src="https://dummyimage.com/400x200/000/fff" alt="" role="presentation">
+        <img class="" src="https://dummyimage.com/400x200/000/fff" alt="" role="presentation">
+      </li>
+      <li>
+        <img class="" src="https://dummyimage.com/300x400/000/fff" alt="" role="presentation">
+      </li>
+    </ul>
+  </div>
+  <div class="full margin-top-bottom-wide text-center">
+    <a href="" class="es-button">Buy tickets for EmberConf</a>
+    <a href="" class="es-button-secondary link-as-button">Find an Ember Meetup</a>
+  </div>
+  <h3 class="full text-center margin-top-bottom-wide">Other community resources</h3>
+
+  {{!-- TODO if we used flexbox or CSS grid more diligently, we could remove all these div wrappers --}}
+  <div class="row padding-side-wide">
     <div class="col">
-      <img class="half center-block margin-bottom-small" src="https://dummyimage.com/400x500/000/fff" alt="" role="presentation">
+      <div class="card">
+        <div class="card-content">
+          <h3>Discussion Forum</h3>
+          <p>Post and search longer-form questions in our public forum.</p>
+        </div>
+      </div>
     </div>
     <div class="col">
-      <img class="half center-block margin-bottom-small" src="https://dummyimage.com/500x300/000/fff" alt="" role="presentation">
-      <img class="half center-block margin-bottom-small" src="https://dummyimage.com/600x400/000/fff" alt="" role="presentation">
-    </div>
-    <div class="col">
-      <img class="half center-block margin-bottom-small" src="https://dummyimage.com/400x500/000/fff" alt="" role="presentation">
+      <div class="card">
+        <div class="card-content">
+          <h3>Discord Community</h3>
+          <p>Join our <a href="https://discord.gg/emberjs">real-time chat server</a> to connect with other developers and get answers.</p>
+        </div>
+      </div>
     </div>
   </div>
-  <a href="">Buy tickets for EmberConf</a>
-  <a href="">Find an Ember Meetup</a>
-  <h3 class="text-center">Other community resources</h3>
-  <div class="row">
+  <div class="row padding-side-wide text-center">
     <div class="col">
       <div class="card text-center">
         <div class="card-content">
@@ -147,35 +193,19 @@
       </div>
     </div>
   </div>
-
-  {{!-- if we used flexbox more diligently, we could remove all these div wrappers --}}
-  <div class="row">
-    <div class="col">
-      <div class="card">
-        <div class="card-content">
-          <h3>Guides</h3>
-          <p>If you're familiar with JavaScript and web application development, our Guides will teach you everything
-            you need to know to get started building with Ember.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-content">
-          <h3>Read Our Blog</h3>
-          <p>Find out about the newest releases and latest work happening in the ecosystem by visiting the official
-            Ember Blog.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </section>
 
-<section aria-labelledby="section-shipping" class="dark">
+<section aria-labelledby="section-shipping" class="dark full padding-sides-wide">
   <h2 id="section-shipping">Ready to start shipping?</h2>
-  <a href="">Quickstart</a>
-  <a href="">Read the Tutorial</a>
+  <p class="full padding-right-half margin-bottom-wide">
+    If you're ready to dive in, the Quickstart tutorial is the fastest way to get going with Ember.js. Are you new to web development or a recent bootcamp graduate? The intro tutorial is a great place to start. 
+    
+  </p>
+  <div class="full margin-bottom-wide">
+    <a href="" class="es-button">Quickstart</a>
+    <a href="" class="es-button-secondary link-as-button">Read the Tutorial</a>
+  </div>
+  
   <div class="row">
     <div class="col">
       <div class="card">
