@@ -2,17 +2,13 @@ pulls:
   daysUntilStale: 60
   daysUntilClose: 7
   markComment: >
-    This pull request has been automatically marked as stale because it has not had
-    recent activity. It will be closed if no further activity occurs. Thank you
-    for your contributions.
+    This pull request has been automatically marked stale. If this pull request is something that still needs work, please add a comment and it will remain open, otherwise it will close in 7 days. You are welcome to open a new pull request if you miss the window. Thanks!
 
 issues:
   daysUntilStale: 120
   daysUntilClose: 7
   markComment: >
-    This issue has been automatically marked as stale because it has not had
-    recent activity. It will be closed if no further activity occurs. Thank you
-    for your contributions.
+    This issue has been automatically marked stale. If this issue is something that still needs work, please add a comment and it will remain open, otherwise it will close in 7 days. You are welcome to open a new issue if you miss the window. Thanks!
 
 # Label to use when marking an issue as stale
 staleLabel: stale
