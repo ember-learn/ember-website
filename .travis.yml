@@ -9,6 +9,7 @@ dist: trusty
 branches:
   only:
     - master
+    - redesign-rfc
 
 addons:
   chrome: stable
