@@ -24,6 +24,7 @@
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
     "algoliasearch": "^3.33.0",
+    "babel-eslint": "^10.0.2",
     "broccoli-asset-rev": "^3.0.0",
     "broccoli-static-site-json": "^3.3.2",
     "ember-a11y-testing": "^1.0.0",
