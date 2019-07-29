@@ -59,7 +59,7 @@ Specify what it takes to deploy your app.
   
 ## Sponsors
 
-![Bugsnag](./public/images/logos/vendors/bugsnag_logo_navy.svg)
+![Bugsnag](./bugsnag_logo_navy.svg)
 
 [Bugsnag](https://bugsnag.com) helps us monitor the website's stability.
 
