@@ -1,31 +1,31 @@
 <h1>Ember.js Releases</h1>
 
 <p>
-  Ember knows how to ship new features without breaking your existing applications.
-  You get LTS long-term-support versions,
+  Ember is committed to shipping new features without breaking your existing applications.
+  You get Long Term Support (LTS) versions,
   a 6-week release cycle, and a strong commitment to <a href="https://semver.org/" target="_blank" rel="noopener">Semantic Versioning</a>.
 </p>
 
-<h2>Install the latest stable release:</h2>
+<h2>Create an app using the latest release:</h2>
 
-{{#terminal-code}}
+<TerminalCode>
   npm install -g ember-cli
   <br>
   ember new my-app-name
-{{/terminal-code}}
+</TerminalCode>
 
 <p>
   Read more about our
-  {{#link-to "releases.lts"}}long-term-support,{{/link-to}}
-  {{#link-to "releases.release"}}latest stable,{{/link-to}}
-  {{#link-to "releases.beta"}}beta,{{/link-to}}
-  and {{#link-to "releases.canary"}}canary{{/link-to}}
+  <LinkTo @route="releases.lts">Long Term Support,</LinkTo>
+  <LinkTo @route="releases.release">latest stable,</LinkTo>
+  <LinkTo @route="releases.beta">beta,</LinkTo>
+  and <LinkTo @route="releases.canary">canary</LinkTo>
   releases.
 </p>
 
 <h2>Upcoming releases</h2>
 
-{{release-timeline project=emberBetaProject}}
+<ReleaseTimeline @project={{emberBetaProject}} />
 
 <h2>Strategy</h2>
 <p>
