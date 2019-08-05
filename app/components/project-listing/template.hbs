@@ -3,12 +3,11 @@
 <p>{{@channelDescription}}</p>
 
 {{#each @projects as |project|}}
-  {{#if project.isEmberBeta}}
-    {{yield project}}
-  {{/if}}
   <div class="ember-cli-usage">
     {{ember-cli-usage
     project=project
     channel=@channel}}
   </div>
 {{/each}}
+
+{{yield}}

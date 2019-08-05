@@ -1,181 +1,100 @@
-<h1>Ember.js Release Cycle</h1>
-
-{{release-timeline project=emberBetaProject}}
+<h1>Ember.js Releases</h1>
 
 <p>
-  Ember releases follow a "train" release model. About every
-  six weeks, the <code>master</code> branch of Ember (sometimes referred to as
-  "canary") branches to become the new beta. After six weeks as a beta, this
-  version becomes the new stable release of Ember.
-</p>
-<p>
-  A release of a new Ember version is only considered complete when a
-  <a href="https://emberjs.com/blog/tags/releases.html">
-    release blog post
-  </a>
-  is published. Since multiple libraries make up a release,
-  including `ember.js`, `ember-data`, `ember-cli`, and documentation,
-  the release occurs in steps throughout a week-long window.
-  Developers are encouraged to monitor the release blog posts for
-  the official announcement before upgrading their apps.
-  Release dates may shift as needed, but developers can expect roughly
-  eight minor releases per year.
+  Ember is committed to shipping new features without breaking your existing applications.
+  You get Long Term Support (LTS) versions,
+  a 6-week release cycle, and a strong commitment to <a href="https://semver.org/" target="_blank" rel="noopener">Semantic Versioning</a>.
 </p>
 
+<h2>Create an app using the latest release:</h2>
+
+<TerminalCode>
+  npm install -g ember-cli
+  <br>
+  ember new my-app-name
+</TerminalCode>
+
 <p>
-  LTS (Long Term Support) releases are done at least every four minor versions,
-  plus the last version before a new major release. An LTS release receives security
-  updates for 9 release cycles (54 weeks) and bugfixes for 5 release cycles
-  (30 weeks).
+  Read more about our
+  <LinkTo @route="releases.lts">Long Term Support,</LinkTo>
+  <LinkTo @route="releases.release">latest stable,</LinkTo>
+  <LinkTo @route="releases.beta">beta,</LinkTo>
+  and <LinkTo @route="releases.canary">canary</LinkTo>
+  releases.
 </p>
 
-<table class="lts-schedule table">
-  <thead>
-    <tr>
-      <th colspan="4">
-        LTS Support Schedule
-      </th>
-    </tr>
-    <tr>
-      <td>LTS Version</td>
-      <td>Released</td>
-      <td>Bugfixes until:</td>
-      <td>Security patches until:</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        3.8
-      </td>
-      <td>
-        Feb 2019
-      </td>
-      <td>
-        Sep 2019
-      </td>
-      <td>
-        Feb 2020
-      </td>
-    </tr>
-    <tr>
-      <td>
-        3.4
-      </td>
-      <td>
-        Oct 2018
-      </td>
-      <td>
-        May 2019
-      </td>
-      <td>
-        Oct 2019
-      </td>
-    </tr>
-    <tr>
-      <td>
-        2.18
-      </td>
-      <td>
-        Feb 2018
-      </td>
-      <td>
-        Sept 2018
-      </td>
-      <td>
-        Feb 2019
-      </td>
-    </tr>
-  </tbody>
-</table>
+<h2>Upcoming releases</h2>
 
+<ReleaseTimeline @project={{emberBetaProject}} />
+
+<h2>Strategy</h2>
 <p>
-  The Ember project adheres to
-  <a href="http://semver.org/">semantic versioning</a>. Releases are named
-  according to a <code>MAJOR.MINOR.PATCH</code> scheme, and only
-  <code>MAJOR</code> versions releases may change or remove public APIs after
-  deprecation. <code>MINOR</code> versions may introduce new features so long
-  as they are backwards compatible, and <code>PATCH</code> releases may include
-  bug or security fixes.
+  Ember is built by people who are at the front lines of building and upgrading their company's apps.
+  They want the latest features without the burn of breaking changes, and so Ember follows
+  a different release strategy than most other JavaScript tools.
 </p>
 
-<div class="channels section">
-  <div class="channel canary">
-    {{#link-to "releases.canary" class="tomster"}}
-      <div class="canary" title="Canary Builds"></div>
-    {{/link-to}}
-    <div class="description">
-      <h3>
-        {{#link-to "releases.canary"}}Canary{{/link-to}}
-      </h3>
-      <p>
-        Canary builds are the bleeding edge of Ember development. Please do not use these builds unless you want to try out and offer feedback on new features and fixes not available in the Release or Beta builds.
-      </p>
-    </div>
-  </div>
-  <div class="channel beta">
-    {{#link-to "releases.beta" class="tomster"}}
-      <div class="beta" title="Beta Builds"></div>
-    {{/link-to}}
-    <div class="description">
-      <h3>
-        {{#link-to "releases.beta"}}Beta{{/link-to}}
-      </h3>
-      <p class="hide-in-percy">
-        <em>
-          The latest beta release is {{emberBetaProject.lastRelease}}, made {{format-date-time emberBetaProject.date}}
-        </em>
-      </p>
-      <p>
-        Beta builds incorporate new features that are ready for evaluation in
-        application code. We do not recommend using Beta builds in production.
-      </p>
-    </div>
-  </div>
-  <div class="channel release">
-    {{#link-to "releases.release" class="tomster"}}
-      <div class="release" title="Release Builds"></div>
-    {{/link-to}}
-    <div class="description">
-      <h3>
-        {{#link-to "releases.release"}}Release{{/link-to}}
-      </h3>
-      <p>
-        <em>
-          The latest stable release is {{emberReleaseProject.lastRelease}}, made on {{format-date-time emberReleaseProject.date "MMMM Do, YYYY"}}
-        </em>
-      </p>
-      <p>
-        Release builds have been hardened through our multi-tiered release
-        process. These builds are perfect for use in production environments.
-      </p>
-    </div>
-  </div>
-  <div class="channel lts">
-    <a class="tomster">
-      <div class="lts" title="LTS Builds"></div>
-    </a>
-    <div class="description last">
-      <h3>Long-Term Support (LTS)</h3>
-      <p>
-        <em>
-          The latest LTS release is {{emberLTSProject.lastRelease}}, made on
-          {{format-date-time emberLTSProject.date "MMMM Do, YYYY"}}
-        </em>
-      </p>
-      <p>
-        The LTS channel provides a longer support timeframe but receives
-        new features less frequently. These builds are right for users who
-        prefer to upgrade roughly twice a year.
-      </p>
-    </div>
-  </div>
-</div>
+<h2>Our goals</h2>
+<ul>
+  <li>
+    Add new features in a way that doesn't break existing apps, through
+    backwards compatibility and optional feature flags
+  </li>
+  <li>
+    Maintain LTS (long term support) versions for 54 weeks, so that teams who upgrade their apps
+    infrequently can keep getting security updates and bugfixes
+  </li>
+  <li>
+    Make a minor release about every six weeks, so teams that use Ember can plan their work
+  </li>
+  <li>
+    Follow a public RFC (request for comments) process so that all users and companies
+    can participate in proposing and evaluating new features
+  </li>
+  <li>
+    Provide automated tooling for upgrades and syntax changes
+  </li>
+  <li>
+    Only cut a new major version (i.e. make a breaking change) when we really, really have to
+  </li>
+  <li>
+    Give developers a way to test drive the latest and greatest features, on their own terms.
+  </li>
+</ul>
+
+<h2>How Ember uses SemVer</h2>
+<p>
+  SemVer stands for
+  <a href="http://semver.org/">Semantic Versioning</a>,
+  a powerful standard across the JavaScript community that helps developers understand
+  which versions of a library will work in their app as-is, and which versions
+  would require changes if they wanted to upgrade.
+</p>
 
 <p>
-  Periodically, various APIs in Ember may be deprecated. As new releases
-  of Ember and Ember Data land, be sure to review the
-  <a href="/deprecations">deprecation guides</a> and
-  <a href="http://guides.emberjs.com/release/">documentation guides</a>. These are updated
-  regularly.
+  You might notice that although Ember has been around for a long time, it's version number is low.
+  That is because Ember aims to ship new features in minor releases, and make
+  major releases as rare as possible.
+  When you see a library or framework that has <i>many</i> major versions, each one of those numbers
+  represents a "breaking change."
+  Breaking changes force development teams to spend time researching
+  the changes and modifing their codebase before they can upgrade.
+  The bigger the codebase, or the more complex the app, the more time and effort it takes.
+  Ember is committed to providing a better experience than that.
+</p>
+
+<h3>What SemVer means for your app</h3>
+<p>
+  What this means in practice is, if an Ember app is version 3.4, it should keep working
+  as-is at version 3.8.
+  Although that version has new features, everything is backwards-compatible.
+  What this means is, teams can do development and refactors at their own pace,
+  all while receiving security updates and the option to use new features.
+</p>
+<p>
+  According to SemVer,
+  releases are named according to a MAJOR.MINOR.PATCH scheme.
+  Only MAJOR versions releases may change or remove public APIs after deprecation.
+  MINOR versions may introduce new features so long as they are backwards compatible,
+  and PATCH releases may include bug or security fixes.
 </p>

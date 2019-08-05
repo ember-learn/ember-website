@@ -1,10 +1,10 @@
 <div class="release-progress clear">
-  <div class="left">
+  <div class="left hide-on-mobile">
     <div class="small-release-image" title={{@project.lastStableVersion}}></div>
     <div class="release-version">{{@project.initialVersion}}</div>
     <div class="release-date">Released {{format-date-time @project.date "MMM Do"}}</div>
   </div>
-  <div class="float-left-container">
+  <div class="float-left-container hide-on-mobile">
     <div class="release-cycle-title">The path to {{@project.finalVersion}}...</div>
     {{project-listing/beta
         version=1

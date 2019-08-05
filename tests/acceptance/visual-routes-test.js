@@ -7,14 +7,13 @@ import a11yAudit from 'ember-a11y-testing/test-support/audit';
 module('Acceptance | visual regression', function (hooks) {
   setupApplicationTest(hooks);
 
-  // This is used to map the current **new** routes to what they used to be in the
-  // old ruby app. This is to allow us to compare what the new app looks like
-  // vs the old app.
+  // list new routes here so that they go through Percy and a11y tests
   const pages = [
     { title: '/builds/', route: '/releases'/*, a11y: true */ },  /* set the a11y property of a page object to true to run the audit for this particular route */
     { title: '/builds/beta/', route: '/releases/beta' },
     { title: '/builds/canary/', route: '/releases/canary' },
     { title: '/builds/release/', route: '/releases/release' },
+    { title: '/builds/lts/', route: '/releases/lts' },
     { title: '/community/index.html', route: '/community/' },
     { title: '/community/meetups-getting-started.html', route: '/community/meetups-getting-started/' },
     { title: '/community/meetups.html', route: '/community/meetups/' },

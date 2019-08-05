@@ -17,4 +17,5 @@ ignoreFiles:
   - ember.js
 ---
 # Install Ember %s:
+<br>
 npm install --save-dev ember-source@~%s
