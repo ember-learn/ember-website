@@ -8,7 +8,8 @@
 /about*     /
 /legal      /about/legal
 /zoey       /mascots
-/brand          /logos/
+/brand      /logos/
+/branding   /logos
 /meetup-assets  /community/meetups/assets/
 /blog/*         https://blog.emberjs.com/:splat
 /deprecations/* https://deprecations.emberjs.com/:splat
