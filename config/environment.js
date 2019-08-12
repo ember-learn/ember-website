@@ -41,6 +41,11 @@ module.exports = function(environment) {
         }
       },
     ],
+
+    pageTitle: {
+      separator: ' - ',
+      prepend: true,
+    },
   };
 
   if (environment === 'development') {
