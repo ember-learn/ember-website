@@ -9,6 +9,23 @@
 
 <section aria-labelledby="section-ecosystem" class="bg-muted">
   <div class="container layout-grid">
+    <div class="col-4-large offset-1-large text-center">
+      <h2>Build with the teams that never stop shipping.</h2>
+      <p>
+        Some of the best development teams in the world have been iterating on the their products for years with Ember. With scalable UI architecture baked-in from the start, you'll be working with the same patterns these organizations use every step of the way.
+      </p>
+      <p>
+        It's time to start building from the 20th floor.
+      </p>
+    </div>
+    <div class="text-center">
+      {{svg-jar "landing-logos" class="max-width"}}
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="section-ecosystem" class="bg-muted">
+  <div class="container layout-grid">
     <div class="col-3-large">
       <h2>The Ember Ecosystem</h2>
       <p>There's never been a better time to be a JavaScript developer, and Ember embraces everything that modern JS has to offer. When you're ready for more, choose from hundreds of high-quality, curated community Ember Addons to super-power your application.</p>
@@ -79,31 +96,6 @@
       <div class="productivity feature-img"></div>
       <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help developers <i>efficiently</i> get the job done.</p>
     </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2 class="text-center">Who's Using Ember.js?</h2>
-
-  <ul class="homepage users">
-    {{#each model.users as |user index|}}
-      <li class={{concat "user " (if (gte index 4) "desktop-only")}}>
-        <a href={{user.url}} rel="nofollow">
-          <img
-            src={{asset-map (concat "images/home/" user.file)}}
-            width="210"
-            height="103"
-            alt={{user.alt}}
-          >
-        </a>
-      </li>
-    {{/each}}
-  </ul>
-
-  <div class="about__listing-button-group">
-    {{#link-to "ember-users" class="ember-button ember-button--centered"}}
-      Meet More Users
-    {{/link-to}}
   </div>
 </section>
 
