@@ -1,1 +1,7 @@
 @import "components/terminal-code.css";
+
+@media only percy {
+  .hide-in-percy {
+    visibility: hidden;
+  }
+}
