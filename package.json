@@ -68,6 +68,7 @@
     "highlightjs": "^9.12.0",
     "leaflet": "^1.0.0",
     "loader.js": "^4.7.0",
+    "lts": "mansona/lts-schedule#create-custom",
     "markdown-it": "^8.4.2",
     "prember": "^1.0.3",
     "qunit-dom": "^0.8.4",
