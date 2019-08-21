@@ -49,6 +49,7 @@ module.exports = function (defaults) {
         'releases/release',
         'releases/canary',
         'releases/beta',
+        'releases/lts',
         'ember-community-survey-2016',
         'ember-community-survey-2017',
         'ember-community-survey-2018',
