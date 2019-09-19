@@ -48,7 +48,7 @@
     "ember-export-application-global": "^2.0.0",
     "ember-fetch": "^6.5.1",
     "ember-group-by": "^0.0.5",
-    "ember-highcharts": "^1.1.1",
+    "ember-highcharts": "^1.2.0",
     "ember-href-to": "^2.0.1",
     "ember-leaflet": "^3.0.17",
     "ember-learn-search-components": "github:ember-learn/ember-learn-search-components#feature/styling",
