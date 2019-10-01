@@ -1,37 +1,87 @@
-.emberconf-callout {
-  text-align: center;
-  margin: 40px auto;
+.emberconf-announcement {
+  $logo-column-width: 20.5rem;
+  display: flex;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 2rem;
+  margin-top: 5rem;
 
-  .image {
-    max-width: 500px;
-    margin: 0 auto;
-    img {
-      margin-top: -50px;
+  .logo-and-date {
+    display: flex;
+    align-items: center;
+    flex-basis: $logo-column-width;
+    position: relative;
+  }
+
+  .emberconf-logo {
+    width: 8rem;
+    height: auto;
+  }
+
+  .emberconf-date {
+    margin-left: 1.5rem;
+
+    span {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: bold;
+      color: $orange-darkest;
     }
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      line-height: 1.3;
+      margin-bottom: .5rem
+    }
+  }
+
+  .announcement-description {
+    $zoey-intrinsic-ratio: calc(494 / 322);
+    $zoey-width: 160px;
+    flex-basis: calc(100% - #{$logo-column-width});
+    padding-left: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
     &::before {
       content: '';
       display: block;
-      width: 100%;
-      height: 0;
-      $image-height: 384;
-      $image-width: 1040;
-      padding-bottom: ($image-height / $image-width) * 100%;
-      background-image: url('../images/emberconf-2019-collage.png');
-      background-size: 100%;
-      background-repeat: no-repeat;
+      height: 100%;
+      width: .1rem;
+      background-color: $gray-lightest;
+      left: 0;
+      position: absolute;
     }
-  }
-  h2 {
-    margin-top: 15px;
-    margin-bottom: 0;
-  }
+    .text {
+      flex-basis: calc(100% - #{$zoey-width});
+      padding-right: 1rem;
+    }
+    &::after {
+      content: '';
+      display: block;
+      @include hidpi('/images/home/ember-zoey-sm', 'png');
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: $zoey-width;
+      height: calc(#{$zoey-intrinsic-ratio} * #{$zoey-width});
+      position: absolute; 
+      right: 0;
+      margin-top: -1rem;
+    }
 
-  p {
-    margin-top: 5px;
-  }
 
-  .ember-button {
-    width: 260px;
-    margin-top: 30px;
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      flex-basis: 100%;
+    }
   }
 }
