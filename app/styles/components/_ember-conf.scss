@@ -1,5 +1,11 @@
 .emberconf-announcement {
-  $logo-column-width: 20.5rem;
+  $logo-column-width-md: 20.5rem;
+  $zoey-intrinsic-ratio: calc(494 / 322);
+  $zoey-width-sm: 200px;
+  $zoey-width-md: 250px;
+  $zoey-width-lg: 165px;
+  $logo-column-width-md: 20.5rem;
+
   display: flex;
   max-width: 920px;
   margin-left: auto;
@@ -9,11 +15,58 @@
   background: white;
   padding: 2rem;
   margin-top: 5rem;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  @media screen and (min-width: 730px) {
+    overflow: visible;
+    padding: 2rem calc(#{$zoey-width-md} + 2rem) 2rem 2rem;
+  }
+  @media screen and (min-width: 890px) {
+    padding: 2rem calc(#{$zoey-width-lg} + 2rem) 2rem 2rem;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    @include hidpi('/images/home/ember-zoey-sm', 'png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: $zoey-width-sm;
+    height: calc(#{$zoey-intrinsic-ratio} * #{$zoey-width-sm});
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    @media screen and (min-width: 730px) {
+      margin-top: -1rem;
+
+      right: 1rem;
+      width: $zoey-width-md;
+      height: calc(#{$zoey-intrinsic-ratio} * #{$zoey-width-md});
+    }
+    @media screen and (min-width: 890px) {
+      right: 1rem;
+      left: auto;
+      width: $zoey-width-lg;
+      height: calc(#{$zoey-intrinsic-ratio} * #{$zoey-width-lg});
+    }
+  }
 
   .logo-and-date {
     display: flex;
     align-items: center;
-    flex-basis: $logo-column-width;
+    flex-basis: 100%;
+    justify-content: center;
+    @media screen and (min-width: 730px) {
+      justify-content: flex-start;
+    }
+    @media screen and (min-width: 890px) {
+      
+      flex-basis: $logo-column-width-md;
+    }
+
     position: relative;
   }
 
@@ -23,7 +76,7 @@
   }
 
   .emberconf-date {
-    margin-left: 1.5rem;
+    margin-left: 1.25rem;
 
     span {
       text-transform: uppercase;
@@ -43,45 +96,59 @@
   }
 
   .announcement-description {
-    $zoey-intrinsic-ratio: calc(494 / 322);
-    $zoey-width: 160px;
-    flex-basis: calc(100% - #{$logo-column-width});
-    padding-left: 2.5rem;
+    flex-basis: 100%;
     position: relative;
     display: flex;
     align-items: center;
+    margin-top: 1rem;
+    text-align: center;
+    @media screen and (min-width: 730px) {
+      text-align: left;
+      padding-top: 1rem;
+    }
+    @media screen and (min-width: 890px) {
+      padding-top: 0;
+      padding-left: 2.5rem;
+      margin-top: 0;
+      flex-basis: calc(100% - #{$logo-column-width-md});
+    }
+
     &::before {
       content: '';
-      display: block;
-      height: 100%;
-      width: .1rem;
       background-color: $gray-lightest;
-      left: 0;
+      display: none;
       position: absolute;
+      @media screen and (min-width: 730px) {
+        display: block;
+        height: .1rem;
+        width: 100%;
+        top: 0;
+      }
+      @media screen and (min-width: 890px) {
+        height: 100%;
+        width: .1rem;
+        left: 0;
+      }
     }
+
     .text {
-      flex-basis: calc(100% - #{$zoey-width});
-      padding-right: 1rem;
+      flex-basis: 100%;
+      max-width: 30rem;
+      @media screen and (max-width: 729px) {
+        margin: 0 auto;
+      }
     }
-    &::after {
-      content: '';
-      display: block;
-      @include hidpi('/images/home/ember-zoey-sm', 'png');
-      background-position: right center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: $zoey-width;
-      height: calc(#{$zoey-intrinsic-ratio} * #{$zoey-width});
-      position: absolute; 
-      right: 0;
-      margin-top: -1rem;
-    }
+
+
 
 
     p {
       margin-top: 0;
       margin-bottom: 0;
       flex-basis: 100%;
+      + p {
+        margin-top: .5rem;
+      }
     }
   }
 }
