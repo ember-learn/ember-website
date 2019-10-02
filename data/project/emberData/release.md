@@ -5,7 +5,7 @@ filter:
   - /ember-data\./
 repo: emberjs/data
 initialVersion: 3.13.0
-initialReleaseDate: 2019-09-16
+initialReleaseDate: 2019-09-25
 lastRelease: 3.13.0
 futureVersion: 3.14.0
 channel: release
