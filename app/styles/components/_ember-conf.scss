@@ -1,88 +1,110 @@
 .emberconf-announcement {
+  
+  $callout-breakpoint-sm: 375px;
+  $callout-breakpoint-md: 600px;
+  $callout-breakpoint-lg: 890px;
+  $logo-column-width-md: 20.5rem;
   $logo-column-width-md: 20.5rem;
   $zoey-intrinsic-ratio: calc(494 / 322);
-  $zoey-width-sm: 200px;
-  $zoey-width-md: 250px;
   $zoey-width-lg: 165px;
-  $logo-column-width-md: 20.5rem;
+  $zoey-width-md: 220px;
+  $zoey-width-sm: 80px;
 
+  align-items: center;
+  background: $white;
   display: flex;
-  max-width: 920px;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  padding: 2rem;
   margin-top: 5rem;
-  flex-wrap: wrap;
+  max-width: 920px;
+  padding: 1.5rem 2rem 6rem 2rem;
   position: relative;
-  overflow: hidden;
-  @media screen and (min-width: 730px) {
-    overflow: visible;
-    padding: 2rem calc(#{$zoey-width-md} + 2rem) 2rem 2rem;
+
+  @media screen and (min-width: $callout-breakpoint-sm) {
+    padding: 2rem 2rem 6rem 2rem;
   }
-  @media screen and (min-width: 890px) {
+
+  @media screen and (min-width: $callout-breakpoint-md) {
+    padding: 2rem calc(#{$zoey-width-md} + 1rem) 2rem 2rem;
+  }
+
+  @media screen and (min-width: $callout-breakpoint-lg) {
     padding: 2rem calc(#{$zoey-width-lg} + 2rem) 2rem 2rem;
   }
 
   &::after {
-    content: '';
-    display: block;
     @include hidpi('/images/home/ember-zoey-sm', 'png');
     background-position: right center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: $zoey-width-sm;
+    bottom: -2.5rem;
+    content: '';
+    display: block;
     height: calc(#{$zoey-intrinsic-ratio} * #{$zoey-width-sm});
+    left: 50%;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    @media screen and (min-width: 730px) {
-      margin-top: -1rem;
+    transform: translateX(-50%);
+    width: $zoey-width-sm;
 
-      right: 1rem;
-      width: $zoey-width-md;
+    @media screen and (min-width: $callout-breakpoint-md) {
+      bottom: auto;
       height: calc(#{$zoey-intrinsic-ratio} * #{$zoey-width-md});
-    }
-    @media screen and (min-width: 890px) {
-      right: 1rem;
       left: auto;
-      width: $zoey-width-lg;
+      margin-top: -1rem;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: $zoey-width-md;
+    }
+
+    @media screen and (min-width: $callout-breakpoint-lg) {
       height: calc(#{$zoey-intrinsic-ratio} * #{$zoey-width-lg});
+      width: $zoey-width-lg;
     }
   }
 
   .logo-and-date {
-    display: flex;
     align-items: center;
+    display: flex;
     flex-basis: 100%;
+    flex-wrap: wrap;
     justify-content: center;
-    @media screen and (min-width: 730px) {
+    position: relative;
+
+    @media screen and (min-width: $callout-breakpoint-md) {
       justify-content: flex-start;
     }
-    @media screen and (min-width: 890px) {
-      
+
+    @media screen and (min-width: $callout-breakpoint-lg) {
       flex-basis: $logo-column-width-md;
     }
-
-    position: relative;
   }
 
   .emberconf-logo {
-    width: 8rem;
     height: auto;
+    width: 8rem;
   }
 
   .emberconf-date {
-    margin-left: 1.25rem;
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-top: .5rem;
+    text-align: center;
+
+    @media screen and (min-width: $callout-breakpoint-sm) {
+      flex-basis: auto;
+      margin-left: 1.25rem;
+      margin-top: 0;
+      text-align: left;
+    }
 
     span {
-      text-transform: uppercase;
+      color: $orange-darkest;
       font-size: 14px;
       font-weight: bold;
-      color: $orange-darkest;
+      text-transform: uppercase;
     }
 
     h3 {
@@ -96,57 +118,63 @@
   }
 
   .announcement-description {
-    flex-basis: 100%;
-    position: relative;
-    display: flex;
     align-items: center;
-    margin-top: 1rem;
+    display: flex;
+    flex-basis: 100%;
+    margin-top: .5rem;
+    position: relative;
     text-align: center;
-    @media screen and (min-width: 730px) {
-      text-align: left;
-      padding-top: 1rem;
+
+    @media screen and (min-width: $callout-breakpoint-sm) {
+      margin-top: 1rem;
     }
-    @media screen and (min-width: 890px) {
-      padding-top: 0;
-      padding-left: 2.5rem;
-      margin-top: 0;
+
+    @media screen and (min-width: $callout-breakpoint-md) {
+      padding-right: 0;
+      text-align: left;
+    }
+
+    @media screen and (min-width: $callout-breakpoint-lg) {
       flex-basis: calc(100% - #{$logo-column-width-md});
+      margin-top: 0;
+      padding-left: 2.5rem;
+      padding-top: 0;
     }
 
     &::before {
-      content: '';
       background-color: $gray-lightest;
+      content: '';
       display: none;
       position: absolute;
-      @media screen and (min-width: 730px) {
-        display: block;
+
+      @media screen and (min-width: $callout-breakpoint-md) {
         height: .1rem;
-        width: 100%;
         top: 0;
+        width: 100%;
       }
-      @media screen and (min-width: 890px) {
+
+      @media screen and (min-width: $callout-breakpoint-lg) {
+        display: block;
         height: 100%;
-        width: .1rem;
         left: 0;
+        width: .1rem;
       }
     }
 
     .text {
       flex-basis: 100%;
-      max-width: 30rem;
-      @media screen and (max-width: 729px) {
-        margin: 0 auto;
+
+      .sale-date {
+        display: inline-block;
       }
     }
 
-
-
-
     p {
-      margin-top: 0;
-      margin-bottom: 0;
       flex-basis: 100%;
-      + p {
+      margin-bottom: 0;
+      margin-top: 0;
+
+      +p {
         margin-top: .5rem;
       }
     }
