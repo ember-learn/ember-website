@@ -27,7 +27,7 @@
 
 <div class="emberconf-announcement call-to-action__box">
   <div class="logo-and-date">
-    <a href="//emberconf.com/">
+    <a href="//emberconf.com/" aria-label="EmberConf 2020 Logo">
       {{svg-jar "emberconf-2020-logo" class="emberconf-logo" alt="EmberConf 2020"}}
     </a>
     <div class="emberconf-date">
@@ -38,7 +38,8 @@
   </div>
   <div class="announcement-description">
     <div class="text">
-      <p>EmberConf is back for another year of talks, training and fun! Tickets go on sale <span class="sale-date">December 16.</span></p>
+      <p>EmberConf is back for another year of talks, training and fun! Tickets go on sale <span
+          class="sale-date">December 16.</span></p>
       <p><a href="//emberconf.com">Learn about EmberConf</a></p>
     </div>
   </div>
@@ -50,15 +51,18 @@
   <div class="features">
     <div class="feature">
       <div class="handlebars feature-img"></div>
-      <p>Developers write dramatically less code with integrated templates that update automatically when the underlying data changes.</p>
+      <p>Developers write dramatically less code with integrated templates that update automatically when the underlying
+        data changes.</p>
     </div>
     <div class="feature">
       <div class="structure feature-img"></div>
-      <p>No need to waste time on trivial choices. Ember's abstractions allow developers to focus on what makes your app <i>unique</i>.</p>
+      <p>No need to waste time on trivial choices. Ember's abstractions allow developers to focus on what makes your app
+        <i>unique</i>.</p>
     </div>
     <div class="feature">
       <div class="productivity feature-img"></div>
-      <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help developers <i>efficiently</i> get the job done.</p>
+      <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help
+        developers <i>efficiently</i> get the job done.</p>
     </div>
   </div>
 </section>
@@ -68,22 +72,17 @@
 
   <ul class="homepage users">
     {{#each model.users as |user index|}}
-      <li class={{concat "user " (if (gte index 4) "desktop-only")}}>
-        <a href={{user.url}} rel="nofollow">
-          <img
-            src={{asset-map (concat "images/home/" user.file)}}
-            width="210"
-            height="103"
-            alt={{user.alt}}
-          >
-        </a>
-      </li>
+    <li class={{concat "user " (if (gte index 4) "desktop-only")}}>
+      <a href={{user.url}} rel="nofollow">
+        <img src={{asset-map (concat "images/home/" user.file)}} width="210" height="103" alt={{user.alt}}>
+      </a>
+    </li>
     {{/each}}
   </ul>
 
   <div class="about__listing-button-group">
     {{#link-to "ember-users" class="ember-button ember-button--centered"}}
-      Meet More Users
+    Meet More Users
     {{/link-to}}
   </div>
 </section>
@@ -107,16 +106,10 @@
   </div>
 
   <div class="about__listing-button-group">
-    <a
-      class="ember-button"
-      href="https://devswag.com/collections/ember"
-    >
+    <a class="ember-button" href="https://devswag.com/collections/ember">
       Buy Ember Gear
     </a>
-    <a
-      class="ember-button"
-      href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QRRZTQ5GM7PSY"
-    >
+    <a class="ember-button" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QRRZTQ5GM7PSY">
       Donate
     </a>
   </div>
