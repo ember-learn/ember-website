@@ -7,25 +7,31 @@
   <h2>Find a meetup in your city</h2>
 
 
-  {{#leaflet-map class="leaflet-container" lat=lat lng=lng zoom=zoom}}
-    {{tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+  {{#if leafletPackageLoaded}}
+    {{#leaflet-map class="leaflet-container" lat=lat lng=lng zoom=zoom}}
+      {{tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
 
-    {{#each model as |meetup|}}
-      {{#marker-layer lat=meetup.lat lng=meetup.lng}}
-        {{#popup-layer}}
-          <a
-            href={{meetup.url}}
-            target="_blank"
-            rel="noopener"
-          >
-            {{meetup.location}}
-          </a>
+      {{#each model as |meetup|}}
+        {{#marker-layer lat=meetup.lat lng=meetup.lng}}
+          {{#popup-layer}}
+            <a
+              href={{meetup.url}}
+              target="_blank"
+              rel="noopener"
+            >
+              {{meetup.location}}
+            </a>
 
-          {{!-- image: 02boston.png --}}
-        {{/popup-layer}}
-      {{/marker-layer}}
-    {{/each}}
-  {{/leaflet-map}}
+            {{!-- image: 02boston.png --}}
+          {{/popup-layer}}
+        {{/marker-layer}}
+      {{/each}}
+    {{/leaflet-map}}
+  {{else}}
+    {{!-- Empty div placeholder while package loads --}}
+    <div class="leaflet-container">
+    </div>
+  {{/if}}
 
 </section>
 

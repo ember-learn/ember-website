@@ -78,6 +78,9 @@ module.exports = function (defaults) {
       includeHighChartsMore: true,
       includeModules: ['drilldown'],
     },
+    'ember-leaflet': {
+      excludeJS: true
+    }
   });
 
   app.import("node_modules/highlightjs/highlight.pack.js");
