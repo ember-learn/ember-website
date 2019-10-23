@@ -1,4 +1,5 @@
 @import "components/terminal-code.css";
+@import "components/homepage-image-grid.css";
 
 @media only percy {
   .hide-in-percy {
