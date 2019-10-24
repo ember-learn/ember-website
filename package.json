@@ -60,7 +60,7 @@
     "ember-qunit": "^4.4.1",
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.10.0",
-    "ember-styleguide": "github:ember-learn/ember-styleguide#website-redesign-rfc",
+    "ember-styleguide": "github:ember-learn/ember-styleguide#inter-font",
     "ember-template-lint": "^1.3.0",
     "ember-tether": "^1.0.0",
     "eslint-plugin-ember": "^6.2.0",
