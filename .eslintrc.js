@@ -15,6 +15,10 @@ module.exports = {
   env: {
     browser: true
   },
+  globals: {
+    // leaflet maps global
+    L: 1
+  },
   rules: {
   },
   overrides: [

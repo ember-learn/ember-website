@@ -1,4 +1,3 @@
-/* global L */
 import Controller from '@ember/controller';
 import { sort } from '@ember/object/computed';
 import groupBy from 'ember-group-by';
