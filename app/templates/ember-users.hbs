@@ -17,8 +17,8 @@
       {{#each this.sortedModel as |user|}}
         <EsCard
           class="col-1-large"
+          @alt=""
           @image={{asset-map (concat "images/users/" user.image)}}
-          @alt={{user.name}}
           card-link horizontal full-image vertical
         >
           <h3>
