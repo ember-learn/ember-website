@@ -7,4 +7,4 @@ export default Controller.extend({
 
   sortingKey: Object.freeze(['featured:desc', 'added']),
   sortedModel: sort('model', 'sortingKey')
-})
+});
