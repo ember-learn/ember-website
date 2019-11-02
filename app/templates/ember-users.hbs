@@ -17,15 +17,14 @@
       {{#each this.sortedModel as |user|}}
         <EsCard
           class="col-1-large"
-          @alt=""
-          @image={{asset-map (concat "images/users/" user.image)}}
-          card-link horizontal full-image vertical
+          card-link vertical
         >
-          <h3>
-            <a href={{user.url}} rel="nofollow noopener" target="_blank">
-              {{user.name}}
-            </a>
-          </h3>
+          <a href={{user.url}} rel="nofollow noopener" target="_blank">
+            <img
+              alt={{user.name}}
+              src={{asset-map (concat "images/users/" user.image)}}
+            >
+          </a>
         </EsCard>
       {{/each}}
     </ul>
