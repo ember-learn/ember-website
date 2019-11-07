@@ -70,10 +70,10 @@
     {{#each model.users as |user index|}}
     <li class={{concat "user " (if (gte index 4) "desktop-only")}}>
       <a href={{user.url}} rel="nofollow">
-        <img 
-          src={{asset-map (concat "images/home/" user.file)}} 
-          width="210" 
-          height="103" 
+        <img
+          src={{asset-map (concat "images/home/" user.file)}}
+          width="210"
+          height="103"
           alt={{user.alt}}
         >
       </a>
@@ -107,14 +107,14 @@
   </div>
 
   <div class="about__listing-button-group">
-    <a 
-      class="ember-button" 
+    <a
+      class="ember-button"
       href="https://devswag.com/collections/ember"
     >
       Buy Ember Gear
     </a>
-    <a 
-      class="ember-button" 
+    <a
+      class="ember-button"
       href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QRRZTQ5GM7PSY
     >
       Donate
