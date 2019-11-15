@@ -8,12 +8,11 @@
   </p>
 
   <section aria-labelledby="ember-sponsors-and-friends-current-sponsors">
-    <h2 id="ember-sponsors-and-friends-current-sponsors">Current Sponsors</h2>
+    <h2 id="ember-sponsors-and-friends-current-sponsors" class="margin-vertical-large">Current Sponsors</h2>
 
-    <ul class="list-unstyled layout-grid">
+    <ul class="list-unstyled grid lg:grid-4">
       {{#each this.currentSponsors as |sponsor|}}
         <EsCard
-          class="col-2-large"
           @alt=""
           @image={{asset-map (concat "images/users/" sponsor.image)}}
           card-link full-image vertical
@@ -30,12 +29,11 @@
   </section>
 
   <section aria-labelledby="ember-sponsors-and-friends-past-sponsors">
-    <h2 id="ember-sponsors-and-friends-past-sponsors">Past Sponsors</h2>
+    <h2 id="ember-sponsors-and-friends-past-sponsors" class="margin-vertical-large">Past Sponsors</h2>
 
-    <ul class="list-unstyled layout-grid">
+    <ul class="list-unstyled grid lg:grid-4 margin-vertical-large">
       {{#each this.pastSponsors as |sponsor|}}
         <EsCard
-          class="col-2-large"
           @alt=""
           @image={{asset-map (concat "images/users/" sponsor.image)}}
           card-link full-image vertical
@@ -51,7 +49,7 @@
     </ul>
   </section>
 
-  <p class="text-center">
+  <p class="text-center margin-vertical-large">
     A special thanks to <a href="https://dribbble.com/mg" rel="nofollow noopener" target="_blank">Matt Grantham</a> for design of the original Ember website.
   </p>
 </section>

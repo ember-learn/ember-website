@@ -13,10 +13,9 @@
   <section aria-labelledby="section-ember-users-list-of-companies">
     <h2 id="section-ember-users-list-of-companies">List of Companies</h2>
 
-    <ul class="list-unstyled layout-grid">
+    <ul class="list-unstyled grid lg:grid-5 sm:grid-2">
       {{#each this.sortedModel as |user|}}
         <EsCard
-          class="col-1-large"
           card-link vertical
         >
           <a href={{user.url}} rel="nofollow noopener" target="_blank">
@@ -30,7 +29,7 @@
     </ul>
   </section>
 
-  <section aria-labelledby="section-ember-users-please-introduce-yourself">
+  <section aria-labelledby="section-ember-users-please-introduce-yourself" class="margin-top-large">
     <h2 id="section-ember-users-please-introduce-yourself">Please Introduce Yourself!</h2>
 
     <p>

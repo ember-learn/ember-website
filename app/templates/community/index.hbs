@@ -1,11 +1,11 @@
 <div class="container">
   <h1>Get Involved: Join the Growing Ember.js Community</h1>
   <section class="margin-top-large" aria-labelledby="section-community">
-    <div class="layout-grid">
-      <div class="col-2-large">
+    <div class="layout">
+      <div class="lg:col-2">
         <img alt="" role="presentation" class="img-fluid" src="/images/community/sos.png">
       </div>
-      <div class="col-4-large">
+      <div class="lg:col-4">
         <h2 id="section-community" class="margin-bottom-small">Stuck? Lost? Get Help from the Community</h2>
         <p>
           <a href="http://discuss.emberjs.com">Ember Discussion Forum</a> &mdash; a great venue for discussing features, architecture and best practices.
@@ -36,8 +36,11 @@
     </p>
   </section>
   <section class="margin-top-medium" aria-labelledby="section-reporting-bugs">
-    <div class="layout-grid">
-      <div class="col-4-large">
+    <div class="layout">
+      <div class="lg:col-2 lg:start-5">
+        <img alt="Bug" class="img-fluid" src="/images/community/bug.png">
+      </div>
+      <div class="lg:col-4">
         <h2 id="section-reporting-bugs">Something Fishy? Report it to the Team</h2>
         <p>
           If you've found a bug or issue in Ember.js, please let us know. To file a bug, go to the <a href="https://github.com/emberjs/ember.js/issues">issue tracker</a> and create a new issue. Great bug reports include a clear description of what is not happening and what you expected to happen. Issues that include a failing test or a reduced test case created on <a href="https://ember-twiddle.com">Ember Twiddle</a>, <a href="http://jsfiddle.net/6Evrq/">JSFiddle</a> or <a href="http://emberjs.jsbin.com/">JSBin</a> are much more likely
@@ -55,17 +58,14 @@
           comfortable or help navigate a trying situation, let us know.
         </p>
       </div>
-      <div class="col-2-large">
-        <img alt="Bug" class="img-fluid" src="/images/community/bug.png">
-      </div>
     </div>
   </section>
   <section class="margin-top-medium" aria-labelledby="section-contribute-to-ember">
-    <div class="layout-grid">
-      <div class="col-2-large">
+    <div class="layout">
+      <div class="lg:col-2">
         <img alt="Contribute" class="img-fluid" src="/images/community/give.png">
       </div>
-      <div class="col-4-large">
+      <div class="lg:col-4">
         <h2 id="section-contribute-to-ember" class="text-center">In a Giving Mood? Contribute to the Project</h2>
         <p>
           The Ember.js source is hosted on <a href="https://github.com/emberjs/ember.js/">Github</a>. To contribute patches, create a fork of the project on GitHub and submit a pull request. Please be sure to include unit tests and documentation for any new features you add. See the <a href="https://github.com/emberjs/ember.js/blob/master/CONTRIBUTING.md">full guidelines</a> for more information.
@@ -73,8 +73,8 @@
       </div>
     </div>
   </section>
-  <div class="layout-grid">
-    <section class="margin-top-medium col-3-large text-center" aria-labelledby="section-meetups">
+  <div class="layout">
+    <section class="margin-top-medium lg:col-3 text-center" aria-labelledby="section-meetups">
       <h2 id="section-meetups">Feeling Lonely? Join a Meetup</h2>
       <img alt="Meetup" src="/images/community/meetup.png">
       <p>
@@ -85,7 +85,7 @@
       {{/link-to}}
     </section>
 
-    <section class="margin-top-medium col-3-large text-center" aria-labelledby="section-mascots">
+    <section class="margin-top-medium lg:col-3 text-center" aria-labelledby="section-mascots">
       <h2 id="section-mascots">Met The Mascots? You'll Love Them!</h2>
       <img alt="Campster" src="/images/community/campster.png">
       <p>
@@ -96,7 +96,7 @@
       {{/link-to}}
     </section>
   </div>
-  <section class="margin-top-large text-center" aria-labelledby="section-meetup-video">
+  <div class="embed-video margin-top-large">
     <iframe width="854" height="480" src="https://www.youtube.com/embed/rY5D38RQoEg?rel=0" frameborder="0" allowfullscreen></iframe>
-  </section>
+  </div>
 </div>
