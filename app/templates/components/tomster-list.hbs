@@ -17,8 +17,8 @@
 <ul class="unstyled grid {{this.displayClass}}">
   {{#each sortedModel as |tomster|}}
     <figure>
-      <div class="well tomster-well">
-        <img class="tomster" src={{asset-map (concat "images/tomsters/" tomster.image)}} alt="">
+      <div class="well well-1/1">
+        <img src={{asset-map (concat "images/tomsters/" tomster.image)}} alt="">
       </div>
       <figcaption class="flex-horizontal-between">
         {{#if tomster.url}}
