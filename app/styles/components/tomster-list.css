@@ -1,17 +1,14 @@
-.tomster-list .card[full-image] .card__image {
-  max-height: 300px;
-  min-height: 300px;
-
-  object-fit: contain;
-
-  /* this should already be the case for .card[full-image] */
-  margin: 3rem auto;
+.tomster-well {
+  position: relative;
+  height: 0;
+  padding: 0 0 100%;
 }
 
-.tomster-list__filter {
-  margin: var(--spacing-2) auto;
-}
-
-.tomster-list__filter li {
-  display: inline-block;
+.tomster {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 80%;
+  max-height: 80%;
+  transform: translate(-50%, -50%);
 }
