@@ -1,39 +1,43 @@
 <section class="container" aria-labelledby="ember-users">
-  <h1 id="ember-users">
-    See Who's Using Ember.js
-  </h1>
+  <div class="layout">
+    <div class="lg:col-4 lg:start-2 text-center text-muted mb-5">
+      <h1 id="ember-users">
+        See Who's Using Ember.js
+      </h1>
 
-  <p>
-    Logos are added by company representatives. These companies may or may not be using Ember on their main web properties, but they're definitely using it somewhere in their organizations!
-  </p>
-  <p>
-    Feel free to track down folks who work at a specific company if you're looking for more detail on their specific usage.
-  </p>
+      <p>
+        Logos are added by company representatives. These companies may or may not be using Ember on their main web properties, but they're definitely using it somewhere in their organizations!
+      </p>
+      <p>
+        Feel free to track down folks who work at a specific company if you're looking for more detail on their specific usage.
+      </p>
+    </div>
+  </div>
 
   <section aria-labelledby="section-ember-users-list-of-companies">
     <h2 id="section-ember-users-list-of-companies">List of Companies</h2>
 
-    <ul class="list-unstyled grid lg:grid-5 sm:grid-2">
+    <ul class="unstyled grid sm:grid-2 lg:grid-5 mb-5">
       {{#each this.sortedModel as |user|}}
-        <EsCard
-          card-link vertical
-        >
-          <a href={{user.url}} rel="nofollow noopener" target="_blank">
+        <li>
+          <a href={{user.url}} rel="nofollow noopener" target="_blank" class="well p-2">
             <img
               alt={{user.name}}
               src={{asset-map (concat "images/users/" user.image)}}
             >
           </a>
-        </EsCard>
+        </li>
       {{/each}}
     </ul>
   </section>
 
-  <section aria-labelledby="section-ember-users-please-introduce-yourself" class="mt-5">
-    <h2 id="section-ember-users-please-introduce-yourself">Please Introduce Yourself!</h2>
+  <section class="layout" aria-labelledby="section-ember-users-please-introduce-yourself">
+    <div class="lg:col-5">
+      <h2 id="section-ember-users-please-introduce-yourself">Please Introduce Yourself!</h2>
 
-    <p>
-      To add your company or project to this page, <a href="https://github.com/ember-learn/ember-website" rel="nofollow noopener">submit a Pull Request</a>. Be sure that your logo has a transparent background and includes adequate white space. Additional instructions are in the <a href="https://github.com/ember-learn/ember-website/blob/master/CONTRIBUTING.md#adding-a-user" rel="nofollow noopener" target="_blank">contributing guide</a>.
-    </p>
+      <p>
+        To add your company or project to this page, <a href="https://github.com/ember-learn/ember-website" rel="nofollow noopener">submit a Pull Request</a>. Be sure that your logo has a transparent background and includes adequate white space. Additional instructions are in the <a href="https://github.com/ember-learn/ember-website/blob/master/CONTRIBUTING.md#adding-a-user" rel="nofollow noopener" target="_blank">contributing guide</a>.
+      </p>
+    </div>
   </section>
 </section>
