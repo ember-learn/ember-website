@@ -8,10 +8,10 @@
   <li>{{#link-to "mascots" (query-params filter="other")}}Others{{/link-to}}</li>
 </ul>
 
-<ul class="layout-grid list-unstyled tomster-list">
+<ul class="grid lg:grid-2 list-unstyled tomster-list">
   {{#each sortedModel as |tomster|}}
     <EsCard
-      class="col-3-large tomster-card"
+      class="tomster-card"
       @image={{asset-map (concat "images/tomsters/" tomster.image)}}
       alt={{tomster.title}}
       vertical
