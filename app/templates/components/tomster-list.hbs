@@ -1,35 +1,38 @@
-<ul class="list-unstyled margin-vertical-small text-center tomster-list__filter">
-  <li>{{#link-to "mascots" (query-params filter="all")}}All{{/link-to}} | </li>
-  <li>{{#link-to "mascots" (query-params filter="tomster")}}Tomsters{{/link-to}} | </li>
-  <li>{{#link-to "mascots" (query-params filter="zoey")}}Zoeys{{/link-to}} | </li>
-  <li>{{#link-to "mascots" (query-params filter="meetup")}}Meetups{{/link-to}} | </li>
-  <li>{{#link-to "mascots" (query-params filter="conference")}}Conferences{{/link-to}} | </li>
-  <li>{{#link-to "mascots" (query-params filter="corp")}}Corporate{{/link-to}} | </li>
-  <li>{{#link-to "mascots" (query-params filter="other")}}Others{{/link-to}}</li>
-</ul>
+<nav class="filter flex-horizontal-between">
+  <span class="filter-group">
+    {{#link-to "mascots" (query-params filter="all")}}All{{/link-to}}
+    {{#link-to "mascots" (query-params filter="tomster")}}Tomsters{{/link-to}}
+    {{#link-to "mascots" (query-params filter="zoey")}}Zoeys{{/link-to}}
+    {{#link-to "mascots" (query-params filter="meetup")}}Meetups{{/link-to}}
+    {{#link-to "mascots" (query-params filter="conference")}}Conferences{{/link-to}}
+    {{#link-to "mascots" (query-params filter="corp")}}Corporate{{/link-to}}
+    {{#link-to "mascots" (query-params filter="other")}}Others{{/link-to}}
+  </span>
+  <span>
+    {{#link-to "mascots" (query-params display="small")}}Small{{/link-to}}
+    {{#link-to "mascots" (query-params display="large")}}Large{{/link-to}}
+  </span>
+</nav>
 
-<ul class="grid lg:grid-2 list-unstyled tomster-list">
+<ul class="unstyled grid {{this.displayClass}}">
   {{#each sortedModel as |tomster|}}
-    <EsCard
-      class="tomster-card"
-      @image={{asset-map (concat "images/tomsters/" tomster.image)}}
-      alt={{tomster.title}}
-      vertical
-      full-image
-    >
-      <div class="flex-row justify-content-between">
-
-        {{#if tomster.url}}
-          <a href={{tomster.url}}>
-            {{tomster.title}}
-          </a>
-        {{else}}
-          <span>{{tomster.title}}</span>
-        {{/if}}
-        <div>
-          {{moment-format tomster.date "MMMM D, YYYY"}}
+    <li>
+      <figure>
+        <div class="well well-1/1">
+          <img src={{asset-map (concat "images/tomsters/" tomster.image)}} alt="">
         </div>
-      </div>
-    </EsCard>
+        <figcaption class="flex-horizontal-between">
+          {{#if tomster.url}}
+            <a href={{tomster.url}}>
+              {{tomster.title}}
+            </a>
+          {{else}}
+            <span>{{tomster.title}}</span>
+          {{/if}}
+
+          <time datetime={{moment-format tomster.date}}>{{moment-format tomster.date "MMMM D, YYYY"}}</time>
+        </figcaption>
+      </figure>
+    </li>
   {{/each}}
 </ul>
