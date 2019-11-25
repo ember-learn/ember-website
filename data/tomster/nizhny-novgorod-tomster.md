@@ -1,8 +1,8 @@
 ---
-title: Nizhniy Novgorod
+title: Nizhny Novgorod
 url: 'https://emberjs-nn.timepad.ru/events/'
 date: 'November 11, 2019'
-image: nizhniy-novgorod.png
+image: nizhny-novgorod.png
 tags:
   - all
   - tomster
