@@ -52,7 +52,7 @@
     "ember-fetch": "^6.5.1",
     "ember-group-by": "^0.0.5",
     "ember-href-to": "^2.0.1",
-    "ember-leaflet": "^3.0.17",
+    "ember-leaflet": "^4.0.2",
     "ember-learn-search-components": "github:ember-learn/ember-learn-search-components#feature/styling",
     "ember-load-initializers": "^2.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
