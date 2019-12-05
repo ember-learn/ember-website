@@ -1,4 +1,5 @@
 ---
+name: Booking Sync
 url: 'https://www.bookingsync.com'
 image: bookingsync.png
 start: 2017-01-01T00:00:00.000Z
