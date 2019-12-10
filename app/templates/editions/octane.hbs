@@ -6,7 +6,7 @@
   The <strong>preview</strong> of Ember Octane is underway! Octane's features are available in a stable release of Ember, v3.13 onward.
   However, it is not yet the recommended default.
   We need your help polishing up the work-in-progress learning resources linked below, popular addons, and tools like Ember Inspector or codemods.
-  You can read more about the plan and timeline in 
+  You can read more about the plan and timeline in
   <a href="https://blog.emberjs.com/2019/08/15/octane-release-plan.html">the Octane release plan blog post</a>
   and
   <a href="https://blog.emberjs.com/2019/10/31/octane-release-update.html">the update</a>.
@@ -23,6 +23,140 @@
   <li><a href="https://blog.emberjs.com/2019/08/15/octane-release-plan.html">Learn how to prepare</a></li>
   <li><a href="https://emberjs.github.io/rfcs/0364-roadmap-2018.html">Read The Roadmap RFC</a></li>
 </ul>
+
+<h2>Are you adventurous and want to test each of the features out?</h2>
+<p>
+  All features of Octane are presently landed in the latest version of ember,
+  but if you'd like to try pieces of Octane before upgrading all the way to 3.14+,
+  you may find the below helper: a quick reference of each of the features, and when you can use them.
+</p>
+
+<table class="octane-feature-summary-table">
+  <thead>
+    <tr>
+      <th>Ember Version</th>
+      <th>Feature</th>
+      <th>Polyfill</th>
+      <th class="notes-column">Notes</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td rowspan="3"><a href="https://blog.emberjs.com/2018/04/13/ember-3-1-released.html">3.1</a></td>
+      <td>Native Getters</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Named Arguments</td>
+      <td></td>
+      <td>@foo vs foo vs this.foo</td>
+    </tr>
+    <tr>
+      <td>Optional Features: Application Template Wrapper &amp; Temlpate-only Glimmer Compnonents</td>
+      <td></td>
+      <td>Introduced with defaults: "off"</td>
+    </tr>
+    <tr class="spacer"><td colspan="4"></td></tr>
+    <tr>
+      <td rowspan="3"><a href="https://blog.emberjs.com/2018/10/07/ember-3-4-released.html">3.4</a></td>
+      <td>&lt;AngleBracketInvocation /&gt;</td>
+      <td><a href="https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill">Supports Ember 2.12+</a></td>
+      <td>Nested components can not yet be invoked. Polyfill enables nested component invocation.</td>
+    </tr>
+    <tr>
+      <td>new Option Feature: jquery-integration</td>
+      <td></td>
+      <td>Introduced with default: "on"</td>
+    </tr>
+    <tr>
+      <td>Custom Component Manager</td>
+      <td></td>
+      <td>Paves the way for Glimmer Components, and other light-weight kinds of components (later on, will no longer need to use @ember/component for everything).</td>
+    </tr>
+    <tr class="spacer"><td colspan="4"></td></tr>
+    <tr>
+      <td><a href="https://blog.emberjs.com/2018/12/13/ember-3-6-released.html">3.6</a></td>
+      <td>Native Classes</td>
+      <td><a href="https://github.com/pzuraq/ember-native-class-polyfill">Supports Ember 3.4+</a></td>
+      <td>To use computed properties, you need decorators</td>
+    </tr>
+    <tr class="spacer"><td colspan="4"></td></tr>
+    <tr>
+      <td><a href="https://blog.emberjs.com/2019/02/27/ember-3-8-released.html">3.8</a></td>
+      <td>Element Modifier Manager</td>
+      <td><a href="https://github.com/rwjblue/ember-modifier-manager-polyfill">Supports Ember 2.12+</a></td>
+      <td>Enables the <em>ability</em> to use modifiers (e.g.: on)</td>
+    </tr>
+    <tr class="spacer"><td colspan="4"></td></tr>
+    <tr>
+      <td rowspan="3"><a href="https://blog.emberjs.com/2019/05/21/ember-3-10-released.html">3.10</a></td>
+      <td>Angle Bracket Invocation for nested components</td>
+      <td><a href="https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill">Supports Ember 2.12+</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Angle Bracket Invocation built-in components</td>
+      <td></td>
+      <td>LinkTo, Input, Textarea</td>
+    </tr>
+    <tr>
+      <td>Native Decorator Supports</td>
+      <td><a href="https://github.com/pzuraq/ember-decorators-polyfill">Supports Ember 2.18+</a></td>
+      <td>Classes are now usable</td>
+    </tr>
+    <tr class="spacer"><td colspan="4"></td></tr>
+    <tr>
+      <td rowspan="4"><a href="https://blog.emberjs.com/2019/07/15/ember-3-11-released.html">3.11</a></td>
+      <td>Forwarding element modifiers with ...attributes</td>
+      <td></td>
+      <td>...attributes already existed since 3.4</td>
+    </tr>
+    <tr>
+      <td>fn helper</td>
+      <td><a href="https://github.com/rwjblue/ember-fn-helper-polyfill">Supports Ember 2.12+</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>on modifier</td>
+      <td><a href="https://github.com/buschtoens/ember-on-modifier">Supports Ember 2.13+</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Inject Parameter Normalization</td>
+      <td></td>
+      <td>More info: <a href="https://github.com/emberjs/rfcs/blob/master/text/0451-injection-parameter-normalization.md">RFC#451</a></td>
+    </tr>
+
+    <tr class="spacer"><td colspan="4"></td></tr>
+    <tr>
+      <td rowspan="3"><a href="https://blog.emberjs.com/2019/09/25/ember-3-13-released.html">3.13</a></td>
+      <td>Tracked Properties</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>@glimmer/component support</td>
+      <td></td>
+      <td>Need version &gt; 0.14.0-alpha.13</td>
+    </tr>
+    <tr>
+      <td>Component / Templates Co-Location</td>
+      <td></td>
+      <td>Only active when the app's edition is set to Octane</td>
+    </tr>
+
+    <tr class="spacer"><td colspan="4"></td></tr>
+    <tr>
+      <td><a href="https://blog.emberjs.com/2019/11/18/ember-3-14-released.html">3.14</a></td>
+      <td>@model in route template</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+  </tbody>
+</table>
 
 <h2>How you can help</h2>
 <p>During this preview phase, we are asking the community to help us in any way they can. Try Octane out in your app. Report bugs back to us. Let us know where your pain points are. Read the guides and see if they make sense to you. It genuinely takes all parts of our community working together to make this a polished, complete project- and no contribution is too small!</p>
@@ -55,6 +189,6 @@
   </dd>
   <dt>What Happened to Module Unification?</dt>
   <dd>
-    Read the full statement about Module Unification on our blog- <a href="https://blog.emberjs.com/2019/03/11/update-on-module-unification-and-octane.html">https://blog.emberjs.com/2019/03/11/update-on-module-unification-and-octane.html</a> 
+    Read the full statement about Module Unification on our blog- <a href="https://blog.emberjs.com/2019/03/11/update-on-module-unification-and-octane.html">https://blog.emberjs.com/2019/03/11/update-on-module-unification-and-octane.html</a>
   </dd>
 </dl>

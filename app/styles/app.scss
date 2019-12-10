@@ -362,7 +362,7 @@ body {
       @media screen and (min-width: 768px) {
         width: auto;
       }
-      &:hover, 
+      &:hover,
       &:focus {
         background-color: $orange;
         color: white;
@@ -439,3 +439,33 @@ li[aria-expanded=true] ul[role=menu].dropdown {
 }
 
 /* end hotfix */
+
+.octane-feature-summary-table {
+  border-collapse: collapse;
+
+  th, td {
+    border: 1px solid lightgray;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .notes-column {
+    width: 200px;
+  }
+
+  .spacer {
+    background-color: lightgray;
+    td {
+      background-color: lightgray;
+    }
+  }
+
+  tr:nth-child(odd) {
+
+  }
+
+  tr:nth-child(even) {
+
+  }
+
+}
