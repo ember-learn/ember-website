@@ -3,13 +3,10 @@
 
 <h1>The Octane Edition of Ember</h1>
 <p class="intro">
-  The <strong>preview</strong> of Ember Octane is underway! Octane's features are available in a stable release of Ember, v3.13 onward.
-  However, it is not yet the recommended default.
-  We need your help polishing up the work-in-progress learning resources linked below, popular addons, and tools like Ember Inspector or codemods.
-  You can read more about the plan and timeline in 
-  <a href="https://blog.emberjs.com/2019/08/15/octane-release-plan.html">the Octane release plan blog post</a>
-  and
-  <a href="https://blog.emberjs.com/2019/10/31/octane-release-update.html">the update</a>.
+  It has arrived!
+  As of version 3.15 of Ember, when you generate a new app, you get everything you need to build your app using Octane.
+  You can read more about features and upgrade strategies in the
+  <a href="https://blog.emberjs.com/2019/12/20/octane-is-here.html">the official Ember blog post</a>.
 </p>
 <p>
   Ember Octane describes a set of new features that, when taken together, represent a foundational improvement to the way you use Ember.
@@ -17,44 +14,81 @@
   With seamless interoperability for existing apps, teams can migrate at their own pace, while developers building new apps start out with the best that Ember has to offer.
 </p>
 <ul class="decorative-boxes">
-  <li><a href="https://octane-guides-preview.emberjs.com/release/getting-started/quick-start/">Try the new app Quick Start</a></li>
-  <li><a href="https://octane-guides-preview.emberjs.com/release/tutorial/">Follow the Tutorial</a></li>
-  <li><a href="https://octane-guides-preview.emberjs.com/release/">Read the Guides</a></li>
-  <li><a href="https://blog.emberjs.com/2019/08/15/octane-release-plan.html">Learn how to prepare</a></li>
-  <li><a href="https://emberjs.github.io/rfcs/0364-roadmap-2018.html">Read The Roadmap RFC</a></li>
+  <li><a href="https://blog.emberjs.com/2019/12/20/octane-is-here.html">Read the announcement</a></li>
+  <li><a href="https://guides.emberjs.com/release/getting-started/quick-start/">Try the new app Quick Start</a></li>
+  <li><a href="https://guides.emberjs.com/release/tutorial/">Follow the Tutorial</a></li>
+  <li><a href="https://guides.emberjs.com/release/">Read the Guides</a></li>
+  <li><a href="https://guides.emberjs.com/release/upgrading/current-edition">Learn how to upgrade</a></li>
 </ul>
 
 <h2>How you can help</h2>
-<p>During this preview phase, we are asking the community to help us in any way they can. Try Octane out in your app. Report bugs back to us. Let us know where your pain points are. Read the guides and see if they make sense to you. It genuinely takes all parts of our community working together to make this a polished, complete project- and no contribution is too small!</p>
+<p>
+  Now that Octane is available, we ask developers of all experience levels to create their own blog posts, tutorials, and videos.
+  Even if you think a topic has already been covered by someone else, it is helpful to put it in your own words.
+  For most developers, official documentation is only one piece of the learning journey.
+</p>
 
-<p><strong>We will be able to declare a stable Octane edition faster with the community's help!</strong></p>
-<p>As in all areas of Ember, there are different ways you can contribute. Visit the #st-octane channel on the Ember Discord server to get started today.</p>
-<ul class="decorative-boxes">
-  <li><a href="https://github.com/emberjs/ember.js/issues/17234">Implement Features</a></li>
-  <li><a href="https://github.com/ember-learn/guides-source/issues/394">Write Guides</a></li>
-  <li><a href="https://github.com/ember-learn/guides-source/issues/588">Review & Edit Guides</a></li>
+<p>
+  If you notice any problems with Octane or the official learning resources, you can open an issue or pull request to the following repositories:
+</p>
+<ul>
+  <li>
+    <a href="https://github.com/ember-learn/guides-source">
+      The Guides
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/ember-learn/super-rentals-tutorial">
+      The Tutorial
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/emberjs/ember.js">
+      Ember.js source code and API docs
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/ember-learn/ember-octane-vs-classic-cheat-sheet">
+      The Octane vs Classic Cheat Sheet
+    </a>
+  </li>
 </ul>
 
 <h2>Frequently Asked Questions</h2>
 <dl class="dl-faq">
-  <dt>When will Octane be ready?</dt>
+  <dt>Which release of Ember is Octane?</dt>
   <dd>
-    Octane will be available as an upcoming minor release of Ember.
-    That means all features are opt-in and non-breaking for existing apps.
-    It was originally targeted for 3.14, but it needs more work before the edition can be declared.
-    For timeline details, read the <a href="https://blog.emberjs.com/2019/10/31/octane-release-update.html">Octane release update</a>.
+    The Octane Edition was declared for Ember 3.15.
+  </dd>
+  <dt>Do I need to refactor my whole app in order to use Octane features?</dt>
+  <dd>
+    Good news - you do not need to change your whole app to use Octane's features! All are available for you to opt into, one piece at a time. Some features are even available in earlier versions.
+  </dd>
+  <dt>If I want to upgrade my app to Octane, do I need to make all the changes by hand?</dt>
+  <dd>
+    No, codemods and CLI tools are available to help you.
+    Visit the <a href="https://guides.emberjs.com/release/upgrading/current-edition">Octane Upgrade Guide</a> to learn more about them.
+  </dd>
+  <dt>If I'm not ready to use Octane, does that mean I should keep my app on version 3.14?</dt>
+  <dd>
+    No, you should go ahead and update to version 3.15 or later.
+    Octane's big changes are all opt-in, meaning that you can enable them when you are ready, and in the meantime, you can keep updating your app as you normally would. 
   </dd>
   <dt>I'm starting a new app at work. Should I use Octane?</dt>
   <dd>
-    Octane is in <em>preview</em> mode- there are bound to be rough edges in popular addons and tools. We advise that Octane style only be used in v3.13 apps by developers who are committed to helping iron out any issues. Developers are encouraged to update their apps to the latest version of Ember in the same way they always would. v3.13 is production-ready and has the stability guarantees that minor releases always have. Octane's opt-in features will get more ecosystem support and documentation built up in the meantime.
+    Yes! Octane is stable and well supported.
+    It is the present and future of Ember, so you are saving yourself some upgrade work down the line.
+    Be sure to budget some time for learning and experimentation.
   </dd>
   <dt>Where can I get help or ask questions?</dt>
   <dd>
     Visit <LinkTo @route="community">the community page</LinkTo> to join the forums or chat!
-    Discord has channels specifically for Octane where you can search for other people's questions too.
+    Discord has channels specifically for Octane where you can search for other people's questions too. Read the "welcome" and "setup profile" channels to learn how to get posting permissions.
   </dd>
   <dt>What Happened to Module Unification?</dt>
   <dd>
-    Read the full statement about Module Unification on our blog- <a href="https://blog.emberjs.com/2019/03/11/update-on-module-unification-and-octane.html">https://blog.emberjs.com/2019/03/11/update-on-module-unification-and-octane.html</a> 
+    Octane ships with "co-location," where the templates and JavaScript files for components are in the same directory.
+    This was one of the most popular aspects of Module Unification, and it's available now!
+    Read the full statement on our blog- <a href="https://blog.emberjs.com/2019/03/11/update-on-module-unification-and-octane.html">Update on Module Unification</a> 
   </dd>
 </dl>
