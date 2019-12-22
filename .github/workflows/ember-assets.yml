@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2-beta
+      with:
+        fetch-depth: 0 
     - uses: simplabs/ember-asset-size-action@v1
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
