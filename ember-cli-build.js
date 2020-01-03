@@ -41,7 +41,7 @@ module.exports = function (defaults) {
         'mascots',
         'security',
         'sponsors',
-        'team',
+        'teams',
         'mascots',
         'mascots/commission-sent',
         'mascots/commission',
