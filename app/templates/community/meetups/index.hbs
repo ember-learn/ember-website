@@ -1,7 +1,7 @@
 <div class="container">
-  <h1>Meetups Around the World</h1>
+  <h1 class="mb-3">Meetups Around the World</h1>
 
-  <section aria-labelledby="meetups" class="margin-top-medium">
+  <section aria-labelledby="meetups" class="mb-3">
     <h2 id="meetups">Find a meetup in your city</h2>
     {{#leaflet-map lat=lat lng=lng zoom=zoom}}
       {{tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
@@ -21,14 +21,14 @@
       {{/each}}
     {{/leaflet-map}}
 
-    <div class="margin-top-medium">
+    <div>
       {{#each sortedMeetupsByArea as |area|}}
-        <div class="margin-top-small">
+        <div class="mt-3">
           <h3>{{area.value}}</h3>
-          <ul class="list-unstyled layout-grid">
+          <ul class="list-unstyled grid lg:grid-4 sm:grid-2">
             {{#each area.items as |meetup|}}
-              <li class="col-2-large col-4">
-                <img class="icon icon-left" src="/images/meetups/map-pin.png" alt="location icon" role="presentation" style="width: 0.7em">
+              <li>
+                <img width="12" class="align-middle icon-left" src="/images/meetups/map-pin.png" alt="location icon" role="presentation">
                 <a href={{meetup.url}}>{{meetup.location}}</a>
               </li>
             {{/each}}
@@ -38,7 +38,7 @@
     </div>
   </section>
 
-  <section aria-labelledby="start-your-meetup" class="margin-top-medium">
+  <section aria-labelledby="start-your-meetup">
     <h2 id="start-your-meetup">Start your own meetup</h2>
     <img alt="Meetup" src="/images/community/meetup.png" align="left" role="presentation">
     <p>
