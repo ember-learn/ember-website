@@ -1,7 +1,6 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const broccoliAssetRevDefaults = require('broccoli-asset-rev/lib/default-options');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
@@ -10,7 +9,9 @@ module.exports = function (defaults) {
       inline: true,
     },
     fingerprint: {
-      extensions: broccoliAssetRevDefaults.extensions.concat(['svg']),
+      // don't fingerprint images because we need to be able to access them dynamically
+      // see more info here: https://github.com/ef4/prember/issues/52
+      extensions: ['js', 'css', 'map'],
       generateAssetMap: true,
       fingerprintAssetMap: true,
       exclude: [
