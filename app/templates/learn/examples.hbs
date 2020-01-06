@@ -5,10 +5,9 @@
 
   <p>Whether you're simply interested in checking out how some feature is implemented, or you're looking to contribute, one of these projects might pique your interest!</p>
 
-  <ul class="list-unstyled layout-grid">
+  <ul class="list-unstyled grid lg:grid-2">
     {{#each this.model as |showcase|}}
       <EsCard
-        class="col-3-large"
         @alt=""
         @image="/images/showcase/{{showcase.image.src}}"
         full-image vertical
