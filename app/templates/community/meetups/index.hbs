@@ -1,57 +1,48 @@
-<h1>Meetups Around the World</h1>
+<div class="container">
+  <h1 class="mb-3">Meetups Around the World</h1>
 
-<section aria-labelledby="Meetups">
+  <section aria-labelledby="meetups" class="mb-3">
+    <h2 id="meetups">Find a meetup in your city</h2>
+    {{#leaflet-map lat=lat lng=lng zoom=zoom}}
+      {{tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
 
-  <h2>Find a meetup in your city</h2>
+      {{#each model as |meetup|}}
+        {{#marker-layer lat=meetup.lat lng=meetup.lng}}
+          {{#popup-layer}}
+            <a
+              href={{meetup.url}}
+              target="_blank"
+              rel="noopener"
+              >
+              {{meetup.location}}
+            </a>
+          {{/popup-layer}}
+        {{/marker-layer}}
+      {{/each}}
+    {{/leaflet-map}}
 
+    <div>
+      {{#each sortedMeetupsByArea as |area|}}
+        <div class="mt-3">
+          <h3>{{area.value}}</h3>
+          <ul class="list-unstyled grid lg:grid-4 sm:grid-2">
+            {{#each area.items as |meetup|}}
+              <li>
+                <img width="12" class="align-middle icon-left" src="/images/meetups/map-pin.png" alt="location icon" role="presentation">
+                <a href={{meetup.url}}>{{meetup.location}}</a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/each}}
+    </div>
+  </section>
 
-  {{#leaflet-map class="leaflet-container" lat=lat lng=lng zoom=zoom}}
-    {{tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
-
-    {{#each model as |meetup|}}
-      {{#marker-layer lat=meetup.lat lng=meetup.lng}}
-        {{#popup-layer}}
-          <a
-            href={{meetup.url}}
-            target="_blank"
-            rel="noopener"
-          >
-            {{meetup.location}}
-          </a>
-
-          {{!-- image: 02boston.png --}}
-        {{/popup-layer}}
-      {{/marker-layer}}
-    {{/each}}
-  {{/leaflet-map}}
-
-</section>
-
-<section>
-  <div class="meetup-locations-grid">
-    {{#each sortedMeetupsByArea as |area|}}
-      <div class="meetup-locations-grid-item">
-        <h3>
-          {{area.value}}
-        </h3>
-        <ul class="meetup-locations">
-          {{#each area.items as |meetup|}}
-            <li>
-              <a href={{meetup.url}}>{{meetup.location}}</a>
-            </li>
-          {{/each}}
-        </ul>
-      </div>
-    {{/each}}
-  </div>
-</section>
-
-<section>
-  <h2>Start your own meetup</h2>
-  <div>
-    <img alt="Meetup" class="pull-left" src="/images/community/meetup.png">
+  <section aria-labelledby="start-your-meetup">
+    <h2 id="start-your-meetup">Start your own meetup</h2>
+    <img alt="Meetup" src="/images/community/meetup.png" align="left" role="presentation">
     <p>
-      Ready to start a Meetup in your area? Fantastic news—appreciate you stepping up! Running a solid meetup isn't all that complicated, but it <em>can</em> be intimidating:<br>
+      Ready to start a Meetup in your area? Fantastic news—appreciate you stepping up! Running a solid meetup isn't all that complicated, but it <strong>can</strong> be intimidating:<br>
       we'd love to help you ease into it.
     </p>
     <p>
@@ -60,8 +51,5 @@
     <p>
       <a href="mailto:meetups@emberjs.com">Send us a note</a> if you have questions or need a hand.
     </p>
-  </div>
-  <div class="clearfix">
-
-  </div>
-</section>
+  </section>
+</div>
