@@ -59,7 +59,7 @@
     "ember-qunit": "^4.4.1",
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.10.0",
-    "ember-styleguide": "^4.0.0-3",
+    "ember-styleguide": "^4.0.0-4",
     "ember-template-lint": "^1.3.0",
     "ember-tether": "^1.0.0",
     "eslint-plugin-ember": "^6.2.0",
