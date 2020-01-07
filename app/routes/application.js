@@ -12,6 +12,9 @@ export default Route.extend({
 
     this.router.on('routeDidChange', () => {
       this.navbar.closePopupMenu();
+      if(window.scrollTo) {
+        window.scrollTo(0,0);
+      }
       this._trackPage();
     })
   },
