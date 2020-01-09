@@ -2,6 +2,7 @@
 @import "components/homepage-image-grid.css";
 @import "components/team-list.css";
 @import "components/release-timeline.css";
+@import "components/brand-logos.css";
 
 @media only percy {
   .hide-in-percy {
