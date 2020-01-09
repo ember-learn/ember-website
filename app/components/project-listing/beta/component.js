@@ -2,8 +2,7 @@ import Component from '@ember/component';
 import { computed } from '@ember/object';
 
 export default Component.extend({
-  classNames: ['left'],
-  classNameBindings: ['isCompleted::future-image'],
+  tagName: '',
 
   currentBetaNumber: computed('project.lastRelease', function() {
     let versionParts = this.project.lastRelease.split('.');
