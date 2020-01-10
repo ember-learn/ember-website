@@ -23,7 +23,7 @@ module('Acceptance | visual regression', function (hooks) {
     { title: '/index.html', route: '/'},
     { title: '/learn.html', route: '/learn/' },
     { title: '/legal.html', route: '/about/legal/' },
-    { title: '/logos.html', route: '/logos/' },
+    { title: '/logos.html', route: '/branding/' },
     { title: '/mascots.html', route: '/mascots/' },
     { title: '/meetup-assets.html', route: '/community/meetups/assets/' },
     { title: '/security.html', route: '/security/' },

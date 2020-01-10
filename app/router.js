@@ -22,7 +22,7 @@ Router.map(function() {
   this.route('about', function() {
     this.route('legal');
   });
-  this.route('logos');
+  this.route('branding');
   this.route('releases', function() {
     this.route('release');
     this.route('beta');
