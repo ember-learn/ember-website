@@ -1,0 +1,16 @@
+.dl-faq {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%
+}
+
+.dl-faq dt {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-top: .5em
+}
+
+.dl-faq dd {
+    margin: 0 auto;
+    max-width: 100%
+}
