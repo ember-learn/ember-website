@@ -16,10 +16,3 @@
 .align-middle {
   vertical-align: middle;
 }
-
-/* TODO delete when https://github.com/ember-learn/ember-styleguide/pull/261 is merged */
-@media (max-width: 1007px) {
-  .hide-on-mobile {
-    display: none;
-  }
-}
