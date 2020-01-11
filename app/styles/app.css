@@ -5,6 +5,8 @@
 @import "components/team-list.css";
 @import "components/terminal-code.css";
 
+@import "legacy/form.css";
+
 @media only percy {
   .hide-in-percy {
     visibility: hidden;
