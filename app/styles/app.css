@@ -1,8 +1,9 @@
-@import "components/terminal-code.css";
-@import "components/homepage-image-grid.css";
-@import "components/team-list.css";
-@import "components/release-timeline.css";
 @import "components/brand-logos.css";
+@import "components/homepage-image-grid.css";
+@import "components/release-timeline.css";
+@import "components/surveys.css";
+@import "components/team-list.css";
+@import "components/terminal-code.css";
 
 @media only percy {
   .hide-in-percy {
