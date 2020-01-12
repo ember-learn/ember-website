@@ -28,7 +28,7 @@ module('Acceptance | visual regression', function (hooks) {
     { title: '/meetup-assets.html', route: '/community/meetups/assets/' },
     { title: '/security.html', route: '/security/' },
     { title: '/sponsors.html', route: '/sponsors/' },
-    { title: '/teams.html', route: '/teams/' },
+    { title: '/team.html', route: '/teams/' },
     { title: '/tomster/index.html', route: '/mascots/' },
     { title: '/tomster/commission/index.html', route: '/mascots/commission/' },
     { title: '/tomster/faq.html', route: '/mascots/faq/' },
