@@ -4,6 +4,9 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
+    babel: {
+      plugins: [ require.resolve('ember-auto-import/babel-plugin') ]
+    },
     ifa: {
       enabled: true,
       inline: true,
@@ -32,7 +35,7 @@ module.exports = function (defaults) {
         'mascots',
         'security',
         'sponsors',
-        'team',
+        'teams',
         'mascots',
         'mascots/commission-sent',
         'mascots/commission',
@@ -43,6 +46,7 @@ module.exports = function (defaults) {
         'releases/release',
         'releases/canary',
         'releases/beta',
+        'releases/lts',
         'ember-community-survey-2016',
         'ember-community-survey-2017',
         'ember-community-survey-2018',

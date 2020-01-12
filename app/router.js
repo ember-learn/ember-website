@@ -31,7 +31,7 @@ Router.map(function() {
   });
   this.route('security');
   this.route('sponsors');
-  this.route('team');
+  this.route('team', { path: 'teams' });
 
   this.route('mascots', function() {
     this.route('commission-sent');
