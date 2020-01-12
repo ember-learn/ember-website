@@ -5,6 +5,6 @@ url: 'https://www.meetup.com/Chicago-Ember-js/'
 image: chicago-tomster.png
 tags:
   - all
-  - zoey
+  - tomster
   - meetup
 ---

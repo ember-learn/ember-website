@@ -5,6 +5,6 @@ url: 'http://www.embercares.com'
 image: cancer-zoey.png
 tags:
   - all
-  - tomster
+  - zoey
   - other
 ---

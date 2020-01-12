@@ -46,7 +46,11 @@ module.exports = function(environment) {
       componentOptions: {
         turnAuditOff: true,
       }
-    }
+    },
+    pageTitle: {
+      separator: ' - ',
+      prepend: true,
+    },
   };
 
   if (environment === 'development') {
