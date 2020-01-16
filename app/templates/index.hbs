@@ -174,25 +174,20 @@
         </div>
       </div>
     </div>
-    <div class="grid lg:grid-2 mt-4">
-      <div class="card">
-        <div class="card-content">
-          <div>
-            {{svg-jar "guides"}}
-          </div>
+    <div class="grid lg:grid-2 mt-4 list-unstyled">
+      <EsCard @image="/images/home/guides.svg" class="bg-dark" card-link>
+        <h3>
           <a href="https://guides.emberjs.com" class="text-md">Read the Guides</a>
-          <p>If you're familiar with JavaScript and web application development, our Guides will teach you everything you need to know to get started building with Ember.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <div>
-            {{svg-jar "blog"}}
-          </div>
+        </h3>
+        <p>If you're familiar with JavaScript and web application development, our Guides will teach you everything you need to know to get started building with Ember.</p>
+      </EsCard>
+
+      <EsCard @image="/images/home/blog.svg" class="bg-dark" card-link>
+        <h3>
           <a href="https://blog.emberjs.com" class="text-md">Read Our Blog</a>
-          <p>Find out about the newest releases and latest work happening in the ecosystem by visiting the official Ember Blog.</p>
-        </div>
-      </div>
+        </h3>
+        <p>Find out about the newest releases and latest work happening in the ecosystem by visiting the official Ember Blog.</p>
+      </EsCard>
     </div>
   </div>
 </section>
