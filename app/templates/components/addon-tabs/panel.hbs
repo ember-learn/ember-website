@@ -1,0 +1,9 @@
+<div
+  id="addon-panel-{{@tabId}}"
+  role="tabpanel"
+  tabindex="0"
+  aria-labelledby="addon-tab-{{@tabId}}"
+  class="addon-tabs--content {{if (eq @currentTab @tabId) "active-tab"}}"
+>
+  {{yield}}
+</div>
