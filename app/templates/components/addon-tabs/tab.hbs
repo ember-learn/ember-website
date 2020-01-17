@@ -1,0 +1,11 @@
+<button
+  class="addon-tabs--tab {{if (eq @currentTab @tabId) "active-tab"}}"
+  role="tab"
+  aria-selected={{if (eq @currentTab @tabId) "true"}}
+  aria-controls="addon-panel-{{@tabId}}"
+  id="addon-tab-{{@tabId}}"
+  tabindex={{if (eq @currentTab @tabId) "0" "-1"}}
+  onclick={{@onClick}}
+>
+  {{yield}}
+</button>
