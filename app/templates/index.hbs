@@ -5,7 +5,7 @@
   class="bg-dark"
 >
   <a href="https://guides.emberjs.com/release/getting-started/quick-start/" class="es-button">Quickstart</a>
-  <a href="https://guides.emberjs.com/release/tutorial/ember-cli/" class="margin-left-small">Read the Tutorial</a>
+  <a href="https://guides.emberjs.com/release/tutorial/ember-cli/" class="es-button-secondary ml-2">Read the Tutorial</a>
 </EsPageHeader>
 
 <section aria-labelledby="section-intro" class="bg-light">
@@ -137,14 +137,18 @@
   </div>
 </section>
 <section aria-labelledby="section-community" class="bg-muted bg-shape-swipe-top">
-  <div class="container layout text-light">
-    <h2 class="text-center text-xl" id="section-community">
-      A vibrant, welcoming community
-    </h2>
+  <div class="container">
+    <div class="layout text-light text-center">
+      <div class="lg:col-4 lg:start-2">
+        <h2 class="text-xl" id="section-community">
+          A vibrant, welcoming community
+        </h2>
 
-    <p class="lg:col-4 lg:start-2 text-center">
-      Ember's first commit was in 2011, but today our community is more active than ever. Whether it's one of our annual conferences, dozens of Meetup groups, or initiatives like Women Helping Women, we're always working hard to foster a friendly, professional, and welcoming environment for our developers.
-    </p>
+        <p>
+          Ember's first commit was in 2011, but today our community is more active than ever. Whether it's one of our annual conferences, dozens of Meetup groups, or initiatives like Women Helping Women, we're always working hard to foster a friendly, professional, and welcoming environment for our developers.
+        </p>
+      </div>
+    </div>
   </div>
 
   <HomepageImageGrid />
@@ -156,7 +160,7 @@
       <a href="https://emberconf.com" class="es-button">
         Learn about EmberConf
       </a>
-      <LinkTo @route="community.meetups">
+      <LinkTo @route="community.meetups" class="es-button-secondary ml-2">
         Ember Meetups
       </LinkTo>
     </div>
@@ -164,35 +168,30 @@
 </section>
 <section aria-labelledby="section-shipping" class="bg-dark bg-shape-boxes">
   <div class="container">
-    <div class="layout">
+    <div class="layout mb-3">
       <div class="lg:col-3">
         <h2 class="text-xl" id="section-shipping">Ready to start shipping?</h2>
         <p>If you're ready to dive in, the Quickstart is the fastest way to get going with Ember.js. Are you new to web development or a recent bootcamp grad? The Intro tutorial is a great place to start.</p>
         <div class="mt-4">
           <a href="https://guides.emberjs.com/release/getting-started/quick-start/" class="es-button">Quickstart</a>
-          <a href="https://github.com/emberjs" class="margin-left-small">View on Github</a>
+          <a href="https://github.com/emberjs" class="es-button-secondary ml-2">View on Github</a>
         </div>
       </div>
     </div>
-    <div class="grid lg:grid-2 mt-4">
-      <div class="card">
-        <div class="card-content">
-          <div>
-            {{svg-jar "guides"}}
-          </div>
+    <div class="grid lg:grid-2 mt-4 list-unstyled">
+      <EsCard @image="/images/home/guides.svg" class="bg-dark" card-link>
+        <h3>
           <a href="https://guides.emberjs.com" class="text-md">Read the Guides</a>
-          <p>If you're familiar with JavaScript and web application development, our Guides will teach you everything you need to know to get started building with Ember.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <div>
-            {{svg-jar "blog"}}
-          </div>
+        </h3>
+        <p>If you're familiar with JavaScript and web application development, our Guides will teach you everything you need to know to get started building with Ember.</p>
+      </EsCard>
+
+      <EsCard @image="/images/home/blog.svg" class="bg-dark" card-link>
+        <h3>
           <a href="https://blog.emberjs.com" class="text-md">Read Our Blog</a>
-          <p>Find out about the newest releases and latest work happening in the ecosystem by visiting the official Ember Blog.</p>
-        </div>
-      </div>
+        </h3>
+        <p>Find out about the newest releases and latest work happening in the ecosystem by visiting the official Ember Blog.</p>
+      </EsCard>
     </div>
   </div>
 </section>
