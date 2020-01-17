@@ -10,6 +10,9 @@ issues:
   markComment: >
     This issue has been automatically marked stale. If this issue is something that still needs work, please add a comment and it will remain open, otherwise it will close in 7 days. You are welcome to open a new issue if you miss the window. Thanks!
 
+exemptLabels:
+  - pinned
+
 # Label to use when marking an issue as stale
 staleLabel: stale
   
