@@ -1,0 +1,63 @@
+<div class="addon-tabs">
+  <div class="addon-tabs--header">
+    <button
+      class="addon-tabs--tab {{if (eq this.currentTab 0) "active-tab"}}"
+      onclick={{action (mut this.currentTab) 0}}
+    >
+      ember-cli-sass
+    </button>
+    <button
+      class="addon-tabs--tab {{if (eq this.currentTab 1) "active-tab"}}"
+      onclick={{action (mut this.currentTab) 1}}
+    >
+      SVG jar
+    </button>
+    <button
+      class="addon-tabs--tab {{if (eq this.currentTab 2) "active-tab"}}"
+      onclick={{action (mut this.currentTab) 2}}
+    >
+      Percy
+    </button>
+    <button
+      class="addon-tabs--tab {{if (eq this.currentTab 3) "active-tab"}}"
+      onclick={{action (mut this.currentTab) 3}}
+    >
+      ember-cli-deploy
+    </button>
+  </div>
+  {{!-- template-lint-disable block-indentation  --}}
+  <div class="addon-tabs--content {{if (eq this.currentTab 0) "active-tab"}}">
+    <p>Ember CLI Sass wires up your app with Sass, in a single command.</p>
+
+    <code class="addon-tabs--code">
+      <pre class="mt-3">&gt; ember install ember-cli-sass
+
+// app.scss
+body {
+  @extend .font-serif;
+}</pre>
+    </code>
+  </div>
+  <div class="addon-tabs--content {{if (eq this.currentTab 1) "active-tab"}}">
+    <p>TODO one</p>
+
+    <code class="addon-tabs--code">
+      <pre class="mt-3"></pre>
+    </code>
+  </div>
+  <div class="addon-tabs--content {{if (eq this.currentTab 2) "active-tab"}}">
+    <p>TODO two</p>
+
+    <code class="addon-tabs--code">
+      <pre class="mt-3"></pre>
+    </code>
+  </div>
+  <div class="addon-tabs--content {{if (eq this.currentTab 3) "active-tab"}}">
+    <p>TODO three</p>
+
+    <code class="addon-tabs--code">
+      <pre class="mt-3"></pre>
+    </code>
+  </div>
+  {{!-- template-lint-enable block-indentation  --}}
+</div>

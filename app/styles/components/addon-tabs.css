@@ -1,0 +1,58 @@
+.addon-tabs {
+  width: 460px;
+
+  background: rgb(52,55,62);
+  background: linear-gradient(0deg, rgba(52,55,62,1) 0%, rgba(66,69,77,1) 100%);
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px -10px rgba(0,0,0,0.75);
+}
+
+@media (max-width: 1007px) {
+  .addon-tabs {
+    width: 100%;
+  }
+}
+
+.addon-tabs--header {
+  text-align: left;
+  display: flex;
+}
+
+.addon-tabs--tab {
+  background: none;
+  margin: 0;
+  padding: 0 10px;
+  height: 50px;
+  border-width: 1px;
+  border-color: #54565E;
+  margin-left: -1px;
+  color: var(--color-gray-300);
+  text-align: left;
+}
+
+.addon-tabs--tab.active-tab {
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+}
+
+.addon-tabs--tab:first-child {
+  border-top-left-radius: 15px;
+  margin-left: 0;
+}
+.addon-tabs--tab:last-child {
+  border-top-right-radius: 15px;
+  flex-grow: 1;
+}
+.addon-tabs--content {
+  text-align: left;
+  padding: 30px;
+  display: none;
+}
+.addon-tabs--content.active-tab {
+  display: block;
+}
+.addon-tabs--code {
+  font-style: var(--font-family-mono);
+  font-size: .8em;
+  color: var(--color-gray-400)
+}
