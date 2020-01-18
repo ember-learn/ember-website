@@ -1,10 +1,9 @@
 import { helper } from '@ember/component/helper';
-import moment from 'moment';
+import { DateTime } from 'luxon';
 
-export function formatDateTime([date, format]/*, hash*/) {
-  if (format) { return moment(date).format(format); }
-
-  return moment(date).fromNow();
+export function formatDateTime([date, format]) {
+  let defaultFormat = 'MMM d';
+  return DateTime.fromJSDate(date).toFormat(format ? format : defaultFormat);
 }
 
 export default helper(formatDateTime);

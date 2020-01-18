@@ -1,4 +1,4 @@
-import { visit } from '@ember/test-helpers';
+import { visit, settled } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupApplicationTest } from 'ember-qunit';
 import { percySnapshot } from 'ember-percy';
@@ -28,7 +28,7 @@ module('Acceptance | visual regression', function (hooks) {
     { title: '/meetup-assets.html', route: '/community/meetups/assets/' },
     { title: '/security.html', route: '/security/' },
     { title: '/sponsors.html', route: '/sponsors/' },
-    { title: '/team.html', route: '/teams/' },
+    { title: '/teams.html', route: '/teams/' },
     { title: '/tomster/index.html', route: '/mascots/' },
     { title: '/tomster/commission/index.html', route: '/mascots/commission/' },
     { title: '/tomster/faq.html', route: '/mascots/faq/' },
@@ -43,6 +43,8 @@ module('Acceptance | visual regression', function (hooks) {
       await prev;
 
       await visit(config.route);
+
+      await settled();
 
       await percySnapshot(config.title);
     }, Promise.resolve());

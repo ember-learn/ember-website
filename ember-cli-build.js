@@ -4,6 +4,9 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
+    babel: {
+      plugins: [ require.resolve('ember-auto-import/babel-plugin') ]
+    },
     ifa: {
       enabled: true,
       inline: true,
@@ -64,13 +67,9 @@ module.exports = function (defaults) {
       includeHighChartsMore: true,
       includeModules: ['drilldown'],
     },
-  });
-
-  app.import("node_modules/highlightjs/highlight.pack.js");
-  app.import('vendor/shims/highlightjs.js');
-
-  app.import("node_modules/markdown-it/dist/markdown-it.js", {
-    using: [{ transformation: "amd", as: "markdown-it" }]
+    'ember-leaflet': {
+      excludeJS: true
+    }
   });
 
   return app.toTree();
