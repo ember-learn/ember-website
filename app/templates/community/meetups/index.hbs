@@ -4,23 +4,28 @@
 
   <section aria-labelledby="meetups" class="mb-3">
     <h2 id="meetups">Find a meetup in your city</h2>
-    {{#leaflet-map lat=lat lng=lng zoom=zoom}}
-      {{tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+    {{#if leafletPackageLoaded}}
+      {{#leaflet-map class="leaflet-container" lat=lat lng=lng zoom=zoom}}
+        {{tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
 
-      {{#each model as |meetup|}}
-        {{#marker-layer lat=meetup.lat lng=meetup.lng}}
-          {{#popup-layer}}
-            <a
-              href={{meetup.url}}
-              target="_blank"
-              rel="noopener"
+        {{#each model as |meetup|}}
+          {{#marker-layer lat=meetup.lat lng=meetup.lng}}
+            {{#popup-layer}}
+              <a
+                href={{meetup.url}}
+                target="_blank"
+                rel="noopener"
               >
-              {{meetup.location}}
-            </a>
-          {{/popup-layer}}
-        {{/marker-layer}}
-      {{/each}}
-    {{/leaflet-map}}
+                {{meetup.location}}
+              </a>
+            {{/popup-layer}}
+          {{/marker-layer}}
+        {{/each}}
+      {{/leaflet-map}}
+    {{else}}
+      {{!-- Empty div placeholder while package loads --}}
+      <div class="leaflet-container"></div>
+    {{/if}}
 
     <div>
       {{#each sortedMeetupsByArea as |area|}}
