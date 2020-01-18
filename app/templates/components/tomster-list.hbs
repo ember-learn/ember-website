@@ -30,7 +30,7 @@
             <span>{{tomster.title}}</span>
           {{/if}}
 
-          <time datetime={{moment-format tomster.date}}>{{moment-format tomster.date "MMMM D, YYYY"}}</time>
+          <time datetime={{tomster.date}}>{{format-date-time tomster.date "MMMM d, y"}}</time>
         </figcaption>
       </figure>
     </li>
