@@ -24,8 +24,10 @@
   "devDependencies": {
     "@ember/optional-features": "^0.7.0",
     "algoliasearch": "^3.33.0",
+    "babel-eslint": "^10.0.3",
     "broccoli-asset-rev": "^3.0.0",
     "broccoli-static-site-json": "^4.1.0",
+    "deepmerge": "^4.0.0",
     "ember-a11y-testing": "^1.0.0",
     "ember-auto-import": "^1.5.3",
     "ember-body-class": "^1.1.0",
@@ -49,7 +51,6 @@
     "ember-export-application-global": "^2.0.0",
     "ember-fetch": "^6.5.1",
     "ember-group-by": "0.0.6",
-    "ember-highcharts": "^1.2.0",
     "ember-href-to": "^3.1.0",
     "ember-leaflet": "^3.1.2",
     "ember-load-initializers": "^2.0.0",
