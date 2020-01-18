@@ -67,6 +67,9 @@ module.exports = function (defaults) {
       includeHighChartsMore: true,
       includeModules: ['drilldown'],
     },
+    'ember-leaflet': {
+      excludeJS: true
+    }
   });
 
   return app.toTree();
