@@ -1,4 +1,5 @@
 {{title "Ember.js - A framework for ambitious web developers" replace=true}}
+
 <EsPageHeader
   @headline="A framework for ambitious web developers"
   @detail="Ember.js is a productive, battle-tested JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device."
@@ -136,6 +137,7 @@
     </div>
   </div>
 </section>
+
 <section aria-labelledby="section-community" class="bg-muted bg-shape-swipe-top">
   <div class="container">
     <div class="layout text-light text-center">
@@ -172,18 +174,23 @@
     </div>
 
     <ul class="grid lg:grid-2 list-unstyled">
-      <EsCard class="lg:col-3" @image="/images/icons/discuss-logo.svg" card-link>
-        <h3>
-          <a href="http://discuss.emberjs.com">Discussion Forum</a>
-        </h3>
+      <EsLinkCard
+        class="lg:col-3"
+        @icon="discourse"
+        @title="Discussion Forum"
+        @href="http://discuss.emberjs.com"
+      >
         <p>Post and search longer-form questions in our public forum.</p>
-      </EsCard>
-      <EsCard class="lg:col-3" @image="/images/icons/discord-logo.svg" card-link>
-        <h3>
-          <a href="https://discord.gg/emberjs">Discord community chat</a>
-        </h3>
+      </EsLinkCard>
+
+      <EsLinkCard
+        class="lg:col-3"
+        @icon="discord"
+        @title="Discord community chat"
+        @href="https://discord.gg/emberjs"
+      >
         <p>Join our real-time chat server to connect with other developers and get answers.</p>
-      </EsCard>
+      </EsLinkCard>
     </ul>
 
     <p class="lg:col-4 lg:start-2 my-3 text-center">
@@ -192,21 +199,35 @@
     </p>
 
     <ul class="list-unstyled layout">
-      <EsCard class="lg:col-2 text-center" vertical @image="/images/icons/mic-icon.svg">
+      <EsCard
+        class="lg:col-2 text-center"
+        @icon="podcasts"
+      >
         <h3>Podcasts</h3>
+
         <ul class="list-unstyled">
           <li><a href="https://emberweekend.com/episodes">Ember Weekly</a></li>
           <li><a href="https://embermap.com/podcast">Ember Map Podcast</a></li>
         </ul>
       </EsCard>
-      <EsCard class="lg:col-2 text-center" vertical @image="/images/icons/book-icon.svg">
+
+      <EsCard
+        class="lg:col-2 text-center"
+        @icon="books"
+      >
         <h3>Books</h3>
+
         <ul class="list-unstyled">
           <li><a href="https://www.balinterdi.com/rock-and-roll-with-emberjs/">Rock and Roll with Ember.js</a></li>
         </ul>
       </EsCard>
-      <EsCard class="lg:col-2 text-center" vertical @image="/images/icons/tv-icon.svg">
+
+      <EsCard
+        class="lg:col-2 text-center"
+        @icon="videos"
+      >
         <h3>Videos</h3>
+
         <ul class="list-unstyled">
           <li><a href="https://embermap.com/">Ember Map</a></li>
         </ul>
@@ -214,32 +235,37 @@
     </ul>
   </div>
 </section>
+
 <section aria-labelledby="section-shipping" class="bg-dark bg-shape-boxes">
   <div class="container">
     <div class="layout mb-3">
       <div class="lg:col-3">
         <h2 class="text-xl" id="section-shipping">Ready to start shipping?</h2>
         <p>If you're ready to dive in, the Quickstart is the fastest way to get going with Ember.js. Are you new to web development or a recent bootcamp grad? The Intro tutorial is a great place to start.</p>
-        <div class="mt-4">
+
+        <p class="mt-4">
           <a href="https://guides.emberjs.com/release/getting-started/quick-start/" class="es-button">Quickstart</a>
           <a href="https://github.com/emberjs" class="es-button-secondary ml-1">View on Github</a>
-        </div>
+        </p>
       </div>
     </div>
-    <ul class="grid lg:grid-2 mt-4 list-unstyled">
-      <EsCard @image="/images/home/guides.svg" class="bg-dark" card-link>
-        <h3>
-          <a href="https://guides.emberjs.com" class="text-md">Read the Guides</a>
-        </h3>
-        <p>If you're familiar with JavaScript and web application development, our Guides will teach you everything you need to know to get started building with Ember.</p>
-      </EsCard>
 
-      <EsCard @image="/images/home/blog.svg" class="bg-dark" card-link>
-        <h3>
-          <a href="https://blog.emberjs.com" class="text-md">Read Our Blog</a>
-        </h3>
+    <ul class="grid lg:grid-2 mt-4 list-unstyled">
+      <EsLinkCard
+        @icon="guides"
+        @title="Read the Guides"
+        @href="https://guides.emberjs.com"
+      >
+        <p>If you're familiar with JavaScript and web application development, our Guides will teach you everything you need to know to get started building with Ember.</p>
+      </EsLinkCard>
+
+      <EsLinkCard
+        @icon="blog"
+        @title="Read Our Blog"
+        @href="https://blog.emberjs.com"
+      >
         <p>Find out about the newest releases and latest work happening in the ecosystem by visiting the official Ember Blog.</p>
-      </EsCard>
+      </EsLinkCard>
     </ul>
   </div>
 </section>
