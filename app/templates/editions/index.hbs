@@ -20,10 +20,13 @@
 
   <h2>Editions</h2>
   <ul class="grid lg:grid-3 unstyled-list">
-    <EsCard @image="/images/tomsters/octane.png" vertical full-image card-link class="lg:col-2">
-      <h3>
-        {{link-to "Octane (March 2019)" "editions.octane"}}
-      </h3>
-    </EsCard>
+    <li>
+      {{#link-to "editions.octane"}}
+        <div class="well p-5">
+          <img src="/images/tomsters/octane.png" alt="" role="presentation">
+        </div>
+        Octane (March 2019)
+      {{/link-to}}
+    </li>
   </ul>
 </section>
