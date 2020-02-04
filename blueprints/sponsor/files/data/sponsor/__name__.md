@@ -1,4 +1,5 @@
 ---
+name: <%= camelizedModuleName %>
 url:
 image: <%= dasherizedModuleName %>.png
 start: <%= date %>
