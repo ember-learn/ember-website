@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
-    <title>icons/books</title>
-    <desc>Created with Sketch.</desc>
-    <g id="icons/books" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <circle id="Oval" fill="#E04E39" fill-rule="nonzero" cx="32" cy="32" r="30"></circle>
-        <g id="book-alt" transform="translate(18.000000, 16.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <path d="M6,28 C4.8,28 4,27.2 4,26 C4,24.8 5,24 6,24 L25.958125,24 C25.8375,25.015 25.848125,27.02375 25.99125,28 L6,28 Z" id="Path" opacity="0.4"></path>
-            <path d="M6,24 L26.5,24 C27.3284271,24 28,23.3284271 28,22.5 L28,2 C28,0.8954305 27.1045695,0 26,0 L6,0 C2.6862915,0 0,2.6862915 0,6 L0,26 C0,29.3137085 2.6862915,32 6,32 L26.5,32 C27.3284271,32 28,31.3284271 28,30.5 L28,29.5 C28,28.6715729 27.3284271,28 26.5,28 L6,28 C4.8,28 4,27.2 4,26 C4,24.8 5,24 6,24 Z" id="Path"></path>
-        </g>
-    </g>
-</svg>
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="nonzero"><circle fill="#E04E39" cx="32" cy="32" r="30"/><g fill="#FFF"><path d="M24 44c-1.2 0-2-.8-2-2s1-2 2-2h19.958c-.12 1.015-.11 3.024.033 4H24z" opacity=".4"/><path d="M24 40h20.5a1.5 1.5 0 0 0 1.5-1.5V18a2 2 0 0 0-2-2H24a6 6 0 0 0-6 6v20a6 6 0 0 0 6 6h20.5a1.5 1.5 0 0 0 1.5-1.5v-1a1.5 1.5 0 0 0-1.5-1.5H24c-1.2 0-2-.8-2-2s1-2 2-2z"/></g></g></svg>
