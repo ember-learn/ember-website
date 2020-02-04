@@ -9,8 +9,7 @@
     {{#each this.model as |showcase|}}
       <EsCard
         @alt=""
-        @image="/images/showcase/{{showcase.image.src}}"
-        full-image vertical
+        @image={{hash src=(concat "/images/showcase/" showcase.image.src)}}
       >
         <h2>{{showcase.name}}</h2>
 
