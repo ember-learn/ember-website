@@ -3,6 +3,7 @@ import { computed } from '@ember/object';
 
 export default DS.Model.extend({
   content: DS.attr(),
+  name: DS.attr(),
   end: DS.attr('date'),
   image: DS.attr(),
   start: DS.attr('date'),
