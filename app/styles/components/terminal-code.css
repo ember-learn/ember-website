@@ -1,0 +1,34 @@
+.terminal-code {
+  border-radius: 4px;
+  min-height: 50px;
+  padding: 15px;
+}
+
+.terminal-code .dot {
+  height: 0.8em;
+  width: 0.8em;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 3px;
+}
+
+.terminal-code .dot.red {
+  background-color: rgb(238, 90, 90);
+}
+
+.terminal-code .dot.yellow {
+  background-color: rgb(250, 208, 109);
+}
+
+.terminal-code .dot.green {
+  background-color: rgb(116, 173, 111);
+}
+
+.terminal-code code {
+  display: block;
+  color: var(--color-light);
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 1em;
+  overflow-x: scroll;
+}

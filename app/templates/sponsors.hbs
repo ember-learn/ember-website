@@ -1,40 +1,56 @@
 {{title "Sponsors"}}
+<section class="container" aria-labelledby="ember-sponsors-and-friends">
+  <h1 id="ember-sponsors-and-friends">
+    Ember Sponsors and Friends
+  </h1>
 
-<h1>Ember Sponsors and Friends</h1>
+  <p>
+    Since its beginnings in 2011, Ember has only gotten as far as we have due to the support&mdash;both financial and technical&mdash;of the following companies:
+  </p>
 
-<p class="intro">
-  Since its beginnings in 2011, Ember has only gotten as far as we have due to the support&mdash;both financial and technical&mdash;of the following companies:
-</p>
+  <section class="my-5" aria-labelledby="ember-sponsors-and-friends-current-sponsors">
+    <h2 id="ember-sponsors-and-friends-current-sponsors">Current Sponsors</h2>
 
-<div class="sponsors section">
-  <h2 class="text-center">Current Sponsors</h2>
+    <ul class="unstyled grid sm:grid-2 lg:grid-3">
+      {{#each this.currentSponsors as |sponsor|}}
+        <figure>
+          <a href={{sponsor.url}} rel="nofollow noopener" target="_blank" class="well well-16/9">
+            <img src="/images/users/{{sponsor.image}}" alt={{sponsor.name}}>
+          </a>
+          <figcaption class="text-muted">
+            <p>
+              {{sponsor.term}}
+              <br>
+              {{sponsor.content}}
+            </p>
+          </figcaption>
+        </figure>
+      {{/each}}
+    </ul>
+  </section>
 
-  <ul class="sponsors-list">
-    {{#each currentSponsors as |user|}}
-      <li class="sponsors-list-item">
-        <a href={{user.url}}>
-          <img alt={{user.term}} src={{asset-map (concat "images/users/" user.image)}}>
-        </a>
-        <h3>{{user.term}}</h3>
-        <p id="sponsorType">{{user.content}}</p>
-      </li>
-    {{/each}}
-  </ul>
+  <section class="my-5" aria-labelledby="ember-sponsors-and-friends-past-sponsors">
+    <h2 id="ember-sponsors-and-friends-past-sponsors">Past Sponsors</h2>
 
-  <h2 class="text-center">Past Sponsors</h2>
+    <ul class="unstyled grid sm:grid-2 lg:grid-3">
+      {{#each this.pastSponsors as |sponsor|}}
+        <figure>
+          <a href={{sponsor.url}} rel="nofollow noopener" target="_blank" class="well well-16/9">
+            <img src="/images/users/{{sponsor.image}}" alt={{sponsor.name}}>
+          </a>
+          <figcaption class="text-muted">
+            <p>
+              {{sponsor.term}}
+              <br>
+              {{sponsor.content}}
+            </p>
+          </figcaption>
+        </figure>
+      {{/each}}
+    </ul>
+  </section>
 
-  <ul class="sponsors-list">
-    {{#each pastSponsors as |user|}}
-      <li class="sponsors-list-item">
-        <a href={{user.url}}>
-          <img alt={{user.term}} src={{asset-map (concat "images/users/" user.image)}}>
-        </a>
-        <h3>{{user.term}}</h3>
-        <p id="sponsorType">{{user.content}}</p>
-      </li>
-    {{/each}}
-  </ul>
-
-  <p class="thanks text-center">A special thanks to <a href="https://dribbble.com/mg">Matt Grantham</a> for design of the original Ember website.</p>
-
-</div>
+  <p class="text-center my-5">
+    A special thanks to <a href="https://dribbble.com/mg" rel="nofollow noopener" target="_blank">Matt Grantham</a> for design of the original Ember website.
+  </p>
+</section>

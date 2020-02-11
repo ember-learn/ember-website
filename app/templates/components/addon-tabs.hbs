@@ -1,0 +1,81 @@
+<div class="addon-tabs">
+  <div class="addon-tabs--header" role="tablist">
+    <AddonTabs::Tab
+      @currentTab={{this.currentTab}}
+      @tabId={{0}}
+      @onClick={{action (mut this.currentTab) 0}}
+    >
+      SASS
+    </AddonTabs::Tab>
+    <AddonTabs::Tab
+      @currentTab={{this.currentTab}}
+      @tabId={{1}}
+      @onClick={{action (mut this.currentTab) 1}}
+    >
+      SVG jar
+    </AddonTabs::Tab>
+    <AddonTabs::Tab
+      @currentTab={{this.currentTab}}
+      @tabId={{2}}
+      @onClick={{action (mut this.currentTab) 2}}
+    >
+      Auth
+    </AddonTabs::Tab>
+    <AddonTabs::Tab
+      @currentTab={{this.currentTab}}
+      @tabId={{3}}
+      @onClick={{action (mut this.currentTab) 3}}
+    >
+      Deploy
+    </AddonTabs::Tab>
+  </div>
+
+  {{!-- template-lint-disable block-indentation  --}}
+  <AddonTabs::Panel
+    @currentTab={{this.currentTab}}
+    @tabId={{0}}
+  >
+    <p>Ember CLI Sass wires up your app with Sass, in a single command.</p>
+
+    <code class="addon-tabs--code">
+      <pre class="mt-3">&gt; ember install ember-cli-sass
+
+// app.scss
+body {
+@extend .font-serif;
+}</pre>
+    </code>
+  </AddonTabs::Panel>
+
+  <AddonTabs::Panel
+    @currentTab={{this.currentTab}}
+    @tabId={{1}}
+  >
+    <p>TODO one</p>
+
+    <code class="addon-tabs--code">
+      <pre class="mt-3"></pre>
+    </code>
+  </AddonTabs::Panel>
+  <AddonTabs::Panel
+    @currentTab={{this.currentTab}}
+    @tabId={{2}}
+  >
+    <p>TODO two</p>
+
+    <code class="addon-tabs--code">
+      <pre class="mt-3"></pre>
+    </code>
+  </AddonTabs::Panel>
+  <AddonTabs::Panel
+    @currentTab={{this.currentTab}}
+    @tabId={{3}}
+  >
+    <p>TODO three</p>
+
+    <code class="addon-tabs--code">
+      <pre class="mt-3"></pre>
+    </code>
+  </AddonTabs::Panel>
+  {{!-- template-lint-enable block-indentation  --}}
+</div>

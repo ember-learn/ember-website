@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module'
@@ -13,6 +14,10 @@ module.exports = {
   ],
   env: {
     browser: true
+  },
+  globals: {
+    // leaflet maps global
+    L: 1
   },
   rules: {
   },

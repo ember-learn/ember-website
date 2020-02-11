@@ -1,0 +1,24 @@
+@import "components/addon-tabs.css";
+@import "components/brand-logos.css";
+@import "components/ecosystem-icons.css";
+@import "components/faqs.css";
+@import "components/homepage-image-grid.css";
+@import "components/release-timeline.css";
+@import "components/surveys.css";
+@import "components/team-list.css";
+@import "components/terminal-code.css";
+@import "legacy/form.css";
+
+@media only percy {
+  .hide-in-percy {
+    visibility: hidden;
+  }
+}
+
+.leaflet-container {
+   height: 400px;
+ }
+
+.align-middle {
+  vertical-align: middle;
+}

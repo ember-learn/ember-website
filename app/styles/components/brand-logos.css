@@ -1,0 +1,19 @@
+.brand-logos > li {
+  border: 1px solid rgba($black, .3);
+  background-image: url("/images/brand/brand-bg.png");
+  border-radius: 4px;
+  padding: 1rem 2rem;
+}
+
+.brand-logos > li:nth-child(1) {
+  background: #212121;
+
+}
+
+.brand-logos > li:nth-child(2) {
+  background: #fdfdfd;
+}
+
+.brand-logos > li:nth-child(3) {
+  background-color: rgba(199,52,31,.9);
+}

@@ -1,0 +1,22 @@
+<section class="mb-3" ...attributes>
+  <h2 class="text-center">{{@teamName}}</h2>
+  {{#if @teamDescription}}
+    <p class="text-center">
+      {{@teamDescription}}
+    </p>
+  {{/if}}
+  <div class="grid lg:grid-5">
+    {{#each @members as |member|}}
+      <div class="text-center">
+        <img src="/images/team/{{member.image}}" alt={{member.name}} class="team-image">
+        <div>
+          {{member.name}}
+        </div>
+        <div>
+          <a aria-label="{{member.name}} Github Profile" class="icon" href={{member.github}}>{{svg-jar "github"}}</a>
+          <a aria-label="{{member.name}} Twitter" class="icon" href={{member.twitter}}>{{svg-jar "twitter"}}</a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>

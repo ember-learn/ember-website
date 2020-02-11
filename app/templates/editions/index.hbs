@@ -1,29 +1,32 @@
 {{title "Editions"}}
+<section class="container" aria-labelledby="ember-editions">
+  <h1 id="ember-editions">Ember Editions</h1>
+  <p>
+    Editions are a concept that were introduced to Ember with <a href="https://github.com/emberjs/rfcs/blob/master/text/0364-roadmap-2018.md" target="_blank" rel="noopener">RFC #364 - Ember 2018 Roadmap</a>. An edition represents a cohesive programming model, and releasing a new edition represents a shift in the programming model due to new features and concepts being added to Ember. Ember Octane is the first new edition that was added to Ember.
+  </p>
+  <p>
+    Editions give us an opportunity to bring our documentation and marketing up-to-date to reflect the improvements
+  we’ve made since the previous edition. They are also the time to synchronize Ember and the wider ecosystem,
+  including updating default settings, blueprints, addons, and more.
+  Editions also help ensure that Ember users are getting a cohesive, polished experience.
+  </p>
+  <p>So, when is the right time to declare a new edition?</p>
+  <ul>
+    <li>A significant, coherent set of new features and APIs have all landed in the stable channel.</li>
+    <li>Error messages and the developer ergonomics of those new features have been fully polished.</li>
+    <li>Tooling (the Ember Inspector, blueprints, codemods, etc.) has been updated to work with these new features.</li>
+    <li>API documentation, guides, tutorials, and example code has been updated to incorporate the new features.</li>
+  </ul>
 
-<h1>Ember Editions</h1>
-<p>
-  Editions are a concept that were introduced to Ember with <a href="https://github.com/emberjs/rfcs/blob/master/text/0364-roadmap-2018.md" target="_blank" rel="noopener">RFC #364 - Ember 2018 Roadmap</a>. An edition represents a cohesive programming model, and releasing a new edition represents a shift in the programming model due to new features and concepts being added to Ember. Ember Octane is the first new edition that was added to Ember.
-</p>
-<p>
-  Editions give us an opportunity to bring our documentation and marketing up-to-date to reflect the improvements
-we’ve made since the previous edition. They are also the time to synchronize Ember and the wider ecosystem,
-including updating default settings, blueprints, addons, and more.
-Editions also help ensure that Ember users are getting a cohesive, polished experience.
-</p>
-<p>So, when is the right time to declare a new edition?</p>
-<ul>
-  <li>A significant, coherent set of new features and APIs have all landed in the stable channel.</li>
-  <li>Error messages and the developer ergonomics of those new features have been fully polished.</li>
-  <li>Tooling (the Ember Inspector, blueprints, codemods, etc.) has been updated to work with these new features.</li>
-  <li>API documentation, guides, tutorials, and example code has been updated to incorporate the new features.</li>
-</ul>
-
-<h2>Editions</h2>
-<ul class="list-imgs">
-  <li>
-    <img src="/images/tomsters/octane.png" alt="Tomster Octane Mascot" role="presentation"> <br>
-    {{#link-to "editions.octane"}}
-      Octane
-    {{/link-to}}
-  </li>
-</ul>
+  <h2>Editions</h2>
+  <ul class="grid lg:grid-3 unstyled-list">
+    <li>
+      {{#link-to "editions.octane"}}
+        <div class="well p-5">
+          <img src="/images/tomsters/octane.png" alt="" role="presentation">
+        </div>
+        Octane (March 2019)
+      {{/link-to}}
+    </li>
+  </ul>
+</section>

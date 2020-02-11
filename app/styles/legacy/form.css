@@ -1,0 +1,133 @@
+
+.tomster-form {
+  margin-top: 1.5em
+}
+
+@media screen and (min-width:0px) and (max-width:991px) {
+  .tomster-form {
+    padding: .5em
+  }
+
+  .tomster-form label, .tomster-form legend {
+    text-align: left
+  }
+}
+
+.tomster-form ul {
+  padding: 0;
+  margin: 0 !important;
+  list-style: none
+}
+
+.tomster-form label, .tomster-form legend {
+  margin-top: 1.5em;
+  margin-bottom: .4em;
+  display: block;
+  font-weight: 700
+}
+
+.tomster-form label.error, .tomster-form legend.error {
+  color: #c7341f;
+  font-size: 12px;
+  margin-top: -.9em
+}
+
+.tomster-form label .req, .tomster-form legend .req {
+  color: #c7341f
+}
+
+.tomster-form input[type=radio] {
+  display: inline-block
+}
+
+.tomster-form input[type=text], .tomster-form input[type=email], .tomster-form input[type=file], .tomster-form textarea {
+  border: none;
+  margin: 0;
+  display: block;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #fdfdfd;
+  outline: 0;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 1px #fdfdfd, inset -1px 1px 4px rgba(0, 0, 0, .1)
+}
+
+.tomster-form input[type=text]:focus, .tomster-form input[type=email]:focus, .tomster-form input[type=file]:focus, .tomster-form textarea:focus {
+  border-color: #888
+}
+
+.tomster-form input[type=text].error, .tomster-form input[type=email].error, .tomster-form input[type=file].error, .tomster-form textarea.error {
+  border-color: #c7341f
+}
+
+.tomster-form input[type=file] {
+  padding: 15px 10px;
+  background-color: transparent;
+  cursor: pointer
+}
+
+.tomster-form input[type=file]:focus {
+  border-color: #ddd
+}
+
+.tomster-form textarea {
+  width: 100%;
+  height: 100px
+}
+
+.tomster-form fieldset {
+  margin: 1em 0 0;
+  padding: 0;
+  border: 0
+}
+
+.tomster-form fieldset .choice {
+  display: block;
+  margin-top: .5em
+}
+
+@media screen and (min-width:0px) and (max-width:991px) {
+  .tomster-form fieldset .choice {
+    text-align: left
+  }
+}
+
+.tomster-form fieldset label {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-weight: 400
+}
+
+.tomster-form fieldset input.other {
+  margin-left: 20px;
+  margin-top: .1em;
+  width: calc(100% - 20px)
+}
+
+.tomster-form input[type=submit] {
+  margin-top: 1em
+}
+
+.tomster-form .inline-field {
+  margin-right: 5px;
+  float: left;
+  line-height: 40px
+}
+
+.tomster-form .inline-field input[type=text] {
+  width: auto
+}
+
+.tomster-form .inline-field label {
+  line-height: 1.6em
+}
+
+/* TODO delete both of these rules after refactoring the form */
+.tomster-form .hidden {
+  display:none
+}
+.tomster-form .clearfix {
+  clear:both
+}
