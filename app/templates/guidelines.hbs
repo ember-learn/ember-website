@@ -101,10 +101,12 @@
 
 <h3>Contact</h3>
 
-<p>
-  If you’d like to suggest tweaks to this page, <a href="https://github.com/emberjs/website">submit a pull request</a>. If you’d like to get in touch with someone on the Core Team with a question or concern related to our community guidelines or other larger concerns, email ombudsman@emberjs.com.
-</p>
+{{#let "https://github.com/ember-learn/ember-website/" as |website_url|}}
+  <p>
+    If you’d like to suggest tweaks to this page, <a href={{website_url}}>submit a pull request</a>. If you’d like to get in touch with someone on the Core Team with a question or concern related to our community guidelines or other larger concerns, email ombudsman@emberjs.com.
+  </p>
 
-<p>
-  As always, for issues, bug reports, pull requests, docs, etc., <a href="https://github.com/ember-learn/ember-website/">GitHub</a> is still the right place to go.
-</p>
+  <p>
+    As always, for issues, bug reports, pull requests, docs, etc., <a href={{website_url}}>GitHub</a> is still the right place to go.
+  </p>
+{{/let}}
