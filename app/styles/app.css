@@ -31,7 +31,8 @@ a.es-button.hero-cta {
   margin-top: 1em;
   text-align: center;
 }
-@media (min-width:768px) {
+/* TODO change to whatever this breakpoint really is */
+@media (min-width:992px) {
   a.es-button.hero-cta {
     display: inline-block;
   }
@@ -42,13 +43,65 @@ a.hero-link {
   font-size: large;
   line-height: 1.5;
   padding: 0;
-  margin-top: 0.5em;
+  margin: 0.5em auto;
+  max-width: fit-content;
   
 }
-@media (min-width: 768px) {
+/* TODO change to whatever this breakpoint really is */
+@media (min-width: 992px) {
   a.hero-link {
     display: inline-block;
-    max-width: fit-content;
+    
   }
 }
 
+a.es-button, .es-button, a.es-button-secondary, .es-button-secondary {
+  display: block;
+  margin: var(--spacing-1) auto;
+}
+@media (min-width: 992px) {
+  a.es-button, .es-button, a.es-button-secondary, .es-button-secondary {
+    display: inline-block;
+  }
+  a.es-button-secondary, .es-button-secondary {
+    margin-left: var(--spacing-1);
+  }
+}
+
+.card__content ul li {
+  width: 100%;
+  display: block;
+  clear: both;
+  box-sizing: border-box;
+}
+.card__content ul li a {
+  /* for a11y reasons, we need to make sure these tap targets are large enough- the padding will help with that */
+  align-items: center;
+  background: none;
+  box-sizing: border-box;
+  clear: both;
+  display: block;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: var(--spacing-1) 0;
+  text-decoration: underline;
+  width: 100%;
+}
+/* TODO update with the correct media query width */
+@media (min-width:992px) {
+  .card__content ul li a {
+    padding: 0;
+  }
+
+}
+
+a:hover, .card__content ul li a:hover {
+  cursor: pointer;
+}
+
+.navbar-list-item-dropdown-toggle:hover, .navbar-list-item-link:hover {
+  cursor: pointer;
+  color: var(--color-brand-hc-light);
+
+}
