@@ -16,12 +16,14 @@
   border-color: #54565E;
   border-width: 1px;
   color: var(--color-gray-300);
+  display: flex;
+  flex: 1 auto;
   height: 50px;
-  margin: 0;
+  justify-content: center;
   margin-left: -1px;
-  padding: 0 var(--spacing-1);
-  text-align: left;
+  margin: 0;
 }
+
 
 .addon-tabs--tab.active-tab {
   background-color: var(--color-brand-hc-dark);
