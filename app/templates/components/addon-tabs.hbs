@@ -5,28 +5,21 @@
       @tabId={{0}}
       @onClick={{action (mut this.currentTab) 0}}
     >
-      SASS
+      Concurrency
     </AddonTabs::Tab>
     <AddonTabs::Tab
       @currentTab={{this.currentTab}}
       @tabId={{1}}
       @onClick={{action (mut this.currentTab) 1}}
     >
-      SVG jar
-    </AddonTabs::Tab>
-    <AddonTabs::Tab
-      @currentTab={{this.currentTab}}
-      @tabId={{2}}
-      @onClick={{action (mut this.currentTab) 2}}
-    >
-      Auth
+      Internationalization
     </AddonTabs::Tab>
     <AddonTabs::Tab
       @currentTab={{this.currentTab}}
       @tabId={{3}}
       @onClick={{action (mut this.currentTab) 3}}
     >
-      Deploy
+      Progressive Enhancement
     </AddonTabs::Tab>
   </div>
 
@@ -35,15 +28,11 @@
     @currentTab={{this.currentTab}}
     @tabId={{0}}
   >
-    <p>Ember CLI Sass wires up your app with Sass, in a single command.</p>
+    <p>Ember Concurrency is an Ember addon that makes it easy to write concise, robust, and beautiful asynchronous code.<a href="http://ember-concurrency.com">(http://ember-concurrency.com)</a></p>
 
     <code class="addon-tabs--code">
-      <pre class="mt-3">&gt; ember install ember-cli-sass
-
-// app.scss
-body {
-@extend .font-serif;
-}</pre>
+      <pre class="mt-3">&gt; ember install ember-concurrency
+      </pre>
     </code>
   </AddonTabs::Panel>
 
@@ -51,17 +40,7 @@ body {
     @currentTab={{this.currentTab}}
     @tabId={{1}}
   >
-    <p>TODO one</p>
-
-    <code class="addon-tabs--code">
-      <pre class="mt-3"></pre>
-    </code>
-  </AddonTabs::Panel>
-  <AddonTabs::Panel
-    @currentTab={{this.currentTab}}
-    @tabId={{2}}
-  >
-    <p>TODO two</p>
+    <p>Internationalize your Ember apps! <a href="https://ember-intl.github.io/ember-intl/">https://ember-intl.github.io/ember-intl/</a></p>
 
     <code class="addon-tabs--code">
       <pre class="mt-3"></pre>
@@ -71,7 +50,7 @@ body {
     @currentTab={{this.currentTab}}
     @tabId={{3}}
   >
-    <p>TODO three</p>
+    <p>Ember Fastboot provides progressive enhancement for your ambitious web apps. <a href="https://ember-fastboot.com/">https://ember-fastboot.com/</a></p>
 
     <code class="addon-tabs--code">
       <pre class="mt-3"></pre>
