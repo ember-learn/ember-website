@@ -23,7 +23,7 @@
   vertical-align: middle;
 }
 
-/* this should get moved to the styleguide */
+/* TODO move all of this (from here down) over to the styleguide */
 a.es-button.hero-cta {
   border-radius: var(--radius);
   display: block;
@@ -42,9 +42,9 @@ a.hero-link {
   display: block;
   font-size: large;
   line-height: 1.5;
-  padding: 0;
   margin: 0.5em auto;
   max-width: fit-content;
+  padding: 0;
   
 }
 /* TODO change to whatever this breakpoint really is */
@@ -101,7 +101,6 @@ a:hover, .card__content ul li a:hover {
 }
 
 .navbar-list-item-dropdown-toggle:hover, .navbar-list-item-link:hover {
-  cursor: pointer;
   color: var(--color-brand-hc-light);
-
+  cursor: pointer;
 }
