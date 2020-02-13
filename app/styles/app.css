@@ -27,7 +27,7 @@
 a.es-button.hero-cta {
   border-radius: var(--radius);
   display: block;
-  font-size: 1.15em;
+  font-size: var(--font-size-lg);
   margin-top: 1em;
   text-align: center;
 }
