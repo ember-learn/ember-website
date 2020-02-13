@@ -93,7 +93,6 @@ a.es-button, .es-button, a.es-button-secondary, .es-button-secondary {
   .card__content ul li a {
     padding: 0;
   }
-
 }
 
 a:hover, .card__content ul li a:hover {
@@ -104,3 +103,33 @@ a:hover, .card__content ul li a:hover {
   color: var(--color-brand-hc-light);
   cursor: pointer;
 }
+
+/* TODO determine if this CSS is necessary or if the grid classes can be adjusted to reflect this same style */
+footer .logo-wrapper {
+  text-align: center;
+}
+@media (min-width:992px) {
+  footer .logo-wrapper {
+    text-align: left;
+  }
+}
+footer .footer-info-links a {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: var(--spacing-1);
+  text-align: center;
+  width: 100%;
+}
+@media (min-width:992px) {
+  footer .footer-info-links a {
+    display: block;
+    padding: 0;
+    text-align: start;
+    width: auto;
+  }
+}
+
+/* TODO footer sponsor logos need work for smaller breakpoints */
