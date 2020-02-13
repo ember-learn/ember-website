@@ -22,3 +22,33 @@
 .align-middle {
   vertical-align: middle;
 }
+
+/* this should get moved to the styleguide */
+a.es-button.hero-cta {
+  border-radius: var(--radius);
+  display: block;
+  font-size: 1.15em;
+  margin-top: 1em;
+  text-align: center;
+}
+@media (min-width:768px) {
+  a.es-button.hero-cta {
+    display: inline-block;
+  }
+}
+
+a.hero-link {
+  display: block;
+  font-size: large;
+  line-height: 1.5;
+  padding: 0;
+  margin-top: 0.5em;
+  
+}
+@media (min-width: 768px) {
+  a.hero-link {
+    display: inline-block;
+    max-width: fit-content;
+  }
+}
+
