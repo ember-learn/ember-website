@@ -12,6 +12,7 @@
 }
 
 .addon-tabs--tab {
+  align-items: center;
   background: none;
   border-color: #54565E;
   border-width: 1px;
@@ -20,8 +21,8 @@
   flex: 1 auto;
   height: 50px;
   justify-content: center;
-  margin-left: -1px;
   margin: 0;
+  margin-left: -1px;
 }
 
 
