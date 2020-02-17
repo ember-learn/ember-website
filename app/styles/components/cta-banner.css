@@ -1,29 +1,31 @@
 .cta-banner {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
-  width: 100%;
   background-color: var(--color-brand);
+  display: flex;
+  flex-flow: row wrap;
   height: 47px;
+  justify-content: center;
+  width: 100%;
 }
 .announcement-text {
-  font-size: 18px;
   color: white;
+  font-size: 18px;
   line-height: 1.5;
-  width: 95%;
   text-align: center;
+  width: 95%;
 }
 .announcement-text a {
+  background: none;
   color: white;
   text-decoration: underline;
-  background: none;
 }
 .cta-banner .toggle-close {
-  font-size: var(--font-size-lg);
-  margin: auto;
   background-color: transparent;
   border-color: transparent;
   border-radius: var(--radius);
-  /* font-weight: bold; */
+  font-size: var(--font-size-lg);
+  margin: auto;
+}
+.cta-banner .toggle-close:hover {
+  cursor: pointer;
 }
