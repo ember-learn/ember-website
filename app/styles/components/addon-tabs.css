@@ -1,23 +1,4 @@
 .addon-tabs {
-<<<<<<< HEAD
-  width: 460px;
-
-  background: rgb(52,55,62);
-  background: linear-gradient(0deg, rgba(52,55,62,1) 0%, rgba(66,69,77,1) 100%);
-  border-radius: 15px;
-  box-shadow: 0px 5px 15px -10px rgba(0,0,0,0.75);
-}
-
-@media (max-width: 1007px) {
-  .addon-tabs {
-    width: 100%;
-  }
-}
-
-.addon-tabs--header {
-  text-align: left;
-  display: flex;
-=======
   background: linear-gradient(0deg, rgba(52,55,62,1) 0%, rgba(66,69,77,1) 100%);
   border-radius: 15px;
   box-shadow: 0px 5px 15px -10px rgba(0,0,0,0.75);
@@ -28,25 +9,10 @@
 .addon-tabs--header {
   display: flex;
   text-align: left;
->>>>>>> dd3b98367300e045cd4033dc9b0cb86cba5fef6e
 }
 
 .addon-tabs--tab {
   background: none;
-<<<<<<< HEAD
-  margin: 0;
-  padding: 0 10px;
-  height: 50px;
-  border-width: 1px;
-  border-color: #54565E;
-  margin-left: -1px;
-  color: var(--color-gray-300);
-  text-align: left;
-}
-
-.addon-tabs--tab.active-tab {
-  background-color: var(--color-button-bg);
-=======
   border-color: #54565E;
   border-width: 1px;
   color: var(--color-gray-300);
@@ -61,7 +27,6 @@
 
 .addon-tabs--tab.active-tab {
   background-color: var(--color-brand-hc-dark);
->>>>>>> dd3b98367300e045cd4033dc9b0cb86cba5fef6e
   color: var(--color-button-text);
 }
 
@@ -74,27 +39,15 @@
   flex-grow: 1;
 }
 .addon-tabs--content {
-<<<<<<< HEAD
-  text-align: left;
-  padding: 30px;
-  display: none;
-=======
   display: none;
   padding: 30px;
   text-align: left;
->>>>>>> dd3b98367300e045cd4033dc9b0cb86cba5fef6e
 }
 .addon-tabs--content.active-tab {
   display: block;
 }
 .addon-tabs--code {
-<<<<<<< HEAD
-  font-style: var(--font-family-mono);
-  font-size: .8em;
-  color: var(--color-gray-400)
-=======
   color: var(--color-gray-400);
   font-size: .8em;
   font-style: var(--font-family-mono);
->>>>>>> dd3b98367300e045cd4033dc9b0cb86cba5fef6e
 }
