@@ -1,5 +1,6 @@
 @import "components/addon-tabs.css";
 @import "components/brand-logos.css";
+@import "components/cta-emberconf.css";
 @import "components/ecosystem-icons.css";
 @import "components/faqs.css";
 @import "components/homepage-image-grid.css";
@@ -16,9 +17,9 @@
 }
 
 .leaflet-container {
-   height: 400px;
-   z-index: 0;
- }
+  height: 400px;
+  z-index: 0;
+}
 
 .align-middle {
   vertical-align: middle;

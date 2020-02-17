@@ -1,0 +1,197 @@
+.emberconf-announcement {
+  align-items: center;
+  background: var(--color-gray-300);
+  border-radius: var(--radius);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -2em auto 2em auto;
+  padding: 1.5rem 2rem 6rem;
+  position: relative
+}
+
+@media screen and (min-width: 375px) {
+  .emberconf-announcement {
+      padding: 2rem 2rem 6rem;
+  }
+}
+
+.emberconf-announcement::after {
+  background-image: url(/images/home/ember-zoey-sm.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -2.5rem;
+  content: '';
+  display: block;
+  height: calc(calc(494 / 322) * 80px);
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 80px
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.3),(min-resolution:124.8dpi),(min-resolution:1.3dppx) {
+  .emberconf-announcement::after {
+      background-image:url(/images/home/ember-zoey-sm_x2.png)
+  }
+}
+
+.emberconf-announcement .logo-and-date {
+  align-items: center;
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative
+}
+
+@media screen and (min-width: 600px) {
+  .emberconf-announcement {
+      padding:2rem calc(220px + 1rem) 2rem 2rem
+  }
+
+  .emberconf-announcement::after {
+      bottom: auto;
+      height: calc(calc(494 / 322) * 220px);
+      left: auto;
+      margin-top: -1rem;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 220px
+  }
+
+  .emberconf-announcement .logo-and-date {
+      justify-content: flex-start
+  }
+}
+
+@media screen and (min-width: 890px) {
+  .emberconf-announcement {
+    max-width: 650px;
+    padding:2rem calc(165px + 2rem) 2rem 1rem;
+  }
+
+  .emberconf-announcement::after {
+      height: calc(calc(494 / 322) * 165px);
+      width: 165px
+  }
+
+  .emberconf-announcement .logo-and-date {
+      /* flex-basis: 20.5rem */
+      max-width: fit-content;
+  }
+}
+
+.emberconf-announcement .emberconf-logo {
+  height: auto;
+  width: 8rem
+}
+
+.emberconf-announcement .emberconf-date {
+  flex-basis: 100%;
+  margin-left: 0;
+  margin-top: .5rem;
+  text-align: center
+}
+
+@media screen and (min-width: 375px) {
+  .emberconf-announcement .emberconf-date {
+      flex-basis:auto;
+      margin-left: 1.25rem;
+      margin-top: 0;
+      text-align: left;
+  }
+}
+
+.emberconf-announcement .emberconf-date .line-1 {
+  color: #9b2918;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase
+}
+
+.emberconf-announcement .emberconf-date .line-2 {
+  margin: 0;
+}
+
+.emberconf-announcement .emberconf-date .line-3 {
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.emberconf-announcement .announcement-description {
+  align-items: center;
+  display: flex;
+  flex-basis: 100%;
+  margin-top: .5rem;
+  position: relative;
+  text-align: center
+}
+
+@media screen and (min-width: 375px) {
+  .emberconf-announcement .announcement-description {
+      margin-top:1rem
+  }
+}
+
+.emberconf-announcement .announcement-description::before {
+  /* background-color: #eee; */
+  content: '';
+  display: none;
+  position: absolute
+}
+
+@media screen and (min-width: 600px) {
+  .emberconf-announcement .announcement-description {
+      padding-right:0;
+      text-align: left
+  }
+
+  .emberconf-announcement .announcement-description::before {
+      height: 0.1rem;
+      top: 0;
+      width: 100%
+  }
+}
+
+@media screen and (min-width: 890px) {
+  .emberconf-announcement .announcement-description {
+      flex-basis:calc(100% - 26rem);
+      margin-top: 0;
+      padding-left: 2.5rem;
+      padding-top: 0
+  }
+
+  .emberconf-announcement .announcement-description::before {
+      display: block;
+      height: 100%;
+      left: 0;
+      width: .1rem
+  }
+}
+
+.emberconf-announcement .announcement-description .text .sale-date,.terminal-code .dot {
+  display: inline-block
+}
+
+.emberconf-announcement .announcement-description .text {
+  flex-basis: 100%
+}
+
+.emberconf-announcement .announcement-description p {
+  flex-basis: 100%;
+  margin-bottom: 0;
+  margin-top: 0
+}
+
+.emberconf-announcement .announcement-description p+p {
+  margin-top: .5rem
+}
+
+/* TODO we really shouldn't have to give this much specificity */
+main a.cta-logo {
+  background: none;
+}
