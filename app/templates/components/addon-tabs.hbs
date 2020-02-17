@@ -1,63 +1,80 @@
 <div class="addon-tabs">
-  <div class="addon-tabs--header">
-    <button
-      class="addon-tabs--tab {{if (eq this.currentTab 0) "active-tab"}}"
-      onclick={{action (mut this.currentTab) 0}}
+  <div class="addon-tabs--header" role="tablist">
+    <AddonTabs::Tab
+      @currentTab={{this.currentTab}}
+      @tabId={{0}}
+      @onClick={{action (mut this.currentTab) 0}}
     >
-      ember-cli-sass
-    </button>
-    <button
-      class="addon-tabs--tab {{if (eq this.currentTab 1) "active-tab"}}"
-      onclick={{action (mut this.currentTab) 1}}
+      Manage State
+    </AddonTabs::Tab>
+    <AddonTabs::Tab
+      @currentTab={{this.currentTab}}
+      @tabId={{1}}
+      @onClick={{action (mut this.currentTab) 1}}
     >
-      SVG jar
-    </button>
-    <button
-      class="addon-tabs--tab {{if (eq this.currentTab 2) "active-tab"}}"
-      onclick={{action (mut this.currentTab) 2}}
+      Authenticate
+    </AddonTabs::Tab>
+    <AddonTabs::Tab
+      @currentTab={{this.currentTab}}
+      @tabId={{2}}
+      @onClick={{action (mut this.currentTab) 2}}
     >
-      Percy
-    </button>
-    <button
-      class="addon-tabs--tab {{if (eq this.currentTab 3) "active-tab"}}"
-      onclick={{action (mut this.currentTab) 3}}
+      Translate
+    </AddonTabs::Tab>
+    <AddonTabs::Tab
+      @currentTab={{this.currentTab}}
+      @tabId={{3}}
+      @onClick={{action (mut this.currentTab) 3}}
     >
-      ember-cli-deploy
-    </button>
+      Deploy
+    </AddonTabs::Tab>
+
   </div>
+
   {{!-- template-lint-disable block-indentation  --}}
-  <div class="addon-tabs--content {{if (eq this.currentTab 0) "active-tab"}}">
-    <p>Ember CLI Sass wires up your app with Sass, in a single command.</p>
-
+  <AddonTabs::Panel
+    @currentTab={{this.currentTab}}
+    @tabId={{0}}
+  >
+    <p>Ember Concurrency is an Ember addon that makes state management a whole lot easier with useful primitives.</p>
+    <p>Read the docs: <a href="http://ember-concurrency.com">http://ember-concurrency.com</a></p>
+    <p>Easy installation:</p>
     <code class="addon-tabs--code">
-      <pre class="mt-3">&gt; ember install ember-cli-sass
-
-// app.scss
-body {
-  @extend .font-serif;
-}</pre>
+      <pre class="mt-3">&gt; ember install ember-concurrency</pre>
     </code>
-  </div>
-  <div class="addon-tabs--content {{if (eq this.currentTab 1) "active-tab"}}">
-    <p>TODO one</p>
-
+  </AddonTabs::Panel>
+  <AddonTabs::Panel
+    @currentTab={{this.currentTab}}
+    @tabId={{1}}
+  >
+    <p>Ember Simple Auth is an Ember addon with minimal requirements, supporting all kinds of authentication and authorization mechanisms.</p>
+    <p>Read the docs: <a href="https://ember-simple-auth.com/">https://ember-simple-auth.com/</a></p>
+    <p>Easy installation:</p>
     <code class="addon-tabs--code">
-      <pre class="mt-3"></pre>
+      <pre class="mt-3">&gt; ember install ember-simple-auth</pre>
     </code>
-  </div>
-  <div class="addon-tabs--content {{if (eq this.currentTab 2) "active-tab"}}">
-    <p>TODO two</p>
-
+  </AddonTabs::Panel>
+  <AddonTabs::Panel
+    @currentTab={{this.currentTab}}
+    @tabId={{2}}
+  >
+    <p>Internationalize your Ember apps with an addon that provides support for 150+ languages with locale-aware dates and time formatting.</p>
+    <p>Read the docs: <a href="https://ember-intl.github.io/ember-intl/">https://ember-intl.github.io/ember-intl/</a></p>
+    <p>Easy installation:</p>
     <code class="addon-tabs--code">
-      <pre class="mt-3"></pre>
+      <pre class="mt-3">&gt; ember install ember-intl</pre>
     </code>
-  </div>
-  <div class="addon-tabs--content {{if (eq this.currentTab 3) "active-tab"}}">
-    <p>TODO three</p>
-
+  </AddonTabs::Panel>
+  <AddonTabs::Panel
+    @currentTab={{this.currentTab}}
+    @tabId={{3}}
+  >
+    <p>Ember CLI Deploy is a deployment pipeline that keeps your deploy logic maintainable and reusable.</p>
+    <p>Read the docs: <a href="http://ember-cli-deploy.com/">http://ember-cli-deploy.com/</a></p>
+    <p>Easy installation:</p>
     <code class="addon-tabs--code">
-      <pre class="mt-3"></pre>
+      <pre class="mt-3">> ember install ember-cli-deploy</pre>
     </code>
-  </div>
+  </AddonTabs::Panel>
   {{!-- template-lint-enable block-indentation  --}}
 </div>
