@@ -8,13 +8,13 @@
   <div class="grid lg:grid-5">
     {{#each @members as |member|}}
       <div class="text-center">
-        <img src="/images/team/{{member.image}}" alt={{member.name}} class="team-image">
+        <img src="/images/team/{{member.image}}" alt="" class="team-image" role="presentation">
         <div>
           {{member.name}}
         </div>
         <div>
-          <a aria-label="{{member.name}} Github Profile" class="icon" href={{member.github}}>{{svg-jar "github"}}</a>
-          <a aria-label="{{member.name}} Twitter" class="icon" href={{member.twitter}}>{{svg-jar "twitter"}}</a>
+          <a aria-label="{{member.name}} Github Profile" class="icon bg-none" href={{member.github}}>{{svg-jar "github"}}</a>
+          <a aria-label="{{member.name}} Twitter" class="icon bg-none" href={{member.twitter}}>{{svg-jar "twitter"}}</a>
         </div>
       </div>
     {{/each}}
