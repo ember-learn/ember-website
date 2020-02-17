@@ -5,14 +5,25 @@
   flex-flow: row wrap;
   width: 100%;
   background-color: var(--color-brand);
+  height: 47px;
 }
 .announcement-text {
-  font-size: var(--font-size-lg);
+  font-size: 18px;
   color: white;
-  line-height: 2.2;
+  line-height: 1.5;
+  width: 95%;
+  text-align: center;
 }
 .announcement-text a {
   color: white;
   text-decoration: underline;
   background: none;
+}
+.cta-banner .toggle-close {
+  font-size: var(--font-size-lg);
+  margin: auto;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: var(--radius);
+  /* font-weight: bold; */
 }
