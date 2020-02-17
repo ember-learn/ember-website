@@ -1,0 +1,18 @@
+.cta-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  background-color: var(--color-brand);
+}
+.announcement-text {
+  font-size: var(--font-size-lg);
+  color: white;
+  line-height: 2.2;
+}
+.announcement-text a {
+  color: white;
+  text-decoration: underline;
+  background: none;
+}
