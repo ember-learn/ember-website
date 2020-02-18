@@ -4,6 +4,7 @@
       @currentTab={{this.currentTab}}
       @tabId={{0}}
       @onClick={{action (mut this.currentTab) 0}}
+      onkeydown={{action this.handleKeyboardNavigation}} 
     >
       Manage State
     </AddonTabs::Tab>
@@ -11,6 +12,7 @@
       @currentTab={{this.currentTab}}
       @tabId={{1}}
       @onClick={{action (mut this.currentTab) 1}}
+      onkeydown={{action this.handleKeyboardNavigation}} 
     >
       Authenticate
     </AddonTabs::Tab>
@@ -18,6 +20,7 @@
       @currentTab={{this.currentTab}}
       @tabId={{2}}
       @onClick={{action (mut this.currentTab) 2}}
+      onkeydown={{action this.handleKeyboardNavigation}} 
     >
       Translate
     </AddonTabs::Tab>
@@ -25,10 +28,10 @@
       @currentTab={{this.currentTab}}
       @tabId={{3}}
       @onClick={{action (mut this.currentTab) 3}}
+      onkeydown={{action this.handleKeyboardNavigation}} 
     >
       Deploy
     </AddonTabs::Tab>
-
   </div>
 
   {{!-- template-lint-disable block-indentation  --}}
