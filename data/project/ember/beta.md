@@ -10,7 +10,7 @@ lastRelease: 3.17.0-beta.5
 futureVersion: 3.17.0-beta.5
 finalVersion: 3.17.0
 channel: beta
-cycleEstimatedFinishDate: 2020-03-25
+cycleEstimatedFinishDate: 2020-03-02
 date: 2020-02-18
 nextDate: 2020-03-02
 changelogPath: CHANGELOG.md
