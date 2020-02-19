@@ -12,7 +12,7 @@ finalVersion: 3.17.0
 channel: beta
 cycleEstimatedFinishDate: 2020-03-25
 date: 2020-02-18
-nextDate: 2020-03-25
+nextDate: 2020-03-02
 changelogPath: CHANGELOG.md
 debugFileName: .debug.js
 ignoreFiles:
