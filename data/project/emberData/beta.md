@@ -8,7 +8,7 @@ lastRelease: 3.17.0-beta.0
 futureVersion: 3.17.0-beta.1
 finalVersion: 3.17.0
 channel: beta
-date: 2020-02-18
+date: 2020-01-25
 changelogPath: CHANGELOG.md
 debugFileName: .js
 ignoreFiles:
