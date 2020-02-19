@@ -6,7 +6,7 @@ filter:
   - /ember-template-compiler/
 repo: emberjs/ember.js
 initialVersion: 3.16.0
-initialReleaseDate: 2020-02-12
+initialReleaseDate: 2020-01-20
 lastRelease: 3.16.3
 futureVersion: 3.16.4
 channel: release
