@@ -23,6 +23,7 @@
   justify-content: center;
   margin: 0;
   margin-left: -1px;
+  padding: 0 var(--spacing-1);
 }
 
 
