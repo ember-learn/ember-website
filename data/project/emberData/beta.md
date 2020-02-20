@@ -4,11 +4,11 @@ baseFileName: ember-data
 filter:
  - /ember-data\./
 repo: emberjs/data
-lastRelease: 3.17.0-beta.0
-futureVersion: 3.17.0-beta.1
-finalVersion: 3.17.0
+lastRelease: 3.17.0-beta.0 # Manually update, see https://libraries.io/npm/ember-data throughout
+futureVersion: 3.17.0-beta.1 # Manually update
+finalVersion: 3.17.0 # Manually update
 channel: beta
-date: 2020-01-25
+date: 2020-01-25 # Manually update, get date for `lastRelease` 
 changelogPath: CHANGELOG.md
 debugFileName: .js
 ignoreFiles:
