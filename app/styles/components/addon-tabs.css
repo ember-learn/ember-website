@@ -15,6 +15,7 @@
   align-items: center;
   background: none;
   border-color: #54565E;
+  border-style: solid;
   border-width: 1px;
   color: var(--color-gray-300);
   display: flex;
