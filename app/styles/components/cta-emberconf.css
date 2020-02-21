@@ -79,8 +79,7 @@
   }
 
   .emberconf-announcement .logo-and-date {
-      /* flex-basis: 20.5rem */
-      max-width: fit-content;
+    flex-basis: auto;
   }
 }
 
