@@ -33,4 +33,10 @@ export default Component.extend({
     var diff = new Date(+this.endOfSurveyDate) - new Date(+this.today);
     return Math.ceil(diff / MS_IN_A_DAY );
   }),
+
+  actions: {
+    hide() {
+      this.set('hide', true);
+    }
+  }
 });
