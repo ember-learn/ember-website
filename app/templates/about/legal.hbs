@@ -1,8 +1,6 @@
 {{title "Legal"}}
-
-<h1 id="legal">Legal</h1>
-
-<section aria-labelledby="legal">
+<section class="container" aria-labelledby="legal">
+  <h1 id="legal">Legal</h1>
   <p>
     Ember is a registered trademark owned by <a href="http://www.tilde.io">Tilde Inc</a>.
   </p>
@@ -11,29 +9,32 @@
   </p>
 
   <h2>Non-Legalese TL;DR</h2>
-
   <p>
-    Ember's strong brand and identity are an important part of the project. We're protective of it! Please be respectful and <a href="mailto:leah@emberjs.com">reach out</a> if you're unsure if your use is acceptable. Visit the {{link-to "branding page" "logos"}} to learn more about what is and isn't permitted, and to download logos.
+    Ember's strong brand and identity are an important part of the project. We're protective of it! Please be respectful and <a href="mailto:leah@emberjs.com">reach out</a> if you're unsure if your use is acceptable. Visit the <LinkTo @route="logos">branding page</LinkTo> to learn more about what is and isn't permitted, and to download logos.
   </p>
   <p>
     We often grant licenses for use of the Ember logo for non-commercial community use cases. If you think you might be one of them, let's talk. We always aim to be reasonable.
   </p>
   <p>
-    The Tomster in particular has many more restrictions and should not be used without express authorization. {{link-to "You can view the various official Tomsters" "mascots"}}, and check out {{link-to "our growing FAQ" "mascots.faq"}}.
+    The Tomster in particular has many more restrictions and should not be used without express authorization. <LinkTo @route="mascots">You can view the various official Tomsters</LinkTo>, and check out <LinkTo @route="mascots.faq">our growing FAQ</LinkTo>.
   </p>
 
   <h2>The Ember License</h2>
-
   <p>
     The most current Ember license details <a href="https://github.com/emberjs/ember.js/blob/master/LICENSE">can be found on GitHub</a>.
   </p>
 
   <h2>Documentation Images</h2>
-
-  <p>
-    The graphs, diagrams and charts in the <a href="/guides">Ember Guides</a> have been released under the Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA) license.
-  </p>
-  <img alt="CC, By, Non Commercial, Share Alike" class="pull-right" src="/images/legal/license-cc_by_nc_sa.png">
+  <div class="layout">
+    <div class="lg:col-5 sm:col-3">
+      <p>
+        The graphs, diagrams and charts in the <a href="/guides">Ember Guides</a> have been released under the Creative Commons Attribution-NonCommercial-ShareAlike (CC BY-NC-SA) license.
+      </p>
+    </div>
+    <div class="lg:col-1 sm:col-1">
+      <img role="presentation" alt="" class="right" src="/images/legal/license-cc_by_nc_sa.png">
+    </div>
+  </div>
   <p>
     This license allows others to remix, tweak, and build upon the instructional materials non-commercially, as long as they credit Ember and license any new creations under the identical terms.
   </p>

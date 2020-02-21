@@ -1,11 +1,12 @@
-{{#if config.route}}
+{{#if (and config.route (not this.hide))}}
   <div class="survey-reminder-wrapper">
-    <div class="survey-reminder-container">
-      {{#if (eq router.currentRouteName config.route)}}
-        You have {{this.daysLeftText}} left to submit your response!
-      {{else}}
-        Take the {{#link-to config.route}}{{this.config.title}}{{/link-to}}
-      {{/if}}
-    </div>
+    {{#if (eq router.currentRouteName config.route)}}
+      You have {{this.daysLeftText}} left to submit your response!
+    {{else}}
+      Take the {{#link-to config.route class="ml-1"}}{{this.config.title}}{{/link-to}}
+    {{/if}}
+    <button type="button" aria-label="dismiss this message" class="toggle-close hide-on-mobile" {{action "hide"}}>
+      <span aria-hidden="true">x</span>
+    </button>
   </div>
 {{/if}}

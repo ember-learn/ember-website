@@ -1,0 +1,14 @@
+{{#let (eq @currentTab @tabId) as |isTabActive|}}
+  <button
+    class="addon-tabs--tab {{if isTabActive "active-tab"}}"
+    role="tab"
+    aria-selected={{if isTabActive "true" "false"}}
+    aria-controls="addon-panel-{{@tabId}}"
+    id="addon-tab-{{@tabId}}"
+    tabindex={{if isTabActive "0" "-1"}}
+    onclick={{@onClick}}
+    ...attributes
+  >
+    {{yield}}
+  </button>
+{{/let}}

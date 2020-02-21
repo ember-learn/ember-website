@@ -1,4 +1,4 @@
-import { visit } from '@ember/test-helpers';
+import { visit, settled } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupApplicationTest } from 'ember-qunit';
 import { percySnapshot } from 'ember-percy';
@@ -43,6 +43,8 @@ module('Acceptance | visual regression', function (hooks) {
       await prev;
 
       await visit(config.route);
+
+      await settled();
 
       await percySnapshot(config.title);
     }, Promise.resolve());

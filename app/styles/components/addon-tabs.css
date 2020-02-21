@@ -1,0 +1,56 @@
+.addon-tabs {
+  background: linear-gradient(0deg, rgba(52,55,62,1) 0%, rgba(66,69,77,1) 100%);
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px -10px rgba(0,0,0,0.75);
+  min-height: 364px;
+  width: 100%;
+}
+
+.addon-tabs--header {
+  display: flex;
+  text-align: left;
+}
+
+.addon-tabs--tab {
+  align-items: center;
+  background: none;
+  border-color: #54565E;
+  border-style: solid;
+  border-width: 1px;
+  color: var(--color-gray-300);
+  display: flex;
+  flex: 1 auto;
+  height: 50px;
+  justify-content: center;
+  margin: 0;
+  margin-left: -1px;
+  padding: 0 var(--spacing-1);
+}
+
+
+.addon-tabs--tab.active-tab {
+  background-color: var(--color-brand-hc-dark);
+  color: var(--color-button-text);
+}
+
+.addon-tabs--tab:first-child {
+  border-top-left-radius: 15px;
+  margin-left: 0;
+}
+.addon-tabs--tab:last-child {
+  border-top-right-radius: 15px;
+  flex-grow: 1;
+}
+.addon-tabs--content {
+  display: none;
+  padding: 30px;
+  text-align: left;
+}
+.addon-tabs--content.active-tab {
+  display: block;
+}
+.addon-tabs--code {
+  color: var(--color-gray-400);
+  font-size: .8em;
+  font-style: var(--font-family-mono);
+}

@@ -1,25 +1,22 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const broccoliAssetRevDefaults = require('broccoli-asset-rev/lib/default-options');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
+    babel: {
+      plugins: [ require.resolve('ember-auto-import/babel-plugin') ]
+    },
     ifa: {
       enabled: true,
       inline: true,
     },
     fingerprint: {
-      extensions: broccoliAssetRevDefaults.extensions.concat(['svg']),
+      // don't fingerprint images because we need to be able to access them dynamically
+      // see more info here: https://github.com/ef4/prember/issues/52
+      extensions: ['js', 'css', 'map'],
       generateAssetMap: true,
       fingerprintAssetMap: true,
-      exclude: [
-        'images/layers-2x.png',
-        'images/layers.png',
-        'images/marker-icon-2x.png',
-        'images/marker-icon.png',
-        'images/marker-shadow.png'
-      ]
     },
     prember: {
       urls: [
@@ -58,11 +55,6 @@ module.exports = function (defaults) {
         'editions/octane',
       ]
     },
-    'ember-bootstrap': {
-      bootstrapVersion: 4,
-      importBootstrapFont: false,
-      importBootstrapCSS: false
-    },
     'ember-cli-uglify': { // TODO: remove once this issue is fixed https://github.com/ember-cli/ember-cli/issues/8075
       uglify: {
         compress: {
@@ -75,13 +67,9 @@ module.exports = function (defaults) {
       includeHighChartsMore: true,
       includeModules: ['drilldown'],
     },
-  });
-
-  app.import("node_modules/highlightjs/highlight.pack.js");
-  app.import('vendor/shims/highlightjs.js');
-
-  app.import("node_modules/markdown-it/dist/markdown-it.js", {
-    using: [{ transformation: "amd", as: "markdown-it" }]
+    'ember-leaflet': {
+      excludeJS: true
+    }
   });
 
   return app.toTree();

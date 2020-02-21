@@ -1,34 +1,43 @@
-<h1 id="examples">Examples</h1>
+<section class="container" aria-labelledby="learning-emberjs-examples">
+  <h1 id="learning-emberjs-examples">Examples</h1>
 
-<p>In this section you will find applications that are maintained by the Ember.js teams with the help of contributors. While software is always a work in progress, the goal is to showcase patterns and solutions applied in real-world applications.</p>
-<p>Whether you're simply interested in checking out how some feature is implemented, or you're looking to contribute, one of these projects might pique your interest!</p>
+  <p>In this section, you will find applications that are maintained by the Ember.js teams with the help of contributors. While software is always a work in progress, the goal is to showcase patterns and solutions applied in real-world applications.</p>
 
-<div class="showcase">
-  {{#each model as |showcase|}}
-    <div class="showcase--item">
-      <div class="showcase--screenshot">
-        <img
-          class="showcase--image"
-          src={{asset-map (concat "images/showcase/" showcase.image.src)}}
-          alt={{showcase.image.alt}}
-        >
-      </div>
-      <div class="showcase--description">
-        <h3>
-          <a href={{showcase.demo}}>{{showcase.name}}<i class="icon-link-ext"></i></a>
-        </h3>
+  <p>Whether you're simply interested in checking out how some feature is implemented, or you're looking to contribute, one of these projects might pique your interest!</p>
 
-        <p>Repository: <a href={{showcase.repository}}>{{showcase.repository}}</a></p>
+  <ul class="list-unstyled grid lg:grid-2">
+    {{#each this.model as |showcase|}}
+      <EsCard
+        @alt=""
+        @image={{hash src=(concat "/images/showcase/" showcase.image.src)}}
+      >
+        <h2>{{showcase.name}}</h2>
 
-        <p>
-          {{showcase.description}}
-          <ul>
-            {{#each showcase.features as |feature|}}
-              <li>{{html-safe feature}}</li>
-            {{/each}}
-          </ul>
-        </p>
-      </div>
-    </div>
-  {{/each}}
-</div>
+        <h3>Description</h3>
+
+        {{html-safe showcase.html}}
+
+        <ul>
+          {{#each showcase.features as |feature|}}
+            <li>{{html-safe feature}}</li>
+          {{/each}}
+        </ul>
+
+        <h3>External Links</h3>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href={{showcase.demo}} rel="nofollow noopener" target="_blank">
+              Visit website
+            </a>
+          </li>
+          <li>
+            <a href={{showcase.repository}} rel="nofollow noopener" target="_blank">
+              Visit repository
+            </a>
+          </li>
+        </ul>
+      </EsCard>
+    {{/each}}
+  </ul>
+</section>

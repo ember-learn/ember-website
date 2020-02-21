@@ -31,6 +31,7 @@ Router.map(function() {
   });
   this.route('security');
   this.route('sponsors');
+  this.route('team-redirect', { path: 'team' });
   this.route('team', { path: 'teams' });
 
   this.route('mascots', function() {
@@ -45,6 +46,7 @@ Router.map(function() {
   this.route('ember-community-survey-2017');
   this.route('ember-community-survey-2018');
   this.route('ember-community-survey-2019');
+  this.route('ember-community-survey-2020');
 
   this.route('editions', function() {
     this.route('octane');

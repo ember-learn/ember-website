@@ -1,18 +1,12 @@
 {{head-layout}}
 {{title "Ember.js"}}
 
-{{#es-header}}
-  {{#es-navbar links=links home="/"}}
-    {{!-- TODO: add search implementation --}}
-  {{/es-navbar}}
-{{/es-header}}
+<EmberSurvey />
 
-{{ember-survey}}
+<EsHeader @links={{this.links}} @home="/" />
 
-{{job-board-banner}}
-
-<main class="container">
+<main>
   {{outlet}}
 </main>
 
-{{es-footer}}
+<EsFooter @infoLinks={{this.infoLinks}}/>

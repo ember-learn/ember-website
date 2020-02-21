@@ -1,0 +1,12 @@
+{{#let (eq @currentTab @tabId) as |isTabActive|}}
+  <div
+    id="addon-panel-{{@tabId}}"
+    role="tabpanel"
+    tabindex="0"
+    aria-labelledby="addon-tab-{{@tabId}}"
+    class="addon-tabs--content {{if isTabActive "active-tab"}}"
+    hidden={{not isTabActive}}
+  >
+    {{yield}}
+  </div>
+{{/let}}

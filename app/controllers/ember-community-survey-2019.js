@@ -5,8 +5,7 @@
 // ~SOME: Adding prose, especially for FFS: Discord + Gmail
 // Adding pattern textures in highcharts
 
-
-
+import theme from '../highchart-themes/survey';
 
 import Controller from '@ember/controller';
 
@@ -2604,6 +2603,7 @@ const MS_Q601 = {
 
 //=============================================================================
 export default Controller.extend({
+  theme,
   newReleaseAdoption,
   overallAdoption,
   emberDataAdoption,

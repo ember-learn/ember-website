@@ -1,0 +1,38 @@
+.ecosystem-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  width: 190px;
+  margin: auto;
+}
+
+@media (max-width: 1007px) {
+  .ecosystem-icons {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    width: inherit;
+  }
+
+  .ecosystem-icon {
+    margin: auto;
+  }
+}
+
+.ecosystem-icon {
+  position: relative;
+  width: 130px;
+  height: 130px;
+}
+
+.ecosystem-icon .logo {
+  bottom: 20px;
+  right: 10px;
+  position: absolute;
+}
+.ecosystem-icon .logo.rotate {
+  transform: rotate(-9deg);
+}
+
+.ecosystem-icon .background {
+  position: absolute;
+  left: 0;
+}
