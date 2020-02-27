@@ -14,7 +14,7 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "ember build",
+    "build": "ember build -prod",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "lint:style": "stylelint 'app/**/*.css'",

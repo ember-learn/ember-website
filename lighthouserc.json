@@ -1,0 +1,12 @@
+{
+  "ci": {
+    "collect": {
+      "numberOfRuns": 5,
+      "staticDistDir": "dist",
+      "url": ["/"]
+    },
+    "upload": {
+      "serverBaseUrl": "https://ember-lighthouse-ci-server.herokuapp.com/"
+    }
+  }
+}
