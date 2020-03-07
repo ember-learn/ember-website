@@ -10,7 +10,7 @@ assignees: ''
 **Describe the bug**
 A clear and concise description of what the bug is.
 
-**note:** you are currently creating a bug in the `Ember Website` project, which controls the **apex** domain i.e. https://emberjs.com. If you have an issue with any of the other subdomains please click the following links to create an issue there: 
+**note:** you are currently creating a bug in the `Ember Website` project, which controls the **apex** domain i.e. https://emberjs.com. If you have an issue with any of the other subdomains please click the following links to create an issue there:
 
 https://api.emberjs.com -> https://github.com/ember-learn/ember-api-docs/issues/new
 https://deprecations.emberjs.com -> https://github.com/ember-learn/deprecation-app/issues/new
