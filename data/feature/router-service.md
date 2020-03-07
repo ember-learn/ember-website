@@ -27,7 +27,7 @@ declarative forms of controlling the router, limiting their ability to
 implement new features easily or replace built-in framework APIs.
 
 The router service is an Ember
-[`Service`](https://guides.emberjs.com/current/applications/services/) that
+[`Service`](https://guides.emberjs.com/release/current/applications/services/) that
 that can be injected into components or other services
 and used to imperatively query and modify the current state of the router.
 
