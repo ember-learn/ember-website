@@ -51,12 +51,6 @@ module.exports = function(environment) {
       separator: ' - ',
       prepend: true,
     },
-
-    survey: {
-      route: 'ember-community-survey-2020',
-      title: '2020 Ember Community Survey',
-      endDate: '2020-03-8'
-    },
   };
 
   if (environment === 'development') {
