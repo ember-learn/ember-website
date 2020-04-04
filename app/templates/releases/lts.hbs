@@ -40,24 +40,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>3.16</td>
-        <td>March 4, 2020</td>
-        <td>November 11, 2020</td>
-        <td>March 17, 2021</td>
-      </tr>
-      <tr>
-        <td>3.12</td>
-        <td>September 19, 2019</td>
-        <td>May 28, 2020</td>
-        <td>October 1, 2020</td>
-      </tr>
-      <tr>
-        <td>3.8</td>
-        <td>April 1, 2019</td>
-        <td>December 9, 2019</td>
-        <td>April 13, 2020</td>
-      </tr>
+      {{#each this.currentlySupportedLTS as |release|}}
+        <tr>
+          <td>{{release.version}}</td>
+          <td>{{format-date-time release.promotionDate "MMMM d, yyyy"}}</td>
+          <td>{{format-date-time (add-weeks release.promotionDate 36) "MMMM d, yyyy"}}</td>
+          <td>{{format-date-time (add-weeks release.promotionDate 54) "MMMM d, yyyy"}}</td>
+        </tr>
+      {{/each}}
     </tbody>
   </table>
 
