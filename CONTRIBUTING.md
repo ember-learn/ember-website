@@ -24,3 +24,16 @@ If you want to add an existing Team Member to another team or change their team 
 To add a new team member you can run `ember g meetup city-country` and make sure that all the fields are filled in.
 
 The generated meetup will have two organisers but you can have as many, or as few as you need or want.
+
+### Updating LTS Channel page
+
+Roughly every 4 minor versions, and every final minor version before the next major release, a release of Ember gets promoted to LTS.
+
+Once a new LTS has been announced, please update the [LTS Channel page](https://emberjs.com/releases/lts/) by following these steps:
+
+- Update `app/controllers/releases/lts.js` to show currently supported LTS versions.
+- Update `data/project/ember/lts.md` to show the most recent LTS version.
+
+You can find out _when_ a release was promoted to LTS from the [changelog for Ember.js](https://github.com/emberjs/ember.js/blob/master/CHANGELOG.md). The LTS promotion date is the release date of the next minor version. For example, Ember 3.16 was promoted to LTS on [March 4, 2020](https://github.com/emberjs/ember.js/blob/master/CHANGELOG.md#v3170-march-4-2020) because that's the release date of v3.17.0.
+
+Don't worry about calculating dates for bugfixes and security patches. We made a helper, `add-weeks`, to do the math for you!
