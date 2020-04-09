@@ -42,6 +42,10 @@
   grid-row: span 2;
 }
 
+.img-content {
+  height: max-content;
+  width: max-content;
+}
 /* IN ht estyleguides */
 
 img {
