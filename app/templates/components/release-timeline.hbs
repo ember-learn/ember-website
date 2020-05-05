@@ -7,30 +7,12 @@
   <div class="path-to-release">
     <div class="bold">The path to {{@project.finalVersion}}...</div>
     <div class="steps">
-      {{project-listing/beta
-          version=1
-          project=@project
-      }}
-      {{project-listing/beta
-          version=2
-          project=@project
-      }}
-      {{project-listing/beta
-          version=3
-          project=@project
-      }}
-      {{project-listing/beta
-          version=4
-          project=@project
-      }}
-      {{project-listing/beta
-          version=5
-          project=@project
-      }}
-      {{project-listing/beta
-          version=6
-          project=@project
-      }}
+      {{#each this.betaList as |oneIndexed|}}
+        {{project-listing/beta
+            version=oneIndexed
+            project=@project
+        }}
+      {{/each}}
     </div>
   </div>
   <div class="release future-image">
