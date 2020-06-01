@@ -25,3 +25,7 @@
 .align-middle {
   vertical-align: middle;
 }
+
+.temp-fullpage {
+  min-height: 100vh;
+}
