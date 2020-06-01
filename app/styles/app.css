@@ -29,3 +29,7 @@
 .temp-fullpage {
   min-height: 100vh;
 }
+
+.temp-nav {
+  padding-left: 0;
+}
