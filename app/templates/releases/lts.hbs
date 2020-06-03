@@ -9,7 +9,9 @@
   <h2>What is an LTS release?</h2>
 
   <p>
-    LTS versions receive bugfixes for 36 weeks and security updates for 54 weeks.
+    Once a release of Ember gets promoted to LTS, it receives <strong>bugfixes for 36 weeks</strong> and <strong>security updates for 54 weeks</strong>.
+  </p>
+  <p>
     An LTS release is the best version to use if you won't be updating your app frequently,
     but want to help your app stay secure and working smoothly.
     Another reason to use an LTS is if you have a very large, complex app,
@@ -31,31 +33,21 @@
   <table>
     <thead>
       <tr>
-        <th>LTS Version</th>
-        <th>Released</th>
+        <th>LTS version</th>
+        <th>Promotion date</th>
         <th>Bugfixes until</th>
         <th>Security patches until</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>3.16</td>
-        <td>Jan 20, 2020</td>
-        <td>Sep 2020</td>
-        <td>Feb 2021</td>
-      </tr>
-      <tr>
-        <td>3.12</td>
-        <td>Aug 5, 2019</td>
-        <td>Apr 2020</td>
-        <td>Aug 2020</td>
-      </tr>
-      <tr>
-        <td>3.8</td>
-        <td>Feb 18, 2019</td>
-        <td>Oct 2019</td>
-        <td>Mar 2020</td>
-      </tr>
+      {{#each this.currentlySupportedLTS as |release|}}
+        <tr>
+          <td>{{release.version}}</td>
+          <td>{{format-date-time release.promotionDate "MMMM d, yyyy"}}</td>
+          <td>{{format-date-time (add-weeks release.promotionDate 36) "MMMM d, yyyy"}}</td>
+          <td>{{format-date-time (add-weeks release.promotionDate 54) "MMMM d, yyyy"}}</td>
+        </tr>
+      {{/each}}
     </tbody>
   </table>
 

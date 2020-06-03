@@ -3,10 +3,18 @@
 
 <EmberSurvey />
 
-<EsHeader @links={{this.links}} @home="/" />
+<header class="es-header">
+  <nav class="es-navbar">
+    <ul class="temp-nav">
+      <li>
+        <a class="navbar-brand-wrapper" href="/">
+          <img class="navbar-brand" src="/images/ember-logo.svg" alt="home" width="83" height="40">
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
 <main>
   {{outlet}}
 </main>
-
-<EsFooter @infoLinks={{this.infoLinks}}/>
