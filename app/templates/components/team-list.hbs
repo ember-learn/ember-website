@@ -8,7 +8,7 @@
   <div class="grid lg:grid-5">
     {{#each @members as |member|}}
       <div class="text-center">
-        <img src="/images/team/{{member.image}}" alt={{member.name}} class="team-image">
+        <img src="/images/team/{{member.image}}" alt={{member.name}} class="team-image" role="presentation" loading="lazy">
         <div>
           {{member.name}}
         </div>
