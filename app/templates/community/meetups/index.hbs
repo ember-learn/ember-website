@@ -4,37 +4,37 @@
 
   <section aria-labelledby="meetups" class="mb-3">
     <h2 id="meetups">Find a meetup in your city</h2>
-    {{#if leafletPackageLoaded}}
-      {{#leaflet-map class="leaflet-container" lat=lat lng=lng zoom=zoom}}
-        {{tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+    {{#if this.leafletPackageLoaded}}
+      <LeafletMap class="leaflet-container" @lat={{this.lat}} @lng={{this.lng}} @zoom={{this.zoom}}>
+        <TileLayer @url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"/>
 
-        {{#each model as |meetup|}}
-          {{#marker-layer lat=meetup.lat lng=meetup.lng}}
-            {{#popup-layer}}
+        {{#each this.model as |meetup|}}
+          <MarkerLayer @lat={{meetup.lat}} @lng={{meetup.lng}}>
+            <PopupLayer>
               <a
                 href={{meetup.url}}
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer noopener"
               >
                 {{meetup.location}}
               </a>
-            {{/popup-layer}}
-          {{/marker-layer}}
+            </PopupLayer>
+          </MarkerLayer>
         {{/each}}
-      {{/leaflet-map}}
+      </LeafletMap>
     {{else}}
       {{!-- Empty div placeholder while package loads --}}
       <div class="leaflet-container"></div>
     {{/if}}
 
     <div>
-      {{#each sortedMeetupsByArea as |area|}}
+      {{#each this.sortedMeetupsByArea as |area|}}
         <div class="mt-3">
           <h3>{{area.value}}</h3>
           <ul class="list-unstyled grid lg:grid-4 sm:grid-2">
             {{#each area.items as |meetup|}}
               <li>
-                <img width="12" class="align-middle icon-left" src="/images/meetups/map-pin.png" alt="location icon" role="presentation">
+                <img width="12" class="align-middle icon-left" src="/images/meetups/map-pin.png" alt="location icon" loading="lazy">
                 <a href={{meetup.url}}>{{meetup.location}}</a>
               </li>
             {{/each}}
@@ -46,13 +46,19 @@
 
   <section aria-labelledby="start-your-meetup">
     <h2 id="start-your-meetup">Start your own meetup</h2>
-    <img alt="Meetup" src="/images/community/meetup.png" align="left" role="presentation">
+    <img alt="Meetup" src="/images/community/meetup.png" align="left" loading="lazy">
     <p>
       Ready to start a Meetup in your area? Fantastic news—appreciate you stepping up! Running a solid meetup isn't all that complicated, but it <strong>can</strong> be intimidating:<br>
       we'd love to help you ease into it.
     </p>
     <p>
-      {{#link-to "community.meetups-getting-started"}}We've put together some tips for first-time organizers{{/link-to}} that should hopefully help you get off your feet. There's also a handy page of {{#link-to "community.meetups.assets"}}Resources and Assets for organizers{{/link-to}}.
+      <LinkTo @route="community.meetups-getting-started">
+        We've put together some tips for first-time organizers
+      </LinkTo>
+      that should hopefully help you get off your feet. There's also a handy page of
+      <LinkTo @route="community.meetups.assets">
+        Resources and Assets for organizers
+      </LinkTo>.
     </p>
     <p>
       <a href="mailto:meetups@emberjs.com">Send us a note</a> if you have questions or need a hand.
