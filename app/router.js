@@ -13,6 +13,7 @@ Router.map(function() {
       this.route('assets');
     });
     this.route('meetups-getting-started');
+    this.route('black-lives-matter');
   });
   this.route('ember-users');
   this.route('guidelines');
