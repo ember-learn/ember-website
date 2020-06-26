@@ -53,7 +53,7 @@
     "ember-fetch": "^7.0.0",
     "ember-group-by": "0.0.6",
     "ember-href-to": "^3.1.0",
-    "ember-leaflet": "^4.0.2",
+    "ember-leaflet": "^4.1.0",
     "ember-load-initializers": "^2.1.1",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-metrics": "^0.13.0",
