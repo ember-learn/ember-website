@@ -14,7 +14,9 @@
         </div>
         <div>
           <a aria-label="{{member.name}} Github Profile" class="icon" href={{member.github}}>{{svg-jar "github"}}</a>
-          <a aria-label="{{member.name}} Twitter" class="icon" href={{member.twitter}}>{{svg-jar "twitter"}}</a>
+          {{#if member.twitter}}
+            <a aria-label="{{member.name}} Twitter" class="icon" href={{member.twitter}}>{{svg-jar "twitter"}}</a>
+          {{/if}}
         </div>
       </div>
     {{/each}}
