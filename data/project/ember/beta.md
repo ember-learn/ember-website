@@ -10,9 +10,9 @@ lastRelease: 3.21.0-beta.3 # Manually update
 futureVersion: 3.21.0-beta.4 # Manually update
 finalVersion: 3.21.0 # Manually update
 channel: beta
-cycleEstimatedFinishDate: 2020-08-24 12:00:00 GMT # Manually update, change next one to 6 weeks from this date...regardless of delays in the release
+cycleEstimatedFinishDate: 2020-08-24 12:00:00 # Manually update, change next one to 6 weeks from this date...regardless of delays in the release
 date: 2020-07-27 # Manually update, get date for `lastRelease`
-nextDate: 2020-08-24 12:00:00 GMT # Manually update, change next one to 6 weeks from this date...regardless of delays in the release
+nextDate: 2020-08-24 12:00:00 # Manually update, change next one to 6 weeks from this date...regardless of delays in the release
 changelogPath: CHANGELOG.md
 debugFileName: .debug.js
 ignoreFiles:
