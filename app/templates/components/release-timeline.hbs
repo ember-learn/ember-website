@@ -1,0 +1,18 @@
+<div class="release-timeline" ...attributes>
+  <div class="release">
+    <img src="/images/releases/small_release.png" alt={{@project.lastStableVersion}}>
+    <div class="mt-1 bold">{{@project.initialVersion}}</div>
+  </div>
+  <div class="path-to-release">
+    <div class="bold">The path to {{@project.finalVersion}}...</div>
+    <div class="steps">
+      {{project-listing/beta @text={{concat @project.initialVersion "-beta.1"}}
+      {{project-listing/beta @text={{concat @project.initialVersion "-beta.1"}}}}
+      {{project-listing/beta @text="etc."}}
+    </div>
+  </div>
+  <div class="release future-image">
+    <img src="/images/releases/small_release.png" alt={{@project.finalVersion}}>
+    <div class="mt-1 bold">{{@project.finalVersion}}</div>
+  </div>
+</div>

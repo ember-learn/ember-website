@@ -25,31 +25,51 @@
 
 <h2>Upcoming releases</h2>
 
-The Ember project aims to provide a production-ready release
-approximately every 6 weeks.
-For a rough estimate of the timeline for the next release,
-you can look at the date of the most recent
-<a href="https://blog.emberjs.com/tags/releases.html">
-  official release blog post
-</a>
-and count forward by 6 weeks.
-Releases may happen in less than 6 weeks
-in order to stay on schedule for 8 releases per year.
-Other times, they may take longer than 6 weeks due to
-cross-team availability, holidays, or extended testing.
+<ReleaseTimeline class="hide-on-mobile" @project={{emberBetaProject}} />
 
-To follow along with the progress of beta releases,
-check out the Releases on GitHub for
-<a href="https://github.com/emberjs/ember.js/releases" rel="noreferrer noopener">
-  Ember.js
-</a>,
-<a href="https://github.com/emberjs/data/releases" rel="noreferrer noopener">
-  Ember Data
-</a>,
-and
-<a href="https://github.com/ember-cli/ember-cli/releases" rel="noreferrer noopener">
-  Ember CLI
-</a>.
+<p>
+  Latest stable release: VERSION completed on DATE
+</p>
+<p>
+  Upcoming stable release: VERSION release process begins on DATE*
+</p>
+
+The Ember project aims to provide a complete, production-ready release
+approximately every 6 weeks. 
+
+<p>
+  If it is important to your team to estimate release timelines, it is helpful to know that:
+</p>
+
+<ul>
+  <li>
+    A release is considered complete
+    when the <a href="https://blog.emberjs.com/tags/releases.html">
+    official release blog post</a> is published.
+  </li>
+  <li>
+    The <i>completed</i> release date often varies
+    due to cross-team team availability, holidays, extra time for testing, etc.
+  </li>
+  <li>
+    The release of `ember-source` itself is very regular. It is the first thing that
+    happens to kick off a new release. See the
+    <a href="https://github.com/emberjs/ember.js/releases" rel="noreferrer noopener">
+    Ember.js Releases</a> on GitHub.
+  </li>
+  <li>
+    The <a href="https://github.com/emberjs/data/releases" rel="noreferrer noopener">
+    Ember Data release</a> comes next, after Ember.js.
+  </li>
+  <li>
+    <a href="https://github.com/ember-cli/ember-cli/releases" rel="noreferrer noopener">
+    Ember CLI release</a> follows Ember Data.
+  </li>
+  <li>
+    Documentation and the release blog post come last. Look at past <a href="https://blog.emberjs.com/tags/releases.html">
+    official release blog posts</a> dates to get an idea the timeline variation.
+  </li>
+</ul>
 
 <h2>Strategy</h2>
 <p>

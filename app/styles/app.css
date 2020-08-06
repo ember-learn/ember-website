@@ -5,6 +5,7 @@
 @import "components/ember-survey.css";
 @import "components/faqs.css";
 @import "components/homepage-image-grid.css";
+@import "components/release-timeline.css";
 @import "components/surveys.css";
 @import "components/team-list.css";
 @import "components/terminal-code.css";
@@ -23,12 +24,4 @@
 
 .align-middle {
   vertical-align: middle;
-}
-
-.temp-fullpage {
-  min-height: 100vh;
-}
-
-.temp-nav {
-  padding-left: 0;
 }
