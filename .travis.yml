@@ -12,7 +12,7 @@ addons:
   chrome: stable
 
 before_install:
-  - npm install -g @lhci/cli@0.3.x
+  - npm install -g @lhci/cli@0.5.x
 
 cache:
   directories:
