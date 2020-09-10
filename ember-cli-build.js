@@ -54,6 +54,7 @@ module.exports = function (defaults) {
         'ember-community-survey-2020',
         'editions',
         'editions/octane',
+        'community/black-lives-matter'
       ]
     },
     'ember-cli-uglify': { // TODO: remove once this issue is fixed https://github.com/ember-cli/ember-cli/issues/8075
