@@ -24,3 +24,6 @@
 
 # base case
 /api/*                            https://api.emberjs.com/:splat
+
+# Fallback for non prembered route (single-page app)
+/*    /_empty.html   200
