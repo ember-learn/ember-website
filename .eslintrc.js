@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   root: true,
   parser: 'babel-eslint',
@@ -20,10 +22,21 @@ module.exports = {
   },
   globals: {
     // leaflet maps global
-    L: 1
+    L: 'writeable'
   },
   rules: {
-    'ember/no-jquery': 'error'
+    /*
+      TODO:
+
+      The recommended rules are failing. Let's fix the errors
+      and remove the rule exceptions one by one.
+    */
+    'ember/no-assignment-of-untracked-properties-used-in-tracking-contexts': 'off',
+    'ember/no-get': 'off',
+    'ember/no-get-with-default': 'off',
+    'ember/require-computed-property-dependencies': 'off',
+    'ember/use-ember-data-rfc-395-imports': 'off',
+    'no-prototype-builtins': 'off',
   },
   overrides: [
     // node files
@@ -46,13 +59,12 @@ module.exports = {
         node: true
       },
       plugins: ['node'],
-      rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
-        // add your custom rules and overrides for node files here
-
+      extends: ['plugin:node/recommended'],
+      rules: {
         // this can be removed once the following is fixed
         // https://github.com/mysticatea/eslint-plugin-node/issues/77
         'node/no-unpublished-require': 'off'
-      })
+      }
     }
   ]
 };
