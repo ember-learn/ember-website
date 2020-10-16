@@ -57,13 +57,6 @@ module.exports = function (defaults) {
         'community/black-lives-matter'
       ]
     },
-    'ember-cli-uglify': { // TODO: remove once this issue is fixed https://github.com/ember-cli/ember-cli/issues/8075
-      uglify: {
-        compress: {
-          collapse_vars: false
-        }
-      }
-    },
     emberHighCharts: {
       includeHighCharts: true,
       includeHighChartsMore: true,
