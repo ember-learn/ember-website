@@ -45,7 +45,7 @@
     "ember-cli-inject-live-reload": "^2.0.2",
     "ember-cli-netlify": "^0.3.0",
     "ember-cli-sri": "^2.1.1",
-    "ember-cli-stylelint": "^3.0.1",
+    "ember-cli-stylelint": "^4.0.0",
     "ember-cli-terser": "^4.0.0",
     "ember-data": "~3.16.0",
     "ember-export-application-global": "^2.0.1",
@@ -73,8 +73,8 @@
     "luxon": "^1.21.3",
     "prember": "^1.0.3",
     "qunit-dom": "^1.0.0",
-    "stylelint": "^10.1.0",
-    "stylelint-config-recommended": "^2.2.0"
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0"
   },
   "engines": {
     "node": "10.* || >= 12"
