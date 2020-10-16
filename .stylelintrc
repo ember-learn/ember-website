@@ -1,6 +1,21 @@
 {
-  "extends": "stylelint-config-recommended",
+  "extends": "stylelint-config-standard",
   "rules": {
-    "no-descending-specificity": null
+    "block-closing-brace-empty-line-before": null,
+    "color-hex-case": null,
+    "comment-empty-line-before": null,
+    "declaration-block-trailing-semicolon": null,
+    "declaration-colon-space-after": null,
+    "declaration-empty-line-before": null,
+    "function-comma-space-after": null,
+    "indentation": null,
+    "length-zero-no-unit": null,
+    "max-empty-lines": null,
+    "media-feature-colon-space-after": null,
+    "no-descending-specificity": null,
+    "number-leading-zero": null,
+    "rule-empty-line-before": null,
+    "selector-list-comma-newline-after": null,
+    "selector-pseudo-element-colon-notation": null,
   }
 }
