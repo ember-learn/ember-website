@@ -1,10 +1,10 @@
-import DS from 'ember-data';
+import Model, { attr } from '@ember-data/model';
 
-export default DS.Model.extend({
-  location: DS.attr(),
-  url: DS.attr(),
-  lat: DS.attr(),
-  lng: DS.attr(),
-  organizers: DS.attr(),
-  area: DS.attr(),
+export default Model.extend({
+  location: attr(),
+  url: attr(),
+  lat: attr(),
+  lng: attr(),
+  organizers: attr(),
+  area: attr(),
 });

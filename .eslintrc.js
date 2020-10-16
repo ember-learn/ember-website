@@ -35,8 +35,6 @@ module.exports = {
     'ember/no-get': 'off',
     'ember/no-get-with-default': 'off',
     'ember/require-computed-property-dependencies': 'off',
-    'ember/use-ember-data-rfc-395-imports': 'off',
-    'no-prototype-builtins': 'off',
   },
   overrides: [
     // node files

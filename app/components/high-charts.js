@@ -142,7 +142,7 @@ export default Component.extend({
 
     // add new series
     content.forEach((contentSeries) => {
-      if (!chartSeriesMap.hasOwnProperty(contentSeries.name)) {
+      if (!Object.prototype.hasOwnProperty.call(chartSeriesMap, contentSeries.name)) {
         chart.addSeries(contentSeries, false);
       }
     });

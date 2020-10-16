@@ -1,6 +1,6 @@
-import DS from 'ember-data';
+import JSONAPIAdapter from '@ember-data/adapter/json-api';
 
-export default DS.JSONAPIAdapter.extend({
+export default JSONAPIAdapter.extend({
   urlForFindAll(modelName) {
     const path = this.pathForType(modelName);
     return `/data/${path}/all.json`;

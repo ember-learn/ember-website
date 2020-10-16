@@ -1,13 +1,13 @@
-import DS from 'ember-data';
+import Model, { attr } from '@ember-data/model';
 import { computed } from '@ember/object';
 
-export default DS.Model.extend({
-  content: DS.attr(),
-  name: DS.attr(),
-  end: DS.attr('date'),
-  image: DS.attr(),
-  start: DS.attr('date'),
-  url: DS.attr(),
+export default Model.extend({
+  content: attr(),
+  name: attr(),
+  end: attr('date'),
+  image: attr(),
+  start: attr('date'),
+  url: attr(),
 
   term: computed('start', 'end', function() {
     let startYear = this.start.getFullYear();
