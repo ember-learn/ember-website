@@ -10,11 +10,11 @@
 }
 
 .emberconf-announcement h2 {
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
 }
 
 .emberconf-announcement h3 {
-  margin-top: .3rem;
+  margin-top: 0.3rem;
 }
 
 .emberconf-announcement .logo {
@@ -33,18 +33,19 @@
   margin-top: 1rem;
 }
 
-@media screen and (min-width:450px) {
+@media screen and (min-width: 450px) {
   .emberconf-announcement {
     justify-content: space-between;
     padding-top: 3rem;
     margin-top: -3rem;
-
   }
+
   .emberconf-announcement .logo {
     flex-basis: 11rem;
     transform: translateY(-10%);
     margin-top: 0;
   }
+
   .emberconf-announcement .text {
     flex-basis: calc(100% - 13rem);
     margin-top: 0;

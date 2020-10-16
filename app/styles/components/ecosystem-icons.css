@@ -28,6 +28,7 @@
   right: 10px;
   position: absolute;
 }
+
 .ecosystem-icon .logo.rotate {
   transform: rotate(-9deg);
 }
