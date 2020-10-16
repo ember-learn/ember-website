@@ -3,9 +3,9 @@
   {{#if hasBlock}}
     {{yield}}
   {{else}}
-    {{#terminal-code}}
+    <TerminalCode>
       {{html-safe (printf @project.content @project.lastRelease)}}
-    {{/terminal-code}}
+    </TerminalCode>
   {{/if}}
 
   {{#if @project.lastReleaseChangelogUrl}}
@@ -15,7 +15,7 @@
     </p>
   {{else if @project.lastReleaseTestUrl}}
     <p>
-      <a class="debug" href={{@project.lastReleaseTestUrl}} target="_blank" rel="noopener">Run the tests</a> for {{@project.name}} ||| {{@project.lastRelease}} in your browser.
+      <a class="debug" href={{@project.lastReleaseTestUrl}} target="_blank" rel="noopener noreferrer">Run the tests</a> for {{@project.name}} ||| {{@project.lastRelease}} in your browser.
     </p>
   {{else}}
     <p></p>

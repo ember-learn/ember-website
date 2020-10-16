@@ -5,7 +5,6 @@ import {computed } from '@ember/object';
 import { pluralize } from 'ember-inflector';
 
 export default Component.extend({
-  tagName: '',
   router: service(),
   init() {
     this._super(...arguments);

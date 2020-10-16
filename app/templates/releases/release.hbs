@@ -1,10 +1,10 @@
 {{title "Stable"}}
 
-{{#project-listing
-  projects=(array model.ember model.emberData)
-  channel="release"
-  channelDescription="Releases are production-ready versions of Ember and Ember Data that have been through a six-week beta cycle."
-}}
+<ProjectListing
+  @projects={{array this.model.ember this.model.emberData}}
+  @channel="release"
+  @channelDescription="Releases are production-ready versions of Ember and Ember Data that have been through a six-week beta cycle."
+>
 
   <h2>What is a stable release?</h2>
 
@@ -25,4 +25,4 @@
     to go with it, so you should wait to upgrade your app until that post goes out.
     It signals that the new version is ready in the Ember.js codebase, Ember CLI, and Ember Data.
   </p>
-{{/project-listing}}
+</ProjectListing>

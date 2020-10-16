@@ -1,10 +1,10 @@
-<div class={{unless isCompleted "future-image"}}>
+<div class={{unless this.isCompleted "future-image"}}>
   <img src="/images/releases/tiny_beta.png" alt="beta {{@version}}" class="mt-3">
   <div class="text-sm bold mt-1">beta {{@version}}</div>
-  {{#if isCurrentBeta}}
+  {{#if this.isCurrentBeta}}
     <div class="text-sm">(current beta)</div>
   {{/if}}
-  {{#if isNextBeta}}
+  {{#if this.isNextBeta}}
     <div class="text-sm">({{format-date-time @project.nextDate}})</div>
   {{/if}}
 </div>
