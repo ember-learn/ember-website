@@ -1,7 +1,7 @@
 import { visit, settled } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupApplicationTest } from 'ember-qunit';
-import { percySnapshot } from 'ember-percy';
+import percySnapshot from '@percy/ember';
 import a11yAudit from 'ember-a11y-testing/test-support/audit';
 
 module('Acceptance | visual regression', function (hooks) {
