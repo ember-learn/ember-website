@@ -1,23 +1,23 @@
-import DS from 'ember-data';
+import Model, { attr } from '@ember-data/model';
 import { computed } from '@ember/object';
 
-export default DS.Model.extend({
-  name: DS.attr(),
-  baseFileName: DS.attr(),
-  filter: DS.attr(),
-  repo: DS.attr(),
-  initialVersion: DS.attr(),
-  lastRelease: DS.attr(),
-  futureVersion: DS.attr(),
-  finalVersion: DS.attr(),
-  channel: DS.attr(),
-  cycleEstimatedFinishDate: DS.attr('date'),
-  date: DS.attr('date'),
-  nextDate: DS.attr('date'),
-  changelogPath: DS.attr(),
-  debugFileName: DS.attr(),
-  ignoreFiles:  DS.attr(),
-  content: DS.attr(),
+export default Model.extend({
+  name: attr(),
+  baseFileName: attr(),
+  filter: attr(),
+  repo: attr(),
+  initialVersion: attr(),
+  lastRelease: attr(),
+  futureVersion: attr(),
+  finalVersion: attr(),
+  channel: attr(),
+  cycleEstimatedFinishDate: attr('date'),
+  date: attr('date'),
+  nextDate: attr('date'),
+  changelogPath: attr(),
+  debugFileName: attr(),
+  ignoreFiles:  attr(),
+  content: attr(),
 
   isEmberBeta: computed('channel', 'name', function() {
     return this.get('channel') === 'beta' && this.get('name') === 'Ember';

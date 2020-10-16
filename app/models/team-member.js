@@ -1,12 +1,12 @@
-import DS from 'ember-data';
+import Model, { attr } from '@ember-data/model';
 
-export default DS.Model.extend({
-  name: DS.attr(),
-  first: DS.attr(),
-  last: DS.attr(),
-  github: DS.attr(),
-  twitter: DS.attr(),
-  image: DS.attr(),
-  teams: DS.attr(),
-  added: DS.attr('date'),
+export default Model.extend({
+  name: attr(),
+  first: attr(),
+  last: attr(),
+  github: attr(),
+  twitter: attr(),
+  image: attr(),
+  teams: attr(),
+  added: attr('date'),
 });
