@@ -1,17 +1,15 @@
 .homepage-image-grid {
   overflow-x: auto;
 }
+
 .homepage-image-grid__scroll-wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 100px);
   grid-gap: 15px;
-
   grid-auto-flow: column;
-
   height: 445px;
   padding: 0;
-
   margin: 0 20px;
   min-width: 1400px;
 }
@@ -29,8 +27,8 @@
 }
 
 .homepage-image-grid__img-tall-bottom {
-    grid-row-start: 2;
-    grid-row-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 5;
 }
 
 .homepage-image-grid__img-tall-top {
@@ -46,6 +44,7 @@
   height: max-content;
   width: max-content;
 }
+
 /* IN ht estyleguides */
 
 img {

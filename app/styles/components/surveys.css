@@ -11,29 +11,29 @@
 
 .nps-row {
   width: 100%;
-  display: flex
+  display: flex;
 }
 
 .nps-row .nps-cell:first-child {
-  margin-left: 0
+  margin-left: 0;
 }
 
 .nps-row .nps-cell:last-child {
-  margin-right: 0
+  margin-right: 0;
 }
 
 .nps-cell-header {
-  font-weight: 700
+  font-weight: 700;
 }
 
 .scoring-list .quote {
   font-style: italic;
 }
 
-.scoring-list .quote:before {
-  content: open-quote
+.scoring-list .quote::before {
+  content: open-quote;
 }
 
-.scoring-list .quote:after {
-  content: close-quote
+.scoring-list .quote::after {
+  content: close-quote;
 }
