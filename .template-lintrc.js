@@ -9,7 +9,7 @@ module.exports = {
       The recommended rules are failing. Let's fix the errors
       and remove the rule exceptions one by one.
     */
-    'no-action': true,
+    'no-action': false,
     'no-html-comments': false,
   },
 };
