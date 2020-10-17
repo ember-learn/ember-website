@@ -14,7 +14,6 @@ export default Component.extend({
   handleKeyboardNavigation (event) {
     let { key } = event
     let shouldHandleKey = Object.values(KEY).includes(key)
-    console.log("hi")
     if (shouldHandleKey) {
       let tabElement = event.target
       let tabElements = tabElement.parentElement.children
