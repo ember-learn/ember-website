@@ -20,7 +20,7 @@ export default Model.extend({
   content: attr(),
 
   isEmberBeta: computed('channel', 'name', function() {
-    return this.get('channel') === 'beta' && this.get('name') === 'Ember';
+    return this.channel === 'beta' && this.name === 'Ember';
   }),
 
   lastReleaseChangelogUrl: computed('channel', 'changelogPath', 'lastRelease', 'repo', function() {

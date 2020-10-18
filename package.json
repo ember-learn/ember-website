@@ -88,6 +88,9 @@
       "lib/content-data-generator"
     ]
   },
+  "resolutions": {
+    "whatwg-fetch": "3.3.1"
+  },
   "fastbootDependencies": [
     "algoliasearch"
   ]
