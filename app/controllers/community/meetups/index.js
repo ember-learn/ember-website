@@ -10,7 +10,7 @@ export default Controller.extend({
   init() {
     this._super(...arguments);
     
-    if (!this.fastboot.isFastBoot) {
+    if (!this.fastboot?.isFastBoot) {
       
       import('leaflet')
       .then(() => {

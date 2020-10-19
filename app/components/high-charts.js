@@ -79,14 +79,14 @@ export default Component.extend({
   callback: undefined,
 
   buildOptions: computed('chartOptions', 'content.[]', function() {
-    let theme = this.theme || {};
-    let passedChartOptions = this.chartOptions || {};
+    let theme = this.theme ?? {};
+    let passedChartOptions = this.chartOptions ?? {};
 
     let chartOptions = merge(theme, passedChartOptions);
     let chartContent = this.content;
 
     // if 'no-data-to-display' module has been imported, keep empty series and leave it to highcharts to show no data label.
-    if (!this.content.length && !this.highcharts.Chart.prototype.showNoData) {
+    if (!this.content?.length && !this.highcharts.Chart.prototype.showNoData) {
       chartContent = [{
         id: 'noData',
         data: 0,
@@ -161,7 +161,7 @@ export default Component.extend({
 
   draw() {
     let element = this.element && this.element.querySelector('.chart-container');
-    let modeAttr = this.mode || undefined;
+    let modeAttr = this.mode ?? undefined;
     let mode = CHART_TYPES[modeAttr];
     let completeChartOptions = [this.buildOptions, this.callback];
 

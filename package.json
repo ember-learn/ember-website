@@ -49,7 +49,7 @@
     "ember-cli-terser": "^4.0.0",
     "ember-data": "~3.16.0",
     "ember-export-application-global": "^2.0.1",
-    "ember-fetch": "^7.0.0",
+    "ember-fetch": "^8.0.2",
     "ember-group-by": "0.0.6",
     "ember-href-to": "^3.1.0",
     "ember-leaflet": "^4.1.0",
@@ -87,9 +87,6 @@
     "paths": [
       "lib/content-data-generator"
     ]
-  },
-  "resolutions": {
-    "whatwg-fetch": "3.3.1"
   },
   "fastbootDependencies": [
     "algoliasearch"
