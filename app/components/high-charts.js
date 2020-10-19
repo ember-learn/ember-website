@@ -1,7 +1,7 @@
 import { assign } from '@ember/polyfills';
 import Component from '@ember/component';
 import { getOwner } from '@ember/application';
-import { set, getProperties, get, computed, getWithDefault } from '@ember/object';
+import { set, computed } from '@ember/object';
 import { run } from '@ember/runloop';
 import merge from 'deepmerge';
 
@@ -79,14 +79,14 @@ export default Component.extend({
   callback: undefined,
 
   buildOptions: computed('chartOptions', 'content.[]', function() {
-    let theme = getWithDefault(this, 'theme', {});
-    let passedChartOptions = getWithDefault(this, 'chartOptions', {});
+    let theme = this.theme ?? {};
+    let passedChartOptions = this.chartOptions ?? {};
 
     let chartOptions = merge(theme, passedChartOptions);
-    let chartContent = get(this, 'content');
+    let chartContent = this.content;
 
     // if 'no-data-to-display' module has been imported, keep empty series and leave it to highcharts to show no data label.
-    if (!get(this, 'content.length') && !this.highcharts.Chart.prototype.showNoData) {
+    if (!this.content?.length && !this.highcharts.Chart.prototype.showNoData) {
       chartContent = [{
         id: 'noData',
         data: 0,
@@ -102,7 +102,7 @@ export default Component.extend({
   didReceiveAttrs() {
     this._super(...arguments);
 
-    let { content, chart, mode } = getProperties(this, 'content', 'chart', 'mode');
+    let { content, chart, mode } = this;
 
     if (!content || !chart) {
       return;
@@ -161,9 +161,9 @@ export default Component.extend({
 
   draw() {
     let element = this.element && this.element.querySelector('.chart-container');
-    let modeAttr = get(this, 'mode') || undefined;
+    let modeAttr = this.mode ?? undefined;
     let mode = CHART_TYPES[modeAttr];
-    let completeChartOptions = [get(this, 'buildOptions'), get(this, 'callback')];
+    let completeChartOptions = [this.buildOptions, this.callback];
 
     if (element) {
       let chart = this.highcharts[mode](element, ...completeChartOptions);
@@ -187,8 +187,8 @@ export default Component.extend({
   willDestroyElement() {
     this._super(...arguments);
 
-    if (get(this, 'chart')) {
-      get(this, 'chart').destroy();
+    if (this.chart) {
+      this.chart.destroy();
     }
   }
 });

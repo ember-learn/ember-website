@@ -25,7 +25,7 @@ export default Route.extend({
     }
 
     const page = this.url;
-    const title = this.getWithDefault('currentRouteName', 'unknown');
+    const title = this.currentRouteName ?? 'unknown';
 
     // this is constant for this app and is only used to identify page views in the GA dashboard
     const hostname = 'www.emberjs.com';

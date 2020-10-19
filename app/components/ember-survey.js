@@ -10,7 +10,7 @@ export default Component.extend({
   init() {
     this._super(...arguments);
     const config = getOwner(this).resolveRegistration('config:environment');
-    this.config = config['survey'];
+    this.set('config', config['survey']);
     if (!this.today) {
       this.set('today', Date.now());
     }

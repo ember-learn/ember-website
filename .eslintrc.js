@@ -31,9 +31,6 @@ module.exports = {
       The recommended rules are failing. Let's fix the errors
       and remove the rule exceptions one by one.
     */
-    'ember/no-assignment-of-untracked-properties-used-in-tracking-contexts': 'off',
-    'ember/no-get': 'off',
-    'ember/no-get-with-default': 'off',
     'ember/require-computed-property-dependencies': 'off',
   },
   overrides: [
