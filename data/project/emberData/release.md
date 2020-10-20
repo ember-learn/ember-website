@@ -9,7 +9,7 @@ initialReleaseDate: 2020-10-09 # Manually update, get date for `initialVersion`
 lastRelease: 3.22.0 # Manually update
 futureVersion: 3.22.1 # Manually update
 channel: release
-date: 2020-10-19 # Manually update, is today's date
+date: 2020-10-20 # Manually update, is today's date
 changelogPath: CHANGELOG.md
 debugFileName: .js
 ---
