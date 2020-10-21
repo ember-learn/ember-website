@@ -14,7 +14,7 @@
     <ul class="unstyled grid sm:grid-2 lg:grid-3">
       {{#each this.currentSponsors as |sponsor|}}
         <figure>
-          <a href={{sponsor.url}} rel="noopener noreferrer" target="_blank" class="well well-16/9">
+          <a href={{sponsor.url}} rel="nofollow noopener noreferrer" target="_blank" class="well well-16/9">
             <img src="/images/users/{{sponsor.image}}" alt="" role="presentation" loading="lazy">
           </a>
           <figcaption class="text-muted">
@@ -35,7 +35,7 @@
     <ul class="unstyled grid sm:grid-2 lg:grid-3">
       {{#each this.pastSponsors as |sponsor|}}
         <figure>
-          <a href={{sponsor.url}} rel="noopener noreferrer" target="_blank" class="well well-16/9">
+          <a href={{sponsor.url}} rel="nofollow noopener noreferrer" target="_blank" class="well well-16/9">
             <img src="/images/users/{{sponsor.image}}" alt="" role="presentation" loading="lazy">
           </a>
           <figcaption class="text-muted">
@@ -51,6 +51,6 @@
   </section>
 
   <p class="text-center my-5">
-    A special thanks to <a href="https://dribbble.com/mg" rel="noopener noreferrer" target="_blank">Matt Grantham</a> for design of the original Ember website.
+    A special thanks to <a href="https://dribbble.com/mg" rel="nofollow noopener noreferrer" target="_blank">Matt Grantham</a> for design of the original Ember website.
   </p>
 </section>
