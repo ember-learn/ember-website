@@ -8,7 +8,7 @@
       <LeafletMap @class="leaflet-container" @lat={{this.lat}} @lng={{this.lng}} @zoom={{this.zoom}}>
         <TileLayer @url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" />
 
-        {{#each this.model as |meetup|}}
+        {{#each @model as |meetup|}}
           <MarkerLayer @lat={{meetup.lat}} @lng={{meetup.lng}}>
             <PopupLayer>
               <a

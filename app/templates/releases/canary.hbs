@@ -6,20 +6,20 @@
 
 <div class="ember-cli-usage hide-in-percy">
   <EmberCliUsage
-    @project={{this.model.ember}}
+    @project={{@model.ember}}
     @channel="canary"
   >
     <TerminalCode>
       # Install the latest Ember canary:
       <br>
-      npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com{{this.model.canaryInfo.assetPath}}
+      npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com{{@model.canaryInfo.assetPath}}
     </TerminalCode>
   </EmberCliUsage>
 </div>
 
 <div class="ember-cli-usage">
   <EmberCliUsage
-    @project={{this.model.emberData}}
+    @project={{@model.emberData}}
     @channel="canary"
   />
 </div>
