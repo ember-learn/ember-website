@@ -4,9 +4,10 @@
 
 {{#each @projects as |project|}}
   <div class="ember-cli-usage">
-    {{ember-cli-usage
-    project=project
-    channel=@channel}}
+    <EmberCliUsage
+      @project={{project}}
+      @channel={{@channel}}
+    />
   </div>
 {{/each}}
 

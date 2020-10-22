@@ -14,10 +14,9 @@ export default Component.extend({
   handleKeyboardNavigation (event) {
     let { key } = event
     let shouldHandleKey = Object.values(KEY).includes(key)
-
     if (shouldHandleKey) {
       let tabElement = event.target
-      let tabElements = tabElement.parentElement.children 
+      let tabElements = tabElement.parentElement.children
       let totalTabs = tabElements.length
 
       let newTab = this.currentTab
@@ -39,12 +38,12 @@ function wrapTabIndex(tabIndex, totalTabs) {
   const LAST_TAB_INDEX = totalTabs - 1
 
   if (tabIndex < FIRST_TAB_INDEX) {
-    return LAST_TAB_INDEX  
-  } 
-  
+    return LAST_TAB_INDEX
+  }
+
   if (tabIndex > LAST_TAB_INDEX) {
     return FIRST_TAB_INDEX
   }
-  
+
   return tabIndex
 }

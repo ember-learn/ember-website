@@ -19,7 +19,7 @@
         Recommending Ember
       </a>
     </div>
-    <HighCharts @chartOptions={{recommendingEmber.options}} @content={{recommendingEmber.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.recommendingEmber.options}} @content={{this.recommendingEmber.data}} @theme={{this.theme}} />
     <p>
       We asked respondents how likely they were to recommend Ember to a friend or colleague.
       The mean recommendation score is 8, and the calculated <a href="https://en.wikipedia.org/wiki/Net_Promoter">Net Promoter Score</a> is 27.6.
@@ -86,7 +86,7 @@
         Which version(s) of Ember are used in your apps?
       </a>
     </div>
-    <HighCharts @chartOptions={{MS_Q401.options}} @content={{MS_Q401.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.MS_Q401.options}} @content={{this.MS_Q401.data}} @theme={{this.theme}} />
     <p>
       During the course of the survey, Ember 3.8 became the latest stable release of the framework. 28% of developers reported working with Ember 3.7, and 12.5% reported working with 3.8 (only released a few weeks ago). Some legacy 2.x versions of Ember rose in usage as a percentage of participants, but the 1.13 number dropped indicating a continued upgrade process for developers on legacy versions of Ember.
     </p>
@@ -99,7 +99,7 @@
     <a href="#SS_Q104" id="SS_Q104" class="text-lg">
       How long have you been working with Ember?
     </a>
-    <HighCharts @chartOptions={{SS_Q104.options}} @content={{SS_Q104.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.SS_Q104.options}} @content={{this.SS_Q104.data}} @theme={{this.theme}} />
     <p>
       Ember developers seem to be good at introducing new developers to the framework. Ember involvement seems to be rather evenly spread over the options for involvement!
     </p>
@@ -114,7 +114,7 @@
         What are the ways you learn about and stay up to date with Ember?
       </a>
     </div>
-    <HighCharts @chartOptions={{MS_Q103.options}} @content={{MS_Q103.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.MS_Q103.options}} @content={{this.MS_Q103.data}} @theme={{this.theme}} />
     <p>
       We added more options this year, as there are more ways than ever before to keep up with all things Ember.
       We'll be interested to see what directions the trends go in the coming years!
@@ -129,7 +129,7 @@
         Stack Skillset Self-Appraisal
       </a>
     </div>
-    <HighCharts @chartOptions={{stackSkillsChart.options}} @content={{stackSkillsChart.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.stackSkillsChart.options}} @content={{this.stackSkillsChart.data}} @theme={{this.theme}} />
     <p>
       Accessibility has very clearly been self-identified as "the final frontier" for Ember developers!
       Our community has proven over time that shared solutions work well, and this area is a great opportunity to provide accessible applications to <em>everyone</em> who uses an Ember app- which, these days, includes websites to pay your utilities, do your banking, and more!
@@ -144,7 +144,7 @@
         Which text editors do you use for development?
       </a>
     </div>
-    <HighCharts @chartOptions={{MS_Q111.options}} @content={{MS_Q111.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.MS_Q111.options}} @content={{this.MS_Q111.data}} @theme={{this.theme}} />
     <p>
       In a shocking result VS Code is the first ever editor to break 50% of the Ember community in survey results.
       At roughly 57% of participants, VS Code is now clearly the dominant editor to consider when creating tooling for Ember.
@@ -159,7 +159,7 @@
         What ways do you participate in the Ember community?
       </a>
     </div>
-    <HighCharts @chartOptions={{MS_Q112.options}} @content={{MS_Q112.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.MS_Q112.options}} @content={{this.MS_Q112.data}} @theme={{this.theme}} />
     <p>
       There are many different ways to contribute to Ember- and our community appears to take the time to participate!
     </p>
@@ -172,7 +172,7 @@
     <a href="#SS_Q203" id="SS_Q203" class="text-lg">
       I use Ember for work:
     </a>
-    <HighCharts @chartOptions={{SS_Q203.options}} @content={{SS_Q203.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{SS_Q203.options}} @content={{SS_Q203.data}} @theme={{this.theme}} />
     <p>
       This is placeholder text for chart SS_Q203.
     </p>
@@ -187,7 +187,7 @@
         When taking your most recent job:
       </a>
     </div>
-    <HighCharts @chartOptions={{SS_Q204.options}} @content={{SS_Q204.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.SS_Q204.options}} @content={{this.SS_Q204.data}} @theme={{this.theme}} />
     <p>
       One clear trend from this data is that more hiring is happening in companies that are already using Ember, instead of people starting to use Ember after the company has hired them.
     </p>
@@ -201,7 +201,7 @@
         When taking your most recent job your pre-existing knowledge of Ember was:
       </a>
     </div>
-    <HighCharts @chartOptions={{SS_Q205.options}} @content={{SS_Q205.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.SS_Q205.options}} @content={{this.SS_Q205.data}} @theme={{this.theme}} />
     <p>
       Even though more companies are hiring for pre-existing Ember apps, it is clear from this data that there are more companies that are hiring people with no Ember knowledge and instead opting to train new Ember developers for our community.
     </p>
@@ -215,7 +215,7 @@
         How many developers at your company are responsible for writing Ember code?
       </a>
     </div>
-    <HighCharts @chartOptions={{SS_Q302.options}} @content={{SS_Q302.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.SS_Q302.options}} @content={{this.SS_Q302.data}} @theme={{this.theme}} />
     <p>
       A notable change in 2019 is Ember's growth in organizations with 1-10 developers using the framework. This increase could be explained by a corresponding decrease in developers with 0 engineers responsible for writing Ember code.
     </p>
@@ -229,7 +229,7 @@
         What are the accessibility requirements for your business?
       </a>
     </div>
-    <HighCharts @chartOptions={{MS_Q304.options}} @content={{MS_Q304.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.MS_Q304.options}} @content={{this.MS_Q304.data}} @theme={{this.theme}} />
     <p>
       We hope that this question inspired those who don't know, to find out! We encourage all Ember developers to advocate for accessibility as a marker of quality code and help turn this into more of a self-imposed requirement for next year.
     </p>
@@ -243,7 +243,7 @@
         Does your business require applications to be internationalized?
       </a>
     </div>
-    <HighCharts @chartOptions={{SS_Q306.options}} @content={{SS_Q306.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.SS_Q306.options}} @content={{this.SS_Q306.data}} @theme={{this.theme}} />
     <p>
       While English was the primary language for 92% of applications, we can see that a growing number of apps require internationalization. This is a great way to ensure that your apps can be used by everyone all over the globe- and of course, there's an addon for that. Check out <a href="https://github.com/ember-intl/ember-intl">ember-intl</a> and see the possibilities!
     </p>
@@ -255,7 +255,7 @@
     <a href="#MS_Q307" id="MS_Q307" class="text-lg">
       In which sector(s) do you operate?
     </a>
-    <HighCharts @chartOptions={{MS_Q307.options}} @content={{MS_Q307.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{MS_Q307.options}} @content={{MS_Q307.data}} @theme={{this.theme}} />
     <p>
       This is placeholder text for chart MS_Q307.
     </p>
@@ -269,13 +269,13 @@
         <a href="#SS_Q405" id="SS_Q405" class="survey-h3">
           What is the primary language of your server-side stack?
         </a>
-        <HighCharts @chartOptions={{SS_Q405.options}} @content={{SS_Q405.data}} @theme={{theme}} />
+        <HighCharts @chartOptions={{this.SS_Q405.options}} @content={{this.SS_Q405.data}} @theme={{this.theme}} />
       </div>
       <div class="survey-column half">
         <a href="#MS_Q406" id="MS_Q406" class="survey-h3">
           Which of these server-side frameworks do you use?
         </a>
-        <HighCharts @chartOptions={{MS_Q406.options}} @content={{MS_Q406.data}} @theme={{theme}} />
+        <HighCharts @chartOptions={{this.MS_Q406.options}} @content={{this.MS_Q406.data}} @theme={{this.theme}} />
       </div>
     </div>
     <p>
@@ -292,7 +292,7 @@
     <a href="#MS_Q407" id="MS_Q407" class="text-lg">
       What standards do you follow for API design?
     </a>
-    <HighCharts @chartOptions={{MS_Q407.options}} @content={{MS_Q407.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.MS_Q407.options}} @content={{this.MS_Q407.data}} @theme={{this.theme}} />
     <p>
       This is placeholder text for chart MS_Q407.
     </p>
@@ -304,7 +304,7 @@
     <a href="#MS_Q408" id="MS_Q408" class="text-lg">
       What testing framework(s) do you use in your Ember apps?
     </a>
-    <HighCharts @chartOptions={{MS_Q408.options}} @content={{MS_Q408.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.MS_Q408.options}} @content={{this.MS_Q408.data}} @theme={{this.theme}} />
     <p>
       Qunit is still the primary way that Ember authors test their applications!
     </p>
@@ -319,13 +319,13 @@
         <a href="#MS_Q409" id="MS_Q409" class="survey-h3">
           How old are your Ember applications?
         </a>
-        <HighCharts @chartOptions={{MS_Q409.options}} @content={{MS_Q409.data}} @theme={{theme}} />
+        <HighCharts @chartOptions={{this.MS_Q409.options}} @content={{this.MS_Q409.data}} @theme={{this.theme}} />
       </div>
       <div class="survey-column half">
         <a href="#SS_Q410" id="SS_Q410" class="survey-h3">
           How many Ember apps do you work on?
         </a>
-        <HighCharts @chartOptions={{SS_Q410.options}} @content={{SS_Q410.data}} @theme={{theme}} />
+        <HighCharts @chartOptions={{this.SS_Q410.options}} @content={{this.SS_Q410.data}} @theme={{this.theme}} />
       </div>
     </div>
     <p>
@@ -343,7 +343,7 @@
         Who uses your application(s)?
       </a>
     </div>
-    <HighCharts @chartOptions={{MS_Q413.options}} @content={{MS_Q413.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.MS_Q413.options}} @content={{this.MS_Q413.data}} @theme={{this.theme}} />
     <p>
       The use of Ember for enterprise and B2B applications continues
       to grow. The framework continues to be an excellent tool for
@@ -359,7 +359,7 @@
     <a href="#MS_Q414" id="MS_Q414" class="text-lg">
       What browser versions do your applications target?
     </a>
-    <HighCharts @chartOptions={{MS_Q414.options}} @content={{MS_Q414.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.MS_Q414.options}} @content={{this.MS_Q414.data}} @theme={{this.theme}} />
     <p>
       This is placeholder text for chart MS_Q414.
     </p>
@@ -371,7 +371,7 @@
     <a href="#MS_Q416" id="MS_Q416" class="text-lg">
       Which of these best describes your use of Ember in production applications?
     </a>
-    <HighCharts @chartOptions={{MS_Q416.options}} @content={{MS_Q416.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.MS_Q416.options}} @content={{this.MS_Q416.data}} @theme={{this.theme}} />
     <p>
       This is placeholder text for chart MS_Q416.
     </p>
@@ -385,7 +385,7 @@
         In which region do you live?
       </a>
     </div>
-    <HighCharts @chartOptions={{SS_Q501.options}} @content={{SS_Q501.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.SS_Q501.options}} @content={{this.SS_Q501.data}} @theme={{this.theme}} />
     <p>
       Each year we provide the opportunity for community members to provide demographic information in addition to details
       about how the community interacts with the Ember project.
@@ -408,7 +408,7 @@
         Did you participate in any of the following surveys?
       </a>
     </div>
-    <HighCharts @chartOptions={{MS_Q601.options}} @content={{MS_Q601.data}} @theme={{theme}} />
+    <HighCharts @chartOptions={{this.MS_Q601.options}} @content={{this.MS_Q601.data}} @theme={{this.theme}} />
     <p>
       We wanted to know if our community was well-represented in other maintstream surveys that were published in 2018. The data suggests that the Ember community is not well-represented in other surveys. We believe this is due to specific outreach methods we use to ensure a wide-range of participation. We think that this data could be useful to other tech survey writers, and we will attempt to share our outreach methods, in order to help them obtain a more accurate sampling of the Ember community at large.
     </p>

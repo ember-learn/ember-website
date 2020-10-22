@@ -1,21 +1,21 @@
 <nav class="filter flex-horizontal-between">
   <span class="filter-group">
-    {{#link-to "mascots" (query-params filter="all")}}All{{/link-to}}
-    {{#link-to "mascots" (query-params filter="tomster")}}Tomsters{{/link-to}}
-    {{#link-to "mascots" (query-params filter="zoey")}}Zoeys{{/link-to}}
-    {{#link-to "mascots" (query-params filter="meetup")}}Meetups{{/link-to}}
-    {{#link-to "mascots" (query-params filter="conference")}}Conferences{{/link-to}}
-    {{#link-to "mascots" (query-params filter="corp")}}Corporate{{/link-to}}
-    {{#link-to "mascots" (query-params filter="other")}}Others{{/link-to}}
+    <LinkTo @route="mascots" @query={{hash filter="all"}}>All</LinkTo>
+    <LinkTo @route="mascots" @query={{hash filter="tomster"}}>Tomsters</LinkTo>
+    <LinkTo @route="mascots" @query={{hash filter="zoey"}}>Zoeys</LinkTo>
+    <LinkTo @route="mascots" @query={{hash filter="meetup"}}>Meetups</LinkTo>
+    <LinkTo @route="mascots" @query={{hash filter="conference"}}>Conferences</LinkTo>
+    <LinkTo @route="mascots" @query={{hash filter="corp"}}>Corporate</LinkTo>
+    <LinkTo @route="mascots" @query={{hash filter="other"}}>Others</LinkTo>
   </span>
   <span>
-    {{#link-to "mascots" (query-params display="small")}}Small{{/link-to}}
-    {{#link-to "mascots" (query-params display="large")}}Large{{/link-to}}
+    <LinkTo @route="mascots" @query={{hash display="small"}}>Small</LinkTo>
+    <LinkTo @route="mascots" @query={{hash display="large"}}>Large</LinkTo>
   </span>
 </nav>
 
 <ul class="unstyled grid {{this.displayClass}}">
-  {{#each sortedModel as |tomster|}}
+  {{#each this.sortedModel as |tomster|}}
     <li>
       <figure>
         <div class="well well-1/1">

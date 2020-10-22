@@ -7,30 +7,30 @@
   <div class="path-to-release">
     <div class="bold">The path to {{@project.finalVersion}}...</div>
     <div class="steps">
-      {{project-listing/beta
-          version=1
-          project=@project
-      }}
-      {{project-listing/beta
-          version=2
-          project=@project
-      }}
-      {{project-listing/beta
-          version=3
-          project=@project
-      }}
-      {{project-listing/beta
-          version=4
-          project=@project
-      }}
-      {{project-listing/beta
-          version=5
-          project=@project
-      }}
-      {{project-listing/beta
-          version=6
-          project=@project
-      }}
+      <ProjectListing::Beta
+          @version={{1}}
+          @project={{@project}}
+      />
+      <ProjectListing::Beta
+          @version={{2}}
+          @project={{@project}}
+      />
+      <ProjectListing::Beta
+          @version={{3}}
+          @project={{@project}}
+      />
+      <ProjectListing::Beta
+          @version={{4}}
+          @project={{@project}}
+      />
+      <ProjectListing::Beta
+          @version={{5}}
+          @project={{@project}}
+      />
+      <ProjectListing::Beta
+          @version={{6}}
+          @project={{@project}}
+      />
     </div>
   </div>
   <div class="release future-image">

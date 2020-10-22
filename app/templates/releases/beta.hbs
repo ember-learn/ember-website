@@ -1,12 +1,11 @@
 {{title "Beta"}}
 
-{{#project-listing
-    channel="beta"
-    channelDescription="Features spend at least six weeks in beta before they can be included in a stable release."
-    projects=(array model.ember model.emberData)
-    description=description
-}}
-  
+<ProjectListing
+    @channel="beta"
+    @channelDescription="Features spend at least six weeks in beta before they can be included in a stable release."
+    @projects={{array @model.ember @model.emberData}}
+>
+
   <h2>What is a beta release?</h2>
 
   <p>
@@ -24,6 +23,6 @@
     in order to volunteer their efforts as early testers.
   </p>
 
-{{/project-listing}}
+</ProjectListing>
 
 

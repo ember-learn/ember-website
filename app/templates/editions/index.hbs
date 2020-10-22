@@ -2,7 +2,7 @@
 <section class="container" aria-labelledby="ember-editions">
   <h1 id="ember-editions">Ember Editions</h1>
   <p>
-    Editions are a concept that were introduced to Ember with <a href="https://github.com/emberjs/rfcs/blob/master/text/0364-roadmap-2018.md" target="_blank" rel="noopener">RFC #364 - Ember 2018 Roadmap</a>. An edition represents a cohesive programming model, and releasing a new edition represents a shift in the programming model due to new features and concepts being added to Ember. Ember Octane is the first new edition that was added to Ember.
+    Editions are a concept that were introduced to Ember with <a href="https://github.com/emberjs/rfcs/blob/master/text/0364-roadmap-2018.md" target="_blank" rel="noopener noreferrer">RFC #364 - Ember 2018 Roadmap</a>. An edition represents a cohesive programming model, and releasing a new edition represents a shift in the programming model due to new features and concepts being added to Ember. Ember Octane is the first new edition that was added to Ember.
   </p>
   <p>
     Editions give us an opportunity to bring our documentation and marketing up-to-date to reflect the improvements
@@ -21,12 +21,12 @@
   <h2>Editions</h2>
   <ul class="grid lg:grid-3 unstyled-list">
     <li>
-      {{#link-to "editions.octane"}}
+      <LinkTo @route="editions.octane">
         <div class="well p-5">
           <img src="/images/tomsters/octane.png" alt="" role="presentation">
         </div>
         Octane (March 2019)
-      {{/link-to}}
+      </LinkTo>
     </li>
   </ul>
 </section>

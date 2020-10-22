@@ -11,35 +11,35 @@
   <TeamList
     @teamName="The Steering Committee"
     @teamDescription="The Steering Committee is responsible for the overall governance of the Ember project."
-    @members={{steeringCommitteeMembers}}
+    @members={{this.steeringCommitteeMembers}}
   />
 
   <TeamList
     @teamName="The Ember.js Core Team"
-    @members={{coreTeamMembers}}
+    @members={{this.coreTeamMembers}}
   />
 
   <TeamList
     @teamName="The Ember CLI Core Team"
     @teamDescription="The Ember CLI core team is responsible for maintaining ember-cli, the command line interface for managing and packaging Ember.js applications and addons. The team also maintains many of the addons in the default blueprint as well as fastboot."
-    @members={{coreCLITeamMembers}}
+    @members={{this.coreCLITeamMembers}}
   />
 
   <TeamList
     @teamName="The Ember Data Core Team"
     @teamDescription="The Ember Data core team is responsible for the official data persistence library for Ember.js applications."
-    @members={{dataTeamMembers}}
+    @members={{this.dataTeamMembers}}
   />
 
   <TeamList
     @teamName="The Ember Learning Core Team"
     @teamDescription="The mission of the Ember Learning core team is to empower Ember users to learn, build and teach. This team is responsible for keeping the guides and API documentation updated, and manages the initiatives that support learning Ember."
-    @members={{learningTeamMembers}}
+    @members={{this.learningTeamMembers}}
   />
 
   <TeamList
     @teamName="Emeritus"
     @teamDescription="Serving as a member of the Core Team(s) of an open source project like Ember is a huge amount of work. These are the emeritus members of the Ember Core Teams, to whom we will always be grateful."
-    @members={{alumniTeamMembers}}
+    @members={{this.alumniTeamMembers}}
   />
 </div>

@@ -21,9 +21,9 @@
     </div>
 
     <HighCharts
-      @chartOptions={{newReleaseAdoption.options}}
-      @content={{newReleaseAdoption.data}}
-      @theme={{theme}}
+      @chartOptions={{this.newReleaseAdoption.options}}
+      @content={{this.newReleaseAdoption.data}}
+      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -36,14 +36,14 @@
 
     <div class="grid lg:grid-2">
       <HighCharts
-        @chartOptions={{overallAdoption.options}}
-        @content={{overallAdoption.data}}
-        @theme={{theme}}
+        @chartOptions={{this.overallAdoption.options}}
+        @content={{this.overallAdoption.data}}
+        @theme={{this.theme}}
       />
       <HighCharts
-        @chartOptions={{emberDataAdoption.options}}
-        @content={{emberDataAdoption.data}}
-        @theme={{theme}}
+        @chartOptions={{this.emberDataAdoption.options}}
+        @content={{this.emberDataAdoption.data}}
+        @theme={{this.theme}}
       />
     </div>
 
@@ -62,9 +62,9 @@
       </a>
     </div>
     <HighCharts
-      @chartOptions={{recommendingEmber.options}}
-      @content={{recommendingEmber.data}}
-      @theme={{theme}}
+      @chartOptions={{this.recommendingEmber.options}}
+      @content={{this.recommendingEmber.data}}
+      @theme={{this.theme}}
     />
     <p class="text-md">
       We asked respondents how likely they were to recommend Ember to a friend or colleague.
@@ -202,16 +202,16 @@
     <div class="grid lg:grid-2">
       <div class="survey-column half">
         <HighCharts
-          @chartOptions={{employerUsingEmber.options}}
-          @content={{employerUsingEmber.data}}
-          @theme={{theme}}
+          @chartOptions={{this.employerUsingEmber.options}}
+          @content={{this.employerUsingEmber.data}}
+          @theme={{this.theme}}
         />
       </div>
       <div class="survey-column half">
         <HighCharts
-          @chartOptions={{gettingHired.options}}
-          @content={{gettingHired.data}}
-          @theme={{theme}}
+          @chartOptions={{this.gettingHired.options}}
+          @content={{this.gettingHired.data}}
+          @theme={{this.theme}}
         />
       </div>
     </div>
@@ -230,9 +230,9 @@
       </a>
     </div>
     <HighCharts
-      @chartOptions={{productionApps.options}}
-      @content={{productionApps.data}}
-      @theme={{theme}}
+      @chartOptions={{this.productionApps.options}}
+      @content={{this.productionApps.data}}
+      @theme={{this.theme}}
     />
     <p class="text-md">
       Ember apps with large user bases have grown again this year, with a large increase in apps that have thousands of users.
@@ -241,9 +241,9 @@
     </p>
 
     <HighCharts
-      @chartOptions={{emberenoEmployment.options}}
-      @content={{emberenoEmployment.data}}
-      @theme={{theme}}
+      @chartOptions={{this.emberenoEmployment.options}}
+      @content={{this.emberenoEmployment.data}}
+      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -251,15 +251,15 @@
     </p>
 
     <HighCharts
-      @chartOptions={{applicationUsers.options}}
-      @content={{applicationUsers.data}}
-      @theme={{theme}}
+      @chartOptions={{this.applicationUsers.options}}
+      @content={{this.applicationUsers.data}}
+      @theme={{this.theme}}
     />
 
     <HighCharts
-      @chartOptions={{teamSize.options}}
-      @content={{teamSize.data}}
-      @theme={{theme}}
+      @chartOptions={{this.teamSize.options}}
+      @content={{this.teamSize.data}}
+      @theme={{this.theme}}
     />
     <p class="text-md">
       Ember-focused developer teams are getting larger. This year the survey included a response to indicate that one's Ember team is greater than 500 developers, and
@@ -276,9 +276,9 @@
       </a>
     </div>
     <HighCharts
-      @chartOptions={{longLivedCodebases.options}}
-      @content={{longLivedCodebases.data}}
-      @theme={{theme}}
+      @chartOptions={{this.longLivedCodebases.options}}
+      @content={{this.longLivedCodebases.data}}
+      @theme={{this.theme}}
     />
     <p class="text-md">
       This chart shows the percentage of respondents who were maintaining an Ember app created
@@ -297,9 +297,9 @@
       </a>
     </div>
     <HighCharts
-      @chartOptions={{communityParticipation.options}}
-      @content={{communityParticipation.data}}
-      @theme={{theme}}
+      @chartOptions={{this.communityParticipation.options}}
+      @content={{this.communityParticipation.data}}
+      @theme={{this.theme}}
     />
     <p class="text-md">
       This chart shows some of the biggest changes in response from last year (in both positive and negative directions) to the question of how community members stay up to date with Ember.
@@ -317,14 +317,14 @@
     </div>
 
     <HighCharts
-      @chartOptions={{serverSide.options}}
-      @content={{serverSide.data}}
-      @theme={{theme}}
+      @chartOptions={{this.serverSide.options}}
+      @content={{this.serverSide.data}}
+      @theme={{this.theme}}
     />
     <HighCharts
-      @chartOptions={{serverSideFrameworks.options}}
-      @content={{serverSideFrameworks.data}}
-      @theme={{theme}}
+      @chartOptions={{this.serverSideFrameworks.options}}
+      @content={{this.serverSideFrameworks.data}}
+      @theme={{this.theme}}
     />
     <p class="text-md">
       Ruby continues to be the dominant server-side language used, but enterprise-focused languages are gaining in prominence this year, reflecting
@@ -338,9 +338,9 @@
     </p>
 
     <HighCharts
-      @chartOptions={{editorTool.options}}
-      @content={{editorTool.data}}
-      @theme={{theme}}
+      @chartOptions={{this.editorTool.options}}
+      @content={{this.editorTool.data}}
+      @theme={{this.theme}}
     />
     <p class="text-md">
       VS Code has really taken over, vaulting from 4th place last year (19%) to 38% and first place this year, dethroning last year's editor champion, Atom (now in second place at 28%).
@@ -356,9 +356,9 @@
       </a>
     </div>
     <HighCharts
-      @chartOptions={{browserRequirements.options}}
-      @content={{browserRequirements.data}}
-      @theme={{theme}}
+      @chartOptions={{this.browserRequirements.options}}
+      @content={{this.browserRequirements.data}}
+      @theme={{this.theme}}
     />
     <p class="text-md">
       Developers need to support browsers before IE11 less than ever before.
@@ -379,9 +379,9 @@
       </a>
     </div>
     <HighCharts
-      @chartOptions={{demographicsRegion.options}}
-      @content={{demographicsRegion.data}}
-      @theme={{theme}}
+      @chartOptions={{this.demographicsRegion.options}}
+      @content={{this.demographicsRegion.data}}
+      @theme={{this.theme}}
     />
 
     <p class="text-md">

@@ -21,11 +21,10 @@
     <ul class="unstyled grid sm:grid-2 lg:grid-5 mb-5">
       {{#each this.sortedModel as |user|}}
         <li>
-          <a href={{user.url}} rel="nofollow noopener" target="_blank" class="well well-16/9">
+          <a href={{user.url}} rel="nofollow noopener noreferrer" target="_blank" class="well well-16/9">
             <img
               alt={{user.name}}
               src="/images/users/{{user.image}}"
-              role="presentation"
               loading="lazy"
             >
           </a>
@@ -42,7 +41,7 @@
         To add your company or project to this page, <a href="https://github.com/ember-learn/ember-website" rel="nofollow">submit a Pull Request</a>.<br>
         Be sure that your logo has a transparent background and includes adequate white space.<br>
         Additional instructions are in the
-        <a href="https://github.com/ember-learn/ember-website/blob/master/CONTRIBUTING.md#adding-a-user" rel="nofollow noopener" target="_blank">contributing guide</a>.
+        <a href="https://github.com/ember-learn/ember-website/blob/master/CONTRIBUTING.md#adding-a-user" rel="nofollow noopener noreferrer" target="_blank">contributing guide</a>.
       </p>
     </div>
   </section>

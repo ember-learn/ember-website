@@ -22,9 +22,9 @@
     </h2>
 
     <HighCharts
-      @chartOptions={{chartHowlong.options}}
-      @content={{chartHowlong.data}}
-      @theme={{theme}}
+      @chartOptions={{this.chartHowlong.options}}
+      @content={{this.chartHowlong.data}}
+      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -44,11 +44,11 @@
     </h2>
 
     <div class="grid lg:grid-2">
-      {{#each chartEmberAtTheOffice as |chart|}}
+      {{#each this.chartEmberAtTheOffice as |chart|}}
         <HighCharts
           @chartOptions={{chart.options}}
           @content={{chart.data}}
-          @theme={{theme}}
+          @theme={{this.theme}}
         />
       {{/each}}
     </div>
@@ -71,9 +71,9 @@
     </h2>
 
     <HighCharts
-      @chartOptions={{chartNewReleaseAdoptionEmber.options}}
-      @content={{chartNewReleaseAdoptionEmber.data}}
-      @theme={{theme}}
+      @chartOptions={{this.chartNewReleaseAdoptionEmber.options}}
+      @content={{this.chartNewReleaseAdoptionEmber.data}}
+      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -83,9 +83,9 @@
     </p>
 
     <HighCharts
-      @chartOptions={{chartNewReleaseAdoptionEmberData.options}}
-      @content={{chartNewReleaseAdoptionEmberData.data}}
-      @theme={{theme}}
+      @chartOptions={{this.chartNewReleaseAdoptionEmberData.options}}
+      @content={{this.chartNewReleaseAdoptionEmberData.data}}
+      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -105,9 +105,9 @@
     </h2>
 
     <HighCharts
-      @chartOptions={{chartLongLivedCodebases.options}}
-      @content={{chartLongLivedCodebases.data}}
-      @theme={{theme}}
+      @chartOptions={{this.chartLongLivedCodebases.options}}
+      @content={{this.chartLongLivedCodebases.data}}
+      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -126,11 +126,11 @@
     </h2>
 
     <div class="grid lg:grid-2">
-      {{#each chartServerSide as |chart|}}
+      {{#each this.chartServerSide as |chart|}}
         <HighCharts
           @chartOptions={{chart.options}}
           @content={{chart.data}}
-          @theme={{theme}}
+          @theme={{this.theme}}
         />
       {{/each}}
     </div>
@@ -156,11 +156,11 @@
     </h2>
 
     <div class="grid lg:grid-2">
-      {{#each chartBrowserSuppor as |chart|}}
+      {{#each this.chartBrowserSuppor as |chart|}}
         <HighCharts
           @chartOptions={{chart.options}}
           @content={{chart.data}}
-          @theme={{theme}}
+          @theme={{this.theme}}
         />
       {{/each}}
     </div>
@@ -189,11 +189,11 @@
     </h2>
 
     <div class="grid lg:grid-2">
-      {{#each chartEmberEcosystem as |chart|}}
+      {{#each this.chartEmberEcosystem as |chart|}}
         <HighCharts
           @chartOptions={{chart.options}}
           @content={{chart.data}}
-          @theme={{theme}}
+          @theme={{this.theme}}
         />
       {{/each}}
     </div>
@@ -216,9 +216,9 @@
     </h2>
 
     <HighCharts
-      @chartOptions={{chartSEO.options}}
-      @content={{chartSEO.data}}
-      @theme={{theme}}
+      @chartOptions={{this.chartSEO.options}}
+      @content={{this.chartSEO.data}}
+      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -254,7 +254,7 @@
   <div class="text-center mb-3">
     <p>Brought to you by</p>
     <a href="http://www.201-created.com/">
-      <img alt="201 created logo" src="/images/survey/201-Created-Square@1x.png">
+      <img alt="201 created" src="/images/survey/201-Created-Square@1x.png">
     </a>
   </div>
 </div>
