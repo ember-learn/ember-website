@@ -19,44 +19,46 @@
     >
       <ul>
         <li id="fo35li1" class="notranslate">
-          <label class="desc" id="title1">
-            Name
-            <span id="req_1" class="req">*</span>
-          </label>
+          <fieldset>
+            <legend class="desc" id="title1">
+              Name
+              <span id="req_1" class="req">*</span>
+            </legend>
 
-          <span>
-            <input
-              id="Field1"
-              name="Field1"
-              type="text"
-              class="field text fn"
-              value=""
-              size="8"
-              tabindex="0"
-              onkeyup="handleInput(this);"
-              onchange="handleInput(this);"
-              placeholder=""
-              required=""
-            />
-            <label for="Field1">First</label>
-          </span>
+            <span>
+              <input
+                id="Field1"
+                name="Field1"
+                type="text"
+                class="field text fn"
+                value=""
+                size="8"
+                tabindex="0"
+                onkeyup="handleInput(this);"
+                onchange="handleInput(this);"
+                placeholder=""
+                required=""
+              />
+              <label for="Field1">First</label>
+            </span>
 
-          <span>
-            <input
-              id="Field2"
-              name="Field2"
-              type="text"
-              class="field text ln"
-              value=""
-              size="14"
-              tabindex="0"
-              onkeyup="handleInput(this);"
-              onchange="handleInput(this);"
-              placeholder=""
-              required=""
-            />
-            <label for="Field2">Last</label>
-          </span>
+            <span>
+              <input
+                id="Field2"
+                name="Field2"
+                type="text"
+                class="field text ln"
+                value=""
+                size="14"
+                tabindex="0"
+                onkeyup="handleInput(this);"
+                onchange="handleInput(this);"
+                placeholder=""
+                required=""
+              />
+              <label for="Field2">Last</label>
+            </span>
+          </fieldset>
         </li>
 
         <li
@@ -136,44 +138,44 @@
         </li>
 
         <li id="fo35li4" class="notranslate">
-          <label class="desc" id="title4">
-            Commission Amount
-            <span id="req_4" class="req">*</span>
-          </label>
+          <fieldset>
+            <legend class="desc" id="title4">
+              Commission Amount (USD)
+              <span id="req_4" class="req">*</span>
+            </legend>
 
-          <span class="symbol">$</span>
-          <span>
-            <input
-              id="Field4"
-              name="Field4"
-              type="text"
-              class="field text currency nospin"
-              value=""
-              size="10"
-              tabindex="0"
-              onkeyup="handleInput(this);"
-              onchange="handleInput(this);"
-              required=""
-            />
-            <label for="Field4">Dollars</label>
-          </span>
+            <span>
+              <input
+                id="Field4"
+                name="Field4"
+                type="text"
+                class="field text currency nospin"
+                value=""
+                size="10"
+                tabindex="0"
+                onkeyup="handleInput(this);"
+                onchange="handleInput(this);"
+                required=""
+              />
+              <label for="Field4">Dollars</label>
+            </span>
 
-          <span class="symbol radix">.</span>
-          <span class="cents">
-            <input
-              id="Field4-1"
-              name="Field4-1"
-              type="text"
-              class="field text nospin"
-              value=""
-              size="2"
-              maxlength="2"
-              tabindex="0"
-              onkeyup="handleInput(this);"
-              onchange="handleInput(this);"
-            />
-            <label for="Field4-1">Cents</label>
-          </span>
+            <span class="cents">
+              <input
+                id="Field4-1"
+                name="Field4-1"
+                type="text"
+                class="field text nospin"
+                value=""
+                size="2"
+                maxlength="2"
+                tabindex="0"
+                onkeyup="handleInput(this);"
+                onchange="handleInput(this);"
+              />
+              <label for="Field4-1">Cents</label>
+            </span>
+          </fieldset>
         </li>
 
         <li id="fo35li16" class="">
@@ -269,7 +271,7 @@
             <input
               id="saveForm"
               name="saveForm"
-              class="btTxt submit"
+              class="es-button button-dark"
               type="submit"
               value="Let's Do This!"
               onmousedown="doSubmitEvents();"
