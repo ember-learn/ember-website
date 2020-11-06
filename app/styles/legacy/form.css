@@ -42,6 +42,7 @@
 
 .tomster-form input[type=radio] {
   display: inline-block;
+  margin-right: 20px;
 }
 
 .tomster-form input[type=text],
@@ -114,8 +115,8 @@
 }
 
 .tomster-form fieldset input.other {
-  margin-left: 20px;
-  margin-top: 0.1em;
+  margin-left: 40px;
+  margin-top: 0.5em;
   width: calc(100% - 20px);
 }
 
