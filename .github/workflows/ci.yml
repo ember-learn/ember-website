@@ -87,6 +87,8 @@ jobs:
     steps:
       - name: Check out a copy of the repo
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v2-beta
