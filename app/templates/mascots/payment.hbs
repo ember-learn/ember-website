@@ -1,50 +1,312 @@
 <section class="container layout">
   <div class="lg:col-4">
-    <h1>Tomster and Zoey Commission Payments</h1>
+    <h1>Tomster and Zoey Commission Payment</h1>
 
-    <div class="left-col">
-      <div id="wufoo-q3qhbsp095gijb">
-        Fill out my
-        <a href="https://tilde.wufoo.com/forms/q3qhbsp095gijb">
-          online form
-        </a>.
-      </div>
-      <script type="text/javascript">
-        var q3qhbsp095gijb;
-        (function(d, t) {
-          var s = d.createElement(t),
-            options = {
-              'userName': 'tilde',
-              'formHash': 'q3qhbsp095gijb',
-              'autoResize': true,
-              'height': '646',
-              'async': true,
-              'host': 'wufoo.com',
-              'header': 'show',
-              'ssl': true
-            };
-          s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'secure.wufoo.com/scripts/embed/form.js';
-          s.onload = s.onreadystatechange = function() {
-            var rs = this.readyState;
-            if (rs)
-              if (rs != 'complete')
-                if (rs != 'loaded') return;
-            try {
-              q3qhbsp095gijb = new WufooForm();
-              q3qhbsp095gijb.initialize(options);
-              q3qhbsp095gijb.display();
-            } catch (e) {}
-          };
-          var scr = d.getElementsByTagName(t)[0],
-            par = scr.parentNode;
-          par.insertBefore(s, scr);
-        })(document, 'script');
-      </script>
-    </div>
+    <p>This form is processed using Stripe.</p>
+
+    <p>This form is only for Tomsters that we've already discussed payment and details on. If you have a new idea, <LinkTo @route="mascots.commission">reach out to discuss</LinkTo> first. 🙂</p>
+
+    <form
+      id="form35"
+      name="form35"
+      class="tomster-form wufoo topLabel page1"
+      accept-charset="UTF-8"
+      autocomplete="off"
+      enctype="multipart/form-data"
+      method="post"
+      novalidate=""
+      action="https://tilde.wufoo.com/forms/q3qhbsp095gijb"
+    >
+      <ul>
+        <li id="fo35li1" class="notranslate">
+          <fieldset>
+            <legend class="desc" id="title1">
+              Name
+              <span id="req_1" class="req">*</span>
+            </legend>
+
+            <span>
+              <input
+                id="Field1"
+                name="Field1"
+                type="text"
+                class="field text fn"
+                value=""
+                size="8"
+                tabindex="0"
+                onkeyup="handleInput(this);"
+                onchange="handleInput(this);"
+                placeholder=""
+                required=""
+              />
+              <label for="Field1">First</label>
+            </span>
+
+            <span>
+              <input
+                id="Field2"
+                name="Field2"
+                type="text"
+                class="field text ln"
+                value=""
+                size="14"
+                tabindex="0"
+                onkeyup="handleInput(this);"
+                onchange="handleInput(this);"
+                placeholder=""
+                required=""
+              />
+              <label for="Field2">Last</label>
+            </span>
+          </fieldset>
+        </li>
+
+        <li
+          id="fo35li9"
+          data-wufoo-field=""
+          data-field-type="text"
+          class="notranslate"
+        >
+          <label class="desc" id="title9" for="Field9"> Company </label>
+
+          <div>
+            <input
+              id="Field9"
+              name="Field9"
+              type="text"
+              class="field text medium"
+              value=""
+              maxlength="255"
+              tabindex="0"
+              onkeyup="handleInput(this); "
+              onchange="handleInput(this);"
+              placeholder=""
+            />
+          </div>
+        </li>
+
+        <li id="fo35li3" class="notranslate">
+          <label class="desc" id="title3" for="Field3">
+            Email
+            <span id="req_3" class="req">*</span>
+          </label>
+
+          <div>
+            <input
+              id="Field3"
+              name="Field3"
+              type="email"
+              spellcheck="false"
+              class="field text medium"
+              value=""
+              maxlength="255"
+              tabindex="0"
+              onkeyup="handleInput(this);"
+              onchange="handleInput(this);"
+              placeholder=""
+              required=""
+            />
+          </div>
+        </li>
+
+        <li
+          id="fo35li11"
+          data-wufoo-field=""
+          data-field-type="text"
+          class="notranslate"
+        >
+          <label class="desc" id="title11" for="Field11">
+            Which Tomster and/or Zoey is this payment for?
+            <span id="req_11" class="req">*</span>
+          </label>
+
+          <div>
+            <input
+              id="Field11"
+              name="Field11"
+              type="text"
+              class="field text medium"
+              value=""
+              maxlength="255"
+              tabindex="0"
+              onkeyup="handleInput(this); "
+              onchange="handleInput(this);"
+              required=""
+              placeholder=""
+            />
+          </div>
+        </li>
+
+        <li id="fo35li4" class="notranslate">
+          <fieldset>
+            <legend class="desc" id="title4">
+              Commission Amount (USD)
+              <span id="req_4" class="req">*</span>
+            </legend>
+
+            <span>
+              <input
+                id="Field4"
+                name="Field4"
+                type="text"
+                class="field text currency nospin"
+                value=""
+                size="10"
+                tabindex="0"
+                onkeyup="handleInput(this);"
+                onchange="handleInput(this);"
+                required=""
+              />
+              <label for="Field4">Dollars</label>
+            </span>
+
+            <span class="cents">
+              <input
+                id="Field4-1"
+                name="Field4-1"
+                type="text"
+                class="field text nospin"
+                value=""
+                size="2"
+                maxlength="2"
+                tabindex="0"
+                onkeyup="handleInput(this);"
+                onchange="handleInput(this);"
+              />
+              <label for="Field4-1">Cents</label>
+            </span>
+          </fieldset>
+        </li>
+
+        <li id="fo35li16" class="">
+          <fieldset>
+            <!--[if !IE | (gte IE 8)]-->
+            <legend id="title16" class="desc notranslate">
+              I can confirm that I have already signed the Licensing agreement I was
+              previously sent via HelloSign.
+              <span id="req_16" class="req">*</span>
+            </legend>
+            <!--[endif]-->
+
+            <!--[if lt IE 8]>
+              <label id="title16" class="desc">
+                I can confirm that I have already signed the Licensing agreement I
+                was previously sent via HelloSign.
+                <span id="req_16" class="req">*</span>
+              </label>
+            <![endif]-->
+
+            <div>
+              <span class="subfield">
+                <input
+                  id="Field16"
+                  name="Field16"
+                  type="checkbox"
+                  class="field checkbox"
+                  value="Confirmed, it's been signed!"
+                  tabindex="0"
+                  onchange="handleInput(this);"
+                />
+
+                <label class="choice" for="Field16">
+                  <span class="choice__text notranslate"
+                    >Confirmed, it's been signed!</span
+                  >
+                  <span class="choice__qty"></span>
+                </label>
+              </span>
+
+              <span class="subfield">
+                <input
+                  id="Field17"
+                  name="Field17"
+                  type="checkbox"
+                  class="field checkbox"
+                  value="I haven't, so I shouldn't be submitting this payment yet..."
+                  tabindex="0"
+                  onchange="handleInput(this);"
+                />
+
+                <label class="choice" for="Field17">
+                  <span class="choice__text notranslate"
+                    >I haven't, so I shouldn't be submitting this payment
+                    yet...</span
+                  >
+                  <span class="choice__qty"></span>
+                </label>
+              </span>
+
+              <span class="subfield">
+                <input
+                  id="Field18"
+                  name="Field18"
+                  type="checkbox"
+                  class="field checkbox"
+                  value="This payment is covering official project variants, so no licensing agreement is needed."
+                  tabindex="0"
+                  onchange="handleInput(this);"
+                />
+
+                <label class="choice" for="Field18">
+                  <span class="choice__text notranslate"
+                    >This payment is covering official project variants, so no
+                    licensing agreement is needed.</span
+                  >
+                  <span class="choice__qty"></span>
+                </label>
+              </span>
+            </div>
+          </fieldset>
+        </li>
+
+        <li class="buttons">
+          <div>
+            <input
+              type="hidden"
+              name="currentPage"
+              id="currentPage"
+              value="4MEwuslashIt71HHTl4RHHwuBejVv47f4wuslashdPwuBeUDhWl3a811Scy1w="
+            />
+
+            <input
+              id="saveForm"
+              name="saveForm"
+              class="es-button button-dark"
+              type="submit"
+              value="Let's Do This!"
+              onmousedown="doSubmitEvents();"
+            />
+          </div>
+        </li>
+
+        <li class="hide">
+          <label for="comment">Do Not Fill This Out</label>
+          <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+          <input
+            type="hidden"
+            id="idstamp"
+            name="idstamp"
+            value="4hFMwfQHT3iHQJczq5EUJA=="
+          />
+          <input
+            type="hidden"
+            id="encryptedPassword"
+            name="encryptedPassword"
+            value=""
+          />
+          <input
+            type="hidden"
+            id="stats"
+            name="stats"
+            value='{"errors":0,"startTime":0,"endTime":0,"referer":null}'
+          />
+          <input type="hidden" id="clickOrEnter" name="clickOrEnter" value="" />
+        </li>
+      </ul>
+    </form>
   </div>
 
   <div class="lg:col-2 hide-on-mobile">
-    <img alt="" src="/images/tomster-faq.png" width="95%" role="presentation" loading="lazy">
+    <img alt="" src="/images/tomster-faq.png" role="presentation" loading="lazy">
   </div>
-
 </section>
