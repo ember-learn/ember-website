@@ -3,7 +3,7 @@
 <ProjectListing
   @projects={{array @model}}
   @channel="LTS"
-  @channelDescription="Long Term Support releases receive bugfixes and security updates for an extended period."
+  @channelDescription="Long Term Support (LTS) releases receive bugfixes and security updates for an extended period."
 >
 
   <h2>What is an LTS release?</h2>
@@ -18,10 +18,14 @@
     since LTS versions get even more testing and scrutiny than usual.
   </p>
   <p>
-    An LTS is declared roughly every four minor versions, plus the final version before a
-    major release. Before a version can be called an "LTS" release, it has to spend
-    at least 6 weeks as a stable release, where it is used and tested by thousands of
-    developers.
+    An LTS is declared roughly every 4 minor versions, excluding the x.0 minor version.
+    The last minor version before the next major release is also considered to be an LTS.
+    For example, in Ember 2.x, the following versions were considered LTS's:
+    2.4, 2.8, 2.12, 2.16, and 2.18 (last version).
+  </p>
+  <p>
+    Before a version can be called an "LTS" release, it has to spend at least 6 weeks as a
+    stable release, where it is used and tested by thousands of developers.
   </p>
 
   <h2>LTS schedule</h2>
