@@ -11,7 +11,7 @@ futureVersion: 3.24.0-beta.4 # Manually update
 finalVersion: 3.24.0 # Manually update
 channel: beta
 cycleEstimatedFinishDate: 2020-12-28 12:00:00 # Manually update, change next one to 6 weeks from this date...regardless of delays in the release
-date: 2020-12-21 # Manually update, get date for `lastRelease`
+date: 2020-11-17 # Manually update, get date for `initialVersion`
 nextDate: 2020-12-28 12:00:00 # Manually update, change next one to 6 weeks from this date...regardless of delays in the release
 changelogPath: CHANGELOG.md
 debugFileName: .debug.js
