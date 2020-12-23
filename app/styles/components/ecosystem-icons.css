@@ -1,3 +1,13 @@
+.ecosystem-icons-container {
+  position: relative;
+}
+
+.ecosystem-icons-container .grid-dots {
+  position: absolute;
+  top: -40px;
+  right: 0;
+}
+
 .ecosystem-icons {
   display: grid;
   grid-template-columns: 1fr 1fr;
