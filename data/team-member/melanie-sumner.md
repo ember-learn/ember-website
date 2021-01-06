@@ -8,6 +8,4 @@ image: msumner.jpg
 added: 2017-11-28T09:00:00.000Z
 teams:
   - corejs
-  - steering
-  - learning
 ---
