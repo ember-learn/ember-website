@@ -64,7 +64,7 @@
     "ember-tether": "^2.0.0",
     "ember-truth-helpers": "^3.0.0",
     "eslint": "^7.11.0",
-    "eslint-plugin-ember": "^9.3.0",
+    "eslint-plugin-ember": "^10.1.1",
     "eslint-plugin-node": "^11.1.0",
     "highcharts": "^7.1.2",
     "leaflet": "^1.5.1",
