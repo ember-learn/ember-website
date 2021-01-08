@@ -16,12 +16,11 @@
   "scripts": {
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
+    "lint:css": "stylelint app/**/*.css",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
-    "lint:style": "stylelint 'app/**/*.css'",
     "start": "ember serve",
-    "test": "npm-run-all test:*",
-    "test:ember": "percy exec -- ember test"
+    "test": "percy exec -- ember test"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.3.0",
