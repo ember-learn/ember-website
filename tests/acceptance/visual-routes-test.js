@@ -1,5 +1,5 @@
 import { visit, settled } from '@ember/test-helpers';
-import { module, test } from 'qunit';
+import { module, skip, test } from 'qunit';
 import { setupApplicationTest } from 'ember-qunit';
 import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
@@ -37,7 +37,7 @@ module('Acceptance | visual regression', function (hooks) {
     { title: '/editions/octane', route: '/editions/octane' },
   ];
 
-  test(`visiting visual regressions with Percy`, async function (assert) {
+  skip(`visiting visual regressions with Percy`, async function (assert) {
     assert.expect(0);
 
     await pages.reduce(async (prev, config) => {
