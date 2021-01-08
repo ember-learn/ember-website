@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   test_page: 'tests/index.html?hidepassed&nolint',
   disable_watching: true,
