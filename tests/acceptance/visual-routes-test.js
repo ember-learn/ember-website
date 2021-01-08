@@ -2,7 +2,7 @@ import { visit, settled } from '@ember/test-helpers';
 import { module, test } from 'qunit';
 import { setupApplicationTest } from 'ember-qunit';
 import percySnapshot from '@percy/ember';
-import a11yAudit from 'ember-a11y-testing/test-support/audit';
+import { a11yAudit } from 'ember-a11y-testing/test-support';
 
 module('Acceptance | visual regression', function (hooks) {
   setupApplicationTest(hooks);
@@ -52,6 +52,12 @@ module('Acceptance | visual regression', function (hooks) {
   });
 
   pages.forEach(function(page) {
+    /*
+      TODO:
+
+      Currently, we don't run accessibility audits on any page.
+      Address accessibility issues and make sure that we run audits.
+    */
     if (page.a11y) {
       test(`testing a11y audit for ${page.route}`, async function (assert) {
         await visit(page.route)
