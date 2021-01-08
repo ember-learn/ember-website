@@ -9,9 +9,6 @@ module('Acceptance | visual regression', function (hooks) {
 
   // list new routes here so that they go through Percy and a11y tests
   const pages = [
-    { title: '/community/index.html', route: '/community/' },
-    { title: '/community/meetups-getting-started.html', route: '/community/meetups-getting-started/' },
-    { title: '/community/meetups.html', route: '/community/meetups/' },
     { title: '/ember-community-survey-2019.html', route: '/ember-community-survey-2019/' },
     { title: '/ember-users.html', route: '/ember-users/' },
     { title: '/guidelines.html', route: '/guidelines/' },
@@ -20,7 +17,6 @@ module('Acceptance | visual regression', function (hooks) {
     { title: '/legal.html', route: '/about/legal/' },
     { title: '/logos.html', route: '/logos/' },
     { title: '/mascots.html', route: '/mascots/' },
-    { title: '/meetup-assets.html', route: '/community/meetups/assets/' },
     { title: '/security.html', route: '/security/' },
     { title: '/sponsors.html', route: '/sponsors/' },
     { title: '/teams.html', route: '/teams/' },
