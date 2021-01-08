@@ -8,20 +8,7 @@ module('Acceptance | visual regression', function (hooks) {
   setupApplicationTest(hooks);
 
   // list new routes here so that they go through Percy and a11y tests
-  const pages = [
-    { title: '/ember-community-survey-2019.html', route: '/ember-community-survey-2019/' },
-    { title: '/ember-users.html', route: '/ember-users/' },
-    { title: '/guidelines.html', route: '/guidelines/' },
-    { title: '/index.html', route: '/'},
-    { title: '/learn.html', route: '/learn/' },
-    { title: '/legal.html', route: '/about/legal/' },
-    { title: '/logos.html', route: '/logos/' },
-    { title: '/security.html', route: '/security/' },
-    { title: '/sponsors.html', route: '/sponsors/' },
-    { title: '/teams.html', route: '/teams/' },
-    { title: '/editions/', route: '/editions/' },
-    { title: '/editions/octane', route: '/editions/octane' },
-  ];
+  const pages = [];
 
   skip(`visiting visual regressions with Percy`, async function (assert) {
     assert.expect(0);
