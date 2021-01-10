@@ -1,9 +1,9 @@
 import Model, { attr } from '@ember-data/model';
 
 export default Model.extend({
-  title: attr(),
-  url: attr(),
+  title: attr('string'),
+  url: attr('string'),
   date: attr('date'),
-  image: attr(),
+  image: attr('string'),
   tags: attr(),
 });
