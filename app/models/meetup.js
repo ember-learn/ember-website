@@ -1,10 +1,10 @@
 import Model, { attr } from '@ember-data/model';
 
 export default Model.extend({
-  location: attr(),
-  url: attr(),
-  lat: attr(),
-  lng: attr(),
+  location: attr('string'),
+  url: attr('string'),
+  lat: attr('number'),
+  lng: attr('number'),
   organizers: attr(),
-  area: attr(),
+  area: attr('string'),
 });
