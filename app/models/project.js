@@ -2,22 +2,22 @@ import Model, { attr } from '@ember-data/model';
 import { computed } from '@ember/object';
 
 export default Model.extend({
-  name: attr(),
-  baseFileName: attr(),
-  filter: attr(),
-  repo: attr(),
-  initialVersion: attr(),
-  lastRelease: attr(),
-  futureVersion: attr(),
-  finalVersion: attr(),
-  channel: attr(),
+  baseFileName: attr('string'),
+  changelogPath: attr('string'),
+  channel: attr('string'),
+  content: attr('string'),
   cycleEstimatedFinishDate: attr('date'),
   date: attr('date'),
+  debugFileName: attr('string'),
+  filter: attr(),
+  finalVersion: attr('string'),
+  futureVersion: attr('string'),
+  ignoreFiles: attr(),
+  initialVersion: attr('string'),
+  lastRelease: attr('string'),
+  name: attr('string'),
   nextDate: attr('date'),
-  changelogPath: attr(),
-  debugFileName: attr(),
-  ignoreFiles:  attr(),
-  content: attr(),
+  repo: attr('string'),
 
   isEmberBeta: computed('channel', 'name', function() {
     return this.channel === 'beta' && this.name === 'Ember';

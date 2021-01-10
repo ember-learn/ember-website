@@ -2,12 +2,12 @@ import Model, { attr } from '@ember-data/model';
 import { computed } from '@ember/object';
 
 export default Model.extend({
-  content: attr(),
-  name: attr(),
+  content: attr('string'),
   end: attr('date'),
-  image: attr(),
+  image: attr('string'),
+  name: attr('string'),
   start: attr('date'),
-  url: attr(),
+  url: attr('string'),
 
   term: computed('start', 'end', function() {
     let startYear = this.start.getFullYear();
@@ -18,7 +18,7 @@ export default Model.extend({
     }
 
     if(startYear === endYear) {
-      return startYear;
+      return `${startYear}`;
     }
 
     if(!endYear) {
