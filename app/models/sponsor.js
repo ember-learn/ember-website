@@ -3,9 +3,9 @@ import { computed } from '@ember/object';
 
 export default Model.extend({
   content: attr('string'),
-  name: attr('string'),
   end: attr('date'),
   image: attr('string'),
+  name: attr('string'),
   start: attr('date'),
   url: attr('string'),
 

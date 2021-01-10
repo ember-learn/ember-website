@@ -1,11 +1,11 @@
 import Model, { attr } from '@ember-data/model';
 
 export default Model.extend({
-  name: attr('string'),
-  image: attr('string'),
-  url: attr('string'),
-  inactive: attr('boolean'),
-  content: attr('string'),
   added: attr('date'),
+  content: attr('string'),
   featured: attr('boolean'),
+  image: attr('string'),
+  inactive: attr('boolean'),
+  name: attr('string'),
+  url: attr('string'),
 });
