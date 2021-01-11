@@ -1,39 +1,32 @@
 import Model, { attr } from '@ember-data/model';
-import { computed } from '@ember/object';
 
-export default Model.extend({
-  baseFileName: attr('string'),
-  changelogPath: attr('string'),
-  channel: attr('string'),
-  content: attr('string'),
-  cycleEstimatedFinishDate: attr('date'),
-  date: attr('date'),
-  debugFileName: attr('string'),
-  filter: attr(),
-  finalVersion: attr('string'),
-  futureVersion: attr('string'),
-  ignoreFiles: attr(),
-  initialVersion: attr('string'),
-  lastRelease: attr('string'),
-  name: attr('string'),
-  nextDate: attr('date'),
-  repo: attr('string'),
+export default class ProjectModel extends Model {
+  @attr('string') baseFileName;
+  @attr('string') changelogPath;
+  @attr('string') channel;
+  @attr('string') content;
+  @attr('date') cycleEstimatedFinishDate;
+  @attr('date') date;
+  @attr('string') debugFileName;
+  @attr filter;
+  @attr('string') finalVersion;
+  @attr('string') futureVersion;
+  @attr ignoreFiles;
+  @attr('string') initialVersion;
+  @attr('string') lastRelease;
+  @attr('string') name;
+  @attr('date') nextDate;
+  @attr('string') repo;
 
-  isEmberBeta: computed('channel', 'name', function () {
+  get isEmberBeta() {
     return this.channel === 'beta' && this.name === 'Ember';
-  }),
+  }
 
-  lastReleaseChangelogUrl: computed(
-    'channel',
-    'changelogPath',
-    'lastRelease',
-    'repo',
-    function () {
-      if (this.channel === 'canary' || !this.changelogPath) {
-        return;
-      }
-
-      return `https://github.com/${this.repo}/blob/v${this.lastRelease}/${this.changelogPath}`;
+  get lastReleaseChangelogUrl() {
+    if (this.channel === 'canary' || !this.changelogPath) {
+      return '';
     }
-  ),
-});
+
+    return `https://github.com/${this.repo}/blob/v${this.lastRelease}/${this.changelogPath}`;
+  }
+}
