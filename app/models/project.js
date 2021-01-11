@@ -19,15 +19,21 @@ export default Model.extend({
   nextDate: attr('date'),
   repo: attr('string'),
 
-  isEmberBeta: computed('channel', 'name', function() {
+  isEmberBeta: computed('channel', 'name', function () {
     return this.channel === 'beta' && this.name === 'Ember';
   }),
 
-  lastReleaseChangelogUrl: computed('channel', 'changelogPath', 'lastRelease', 'repo', function() {
-    if(this.channel === 'canary' || !this.changelogPath) {
-      return;
-    }
+  lastReleaseChangelogUrl: computed(
+    'channel',
+    'changelogPath',
+    'lastRelease',
+    'repo',
+    function () {
+      if (this.channel === 'canary' || !this.changelogPath) {
+        return;
+      }
 
-    return `https://github.com/${this.repo}/blob/v${this.lastRelease}/${this.changelogPath}`
-  })
+      return `https://github.com/${this.repo}/blob/v${this.lastRelease}/${this.changelogPath}`;
+    }
+  ),
 });

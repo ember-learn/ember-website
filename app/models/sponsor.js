@@ -9,22 +9,22 @@ export default Model.extend({
   start: attr('date'),
   url: attr('string'),
 
-  term: computed('start', 'end', function() {
+  term: computed('start', 'end', function () {
     let startYear = this.start.getFullYear();
     let endYear;
 
-    if(this.end) {
+    if (this.end) {
       endYear = this.end.getFullYear();
     }
 
-    if(startYear === endYear) {
+    if (startYear === endYear) {
       return `${startYear}`;
     }
 
-    if(!endYear) {
+    if (!endYear) {
       endYear = 'present';
     }
 
     return `${startYear} - ${endYear}`;
-  })
+  }),
 });

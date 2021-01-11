@@ -4,10 +4,10 @@ import { infoLinks } from 'ember-styleguide/constants/es-footer';
 
 function replaceUrlPrefix(url) {
   // ignore external apps
-  if(
-    url.endsWith('/blog')
-    || url.endsWith('/deprecations')
-    || url.endsWith('/api')
+  if (
+    url.endsWith('/blog') ||
+    url.endsWith('/deprecations') ||
+    url.endsWith('/api')
   ) {
     return url;
   }
@@ -23,19 +23,19 @@ function replaceLinks(links) {
     if (group.items) {
       return {
         ...group,
-        items: replaceLinks(group.items)
+        items: replaceLinks(group.items),
       };
     }
 
-    if(group.href) {
+    if (group.href) {
       return {
         ...group,
         href: replaceUrlPrefix(group.href),
-      }
+      };
     }
 
-    return group
-  })
+    return group;
+  });
 }
 
 export default Controller.extend({

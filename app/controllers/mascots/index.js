@@ -1,7 +1,7 @@
-import Controller from "@ember/controller";
+import Controller from '@ember/controller';
 
 export default Controller.extend({
-  queryParams: ["filter", "display"],
-  filter: "all",
-  display: "small"
+  queryParams: ['filter', 'display'],
+  filter: 'all',
+  display: 'small',
 });

@@ -4,7 +4,7 @@ module.exports = {
 
   locals() {
     return {
-      date: (new Date()).toISOString()
+      date: new Date().toISOString(),
     };
-  }
+  },
 };

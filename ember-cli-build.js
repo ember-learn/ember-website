@@ -5,7 +5,7 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     babel: {
-      plugins: [ require.resolve('ember-auto-import/babel-plugin') ]
+      plugins: [require.resolve('ember-auto-import/babel-plugin')],
     },
     ifa: {
       enabled: true,
@@ -54,8 +54,8 @@ module.exports = function (defaults) {
         'ember-community-survey-2020',
         'editions',
         'editions/octane',
-        'community/black-lives-matter'
-      ]
+        'community/black-lives-matter',
+      ],
     },
     emberHighCharts: {
       includeHighCharts: true,
@@ -63,10 +63,10 @@ module.exports = function (defaults) {
       includeModules: ['drilldown'],
     },
     'ember-leaflet': {
-      excludeJS: true
+      excludeJS: true,
     },
     minifyCSS: {
-      options: { processImport: true }
+      options: { processImport: true },
     },
   });
 

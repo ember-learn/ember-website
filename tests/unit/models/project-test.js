@@ -1,27 +1,25 @@
 import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-module('Unit | Model | project', function(hooks) {
+module('Unit | Model | project', function (hooks) {
   setupTest(hooks);
 
-  module('Ember.js', function(hooks) {
-    hooks.beforeEach(function() {
+  module('Ember.js', function (hooks) {
+    hooks.beforeEach(function () {
       this.store = this.owner.lookup('service:store');
     });
 
-    test('The model can describe an LTS release', function(assert) {
+    test('The model can describe an LTS release', function (assert) {
       const model = this.store.createRecord('project', {
         baseFileName: 'ember',
         changelogPath: 'CHANGELOG.md',
         channel: 'lts',
-        content: '# Install Ember %s:\n<br>\nnpm install --save-dev ember-source@~%s',
+        content:
+          '# Install Ember %s:\n<br>\nnpm install --save-dev ember-source@~%s',
         cycleEstimatedFinishDate: undefined,
         date: new Date('2020-09-09'),
         debugFileName: '.debug.js',
-        filter: [
-          '/ember\\./',
-          '/ember-template-compiler/',
-        ],
+        filter: ['/ember\\./', '/ember-template-compiler/'],
         finalVersion: undefined,
         futureVersion: '3.20.7',
         id: 'ember/lts',
@@ -48,19 +46,17 @@ module('Unit | Model | project', function(hooks) {
       );
     });
 
-    test('The model can describe a stable release', function(assert) {
+    test('The model can describe a stable release', function (assert) {
       const model = this.store.createRecord('project', {
         baseFileName: 'ember',
         changelogPath: 'CHANGELOG.md',
         channel: 'release',
-        content: '# Install Ember %s:\n<br>\nnpm install --save-dev ember-source@~%s',
+        content:
+          '# Install Ember %s:\n<br>\nnpm install --save-dev ember-source@~%s',
         cycleEstimatedFinishDate: undefined,
         date: new Date('2021-01-07'),
         debugFileName: '.debug.js',
-        filter: [
-          '/ember\\./',
-          '/ember-template-compiler/',
-        ],
+        filter: ['/ember\\./', '/ember-template-compiler/'],
         finalVersion: undefined,
         futureVersion: '3.24.1',
         id: 'ember/release',
@@ -87,19 +83,17 @@ module('Unit | Model | project', function(hooks) {
       );
     });
 
-    test('The model can describe a beta release', function(assert) {
+    test('The model can describe a beta release', function (assert) {
       const model = this.store.createRecord('project', {
         baseFileName: 'ember',
         changelogPath: 'CHANGELOG.md',
         channel: 'beta',
-        content: '# Install Ember %s:\n<br>\nnpm install --save-dev ember-source@~%s',
+        content:
+          '# Install Ember %s:\n<br>\nnpm install --save-dev ember-source@~%s',
         cycleEstimatedFinishDate: new Date('2021-02-08'),
         date: new Date('2020-12-28'),
         debugFileName: '.debug.js',
-        filter: [
-          '/ember\\./',
-          '/ember-template-compiler/',
-        ],
+        filter: ['/ember\\./', '/ember-template-compiler/'],
         finalVersion: '3.25.0',
         futureVersion: '3.25.0-beta.2',
         id: 'ember/beta',
@@ -126,7 +120,7 @@ module('Unit | Model | project', function(hooks) {
       );
     });
 
-    test('The model can describe a canary release', function(assert) {
+    test('The model can describe a canary release', function (assert) {
       const model = this.store.createRecord('project', {
         baseFileName: 'ember',
         changelogPath: undefined,
@@ -135,10 +129,7 @@ module('Unit | Model | project', function(hooks) {
         cycleEstimatedFinishDate: undefined,
         date: undefined,
         debugFileName: '.debug.js',
-        filter: [
-          '/ember\\./',
-          '/ember-template-compiler/',
-        ],
+        filter: ['/ember\\./', '/ember-template-compiler/'],
         finalVersion: undefined,
         futureVersion: undefined,
         id: 'ember/canary',
@@ -166,23 +157,22 @@ module('Unit | Model | project', function(hooks) {
     });
   });
 
-  module('Ember Data', function(hooks) {
-    hooks.beforeEach(function() {
+  module('Ember Data', function (hooks) {
+    hooks.beforeEach(function () {
       this.store = this.owner.lookup('service:store');
     });
 
-    test('The model can describe a stable release', function(assert) {
+    test('The model can describe a stable release', function (assert) {
       const model = this.store.createRecord('project', {
         baseFileName: 'ember-data',
         changelogPath: 'CHANGELOG.md',
         channel: 'release',
-        content: '# Install Ember-Data %s:\n<br>\nnpm install --save-dev ember-data@%s',
+        content:
+          '# Install Ember-Data %s:\n<br>\nnpm install --save-dev ember-data@%s',
         cycleEstimatedFinishDate: undefined,
         date: new Date('2021-01-07'),
         debugFileName: '.js',
-        filter: [
-          '/ember-data\\./',
-        ],
+        filter: ['/ember-data\\./'],
         finalVersion: undefined,
         futureVersion: '3.24.1',
         id: 'emberData/release',
@@ -209,18 +199,17 @@ module('Unit | Model | project', function(hooks) {
       );
     });
 
-    test('The model can describe a beta release', function(assert) {
+    test('The model can describe a beta release', function (assert) {
       const model = this.store.createRecord('project', {
         baseFileName: 'ember-data',
         changelogPath: 'CHANGELOG.md',
         channel: 'beta',
-        content: '# Install Ember-Data %s:\n<br>\nnpm install --save-dev ember-data@%s',
+        content:
+          '# Install Ember-Data %s:\n<br>\nnpm install --save-dev ember-data@%s',
         cycleEstimatedFinishDate: undefined,
         date: new Date('2021-01-05'),
         debugFileName: '.js',
-        filter: [
-          '/ember-data\\./',
-        ],
+        filter: ['/ember-data\\./'],
         finalVersion: '3.25.0',
         futureVersion: '3.25.0-beta.1',
         id: 'emberData/beta',
@@ -247,18 +236,17 @@ module('Unit | Model | project', function(hooks) {
       );
     });
 
-    test('The model can describe a canary release', function(assert) {
+    test('The model can describe a canary release', function (assert) {
       const model = this.store.createRecord('project', {
         baseFileName: 'ember-data',
         changelogPath: undefined,
         channel: 'canary',
-        content: '# Install the latest Ember-Data canary:\n<br>\nnpm install --save-dev emberjs/data#master',
+        content:
+          '# Install the latest Ember-Data canary:\n<br>\nnpm install --save-dev emberjs/data#master',
         cycleEstimatedFinishDate: undefined,
         date: undefined,
         debugFileName: '.js',
-        filter: [
-          '/ember-data\\./',
-        ],
+        filter: ['/ember-data\\./'],
         finalVersion: undefined,
         futureVersion: undefined,
         id: 'emberData/canary',

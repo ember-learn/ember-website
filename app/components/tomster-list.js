@@ -8,15 +8,19 @@ export default Component.extend({
   sorting: Object.freeze(['date:desc']),
   sortedModel: sort('filteredModel', 'sorting'),
 
-  filteredModel: computed('filter', 'tomsters', function() {
+  filteredModel: computed('filter', 'tomsters', function () {
     if (this.filter === 'all') {
       return this.tomsters;
     }
 
-    return this.tomsters.filter(tomster => tomster.tags.includes(this.filter));
+    return this.tomsters.filter((tomster) =>
+      tomster.tags.includes(this.filter)
+    );
   }),
 
-  displayClass: computed('display', function() {
-    return this.display === 'small' ? 'sm:grid-2 lg:grid-3' : 'sm:grid-1 lg:grid-2';
+  displayClass: computed('display', function () {
+    return this.display === 'small'
+      ? 'sm:grid-2 lg:grid-3'
+      : 'sm:grid-1 lg:grid-2';
   }),
 });

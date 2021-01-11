@@ -12,15 +12,15 @@ export default Route.extend({
 
     this.router.on('routeDidChange', () => {
       this.navbar.closePopupMenu();
-      if(window.scrollTo) {
-        window.scrollTo(0,0);
+      if (window.scrollTo) {
+        window.scrollTo(0, 0);
       }
       this._trackPage();
-    })
+    });
   },
 
   _trackPage() {
-    if(this.fastboot.isFastBoot) {
+    if (this.fastboot.isFastBoot) {
       return;
     }
 
@@ -31,5 +31,5 @@ export default Route.extend({
     const hostname = 'www.emberjs.com';
 
     this.metrics.trackPage({ page, title, hostname });
-  }
+  },
 });

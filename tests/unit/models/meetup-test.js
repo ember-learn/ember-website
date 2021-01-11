@@ -1,10 +1,10 @@
 import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-module('Unit | Model | meetup', function(hooks) {
+module('Unit | Model | meetup', function (hooks) {
   setupTest(hooks);
 
-  test('The model can describe a Meetup', function(assert) {
+  test('The model can describe a Meetup', function (assert) {
     const store = this.owner.lookup('service:store');
     const model = store.createRecord('meetup', {
       area: 'North America',
@@ -15,7 +15,8 @@ module('Unit | Model | meetup', function(hooks) {
       organizers: [
         {
           organizer: 'Brandon Hays',
-          profileImage: 'https://photos4.meetupstatic.com/photos/member/c/e/2/4/thumb_111832772.jpeg',
+          profileImage:
+            'https://photos4.meetupstatic.com/photos/member/c/e/2/4/thumb_111832772.jpeg',
         },
       ],
       url: 'https://www.meetup.com/Ember-ATX/',

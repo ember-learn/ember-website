@@ -6,5 +6,5 @@ export default Component.extend({
     if (spinner) {
       spinner.style.display = 'none';
     }
-  }
+  },
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'ember-website',
     environment,
@@ -13,8 +13,8 @@ module.exports = function(environment) {
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
+        Date: false,
+      },
     },
 
     APP: {
@@ -24,11 +24,11 @@ module.exports = function(environment) {
 
     'ember-algolia': {
       algoliaId: 'BH4D9OD16A',
-      algoliaKey: '760969ef081fcadc7e0e60faefdb0907'
+      algoliaKey: '760969ef081fcadc7e0e60faefdb0907',
     },
 
     fastboot: {
-      hostWhitelist: [/^localhost:\d+$/]
+      hostWhitelist: [/^localhost:\d+$/],
     },
 
     metricsAdapters: [
@@ -37,8 +37,8 @@ module.exports = function(environment) {
         environments: ['production'],
         config: {
           id: 'UA-27675533-1',
-          require: ['linkid']
-        }
+          require: ['linkid'],
+        },
       },
     ],
 

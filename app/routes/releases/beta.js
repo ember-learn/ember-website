@@ -5,7 +5,7 @@ export default Route.extend({
   model() {
     return hash({
       ember: this.store.find('project', 'ember/beta'),
-      emberData: this.store.find('project', 'emberData/beta')
+      emberData: this.store.find('project', 'emberData/beta'),
     });
-  }
+  },
 });
