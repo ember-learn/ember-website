@@ -1,10 +1,10 @@
 import Model, { attr } from '@ember-data/model';
 
-export default Model.extend({
-  demo: attr('string'),
-  features: attr(),
-  html: attr('string'),
-  image: attr(),
-  name: attr('string'),
-  repository: attr('string'),
-});
+export default class ShowcaseModel extends Model {
+  @attr('string') demo;
+  @attr features;
+  @attr('string') html;
+  @attr image;
+  @attr('string') name;
+  @attr('string') repository;
+}

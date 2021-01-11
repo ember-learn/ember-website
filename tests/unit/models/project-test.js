@@ -151,7 +151,7 @@ module('Unit | Model | project', function (hooks) {
 
       assert.strictEqual(
         model.lastReleaseChangelogUrl,
-        undefined,
+        '',
         'We get the correct value for lastReleaseChangelogUrl.'
       );
     });
@@ -268,7 +268,7 @@ module('Unit | Model | project', function (hooks) {
 
       assert.strictEqual(
         model.lastReleaseChangelogUrl,
-        undefined,
+        '',
         'We get the correct value for lastReleaseChangelogUrl.'
       );
     });

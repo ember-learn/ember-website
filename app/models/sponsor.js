@@ -1,15 +1,14 @@
 import Model, { attr } from '@ember-data/model';
-import { computed } from '@ember/object';
 
-export default Model.extend({
-  content: attr('string'),
-  end: attr('date'),
-  image: attr('string'),
-  name: attr('string'),
-  start: attr('date'),
-  url: attr('string'),
+export default class SponsorModel extends Model {
+  @attr('string') content;
+  @attr('date') end;
+  @attr('string') image;
+  @attr('string') name;
+  @attr('date') start;
+  @attr('string') url;
 
-  term: computed('start', 'end', function () {
+  get term() {
     let startYear = this.start.getFullYear();
     let endYear;
 
@@ -26,5 +25,5 @@ export default Model.extend({
     }
 
     return `${startYear} - ${endYear}`;
-  }),
-});
+  }
+}
