@@ -1,5 +1,6 @@
 import { visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
+import { a11yAudit } from 'ember-a11y-testing/test-support';
 import { setupApplicationTest } from 'ember-qunit';
 import { module, skip } from 'qunit';
 
@@ -23,6 +24,13 @@ module('Acceptance | ember-community-survey-2019', function (hooks) {
   skip('Percy snapshot', async function (assert) {
     await visit('/ember-community-survey-2019');
     await percySnapshot(assert);
+
+    assert.ok(true);
+  });
+
+  skip('Accessibility audit', async function (assert) {
+    await visit('/ember-community-survey-2019');
+    await a11yAudit();
 
     assert.ok(true);
   });
