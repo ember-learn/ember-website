@@ -1,8 +1,6 @@
 import { helper } from '@ember/component/helper';
-import { htmlSafe as safe } from '@ember/template';
+import { htmlSafe as _htmlSafe } from '@ember/template';
 
-export function htmlSafe([input] /*, hash*/) {
-  return safe(input);
-}
-
-export default helper(htmlSafe);
+export default helper(function htmlSafe([htmlCode]) {
+  return _htmlSafe(htmlCode);
+});
