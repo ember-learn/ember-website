@@ -4,7 +4,7 @@ import { a11yAudit } from 'ember-a11y-testing/test-support';
 import { setupApplicationTest } from 'ember-qunit';
 import { module, skip } from 'qunit';
 
-module('Acceptance | community/meetups getting started', function (hooks) {
+module('Acceptance | community/black lives matter', function (hooks) {
   setupApplicationTest(hooks);
 
   /*
@@ -17,14 +17,14 @@ module('Acceptance | community/meetups getting started', function (hooks) {
     setting, let's skip the Percy snapshot.
   */
   skip('Percy snapshot', async function (assert) {
-    await visit('/community/meetups-getting-started');
+    await visit('/community/black-lives-matter');
     await percySnapshot(assert);
 
     assert.ok(true);
   });
 
   skip('Accessibility audit', async function (assert) {
-    await visit('/community/meetups-getting-started');
+    await visit('/community/black-lives-matter');
     await a11yAudit();
 
     assert.ok(true);
