@@ -9,13 +9,13 @@ export default Component.extend({
   sortedModel: sort('filteredModel', 'sorting'),
 
   filteredModel: computed('filter', 'tomsters', function () {
+    const tomsters = this.tomsters ?? [];
+
     if (this.filter === 'all') {
-      return this.tomsters;
+      return tomsters;
     }
 
-    return this.tomsters.filter((tomster) =>
-      tomster.tags.includes(this.filter)
-    );
+    return tomsters.filter((tomster) => tomster.tags.includes(this.filter));
   }),
 
   displayClass: computed('display', function () {
