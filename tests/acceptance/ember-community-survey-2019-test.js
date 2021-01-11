@@ -2,10 +2,12 @@ import { visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
 import { setupApplicationTest } from 'ember-qunit';
+import { setupPageTitleTest } from 'ember-website/tests/helpers/page-title';
 import { module, skip } from 'qunit';
 
 module('Acceptance | ember-community-survey-2019', function (hooks) {
   setupApplicationTest(hooks);
+  setupPageTitleTest(hooks);
 
   /*
     TODO:
@@ -32,6 +34,6 @@ module('Acceptance | ember-community-survey-2019', function (hooks) {
     await visit('/ember-community-survey-2019');
     await a11yAudit();
 
-    assert.ok(true);
+    assert.hasPageTitle('Community Survey 2019 - Ember.js');
   });
 });
