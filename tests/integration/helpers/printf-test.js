@@ -6,6 +6,16 @@ import { module, test } from 'qunit';
 module('Integration | Helper | printf', function (hooks) {
   setupRenderingTest(hooks);
 
+  test('The helper does not error when string is undefined', async function (assert) {
+    await render(hbs`
+      <div data-test-value>
+        {{printf}}
+      </div>
+    `);
+
+    assert.dom('[data-test-value]').hasText('', 'We get the correct value.');
+  });
+
   test('We can substitute %s with another string', async function (assert) {
     this.instructions =
       '# Install Ember %s:\n<br>\nnpm install --save-dev ember-source@~%s';

@@ -10,6 +10,18 @@ module('Integration | Helper | format-date-time', function (hooks) {
     this.releaseDate = new Date('2021-01-07');
   });
 
+  test('The helper does not error when date is undefined', async function (assert) {
+    await render(hbs`
+      <div data-test-value>
+        {{format-date-time}}
+      </div>
+    `);
+
+    assert
+      .dom('[data-test-value]')
+      .hasText('Unknown date', 'We get the correct value.');
+  });
+
   test('By default, displays the month and day of the date', async function (assert) {
     await render(hbs`
       <div data-test-value>
