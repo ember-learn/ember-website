@@ -1,13 +1,16 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
 import { click, focus, render, triggerKeyEvent } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
+import { hbs } from 'ember-cli-htmlbars';
+import { setupRenderingTest } from 'ember-qunit';
+import { module, test } from 'qunit';
 
 module('Integration | Component | addon-tabs', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it activates a tab when clicking on it', async function (assert) {
-    await render(hbs`<AddonTabs />`);
+    await render(hbs`
+      <AddonTabs />
+    `);
+
     let firstTab = assert.dom('#addon-tab-0');
     let firstPanel = assert.dom('#addon-panel-0');
 
@@ -30,7 +33,9 @@ module('Integration | Component | addon-tabs', function (hooks) {
   });
 
   test("it's possible to change the active tab by pressing the arrow keys when focused on the currently active tab", async function (assert) {
-    await render(hbs`<AddonTabs />`);
+    await render(hbs`
+      <AddonTabs />
+    `);
 
     let totalTabs = this.element.querySelectorAll('[role=tab]').length;
     let firstTabSelector = `#addon-tab-0`;

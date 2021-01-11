@@ -5,6 +5,10 @@ export default Component.extend({
   tagName: '',
 
   currentBetaNumber: computed('project.lastRelease', function () {
+    if (!this.project?.lastRelease) {
+      return undefined;
+    }
+
     let versionParts = this.project.lastRelease.split('.');
     return parseInt(versionParts[versionParts.length - 1], 10);
   }),

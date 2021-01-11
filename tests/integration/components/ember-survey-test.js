@@ -1,13 +1,12 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
 import Service from '@ember/service';
+import { hbs } from 'ember-cli-htmlbars';
+import { setupRenderingTest } from 'ember-qunit';
+import { module, test } from 'qunit';
 
 module('Integration | Component | ember-survey', function (hooks) {
   setupRenderingTest(hooks);
 
-  let template = hbs`{{ember-survey}}`;
   let surveySelector = '.survey-reminder-wrapper';
 
   module('A survey is configured', function (hooks) {
@@ -28,7 +27,11 @@ module('Integration | Component | ember-survey', function (hooks) {
           currentRouteName: 'mascots',
         })
       );
-      await render(template);
+
+      await render(hbs`
+        <EmberSurvey />
+      `);
+
       assert.dom(surveySelector).exists();
     });
 
@@ -42,11 +45,15 @@ module('Integration | Component | ember-survey', function (hooks) {
         );
       });
 
-      let templateWithToday = hbs`{{ember-survey today=today}}`;
-
       test('it renders the time remaining to take the survey when it is the current survey page', async function (assert) {
         this.set('today', Date.UTC(2019, 2, 1));
-        await render(templateWithToday);
+
+        await render(hbs`
+          <EmberSurvey
+            @today={{this.today}}
+          />
+        `);
+
         assert
           .dom(surveySelector)
           .hasText('You have 11 days left to submit your response! x');
@@ -54,7 +61,13 @@ module('Integration | Component | ember-survey', function (hooks) {
 
       test('with one day left to submit', async function (assert) {
         this.set('today', Date.UTC(2019, 2, 11));
-        await render(templateWithToday);
+
+        await render(hbs`
+          <EmberSurvey
+            @today={{this.today}}
+          />
+        `);
+
         assert
           .dom(surveySelector)
           .hasText('You have 1 day left to submit your response! x');
@@ -62,7 +75,13 @@ module('Integration | Component | ember-survey', function (hooks) {
 
       test('with 0 days left to submit', async function (assert) {
         this.set('today', Date.UTC(2019, 2, 12));
-        await render(templateWithToday);
+
+        await render(hbs`
+          <EmberSurvey
+            @today={{this.today}}
+          />
+        `);
+
         assert
           .dom(surveySelector)
           .hasText('You have today left to submit your response! x');
