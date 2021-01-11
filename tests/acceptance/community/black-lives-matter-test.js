@@ -2,10 +2,12 @@ import { visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
 import { setupApplicationTest } from 'ember-qunit';
+import { setupPageTitleTest } from 'ember-website/tests/helpers/page-title';
 import { module, skip } from 'qunit';
 
 module('Acceptance | community/black lives matter', function (hooks) {
   setupApplicationTest(hooks);
+  setupPageTitleTest(hooks);
 
   /*
     TODO:
@@ -27,6 +29,6 @@ module('Acceptance | community/black lives matter', function (hooks) {
     await visit('/community/black-lives-matter');
     await a11yAudit();
 
-    assert.ok(true);
+    assert.hasPageTitle('Community - Ember.js');
   });
 });

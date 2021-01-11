@@ -2,10 +2,12 @@ import { visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
 import { setupApplicationTest } from 'ember-qunit';
+import { setupPageTitleTest } from 'ember-website/tests/helpers/page-title';
 import { module, skip } from 'qunit';
 
 module('Acceptance | community/meetups getting started', function (hooks) {
   setupApplicationTest(hooks);
+  setupPageTitleTest(hooks);
 
   /*
     TODO:
@@ -27,6 +29,6 @@ module('Acceptance | community/meetups getting started', function (hooks) {
     await visit('/community/meetups-getting-started');
     await a11yAudit();
 
-    assert.ok(true);
+    assert.hasPageTitle('Getting Started - Ember.js');
   });
 });
