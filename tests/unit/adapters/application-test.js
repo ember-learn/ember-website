@@ -1,10 +1,10 @@
 import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-module('Unit | Adapter | application', function(hooks) {
+module('Unit | Adapter | application', function (hooks) {
   setupTest(hooks);
 
-  test('urlForFindAll works', function(assert) {
+  test('urlForFindAll works', function (assert) {
     const adapter = this.owner.lookup('adapter:application');
 
     assert.strictEqual(
@@ -20,7 +20,7 @@ module('Unit | Adapter | application', function(hooks) {
     );
   });
 
-  test('urlForFindRecord works', function(assert) {
+  test('urlForFindRecord works', function (assert) {
     const adapter = this.owner.lookup('adapter:application');
 
     assert.strictEqual(

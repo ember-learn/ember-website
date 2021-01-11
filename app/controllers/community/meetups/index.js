@@ -9,17 +9,15 @@ export default Controller.extend({
 
   init() {
     this._super(...arguments);
-    
+
     if (!this.fastboot?.isFastBoot) {
-      
-      import('leaflet')
-      .then(() => {
+      import('leaflet').then(() => {
         let prefix = '';
         const config = getOwner(this).resolveRegistration('config:environment');
-        
+
         prefix = config.rootURL;
         L.Icon.Default.imagePath = `${prefix}assets/images/`;
-        this.set('leafletPackageLoaded', true)
+        this.set('leafletPackageLoaded', true);
       });
     }
   },

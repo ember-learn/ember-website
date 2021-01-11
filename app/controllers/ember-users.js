@@ -6,5 +6,5 @@ export default Controller.extend({
   fastboot: service(),
 
   sortingKey: Object.freeze(['featured:desc', 'added']),
-  sortedModel: sort('model', 'sortingKey')
+  sortedModel: sort('model', 'sortingKey'),
 });

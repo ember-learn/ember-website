@@ -1,5 +1,7 @@
 import JSONAPISerializer from '@ember-data/serializer/json-api';
 
 export default JSONAPISerializer.extend({
-  keyForAttribute(key) { return key; }
+  keyForAttribute(key) {
+    return key;
+  },
 });

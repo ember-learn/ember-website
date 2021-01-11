@@ -9,17 +9,17 @@ let localConfig = null;
 let defaultOptions = {
   plotOptions: {
     series: {
-      shadow: false
-    }
+      shadow: false,
+    },
   },
 
   global: {
-    timezoneOffset: new Date().getTimezoneOffset()
+    timezoneOffset: new Date().getTimezoneOffset(),
   },
 
   credits: {
-    enabled: false
-  }
+    enabled: false,
+  },
 };
 
 export function getSeriesMap(seriesGroup) {
@@ -34,7 +34,8 @@ export function getSeriesMap(seriesGroup) {
 export function getSeriesChanges(contentSeries, series) {
   let updatedKeys = Object.keys(contentSeries).filter((key) => {
     let isValidKey = key !== 'data' && key.charAt(0) !== '_';
-    let isValidType = ['object', 'function'].indexOf(typeof contentSeries[key]) === -1;
+    let isValidType =
+      ['object', 'function'].indexOf(typeof contentSeries[key]) === -1;
     let isTheSame = contentSeries[key] === series[key];
 
     return isValidKey && isValidType && !isTheSame;
@@ -66,7 +67,7 @@ function setDefaultHighChartOptions(owner, Highcharts) {
 const CHART_TYPES = {
   StockChart: 'stockChart',
   Map: 'mapChart',
-  undefined: 'chart'
+  undefined: 'chart',
 };
 
 export default Component.extend({
@@ -78,7 +79,7 @@ export default Component.extend({
   theme: undefined,
   callback: undefined,
 
-  buildOptions: computed('chartOptions', 'content.[]', function() {
+  buildOptions: computed('chartOptions', 'content.[]', function () {
     let theme = this.theme ?? {};
     let passedChartOptions = this.chartOptions ?? {};
 
@@ -87,11 +88,13 @@ export default Component.extend({
 
     // if 'no-data-to-display' module has been imported, keep empty series and leave it to highcharts to show no data label.
     if (!this.content?.length && !this.highcharts.Chart.prototype.showNoData) {
-      chartContent = [{
-        id: 'noData',
-        data: 0,
-        color: '#aaaaaa'
-      }];
+      chartContent = [
+        {
+          id: 'noData',
+          data: 0,
+          color: '#aaaaaa',
+        },
+      ];
     }
 
     let defaults = { series: chartContent };
@@ -142,7 +145,12 @@ export default Component.extend({
 
     // add new series
     content.forEach((contentSeries) => {
-      if (!Object.prototype.hasOwnProperty.call(chartSeriesMap, contentSeries.name)) {
+      if (
+        !Object.prototype.hasOwnProperty.call(
+          chartSeriesMap,
+          contentSeries.name
+        )
+      ) {
         chart.addSeries(contentSeries, false);
       }
     });
@@ -160,7 +168,8 @@ export default Component.extend({
   },
 
   draw() {
-    let element = this.element && this.element.querySelector('.chart-container');
+    let element =
+      this.element && this.element.querySelector('.chart-container');
     let modeAttr = this.mode ?? undefined;
     let mode = CHART_TYPES[modeAttr];
     let completeChartOptions = [this.buildOptions, this.callback];
@@ -174,14 +183,11 @@ export default Component.extend({
   didInsertElement() {
     this._super(...arguments);
 
-
-
-    import('highcharts').then(module => {
-      this.set('highcharts', module.default)
+    import('highcharts').then((module) => {
+      this.set('highcharts', module.default);
       this.drawAfterRender();
       setDefaultHighChartOptions(getOwner(this), this.highcharts);
     });
-
   },
 
   willDestroyElement() {
@@ -190,5 +196,5 @@ export default Component.extend({
     if (this.chart) {
       this.chart.destroy();
     }
-  }
+  },
 });

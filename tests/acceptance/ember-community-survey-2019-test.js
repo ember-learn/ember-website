@@ -3,7 +3,7 @@ import percySnapshot from '@percy/ember';
 import { setupApplicationTest } from 'ember-qunit';
 import { module, skip } from 'qunit';
 
-module('Acceptance | ember-community-survey-2019', function(hooks) {
+module('Acceptance | ember-community-survey-2019', function (hooks) {
   setupApplicationTest(hooks);
 
   /*
@@ -20,7 +20,7 @@ module('Acceptance | ember-community-survey-2019', function(hooks) {
     For now, until we rewrite how highcharts can be used in an Octane
     setting, let's skip the Percy snapshot.
   */
-  skip('Percy snapshot', async function(assert) {
+  skip('Percy snapshot', async function (assert) {
     await visit('/ember-community-survey-2019');
     await percySnapshot(assert);
 

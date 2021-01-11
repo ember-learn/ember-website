@@ -9,5 +9,5 @@ export default JSONAPIAdapter.extend({
   urlForFindRecord(id, modelName) {
     const path = this.pathForType(modelName);
     return `/data/${path}/${id}.json`;
-  }
+  },
 });

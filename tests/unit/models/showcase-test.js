@@ -1,10 +1,10 @@
 import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-module('Unit | Model | showcase', function(hooks) {
+module('Unit | Model | showcase', function (hooks) {
   setupTest(hooks);
 
-  test('The model can describe a showcase project', function(assert) {
+  test('The model can describe a showcase project', function (assert) {
     const store = this.owner.lookup('service:store');
     const model = store.createRecord('showcase', {
       demo: 'https://ember-learn-super-rentals.herokuapp.com/',

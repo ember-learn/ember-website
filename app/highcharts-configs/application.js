@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
-export default function(defaultOptions) {
+export default function (defaultOptions) {
   defaultOptions.plotOptions = {
     series: {
-      animation: !Ember.testing
-    }
-  }
+      animation: !Ember.testing,
+    },
+  };
 
   return defaultOptions;
 }

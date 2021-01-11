@@ -3,14 +3,13 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Helper | add-weeks', function(hooks) {
+module('Integration | Helper | add-weeks', function (hooks) {
   setupRenderingTest(hooks);
 
-
-  test('by default, adds 0 weeks to the initial date', async function(assert) {
+  test('by default, adds 0 weeks to the initial date', async function (assert) {
     this.ltsRelease = {
       version: '3.16',
-      promotionDate: new Date('March 4, 2020')
+      promotionDate: new Date('March 4, 2020'),
     };
 
     await render(hbs`
@@ -34,18 +33,22 @@ module('Integration | Helper | add-weeks', function(hooks) {
       </table>
     `);
 
-    assert.dom('[data-test-column="Bugfixes"]')
+    assert
+      .dom('[data-test-column="Bugfixes"]')
       .hasText('March 4, 2020', 'We see the correct date for bugfixes.');
 
-    assert.dom('[data-test-column="Security Patches"]')
-      .hasText('March 4, 2020', 'We see the correct date for security patches.');
+    assert
+      .dom('[data-test-column="Security Patches"]')
+      .hasText(
+        'March 4, 2020',
+        'We see the correct date for security patches.'
+      );
   });
 
-
-  test('can add any number of weeks to the initial date', async function(assert) {
+  test('can add any number of weeks to the initial date', async function (assert) {
     this.ltsRelease = {
       version: '3.16',
-      promotionDate: new Date('March 4, 2020')
+      promotionDate: new Date('March 4, 2020'),
     };
 
     await render(hbs`
@@ -69,10 +72,15 @@ module('Integration | Helper | add-weeks', function(hooks) {
       </table>
     `);
 
-    assert.dom('[data-test-column="Bugfixes"]')
+    assert
+      .dom('[data-test-column="Bugfixes"]')
       .hasText('November 11, 2020', 'We see the correct date for bugfixes.');
 
-    assert.dom('[data-test-column="Security Patches"]')
-      .hasText('March 17, 2021', 'We see the correct date for security patches.');
+    assert
+      .dom('[data-test-column="Security Patches"]')
+      .hasText(
+        'March 17, 2021',
+        'We see the correct date for security patches.'
+      );
   });
 });

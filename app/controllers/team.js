@@ -1,12 +1,11 @@
 import Controller from '@ember/controller';
-import { sort } from '@ember/object/computed'
+import { sort } from '@ember/object/computed';
 import { computed } from '@ember/object';
 
 function inTeam(team) {
-  return computed('sortedModel.[]', function() {
-    return this.sortedModel
-      .filter((member) => member.teams.includes(team))
-  })
+  return computed('sortedModel.[]', function () {
+    return this.sortedModel.filter((member) => member.teams.includes(team));
+  });
 }
 
 export default Controller.extend({

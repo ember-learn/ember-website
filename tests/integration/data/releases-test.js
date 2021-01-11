@@ -11,24 +11,31 @@ let expectedReleaseDates = {
   '3.25.0': new Date('2021-02-08 12:00:00 GMT'),
   '3.26.0': new Date('2021-03-22 12:00:00 GMT'),
   '3.27.0': new Date('2021-05-03 12:00:00 GMT'),
-  '3.28.0': new Date('2021-06-14 12:00:00 GMT')
+  '3.28.0': new Date('2021-06-14 12:00:00 GMT'),
 };
 
-module('Integration | Data | releases', function(hooks) {
+module('Integration | Data | releases', function (hooks) {
   setupRenderingTest(hooks);
 
-  hooks.beforeEach(function() {
+  hooks.beforeEach(function () {
     store = this.owner.lookup('service:store');
   });
 
-  test('ember beta dates are correct', async function(assert) {
+  test('ember beta dates are correct', async function (assert) {
     let data = await store.find('project', 'ember/beta');
 
-    assert.ok(data.cycleEstimatedFinishDate.getDay() === 1, `${data.cycleEstimatedFinishDate} should be a Monday`);
+    assert.ok(
+      data.cycleEstimatedFinishDate.getDay() === 1,
+      `${data.cycleEstimatedFinishDate} should be a Monday`
+    );
 
     let nextVersion = data.finalVersion;
     let nextExpectedRelease = expectedReleaseDates[nextVersion];
 
-    assert.ok(data.cycleEstimatedFinishDate.toString() === nextExpectedRelease.toString(), `the next expected release should be on ${nextExpectedRelease} but we have set ${data.cycleEstimatedFinishDate}`);
-  })
+    assert.ok(
+      data.cycleEstimatedFinishDate.toString() ===
+        nextExpectedRelease.toString(),
+      `the next expected release should be on ${nextExpectedRelease} but we have set ${data.cycleEstimatedFinishDate}`
+    );
+  });
 });

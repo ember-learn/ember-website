@@ -3,7 +3,7 @@ import percySnapshot from '@percy/ember';
 import { setupApplicationTest } from 'ember-qunit';
 import { module, skip } from 'qunit';
 
-module('Acceptance | community/meetups getting started', function(hooks) {
+module('Acceptance | community/meetups getting started', function (hooks) {
   setupApplicationTest(hooks);
 
   /*
@@ -15,7 +15,7 @@ module('Acceptance | community/meetups getting started', function(hooks) {
     For now, until we rewrite how leaflet can be used in an Octane
     setting, let's skip the Percy snapshot.
   */
-  skip('Percy snapshot', async function(assert) {
+  skip('Percy snapshot', async function (assert) {
     await visit('/community/meetups-getting-started');
     await percySnapshot(assert);
 

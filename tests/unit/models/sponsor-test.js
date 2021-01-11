@@ -1,14 +1,14 @@
 import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-module('Unit | Model | sponsor', function(hooks) {
+module('Unit | Model | sponsor', function (hooks) {
   setupTest(hooks);
 
-  hooks.beforeEach(function() {
+  hooks.beforeEach(function () {
     this.store = this.owner.lookup('service:store');
   });
 
-  test('The model can describe a current sponsor', function(assert) {
+  test('The model can describe a current sponsor', function (assert) {
     const model = this.store.createRecord('sponsor', {
       content: 'Yehuda Katz, Leah Silber, Godfrey Chan',
       end: undefined,
@@ -28,7 +28,7 @@ module('Unit | Model | sponsor', function(hooks) {
     );
   });
 
-  test('The model can describe a past sponsor (1)', function(assert) {
+  test('The model can describe a past sponsor (1)', function (assert) {
     const model = this.store.createRecord('sponsor', {
       content: 'Matthew Beale',
       end: new Date('2018-12-31'),
@@ -48,7 +48,7 @@ module('Unit | Model | sponsor', function(hooks) {
     );
   });
 
-  test('The model can describe a past sponsor (2)', function(assert) {
+  test('The model can describe a past sponsor (2)', function (assert) {
     const model = this.store.createRecord('sponsor', {
       content: 'Performance',
       end: new Date('2018-01-01'),

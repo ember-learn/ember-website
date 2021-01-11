@@ -1,10 +1,10 @@
 import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-module('Unit | Model | team member', function(hooks) {
+module('Unit | Model | team member', function (hooks) {
   setupTest(hooks);
 
-  test('The model can describe a person that belongs to 1 team', function(assert) {
+  test('The model can describe a person that belongs to 1 team', function (assert) {
     const store = this.owner.lookup('service:store');
     const model = store.createRecord('team-member', {
       added: new Date('2020-06-18'),
@@ -21,7 +21,7 @@ module('Unit | Model | team member', function(hooks) {
     assert.ok(model, 'We can create the record.');
   });
 
-  test('The model can describe a person that belongs to multiple teams', function(assert) {
+  test('The model can describe a person that belongs to multiple teams', function (assert) {
     const store = this.owner.lookup('service:store');
     const model = store.createRecord('team-member', {
       added: new Date('2016-04-14'),
@@ -38,7 +38,7 @@ module('Unit | Model | team member', function(hooks) {
     assert.ok(model, 'We can create the record.');
   });
 
-  test('The model can describe a person who is an alumnus or alumna', function(assert) {
+  test('The model can describe a person who is an alumnus or alumna', function (assert) {
     const store = this.owner.lookup('service:store');
     const model = store.createRecord('team-member', {
       added: new Date('2013-04-02'),
