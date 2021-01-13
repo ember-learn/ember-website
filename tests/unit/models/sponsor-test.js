@@ -1,4 +1,5 @@
 import { setupTest } from 'ember-qunit';
+import { getAttributesForId } from 'ember-website/mirage/data/sponsors';
 import { module, test } from 'qunit';
 
 module('Unit | Model | sponsor', function (hooks) {
@@ -9,15 +10,8 @@ module('Unit | Model | sponsor', function (hooks) {
   });
 
   test('The model can describe a current sponsor', function (assert) {
-    const model = this.store.createRecord('sponsor', {
-      content: 'Yehuda Katz, Leah Silber, Godfrey Chan',
-      end: undefined,
-      id: 'tilde',
-      image: 'tilde-logo.svg',
-      name: 'Tilde',
-      start: new Date('2011-01-01'),
-      url: 'https://www.tilde.io/',
-    });
+    const attributes = getAttributesForId('tilde');
+    const model = this.store.createRecord('sponsor', attributes);
 
     assert.ok(model, 'We can create the record.');
 
@@ -29,15 +23,8 @@ module('Unit | Model | sponsor', function (hooks) {
   });
 
   test('The model can describe a past sponsor (1)', function (assert) {
-    const model = this.store.createRecord('sponsor', {
-      content: 'Matthew Beale',
-      end: new Date('2018-12-31'),
-      id: '201-created',
-      image: '201-created.png',
-      name: '201 Created',
-      start: new Date('2015-01-02'),
-      url: 'https://www.201-created.com',
-    });
+    const attributes = getAttributesForId('201-created');
+    const model = this.store.createRecord('sponsor', attributes);
 
     assert.ok(model, 'We can create the record.');
 
@@ -49,15 +36,8 @@ module('Unit | Model | sponsor', function (hooks) {
   });
 
   test('The model can describe a past sponsor (2)', function (assert) {
-    const model = this.store.createRecord('sponsor', {
-      content: 'Performance',
-      end: new Date('2018-01-01'),
-      id: 'discourse',
-      image: 'discourse.png',
-      name: 'Discourse',
-      start: new Date('2018-12-31'),
-      url: 'https://www.discourse.com',
-    });
+    const attributes = getAttributesForId('discourse');
+    const model = this.store.createRecord('sponsor', attributes);
 
     assert.ok(model, 'We can create the record.');
 
