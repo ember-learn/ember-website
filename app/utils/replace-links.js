@@ -1,10 +1,11 @@
+const legacyExternalLinks = new Set([
+  'https://emberjs.com/api',
+  'https://emberjs.com/blog',
+  'https://emberjs.com/deprecations',
+]);
+
 function replaceUrlPrefix(url) {
-  // ignore external apps
-  if (
-    url.endsWith('/blog') ||
-    url.endsWith('/deprecations') ||
-    url.endsWith('/api')
-  ) {
+  if (legacyExternalLinks.has(url)) {
     return url;
   }
 
