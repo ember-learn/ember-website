@@ -11,11 +11,12 @@ function isExternalLink(url) {
   return isExternalLink || isLegacyExternalLink;
 }
 
-function replaceUrlPrefix(url) {
+function replaceInternalLinks(url) {
   if (isExternalLink(url)) {
     return url;
   }
 
+  // Map internal links to the correct route name
   return url
     .replace(/^https:\/\/emberjs.com\//, '/')
     .replace(/^\/builds(\/\w+)$/, '/releases$1')
@@ -34,7 +35,7 @@ export default function replaceLinks(links) {
     if (group.href) {
       return {
         ...group,
-        href: replaceUrlPrefix(group.href),
+        href: replaceInternalLinks(group.href),
       };
     }
 
