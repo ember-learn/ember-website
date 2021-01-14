@@ -17,6 +17,43 @@ const mapIdToAttributes = new Map([
       repository: 'https://github.com/ember-learn/super-rentals',
     },
   ],
+  [
+    '3',
+    {
+      demo: 'https://api.emberjs.com/',
+      features: [
+        'A more full-featured Ember web app in action',
+        'Usage of <a href="https://ember-fastboot.com/">Ember FastBoot</a>.',
+      ],
+      html: `<p>This application was built to display our versioned <a href="http://emberjs.com/api/">API docs</a>.  You'll be able to learn about:</p>`,
+      id: '3',
+      image: {
+        alt: 'API docs application',
+        src: 'api-docs.png',
+      },
+      name: 'API Docs',
+      repository: 'https://github.com/ember-learn/ember-api-docs',
+    },
+  ],
+  [
+    '4',
+    {
+      demo: 'https://deprecations.emberjs.com/',
+      features: [
+        'Deprecations for each version of Ember from <a href="https://emberjs.com/deprecations/v1.x">v1</a> through <a href="https://emberjs.com/deprecations/v3.x">v3</a>.',
+        'Ember Data specific deprecations in <a href="https://emberjs.com/deprecations/ember-data/v2.x">v2</a> and  <a href="https://emberjs.com/deprecations/ember-data/v3.x">v3</a>.',
+        'Ember CLI specific deprecations in <a href="https://emberjs.com/deprecations/ember-cli/v2.x">v2</a>.',
+      ],
+      html: `Ember CLI specific deprecations in <a href="https://emberjs.com/deprecations/ember-cli/v2.x">v2</a>.`,
+      id: '4',
+      image: {
+        alt: 'Deprecations application',
+        src: 'deprecations.png',
+      },
+      name: 'Deprecations',
+      repository: 'https://github.com/ember-learn/deprecation-app',
+    },
+  ],
 ]);
 
 // Default export is for loading data into Mirage

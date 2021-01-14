@@ -1,5 +1,46 @@
 const mapIdToAttributes = new Map([
   [
+    '201-created',
+    {
+      added: new Date('2017-06-16'),
+      content: 'Ember.js and JavaScript consulting since 2011.',
+      featured: undefined,
+      id: '201-created',
+      image: '201-created.png',
+      inactive: undefined,
+      name: '201 Created',
+      url: 'https://www.201-created.com',
+    },
+  ],
+  [
+    'articad',
+    {
+      added: new Date('2019-03-25'),
+      content:
+        "ArtiCAD uses ember.js for it's room planner and styler application.",
+      featured: undefined,
+      id: 'articad',
+      image: 'articad.png',
+      inactive: undefined,
+      name: 'Articad Ltd',
+      url: 'https://www.articad.com',
+    },
+  ],
+  [
+    'clark-smart-insurance',
+    {
+      added: new Date('2016-12-17'),
+      content:
+        "Clark's consumer ui is powered by Ember.js - available on our website and integrated into our iOS & Android apps.",
+      featured: undefined,
+      id: 'clark-smart-insurance',
+      image: 'clark_x2.png',
+      inactive: undefined,
+      name: 'Clark - Smart Insurance',
+      url: 'https://www.clark.de',
+    },
+  ],
+  [
     'linkedin',
     {
       added: new Date('2015-06-02'),
@@ -13,16 +54,29 @@ const mapIdToAttributes = new Map([
     },
   ],
   [
-    'wnyc',
+    'netflix',
     {
-      added: new Date('2016-09-16'),
-      content: "WNYC's front-end is fully powered by Ember",
-      featured: undefined,
-      id: 'wnyc',
-      image: 'wnyc.png',
+      added: new Date('2015-01-28'),
+      content: '',
+      featured: true,
+      id: 'netflix',
+      image: 'netflix.png',
       inactive: undefined,
-      name: 'WNYC',
-      url: 'https://www.wnyc.org/',
+      name: 'Netflix',
+      url: 'https://www.netflix.com/',
+    },
+  ],
+  [
+    'ted',
+    {
+      added: new Date('2014-12-15'),
+      content: '',
+      featured: true,
+      id: 'ted',
+      image: 'ted.png',
+      inactive: undefined,
+      name: 'TED',
+      url: 'https://www.ted.com',
     },
   ],
   [
@@ -36,7 +90,20 @@ const mapIdToAttributes = new Map([
       image: 'velocitylabs.png',
       inactive: true,
       name: 'Velocity Labs',
-      url: 'http://velocitylabs.io',
+      url: 'https://velocitylabs.io',
+    },
+  ],
+  [
+    'wnyc',
+    {
+      added: new Date('2016-09-16'),
+      content: "WNYC's front-end is fully powered by Ember",
+      featured: undefined,
+      id: 'wnyc',
+      image: 'wnyc.png',
+      inactive: undefined,
+      name: 'WNYC',
+      url: 'https://www.wnyc.org/',
     },
   ],
 ]);
