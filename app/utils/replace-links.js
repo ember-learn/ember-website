@@ -4,8 +4,15 @@ const legacyExternalLinks = new Set([
   'https://emberjs.com/deprecations',
 ]);
 
+function isExternalLink(url) {
+  const isExternalLink = !url.startsWith('https://emberjs.com');
+  const isLegacyExternalLink = legacyExternalLinks.has(url);
+
+  return isExternalLink || isLegacyExternalLink;
+}
+
 function replaceUrlPrefix(url) {
-  if (legacyExternalLinks.has(url)) {
+  if (isExternalLink(url)) {
     return url;
   }
 
