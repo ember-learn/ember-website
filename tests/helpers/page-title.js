@@ -18,7 +18,7 @@ function setUpCustomAssertions(assert) {
       return;
     }
 
-    // Remove progress check, e.g. `(5/5)`, that Testem appends to the title
+    // Remove progress check, e.g. `(2/5)`, that Testem appends to the title
     const actualValue = titleElement.innerText
       .trim()
       .replace(/^\(\d+\/\d+\)/, '');
@@ -28,6 +28,15 @@ function setUpCustomAssertions(assert) {
       expectedValue,
       'We render the correct page title.'
     );
+
+    // Check meta tags created by `ember-cli-head`
+    assert
+      .dom(document.querySelector('meta[property="og:title"]'))
+      .hasAttribute(
+        'content',
+        expectedValue,
+        'We render an Open Graph meta tag.'
+      );
   };
 }
 
