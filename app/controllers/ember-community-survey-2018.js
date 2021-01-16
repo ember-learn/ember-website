@@ -949,23 +949,23 @@ const emberDataAdoption = makeVersionChart(
   'Which versions of Ember Data are used in your apps?'
 );
 
-export default Controller.extend({
-  theme,
-  newReleaseAdoption,
-  overallAdoption,
-  emberDataAdoption,
-  recommendingEmber,
-  employerUsingEmber,
-  gettingHired,
-  productionApps,
-  emberenoEmployment,
-  applicationUsers,
-  teamSize,
-  longLivedCodebases,
-  communityParticipation,
-  serverSide,
-  serverSideFrameworks,
-  editorTool,
-  browserRequirements,
-  demographicsRegion,
-});
+export default class EmberCommunitySurvey2018Controller extends Controller {
+  theme = theme;
+  newReleaseAdoption = newReleaseAdoption;
+  overallAdoption = overallAdoption;
+  emberDataAdoption = emberDataAdoption;
+  recommendingEmber = recommendingEmber;
+  employerUsingEmber = employerUsingEmber;
+  gettingHired = gettingHired;
+  productionApps = productionApps;
+  emberenoEmployment = emberenoEmployment;
+  applicationUsers = applicationUsers;
+  teamSize = teamSize;
+  longLivedCodebases = longLivedCodebases;
+  communityParticipation = communityParticipation;
+  serverSide = serverSide;
+  serverSideFrameworks = serverSideFrameworks;
+  editorTool = editorTool;
+  browserRequirements = browserRequirements;
+  demographicsRegion = demographicsRegion;
+}
