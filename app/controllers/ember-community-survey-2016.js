@@ -478,15 +478,15 @@ const chartSEO = {
   ],
 };
 
-export default Controller.extend({
-  theme,
-  chartHowlong,
-  chartEmberAtTheOffice,
-  chartNewReleaseAdoptionEmber,
-  chartNewReleaseAdoptionEmberData,
-  chartServerSide,
-  chartLongLivedCodebases,
-  chartBrowserSuppor,
-  chartEmberEcosystem,
-  chartSEO,
-});
+export default class EmberCommunitySurvey2016Controller extends Controller {
+  theme = theme;
+  chartHowlong = chartHowlong;
+  chartEmberAtTheOffice = chartEmberAtTheOffice;
+  chartNewReleaseAdoptionEmber = chartNewReleaseAdoptionEmber;
+  chartNewReleaseAdoptionEmberData = chartNewReleaseAdoptionEmberData;
+  chartServerSide = chartServerSide;
+  chartLongLivedCodebases = chartLongLivedCodebases;
+  chartBrowserSuppor = chartBrowserSuppor;
+  chartEmberEcosystem = chartEmberEcosystem;
+  chartSEO = chartSEO;
+}
