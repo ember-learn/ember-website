@@ -9,7 +9,7 @@ function inTeam(team) {
 }
 
 export default Controller.extend({
-  sortingKeys: Object.freeze(['added']),
+  sortingKeys: Object.freeze(['last', 'first']),
   sortedModel: sort('model', 'sortingKeys'),
 
   alumniTeamMembers: inTeam('alumni'),
