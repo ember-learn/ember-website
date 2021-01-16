@@ -12,6 +12,10 @@ export default Controller.extend({
 
     if (!this.fastboot?.isFastBoot) {
       import('leaflet').then(() => {
+        if (this.isDestroyed || this.isDestroying) {
+          return;
+        }
+
         let prefix = '';
         const config = getOwner(this).resolveRegistration('config:environment');
 
@@ -26,6 +30,6 @@ export default Controller.extend({
   lng: 0,
   zoom: 2,
   meetupsByArea: groupBy('model', 'area'),
-  sortingKeys: Object.freeze(['items.length:desc']),
+  sortingKeys: Object.freeze(['items.length:desc', 'value:asc']),
   sortedMeetupsByArea: sort('meetupsByArea', 'sortingKeys'),
 });
