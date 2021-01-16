@@ -1,21 +1,37 @@
 import Controller from '@ember/controller';
+/* eslint-disable-next-line ember/no-computed-properties-in-native-classes */
 import { sort } from '@ember/object/computed';
-import { computed } from '@ember/object';
 
 function inTeam(team) {
-  return computed('sortedModel.[]', function () {
-    return this.sortedModel.filter((member) => member.teams.includes(team));
-  });
+  return (teamMember) => (teamMember.teams ?? []).includes(team);
 }
 
-export default Controller.extend({
-  sortingKeys: Object.freeze(['last', 'first']),
-  sortedModel: sort('model', 'sortingKeys'),
+export default class TeamController extends Controller {
+  sortingKeys = ['last', 'first'];
 
-  alumniTeamMembers: inTeam('alumni'),
-  coreCLITeamMembers: inTeam('cli'),
-  coreTeamMembers: inTeam('corejs'),
-  dataTeamMembers: inTeam('data'),
-  learningTeamMembers: inTeam('learning'),
-  steeringCommitteeMembers: inTeam('steering'),
-});
+  @sort('model', 'sortingKeys') sortedModel;
+
+  get alumniTeamMembers() {
+    return this.sortedModel.filter(inTeam('alumni'));
+  }
+
+  get coreCLITeamMembers() {
+    return this.sortedModel.filter(inTeam('cli'));
+  }
+
+  get coreTeamMembers() {
+    return this.sortedModel.filter(inTeam('corejs'));
+  }
+
+  get dataTeamMembers() {
+    return this.sortedModel.filter(inTeam('data'));
+  }
+
+  get learningTeamMembers() {
+    return this.sortedModel.filter(inTeam('learning'));
+  }
+
+  get steeringCommitteeMembers() {
+    return this.sortedModel.filter(inTeam('steering'));
+  }
+}

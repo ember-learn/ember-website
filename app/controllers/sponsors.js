@@ -1,16 +1,17 @@
 import Controller from '@ember/controller';
-import { computed } from '@ember/object';
+/* eslint-disable-next-line ember/no-computed-properties-in-native-classes */
 import { sort } from '@ember/object/computed';
 
-export default Controller.extend({
-  sorting: Object.freeze(['end:desc', 'start:asc']),
-  sortedModel: sort('model', 'sorting'),
+export default class SponsorsController extends Controller {
+  sorting = ['end:desc', 'start:asc'];
 
-  currentSponsors: computed('sortedModel.[]', function () {
+  @sort('model', 'sorting') sortedModel;
+
+  get currentSponsors() {
     return this.sortedModel.filter((sponsor) => !sponsor.end);
-  }),
+  }
 
-  pastSponsors: computed('sortedModel.[]', function () {
+  get pastSponsors() {
     return this.sortedModel.filter((sponsor) => sponsor.end);
-  }),
-});
+  }
+}

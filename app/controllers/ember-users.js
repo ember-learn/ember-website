@@ -1,10 +1,12 @@
 import Controller from '@ember/controller';
+/* eslint-disable-next-line ember/no-computed-properties-in-native-classes */
 import { sort } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 
-export default Controller.extend({
-  fastboot: service(),
+export default class EmberUsersController extends Controller {
+  @service fastboot;
 
-  sortingKey: Object.freeze(['featured:desc', 'added']),
-  sortedModel: sort('model', 'sortingKey'),
-});
+  @sort('model', 'sortingKey') sortedModel;
+
+  sortingKey = ['featured:desc', 'added'];
+}
