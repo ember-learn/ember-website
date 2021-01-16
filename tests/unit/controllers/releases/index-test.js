@@ -8,7 +8,7 @@ module('Unit | Controller | releases/index', function (hooks) {
   setupMirage(hooks);
 
   hooks.beforeEach(async function () {
-    // Create Meetup data
+    // Create data
     this.server.db.loadData({ projects });
 
     // Run model hook
