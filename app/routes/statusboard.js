@@ -9,8 +9,8 @@ import Route from '@ember/routing/route';
   Consider removing this route file. In case the route file is needed,
   I only commented out the model hook for now.
 */
-export default Route.extend({
+export default class StatusboardRoute extends Route {
   // model() {
   //   return this.store.findAll('feature');
   // }
-});
+}
