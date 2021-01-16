@@ -18,10 +18,6 @@ export default class ProjectModel extends Model {
   @attr('date') nextDate;
   @attr('string') repo;
 
-  get isEmberBeta() {
-    return this.channel === 'beta' && this.name === 'Ember';
-  }
-
   get lastReleaseChangelogUrl() {
     if (this.channel === 'canary' || !this.changelogPath) {
       return '';
