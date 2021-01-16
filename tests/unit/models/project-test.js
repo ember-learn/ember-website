@@ -17,12 +17,6 @@ module('Unit | Model | project', function (hooks) {
       assert.ok(model, 'We can create the record.');
 
       assert.strictEqual(
-        model.isEmberBeta,
-        false,
-        'We get the correct value for isEmberBeta.'
-      );
-
-      assert.strictEqual(
         model.lastReleaseChangelogUrl,
         'https://github.com/emberjs/ember.js/blob/v3.20.6/CHANGELOG.md',
         'We get the correct value for lastReleaseChangelogUrl.'
@@ -34,12 +28,6 @@ module('Unit | Model | project', function (hooks) {
       const model = this.store.createRecord('project', attributes);
 
       assert.ok(model, 'We can create the record.');
-
-      assert.strictEqual(
-        model.isEmberBeta,
-        false,
-        'We get the correct value for isEmberBeta.'
-      );
 
       assert.strictEqual(
         model.lastReleaseChangelogUrl,
@@ -55,12 +43,6 @@ module('Unit | Model | project', function (hooks) {
       assert.ok(model, 'We can create the record.');
 
       assert.strictEqual(
-        model.isEmberBeta,
-        true,
-        'We get the correct value for isEmberBeta.'
-      );
-
-      assert.strictEqual(
         model.lastReleaseChangelogUrl,
         'https://github.com/emberjs/ember.js/blob/v3.25.0-beta.1/CHANGELOG.md',
         'We get the correct value for lastReleaseChangelogUrl.'
@@ -72,12 +54,6 @@ module('Unit | Model | project', function (hooks) {
       const model = this.store.createRecord('project', attributes);
 
       assert.ok(model, 'We can create the record.');
-
-      assert.strictEqual(
-        model.isEmberBeta,
-        false,
-        'We get the correct value for isEmberBeta.'
-      );
 
       assert.strictEqual(
         model.lastReleaseChangelogUrl,
@@ -99,12 +75,6 @@ module('Unit | Model | project', function (hooks) {
       assert.ok(model, 'We can create the record.');
 
       assert.strictEqual(
-        model.isEmberBeta,
-        false,
-        'We get the correct value for isEmberBeta.'
-      );
-
-      assert.strictEqual(
         model.lastReleaseChangelogUrl,
         'https://github.com/emberjs/data/blob/v3.24.0/CHANGELOG.md',
         'We get the correct value for lastReleaseChangelogUrl.'
@@ -118,12 +88,6 @@ module('Unit | Model | project', function (hooks) {
       assert.ok(model, 'We can create the record.');
 
       assert.strictEqual(
-        model.isEmberBeta,
-        false,
-        'We get the correct value for isEmberBeta.'
-      );
-
-      assert.strictEqual(
         model.lastReleaseChangelogUrl,
         'https://github.com/emberjs/data/blob/v3.25.0-beta.0/CHANGELOG.md',
         'We get the correct value for lastReleaseChangelogUrl.'
@@ -135,12 +99,6 @@ module('Unit | Model | project', function (hooks) {
       const model = this.store.createRecord('project', attributes);
 
       assert.ok(model, 'We can create the record.');
-
-      assert.strictEqual(
-        model.isEmberBeta,
-        false,
-        'We get the correct value for isEmberBeta.'
-      );
 
       assert.strictEqual(
         model.lastReleaseChangelogUrl,
