@@ -3,23 +3,35 @@ import Controller from '@ember/controller';
 import { sort } from '@ember/object/computed';
 
 function inTeam(team) {
-  return (target, key) => {
-    Object.defineProperty(target, key, {
-      get() {
-        return this.sortedModel.filter((member) => member.teams.includes(team));
-      },
-    });
-  };
+  return (teamMember) => (teamMember.teams ?? []).includes(team);
 }
 
 export default class TeamController extends Controller {
   sortingKeys = ['last', 'first'];
 
   @sort('model', 'sortingKeys') sortedModel;
-  @inTeam('alumni') alumniTeamMembers;
-  @inTeam('cli') coreCLITeamMembers;
-  @inTeam('corejs') coreTeamMembers;
-  @inTeam('data') dataTeamMembers;
-  @inTeam('learning') learningTeamMembers;
-  @inTeam('steering') steeringCommitteeMembers;
+
+  get alumniTeamMembers() {
+    return this.sortedModel.filter(inTeam('alumni'));
+  }
+
+  get coreCLITeamMembers() {
+    return this.sortedModel.filter(inTeam('cli'));
+  }
+
+  get coreTeamMembers() {
+    return this.sortedModel.filter(inTeam('corejs'));
+  }
+
+  get dataTeamMembers() {
+    return this.sortedModel.filter(inTeam('data'));
+  }
+
+  get learningTeamMembers() {
+    return this.sortedModel.filter(inTeam('learning'));
+  }
+
+  get steeringCommitteeMembers() {
+    return this.sortedModel.filter(inTeam('steering'));
+  }
 }
