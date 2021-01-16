@@ -8,7 +8,7 @@ module('Unit | Controller | team', function (hooks) {
   setupMirage(hooks);
 
   hooks.beforeEach(async function () {
-    // Create Meetup data
+    // Create data
     this.server.db.loadData({ teamMembers });
 
     // Run model hook

@@ -8,7 +8,7 @@ module('Unit | Controller | ember-users', function (hooks) {
   setupMirage(hooks);
 
   hooks.beforeEach(async function () {
-    // Create Meetup data
+    // Create data
     this.server.db.loadData({ users });
 
     // Run model hook
