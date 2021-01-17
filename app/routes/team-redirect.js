@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 
-export default class TeamRedirect extends Route {
+export default class TeamRedirectRoute extends Route {
   redirect() {
     this.transitionTo('team');
   }
