@@ -7,7 +7,7 @@ import loadDefaultScenario from 'ember-website/mirage/scenarios/default';
 import { setupPageTitleTest } from 'ember-website/tests/helpers/page-title';
 import { module, test } from 'qunit';
 
-module('Acceptance | ember-community-survey-2019', function (hooks) {
+module('Acceptance | ember-community-survey-2016', function (hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
   setupPageTitleTest(hooks);
@@ -17,16 +17,16 @@ module('Acceptance | ember-community-survey-2019', function (hooks) {
   });
 
   test('Percy snapshot', async function (assert) {
-    await visit('/ember-community-survey-2019');
+    await visit('/ember-community-survey-2016');
     await percySnapshot(assert);
 
     assert.ok(true);
   });
 
   test('Accessibility audit', async function (assert) {
-    await visit('/ember-community-survey-2019');
+    await visit('/ember-community-survey-2016');
     await a11yAudit();
 
-    assert.hasPageTitle('Community Survey 2019 - Ember.js');
+    assert.hasPageTitle('Community Survey 2016 - Ember.js');
   });
 });
