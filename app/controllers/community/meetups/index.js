@@ -1,14 +1,25 @@
 import Controller from '@ember/controller';
+/* eslint-disable-next-line ember/no-computed-properties-in-native-classes */
 import { sort } from '@ember/object/computed';
 import groupBy from 'ember-group-by';
 import { inject as service } from '@ember/service';
 import { getOwner } from '@ember/application';
+import { tracked } from '@glimmer/tracking';
 
-export default Controller.extend({
-  fastboot: service(),
+export default class CommunityMeetupsIndexController extends Controller {
+  @service fastboot;
 
-  init() {
-    this._super(...arguments);
+  sortingKeys = ['items.length:desc', 'value:asc'];
+
+  @sort('meetupsByArea', 'sortingKeys') sortedMeetupsByArea;
+  @groupBy('model', 'area') meetupsByArea;
+  @tracked leafletPackageLoaded = false;
+  @tracked lat = 20;
+  @tracked lng = 0;
+  @tracked zoom = 2;
+
+  constructor() {
+    super(...arguments);
 
     if (!this.fastboot?.isFastBoot) {
       import('leaflet').then(() => {
@@ -21,15 +32,8 @@ export default Controller.extend({
 
         prefix = config.rootURL;
         L.Icon.Default.imagePath = `${prefix}assets/images/`;
-        this.set('leafletPackageLoaded', true);
+        this.leafletPackageLoaded = true;
       });
     }
-  },
-
-  lat: 20,
-  lng: 0,
-  zoom: 2,
-  meetupsByArea: groupBy('model', 'area'),
-  sortingKeys: Object.freeze(['items.length:desc', 'value:asc']),
-  sortedMeetupsByArea: sort('meetupsByArea', 'sortingKeys'),
-});
+  }
+}

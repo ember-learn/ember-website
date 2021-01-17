@@ -963,22 +963,22 @@ function makeVersionChartData(versionData) {
   return seriesData;
 }
 
-export default Controller.extend({
-  theme,
-  chartHowlong,
-  chartSnapshotEmberDevelopers,
-  chartBreakdownByVersion,
-  priorVersionsData,
-  recommendingEmber,
-  howCanWeApprove,
-  whenStarting,
-  preExistingKnowledge,
-  employmentSituation,
-  emberDevelopers,
-  productionUsers,
-  longLived,
-  serverLanguage,
-  textEditor,
-  browserRequirements,
-  demographics,
-});
+export default class EmberCommunitySurvey2017Controller extends Controller {
+  theme = theme;
+  chartHowlong = chartHowlong;
+  chartSnapshotEmberDevelopers = chartSnapshotEmberDevelopers;
+  chartBreakdownByVersion = chartBreakdownByVersion;
+  priorVersionsData = priorVersionsData;
+  recommendingEmber = recommendingEmber;
+  howCanWeApprove = howCanWeApprove;
+  whenStarting = whenStarting;
+  preExistingKnowledge = preExistingKnowledge;
+  employmentSituation = employmentSituation;
+  emberDevelopers = emberDevelopers;
+  productionUsers = productionUsers;
+  longLived = longLived;
+  serverLanguage = serverLanguage;
+  textEditor = textEditor;
+  browserRequirements = browserRequirements;
+  demographics = demographics;
+}
