@@ -1,14 +1,14 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
-export default Route.extend({
-  navbar: service(),
-  metrics: service(),
-  fastboot: service(),
-  router: service(),
+export default class AplicationRoute extends Route {
+  @service navbar;
+  @service metrics;
+  @service fastboot;
+  @service router;
 
-  init() {
-    this._super(...arguments);
+  constructor() {
+    super(...arguments);
 
     this.router.on('routeDidChange', () => {
       this.navbar.closePopupMenu();
@@ -17,7 +17,7 @@ export default Route.extend({
       }
       this._trackPage();
     });
-  },
+  }
 
   _trackPage() {
     if (this.fastboot.isFastBoot) {
@@ -31,5 +31,5 @@ export default Route.extend({
     const hostname = 'www.emberjs.com';
 
     this.metrics.trackPage({ page, title, hostname });
-  },
-});
+  }
+}

@@ -1,5 +1,5 @@
 import Route from '@ember/routing/route';
 
-export default Route.extend({
-  classNames: ['ember-community-survey'],
-});
+export default class EmberCommunitySurvey2016Route extends Route {
+  classNames = ['ember-community-survey'];
+}
