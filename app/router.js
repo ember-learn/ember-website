@@ -7,40 +7,22 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
+  this.route('about', function () {
+    this.route('legal');
+  });
+
   this.route('blog', function () {});
+
   this.route('community', function () {
+    this.route('black-lives-matter');
     this.route('meetups', function () {
       this.route('assets');
     });
     this.route('meetups-getting-started');
-    this.route('black-lives-matter');
   });
-  this.route('ember-users');
-  this.route('guidelines');
-  this.route('learn', function () {
-    this.route('examples');
-  });
-  this.route('about', function () {
-    this.route('legal');
-  });
-  this.route('logos');
-  this.route('releases', function () {
-    this.route('release');
-    this.route('beta');
-    this.route('canary');
-    this.route('lts');
-  });
-  this.route('security');
-  this.route('sponsors');
-  this.route('team-redirect', { path: 'team' });
-  this.route('team', { path: 'teams' });
 
-  this.route('mascots', function () {
-    this.route('commission-sent');
-    this.route('commission');
-    this.route('faq');
-    this.route('payment-sent');
-    this.route('payment');
+  this.route('editions', function () {
+    this.route('octane');
   });
 
   this.route('ember-community-survey-2016');
@@ -49,7 +31,35 @@ Router.map(function () {
   this.route('ember-community-survey-2019');
   this.route('ember-community-survey-2020');
 
-  this.route('editions', function () {
-    this.route('octane');
+  this.route('ember-users');
+
+  this.route('guidelines');
+
+  this.route('learn', function () {
+    this.route('examples');
   });
+
+  this.route('logos');
+
+  this.route('mascots', function () {
+    this.route('commission');
+    this.route('commission-sent');
+    this.route('faq');
+    this.route('payment');
+    this.route('payment-sent');
+  });
+
+  this.route('releases', function () {
+    this.route('beta');
+    this.route('canary');
+    this.route('lts');
+    this.route('release');
+  });
+
+  this.route('security');
+
+  this.route('sponsors');
+
+  this.route('team', { path: 'teams' });
+  this.route('team-redirect', { path: 'team' });
 });

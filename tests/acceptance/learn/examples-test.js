@@ -7,7 +7,7 @@ import loadDefaultScenario from 'ember-website/mirage/scenarios/default';
 import { setupPageTitleTest } from 'ember-website/tests/helpers/page-title';
 import { module, test } from 'qunit';
 
-module('Acceptance | community/meetups', function (hooks) {
+module('Acceptance | learn/examples', function (hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
   setupPageTitleTest(hooks);
@@ -17,16 +17,16 @@ module('Acceptance | community/meetups', function (hooks) {
   });
 
   test('Percy snapshot', async function (assert) {
-    await visit('/community/meetups');
+    await visit('/learn/examples');
     await percySnapshot(assert);
 
     assert.ok(true);
   });
 
   test('Accessibility audit', async function (assert) {
-    await visit('/community/meetups');
+    await visit('/learn/examples');
     await a11yAudit();
 
-    assert.hasPageTitle('Meetups - Community - Ember.js');
+    assert.hasPageTitle('Ember.js');
   });
 });
