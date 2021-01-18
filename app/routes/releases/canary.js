@@ -2,7 +2,7 @@ import Route from '@ember/routing/route';
 import fetch from 'fetch';
 import { hash } from 'rsvp';
 
-export default Route.extend({
+export default class ReleasesCanaryRoute extends Route {
   model() {
     return hash({
       ember: this.store.find('project', 'ember/canary'),
@@ -11,5 +11,5 @@ export default Route.extend({
         'https://s3.amazonaws.com/builds.emberjs.com/canary.json'
       ).then((response) => response.json()),
     });
-  },
-});
+  }
+}
