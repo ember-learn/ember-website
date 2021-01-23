@@ -3,12 +3,12 @@ import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-module('Integration | Component | grid-dots', function (hooks) {
+module('Integration | Component | index/grid-dots', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
     await render(hbs`
-      <GridDots />
+      <Index::GridDots />
     `);
 
     assert.ok(true);
