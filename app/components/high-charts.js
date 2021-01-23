@@ -184,6 +184,10 @@ export default Component.extend({
     this._super(...arguments);
 
     import('highcharts').then((module) => {
+      if (this.isDestroyed || this.isDestroying) {
+        return;
+      }
+
       this.set('highcharts', module.default);
       this.drawAfterRender();
       setDefaultHighChartOptions(getOwner(this), this.highcharts);
