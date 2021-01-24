@@ -97,7 +97,7 @@ const mapIdToAttributes = new Map([
       changelogPath: 'CHANGELOG.md',
       channel: 'release',
       content:
-        '# Install Ember-Data %s:\n<br>\nnpm install --save-dev ember-data@%s',
+        '# Install Ember Data %s:\n<br>\nnpm install --save-dev ember-data@~%s',
       cycleEstimatedFinishDate: undefined,
       date: new Date('2021-01-07'),
       debugFileName: '.js',
@@ -120,7 +120,7 @@ const mapIdToAttributes = new Map([
       changelogPath: 'CHANGELOG.md',
       channel: 'beta',
       content:
-        '# Install Ember-Data %s:\n<br>\nnpm install --save-dev ember-data@%s',
+        '# Install Ember Data %s:\n<br>\nnpm install --save-dev ember-data@~%s',
       cycleEstimatedFinishDate: undefined,
       date: new Date('2021-01-05'),
       debugFileName: '.js',
@@ -143,7 +143,7 @@ const mapIdToAttributes = new Map([
       changelogPath: undefined,
       channel: 'canary',
       content:
-        '# Install the latest Ember-Data canary:\n<br>\nnpm install --save-dev emberjs/data#master',
+        '# Install the latest Ember Data canary:\n<br>\nnpm install --save-dev emberjs/data#master',
       cycleEstimatedFinishDate: undefined,
       date: undefined,
       debugFileName: '.js',
