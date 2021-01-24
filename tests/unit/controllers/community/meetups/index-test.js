@@ -24,23 +24,20 @@ module('Unit | Controller | community/meetups/index', function (hooks) {
     const { meetupsByArea } = this.controller;
 
     // Create an intermediate data structure for assertion
-    const output = meetupsByArea.reduce((accumulator, group) => {
-      const area = group.value;
-      const meetupIds = group.items.map((meetup) => meetup.id);
+    const output = meetupsByArea.map((area) => {
+      const { meetups, name } = area;
+      const meetupIds = meetups.map(({ id }) => id);
 
-      accumulator.push({
-        area,
+      return {
         meetupIds,
-      });
-
-      return accumulator;
-    }, []);
+        name,
+      };
+    });
 
     assert.deepEqual(
       output,
       [
         {
-          area: 'North America',
           meetupIds: [
             'austin-tx',
             'new-york-ny',
@@ -48,31 +45,32 @@ module('Unit | Controller | community/meetups/index', function (hooks) {
             'seattle-wa',
             'toronto-on',
           ],
+          name: 'North America',
         },
         {
-          area: 'South America',
           meetupIds: ['belo-horizonte-brazil', 'santiago-chile'],
+          name: 'South America',
         },
         {
-          area: 'Europe',
           meetupIds: [
             'berlin-germany',
             'madrid-spain',
             'nizhny-novgorod-russia',
             'zurich-switzerland',
           ],
+          name: 'Europe',
         },
         {
-          area: 'Africa',
           meetupIds: ['cape-town-south-africa'],
+          name: 'Africa',
         },
         {
-          area: 'Asia',
           meetupIds: ['chennai-india', 'tel-aviv-israel'],
+          name: 'Asia',
         },
         {
-          area: 'Oceania',
           meetupIds: ['wellington-new-zealand'],
+          name: 'Oceania',
         },
       ],
       'We get the correct output.'

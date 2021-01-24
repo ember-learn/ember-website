@@ -19,13 +19,12 @@ export default class CommunityMeetupsIndexController extends Controller {
       const { area } = meetup;
 
       if (groupMeetupsByArea.has(area)) {
-        let { items } = groupMeetupsByArea.get(area);
-        items.push(meetup);
+        let { meetups } = groupMeetupsByArea.get(area);
+        meetups.push(meetup);
       } else {
         groupMeetupsByArea.set(area, {
-          items: [meetup],
-          property: 'area',
-          value: area,
+          meetups: [meetup],
+          name: area,
         });
       }
     });
