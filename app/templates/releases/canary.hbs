@@ -8,9 +8,11 @@
   Canary releases are generated from each commit to the master branch of Ember and Ember Data. They may contain unstable features.
 </p>
 
-<div class="ember-cli-usage mb-3 hide-in-percy">
-  <EmberCliUsage
-    @channel="canary"
+
+<h2>How to Install</h2>
+
+<div class="mb-2 hide-in-percy">
+  <Releases::HowToInstall
     @project={{@model.ember}}
   >
     <TerminalCode>
@@ -18,12 +20,11 @@
       <br>
       npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com{{@model.canaryInfo.assetPath}}
     </TerminalCode>
-  </EmberCliUsage>
+  </Releases::HowToInstall>
 </div>
 
-<div class="ember-cli-usage">
-  <EmberCliUsage
-    @channel="canary"
+<div>
+  <Releases::HowToInstall
     @project={{@model.emberData}}
   />
 </div>

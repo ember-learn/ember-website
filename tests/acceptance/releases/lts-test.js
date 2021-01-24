@@ -25,13 +25,7 @@ module('Acceptance | releases/lts', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/releases/lts');
-    await a11yAudit({
-      rules: {
-        'heading-order': {
-          enabled: false,
-        },
-      },
-    });
+    await a11yAudit();
 
     assert.hasPageTitle('LTS - Releases - Ember.js');
   });
