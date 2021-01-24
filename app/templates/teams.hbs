@@ -1,6 +1,8 @@
 {{page-title "Team"}}
+
 <div class="container">
   <h1 class="text-center">The Team Behind Ember</h1>
+
   <section class="mb-3" aria-labelledby="team-detail">
     <p class="text-center">
       Ember is an Open Source project that relies on the tireless support of individual contributors. These are the teams
@@ -8,38 +10,50 @@
     </p>
   </section>
 
-  <TeamList
-    @teamName="The Steering Committee"
-    @teamDescription="The Steering Committee is responsible for the overall governance of the Ember project."
-    @members={{this.steeringCommitteeMembers}}
-  />
+  <section class="mb-3">
+    <Teams::Team
+      @description="The Steering Committee is responsible for the overall governance of the Ember project."
+      @members={{this.steeringCommitteeMembers}}
+      @name="The Steering Committee"
+    />
+  </section>
 
-  <TeamList
-    @teamName="The Ember.js Core Team"
-    @members={{this.coreTeamMembers}}
-  />
+  <section class="mb-3">
+    <Teams::Team
+      @members={{this.coreTeamMembers}}
+      @name="The Ember.js Core Team"
+    />
+  </section>
 
-  <TeamList
-    @teamName="The Ember CLI Core Team"
-    @teamDescription="The Ember CLI core team is responsible for maintaining ember-cli, the command line interface for managing and packaging Ember.js applications and addons. The team also maintains many of the addons in the default blueprint as well as fastboot."
-    @members={{this.coreCLITeamMembers}}
-  />
+  <section class="mb-3">
+    <Teams::Team
+      @description="The Ember CLI core team is responsible for maintaining ember-cli, the command line interface for managing and packaging Ember.js applications and addons. The team also maintains many of the addons in the default blueprint as well as fastboot."
+      @members={{this.coreCLITeamMembers}}
+      @name="The Ember CLI Core Team"
+    />
+  </section>
 
-  <TeamList
-    @teamName="The Ember Data Core Team"
-    @teamDescription="The Ember Data core team is responsible for the official data persistence library for Ember.js applications."
-    @members={{this.dataTeamMembers}}
-  />
+  <section class="mb-3">
+    <Teams::Team
+      @description="The Ember Data core team is responsible for the official data persistence library for Ember.js applications."
+      @members={{this.dataTeamMembers}}
+      @name="The Ember Data Core Team"
+    />
+  </section>
 
-  <TeamList
-    @teamName="The Ember Learning Core Team"
-    @teamDescription="The mission of the Ember Learning core team is to empower Ember users to learn, build and teach. This team is responsible for keeping the guides and API documentation updated, and manages the initiatives that support learning Ember."
-    @members={{this.learningTeamMembers}}
-  />
+  <section class="mb-3">
+    <Teams::Team
+      @description="The mission of the Ember Learning core team is to empower Ember users to learn, build and teach. This team is responsible for keeping the guides and API documentation updated, and manages the initiatives that support learning Ember."
+      @members={{this.learningTeamMembers}}
+      @name="The Ember Learning Core Team"
+    />
+  </section>
 
-  <TeamList
-    @teamName="Emeritus"
-    @teamDescription="Serving as a member of the Core Team(s) of an open source project like Ember is a huge amount of work. These are the emeritus members of the Ember Core Teams, to whom we will always be grateful."
-    @members={{this.alumniTeamMembers}}
-  />
+  <section>
+    <Teams::Team
+      @description="Serving as a member of the Core Team(s) of an open source project like Ember is a huge amount of work. These are the emeritus members of the Ember Core Teams, to whom we will always be grateful."
+      @members={{this.alumniTeamMembers}}
+      @name="Emeritus"
+    />
+  </section>
 </div>
