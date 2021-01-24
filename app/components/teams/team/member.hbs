@@ -1,0 +1,44 @@
+<div
+  class="text-center"
+  data-test-member={{@member.name}}
+>
+  <img
+    alt=""
+    class="team-image"
+    loading="lazy"
+    role="presentation"
+    src="/images/team/{{@member.image}}"
+  >
+
+  <div data-test-field="Name">
+    {{@member.name}}
+  </div>
+
+  <div>
+    {{#if @member.github}}
+      <a
+        aria-label="{{@member.name}} Github Profile"
+        class="icon"
+        data-test-link="GitHub"
+        href={{@member.github}}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {{~! ~}}{{svg-jar "github"}}{{~! ~}}
+      </a>
+    {{/if}}
+
+    {{#if @member.twitter}}
+      <a
+        aria-label="{{@member.name}} Twitter"
+        class="icon"
+        data-test-link="Twitter"
+        href={{@member.twitter}}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {{~! ~}}{{svg-jar "twitter"}}{{~! ~}}
+      </a>
+    {{/if}}
+  </div>
+</div>

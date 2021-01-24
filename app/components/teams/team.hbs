@@ -1,0 +1,23 @@
+<h2
+  class="text-center"
+  data-test-field="Team Name"
+>
+  {{@name}}
+</h2>
+
+{{#if @description}}
+  <p
+    class="text-center"
+    data-test-field="Team Description"
+  >
+    {{@description}}
+  </p>
+{{/if}}
+
+<div class="grid lg:grid-5">
+  {{#each @members as |member|}}
+    <Teams::Team::Member
+      @member={{member}}
+    />
+  {{/each}}
+</div>
