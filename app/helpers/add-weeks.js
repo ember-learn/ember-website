@@ -1,9 +1,6 @@
 import { helper } from '@ember/component/helper';
+import dayjs from 'dayjs';
 
 export default helper(function addWeeks([initialDate, numWeeks = 0]) {
-  let finalDate = new Date(initialDate);
-
-  finalDate.setDate(finalDate.getDate() + 7 * numWeeks);
-
-  return finalDate;
+  return dayjs(initialDate).add(numWeeks, 'week');
 });
