@@ -19,6 +19,7 @@ function replaceInternalLinks(url) {
   // Map internal links to the correct route name
   return url
     .replace(/^https:\/\/emberjs.com\//, '/')
+    .replace(/^\/team$/, '/teams')
     .replace(/^\/builds(\/\w+)$/, '/releases$1')
     .replace(/\/builds$/, '/releases');
 }

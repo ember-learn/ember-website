@@ -3,7 +3,7 @@ import { setupTest } from 'ember-qunit';
 import teamMembers from 'ember-website/mirage/data/team-members';
 import { module, test } from 'qunit';
 
-module('Unit | Route | team', function (hooks) {
+module('Unit | Route | teams', function (hooks) {
   setupTest(hooks);
   setupMirage(hooks);
 
@@ -12,7 +12,7 @@ module('Unit | Route | team', function (hooks) {
   });
 
   test('The model hook returns all team members', async function (assert) {
-    const route = this.owner.lookup('route:team');
+    const route = this.owner.lookup('route:teams');
     const model = await route.model();
 
     // Create an intermediate data structure for assertion

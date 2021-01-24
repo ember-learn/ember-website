@@ -312,7 +312,7 @@ module('Unit | Utility | replace-links', function () {
           type: 'dropdown',
           items: [
             {
-              href: '/team',
+              href: '/teams',
               name: 'The Team',
               type: 'link',
             },
@@ -651,7 +651,7 @@ module('Unit | Utility | replace-links', function () {
           type: 'dropdown',
           items: [
             {
-              href: '/team',
+              href: '/teams',
               name: 'The Team',
               type: 'link',
             },
