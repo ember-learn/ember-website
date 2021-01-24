@@ -3,7 +3,7 @@ import { setupTest } from 'ember-qunit';
 import teamMembers from 'ember-website/mirage/data/team-members';
 import { module, test } from 'qunit';
 
-module('Unit | Controller | team', function (hooks) {
+module('Unit | Controller | teams', function (hooks) {
   setupTest(hooks);
   setupMirage(hooks);
 
@@ -16,7 +16,7 @@ module('Unit | Controller | team', function (hooks) {
     const model = await store.findAll('team-member');
 
     // Run setupController hook
-    this.controller = this.owner.lookup('controller:team');
+    this.controller = this.owner.lookup('controller:teams');
     this.controller.model = model;
   });
 

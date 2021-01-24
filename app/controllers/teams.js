@@ -6,7 +6,7 @@ function inTeam(team) {
   return (teamMember) => (teamMember.teams ?? []).includes(team);
 }
 
-export default class TeamController extends Controller {
+export default class TeamsController extends Controller {
   @computed get sortedTeamMembers() {
     const teamMembers = (this.model ?? []).toArray();
 
