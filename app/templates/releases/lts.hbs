@@ -64,9 +64,9 @@
       {{#each this.currentlySupportedLTS as |release|}}
         <tr>
           <td>{{release.version}}</td>
-          <td>{{format-date-time release.promotionDate "MMMM d, yyyy"}}</td>
-          <td>{{format-date-time (add-weeks release.promotionDate 36) "MMMM d, yyyy"}}</td>
-          <td>{{format-date-time (add-weeks release.promotionDate 54) "MMMM d, yyyy"}}</td>
+          <td>{{format-date-time release.promotionDate "MMMM D, YYYY"}}</td>
+          <td>{{format-date-time (add-weeks release.promotionDate 36) "MMMM D, YYYY"}}</td>
+          <td>{{format-date-time (add-weeks release.promotionDate 54) "MMMM D, YYYY"}}</td>
         </tr>
       {{/each}}
     </tbody>

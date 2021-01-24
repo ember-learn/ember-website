@@ -37,7 +37,7 @@ module('Integration | Helper | format-date-time', function (hooks) {
   test('We can pass a second argument to format the string', async function (assert) {
     await render(hbs`
       <div data-test-value>
-        {{format-date-time this.releaseDate "MMMM d, yyyy"}}
+        {{format-date-time this.releaseDate "MMMM D, YYYY"}}
       </div>
     `);
 
