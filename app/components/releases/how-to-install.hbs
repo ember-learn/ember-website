@@ -1,0 +1,19 @@
+<h3 data-test-field="Name">
+  {{@project.name}}
+</h3>
+
+<div class="mb-2">
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
+    <TerminalCode>
+      {{html-safe (printf @project.content @project.lastRelease)}}
+    </TerminalCode>
+  {{/if}}
+</div>
+
+{{#if @project.lastReleaseChangelogUrl}}
+  <p data-test-field="More Information">
+    Read the <a data-test-link="Changelog" href={{@project.lastReleaseChangelogUrl}} rel="noopener noreferrer" target="_blank">changelog</a> for {{@project.name}} {{@project.lastRelease}}.
+  </p>
+{{/if}}
