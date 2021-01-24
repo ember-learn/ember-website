@@ -1,10 +1,10 @@
 import { helper } from '@ember/component/helper';
-import { DateTime } from 'luxon';
+import dayjs from 'dayjs';
 
-export default helper(function formatDateTime([date, format = 'MMM d']) {
+export default helper(function formatDateTime([date, format = 'MMM D']) {
   if (!date) {
     return 'Unknown date';
   }
 
-  return DateTime.fromJSDate(date).toFormat(format);
+  return dayjs(date).format(format);
 });

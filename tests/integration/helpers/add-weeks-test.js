@@ -25,9 +25,9 @@ module('Integration | Helper | add-weeks', function (hooks) {
         <tbody>
           <tr>
             <td>{{this.ltsRelease.version}}</td>
-            <td>{{format-date-time this.ltsRelease.promotionDate "MMMM d, yyyy"}}</td>
-            <td data-test-column="Bugfixes">{{format-date-time (add-weeks this.ltsRelease.promotionDate) "MMMM d, yyyy"}}</td>
-            <td data-test-column="Security Patches">{{format-date-time (add-weeks this.ltsRelease.promotionDate) "MMMM d, yyyy"}}</td>
+            <td>{{format-date-time this.ltsRelease.promotionDate "MMMM D, YYYY"}}</td>
+            <td data-test-column="Bugfixes">{{format-date-time (add-weeks this.ltsRelease.promotionDate) "MMMM D, YYYY"}}</td>
+            <td data-test-column="Security Patches">{{format-date-time (add-weeks this.ltsRelease.promotionDate) "MMMM D, YYYY"}}</td>
           </tr>
         </tbody>
       </table>
@@ -64,9 +64,9 @@ module('Integration | Helper | add-weeks', function (hooks) {
         <tbody>
           <tr>
             <td>{{this.ltsRelease.version}}</td>
-            <td>{{format-date-time this.ltsRelease.promotionDate "MMMM d, yyyy"}}</td>
-            <td data-test-column="Bugfixes">{{format-date-time (add-weeks this.ltsRelease.promotionDate 36) "MMMM d, yyyy"}}</td>
-            <td data-test-column="Security Patches">{{format-date-time (add-weeks this.ltsRelease.promotionDate 54) "MMMM d, yyyy"}}</td>
+            <td>{{format-date-time this.ltsRelease.promotionDate "MMMM D, YYYY"}}</td>
+            <td data-test-column="Bugfixes">{{format-date-time (add-weeks this.ltsRelease.promotionDate 36) "MMMM D, YYYY"}}</td>
+            <td data-test-column="Security Patches">{{format-date-time (add-weeks this.ltsRelease.promotionDate 54) "MMMM D, YYYY"}}</td>
           </tr>
         </tbody>
       </table>
