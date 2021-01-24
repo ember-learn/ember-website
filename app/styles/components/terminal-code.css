@@ -30,5 +30,5 @@
   padding-top: 15px;
   padding-bottom: 10px;
   font-size: 1em;
-  overflow-x: scroll;
+  overflow-x: auto;
 }

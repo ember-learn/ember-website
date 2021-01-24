@@ -27,9 +27,6 @@ module('Acceptance | releases/canary', function (hooks) {
     await visit('/releases/canary');
     await a11yAudit({
       rules: {
-        'heading-order': {
-          enabled: false,
-        },
         'scrollable-region-focusable': {
           enabled: false,
         },

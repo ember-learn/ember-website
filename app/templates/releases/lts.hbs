@@ -1,39 +1,55 @@
 {{page-title "LTS"}}
 
-<ProjectListing
-  @projects={{array @model}}
-  @channel="LTS"
-  @channelDescription="Long Term Support (LTS) releases receive bugfixes and security updates for an extended period."
->
+<h1 class="project-name">
+  LTS Channel
+</h1>
 
-  <h2>What is an LTS release?</h2>
+<p>
+  Long Term Support (LTS) releases receive bugfixes and security updates for an extended period.
+</p>
 
-  <p>
-    Once a release of Ember gets promoted to LTS, it receives <strong>bugfixes for 36 weeks</strong> and <strong>security updates for 54 weeks</strong>.
-  </p>
-  <p>
-    An LTS release is the best version to use if you won't be updating your app frequently,
-    but want to help your app stay secure and working smoothly.
-    Another reason to use an LTS is if you have a very large, complex app,
-    since LTS versions get even more testing and scrutiny than usual.
-  </p>
-  <p>
-    An LTS is declared roughly every 4 minor versions, excluding the x.0 minor version.
-    The last minor version before the next major release is also considered to be an LTS.
-    For example, in Ember 2.x, the following versions were considered LTS's:
-    2.4, 2.8, 2.12, 2.16, and 2.18 (last version).
-  </p>
-  <p>
-    Before a version can be called an "LTS" release, it has to spend at least 6 weeks as a
-    stable release, where it is used and tested by thousands of developers.
-  </p>
 
-  <h2>LTS schedule</h2>
+<h2>How to Install</h2>
 
-  <p>
-    Ember currently supports these LTS versions for Ember.js, Ember CLI, and Ember Data.
-  </p>
+<div class="mb-2">
+  <Releases::HowToInstall
+    @project={{@model}}
+  />
+</div>
 
+
+<h2>What is an LTS release?</h2>
+
+<p>
+  Once a release of Ember gets promoted to LTS, it receives <strong>bugfixes for 36 weeks</strong> and <strong>security updates for 54 weeks</strong>.
+</p>
+
+<p>
+  An LTS release is the best version to use if you won't be updating your app frequently, but want to help your app stay secure and working smoothly.
+
+  Another reason to use an LTS is if you have a very large, complex app, since LTS versions get even more testing and scrutiny than usual.
+</p>
+
+<p>
+  An LTS is declared roughly every 4 minor versions, excluding the x.0 minor version.
+
+  The last minor version before the next major release is also considered to be an LTS.
+
+  For example, in Ember 2.x, the following versions were considered LTS's: 2.4, 2.8, 2.12, 2.16, and 2.18 (last version).
+</p>
+
+<p>
+  Before a version can be called an "LTS" release, it has to spend at least 6 weeks as a stable release, where it is used and tested by thousands of developers.
+</p>
+
+
+<h2>LTS schedule</h2>
+
+<p>
+  Ember currently supports these LTS versions for Ember.js, Ember CLI, and Ember Data.
+</p>
+
+<div class="mb-2">
   <table>
     <thead>
       <tr>
@@ -43,6 +59,7 @@
         <th>Security patches until</th>
       </tr>
     </thead>
+
     <tbody>
       {{#each this.currentlySupportedLTS as |release|}}
         <tr>
@@ -54,8 +71,8 @@
       {{/each}}
     </tbody>
   </table>
+</div>
 
-  <p>
-    These LTS versions are no longer maintained: 3.12 (Oct 2020), 3.8 (Aug 2019), 3.4 (Jan 2019), 2.18 (Feb 2018), 2.16 (Feb 2018), 2.12 (Apr 2017), 2.8 (Nov 2016), and 2.4 (Apr 2016). Their last minor release dates are shown in parentheses.
-  </p>
-</ProjectListing>
+<p>
+  These LTS versions are no longer maintained: 3.12 (Oct 2020), 3.8 (Aug 2019), 3.4 (Jan 2019), 2.18 (Feb 2018), 2.16 (Feb 2018), 2.12 (Apr 2017), 2.8 (Nov 2016), and 2.4 (Apr 2016). Their last minor release dates are shown in parentheses.
+</p>

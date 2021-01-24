@@ -13,6 +13,6 @@ date: 2021-01-07 # Manually update, is today's date
 changelogPath: CHANGELOG.md
 debugFileName: .js
 ---
-# Install Ember-Data %s:
+# Install Ember Data %s:
 <br>
-npm install --save-dev ember-data@%s
+npm install --save-dev ember-data@~%s

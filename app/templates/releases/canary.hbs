@@ -1,42 +1,51 @@
 {{page-title "Canary"}}
 
-<h1 class="project-name">{{capitalize "canary"}} Channel</h1>
+<h1 class="project-name">
+  Canary Channel
+</h1>
 
-<p>Canary releases are generated from each commit to the master branch of Ember and Ember Data. They may contain unstable features.</p>
+<p>
+  Canary releases are generated from each commit to the master branch of Ember and Ember Data. They may contain unstable features.
+</p>
 
-<div class="ember-cli-usage hide-in-percy">
-  <EmberCliUsage
+
+<h2>How to Install</h2>
+
+<div class="mb-2 hide-in-percy">
+  <Releases::HowToInstall
     @project={{@model.ember}}
-    @channel="canary"
   >
     <TerminalCode>
       # Install the latest Ember canary:
       <br>
       npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com{{@model.canaryInfo.assetPath}}
     </TerminalCode>
-  </EmberCliUsage>
+  </Releases::HowToInstall>
 </div>
 
-<div class="ember-cli-usage">
-  <EmberCliUsage
+<div>
+  <Releases::HowToInstall
     @project={{@model.emberData}}
-    @channel="canary"
   />
 </div>
+
 
 <h2>What is canary?</h2>
 
 <p>
   "Canary" refers to whatever code is on the main branch of an Ember project.
+
   It is not released via npm, and is not recommended for production or new learners.
-  Often, features in canary are a work-in-progress.
-  These work-in-progress features may change substantially or be removed before being released,
-  and in rare cases, the features may never be released.
 </p>
 
 <p>
-  Canary is used in many test suites, so that any bugs in the framework code
-  are detected quickly and fixed before a beta is released.
-  Some of Ember's key contributors make a habit of working off beta and canary
-  in order to volunteer their efforts as early testers.
+  Often, features in canary are a work-in-progress.
+
+  These work-in-progress features may change substantially or be removed before being released. In rare cases, the features may never be released.
+</p>
+
+<p>
+  Canary is used in many test suites, so that any bugs in the framework code are detected quickly and fixed before a beta is released.
+
+  Some of Ember's key contributors make a habit of working off a canary release in order to volunteer their efforts as early testers.
 </p>
