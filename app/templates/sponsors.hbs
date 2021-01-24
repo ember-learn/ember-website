@@ -12,7 +12,12 @@
     <h2 id="ember-sponsors-and-friends-current-sponsors">Current Sponsors</h2>
 
     <ul class="unstyled grid sm:grid-2 lg:grid-3">
-      {{#each this.currentSponsors as |sponsor|}}
+      {{#each
+        (sort-by "end:desc" "start:asc"
+          (reject-by "end" @model)
+        )
+        as |sponsor|
+      }}
         <figure>
           <a href={{sponsor.url}} rel="nofollow noopener noreferrer" target="_blank" class="well well-16/9">
             <img src="/images/users/{{sponsor.image}}" alt="" role="presentation" loading="lazy">
@@ -33,7 +38,12 @@
     <h2 id="ember-sponsors-and-friends-past-sponsors">Past Sponsors</h2>
 
     <ul class="unstyled grid sm:grid-2 lg:grid-3">
-      {{#each this.pastSponsors as |sponsor|}}
+      {{#each
+        (sort-by "end:desc" "start:asc"
+          (filter-by "end" @model)
+        )
+        as |sponsor|
+      }}
         <figure>
           <a href={{sponsor.url}} rel="nofollow noopener noreferrer" target="_blank" class="well well-16/9">
             <img src="/images/users/{{sponsor.image}}" alt="" role="presentation" loading="lazy">

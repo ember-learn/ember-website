@@ -1,22 +1,36 @@
-import Controller from '@ember/controller';
-/* eslint-disable-next-line ember/no-computed-properties-in-native-classes */
-import { sort } from '@ember/object/computed';
-import groupBy from 'ember-group-by';
-import { inject as service } from '@ember/service';
 import { getOwner } from '@ember/application';
+import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 
 export default class CommunityMeetupsIndexController extends Controller {
   @service fastboot;
 
-  sortingKeys = ['items.length:desc', 'value:asc'];
-
-  @sort('meetupsByArea', 'sortingKeys') sortedMeetupsByArea;
-  @groupBy('model', 'area') meetupsByArea;
   @tracked leafletPackageLoaded = false;
   @tracked lat = 20;
   @tracked lng = 0;
   @tracked zoom = 2;
+
+  get meetupsByArea() {
+    const meetups = (this.model ?? []).toArray();
+    const groupMeetupsByArea = new Map();
+
+    meetups.forEach((meetup) => {
+      const { area } = meetup;
+
+      if (groupMeetupsByArea.has(area)) {
+        let { meetups } = groupMeetupsByArea.get(area);
+        meetups.push(meetup);
+      } else {
+        groupMeetupsByArea.set(area, {
+          meetups: [meetup],
+          name: area,
+        });
+      }
+    });
+
+    return Array.from(groupMeetupsByArea.values());
+  }
 
   constructor() {
     super(...arguments);

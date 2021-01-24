@@ -19,7 +19,10 @@
     <h2 id="section-ember-users-list-of-companies">List of Companies</h2>
 
     <ul class="unstyled grid sm:grid-2 lg:grid-5 mb-5">
-      {{#each this.sortedModel as |user|}}
+      {{#each
+        (sort-by "featured:desc" "added" @model)
+        as |user|
+      }}
         <li>
           <a href={{user.url}} rel="nofollow noopener noreferrer" target="_blank" class="well well-16/9">
             <img
