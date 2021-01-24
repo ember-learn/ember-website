@@ -24,9 +24,3 @@
   width: 100%;
   grid-template-columns: repeat(6, 1fr);
 }
-
-.path-to-release .steps > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
