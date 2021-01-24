@@ -6162,13 +6162,6 @@ ember-get-config@^0.2.4:
     broccoli-file-creator "^1.1.1"
     ember-cli-babel "^7.0.0"
 
-ember-group-by@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/ember-group-by/-/ember-group-by-0.0.6.tgz#b839278627ec53dab690eaeee248ac1fa6b6775f"
-  integrity sha512-7A2jeOugVtxWtMtd1NKm65BwPbjHIPap15dCZNqghKDQANQ4ptjWxH9uyuTrokFW1h90soLcfwqKtar6cqvMKA==
-  dependencies:
-    ember-cli-babel "^6.6.0"
-
 ember-href-to@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/ember-href-to/-/ember-href-to-4.1.0.tgz#daa8b398bc5a51ba3ba5ff736e099f0a0d010b7b"
