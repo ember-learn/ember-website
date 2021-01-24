@@ -1,28 +1,44 @@
 {{page-title "Stable"}}
 
-<ProjectListing
-  @projects={{array @model.ember @model.emberData}}
-  @channel="release"
-  @channelDescription="Releases are production-ready versions of Ember and Ember Data that have been through a six-week beta cycle."
->
+<h1 class="project-name">
+  Release Channel
+</h1>
 
-  <h2>What is a stable release?</h2>
+<p>
+  Releases are production-ready versions of Ember and Ember Data that have been through a six-week beta cycle.
+</p>
 
-  <p>
-    A stable release is a version of Ember that you can feel confident using in production.
-    If you are learning Ember for the first time, this is the recommended version to use.
-  </p>
+<div class="ember-cli-usage mb-3">
+  <EmberCliUsage
+    @channel="release"
+    @project={{@model.ember}}
+  />
+</div>
 
-  <p>
-    For a new feature to be included in a stable release, it first has to spend
-    six weeks in "beta," being reviewed and tested by developers who use it in real-world applications.
-    Stable releases come about every six weeks, but that can vary if there are bugs to iron out in the beta.
-  </p>
+<div class="ember-cli-usage">
+  <EmberCliUsage
+    @channel="release"
+    @project={{@model.emberData}}
+  />
+</div>
 
-  <p>
-    A release is considered "done" when it has a
-    <a href="https://emberjs.com/blog/tags/releases.html">Release Blog Post</a>
-    to go with it, so you should wait to upgrade your app until that post goes out.
-    It signals that the new version is ready in the Ember.js codebase, Ember CLI, and Ember Data.
-  </p>
-</ProjectListing>
+
+<h2>What is a stable release?</h2>
+
+<p>
+  A stable release is a version of Ember that you can feel confident using in production.
+
+  If you are learning Ember for the first time, this is the recommended version to use.
+</p>
+
+<p>
+  For a new feature to be included in a stable release, it first has to spend six weeks in "beta," being reviewed and tested by developers who use it in real-world applications.
+
+  Stable releases come about every six weeks, but that can vary if there are bugs to iron out in the beta.
+</p>
+
+<p>
+  A release is considered "done" when it has a <a href="https://blog.emberjs.com/tag/releases/" rel="noopener noreferrer" target="_blank">Release Blog Post</a> to go with it, so you should wait to upgrade your app until that post goes out.
+
+  It signals that the new version is ready in the Ember.js codebase, Ember CLI, and Ember Data.
+</p>
