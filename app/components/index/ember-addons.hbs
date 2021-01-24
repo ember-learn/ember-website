@@ -1,0 +1,48 @@
+<div class="addon-tabs">
+  <div
+    class="addon-tabs--header"
+    role="tablist"
+  >
+    {{#each this.emberAddons as |emberAddon index|}}
+      <Index::EmberAddons::Tab
+        @currentTabId={{this.currentTabId}}
+        @label={{emberAddon.title}}
+        @onClick={{fn this.updateCurrentTabId index}}
+        @tabId={{index}}
+        {{on "keydown" this.handleKeyboardNavigation}}
+      />
+    {{/each}}
+  </div>
+
+  <div>
+    {{#each this.emberAddons as |emberAddon index|}}
+      <Index::EmberAddons::Panel
+        @currentTabId={{this.currentTabId}}
+        @tabId={{index}}
+      >
+        <p>
+          {{emberAddon.description}}
+        </p>
+        <p>
+          Read the docs:
+          <a
+            data-test-link={{emberAddon.documentationUrl}}
+            href={{emberAddon.documentationUrl}}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {{emberAddon.documentationUrl}}
+          </a>
+        </p>
+        <p>
+          Easy installation:
+        </p>
+        <code class="addon-tabs--code">
+          <pre class="mt-3">
+            {{~! ~}}&gt; {{emberAddon.howToInstall}}{{~! ~}}
+          </pre>
+        </code>
+      </Index::EmberAddons::Panel>
+    {{/each}}
+  </div>
+</div>
