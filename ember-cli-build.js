@@ -7,10 +7,12 @@ module.exports = function (defaults) {
     babel: {
       plugins: [require.resolve('ember-auto-import/babel-plugin')],
     },
+
     ifa: {
       enabled: true,
       inline: true,
     },
+
     fingerprint: {
       // don't fingerprint images because we need to be able to access them dynamically
       // see more info here: https://github.com/ef4/prember/issues/52
@@ -18,6 +20,7 @@ module.exports = function (defaults) {
       generateAssetMap: true,
       fingerprintAssetMap: true,
     },
+
     prember: {
       urls: [
         '/',
@@ -57,14 +60,17 @@ module.exports = function (defaults) {
         'community/black-lives-matter',
       ],
     },
+
     emberHighCharts: {
       includeHighCharts: true,
       includeHighChartsMore: true,
       includeModules: ['drilldown'],
     },
+
     'ember-leaflet': {
       excludeJS: true,
     },
+
     minifyCSS: {
       options: { processImport: true },
     },
