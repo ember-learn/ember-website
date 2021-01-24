@@ -1,0 +1,21 @@
+<div class="release {{unless @isReleased "future-image"}}">
+  <img
+    alt=""
+    role="presentation"
+    src="/images/releases/small_release.png"
+  >
+
+  <div
+    class="bold mt-1"
+    data-test-field="Name"
+  >
+    {{@eventName}}
+  </div>
+
+  <div
+    class="text-sm"
+    data-test-field="Description"
+  >
+    {{@eventDescription}}
+  </div>
+</div>
