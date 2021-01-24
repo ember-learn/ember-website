@@ -7,7 +7,7 @@ function inTeam(team) {
 }
 
 export default class TeamController extends Controller {
-  @computed get sortedModel() {
+  @computed get sortedTeamMembers() {
     const teamMembers = (this.model ?? []).toArray();
 
     return teamMembers.sort((teamMember1, teamMember2) => {
@@ -28,26 +28,26 @@ export default class TeamController extends Controller {
   }
 
   get alumniTeamMembers() {
-    return this.sortedModel.filter(inTeam('alumni'));
+    return this.sortedTeamMembers.filter(inTeam('alumni'));
   }
 
   get coreCLITeamMembers() {
-    return this.sortedModel.filter(inTeam('cli'));
+    return this.sortedTeamMembers.filter(inTeam('cli'));
   }
 
   get coreTeamMembers() {
-    return this.sortedModel.filter(inTeam('corejs'));
+    return this.sortedTeamMembers.filter(inTeam('corejs'));
   }
 
   get dataTeamMembers() {
-    return this.sortedModel.filter(inTeam('data'));
+    return this.sortedTeamMembers.filter(inTeam('data'));
   }
 
   get learningTeamMembers() {
-    return this.sortedModel.filter(inTeam('learning'));
+    return this.sortedTeamMembers.filter(inTeam('learning'));
   }
 
   get steeringCommitteeMembers() {
-    return this.sortedModel.filter(inTeam('steering'));
+    return this.sortedTeamMembers.filter(inTeam('steering'));
   }
 }
