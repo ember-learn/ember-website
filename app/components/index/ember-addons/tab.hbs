@@ -1,0 +1,16 @@
+{{#let (eq @currentTabId @tabId) as |isTabActive|}}
+  <button
+    aria-controls="ember-addons-panel-{{@tabId}}"
+    aria-selected={{if isTabActive "true" "false"}}
+    class="addon-tabs--tab {{if isTabActive "active-tab"}}"
+    data-test-button={{@label}}
+    id="ember-addons-tab-{{@tabId}}"
+    role="tab"
+    tabindex={{if isTabActive "0" "-1"}}
+    type="button"
+    {{on "click" @onClick}}
+    ...attributes
+  >
+    {{@label}}
+  </button>
+{{/let}}
