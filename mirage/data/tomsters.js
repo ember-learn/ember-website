@@ -11,10 +11,10 @@ const mapIdToAttributes = new Map([
     },
   ],
   [
-    'ember-ally',
+    'ember-a11y',
     {
       date: new Date('2018-03-10'),
-      id: 'ember-ally',
+      id: 'ember-a11y',
       image: 'a11y-zoey.png',
       tags: ['all', 'zoey', 'other'],
       title: 'Ember A11y',
