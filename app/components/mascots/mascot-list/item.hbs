@@ -1,0 +1,35 @@
+<figure>
+  <div class="well well-1/1">
+    <img
+      alt=""
+      data-test-field="Image"
+      loading="lazy"
+      role="presentation"
+      src="/images/tomsters/{{@mascot.image}}"
+    >
+  </div>
+
+  <figcaption class="flex-horizontal-between">
+    {{#if @mascot.url}}
+      <a
+        data-test-field="Name"
+        href={{@mascot.url}}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {{@mascot.title}}
+      </a>
+    {{else}}
+      <span data-test-field="Name">
+        {{@mascot.title}}
+      </span>
+    {{/if}}
+
+    <time
+      datetime={{@mascot.date}}
+      data-test-field="Date"
+    >
+      {{format-date-time @mascot.date "MMMM d, y"}}
+    </time>
+  </figcaption>
+</figure>
