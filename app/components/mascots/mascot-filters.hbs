@@ -1,0 +1,25 @@
+<nav class="filter flex-horizontal-between">
+  <span class="filter-group">
+    {{#each this.filterFilters as |filter|}}
+      <LinkTo
+        data-test-link={{filter.label}}
+        @query={{hash filter=filter.value}}
+        @route="mascots"
+      >
+        {{~! ~}}{{filter.label}}{{~! ~}}
+      </LinkTo>
+    {{/each}}
+  </span>
+
+  <span>
+    {{#each this.displayFilters as |filter|}}
+      <LinkTo
+        data-test-link={{filter.label}}
+        @query={{hash display=filter.value}}
+        @route="mascots"
+      >
+        {{~! ~}}{{filter.label}}{{~! ~}}
+      </LinkTo>
+    {{/each}}
+  </span>
+</nav>

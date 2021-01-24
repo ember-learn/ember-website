@@ -8,5 +8,11 @@
     Tomster is a registered and protected trademark. These images may not be used without specific and explicit consent (which we aim never to hold back unreasonably). If you have questions about using or commissioning a custom Mascot, <LinkTo @route="mascots.faq">check out the FAQ</LinkTo>.
   </p>
 
-  <TomsterList @tomsters={{this.model}} @filter={{this.filter}} @display={{this.display}} />
+  <Mascots::MascotFilters />
+
+  {{!-- TODO: Use ember-composable-helpers to sort filteredMascots by date:desc --}}
+  <Mascots::MascotList
+    @display={{this.display}}
+    @mascots={{this.filteredMascots}}
+  />
 </section>
