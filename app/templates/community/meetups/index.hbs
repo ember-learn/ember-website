@@ -28,7 +28,10 @@
     {{/if}}
 
     <div>
-      {{#each this.sortedMeetupsByArea as |area|}}
+      {{#each
+        (sort-by "items.length:desc" "value:asc" this.meetupsByArea)
+        as |area|
+      }}
         <div class="mt-3">
           <h3>{{area.value}}</h3>
           <ul class="list-unstyled grid lg:grid-4 sm:grid-2">

@@ -61,6 +61,10 @@ module.exports = function (defaults) {
       ],
     },
 
+    'ember-composable-helpers': {
+      only: ['filter-by', 'reject-by', 'sort-by'],
+    },
+
     emberHighCharts: {
       includeHighCharts: true,
       includeHighChartsMore: true,

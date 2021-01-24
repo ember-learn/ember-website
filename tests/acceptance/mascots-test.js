@@ -41,7 +41,7 @@ module('Acceptance | mascots', function (hooks) {
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
-      .hasText('Austin Zoey', 'The user sees the correct first mascot.');
+      .hasText('Minnesota', 'The user sees the correct first mascot.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[mascots.length - 1])
@@ -64,7 +64,7 @@ module('Acceptance | mascots', function (hooks) {
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
-      .hasText('EmberCamp Tomster', 'The user sees the correct first mascot.');
+      .hasText('Minnesota', 'The user sees the correct first mascot.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[mascots.length - 1])
@@ -85,7 +85,7 @@ module('Acceptance | mascots', function (hooks) {
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
-      .hasText('Austin Zoey', 'The user sees the correct first mascot.');
+      .hasText('Ember Octane', 'The user sees the correct first mascot.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[mascots.length - 1])
@@ -109,7 +109,7 @@ module('Acceptance | mascots', function (hooks) {
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
-      .hasText('EmberCamp Tomster', 'The user sees the correct first mascot.');
+      .hasText('Minnesota', 'The user sees the correct first mascot.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[mascots.length - 1])
@@ -133,7 +133,7 @@ module('Acceptance | mascots', function (hooks) {
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
-      .hasText('Austin Zoey', 'The user sees the correct first mascot.');
+      .hasText('Ember Octane', 'The user sees the correct first mascot.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[mascots.length - 1])

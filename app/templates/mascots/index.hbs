@@ -10,9 +10,8 @@
 
   <Mascots::MascotFilters />
 
-  {{!-- TODO: Use ember-composable-helpers to sort filteredMascots by date:desc --}}
   <Mascots::MascotList
     @display={{this.display}}
-    @mascots={{this.filteredMascots}}
+    @mascots={{sort-by "date:desc" this.filteredMascots}}
   />
 </section>
