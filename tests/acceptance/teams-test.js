@@ -25,13 +25,7 @@ module('Acceptance | teams', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/teams');
-    await a11yAudit({
-      rules: {
-        'aria-valid-attr-value': {
-          enabled: false,
-        },
-      },
-    });
+    await a11yAudit();
 
     assert.hasPageTitle('Team - Ember.js');
   });
