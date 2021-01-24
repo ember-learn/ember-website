@@ -30,9 +30,6 @@ module('Acceptance | releases', function (hooks) {
         'color-contrast': {
           enabled: false,
         },
-        'image-alt': {
-          enabled: false,
-        },
       },
     });
 
