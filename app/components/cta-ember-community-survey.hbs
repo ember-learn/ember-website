@@ -1,0 +1,26 @@
+{{#if this.showReminder}}
+  <div
+    class="survey-reminder-wrapper"
+    data-test-survey-reminder
+  >
+    <div data-test-message>
+      Take the
+      <LinkTo
+        data-test-link={{@surveyTitle}}
+        @route={{@surveyRoute}}
+      >
+        {{@surveyTitle}}
+      </LinkTo>
+    </div>
+
+    <button
+      aria-label="Dismiss this message"
+      class="toggle-close hide-on-mobile"
+      data-test-button="Close"
+      type="button"
+      {{on "click" this.closeSurveyReminder}}
+    >
+      <span aria-hidden="true">x</span>
+    </button>
+  </div>
+{{/if}}
