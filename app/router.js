@@ -13,6 +13,8 @@ Router.map(function () {
 
   this.route('blog', function () {});
 
+  this.route('browser-support');
+
   this.route('community', function () {
     this.route('black-lives-matter');
     this.route('meetups', function () {
@@ -55,8 +57,6 @@ Router.map(function () {
     this.route('lts');
     this.route('release');
   });
-
-  this.route('browser-support');
 
   this.route('security');
 
