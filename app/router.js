@@ -56,6 +56,8 @@ Router.map(function () {
     this.route('release');
   });
 
+  this.route('browser-support');
+
   this.route('security');
 
   this.route('sponsors');
