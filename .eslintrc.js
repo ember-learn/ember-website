@@ -30,7 +30,6 @@ module.exports = {
       The recommended rules are failing. Let's fix the errors
       and remove the rule exceptions one by one.
     */
-    'ember/no-actions-hash': 'off',
     'ember/no-classic-classes': 'off',
     'ember/no-classic-components': 'off',
     'ember/no-component-lifecycle-hooks': 'off',
