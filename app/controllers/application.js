@@ -1,9 +1,9 @@
 import Controller from '@ember/controller';
 import { infoLinks } from 'ember-styleguide/constants/es-footer';
-import styleguideLinks from 'ember-styleguide/constants/links';
+import headerLinks from 'ember-website/utils/header-links';
 import replaceLinks from 'ember-website/utils/replace-links';
 
 export default class ApplicationController extends Controller {
-  links = replaceLinks(styleguideLinks);
+  links = replaceLinks(headerLinks);
   infoLinks = replaceLinks(infoLinks);
 }
