@@ -1,11 +1,8 @@
 import Controller from '@ember/controller';
-import theme from '../highchart-themes/survey';
 
 const emberOrange = '#f23818';
 const darkGrayColor = '#4b4b4b';
 const lightGrayColor = '#cccccc';
-
-theme.colors = [lightGrayColor, darkGrayColor, emberOrange];
 
 const makeChartData = (data) =>
   data.map((datum) => ({
@@ -15,6 +12,7 @@ const makeChartData = (data) =>
       label: item && item.label,
       color: item && item.color,
     })),
+    color: datum.color,
   }));
 
 const chartHowlong = {
@@ -88,6 +86,7 @@ const chartHowlong = {
         { value: 39.5, label: '1.9' },
         { value: 35, label: '1.10' },
       ],
+      color: lightGrayColor,
     },
     {
       year: '2016',
@@ -106,6 +105,7 @@ const chartHowlong = {
         { value: 27, label: '2.3' },
         { value: 47, label: '2.4' },
       ],
+      color: darkGrayColor,
     },
     {
       year: '2017',
@@ -128,6 +128,7 @@ const chartHowlong = {
         { value: 41, label: '2.11' },
         { value: 19.3, label: 'stable (2.12)' },
       ],
+      color: emberOrange,
     },
   ]),
 };
@@ -153,14 +154,17 @@ const chartSnapshotEmberDevelopers = {
     {
       name: '2015',
       data: [12.5, 10.8, 20.9, 13, 10.5, 13.1, 14.6],
+      color: lightGrayColor,
     },
     {
       name: '2016',
       data: [27, 16, 16, 9, 9, 10, 10],
+      color: darkGrayColor,
     },
     {
       name: '2017',
       data: [44, 15, 14, 7, 7, 6.4, 6.3],
+      color: emberOrange,
     },
   ],
 };
@@ -266,14 +270,17 @@ const employmentSituation = {
     {
       name: '2015',
       data: [67.3, 22.8, 24.4, 13.4, 0],
+      color: lightGrayColor,
     },
     {
       name: '2016',
       data: [59, 15, 16, 11, 23],
+      color: darkGrayColor,
     },
     {
       name: '2017',
       data: [74.2, 13.9, 13.6, 10.4, 12.7],
+      color: emberOrange,
     },
   ],
 };
@@ -302,14 +309,17 @@ const emberDevelopers = {
     {
       name: '2015',
       data: [15.5, 78, 3.7, 1.7, 0.8, 0.3],
+      color: lightGrayColor,
     },
     {
       name: '2016',
       data: [12, 74, 6, 4, 2, 1],
+      color: darkGrayColor,
     },
     {
       name: '2017',
       data: [8.7, 69.8, 6.8, 4.8, 2.5, 2],
+      color: emberOrange,
     },
   ],
 };
@@ -354,6 +364,7 @@ const longLived = {
         25.8, // '3–6 Months',
         38.8, // '< 3 Months',
       ],
+      color: lightGrayColor,
     },
     {
       name: '2016',
@@ -366,6 +377,7 @@ const longLived = {
         20, // '3–6 Months',
         27, // '< 3 Months',
       ],
+      color: darkGrayColor,
     },
     {
       name: '2017',
@@ -378,6 +390,7 @@ const longLived = {
         15.8, // '3–6 Months',
         19.8, // '< 3 Months',
       ],
+      color: emberOrange,
     },
   ],
 };
@@ -475,14 +488,17 @@ const browserRequirements = {
     {
       name: '2016',
       data: [94, 49, 40, 28, 13, 12, 3],
+      color: lightGrayColor,
     },
     {
       name: '2017',
       data: [94.26, 43.22, 37.67, 18.8, 9.15, 6.37, 1.39],
+      color: darkGrayColor,
     },
     {
       name: 'What is expected next year?',
       data: [93.69, 51.36, 28.26, 9.84, 7.82, 2.9, 0.76],
+      color: emberOrange,
     },
   ],
 };
@@ -964,7 +980,6 @@ function makeVersionChartData(versionData) {
 }
 
 export default class EmberCommunitySurvey2017Controller extends Controller {
-  theme = theme;
   chartHowlong = chartHowlong;
   chartSnapshotEmberDevelopers = chartSnapshotEmberDevelopers;
   chartBreakdownByVersion = chartBreakdownByVersion;
