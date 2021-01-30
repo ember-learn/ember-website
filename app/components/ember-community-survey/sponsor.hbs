@@ -1,0 +1,21 @@
+<div class={{if @hasDarkBackground "bg-light-muted"}}>
+  <div class="pb-3 text-center">
+    <p>
+      Brought to you by
+    </p>
+
+    <a
+      href={{@sponsor.website}}
+      data-test-link="Sponsor Website"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt={{@sponsor.logoAlt}}
+        class="sponsor-logo"
+        data-test-image="Sponsor Logo"
+        src={{@sponsor.logoSrc}}
+      >
+    </a>
+  </div>
+</div>
