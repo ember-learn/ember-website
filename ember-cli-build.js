@@ -8,59 +8,6 @@ module.exports = function (defaults) {
       plugins: [require.resolve('ember-auto-import/babel-plugin')],
     },
 
-    ifa: {
-      enabled: true,
-      inline: true,
-    },
-
-    fingerprint: {
-      // don't fingerprint images because we need to be able to access them dynamically
-      // see more info here: https://github.com/ef4/prember/issues/52
-      extensions: ['js', 'css', 'map'],
-      generateAssetMap: true,
-      fingerprintAssetMap: true,
-    },
-
-    prember: {
-      urls: [
-        '/',
-        'community',
-        'community/meetups',
-        'community/meetups/assets',
-        'community/meetups-getting-started',
-        'ember-community-survey-2019',
-        'ember-users',
-        'guidelines',
-        'learn',
-        'learn/examples',
-        'about/legal',
-        'logos',
-        'mascots',
-        'security',
-        'sponsors',
-        'teams',
-        'mascots',
-        'mascots/commission-sent',
-        'mascots/commission',
-        'mascots/faq',
-        'mascots/payment-sent',
-        'mascots/payment',
-        'releases',
-        'releases/release',
-        'releases/canary',
-        'releases/beta',
-        'releases/lts',
-        'ember-community-survey-2016',
-        'ember-community-survey-2017',
-        'ember-community-survey-2018',
-        'ember-community-survey-2019',
-        'ember-community-survey-2020',
-        'editions',
-        'editions/octane',
-        'community/black-lives-matter',
-      ],
-    },
-
     'ember-composable-helpers': {
       only: ['filter-by', 'reject-by', 'sort-by'],
     },
@@ -75,8 +22,60 @@ module.exports = function (defaults) {
       excludeJS: true,
     },
 
+    fingerprint: {
+      // don't fingerprint images because we need to be able to access them dynamically
+      // see more info here: https://github.com/ef4/prember/issues/52
+      extensions: ['js', 'css', 'map'],
+      generateAssetMap: true,
+      fingerprintAssetMap: true,
+    },
+
+    ifa: {
+      enabled: true,
+      inline: true,
+    },
+
     minifyCSS: {
       options: { processImport: true },
+    },
+
+    prember: {
+      urls: [
+        '/',
+        'about/legal',
+        'browser-support',
+        'community',
+        'community/black-lives-matter',
+        'community/meetups',
+        'community/meetups/assets',
+        'community/meetups-getting-started',
+        'editions',
+        'editions/octane',
+        'ember-community-survey-2016',
+        'ember-community-survey-2017',
+        'ember-community-survey-2018',
+        'ember-community-survey-2019',
+        'ember-community-survey-2020',
+        'ember-users',
+        'guidelines',
+        'learn',
+        'learn/examples',
+        'logos',
+        'mascots',
+        'mascots/commission',
+        'mascots/commission-sent',
+        'mascots/faq',
+        'mascots/payment',
+        'mascots/payment-sent',
+        'releases',
+        'releases/beta',
+        'releases/canary',
+        'releases/lts',
+        'releases/release',
+        'security',
+        'sponsors',
+        'teams',
+      ],
     },
   });
 

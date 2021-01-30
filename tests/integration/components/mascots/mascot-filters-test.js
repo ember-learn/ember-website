@@ -7,12 +7,6 @@ module('Integration | Component | mascots/mascot-filters', function (hooks) {
   setupRenderingTest(hooks);
 
   test('We show 9 filters', async function (assert) {
-    /*
-      TODO:
-
-      After we upgrade ember-source to v3.24+, we can remove
-      the line `this.owner.setupRouter();`.
-    */
     this.owner.setupRouter();
 
     /* BEGIN: Set up custom assertions */

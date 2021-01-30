@@ -1,13 +1,12 @@
 import Controller from '@ember/controller';
-/* eslint-disable-next-line ember/no-computed-properties-in-native-classes */
-import { computed } from '@ember/object';
+import { createCache, getValue } from '@glimmer/tracking/primitives/cache';
 
 function inTeam(team) {
   return (teamMember) => (teamMember.teams ?? []).includes(team);
 }
 
 export default class TeamsController extends Controller {
-  @computed('model') get sortedTeamMembers() {
+  #sortedTeamMembers = createCache(() => {
     const teamMembers = (this.model ?? []).toArray();
 
     return teamMembers.sort((teamMember1, teamMember2) => {
@@ -25,6 +24,10 @@ export default class TeamsController extends Controller {
 
       return comparisonResult;
     });
+  });
+
+  get sortedTeamMembers() {
+    return getValue(this.#sortedTeamMembers);
   }
 
   get alumniTeamMembers() {
