@@ -7,7 +7,7 @@ function inTeam(team) {
 }
 
 export default class TeamsController extends Controller {
-  @computed get sortedTeamMembers() {
+  @computed('model') get sortedTeamMembers() {
     const teamMembers = (this.model ?? []).toArray();
 
     return teamMembers.sort((teamMember1, teamMember2) => {

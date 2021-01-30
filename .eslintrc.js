@@ -23,19 +23,7 @@ module.exports = {
     // leaflet maps global
     L: 'writeable',
   },
-  rules: {
-    /*
-      TODO:
-
-      The recommended rules are failing. Let's fix the errors
-      and remove the rule exceptions one by one.
-    */
-    'ember/no-classic-classes': 'off',
-    'ember/no-classic-components': 'off',
-    'ember/no-component-lifecycle-hooks': 'off',
-    'ember/require-computed-property-dependencies': 'off',
-    'ember/require-tagless-components': 'off',
-  },
+  rules: {},
   overrides: [
     // node files
     {
