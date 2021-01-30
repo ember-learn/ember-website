@@ -8,9 +8,18 @@ module.exports = function (defaults) {
       plugins: [require.resolve('ember-auto-import/babel-plugin')],
     },
 
-    ifa: {
-      enabled: true,
-      inline: true,
+    'ember-composable-helpers': {
+      only: ['filter-by', 'reject-by', 'sort-by'],
+    },
+
+    emberHighCharts: {
+      includeHighCharts: true,
+      includeHighChartsMore: true,
+      includeModules: ['drilldown'],
+    },
+
+    'ember-leaflet': {
+      excludeJS: true,
     },
 
     fingerprint: {
@@ -19,6 +28,15 @@ module.exports = function (defaults) {
       extensions: ['js', 'css', 'map'],
       generateAssetMap: true,
       fingerprintAssetMap: true,
+    },
+
+    ifa: {
+      enabled: true,
+      inline: true,
+    },
+
+    minifyCSS: {
+      options: { processImport: true },
     },
 
     prember: {
@@ -58,24 +76,6 @@ module.exports = function (defaults) {
         'sponsors',
         'teams',
       ],
-    },
-
-    'ember-composable-helpers': {
-      only: ['filter-by', 'reject-by', 'sort-by'],
-    },
-
-    emberHighCharts: {
-      includeHighCharts: true,
-      includeHighChartsMore: true,
-      includeModules: ['drilldown'],
-    },
-
-    'ember-leaflet': {
-      excludeJS: true,
-    },
-
-    minifyCSS: {
-      options: { processImport: true },
     },
   });
 
