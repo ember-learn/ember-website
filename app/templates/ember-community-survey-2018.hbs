@@ -1,16 +1,16 @@
 {{page-title "Community Survey 2018"}}
-<div class="bg-dark bg-shape-boxes">
-  <div class="container">
 
-    <img class="survey-logo" src="/images/survey/logo2018.svg" alt="Ember Community Survey 2018">
-
-    <h1 class="survey-tagline">
-      A project to learn who is using Ember, and how.
-    </h1>
-
-    <h2 class="mt-1">With over 1300 responses, here are the 2018 survey results!</h2>
-  </div>
-</div>
+<EmberCommunitySurvey::Introduction
+  @surveyLogoAlt="Ember Community Survey 2018"
+  @surveyLogoSrc="/images/survey/logo2018.svg"
+>
+  <p>
+    A project to learn who is using Ember and how.
+  </p>
+  <p>
+    With over 1300 responses, here are the 2018 survey results!
+  </p>
+</EmberCommunitySurvey::Introduction>
 
 <div>
   <div class="container">
@@ -383,38 +383,25 @@
   </div>
 </div>
 
-<div>
-  <div class="container">
-    <div class="mb-3">
-      <a href="#closing-thoughts" id="closing-thoughts" class="text-lg mono">
-        Closing Thoughts
-      </a>
-    </div>
+<EmberCommunitySurvey::Conclusion>
+  <p>
+    We would like to thank everyone who took the time to participate in the 2018 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
+  </p>
+  <p>
+    You can view a <a href="https://embersurvey.typeform.com/report/tKfRLF/bty0Y6WzPoKB2Whw" rel="noopener noreferrer" target="_blank">summary of the responses to all questions</a> from the survey, as well as the <a href="/ember-community-survey-2018/ember-community-survey-2018-results-shuffled.csv">raw survey data</a>. You can also view the <a href="/ember-community-survey-2018/ember-community-survey-2018-demographics-shuffled.csv">demographic data</a>, which has been decoupled from the primary corpora.
+  </p>
+  <p>
+    This is the fourth year of the Ember Community Survey. To see results for previous years, you can visit the <LinkTo @route="ember-community-survey-2017">2017</LinkTo>, <LinkTo @route="ember-community-survey-2016">2016</LinkTo>, and <a href="https://www.201-created.com/ember-community-survey-2015/" rel="noopener noreferrer" target="_blank">2015</a> survey results pages.
+  </p>
+  <p>
+    Questions? Feedback? Please email <a href="mailto:survey@201-created.com">survey@201-created.com</a>.
+  </p>
+</EmberCommunitySurvey::Conclusion>
 
-    <p class="text-md">
-      We would like to thank everyone who took the time to participate in the 2018 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
-    </p>
-
-    <p class="text-md">
-      You can view a <a href="https://embersurvey.typeform.com/report/tKfRLF/bty0Y6WzPoKB2Whw">summary of the responses to all questions</a>
-      from the survey, and you can view the <a href="/ember-community-survey-2018/ember-community-survey-2018-results-shuffled.csv">raw survey data</a>.
-      You can also view the <a href="/ember-community-survey-2018/ember-community-survey-2018-demographics-shuffled.csv">demographic data</a>, which has been decoupled from the primary corpora.
-    </p>
-
-    <p class="text-md">
-      This is the fourth year of the Ember Community Survey. To see results for previous years, you can visit the
-      <a href="https://www.emberjs.com/ember-community-survey-2017/">2017</a>, <a href="https://www.emberjs.com/ember-community-survey-2016/">2016</a>
-      and <a href="https://www.201-created.com/ember-community-survey-2015/">2015</a> survey results pages.
-    </p>
-
-    <p class="text-md">
-      Questions? Feedback? Please email <a href="mailto:survey@201-created.com">survey@201-created.com</a>
-    </p>
-  </div>
-  <div class="text-center mb-3">
-    <p>Brought to you by</p>
-    <a href="http://www.201-created.com/">
-      <img src="/images/survey/201-Created-Square@1x.png" alt="201 Created">
-    </a>
-  </div>
-</div>
+<EmberCommunitySurvey::Sponsor
+  @sponsor={{hash
+    logoAlt="201 Created"
+    logoSrc="/images/survey/201-Created-Square@1x.png"
+    website="https://www.201-created.com/"
+  }}
+/>

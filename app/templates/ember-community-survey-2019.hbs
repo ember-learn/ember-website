@@ -1,16 +1,19 @@
 {{page-title "Community Survey 2019"}}
-<div class="bg-dark bg-shape-boxes">
-  <div class="container">
-    <h1>
-      <img class="survey-logo" src="/images/survey/logo2019.svg" alt="Ember Community Survey 2019">
-    </h1>
-    <p class="survey-intro">
-      Despite running the survey for a shorter period of time than in previous years, we had a similar number of responses as last year.
-      We think that this speaks both to the level of investment in the Ember community, and to the outreach methods used to ensure that all community members are given an opportunity to let us know what they think.
-      With over 1200 responses, here are the 2019 survey results!
-    </p>
-  </div>
-</div>
+
+<EmberCommunitySurvey::Introduction
+  @surveyLogoAlt="Ember Community Survey 2019"
+  @surveyLogoSrc="/images/survey/logo2019.svg"
+>
+  <p>
+    Despite running the survey for a shorter period of time than in previous years, we had a similar number of responses as last year.
+  </p>
+  <p>
+    We think that this speaks both to the level of investment in the Ember community, and to the outreach methods used to ensure that all community members are given an opportunity to let us know what they think.
+  </p>
+  <p>
+    With over 1200 responses, here are the 2019 survey results!
+  </p>
+</EmberCommunitySurvey::Introduction>
 
 <div>
   <div class="container">
@@ -535,36 +538,25 @@
   </div>
 </div>
 
-<div class="bg-light-muted">
-  <div class="container">
-    <div class="mb-3">
-      <a href="#closing-thoughts" id="closing-thoughts" class="text-lg mono">
-        Closing Thoughts
-      </a>
-    </div>
+<EmberCommunitySurvey::Conclusion
+  @hasDarkBackground={{true}}
+>
+  <p>
+    We would like to thank everyone who took the time to participate in the 2019 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
+  </p>
+  <p>
+    This is the fifth year of the Ember Community Survey. To see results for previous years, you can visit the <LinkTo @route="ember-community-survey-2018">2018</LinkTo>, <LinkTo @route="ember-community-survey-2017">2017</LinkTo>, <LinkTo @route="ember-community-survey-2016">2016</LinkTo>, and <a href="https://www.201-created.com/ember-community-survey-2015/" rel="noopener noreferrer" target="_blank">2015</a> survey results pages.
+  </p>
+  <p>
+    If you have any questions about this survey—the data, the methods used, or any other feedback—please email us at <a href="mailto:survey@emberjs.com">survey@emberjs.com</a>.
+  </p>
+</EmberCommunitySurvey::Conclusion>
 
-    <p>
-      We would like to thank everyone who took the time to participate in the 2019 Ember Community Survey! We hope this
-      information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
-    </p>
-
-    <p>
-      This is the fifth year of the Ember Community Survey. To see results for previous years, you can visit the
-      <a href="https://www.emberjs.com/ember-community-survey-2018/">2018</a>,
-      <a href="https://www.emberjs.com/ember-community-survey-2017/">2017</a>,
-      <a href="https://www.emberjs.com/ember-community-survey-2016/">2016</a>
-      and <a href="https://www.201-created.com/ember-community-survey-2015/">2015</a> survey results pages.
-    </p>
-
-    <p>
-      If you have any questions about this survey- the data, the methods used, or any other feedback, please email us at
-      <a href="survey@emberjs.com">survey@emberjs.com</a>.
-    </p>
-  </div>
-  <div class="text-center mb-3">
-    <p>Brought to you by</p>
-    <a href="http://www.codeallday.com/">
-      <img class="survey-logo" src="/images/survey/cad-right.svg" alt="Code All Day">
-    </a>
-  </div>
-</div>
+<EmberCommunitySurvey::Sponsor
+  @hasDarkBackground={{true}}
+  @sponsor={{hash
+    logoAlt="Code All Day"
+    logoSrc="/images/survey/cad-right.svg"
+    website="http://www.codeallday.com/"
+  }}
+/>
