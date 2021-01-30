@@ -1,5 +1,4 @@
 import Controller from '@ember/controller';
-import theme from '../highchart-themes/survey';
 
 const chartHowlong = {
   options: {
@@ -479,7 +478,6 @@ const chartSEO = {
 };
 
 export default class EmberCommunitySurvey2016Controller extends Controller {
-  theme = theme;
   chartHowlong = chartHowlong;
   chartEmberAtTheOffice = chartEmberAtTheOffice;
   chartNewReleaseAdoptionEmber = chartNewReleaseAdoptionEmber;

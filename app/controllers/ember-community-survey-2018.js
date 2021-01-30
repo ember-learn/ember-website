@@ -1,5 +1,4 @@
 import Controller from '@ember/controller';
-import theme from '../highchart-themes/survey';
 
 var emberOrange = '#f23818',
   darkGrayColor = '#4b4b4b',
@@ -950,7 +949,6 @@ const emberDataAdoption = makeVersionChart(
 );
 
 export default class EmberCommunitySurvey2018Controller extends Controller {
-  theme = theme;
   newReleaseAdoption = newReleaseAdoption;
   overallAdoption = overallAdoption;
   emberDataAdoption = emberDataAdoption;

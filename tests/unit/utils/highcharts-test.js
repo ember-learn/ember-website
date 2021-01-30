@@ -4,14 +4,6 @@ import {
 } from 'ember-website/utils/highcharts';
 import { module, test } from 'qunit';
 
-const defaultData = [
-  {
-    color: '#aaaaaa',
-    data: 0,
-    id: 'placeholder',
-  },
-];
-
 const customData = [
   {
     color: '#1E719B',
@@ -32,6 +24,35 @@ const customData = [
   },
 ];
 
+const defaultData = [
+  {
+    color: '#aaaaaa',
+    data: 0,
+    id: 'placeholder',
+  },
+];
+
+const defaultChartOptions = {
+  chart: {
+    backgroundColor: 'transparent',
+    type: 'column',
+  },
+
+  title: {
+    text: '',
+  },
+
+  yAxis: {
+    labels: {
+      format: '{value} %',
+    },
+
+    title: {
+      text: null,
+    },
+  },
+};
+
 module('Unit | Utility | highcharts', function () {
   module('createChartOptions', function () {
     test('returns an object with series, when we call the function without any parameters', function (assert) {
@@ -40,6 +61,7 @@ module('Unit | Utility | highcharts', function () {
       assert.deepEqual(
         chartOptions,
         {
+          ...defaultChartOptions,
           series: defaultData,
         },
         'We get the correct chart options.'
@@ -50,35 +72,35 @@ module('Unit | Utility | highcharts', function () {
       const chartOptions = createChartOptions({
         chartOptions: undefined,
         data: undefined,
-        theme: undefined,
       });
 
       assert.deepEqual(
         chartOptions,
         {
+          ...defaultChartOptions,
           series: defaultData,
         },
         'We get the correct chart options.'
       );
     });
 
-    test('returns an object with series, when we pass data to the function', function (assert) {
+    test('We can pass data to override the default data', function (assert) {
       const chartOptions = createChartOptions({
         chartOptions: undefined,
         data: customData,
-        theme: undefined,
       });
 
       assert.deepEqual(
         chartOptions,
         {
+          ...defaultChartOptions,
           series: customData,
         },
         'We get the correct chart options.'
       );
     });
 
-    test('merges the chartOptions object into the theme object', function (assert) {
+    test('We can pass chartOptions to override the default chart options', function (assert) {
       const chartOptions = createChartOptions({
         chartOptions: {
           chart: {
@@ -105,27 +127,6 @@ module('Unit | Utility | highcharts', function () {
         },
 
         data: customData,
-
-        theme: {
-          chart: {
-            backgroundColor: 'transparent',
-            type: 'column',
-          },
-
-          title: {
-            text: '',
-          },
-
-          yAxis: {
-            labels: {
-              format: '{value} %',
-            },
-
-            title: {
-              text: null,
-            },
-          },
-        },
       });
 
       assert.deepEqual(

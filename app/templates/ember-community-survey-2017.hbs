@@ -1,17 +1,16 @@
 {{page-title "Community Survey 2017"}}
-<div class="bg-dark bg-shape-boxes">
-  <div class="container">
 
-    <img class="survey-logo" src="/images/survey/logo2017.svg" alt="Ember Community Survey 2017">
-
-    <h1 class="survey-tagline">
-      A project to learn
-      who is using Ember, and how
-    </h1>
-
-    <h2 class="mt-1">With nearly 1600 responses, here are the 2017 survey results!</h2>
-  </div>
-</div>
+<EmberCommunitySurvey::Introduction
+  @surveyLogoAlt="Ember Community Survey 2017"
+  @surveyLogoSrc="/images/survey/logo2017.svg"
+>
+  <p>
+    A project to learn who is using Ember and how.
+  </p>
+  <p>
+    With nearly 1600 responses, here are the 2017 survey results!
+  </p>
+</EmberCommunitySurvey::Introduction>
 
 <div>
   <div class="container">
@@ -24,7 +23,6 @@
     <Highcharts
       @chartOptions={{this.chartHowlong.options}}
       @data={{this.chartHowlong.data}}
-      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -44,14 +42,12 @@
         <Highcharts
           @chartOptions={{this.chartBreakdownByVersion.options}}
           @data={{this.chartBreakdownByVersion.data}}
-          @theme={{this.theme}}
         />
       </div>
       <div class="survey-column half">
         <Highcharts
           @chartOptions={{this.priorVersionsData.options}}
           @data={{this.priorVersionsData.data}}
-          @theme={{this.theme}}
         />
       </div>
     </div>
@@ -71,7 +67,6 @@
     <Highcharts
       @chartOptions={{this.recommendingEmber.options}}
       @data={{this.recommendingEmber.data}}
-      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -204,7 +199,6 @@
     <Highcharts
       @chartOptions={{this.howCanWeApprove.options}}
       @data={{this.howCanWeApprove.data}}
-      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -229,12 +223,10 @@
       <Highcharts
         @chartOptions={{this.whenStarting.options}}
         @data={{this.whenStarting.data}}
-        @theme={{this.theme}}
       />
       <Highcharts
         @chartOptions={{this.preExistingKnowledge.options}}
         @data={{this.preExistingKnowledge.data}}
-        @theme={{this.theme}}
       />
     </div>
 
@@ -260,12 +252,10 @@
       <Highcharts
         @chartOptions={{this.employmentSituation.options}}
         @data={{this.employmentSituation.data}}
-        @theme={{this.theme}}
       />
       <Highcharts
         @chartOptions={{this.emberDevelopers.options}}
         @data={{this.emberDevelopers.data}}
-        @theme={{this.theme}}
       />
     </div>
 
@@ -290,7 +280,6 @@
     <Highcharts
       @chartOptions={{this.chartSnapshotEmberDevelopers.options}}
       @data={{this.chartSnapshotEmberDevelopers.data}}
-      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -311,7 +300,6 @@
     <Highcharts
       @chartOptions={{this.productionUsers.options}}
       @data={{this.productionUsers.data}}
-      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -335,7 +323,6 @@
     <Highcharts
       @chartOptions={{this.longLived.options}}
       @data={{this.longLived.data}}
-      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -359,12 +346,10 @@
       <Highcharts
         @chartOptions={{this.serverLanguage.options}}
         @data={{this.serverLanguage.data}}
-        @theme={{this.theme}}
       />
       <Highcharts
         @chartOptions={{this.textEditor.options}}
         @data={{this.textEditor.data}}
-        @theme={{this.theme}}
       />
     </div>
 
@@ -391,7 +376,6 @@
     <Highcharts
       @chartOptions={{this.browserRequirements.options}}
       @data={{this.browserRequirements.data}}
-      @theme={{this.theme}}
     />
 
   </div>
@@ -409,7 +393,6 @@
     <Highcharts
       @chartOptions={{this.demographics.options}}
       @data={{this.demographics.data}}
-      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -419,34 +402,25 @@
   </div>
 </div>
 
-<div class="bg-light-muted">
-  <div class="container">
+<EmberCommunitySurvey::Conclusion
+  @hasDarkBackground={{true}}
+>
+  <p>
+    We would like to thank everyone who took the time to participate in the 2017 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
+  </p>
+  <p>
+    You can view a <a href="https://embersurvey.typeform.com/report/GmJTvy/S9Nt" rel="noopener noreferrer" target="_blank">summary of the responses to all questions</a> from the survey, as well as the <a href="/ember-community-survey-2017/ember-community-survey-2017-results.csv">raw survey data</a>. You can also view the <a href="/ember-community-survey-2017/ember-community-survey-2017-demographics.csv">demographic data</a>, which has been decoupled from the primary corpora.
+  </p>
+  <p>
+    Questions? Feedback? Please email <a href="mailto:survey@201-created.com">survey@201-created.com</a>.
+  </p>
+</EmberCommunitySurvey::Conclusion>
 
-    <h2 class="mb-3">
-      <a href="#closing-thoughts" id="closing-thoughts" class="survey-h2 mono">
-        Closing Thoughts
-      </a>
-    </h2>
-
-    <p class="text-md">
-      We would like to thank everyone who took the time to participate in the 2017 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
-    </p>
-
-    <p class="text-md">
-      You can view a <a href="https://embersurvey.typeform.com/report/GmJTvy/S9Nt">summary of the responses to all questions</a>
-      from the survey, and you can view the <a href="/ember-community-survey-2017/ember-community-survey-2017-results.csv">raw survey data</a>.
-      You can also view the <a href="/ember-community-survey-2017/ember-community-survey-2017-demographics.csv">demographic data</a>, which has been decoupled from the primary corpora.
-    </p>
-
-    <p class="text-md">
-      Questions? Feedback? Please email <a href="mailto:survey@201-created.com">survey@201-created.com</a>
-    </p>
-
-  </div>
-  <div class="text-center mb-3">
-    <p>Brought to you by</p>
-    <a href="http://www.201-created.com/">
-      <img alt="201 created" src="/images/survey/201-Created-Square@1x.png">
-    </a>
-  </div>
-</div>
+<EmberCommunitySurvey::Sponsor
+  @hasDarkBackground={{true}}
+  @sponsor={{hash
+    logoAlt="201 Created"
+    logoSrc="/images/survey/201-Created-Square@1x.png"
+    website="https://www.201-created.com/"
+  }}
+/>

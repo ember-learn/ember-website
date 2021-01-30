@@ -1,16 +1,16 @@
 {{page-title "Community Survey 2018"}}
-<div class="bg-dark bg-shape-boxes">
-  <div class="container">
 
-    <img class="survey-logo" src="/images/survey/logo2018.svg" alt="Ember Community Survey 2018">
-
-    <h1 class="survey-tagline">
-      A project to learn who is using Ember, and how.
-    </h1>
-
-    <h2 class="mt-1">With over 1300 responses, here are the 2018 survey results!</h2>
-  </div>
-</div>
+<EmberCommunitySurvey::Introduction
+  @surveyLogoAlt="Ember Community Survey 2018"
+  @surveyLogoSrc="/images/survey/logo2018.svg"
+>
+  <p>
+    A project to learn who is using Ember and how.
+  </p>
+  <p>
+    With over 1300 responses, here are the 2018 survey results!
+  </p>
+</EmberCommunitySurvey::Introduction>
 
 <div>
   <div class="container">
@@ -23,7 +23,6 @@
     <Highcharts
       @chartOptions={{this.newReleaseAdoption.options}}
       @data={{this.newReleaseAdoption.data}}
-      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -38,12 +37,10 @@
       <Highcharts
         @chartOptions={{this.overallAdoption.options}}
         @data={{this.overallAdoption.data}}
-        @theme={{this.theme}}
       />
       <Highcharts
         @chartOptions={{this.emberDataAdoption.options}}
         @data={{this.emberDataAdoption.data}}
-        @theme={{this.theme}}
       />
     </div>
 
@@ -64,7 +61,6 @@
     <Highcharts
       @chartOptions={{this.recommendingEmber.options}}
       @data={{this.recommendingEmber.data}}
-      @theme={{this.theme}}
     />
     <p class="text-md">
       We asked respondents how likely they were to recommend Ember to a friend or colleague.
@@ -204,14 +200,12 @@
         <Highcharts
           @chartOptions={{this.employerUsingEmber.options}}
           @data={{this.employerUsingEmber.data}}
-          @theme={{this.theme}}
         />
       </div>
       <div class="survey-column half">
         <Highcharts
           @chartOptions={{this.gettingHired.options}}
           @data={{this.gettingHired.data}}
-          @theme={{this.theme}}
         />
       </div>
     </div>
@@ -232,7 +226,6 @@
     <Highcharts
       @chartOptions={{this.productionApps.options}}
       @data={{this.productionApps.data}}
-      @theme={{this.theme}}
     />
     <p class="text-md">
       Ember apps with large user bases have grown again this year, with a large increase in apps that have thousands of users.
@@ -243,7 +236,6 @@
     <Highcharts
       @chartOptions={{this.emberenoEmployment.options}}
       @data={{this.emberenoEmployment.data}}
-      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -253,13 +245,11 @@
     <Highcharts
       @chartOptions={{this.applicationUsers.options}}
       @data={{this.applicationUsers.data}}
-      @theme={{this.theme}}
     />
 
     <Highcharts
       @chartOptions={{this.teamSize.options}}
       @data={{this.teamSize.data}}
-      @theme={{this.theme}}
     />
     <p class="text-md">
       Ember-focused developer teams are getting larger. This year the survey included a response to indicate that one's Ember team is greater than 500 developers, and
@@ -278,7 +268,6 @@
     <Highcharts
       @chartOptions={{this.longLivedCodebases.options}}
       @data={{this.longLivedCodebases.data}}
-      @theme={{this.theme}}
     />
     <p class="text-md">
       This chart shows the percentage of respondents who were maintaining an Ember app created
@@ -299,7 +288,6 @@
     <Highcharts
       @chartOptions={{this.communityParticipation.options}}
       @data={{this.communityParticipation.data}}
-      @theme={{this.theme}}
     />
     <p class="text-md">
       This chart shows some of the biggest changes in response from last year (in both positive and negative directions) to the question of how community members stay up to date with Ember.
@@ -319,12 +307,10 @@
     <Highcharts
       @chartOptions={{this.serverSide.options}}
       @data={{this.serverSide.data}}
-      @theme={{this.theme}}
     />
     <Highcharts
       @chartOptions={{this.serverSideFrameworks.options}}
       @data={{this.serverSideFrameworks.data}}
-      @theme={{this.theme}}
     />
     <p class="text-md">
       Ruby continues to be the dominant server-side language used, but enterprise-focused languages are gaining in prominence this year, reflecting
@@ -340,7 +326,6 @@
     <Highcharts
       @chartOptions={{this.editorTool.options}}
       @data={{this.editorTool.data}}
-      @theme={{this.theme}}
     />
     <p class="text-md">
       VS Code has really taken over, vaulting from 4th place last year (19%) to 38% and first place this year, dethroning last year's editor champion, Atom (now in second place at 28%).
@@ -358,7 +343,6 @@
     <Highcharts
       @chartOptions={{this.browserRequirements.options}}
       @data={{this.browserRequirements.data}}
-      @theme={{this.theme}}
     />
     <p class="text-md">
       Developers need to support browsers before IE11 less than ever before.
@@ -381,7 +365,6 @@
     <Highcharts
       @chartOptions={{this.demographicsRegion.options}}
       @data={{this.demographicsRegion.data}}
-      @theme={{this.theme}}
     />
 
     <p class="text-md">
@@ -400,38 +383,25 @@
   </div>
 </div>
 
-<div>
-  <div class="container">
-    <div class="mb-3">
-      <a href="#closing-thoughts" id="closing-thoughts" class="text-lg mono">
-        Closing Thoughts
-      </a>
-    </div>
+<EmberCommunitySurvey::Conclusion>
+  <p>
+    We would like to thank everyone who took the time to participate in the 2018 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
+  </p>
+  <p>
+    You can view a <a href="https://embersurvey.typeform.com/report/tKfRLF/bty0Y6WzPoKB2Whw" rel="noopener noreferrer" target="_blank">summary of the responses to all questions</a> from the survey, as well as the <a href="/ember-community-survey-2018/ember-community-survey-2018-results-shuffled.csv">raw survey data</a>. You can also view the <a href="/ember-community-survey-2018/ember-community-survey-2018-demographics-shuffled.csv">demographic data</a>, which has been decoupled from the primary corpora.
+  </p>
+  <p>
+    This is the fourth year of the Ember Community Survey. To see results for previous years, you can visit the <LinkTo @route="ember-community-survey-2017">2017</LinkTo>, <LinkTo @route="ember-community-survey-2016">2016</LinkTo>, and <a href="https://www.201-created.com/ember-community-survey-2015/" rel="noopener noreferrer" target="_blank">2015</a> survey results pages.
+  </p>
+  <p>
+    Questions? Feedback? Please email <a href="mailto:survey@201-created.com">survey@201-created.com</a>.
+  </p>
+</EmberCommunitySurvey::Conclusion>
 
-    <p class="text-md">
-      We would like to thank everyone who took the time to participate in the 2018 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
-    </p>
-
-    <p class="text-md">
-      You can view a <a href="https://embersurvey.typeform.com/report/tKfRLF/bty0Y6WzPoKB2Whw">summary of the responses to all questions</a>
-      from the survey, and you can view the <a href="/ember-community-survey-2018/ember-community-survey-2018-results-shuffled.csv">raw survey data</a>.
-      You can also view the <a href="/ember-community-survey-2018/ember-community-survey-2018-demographics-shuffled.csv">demographic data</a>, which has been decoupled from the primary corpora.
-    </p>
-
-    <p class="text-md">
-      This is the fourth year of the Ember Community Survey. To see results for previous years, you can visit the
-      <a href="https://www.emberjs.com/ember-community-survey-2017/">2017</a>, <a href="https://www.emberjs.com/ember-community-survey-2016/">2016</a>
-      and <a href="https://www.201-created.com/ember-community-survey-2015/">2015</a> survey results pages.
-    </p>
-
-    <p class="text-md">
-      Questions? Feedback? Please email <a href="mailto:survey@201-created.com">survey@201-created.com</a>
-    </p>
-  </div>
-  <div class="text-center mb-3">
-    <p>Brought to you by</p>
-    <a href="http://www.201-created.com/">
-      <img src="/images/survey/201-Created-Square@1x.png" alt="201 Created">
-    </a>
-  </div>
-</div>
+<EmberCommunitySurvey::Sponsor
+  @sponsor={{hash
+    logoAlt="201 Created"
+    logoSrc="/images/survey/201-Created-Square@1x.png"
+    website="https://www.201-created.com/"
+  }}
+/>

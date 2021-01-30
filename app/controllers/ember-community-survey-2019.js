@@ -5,8 +5,6 @@
 // ~SOME: Adding prose, especially for FFS: Discord + Gmail
 // Adding pattern textures in highcharts
 
-import theme from '../highchart-themes/survey';
-
 import Controller from '@ember/controller';
 
 // 2018 Color Palette
@@ -3204,7 +3202,6 @@ const MS_Q601 = {
 
 //=============================================================================
 export default class EmberCommunitySurvey2019Controller extends Controller {
-  theme = theme;
   newReleaseAdoption = newReleaseAdoption;
   overallAdoption = overallAdoption;
   emberDataAdoption = emberDataAdoption;
