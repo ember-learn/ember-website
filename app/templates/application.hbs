@@ -1,12 +1,19 @@
 <HeadLayout />
+
 {{page-title "Ember.js"}}
 
 <BlackLivesMatterBanner />
 
-<EsHeader @links={{this.links}} @home="/" />
+<EsHeader
+  @home="/"
+  @links={{this.links}}
+/>
 
 <main>
   {{outlet}}
 </main>
 
-<EsFooter @infoLinks={{this.infoLinks}} @contributeLink="https://github.com/ember-learn/ember-website" />
+<EsFooter
+  @contributeLink="https://github.com/ember-learn/ember-website"
+  @infoLinks={{this.infoLinks}}
+/>
