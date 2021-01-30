@@ -1,6 +1,7 @@
-import { find, render, waitUntil } from '@ember/test-helpers';
+import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
+import { waitUntilAllChartsAreDrawn } from 'ember-website/tests/helpers/highcharts';
 import { module, test } from 'qunit';
 
 module('Integration | Component | highcharts', function (hooks) {
@@ -11,10 +12,7 @@ module('Integration | Component | highcharts', function (hooks) {
       <Highcharts />
     `);
 
-    await waitUntil(() => {
-      const { renderState } = find('[data-test-highcharts-container]').dataset;
-      return renderState === 'settled';
-    });
+    await waitUntilAllChartsAreDrawn();
 
     assert
       .dom('[data-test-highcharts-container] svg')

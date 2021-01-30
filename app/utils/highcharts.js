@@ -18,6 +18,7 @@ const highchartsOptions = {
 
   plotOptions: {
     series: {
+      animation: false,
       shadow: false,
     },
   },
