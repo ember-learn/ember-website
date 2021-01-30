@@ -65,7 +65,7 @@
     "ember-resolver": "^8.0.2",
     "ember-source": "~3.20.2",
     "ember-styleguide": "^4.3.0",
-    "ember-template-lint": "^2.17.0",
+    "ember-template-lint": "^2.18.0",
     "ember-tether": "^2.0.0",
     "ember-truth-helpers": "^3.0.0",
     "eslint": "^7.18.0",
