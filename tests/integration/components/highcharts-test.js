@@ -6,7 +6,7 @@ import { module, test } from 'qunit';
 module('Integration | Component | highcharts', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function (assert) {
+  test('We can dynamically import Highcharts', async function (assert) {
     await render(hbs`
       <Highcharts />
     `);
@@ -17,10 +17,7 @@ module('Integration | Component | highcharts', function (hooks) {
     });
 
     assert
-      .dom('[data-test-highcharts-container]')
-      .hasText(
-        'Highcharts was imported. We can start drawing!',
-        'We imported highcharts dynamically.'
-      );
+      .dom('[data-test-highcharts-container] svg')
+      .exists({ count: 1 }, 'We see an svg element.');
   });
 });

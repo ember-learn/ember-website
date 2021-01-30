@@ -1,10 +1,19 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
-import { highchartsOptions } from 'ember-website/utils/highcharts';
+import {
+  createChartOptions,
+  highchartsOptions,
+} from 'ember-website/utils/highcharts';
 
 export default class HighchartsComponent extends Component {
   @tracked isHighchartsImported = false;
+
+  get chartOptions() {
+    const { chartOptions, data, theme } = this.args;
+
+    return createChartOptions({ chartOptions, data, theme });
+  }
 
   @action async importHighcharts() {
     try {
@@ -16,6 +25,16 @@ export default class HighchartsComponent extends Component {
       this.isHighchartsImported = true;
     } catch (e) {
       console.error(e);
+    }
+  }
+
+  @action drawChart(element) {
+    this.chart = this.highcharts.chart(element, this.chartOptions);
+  }
+
+  @action destroyChart() {
+    if (this.chart) {
+      this.chart.destroy();
     }
   }
 }
