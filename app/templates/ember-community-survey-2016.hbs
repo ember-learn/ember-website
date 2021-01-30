@@ -21,9 +21,9 @@
       </a>
     </h2>
 
-    <HighCharts
+    <Highcharts
       @chartOptions={{this.chartHowlong.options}}
-      @content={{this.chartHowlong.data}}
+      @data={{this.chartHowlong.data}}
       @theme={{this.theme}}
     />
 
@@ -45,9 +45,9 @@
 
     <div class="grid lg:grid-2">
       {{#each this.chartEmberAtTheOffice as |chart|}}
-        <HighCharts
+        <Highcharts
           @chartOptions={{chart.options}}
-          @content={{chart.data}}
+          @data={{chart.data}}
           @theme={{this.theme}}
         />
       {{/each}}
@@ -70,9 +70,9 @@
       </a>
     </h2>
 
-    <HighCharts
+    <Highcharts
       @chartOptions={{this.chartNewReleaseAdoptionEmber.options}}
-      @content={{this.chartNewReleaseAdoptionEmber.data}}
+      @data={{this.chartNewReleaseAdoptionEmber.data}}
       @theme={{this.theme}}
     />
 
@@ -82,9 +82,9 @@
       suggests many large companies are just now crossing the threshold into 2.x.
     </p>
 
-    <HighCharts
+    <Highcharts
       @chartOptions={{this.chartNewReleaseAdoptionEmberData.options}}
-      @content={{this.chartNewReleaseAdoptionEmberData.data}}
+      @data={{this.chartNewReleaseAdoptionEmberData.data}}
       @theme={{this.theme}}
     />
 
@@ -104,9 +104,9 @@
       </a>
     </h2>
 
-    <HighCharts
+    <Highcharts
       @chartOptions={{this.chartLongLivedCodebases.options}}
-      @content={{this.chartLongLivedCodebases.data}}
+      @data={{this.chartLongLivedCodebases.data}}
       @theme={{this.theme}}
     />
 
@@ -127,9 +127,9 @@
 
     <div class="grid lg:grid-2">
       {{#each this.chartServerSide as |chart|}}
-        <HighCharts
+        <Highcharts
           @chartOptions={{chart.options}}
-          @content={{chart.data}}
+          @data={{chart.data}}
           @theme={{this.theme}}
         />
       {{/each}}
@@ -157,9 +157,9 @@
 
     <div class="grid lg:grid-2">
       {{#each this.chartBrowserSuppor as |chart|}}
-        <HighCharts
+        <Highcharts
           @chartOptions={{chart.options}}
-          @content={{chart.data}}
+          @data={{chart.data}}
           @theme={{this.theme}}
         />
       {{/each}}
@@ -190,9 +190,9 @@
 
     <div class="grid lg:grid-2">
       {{#each this.chartEmberEcosystem as |chart|}}
-        <HighCharts
+        <Highcharts
           @chartOptions={{chart.options}}
-          @content={{chart.data}}
+          @data={{chart.data}}
           @theme={{this.theme}}
         />
       {{/each}}
@@ -215,9 +215,9 @@
       </a>
     </h2>
 
-    <HighCharts
+    <Highcharts
       @chartOptions={{this.chartSEO.options}}
-      @content={{this.chartSEO.data}}
+      @data={{this.chartSEO.data}}
       @theme={{this.theme}}
     />
 
