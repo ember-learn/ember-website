@@ -1,14 +1,35 @@
 import { assign } from '@ember/polyfills';
 import merge from 'deepmerge';
 
+const defaultChartOptions = {
+  chart: {
+    backgroundColor: 'transparent',
+    type: 'column',
+  },
+
+  title: {
+    text: '',
+  },
+
+  yAxis: {
+    labels: {
+      format: '{value} %',
+    },
+
+    title: {
+      text: null,
+    },
+  },
+};
+
 function createChartOptions({
   chartOptions = {},
   data = [{ color: '#aaaaaa', data: 0, id: 'placeholder' }],
-  theme = {},
 } = {}) {
-  const themePlusChartOptions = merge(theme, chartOptions);
+  // Note, `merge(A, B)` means that B overrides A
+  const combinedChartOptions = merge(defaultChartOptions, chartOptions);
 
-  return assign({ series: data }, themePlusChartOptions);
+  return assign({ series: data }, combinedChartOptions);
 }
 
 const highchartsOptions = {

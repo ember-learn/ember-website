@@ -16,9 +16,9 @@ export default class HighchartsComponent extends Component {
   @tracked isChartDrawn = false;
 
   get chartOptions() {
-    const { chartOptions, data, theme } = this.args;
+    const { chartOptions, data } = this.args;
 
-    return createChartOptions({ chartOptions, data, theme });
+    return createChartOptions({ chartOptions, data });
   }
 
   get isSettled() {
