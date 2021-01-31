@@ -28,13 +28,7 @@ module('Acceptance | ember-community-survey-2020', function (hooks) {
   test('Accessibility audit', async function (assert) {
     await visit('/ember-community-survey-2020');
     await waitUntilAllChartsAreDrawn();
-    await a11yAudit({
-      rules: {
-        'heading-order': {
-          enabled: false,
-        },
-      },
-    });
+    await a11yAudit();
 
     assert.hasPageTitle('Community Survey 2020 - Ember.js');
   });
