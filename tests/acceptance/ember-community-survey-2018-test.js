@@ -28,19 +28,7 @@ module('Acceptance | ember-community-survey-2018', function (hooks) {
   test('Accessibility audit', async function (assert) {
     await visit('/ember-community-survey-2018');
     await waitUntilAllChartsAreDrawn();
-    await a11yAudit({
-      rules: {
-        'heading-order': {
-          enabled: false,
-        },
-        'landmark-complementary-is-top-level': {
-          enabled: false,
-        },
-        'landmark-unique': {
-          enabled: false,
-        },
-      },
-    });
+    await a11yAudit();
 
     assert.hasPageTitle('Community Survey 2018 - Ember.js');
   });
