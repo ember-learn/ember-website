@@ -69,7 +69,7 @@ const stackData = {
 const stackSkillsChart = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'What Does Your Stack Look Like?' },
+    title: { text: 'Grade your knowledge of various skills' },
     yAxis: { title: { text: 'Percent' } },
     xAxis: { categories: ['Beginner', 'Intermediate', 'Advanced'] },
   },
@@ -1080,7 +1080,7 @@ const SS_Q101 = {
     chart: { type: 'column' },
     title: {
       text:
-        'Q1.01: How likely are you to recommend Ember to your friends and colleagues?',
+        'How likely are you to recommend Ember to your friends and colleagues?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -1113,7 +1113,7 @@ const SS_Q101 = {
 const SS_Q104 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q1.04: How long have you been working with Ember?' },
+    title: { text: 'How long have you been working with Ember?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1145,7 +1145,7 @@ const SS_Q104 = {
 const SS_Q105 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q1.05: Grade your knowledge of HTML:' },
+    title: { text: 'Grade your knowledge of HTML:' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1170,7 +1170,7 @@ const SS_Q105 = {
 const SS_Q106 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q1.06: Grade your knowledge of CSS:' },
+    title: { text: 'Grade your knowledge of CSS:' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1195,7 +1195,7 @@ const SS_Q106 = {
 const SS_Q107 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q1.07: Grade your knowledge of JavaScript:' },
+    title: { text: 'Grade your knowledge of JavaScript:' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1220,7 +1220,7 @@ const SS_Q107 = {
 const SS_Q108 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q1.08: Grade your knowledge of ARIA:' },
+    title: { text: 'Grade your knowledge of ARIA:' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1245,7 +1245,7 @@ const SS_Q108 = {
 const SS_Q109 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q1.09: Grade your knowledge of Ember.js:' },
+    title: { text: 'Grade your knowledge of Ember.js:' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1270,7 +1270,7 @@ const SS_Q109 = {
 const SS_Q203 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q2.03: I use Ember for work:' },
+    title: { text: 'I use Ember for work:' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1297,7 +1297,7 @@ const SS_Q203 = {
 const SS_Q204 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q2.04: When taking your most recent job:' },
+    title: { text: 'When taking your most recent job:' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1342,7 +1342,7 @@ const SS_Q205 = {
     chart: { type: 'column' },
     title: {
       text:
-        'Q2.05: When taking your most recent job your pre-existing knowledge of Ember.js was:',
+        'When taking your most recent job your pre-existing knowledge of Ember.js was:',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -1391,7 +1391,7 @@ const SS_Q301 = {
     chart: { type: 'column' },
     title: {
       text:
-        'Q3.01: How many developers at your company are responsible for writing Front-End code?',
+        'How many developers at your company are responsible for writing Front-End code?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -1423,7 +1423,7 @@ const SS_Q302 = {
     chart: { type: 'column' },
     title: {
       text:
-        'Q3.02: How many developers at your company are responsible for writing Ember code?',
+        'How many developers at your company are responsible for writing Ember code?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -1505,7 +1505,7 @@ const SS_Q303 = {
     chart: { type: 'column' },
     title: {
       text:
-        'Q3.03: At this time next year, how many Ember developers does your company plan to employ?',
+        'At this time next year, how many Ember developers does your company plan to employ?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -1534,8 +1534,7 @@ const SS_Q305 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text:
-        'Q3.05: What is the primary language of apps developed at your business?',
+      text: 'What is the primary language of apps developed at your business?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -1566,8 +1565,7 @@ const SS_Q306 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text:
-        'Q3.06: Does your business require applications to be internationalized?',
+      text: 'Does your business require applications to be internationalized?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -1595,7 +1593,7 @@ const SS_Q405 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text: 'Q4.05: What is the primary language of your server-side stack?',
+      text: 'What is the primary language of your server-side stack?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -1676,7 +1674,7 @@ const SS_Q405 = {
 const SS_Q410 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q4.10: How many Ember apps do you work on?' },
+    title: { text: 'How many Ember apps do you work on?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1703,7 +1701,7 @@ const SS_Q410 = {
 const SS_Q418 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q4.18: How many addons have you written?' },
+    title: { text: 'How many addons have you written?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1729,7 +1727,7 @@ const SS_Q418 = {
 const SS_Q419 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q4.19: How many addons have you published publicly?' },
+    title: { text: 'How many addons have you published publicly?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1755,7 +1753,7 @@ const SS_Q419 = {
 const SS_Q501 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q5.01: In which region do you live?' },
+    title: { text: 'In which region do you live?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1799,7 +1797,7 @@ const SS_Q501 = {
 const SS_Q502 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q5.02: Do you have a disability?' },
+    title: { text: 'Do you have a disability?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -1826,8 +1824,7 @@ const MS_Q103 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text:
-        'Q1.03: What are the ways you learn about and stay up to date with Ember?',
+      text: 'What are the ways you learn about and stay up to date with Ember?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -1896,7 +1893,7 @@ const MS_Q110 = {
     chart: { type: 'column' },
     title: {
       text:
-        'Q1.10: When learning Ember yourself, or teaching it to someone new, what topics were difficult to understand?',
+        'When learning Ember yourself, or teaching it to someone new, what topics were difficult to understand?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -1942,7 +1939,7 @@ const MS_Q110 = {
 const MS_Q111 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q1.11: Which text editors do you use for development?' },
+    title: { text: 'Which text editors do you use for development?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: {
@@ -2021,7 +2018,7 @@ const MS_Q112 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text: 'Q1.12: Describe your participation in the Ember community:',
+      text: 'Describe your participation in the Ember community:',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -2057,7 +2054,7 @@ const MS_Q113 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text: 'Q1.13: Which operating system(s) do you use for development?',
+      text: 'Which operating system(s) do you use for development?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -2086,7 +2083,7 @@ const MS_Q114 = {
     chart: { type: 'column' },
     title: {
       text:
-        'Q1.14: With which of these other front-end framework(s) do you have experience?',
+        'With which of these other front-end framework(s) do you have experience?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -2149,7 +2146,7 @@ const MS_Q115 = {
     chart: { type: 'column' },
     title: {
       text:
-        'Q1.15: With which of these other front-end framework(s) do you have an advanced level of experience?',
+        'With which of these other front-end framework(s) do you have an advanced level of experience?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -2188,7 +2185,7 @@ const MS_Q115 = {
 const MS_Q201 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q2.01: What best describes your role at work?' },
+    title: { text: 'What best describes your role at work?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -2220,7 +2217,7 @@ const MS_Q202 = {
     chart: { type: 'column' },
     title: {
       text:
-        'Q2.02: Choose the option(s) that best describe your employment situation:',
+        'Choose the option(s) that best describe your employment situation:',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -2279,7 +2276,7 @@ const MS_Q304 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text: 'Q3.04: What are the accessibility requirements for your business?',
+      text: 'What are the accessibility requirements for your business?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -2310,7 +2307,7 @@ const MS_Q304 = {
 const MS_Q307 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q3.07: In which sector(s) do you  operate?' },
+    title: { text: 'In which sector(s) do you  operate?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -2351,7 +2348,7 @@ const MS_Q401 = {
   options: {
     chart: { type: 'areaspline' },
     title: {
-      text: 'Q4.01: Which version(s) of Ember are in use in your apps?',
+      text: 'Which version(s) of Ember are in use in your apps?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -2495,8 +2492,7 @@ const MS_Q402 = {
   options: {
     chart: { type: 'areaspline' },
     title: {
-      text:
-        'Q4.02: If you use Ember Data, which version(s) are used in your apps?',
+      text: 'If you use Ember Data, which version(s) are used in your apps?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -2608,8 +2604,7 @@ const MS_Q403 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text:
-        'Q4.03: If you use Ember CLI, which version(s) are used in your apps?',
+      text: 'If you use Ember CLI, which version(s) are used in your apps?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -2654,7 +2649,7 @@ const MS_Q403 = {
 const MS_Q406 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q4.06: Which of these server-side frameworks do you use?' },
+    title: { text: 'Which of these server-side frameworks do you use?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: {
@@ -2745,7 +2740,7 @@ const MS_Q406 = {
 const MS_Q407 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q4.07: What standards do you follow for HTTP API design?' },
+    title: { text: 'What standards do you follow for HTTP API design?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -2777,7 +2772,7 @@ const MS_Q408 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text: 'Q4.08: What testing framework(s) do you use in your Ember apps?',
+      text: 'What testing framework(s) do you use in your Ember apps?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -2816,7 +2811,7 @@ const MS_Q408 = {
 const MS_Q409 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q4.09: How old are your Ember applications?' },
+    title: { text: 'How old are your Ember applications?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category', labels: { autoRotation: false } },
@@ -2847,7 +2842,7 @@ const MS_Q411 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text: 'Q4.11: What technologies are part of your deployment stack?',
+      text: 'What technologies are part of your deployment stack?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -2909,7 +2904,7 @@ const MS_Q412 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text: 'Q4.12: What is the primary target platform for your Ember apps?',
+      text: 'What is the primary target platform for your Ember apps?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -2942,7 +2937,7 @@ const MS_Q412 = {
 const MS_Q413 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q4.13: Who uses your application(s)?' },
+    title: { text: 'Who uses your application(s)?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: {
@@ -2989,7 +2984,7 @@ const MS_Q414 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text: 'Q4.14: What browser versions do your applications target?',
+      text: 'What browser versions do your applications target?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -3030,7 +3025,7 @@ const MS_Q415 = {
     chart: { type: 'column' },
     title: {
       text:
-        'Q4.15: At this time next year, what browser versions do you expect your applications to target?',
+        'At this time next year, what browser versions do you expect your applications to target?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -3061,7 +3056,7 @@ const MS_Q416 = {
     chart: { type: 'column' },
     title: {
       text:
-        'Q4.16: Which of these best describes your use of Ember in production applications?',
+        'Which of these best describes your use of Ember in production applications?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -3108,7 +3103,7 @@ const MS_Q417 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text: 'Q4.17: What method do you rely on for search engine indexing?',
+      text: 'What method do you rely on for search engine indexing?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
@@ -3145,7 +3140,7 @@ const MS_Q417 = {
 const MS_Q504 = {
   options: {
     chart: { type: 'column' },
-    title: { text: 'Q5.04: Which categories describe you?' },
+    title: { text: 'Which categories describe you?' },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },
     xAxis: { type: 'category' },
@@ -3177,7 +3172,7 @@ const MS_Q601 = {
   options: {
     chart: { type: 'column' },
     title: {
-      text: 'Q6.01: Did you participate in any of the following surveys?',
+      text: 'Did you participate in any of the following surveys?',
     },
     subtitle: { text: '' },
     tooltip: { pointFormat: '{point.y:.2f}%' },

@@ -12,35 +12,34 @@
   </p>
 </EmberCommunitySurvey::Introduction>
 
-<div>
-  <div class="container">
-    <h2 class="mb-3">
-      <a href="#how-long-have-you-been-working-with-ember" id="how-long-have-you-been-working-with-ember" class="text-xl">
-        How long have you been working with Ember?
-      </a>
-    </h2>
-
+<EmberCommunitySurvey::Section
+  @hasDarkBackground={{false}}
+  @sectionId="developer-experience"
+  @sectionTitle="Developer Experience"
+>
+  <:charts>
     <Highcharts
       @chartOptions={{this.chartHowlong.options}}
       @data={{this.chartHowlong.data}}
     />
+  </:charts>
 
-    <p class="text-md">
-      Ember's growth remains steady, however the survey reached more experienced
-      users this year than last year. Over half of our participants self-identify as being quite familiar with both JavaScript (70%) and with Ember itself (63%). The vast majority (84%) live in North America or Europe and prefer Sublime (39%), Atom
-      (39%), VIM (29%) or WebStorm/Other Jetbrains (21%).
+  <:body>
+    <p>
+      Ember's growth remains steady. The survey reached more experienced users this year than last year.
     </p>
-  </div>
-</div>
+    <p>
+      Over half of our participants self-identify as being quite familiar with both JavaScript (70%) and with Ember itself (63%). The vast majority (84%) live in North America or Europe and prefer Sublime (39%), Atom (39%), VIM (29%) or WebStorm/Other Jetbrains (21%).
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
 
-<div class="bg-light-muted">
-  <div class="container">
-    <h2 class="mb-3">
-      <a href="#ember-in-the-enterprise" id="ember-in-the-enterprise" class="text-xl">
-        Ember at the Office
-      </a>
-    </h2>
-
+<EmberCommunitySurvey::Section
+  @hasDarkBackground={{true}}
+  @sectionId="ember-in-enterprise-employment-status-and-size"
+  @sectionTitle="Ember in Enterprise: Employment Status & Size"
+>
+  <:charts>
     <div class="grid lg:grid-2">
       {{#each this.chartEmberAtTheOffice as |chart|}}
         <Highcharts
@@ -49,76 +48,93 @@
         />
       {{/each}}
     </div>
+  </:charts>
 
-    <p class="text-md">
-      The vast majority (87%) of participants self-identified as a developer. 92% of participants used Ember at work. Last year 62% of participants had a development staff under 10, this year that dropped to 56% of respondents. The number of
-      participants at a company having over 50 developers rose from 18% to 22%. This, along with the two graphs above showing how development roles have changed and Ember staff size has changed, points to a small shift toward larger companies. 85%
-      of participants have an Ember application in production, 8% of participants work on an Ember application used by <em>millions</em> of users.
+  <:body>
+    <p>
+      The vast majority (87%) of participants self-identified as a developer. 92% of participants used Ember at work.
     </p>
-  </div>
-</div>
+    <p>
+      Last year, 62% of participants had a development staff under 10, this year that dropped to 56% of respondents. The number of participants at a company having over 50 developers rose from 18% to 22%.
+    </p>
+    <p>
+      This, along with the two graphs above showing how development roles have changed and Ember staff size has changed, points to a small shift toward larger companies.
+    </p>
+    <p>
+      85% of participants have an Ember application in production, 8% of participants work on an Ember application used by millions of users.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
 
-<div>
-  <div class="container">
-
-    <h2 class="mb-3">
-      <a href="#new-release-adoption" id="new-release-adoption" class="text-xl">
-        New Release Adoption
-      </a>
-    </h2>
-
+<EmberCommunitySurvey::Section
+  @hasDarkBackground={{false}}
+  @sectionId="ember-version"
+  @sectionTitle="Ember Version"
+>
+  <:charts>
     <Highcharts
       @chartOptions={{this.chartNewReleaseAdoptionEmber.options}}
       @data={{this.chartNewReleaseAdoptionEmber.data}}
     />
+  </:charts>
 
-    <p class="text-md">
-      Ember 2.4 was the release version of Ember during this survey. 76% of participants use Ember 2.x in an app, which demonstrates incredible adoption for a major release. However 36% of developers are still managing a codebase on 1.13. Major
-      semver releases include breaking changes, and a spike on the last 1.x release is expected to some degree. Anecdotal evidence
-      suggests many large companies are just now crossing the threshold into 2.x.
+  <:body>
+    <p>
+      Ember 2.4 was the release version of Ember during this survey.
     </p>
+    <p>
+      76% of participants use Ember 2.x in an app, which demonstrates incredible adoption for a major release. However, 36% of developers are still managing a codebase on 1.13.
+    </p>
+    <p>
+      Major SemVer releases include breaking changes, and a spike on the last 1.x release is expected to some degree. Anecdotal evidence suggests many large companies are just now crossing the threshold into 2.x.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
 
+<EmberCommunitySurvey::Section
+  @hasDarkBackground={{true}}
+  @sectionId="ember-data-version"
+  @sectionTitle="Ember Data Version"
+>
+  <:charts>
     <Highcharts
       @chartOptions={{this.chartNewReleaseAdoptionEmberData.options}}
       @data={{this.chartNewReleaseAdoptionEmberData.data}}
     />
+  </:charts>
 
-    <p class="text-md">
-      Ember-Data, which did not follow semver until its June release of 1.13, shows a similar trend after that release. Despite a bump at 1.13 (27%) most participants upgrade seamlessly through minor versions. This is a great improvement over
-      <a href="http://www.201-created.com/ember-community-survey-2015#release-adoption">last year</a>.
+  <:body>
+    <p>
+      Ember Data, which did not follow SemVer until its June release of 1.13, shows a similar trend after that release. Despite a bump at 1.13 (27%) most participants upgrade seamlessly through minor versions. This is a great improvement over <a href="https://www.201-created.com/ember-community-survey-2015/#release-adoption" rel="noopener noreferrer" target="_blank">2015</a>.
     </p>
-  </div>
-</div>
+  </:body>
+</EmberCommunitySurvey::Section>
 
-<div class="bg-light-muted">
-  <div class="container">
-
-    <h2 class="mb-3">
-      <a href="#long-lived-codebases" id="long-lived-codebases" class="text-xl">
-        Long-Lived Codebases
-      </a>
-    </h2>
-
+<EmberCommunitySurvey::Section
+  @hasDarkBackground={{false}}
+  @sectionId="maintenance"
+  @sectionTitle="Maintenance"
+>
+  <:charts>
     <Highcharts
       @chartOptions={{this.chartLongLivedCodebases.options}}
       @data={{this.chartLongLivedCodebases.data}}
     />
+  </:charts>
 
-    <p class="text-md">
+  <:body>
+    <p>
       Participants reported that their applications trended older this year. More developers are working with long-lived Ember applications than ever before, moving through release versions over time.
     </p>
-  </div>
-</div>
+  </:body>
+</EmberCommunitySurvey::Section>
 
-<div>
-  <div class="container">
-
-    <h2 class="mb-3">
-      <a href="#server-side" id="server-side" class="text-xl">
-        Server-side
-      </a>
-    </h2>
-
+<EmberCommunitySurvey::Section
+  @hasDarkBackground={{true}}
+  @sectionId="server-side-development"
+  @sectionTitle="Server-Side Development"
+>
+  <:charts>
     <div class="grid lg:grid-2">
       {{#each this.chartServerSide as |chart|}}
         <Highcharts
@@ -127,27 +143,24 @@
         />
       {{/each}}
     </div>
+  </:charts>
 
-    <p class="text-md">
-      Ruby retains the top spot in desired and actual server-side languages, however it also dropped 6% as production platform and 8% as a preferred platform. The only notable mover further down the list is Elixir/Erlang, which lept to surpass the
-      popularity of Go in both use and preference.
+  <:body>
+    <p>
+      Ruby retains the top spot in desired and actual server-side languages. However, it also dropped 6% as production platform and 8% as a preferred platform. The only notable mover further down the list is Elixir/Erlang, which lept to surpass the popularity of Go in both use and preference.
     </p>
-
-    <p class="text-md">
+    <p>
       JavaScript retains the largest gap between usage (24%) and preference (47%).
     </p>
-  </div>
-</div>
+  </:body>
+</EmberCommunitySurvey::Section>
 
-<div class="bg-light-muted">
-  <div class="container">
-
-    <h2 class="mb-3">
-      <a href="#browser-requirements" id="browser-requirements" class="text-xl">
-        Browser Requirements
-      </a>
-    </h2>
-
+<EmberCommunitySurvey::Section
+  @hasDarkBackground={{false}}
+  @sectionId="browser-requirements"
+  @sectionTitle="Browser Requirements"
+>
+  <:charts>
     <div class="grid lg:grid-2">
       {{#each this.chartBrowserSuppor as |chart|}}
         <Highcharts
@@ -156,30 +169,27 @@
         />
       {{/each}}
     </div>
+  </:charts>
 
-    <p class="text-md">
+  <:body>
+    <p>
       Participants overwhelmingly support modern browsers. In a shocking twist, the number of Ember developer who maintain support for mobile browsers <em>dropped</em> from 57% to 49%, and is only projected to return to 57% next year.
     </p>
-
-    <p class="text-md">
-      In the past year Microsoft launched its evergreen browser <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">Edge</a>, however Edge was not made available on older platforms like Windows 7. Older IE versions will be widely
-      supported until those platforms are all retired, and their last available version of IE with them.
+    <p>
+      In the past year, Microsoft launched its evergreen browser <a href="https://www.microsoft.com/en-us/windows/microsoft-edge" rel="noopener noreferrer" target="_blank">Edge</a>. However, Edge was not made available on older platforms like Windows 7. Older IE versions will be widely supported until those platforms are all retired, and their last available version of IE with them.
     </p>
-    <p class="text-md">
-      Current app support for IE9 is lower than support for IE8 was last year, providing a strong justification for Ember 3.0 (when it arrives) to retire IE9 support. IE10 support is popular despite the relative rarity of that browser (it is <a href="http://www.sitepoint.com/browser-trends-january-2016-12-month-review/">less common that IE9</a>).
+    <p>
+      Current app support for IE 9 is lower than support for IE 8 was last year, providing a strong justification for Ember 3.0 (when it arrives) to retire IE 9 support. IE 10 support is popular despite the relative rarity of that browser. (It is <a href="http://www.sitepoint.com/browser-trends-january-2016-12-month-review/" rel="noopener noreferrer" target="_blank">less common that IE 9</a>.)
     </p>
-  </div>
-</div>
+  </:body>
+</EmberCommunitySurvey::Section>
 
-<div>
-  <div class="container">
-
-    <h2 class="mb-3">
-      <a href="#the-ember-ecosystem" id="the-ember-ecosystem" class="text-xl">
-        The Ember Ecosystem
-      </a>
-    </h2>
-
+<EmberCommunitySurvey::Section
+  @hasDarkBackground={{true}}
+  @sectionId="ember-ecosystem"
+  @sectionTitle="Ember Ecosystem"
+>
+  <:charts>
     <div class="grid lg:grid-2">
       {{#each this.chartEmberEcosystem as |chart|}}
         <Highcharts
@@ -188,49 +198,57 @@
         />
       {{/each}}
     </div>
+  </:charts>
 
-    <p class="text-md">
-      The number of community members who have written an addon grew in the past year. An astonishing 52% of participants have written an addon, and the percentage of participants writing addon unit tests rose by 12% to 64%. 25% of participants
-      report publishing an addon publicly, up from 20% last year.
+  <:body>
+    <p>
+      The number of community members who have written an addon grew in the past year. An astonishing 52% of participants have written an addon, and the percentage of participants writing addon unit tests rose by 12% to 64%. 25% of participants report publishing an addon publicly, up from 20% last year.
     </p>
+  </:body>
+</EmberCommunitySurvey::Section>
 
-  </div>
-</div>
-
-<div class="bg-light-muted">
-  <div class="container">
-
-    <h2 class="mb-3">
-      <a href="#search-engine-optimization" id="search-engine-optimization" class="text-xl">
-        Search Engine Optimization
-      </a>
-    </h2>
-
+<EmberCommunitySurvey::Section
+  @hasDarkBackground={{false}}
+  @sectionId="search-engine-optimization"
+  @sectionTitle="Search Engine Optimization"
+>
+  <:charts>
     <Highcharts
       @chartOptions={{this.chartSEO.options}}
       @data={{this.chartSEO.data}}
     />
+  </:charts>
 
-    <p class="text-md">
-      Concerns about SEO grew this year, if only by 5% of the participants. FastBoot usage remains nascent. Similar to last year, we suspect an element of self-selection in these numbers as it is unlikely that Ember is being chosen for SEO-sensitive
-      applications. The number of Ember apps targeting public consumers rose slightly from 46% to 49%.
+  <:body>
+    <p>
+      Concerns about SEO grew this year, if only by 5% of the participants. FastBoot usage remains nascent. Similar to last year, we suspect an element of self-selection in these numbers as it is unlikely that Ember is being chosen for SEO-sensitive applications.
     </p>
-  </div>
-</div>
+    <p>
+      The number of Ember apps targeting public consumers rose slightly from 46% to 49%.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
 
-<EmberCommunitySurvey::Conclusion>
-  <p>
-    We would like to thank everyone who took the time to participate in the 2016 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
-  </p>
-  <p>
-    You can view a <a href="https://embersurvey.typeform.com/report/Npq9cY/RqO2" rel="noopener noreferrer" target="_blank">summary of the responses to all questions</a> from the survey, as well as the <a href="/ember-community-survey-2016/ember-community-survey-2016-results.csv">raw survey data</a>.
-  </p>
-  <p>
-    Questions? Feedback? Please email <a href="mailto:survey@201-created.com">survey@201-created.com</a>.
-  </p>
-</EmberCommunitySurvey::Conclusion>
+<EmberCommunitySurvey::Section
+  @hasDarkBackground={{true}}
+  @sectionId="closing-thoughts"
+  @sectionTitle="Closing Thoughts"
+>
+  <:body>
+    <p>
+      We would like to thank everyone who took the time to participate in the 2016 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
+    </p>
+    <p>
+      You can view a <a href="https://embersurvey.typeform.com/report/Npq9cY/RqO2" rel="noopener noreferrer" target="_blank">summary of the responses to all questions</a> from the survey, as well as the <a href="/ember-community-survey-2016/ember-community-survey-2016-results.csv">raw survey data</a>.
+    </p>
+    <p>
+      Questions? Feedback? Please email <a href="mailto:survey@201-created.com">survey@201-created.com</a>.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
 
 <EmberCommunitySurvey::Sponsor
+  @hasDarkBackground={{true}}
   @sponsor={{hash
     logoAlt="201 Created"
     logoSrc="/images/survey/201-Created-Square@1x.png"

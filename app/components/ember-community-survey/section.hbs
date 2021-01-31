@@ -1,0 +1,39 @@
+<div class={{if @hasDarkBackground "bg-light-muted"}}>
+  <div class="container">
+    <section
+      aria-labelledby={{@sectionId}}
+      data-test-section={{@sectionTitle}}
+    >
+      <div class="mb-3 survey-section__title-container">
+        <h2
+          class="text-lg survey-section__title-container__title"
+          data-test-field="Title"
+          id={{@sectionId}}
+        >
+          {{@sectionTitle}}
+        </h2>
+
+        <a
+          class="survey-section__title-container__hyperlink"
+          data-test-link={{@sectionTitle}}
+          href="#{{@sectionId}}"
+        >
+          <span aria-hidden="true">#</span>
+          <span class="visually-hidden">
+            {{~! ~}}Section titled {{@sectionTitle}}{{~! ~}}
+          </span>
+        </a>
+      </div>
+
+      {{#if (has-block "charts")}}
+        <div class="mb-2" data-test-container="Charts">
+          {{yield to="charts"}}
+        </div>
+      {{/if}}
+
+      <div data-test-container="Body">
+        {{yield to="body"}}
+      </div>
+    </section>
+  </div>
+</div>
