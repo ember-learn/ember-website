@@ -69,7 +69,7 @@
     "ember-qunit": "^5.1.1",
     "ember-resolver": "^8.0.2",
     "ember-source": "~3.24.0",
-    "ember-styleguide": "^4.3.0",
+    "ember-styleguide": "^5.1.0",
     "ember-template-lint": "^2.18.0",
     "ember-tether": "^2.0.0",
     "ember-truth-helpers": "^3.0.0",
