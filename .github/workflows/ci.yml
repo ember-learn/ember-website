@@ -25,26 +25,29 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Get Yarn cache path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Update npm
+        run: npm i -g npm@7
 
-      - name: Cache Yarn cache and node_modules
+      - name: Get npm cache path
+        id: npm-cache-dir-path
+        run: echo "::set-output name=dir::$(npm config get cache)"
+
+      - name: Cache npm cache and node_modules
         id: cache-dependencies
         uses: actions/cache@v2
         with:
           path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
+            ${{ steps.npm-cache-dir-path.outputs.dir }}
             node_modules
-          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
       - name: Lint
-        run: yarn lint
+        run: npm run lint
 
 
   test-app:
@@ -60,28 +63,31 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Get Yarn cache path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Update npm
+        run: npm i -g npm@7
 
-      - name: Cache Yarn cache and node_modules
+      - name: Get npm cache path
+        id: npm-cache-dir-path
+        run: echo "::set-output name=dir::$(npm config get cache)"
+
+      - name: Cache npm cache and node_modules
         id: cache-dependencies
         uses: actions/cache@v2
         with:
           path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
+            ${{ steps.npm-cache-dir-path.outputs.dir }}
             node_modules
-          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
       - name: Test
         uses: percy/exec-action@v0.3.1
         with:
-          custom-command: yarn test
+          custom-command: npm test
         env:
           PERCY_PARALLEL_NONCE: ${{ env.PERCY_PARALLEL_NONCE }}
           PERCY_PARALLEL_TOTAL: ${{ env.PERCY_PARALLEL_TOTAL }}
@@ -103,26 +109,29 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Get Yarn cache path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Update npm
+        run: npm i -g npm@7
 
-      - name: Cache Yarn cache and node_modules
+      - name: Get npm cache path
+        id: npm-cache-dir-path
+        run: echo "::set-output name=dir::$(npm config get cache)"
+
+      - name: Cache npm cache and node_modules
         id: cache-dependencies
         uses: actions/cache@v2
         with:
           path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
+            ${{ steps.npm-cache-dir-path.outputs.dir }}
             node_modules
-          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
       - name: Build production app
-        run: yarn build
+        run: npm run build
 
       - name: Run Lighthouse
         run: npx @lhci/cli@0.6.x autorun
