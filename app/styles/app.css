@@ -45,3 +45,7 @@ h1 + *,
 * + h3 {
   margin-top: var(--spacing-3);
 }
+
+.mt-4 {
+  margin-top: var(--spacing-4);
+}
