@@ -19,7 +19,7 @@ You will need the following things properly installed on your computer.
 
 * `git clone <repository-url>` this repository
 * `cd ember-website`
-* `yarn install`
+* `npm install`
 
 ## Running / Development
 
@@ -33,17 +33,17 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Running Tests
 
-* `yarn test`
-* `yarn test --server`
+* `npm test`
+* `npm test --server`
 
 ### Linting
 
-* `yarn lint`
-* `yarn lint --fix`
+* `npm run lint`
+* `npm run lint --fix`
 
 ### Building
 
-* `yarn build` (production)
+* `npm run build` (production)
 
 ### Deploying
 
@@ -56,10 +56,9 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-  
+
 ## Sponsors
 
 ![Bugsnag](./bugsnag_logo_navy.svg)
 
 [Bugsnag](https://bugsnag.com) helps us monitor the website's stability.
-
