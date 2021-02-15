@@ -2,15 +2,7 @@ import Controller from '@ember/controller';
 
 // 2020 Color Palette
 // eslint-disable-next-line no-unused-vars
-const emberOrange = '#f23818';
 const darkGrayColor = '#4b4b4b';
-// eslint-disable-next-line no-unused-vars
-const lightGrayColor = '#c0c0c0';
-// eslint-disable-next-line no-unused-vars
-const lighterGrayColor = '#dedede';
-// eslint-disable-next-line no-unused-vars
-const lightGreenColor = '#489a6e';
-
 // Ember Branding Color Palette
 const emberColors = {
   ember: '#E04E39',
@@ -348,7 +340,10 @@ const SS_Q305 = {
 
 const SS_Q306 = {
   options: {
-    chart: { type: 'pie' },
+    chart: {
+      type: 'pie',
+      colors: [emberColors.blue, emberColors.ember],
+    },
     title: {
       text: 'Do you internationalize your applications?',
     },
