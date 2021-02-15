@@ -64,4 +64,5 @@ Router.map(function () {
 
   this.route('team-redirect', { path: 'team' });
   this.route('teams');
+  this.route('ember-community-survey-2021');
 });
