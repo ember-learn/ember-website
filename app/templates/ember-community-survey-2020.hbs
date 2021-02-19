@@ -98,9 +98,28 @@
     </p>
   </:body>
 </EmberCommunitySurvey::Section>
-
 <EmberCommunitySurvey::Section
   @hasDarkBackground={{false}}
+  @sectionId="time-in-service"
+  @sectionTitle="Time in Framework"
+>
+  <:charts>
+    <Highcharts
+      @chartOptions={{this.SS_Q104.options}}
+      @data={{this.SS_Q104.data}}
+    />
+  </:charts>
+
+  <:body>
+    <p>
+      But for how long have folks been using Ember? Of course, we are always curious to see these numbers!
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+
+<EmberCommunitySurvey::Section
+  @hasDarkBackground={{true}}
   @sectionId="learning-resources"
   @sectionTitle="Learning Resources"
 >
@@ -119,7 +138,7 @@
 </EmberCommunitySurvey::Section>
 
 <EmberCommunitySurvey::Section
-  @hasDarkBackground={{true}}
+  @hasDarkBackground={{false}}
   @sectionId="self-reported-skills"
   @sectionTitle="Self-Reported Skills: Front End Development"
 >
@@ -141,7 +160,7 @@
 </EmberCommunitySurvey::Section>
 
 <EmberCommunitySurvey::Section
-  @hasDarkBackground={{false}}
+  @hasDarkBackground={{true}}
   @sectionId="text-editors"
   @sectionTitle="Text Editors"
 >
@@ -160,7 +179,7 @@
 </EmberCommunitySurvey::Section>
 
 <EmberCommunitySurvey::Section
-  @hasDarkBackground={{true}}
+  @hasDarkBackground={{false}}
   @sectionId="participation-in-ember-community"
   @sectionTitle="Participation in Ember Community"
 >
@@ -179,7 +198,7 @@
 </EmberCommunitySurvey::Section>
 
 <EmberCommunitySurvey::Section
-  @hasDarkBackground={{false}}
+  @hasDarkBackground={{true}}
   @sectionId="ember-in-enterprise-size"
   @sectionTitle="Ember in Enterprise: Size"
 >
@@ -190,14 +209,10 @@
     />
   </:charts>
 
-  <:body>
-    <p>...
-    </p>
-  </:body>
 </EmberCommunitySurvey::Section>
 
 <EmberCommunitySurvey::Section
-  @hasDarkBackground={{true}}
+  @hasDarkBackground={{false}}
   @sectionId="ember-in-enterprise-accessibility"
   @sectionTitle="Ember in Enterprise: Accessibility"
 >
@@ -279,7 +294,7 @@
 </EmberCommunitySurvey::Section>
 
 <EmberCommunitySurvey::Section
-  @hasDarkBackground={{true}}
+  @hasDarkBackground={{false}}
   @sectionId="target-audience"
   @sectionTitle="Target Audience"
 >
