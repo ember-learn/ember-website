@@ -83,13 +83,13 @@ module.exports = function (defaults) {
         include: 'images/team/*',
         widths: [100, 200],
         lqip: {
-          type: 'blurhash'
+          type: 'blurhash',
         },
         removeSource: true,
         // don't scale images, just copy as-is in dev mode, to not slow down the build
-        justCopy: process.env.EMBER_ENV !== 'production'
-      }
-    ]
+        justCopy: process.env.EMBER_ENV !== 'production',
+      },
+    ],
   });
 
   return app.toTree();
