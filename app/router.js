@@ -32,6 +32,7 @@ Router.map(function () {
   this.route('ember-community-survey-2018');
   this.route('ember-community-survey-2019');
   this.route('ember-community-survey-2020');
+  this.route('ember-community-survey-2021');
 
   this.route('ember-users');
 
