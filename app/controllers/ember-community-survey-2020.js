@@ -1,4 +1,5 @@
 import Controller from '@ember/controller';
+import { PieChart } from 'ember-website/utils/highcharts';
 
 // 2020 Color Palette
 // eslint-disable-next-line no-unused-vars
@@ -337,32 +338,16 @@ const SS_Q305 = {
 // Q3.06: Does your business require applications to be internationalized?
 //------------------------------------------------
 
-const SS_Q306 = {
-  options: {
-    chart: {
-      type: 'pie',
-      colors: [emberColors.blue, emberColors.ember],
-    },
-    title: {
-      text: 'Do you internationalize your applications?',
-    },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent of Responses' } },
+const SS_Q306 = new PieChart({
+  chart: {
+    title: 'Do you internationalize your applications?',
   },
-  data: [
-    {
-      showInLegend: false,
-      name: '2020',
-      color: color2020,
-      data: [
-        { name: 'Yes', y: (100 / 747) * 480 },
-        { name: 'No', y: (100 / 747) * 267 },
-      ],
-    },
+
+  rawData: [
+    { color: emberColors.blue, label: 'Yes', value: 480 },
+    { color: emberColors.ember, label: 'No', value: 267 },
   ],
-};
+}).highchartsOptions;
 
 // Q4.10: How many Ember apps do you work on?
 //------------------------------------------------
@@ -1392,30 +1377,17 @@ const MS_Q416 = {
 // Q6.01: Did you participate in any of the following surveys?
 //------------------------------------------------
 
-const MS_Q601 = {
-  options: {
-    chart: { type: 'pie' },
-    title: {
-      text: 'Do you participate in other developer surveys?',
-    },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
+const MS_Q601 = new PieChart({
+  chart: {
+    title: 'Do you participate in other developer surveys?',
   },
-  data: [
-    {
-      showInLegend: false,
-      name: '2020',
-      color: color2020,
-      data: [
-        { name: 'Yes', y: (100 / 1006) * 567 },
-        { name: 'No', y: (100 / 1006) * 198 },
-        { name: 'No Response', y: (100 / 1006) * 241 },
-      ],
-    },
+
+  rawData: [
+    { color: emberColors.blue, label: 'Yes', value: 567 },
+    { color: emberColors.ember, label: 'No', value: 198 },
+    { color: orangePalette.orangeDarkest, label: 'No Response', value: 241 },
   ],
-};
+}).highchartsOptions;
 
 //=============================================================================
 export default class EmberCommunitySurvey2020Controller extends Controller {
