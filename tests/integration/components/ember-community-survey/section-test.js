@@ -12,7 +12,6 @@ module(
     test('We can pass @sectionId and @sectionTitle to create a title and hyperlink', async function (assert) {
       await render(hbs`
         <EmberCommunitySurvey::Section
-          @hasDarkBackground={{false}}
           @sectionId="closing-thoughts"
           @sectionTitle="Closing Thoughts"
         />
@@ -48,7 +47,6 @@ module(
     test('We can create a section with body only', async function (assert) {
       await render(hbs`
         <EmberCommunitySurvey::Section
-          @hasDarkBackground={{true}}
           @sectionId="closing-thoughts"
           @sectionTitle="Closing Thoughts"
         >
@@ -75,7 +73,6 @@ module(
     test('We can create a section with 1 chart', async function (assert) {
       await render(hbs`
         <EmberCommunitySurvey::Section
-          @hasDarkBackground={{false}}
           @sectionId="how-likely-to-recommend-ember"
           @sectionTitle="Recommending Ember"
         >
@@ -112,7 +109,6 @@ module(
     test('We can create a section with 2 charts', async function (assert) {
       await render(hbs`
         <EmberCommunitySurvey::Section
-          @hasDarkBackground={{true}}
           @sectionId="server-side-development"
           @sectionTitle="Server-side development"
         >

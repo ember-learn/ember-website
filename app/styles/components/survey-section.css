@@ -1,3 +1,9 @@
+.survey-section__container:nth-child(2n + 1) {
+  /* Definition of .bg-light-muted */
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-700);
+}
+
 .survey-section__title-container {
   align-items: flex-start;
   display: grid;
