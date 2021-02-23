@@ -85,6 +85,12 @@ module.exports = function (defaults) {
         lqip: {
           type: 'blurhash',
         },
+        // Firefox running as part of percy.io tests has trouble rendering AVIF files, eventually due to wrong MIME type
+        // when served locally, causing false negatives
+        formats:
+          process.env.EMBER_ENV === 'production'
+            ? ['avif', 'webp', 'jpeg']
+            : ['webp', 'jpeg'],
         removeSource: true,
         // don't scale images, just copy as-is in dev mode, to not slow down the build
         justCopy: process.env.EMBER_ENV !== 'production',
