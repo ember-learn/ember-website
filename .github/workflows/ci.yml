@@ -88,6 +88,7 @@ jobs:
         uses: percy/exec-action@v0.3.1
         with:
           custom-command: npm test
+          verbose: true
         env:
           PERCY_PARALLEL_NONCE: ${{ env.PERCY_PARALLEL_NONCE }}
           PERCY_PARALLEL_TOTAL: ${{ env.PERCY_PARALLEL_TOTAL }}
