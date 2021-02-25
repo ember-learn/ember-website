@@ -8,7 +8,7 @@
 
   <p><a href="/images/brand/Ember-Brand-Guidelines.pdf">Download brand guidelines (PDF)</a></p>
 
-  <section aria-labelledby="logos">
+  <section aria-labelledby="logos" class="mt-4">
     <h2 id="logos">The Logos</h2>
 
     <p>Our logos are the main identifier of our brand, so we're careful with how we use them. They may not be manipulated in any way, and may <strong>never</strong> be incorporated into other logos.</p>
@@ -19,171 +19,48 @@
 
     <p><a href="/images/brand/logos-ember.zip">Download logos (ZIP)</a></p>
 
-    <h3>Primary Logo</h3>
 
-    <div class="my-3">
-      <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
-        <li><img alt="Ember dark background" src="/images/brand/ember_Ember-Dark.png" loading="lazy"></li>
-        <li><img alt="Ember white background" src="/images/brand/ember_Ember-Light.png" loading="lazy"></li>
-        <li><img alt="Ember red background white font" src="/images/brand/ember_Ember-1c-Light.png" loading="lazy"></li>
-        <li><img alt="Ember black font" src="/images/brand/ember_Ember-1c-Dark.png" loading="lazy"></li>
-      </ul>
-    </div>
-
-    <p>The Ember logo can be used on websites, mobile apps, or in printed materials to indicate use of Ember technologies <strong>assuming there is no chance it might imply official status or project/core team endorsement</strong>.</p>
-
-    <p>The color mark should only be displayed on a black or very light colored background. In other scenarios, use a solid black or white logo to contrast your background.</p>
-
-    <p>When printed, the Ember logo should always be in PMS 7417C. The hex value is <span class="pantone">#E04E39</span>.</p>
+    {{#each this.logosByCategory as |logoCategory|}}
+      <div class="mt-4" aria-labelledby={{dasherize-string logoCategory.name}} id={{dasherize-string logoCategory.name}}>
+        <h3 class="mb-3">{{logoCategory.name}}</h3>
+        <ul class="unstyled-list">
+          {{#each logoCategory.logoSets as |logoSet|}}
+            <li>
+              <ul class="brand-logos grid lg:grid-4 sm:grid-2 mb-3 unstyled-list">
+                {{#each logoSet as |logo|}}
+                  <li class="brand-logo-container {{if logo.subsets "grid lg:grid-3 sm:grid-3"}}">
+                    {{#if logo.subsets}}
+                      {{#each logo.subsets as |subset|}}
+                        {{#each subset as |logo|}}
+                          <img alt={{logo.name}} src="/images/brand/{{logo.fileName}}" loading="lazy">
+                        {{/each}}
+                      {{/each}}
+                    {{else}}
+                      <img alt={{logo.name}} src="/images/brand/{{logo.fileName}}" loading="lazy">
+                    {{/if}}
+                  </li>
+                {{/each}}
+              </ul>
+            </li>
+          {{/each}}
+        </ul>
+        {{#if logoCategory.description}}
+          {{markdown-to-html logoCategory.description tagName=""}}
+        {{/if}}
+      </div>
+    {{/each}}
   </section>
 
-  <section aria-labelledby="tomster-lockup">
-    <h3 class="mt-4" id="tomster-lockup">Tomster Lockup</h3>
-    <div class="my-3">
-      <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
-        <li><img alt="Tomster lockup dark background" src="/images/brand/ember_Tomster-Lockup.png" loading="lazy"></li>
-        <li><img alt="Tomster lockup light background" src="/images/brand/ember_Tomster-Lockup.png" loading="lazy"></li>
-        <li><img alt="Tomster lockup red background" src="/images/brand/ember_Tomster-Lockup.png" loading="lazy"></li>
-        <li><img alt="Tomster lockup transparent background" src="/images/brand/ember_Tomster-Lockup.png" loading="lazy"></li>
-      </ul>
-    </div>
-    <p>A fun alternative to the primary logotype is the Tomster lockup. It’s designed with a white stroke which allows it to work on all background colors without modification.</p>
-  </section>
-
-  <section aria-labelledby="branding-icon">
-    <h3 class="mt-4" id="branding-icon">Icon</h3>
-
-    <div class="my-3">
-      <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
-        <li>
-          <ul class="grid lg:grid-3 sm:grid-3 unstyled-list">
-            <li>
-              <img alt="Ember E square dark background" src="/images/brand/ember_E-Icon-4c-Square.png" loading="lazy">
-            </li>
-            <li>
-              <img alt="Ember E rounded rectangle dark background" src="/images/brand/ember_E-Icon-4c-Rounded-Rectangle.png" loading="lazy">
-            </li>
-            <li>
-              <img alt="Ember E circle dark background" src="/images/brand/ember_E-Icon-4c-Circle.png" loading="lazy">
-            </li>
-          </ul>
-        </li>
-        <li>
-          <ul class="grid lg:grid-3 sm:grid-3 unstyled-list">
-            <li>
-              <img alt="Ember E square light background" src="/images/brand/ember_E-Icon-4c-Square.png" loading="lazy">
-            </li>
-            <li>
-              <img alt="Ember E rounded rectangle light background" src="/images/brand/ember_E-Icon-4c-Rounded-Rectangle.png" loading="lazy">
-            </li>
-            <li>
-              <img alt="Ember E circle light background" src="/images/brand/ember_E-Icon-4c-Circle.png" loading="lazy">
-            </li>
-          </ul>
-        </li>
-        <li>
-          <ul class="grid lg:grid-3 sm:grid-3 unstyled-list">
-            <li>
-              <img alt="Ember E white square" src="/images/brand/ember_E-Icon-1c-White-Square.png" loading="lazy">
-            </li>
-            <li>
-              <img alt="Ember E white rounded rectangle" src="/images/brand/ember_E-Icon-1c-White-Rounded-Rectangle.png" loading="lazy">
-            </li>
-            <li>
-              <img alt="Ember E white circle" src="/images/brand/ember_E-Icon-1c-White-Circle.png" loading="lazy">
-            </li>
-          </ul>
-        </li>
-        <li>
-          <ul class="grid lg:grid-3 sm:grid-3 unstyled-list">
-            <li>
-              <img alt="Ember E black square" src="/images/brand/ember_E-Icon-1c-Black-Square.png" loading="lazy">
-            </li>
-            <li>
-              <img alt="Ember E black rounded rectangle" src="/images/brand/ember_E-Icon-1c-Black-Rounded-Rectangle.png" loading="lazy">
-            </li>
-            <li>
-              <img alt="Ember E black circle" src="/images/brand/ember_E-Icon-1c-Black-Circle.png" loading="lazy">
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <p>In situations where the primary logos aren’t legible (e.g., avatars, favicons) you can use the simple “E” icon. Choose the container shape that best suits the context.</p>
-  </section>
-
-
-  <section aria-labelledby="subproject-logos">
-    <h3 class="mt-4" id="subproject-logos">Subproject Logos</h3>
-
-    <div class="my-3">
-      <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
-        <li><img alt="Ember CLI dark background" src="/images/brand/ember_CLI-Dark.png" loading="lazy"></li>
-        <li><img alt="Ember CLI light background" src="/images/brand/ember_CLI-Light.png" loading="lazy"></li>
-        <li><img alt="Ember CLI red background white font" src="/images/brand/ember_CLI-1c-Light.png" loading="lazy"></li>
-        <li><img alt="Ember CLI black font" src="/images/brand/ember_CLI-1c-Dark.png" loading="lazy"></li>
-      </ul>
-    </div>
-
-    <div class="my-3">
-      <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
-        <li><img alt="Ember Data dark background" src="/images/brand/ember_Data-Dark.png" loading="lazy"></li>
-        <li><img alt="Ember Data light background" src="/images/brand/ember_Data-Light.png" loading="lazy"></li>
-        <li><img alt="Ember Data red background white font" src="/images/brand/ember_Data-1c-Light.png" loading="lazy"></li>
-        <li><img alt="Ember Data black font" src="/images/brand/ember_Data-1c-Dark.png" loading="lazy"></li>
-      </ul>
-    </div>
-
-    <p>The Ember project has numerous projects under its umbrella. These other logos may be used under the same terms as the primary Ember logo.</p>
-  </section>
-
-
-  <section aria-labelledby="tertiary-logos">
-    <h3 class="mt-4" id="tertiary-logos">Tertiary Logos</h3>
-
-    <div class="my-3">
-      <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
-        <li><img alt="Ember Forum dark background" src="/images/brand/ember_Forum-Dark.png" loading="lazy"></li>
-        <li><img alt="Ember Forum light background" src="/images/brand/ember_Forum-Light.png" loading="lazy"></li>
-        <li><img alt="Ember Forum red background white font" src="/images/brand/ember_Forum-1c-Light.png" loading="lazy"></li>
-        <li><img alt="Ember Forum black font" src="/images/brand/ember_Forum-1c-Dark.png" loading="lazy"></li>
-      </ul>
-    </div>
-
-    <div class="my-3">
-      <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
-        <li><img alt="Ember Times dark background" src="/images/brand/ember_Times-Dark.png" loading="lazy"></li>
-        <li><img alt="Ember Times light background" src="/images/brand/ember_Times-Light.png" loading="lazy"></li>
-        <li><img alt="Ember Times red background white font" src="/images/brand/ember_Times-1c-Light.png" loading="lazy"></li>
-        <li><img alt="Ember Times black font" src="/images/brand/ember_Times-1c-Dark.png" loading="lazy"></li>
-      </ul>
-    </div>
-
-    <div class="my-3">
-      <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
-        <li><img alt="Ember Jobs dark background" src="/images/brand/ember_Jobs-Dark.png" loading="lazy"></li>
-        <li><img alt="Ember Jobs light background" src="/images/brand/ember_Jobs-Light.png" loading="lazy"></li>
-        <li><img alt="Ember Jobs red background white font" src="/images/brand/ember_Jobs-1c-Light.png" loading="lazy"></li>
-        <li><img alt="Ember Jobs black font" src="/images/brand/ember_Jobs-1c-Dark.png" loading="lazy"></li>
-      </ul>
-    </div>
-
-    <p>Ember communities and smaller projects have logos based on Ember’s <span class="code">code</span> style. They are only to be used by the project owners themselves the official properties.</p>
-  </section>
-
-
-  <section aria-labelledby="ember-mascots">
-    <h2 class="mt-4" id="ember-mascots">The Ember Mascots</h2>
-
+  <section aria-labelledby="ember-mascots" class="mt-4">
+    <h2 id="ember-mascots">The Ember Mascots</h2>
     <p>With the exception of the Tomster logo lockup, our mascots are reserved for official Ember project use <em>only</em>.</p>
-
     <p>
       We sometimes grant licenses for specific use cases, and certain community initiatives may, with approval, commission the design of custom Tomsters and Zoeys via official channels. For more info on commissioned mascots, <LinkTo @route="mascots.faq">visit the Tomster FAQ page</LinkTo>.
     </p>
-
   </section>
-  <section aria-labelledby="project-naming">
+
+
+  <section aria-labelledby="project-naming" class="mt-4">
     <h2 id="project-naming">Naming</h2>
 
     <p>Please avoid naming your projects and events anything that implies Ember or Tilde's endorsement. Keep this in mind when selecting domain names as well.</p>
