@@ -11,7 +11,7 @@ futureVersion: 3.26.0-beta.3 # Manually update
 finalVersion: 3.26.0 # Manually update
 channel: beta
 cycleEstimatedFinishDate: 2021-03-22 12:00:00 # Manually update, change next one to 6 weeks from this date...regardless of delays in the release
-date: 2020-02-08 # Manually update, get date for `initialVersion`
+date: 2021-02-08 # Manually update, get date for `initialVersion`
 nextDate: 2021-03-22 12:00:00 # Manually update, change next one to 6 weeks from this date...regardless of delays in the release
 changelogPath: CHANGELOG.md
 debugFileName: .debug.js
