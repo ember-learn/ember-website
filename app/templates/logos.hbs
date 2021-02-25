@@ -24,25 +24,23 @@
       <div class="mt-4" aria-labelledby={{dasherize-string logoCategory.name}} id={{dasherize-string logoCategory.name}}>
         <h3 class="mb-3">{{logoCategory.name}}</h3>
         <ul class="unstyled-list">
-          {{#each logoCategory.logoSets as |logoSet|}}
-            <li>
-              <ul class="brand-logos grid lg:grid-4 sm:grid-2 mb-3 unstyled-list">
-                {{#each logoSet as |logo|}}
-                  <li class="brand-logo-container {{if logo.subsets "grid lg:grid-3 sm:grid-3"}}">
-                    {{#if logo.subsets}}
-                      {{#each logo.subsets as |subset|}}
-                        {{#each subset as |logo|}}
-                          <img alt={{logo.name}} src="/images/brand/{{logo.fileName}}" loading="lazy">
+            {{#each logoCategory.logoSets as |logoSet|}}
+              <li>
+                <ul class="brand-logos grid lg:grid-4 sm:grid-2 mb-3 unstyled-list">
+                  {{#each logoSet as |logo|}}
+                    <li class="brand-logo-container {{if logo.variants "grid lg:grid-3 sm:grid-3"}}">
+                      {{#if logo.variants}}
+                        {{#each logo.variants as |logo|}}
+                            <img alt={{logo}} src="/images/brand/{{dasherize-string logo}}.svg" loading="lazy">
                         {{/each}}
-                      {{/each}}
-                    {{else}}
-                      <img alt={{logo.name}} src="/images/brand/{{logo.fileName}}" loading="lazy">
-                    {{/if}}
-                  </li>
-                {{/each}}
-              </ul>
-            </li>
-          {{/each}}
+                      {{else}}
+                        <img alt={{logo}} src="/images/brand/{{dasherize-string logo}}.svg" loading="lazy">
+                      {{/if}}
+                    </li>
+                  {{/each}}
+                </ul>
+              </li>
+            {{/each}}
         </ul>
         {{#if logoCategory.description}}
           {{markdown-to-html logoCategory.description tagName=""}}

@@ -6,7 +6,7 @@
   border: 1px solid rgba($black, 0.3);
   background-image: url("/images/brand/brand-bg.png");
   border-radius: 4px;
-  padding: 1.4rem 2rem;
+  padding: 1rem 1.5rem;
 }
 
 .brand-logo-container:nth-child(1) {
