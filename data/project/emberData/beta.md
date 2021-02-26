@@ -8,7 +8,7 @@ lastRelease: 3.26.0-beta.0 # Manually update, see https://libraries.io/npm/ember
 futureVersion: 3.26.0-beta.1 # Manually update
 finalVersion: 3.26.0 # Manually update
 channel: beta
-date: 2021-02-15 # Manually update, get date for `lastRelease` 
+date: 2021-02-16 # Manually update, get date for `lastRelease` 
 changelogPath: CHANGELOG.md
 debugFileName: .js
 ignoreFiles:
