@@ -154,30 +154,20 @@ const SS_Q203 = {
     },
   ],
 };
-// Yes / No? 96% / 4%
-const SS_Q204 = {
-  options: {
-    chart: { type: 'bar' },
-    title: {
-      text: 'Are you still required to support versions of Internet Explorer?',
-    },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent of Responses' } },
+
+// Q2.04: Are you still required to support versions of Internet Explorer?
+//------------------------------------------------
+
+const SS_Q204 = new PieChart({
+  chart: {
+    title: 'Are you still required to support versions of Internet Explorer?',
   },
-  data: [
-    {
-      showInLegend: false,
-      name: '2020',
-      color: color2020,
-      data: [
-        { name: 'Yes', y: (100 / 754) * 311 },
-        { name: 'No', y: (100 / 754) * 443 },
-      ],
-    },
+
+  rawData: [
+    { color: emberColors.blue, label: 'Yes', value: 311 },
+    { color: emberColors.ember, label: 'No', value: 443 },
   ],
-};
+}).highchartsOptions;
 
 // Q3.01: How many developers at your company are responsible for writing Front-End code?
 //------------------------------------------------
