@@ -1,5 +1,6 @@
 import { assign } from '@ember/polyfills';
 import merge from 'deepmerge';
+import HorizontalBarChart from 'ember-website/utils/highcharts/horizontal-bar-chart';
 import PieChart from 'ember-website/utils/highcharts/pie-chart';
 
 const defaultChartOptions = {
@@ -50,4 +51,4 @@ const highchartsOptions = {
   },
 };
 
-export { createChartOptions, highchartsOptions, PieChart };
+export { createChartOptions, highchartsOptions, HorizontalBarChart, PieChart };
