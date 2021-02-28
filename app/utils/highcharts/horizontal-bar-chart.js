@@ -2,34 +2,57 @@
   https://api.highcharts.com/highcharts/plotOptions.bar
 */
 export default class HorizontalBarChart {
+  constructor({ chart, rawData }) {
+    this.chart = chart;
+    this.series = createSeries(rawData);
+  }
+
   get highchartsOptions() {
+    const { chart, series } = this;
+
     return {
-      data: [],
+      data: series,
 
       options: {
         chart: {
           type: 'bar',
         },
 
+        legend: {
+          align: 'right',
+          backgroundColor: '#FFFFFF',
+          borderRadius: 2,
+          borderWidth: 1,
+          layout: 'vertical',
+          shadow: true,
+          verticalAlign: 'bottom',
+          x: 0,
+          y: -48,
+        },
+
         subtitle: {
-          text: 'TODO: Allow subtitle',
+          text: chart.subtitle,
         },
 
         title: {
-          text: 'TODO: Allow title',
+          text: chart.title,
         },
 
         tooltip: {
           enabled: true,
-          valueSuffix: '%',
+          pointFormat: '{series.name}: {point.y:.1f}%',
         },
 
         xAxis: {
-          /* TODO */
+          categories: chart.categories,
+          type: 'category',
         },
 
         yAxis: {
-          /* TODO */
+          min: 0,
+          title: {
+            text: 'Percent of responses',
+          },
         },
       },
     };
