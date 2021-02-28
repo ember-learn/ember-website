@@ -18,18 +18,6 @@ export default class HorizontalBarChart {
           type: 'bar',
         },
 
-        legend: {
-          align: 'right',
-          backgroundColor: '#FFFFFF',
-          borderRadius: 2,
-          borderWidth: 1,
-          layout: 'vertical',
-          shadow: true,
-          verticalAlign: 'bottom',
-          x: 0,
-          y: -48,
-        },
-
         subtitle: {
           text: chart.subtitle,
         },
@@ -39,7 +27,6 @@ export default class HorizontalBarChart {
         },
 
         tooltip: {
-          enabled: true,
           pointFormat: '{series.name}: {point.y:.1f}%',
         },
 
