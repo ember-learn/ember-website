@@ -35,3 +35,19 @@ export default class HorizontalBarChart {
     };
   }
 }
+
+export function createSeries(rawData = []) {
+  const data = [];
+
+  rawData.forEach((datum) => {
+    const { color, label, values } = datum;
+
+    data.push({
+      color,
+      data: values,
+      name: label,
+    });
+  });
+
+  return data;
+}
