@@ -1,5 +1,5 @@
 import Controller from '@ember/controller';
-import { PieChart } from 'ember-website/utils/highcharts';
+import { HorizontalBarChart, PieChart } from 'ember-website/utils/highcharts';
 
 // 2020 Color Palette
 // eslint-disable-next-line no-unused-vars
@@ -1253,33 +1253,24 @@ const MS_Q412 = {
 // Q4.13: Who uses your application(s)?
 //------------------------------------------------
 // this is a single select now
-const MS_Q413 = {
-  options: {
-    chart: { type: 'bar' },
-    title: { text: 'Who are the target users of your applications?' },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: {
-      categories: [
-        'Business consumers (B2B)',
-        'The general public (B2C)',
-        'Internal users',
-      ],
-    },
-    yAxis: { title: { text: 'Percent of Responses' } },
+const MS_Q413 = new HorizontalBarChart({
+  chart: {
+    categories: [
+      'Business consumers (B2B)',
+      'The general public (B2C)',
+      'Internal users',
+    ],
+    title: 'Who are the target users of your applications?',
   },
-  data: [
+
+  rawData: [
     {
-      name: 'Users',
       color: color2020,
-      data: [
-        { name: 'Business consumers (B2B)', y: (100 / 781) * 408 },
-        { name: 'The general public (B2C)', y: (100 / 781) * 282 },
-        { name: 'Internal users', y: (100 / 781) * 91 },
-      ],
+      label: '2020',
+      values: [100 * (408 / 781), 100 * (282 / 781), 100 * (91 / 781)],
     },
   ],
-};
+}).highchartsOptions;
 
 // Q4.14: What browser versions do your applications target?
 //------------------------------------------------
