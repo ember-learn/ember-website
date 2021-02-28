@@ -23,7 +23,7 @@ export default class PieChart {
         },
 
         tooltip: {
-          pointFormat: '{point.y:.2f}%',
+          pointFormat: '{point.y:.1f}%',
         },
       },
     };

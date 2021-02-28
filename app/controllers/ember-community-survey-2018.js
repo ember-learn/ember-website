@@ -1,4 +1,5 @@
 import Controller from '@ember/controller';
+import { HorizontalBarChart } from 'ember-website/utils/highcharts';
 
 var emberOrange = '#f23818',
   darkGrayColor = '#4b4b4b',
@@ -132,60 +133,33 @@ const overallAdoption = {
   ],
 };
 
-const communityParticipation = {
-  options: {
-    chart: { type: 'bar' },
-    title: { text: 'How do you stay up to date with Ember?' },
-    subtitle: { text: 'Movers and Shakers from Last Year' },
-    plotOptions: {
-      bar: {
-        dataLabels: {
-          enabled: true,
-          format: '{y}%',
-        },
-      },
-    },
-    legend: {
-      layout: 'vertical',
-      align: 'right',
-      verticalAlign: 'top',
-      x: -40,
-      y: 80,
-      floating: true,
-      borderWidth: 1,
-      backgroundColor: '#FFFFFF',
-      shadow: true,
-    },
-    tooltip: {
-      enabled: true,
-      valueSuffix: '%',
-    },
-    yAxis: { min: 0, title: { text: null } },
-    xAxis: {
-      categories: [
-        'Writing RFCs',
-        'Commenting on RFCs',
-        'Reading RFCs',
-        'Opening PRs',
-        'Stack Overflow',
-        'emberjs.com blog',
-      ],
-      title: { text: null },
-    },
+const communityParticipation = new HorizontalBarChart({
+  chart: {
+    categories: [
+      'Writing RFCs',
+      'Commenting on RFCs',
+      'Reading RFCs',
+      'Opening PRs',
+      'Stack Overflow',
+      'emberjs.com blog',
+    ],
+    subtitle: 'Movers and Shakers from Last Year',
+    title: 'How do you stay up to date with Ember?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2017',
       color: color2017,
-      data: [1.9, 5.2, 33.3, 16.4, 41.6, 49.8],
+      label: '2017',
+      values: [1.9, 5.2, 33.3, 16.4, 41.6, 49.8],
     },
     {
-      name: '2018',
       color: color2018,
-      data: [3.0, 9.8, 52.2, 23.8, 34.2, 57.8],
+      label: '2018',
+      values: [3.0, 9.8, 52.2, 23.8, 34.2, 57.8],
     },
   ],
-};
+}).highchartsOptions;
 
 const longLivedCodebases = {
   options: {
@@ -464,39 +438,36 @@ const productionApps = {
   ],
 };
 
-const emberenoEmployment = {
-  options: {
-    chart: { type: 'bar' },
-    title: { text: 'What Best Describes Your Employment Situation?' },
-    subtitle: { text: 'Top 4 Responses, Year by Year' },
-    xAxis: {
-      categories: [
-        'Working on product(s)',
-        'In a firm doing consulting/client work',
-        'Working on internal Ember tooling/products',
-        'Independent Product Developer',
-      ],
-    },
-    yAxis: { title: { text: 'Percent' } },
+const emberenoEmployment = new HorizontalBarChart({
+  chart: {
+    categories: [
+      'Working on product(s)',
+      'In a firm doing consulting/client work',
+      'Working on internal Ember tooling/products',
+      'Independent Product Developer',
+    ],
+    subtitle: 'Top 4 Responses, Year by Year',
+    title: 'What Best Describes Your Employment Situation?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2016',
       color: color2016,
-      data: [59.3, 15.1, 23.4, 16.3],
+      label: '2016',
+      values: [59.3, 15.1, 23.4, 16.3],
     },
     {
-      name: '2017',
       color: color2017,
-      data: [74.8, 14.1, 12.8, 13.7],
+      label: '2017',
+      values: [74.8, 14.1, 12.8, 13.7],
     },
     {
-      name: '2018',
       color: color2018,
-      data: [80.2, 12.7, 11.8, 10.6],
+      label: '2018',
+      values: [80.2, 12.7, 11.8, 10.6],
     },
   ],
-};
+}).highchartsOptions;
 
 const applicationUsers = {
   options: {

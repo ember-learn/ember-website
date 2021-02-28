@@ -29,7 +29,7 @@ module('Unit | Utility | highcharts/pie-chart', function () {
           },
 
           tooltip: {
-            pointFormat: '{point.y:.2f}%',
+            pointFormat: '{point.y:.1f}%',
           },
         },
         'We get the correct value.'
