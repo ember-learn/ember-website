@@ -630,72 +630,6 @@ const productionUsers = {
   ],
 };
 
-const howCanWeApprove = {
-  options: {
-    chart: {
-      type: 'columnrange',
-      inverted: true,
-    },
-    title: {
-      text: '',
-    },
-    subtitle: {
-      text: '',
-    },
-    xAxis: {
-      categories: [
-        'Mobile Support',
-        'Routable Components',
-        'Tree Shaking',
-        'Performance',
-        'Documentation, Guides, Examples',
-      ],
-    },
-    yAxis: {
-      gridLineWidth: 0,
-      labels: {
-        enabled: false,
-      },
-      title: {
-        text: 'Experience with Ember',
-      },
-    },
-    plotOptions: {
-      columnrange: {
-        dataLabels: {
-          useHTML: true,
-          enabled: true,
-          formatter: function () {
-            switch (this.y) {
-              case 0:
-                return '> 2 years';
-              case 1:
-                return '2 years';
-              case 2:
-                return '1 year';
-              case 3:
-                return '< 1 year';
-            }
-          },
-        },
-      },
-    },
-  },
-  data: [
-    {
-      name: '2017',
-      color: emberOrange,
-      data: [
-        [0, 1],
-        [0, 2],
-        [0, 2],
-        [0, 3],
-        [1, 3],
-      ],
-    },
-  ],
-};
-
 const whenStarting = {
   options: {
     chart: {
@@ -985,7 +919,6 @@ export default class EmberCommunitySurvey2017Controller extends Controller {
   chartBreakdownByVersion = chartBreakdownByVersion;
   priorVersionsData = priorVersionsData;
   recommendingEmber = recommendingEmber;
-  howCanWeApprove = howCanWeApprove;
   whenStarting = whenStarting;
   preExistingKnowledge = preExistingKnowledge;
   employmentSituation = employmentSituation;
