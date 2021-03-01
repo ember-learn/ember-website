@@ -118,6 +118,11 @@ export default [
         type: 'divider',
       },
       {
+        href: 'https://emberjs.com/survey',
+        name: 'Ember Community Survey',
+        type: 'link',
+      },
+      {
         href: 'http://emberconf.com/',
         name: 'Ember Conf',
         type: 'link',
