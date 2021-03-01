@@ -37,7 +37,7 @@
   .emberconf-announcement {
     justify-content: space-between;
     padding-top: 3rem;
-    margin-top: -3rem;
+    margin-top: -5rem;
   }
 
   .emberconf-announcement .logo {
