@@ -122,7 +122,7 @@ module('Acceptance | index', function (hooks) {
         { href: 'https://help-wanted.emberjs.com/', label: 'Help Wanted' },
         { href: '/community/meetups', label: 'Meetups' },
         { href: '/survey', label: 'Ember Community Survey' },
-        { href: 'http://emberconf.com/', label: 'Ember Conf' },
+        { href: 'https://emberconf.com/', label: 'EmberConf' },
       ],
       parentNavItems[3]
     );

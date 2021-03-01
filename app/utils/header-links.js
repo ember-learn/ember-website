@@ -123,8 +123,8 @@ export default [
         type: 'link',
       },
       {
-        href: 'http://emberconf.com/',
-        name: 'Ember Conf',
+        href: 'https://emberconf.com/',
+        name: 'EmberConf',
         type: 'link',
       },
     ],
