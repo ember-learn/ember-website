@@ -11,6 +11,7 @@
 /legal  /about/legal
 /meetup-assets  /community/meetups/assets
 /statusboard  https://github.com/emberjs/rfc-tracking/issues
+/survey  /ember-community-survey-2021
 /team  /teams
 /tomster/*  /mascots/:splat
 /zoey  /mascots
