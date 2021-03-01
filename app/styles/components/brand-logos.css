@@ -1,16 +1,21 @@
-.brand-logos > li {
-  border: 1px solid rgba($black, 0.3);
-  background-image: url("/images/brand/brand-bg.png");
-  border-radius: 4px;
-  padding: 1rem 2rem;
+.branding-section {
+  margin-bottom: var(--spacing-4);
 }
 
-.brand-logos.no-padding > li {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.branding-section h3 {
+  margin-bottom: var(--spacing-2);
+}
+
+.brand-logos {
+  margin-bottom: var(--spacing-3);
+  line-height: 0;
+}
+
+.brand-logos > li {
+  border: 1px solid rgba($black, 0.3);
+  background-image: url('/images/brand/brand-bg.png');
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
 }
 
 .brand-logos > li:nth-child(1) {
