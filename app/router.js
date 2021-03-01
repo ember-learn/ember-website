@@ -63,6 +63,8 @@ Router.map(function () {
 
   this.route('sponsors');
 
+  this.route('survey');
+
   this.route('team-redirect', { path: 'team' });
   this.route('teams');
 });
