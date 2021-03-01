@@ -56,6 +56,7 @@ module.exports = function (defaults) {
         'ember-community-survey-2018',
         'ember-community-survey-2019',
         'ember-community-survey-2020',
+        'ember-community-survey-2021',
         'ember-users',
         'guidelines',
         'learn',
