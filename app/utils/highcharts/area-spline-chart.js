@@ -1,7 +1,7 @@
 /*
-  https://api.highcharts.com/highcharts/plotOptions.pie
+  https://api.highcharts.com/highcharts/plotOptions.areaspline
 */
-export default class PieChart {
+export default class AreaSplineChart {
   constructor({ chart, rawData }) {
     this.chart = chart;
     this.series = createSeries(rawData);
@@ -15,7 +15,7 @@ export default class PieChart {
 
       options: {
         chart: {
-          type: 'pie',
+          type: 'areaspline',
         },
 
         subtitle: {
@@ -27,7 +27,18 @@ export default class PieChart {
         },
 
         tooltip: {
-          pointFormat: '{point.y:.1f}%',
+          pointFormat: '{series.name}: {point.y:.1f}%',
+        },
+
+        xAxis: {
+          categories: chart.categories,
+          type: 'category',
+        },
+
+        yAxis: {
+          title: {
+            text: 'Percent of responses',
+          },
         },
       },
     };
@@ -35,25 +46,17 @@ export default class PieChart {
 }
 
 export function createSeries(rawData = []) {
-  const colors = [];
   const data = [];
 
-  const total = rawData.reduce((accumulator, datum) => {
-    const { value } = datum;
-
-    return accumulator + value;
-  }, 0);
-
   rawData.forEach((datum) => {
-    const { color, label, value } = datum;
-
-    colors.push(color);
+    const { color, label, values } = datum;
 
     data.push({
+      color,
+      data: values,
       name: label,
-      y: 100 * (value / total),
     });
   });
 
-  return [{ colors, data }];
+  return data;
 }

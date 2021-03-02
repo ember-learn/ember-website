@@ -1,5 +1,9 @@
 import Controller from '@ember/controller';
-import { HorizontalBarChart, PieChart } from 'ember-website/utils/highcharts';
+import {
+  AreaSplineChart,
+  HorizontalBarChart,
+  PieChart,
+} from 'ember-website/utils/highcharts';
 
 // 2020 Color Palette
 // eslint-disable-next-line no-unused-vars
@@ -28,7 +32,7 @@ const orangePalette = {
 // Default Color Assignments for Yearly Graph Data Series
 var color2017 = darkGrayColor;
 var color2018 = emberColors.gray;
-var color2019 = orangePalette.blue;
+var color2019 = emberColors.blue;
 var color2020 = orangePalette.orangeDarkest;
 // eslint-disable-next-line no-unused-vars
 // var colorFutureYear = emberColors.yellow;
@@ -855,42 +859,38 @@ const MS_Q307 = {
 // Q4.01: Which version(s) of Ember are in use in your apps?
 //------------------------------------------------
 
-const MS_Q401 = {
-  options: {
-    chart: { type: 'areaspline' },
-    title: {
-      text: 'Which version(s) of Ember are in use in your apps?',
-    },
-    subtitle: { text: '(Multi-select question)' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent of Responses' } },
+const MS_Q401 = new AreaSplineChart({
+  chart: {
+    categories: ['1.x', '2.x', '3.0-3.4', '3.5-3.8', '3.9-3.12', '3.13-3.16'],
+    subtitle: '(Multi-select question)',
+    title: 'Which version(s) of Ember are in use in your apps?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2019',
       color: color2019,
-      data: [
-        { name: '1.x', y: (100 / 1232) * 79 },
-        { name: '2.x', y: (100 / 1232) * 443 },
-        { name: '3.0-3.4', y: (100 / 1232) * 488 },
-        { name: '3.5-3.8', y: (100 / 1232) * 675 },
+      label: '2019',
+      values: [
+        100 * (79 / 1232), // 1.x
+        100 * (443 / 1232), // 2.x
+        100 * (488 / 1232), // 3.0-3.4
+        100 * (675 / 1232), // 3.5-3.8
       ],
     },
     {
-      name: '2020',
       color: color2020,
-      data: [
-        { name: '1.x', y: (100 / 1006) * 27 },
-        { name: '2.x', y: (100 / 1006) * 111 },
-        { name: '3.0-3.4', y: (100 / 1006) * 121 },
-        { name: '3.5-3.8', y: (100 / 1006) * 148 },
-        { name: '3.9-3.12', y: (100 / 1006) * 291 },
-        { name: '3.13-3.16', y: (100 / 1006) * 524 },
+      label: '2020',
+      values: [
+        100 * (27 / 1006), // 1.x
+        100 * (111 / 1006), // 2.x
+        100 * (121 / 1006), // 3.0-3.4
+        100 * (148 / 1006), // 3.5-3.8
+        100 * (291 / 1006), // 3.9-3.12
+        100 * (524 / 1006), // 3.13-3.16
       ],
     },
   ],
-};
+}).highchartsOptions;
 
 // Q4.02: If you use Ember Data, which version(s) are used in your apps?
 //------------------------------------------------

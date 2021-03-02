@@ -24,6 +24,10 @@ module('Unit | Utility | highcharts/pie-chart', function () {
             type: 'pie',
           },
 
+          subtitle: {
+            text: undefined,
+          },
+
           title: {
             text: 'Do you internationalize your applications?',
           },

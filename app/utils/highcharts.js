@@ -1,5 +1,6 @@
 import { assign } from '@ember/polyfills';
 import merge from 'deepmerge';
+import AreaSplineChart from 'ember-website/utils/highcharts/area-spline-chart';
 import HorizontalBarChart from 'ember-website/utils/highcharts/horizontal-bar-chart';
 import PieChart from 'ember-website/utils/highcharts/pie-chart';
 
@@ -51,4 +52,10 @@ const highchartsOptions = {
   },
 };
 
-export { createChartOptions, highchartsOptions, HorizontalBarChart, PieChart };
+export {
+  createChartOptions,
+  highchartsOptions,
+  AreaSplineChart,
+  HorizontalBarChart,
+  PieChart,
+};
