@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Controller from '@ember/controller';
 import {
   AreaSplineChart,
@@ -1375,40 +1376,40 @@ export default class EmberCommunitySurvey2020Controller extends Controller {
   stackSkillsChart = stackSkillsChart;
   SS_Q101 = SS_Q101;
   SS_Q104 = SS_Q104;
-  SS_Q203 = SS_Q203;
+  // SS_Q203 = SS_Q203;
   SS_Q204 = SS_Q204;
-  SS_Q301 = SS_Q301;
+  // SS_Q301 = SS_Q301;
   SS_Q302 = SS_Q302;
-  SS_Q303 = SS_Q303;
+  // SS_Q303 = SS_Q303;
   SS_Q305 = SS_Q305;
   SS_Q306 = SS_Q306;
-  SS_Q410 = SS_Q410;
-  SS_Q418 = SS_Q418;
-  SS_Q419 = SS_Q419;
+  // SS_Q410 = SS_Q410;
+  // SS_Q418 = SS_Q418;
+  // SS_Q419 = SS_Q419;
   //=============================================================================
   MS_Q103 = MS_Q103;
-  MS_Q110 = MS_Q110;
+  // MS_Q110 = MS_Q110;
   MS_Q111 = MS_Q111;
   MS_Q112 = MS_Q112;
-  MS_Q113 = MS_Q113;
-  MS_Q114 = MS_Q114;
-  MS_Q115 = MS_Q115;
-  MS_Q201 = MS_Q201;
-  MS_Q202 = MS_Q202;
+  // MS_Q113 = MS_Q113;
+  // MS_Q114 = MS_Q114;
+  // MS_Q115 = MS_Q115;
+  // MS_Q201 = MS_Q201;
+  // MS_Q202 = MS_Q202;
   MS_Q304 = MS_Q304;
-  MS_Q307 = MS_Q307;
+  // MS_Q307 = MS_Q307;
   MS_Q401 = MS_Q401;
-  MS_Q402 = MS_Q402;
-  MS_Q403 = MS_Q403;
+  // MS_Q402 = MS_Q402;
+  // MS_Q403 = MS_Q403;
   MS_Q406 = MS_Q406;
-  MS_Q407 = MS_Q407;
-  MS_Q408 = MS_Q408;
-  MS_Q409 = MS_Q409;
-  MS_Q411 = MS_Q411;
-  MS_Q412 = MS_Q412;
+  // MS_Q407 = MS_Q407;
+  // MS_Q408 = MS_Q408;
+  // MS_Q409 = MS_Q409;
+  // MS_Q411 = MS_Q411;
+  // MS_Q412 = MS_Q412;
   MS_Q413 = MS_Q413;
-  MS_Q414 = MS_Q414;
-  MS_Q416 = MS_Q416;
+  // MS_Q414 = MS_Q414;
+  // MS_Q416 = MS_Q416;
   MS_Q601 = MS_Q601;
   //=============================================================================
 }
