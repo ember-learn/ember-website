@@ -6,7 +6,31 @@ export default class AreaSplineChart {
     return {
       data: [],
 
-      options: {},
+      options: {
+        chart: {
+          type: 'areaspline',
+        },
+
+        subtitle: {
+          text: 'TODO: Allow subtitle',
+        },
+
+        title: {
+          text: 'TODO: Allow title',
+        },
+
+        tooltip: {
+          pointFormat: '{point.y:.1f}%',
+        },
+
+        xAxis: {
+          /* TODO */
+        },
+
+        yAxis: {
+          /* TODO */
+        },
+      },
     };
   }
 }

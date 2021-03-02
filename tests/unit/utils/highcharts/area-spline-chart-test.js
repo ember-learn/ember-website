@@ -8,7 +8,31 @@ module('Unit | Utility | highcharts/area-spline-chart', function () {
     test('highchartsOptions returns an options object', function (assert) {
       const { options } = new AreaSplineChart().highchartsOptions;
 
-      assert.deepEqual(options, {}, 'We get the correct value.');
+      assert.deepEqual(
+        options,
+        {
+          chart: {
+            type: 'areaspline',
+          },
+
+          subtitle: {
+            text: 'TODO: Allow subtitle',
+          },
+
+          title: {
+            text: 'TODO: Allow title',
+          },
+
+          tooltip: {
+            pointFormat: '{point.y:.1f}%',
+          },
+
+          xAxis: {},
+
+          yAxis: {},
+        },
+        'We get the correct value.'
+      );
     });
   });
 
