@@ -111,7 +111,7 @@ const recommendingEmber = {
 
 // Q1.01: How likely are you to recommend Ember to your friends and colleagues?
 //------------------------------------------------
-
+/*
 const SS_Q101 = {
   options: {
     chart: { type: 'column' },
@@ -143,10 +143,11 @@ const SS_Q101 = {
     },
   ],
 };
+*/
 
 // Q1.04: How long have you been working with Ember?
 //------------------------------------------------
-
+/*
 const SS_Q104 = {
   options: {
     chart: { type: 'column' },
@@ -175,10 +176,11 @@ const SS_Q104 = {
     },
   ],
 };
+*/
 
 // Q1.05: Grade your knowledge of HTML:
 //------------------------------------------------
-
+/*
 const SS_Q105 = {
   options: {
     chart: { type: 'column' },
@@ -200,10 +202,11 @@ const SS_Q105 = {
     },
   ],
 };
+*/
 
 // Q1.06: Grade your knowledge of CSS:
 //------------------------------------------------
-
+/*
 const SS_Q106 = {
   options: {
     chart: { type: 'column' },
@@ -225,10 +228,11 @@ const SS_Q106 = {
     },
   ],
 };
+*/
 
 // Q1.07: Grade your knowledge of JavaScript:
 //------------------------------------------------
-
+/*
 const SS_Q107 = {
   options: {
     chart: { type: 'column' },
@@ -250,10 +254,11 @@ const SS_Q107 = {
     },
   ],
 };
+*/
 
 // Q1.08: Grade your knowledge of ARIA:
 //------------------------------------------------
-
+/*
 const SS_Q108 = {
   options: {
     chart: { type: 'column' },
@@ -275,10 +280,11 @@ const SS_Q108 = {
     },
   ],
 };
+*/
 
 // Q1.09: Grade your knowledge of Ember.js:
 //------------------------------------------------
-
+/*
 const SS_Q109 = {
   options: {
     chart: { type: 'column' },
@@ -300,10 +306,11 @@ const SS_Q109 = {
     },
   ],
 };
+*/
 
 // Q2.03: I use Ember for work:
 //------------------------------------------------
-
+/*
 const SS_Q203 = {
   options: {
     chart: { type: 'column' },
@@ -326,7 +333,7 @@ const SS_Q203 = {
     },
   ],
 };
-// Yes / No? 96% / 4%
+*/
 
 // Q2.04: When taking your most recent job:
 //------------------------------------------------
@@ -422,7 +429,7 @@ const SS_Q205 = {
 
 // Q3.01: How many developers at your company are responsible for writing Front-End code?
 //------------------------------------------------
-
+/*
 const SS_Q301 = {
   options: {
     chart: { type: 'column' },
@@ -451,6 +458,7 @@ const SS_Q301 = {
     },
   ],
 };
+*/
 
 // Q3.02: How many developers at your company are responsible for writing Ember code?
 //------------------------------------------------
@@ -536,7 +544,7 @@ const SS_Q302 = {
 
 // Q3.03: At this time next year, how many Ember developers does your company plan to employ?
 //------------------------------------------------
-
+/*
 const SS_Q303 = {
   options: {
     chart: { type: 'column' },
@@ -562,11 +570,12 @@ const SS_Q303 = {
     },
   ],
 };
+*/
 
 // Prose for Q3.06
 // Q3.05: What is the primary language of apps developed at your business?
 //------------------------------------------------
-
+/*
 const SS_Q305 = {
   options: {
     chart: { type: 'column' },
@@ -594,6 +603,7 @@ const SS_Q305 = {
     },
   ],
 };
+*/
 
 // Q3.06: Does your business require applications to be internationalized?
 //------------------------------------------------
@@ -734,7 +744,7 @@ const SS_Q410 = {
 
 // Q4.18: How many addons have you written (including private, unpublished libraries)?
 //------------------------------------------------
-
+/*
 const SS_Q418 = {
   options: {
     chart: { type: 'column' },
@@ -757,10 +767,11 @@ const SS_Q418 = {
     },
   ],
 };
+*/
 
 // Q4.19: How many addons have you published publicly?
 //------------------------------------------------
-
+/*
 const SS_Q419 = {
   options: {
     chart: { type: 'column' },
@@ -783,6 +794,7 @@ const SS_Q419 = {
     },
   ],
 };
+*/
 
 // Q5.01: In which region do you live?
 //------------------------------------------------
@@ -830,7 +842,7 @@ const SS_Q501 = {
 
 // Q5.02: Do you have a disability?
 //------------------------------------------------
-
+/*
 const SS_Q502 = {
   options: {
     chart: { type: 'column' },
@@ -852,7 +864,7 @@ const SS_Q502 = {
     },
   ],
 };
-// Generating HighCharts Javascript Objects
+*/
 
 // Q1.03: What are the ways you learn about and stay up to date with Ember?
 //------------------------------------------------
@@ -924,7 +936,7 @@ const MS_Q103 = {
 
 // Q1.10: When learning Ember yourself, or teaching it to someone new, what topics were difficult to understand?
 //------------------------------------------------
-
+/*
 const MS_Q110 = {
   options: {
     chart: { type: 'column' },
@@ -969,6 +981,7 @@ const MS_Q110 = {
     },
   ],
 };
+*/
 
 // Q1.11: Which text editors do you use for development?
 //------------------------------------------------
@@ -1086,7 +1099,7 @@ const MS_Q112 = {
 
 // Q1.13: Which operating system(s) do you use for development?
 //------------------------------------------------
-
+/*
 const MS_Q113 = {
   options: {
     chart: { type: 'column' },
@@ -1111,10 +1124,11 @@ const MS_Q113 = {
     },
   ],
 };
+*/
 
 // Q1.14: With which of these other front-end framework(s) do you have some level of experience?
 //------------------------------------------------
-
+/*
 const MS_Q114 = {
   options: {
     chart: { type: 'column' },
@@ -1174,10 +1188,11 @@ const MS_Q114 = {
     },
   ],
 };
+*/
 
 // Q1.15: With which of these other front-end framework(s) do you have an advanced level of experience?
 //------------------------------------------------
-
+/*
 const MS_Q115 = {
   options: {
     chart: { type: 'column' },
@@ -1215,10 +1230,11 @@ const MS_Q115 = {
     },
   ],
 };
+*/
 
 // Q2.01: What best describes your role at work?
 //------------------------------------------------
-
+/*
 const MS_Q201 = {
   options: {
     chart: { type: 'column' },
@@ -1245,10 +1261,11 @@ const MS_Q201 = {
     },
   ],
 };
+*/
 
 // Q2.02: Choose the option(s) that best describe your employment situation:
 //------------------------------------------------
-
+/*
 const MS_Q202 = {
   options: {
     chart: { type: 'column' },
@@ -1305,6 +1322,7 @@ const MS_Q202 = {
     },
   ],
 };
+*/
 
 // Q3.04: What are the accessibility requirements for your business?
 //------------------------------------------------
@@ -1340,7 +1358,7 @@ const MS_Q304 = {
 
 // Q3.07: In which sector(s) does your employer operate? Select all that apply:
 //------------------------------------------------
-
+/*
 const MS_Q307 = {
   options: {
     chart: { type: 'column' },
@@ -1377,6 +1395,7 @@ const MS_Q307 = {
     },
   ],
 };
+*/
 
 // Q4.01: Which version(s) of Ember are in use in your apps?
 //------------------------------------------------
@@ -1523,13 +1542,11 @@ const MS_Q401 = new AreaSplineChart({
         100 * (179 / 1232), // 3.6
         100 * (356 / 1232), // 3.7
         100 * (214 / 1232), // 3.8
-        /*
-        100 * (13 / 1232), // Beta
-        100 * (14 / 1232), // Canary
-        100 * (4 / 1232), // Custom fork
-        100 * (51 / 1232), // I don't know
-        100 * (11 / 1232), // Other
-        */
+        // 100 * (13 / 1232), // Beta
+        // 100 * (14 / 1232), // Canary
+        // 100 * (4 / 1232), // Custom fork
+        // 100 * (51 / 1232), // I don't know
+        // 100 * (11 / 1232), // Other
       ],
     },
   ],
@@ -1537,7 +1554,7 @@ const MS_Q401 = new AreaSplineChart({
 
 // Q4.02: If you use Ember Data, which version(s) are used in your apps?
 //------------------------------------------------
-
+/*
 const MS_Q402 = new AreaSplineChart({
   chart: {
     categories: [
@@ -1672,21 +1689,20 @@ const MS_Q402 = new AreaSplineChart({
         100 * (121 / 1232), // 3.6
         100 * (260 / 1232), // 3.7
         100 * (154 / 1232), // 3.8
-        /*
-        100 * (7 / 1232), // Beta
-        100 * (5 / 1232), // Canary
-        100 * (10 / 1232), // Custom fork
-        100 * (123 / 1232), // I don't know
-        100 * (28 / 1232), // Other
-        */
+        // 100 * (7 / 1232), // Beta
+        // 100 * (5 / 1232), // Canary
+        // 100 * (10 / 1232), // Custom fork
+        // 100 * (123 / 1232), // I don't know
+        // 100 * (28 / 1232), // Other
       ],
     },
   ],
 }).highchartsOptions;
+*/
 
 // Q4.03: If you use Ember CLI, which version(s) are used in your apps?
 //------------------------------------------------
-
+/*
 const MS_Q403 = {
   options: {
     chart: { type: 'column' },
@@ -1729,6 +1745,7 @@ const MS_Q403 = {
     },
   ],
 };
+*/
 
 // Q4.06: Which of these server-side frameworks do you use?
 //------------------------------------------------
@@ -1823,7 +1840,7 @@ const MS_Q406 = {
 
 // Q4.07: What standards do you follow for HTTP API design?
 //------------------------------------------------
-
+/*
 const MS_Q407 = {
   options: {
     chart: { type: 'column' },
@@ -1851,10 +1868,11 @@ const MS_Q407 = {
     },
   ],
 };
+*/
 
 // Q4.08: What testing framework(s) do you use in your Ember apps?
 //------------------------------------------------
-
+/*
 const MS_Q408 = {
   options: {
     chart: { type: 'column' },
@@ -1891,6 +1909,7 @@ const MS_Q408 = {
     },
   ],
 };
+*/
 
 // Q4.09: How old are your Ember applications?
 //------------------------------------------------
@@ -1923,7 +1942,7 @@ const MS_Q409 = {
 
 // Q4.11: What technologies are part of your deployment stack?
 //------------------------------------------------
-
+/*
 // Not certain to keep or not
 const MS_Q411 = {
   options: {
@@ -1983,10 +2002,11 @@ const MS_Q411 = {
     },
   ],
 };
+*/
 
 // Q4.12: What is the primary target platform for your Ember apps?
 //------------------------------------------------
-
+/*
 const MS_Q412 = {
   options: {
     chart: { type: 'column' },
@@ -2017,6 +2037,7 @@ const MS_Q412 = {
     // {name: 'Desktop native (Electron/NW.js/MacGap/CEF)', y: (100/1232)*51}]}
   ],
 };
+*/
 
 // Q4.13: Who uses your application(s)?
 //------------------------------------------------
@@ -2066,7 +2087,7 @@ const MS_Q413 = {
 
 // Q4.14: What browser versions do your applications target?
 //------------------------------------------------
-
+/*
 const MS_Q414 = {
   options: {
     chart: { type: 'column' },
@@ -2103,10 +2124,11 @@ const MS_Q414 = {
     },
   ],
 };
+*/
 
 // Q4.15: At this time next year, what browser versions do you expect your applications to target?
 //------------------------------------------------
-
+/*
 const MS_Q415 = {
   options: {
     chart: { type: 'column' },
@@ -2134,10 +2156,11 @@ const MS_Q415 = {
     },
   ],
 };
+*/
 
 // Q4.16: Which of these best describes your use of Ember in production applications?
 //------------------------------------------------
-
+/*
 const MS_Q416 = {
   options: {
     chart: { type: 'column' },
@@ -2182,10 +2205,11 @@ const MS_Q416 = {
     },
   ],
 };
+*/
 
 // Q4.17: What method do you rely on for search engine indexing?
 //------------------------------------------------
-
+/*
 const MS_Q417 = {
   options: {
     chart: { type: 'column' },
@@ -2220,10 +2244,11 @@ const MS_Q417 = {
     },
   ],
 };
+*/
 
 // Q5.04: Which categories describe you?
 //------------------------------------------------
-
+/*
 const MS_Q504 = {
   options: {
     chart: { type: 'column' },
@@ -2251,6 +2276,7 @@ const MS_Q504 = {
     },
   ],
 };
+*/
 
 // Q6.01: Did you participate in any of the following surveys?
 //------------------------------------------------
@@ -2289,54 +2315,54 @@ export default class EmberCommunitySurvey2019Controller extends Controller {
 
   // DEMO OF AUTO-GENERATED EXPORTS
   //=============================================================================
-  SS_Q101 = SS_Q101;
-  SS_Q104 = SS_Q104;
-  SS_Q105 = SS_Q105;
-  SS_Q106 = SS_Q106;
-  SS_Q107 = SS_Q107;
-  SS_Q108 = SS_Q108;
-  SS_Q109 = SS_Q109;
-  SS_Q203 = SS_Q203;
+  // SS_Q101 = SS_Q101; // unused
+  // SS_Q104 = SS_Q104; // unused
+  // SS_Q105 = SS_Q105; // unused
+  // SS_Q106 = SS_Q106; // unused
+  // SS_Q107 = SS_Q107; // unused
+  // SS_Q108 = SS_Q108; // unused
+  // SS_Q109 = SS_Q109; // unused
+  // SS_Q203 = SS_Q203; // unused
   SS_Q204 = SS_Q204;
   SS_Q205 = SS_Q205;
-  SS_Q301 = SS_Q301;
+  // SS_Q301 = SS_Q301; // unused
   SS_Q302 = SS_Q302;
-  SS_Q303 = SS_Q303;
-  SS_Q305 = SS_Q305;
+  // SS_Q303 = SS_Q303; // unused
+  // SS_Q305 = SS_Q305; // unused
   SS_Q306 = SS_Q306;
   SS_Q405 = SS_Q405;
   SS_Q410 = SS_Q410;
-  SS_Q418 = SS_Q418;
-  SS_Q419 = SS_Q419;
+  // SS_Q418 = SS_Q418; // unused
+  // SS_Q419 = SS_Q419; // unused
   SS_Q501 = SS_Q501;
-  SS_Q502 = SS_Q502;
+  // SS_Q502 = SS_Q502; // unused
   //=============================================================================
   MS_Q103 = MS_Q103;
-  MS_Q110 = MS_Q110;
+  // MS_Q110 = MS_Q110; // unused
   MS_Q111 = MS_Q111;
   MS_Q112 = MS_Q112;
-  MS_Q113 = MS_Q113;
-  MS_Q114 = MS_Q114;
-  MS_Q115 = MS_Q115;
-  MS_Q201 = MS_Q201;
-  MS_Q202 = MS_Q202;
+  // MS_Q113 = MS_Q113; // unused
+  // MS_Q114 = MS_Q114; // unused
+  // MS_Q115 = MS_Q115; // unused
+  // MS_Q201 = MS_Q201; // unused
+  // MS_Q202 = MS_Q202; // unused
   MS_Q304 = MS_Q304;
-  MS_Q307 = MS_Q307;
+  // MS_Q307 = MS_Q307; // unused
   MS_Q401 = MS_Q401;
-  MS_Q402 = MS_Q402;
-  MS_Q403 = MS_Q403;
+  // MS_Q402 = MS_Q402; // unused
+  // MS_Q403 = MS_Q403; // unused
   MS_Q406 = MS_Q406;
-  MS_Q407 = MS_Q407;
-  MS_Q408 = MS_Q408;
+  // MS_Q407 = MS_Q407; // unused
+  // MS_Q408 = MS_Q408; // unused
   MS_Q409 = MS_Q409;
-  MS_Q411 = MS_Q411;
-  MS_Q412 = MS_Q412;
+  // MS_Q411 = MS_Q411; // unused
+  // MS_Q412 = MS_Q412; // unused
   MS_Q413 = MS_Q413;
-  MS_Q414 = MS_Q414;
-  MS_Q415 = MS_Q415;
-  MS_Q416 = MS_Q416;
-  MS_Q417 = MS_Q417;
-  MS_Q504 = MS_Q504;
+  // MS_Q414 = MS_Q414; // unused
+  // MS_Q415 = MS_Q415; // unused
+  // MS_Q416 = MS_Q416; // unused
+  // MS_Q417 = MS_Q417; // unused
+  // MS_Q504 = MS_Q504; // unused
   MS_Q601 = MS_Q601;
   //=============================================================================
 }
