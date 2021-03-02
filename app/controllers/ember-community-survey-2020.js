@@ -149,7 +149,7 @@ const SS_Q204 = new PieChart({
 
 // Q3.01: How many developers at your company are responsible for writing Front-End code?
 //------------------------------------------------
-
+/*
 const SS_Q301 = {
   options: {
     chart: { type: 'column' },
@@ -188,6 +188,7 @@ const SS_Q301 = {
     },
   ],
 };
+*/
 
 // Q3.02: How many developers at your company are responsible for writing Ember code?
 //------------------------------------------------
@@ -487,7 +488,7 @@ const MS_Q406 = {
 
 // Q4.08: What testing framework(s) do you use in your Ember apps?
 //------------------------------------------------
-
+/*
 const MS_Q408 = {
   options: {
     chart: { type: 'column' },
@@ -512,10 +513,11 @@ const MS_Q408 = {
     },
   ],
 };
+*/
 
 // Q4.12: What is the primary target platform for your Ember apps?
 //------------------------------------------------
-
+/*
 const MS_Q412 = {
   options: {
     chart: { type: 'column' },
@@ -539,6 +541,7 @@ const MS_Q412 = {
     },
   ],
 };
+*/
 
 // Q4.13: Who uses your application(s)?
 //------------------------------------------------
@@ -583,7 +586,7 @@ export default class EmberCommunitySurvey2020Controller extends Controller {
   SS_Q101 = SS_Q101;
   SS_Q104 = SS_Q104;
   SS_Q204 = SS_Q204;
-  SS_Q301 = SS_Q301; // unused
+  // SS_Q301 = SS_Q301; // unused
   SS_Q302 = SS_Q302;
   SS_Q305 = SS_Q305;
   SS_Q306 = SS_Q306;
@@ -594,8 +597,8 @@ export default class EmberCommunitySurvey2020Controller extends Controller {
   MS_Q304 = MS_Q304;
   MS_Q401 = MS_Q401;
   MS_Q406 = MS_Q406;
-  MS_Q408 = MS_Q408; // unused
-  MS_Q412 = MS_Q412; // unused
+  // MS_Q408 = MS_Q408; // unused
+  // MS_Q412 = MS_Q412; // unused
   MS_Q413 = MS_Q413;
   MS_Q601 = MS_Q601;
   //=============================================================================
