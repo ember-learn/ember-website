@@ -2,9 +2,16 @@
   https://api.highcharts.com/highcharts/plotOptions.areaspline
 */
 export default class AreaSplineChart {
+  constructor({ chart, rawData }) {
+    this.chart = chart;
+    this.series = createSeries(rawData);
+  }
+
   get highchartsOptions() {
+    const { chart, series } = this;
+
     return {
-      data: [],
+      data: series,
 
       options: {
         chart: {
@@ -12,23 +19,26 @@ export default class AreaSplineChart {
         },
 
         subtitle: {
-          text: 'TODO: Allow subtitle',
+          text: chart.subtitle,
         },
 
         title: {
-          text: 'TODO: Allow title',
+          text: chart.title,
         },
 
         tooltip: {
-          pointFormat: '{point.y:.1f}%',
+          pointFormat: '{series.name}: {point.y:.1f}%',
         },
 
         xAxis: {
-          /* TODO */
+          categories: chart.categories,
+          type: 'category',
         },
 
         yAxis: {
-          /* TODO */
+          title: {
+            text: 'Percent of responses',
+          },
         },
       },
     };

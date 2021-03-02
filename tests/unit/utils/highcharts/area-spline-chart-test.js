@@ -6,7 +6,45 @@ import { module, test } from 'qunit';
 module('Unit | Utility | highcharts/area-spline-chart', function () {
   module('AreaSplineChart', function () {
     test('highchartsOptions returns an options object', function (assert) {
-      const { options } = new AreaSplineChart().highchartsOptions;
+      const { options } = new AreaSplineChart({
+        chart: {
+          categories: [
+            '1.x',
+            '2.x',
+            '3.0-3.4',
+            '3.5-3.8',
+            '3.9-3.12',
+            '3.13-3.16',
+          ],
+          subtitle: '(Multi-select question)',
+          title: 'Which version(s) of Ember are in use in your apps?',
+        },
+
+        rawData: [
+          {
+            color: '#1E719B',
+            label: '2019',
+            values: [
+              100 * (79 / 1232), // 1.x
+              100 * (443 / 1232), // 2.x
+              100 * (488 / 1232), // 3.0-3.4
+              100 * (675 / 1232), // 3.5-3.8
+            ],
+          },
+          {
+            color: '#9B2918',
+            label: '2020',
+            values: [
+              100 * (27 / 1006), // 1.x
+              100 * (111 / 1006), // 2.x
+              100 * (121 / 1006), // 3.0-3.4
+              100 * (148 / 1006), // 3.5-3.8
+              100 * (291 / 1006), // 3.9-3.12
+              100 * (524 / 1006), // 3.13-3.16
+            ],
+          },
+        ],
+      }).highchartsOptions;
 
       assert.deepEqual(
         options,
@@ -16,20 +54,34 @@ module('Unit | Utility | highcharts/area-spline-chart', function () {
           },
 
           subtitle: {
-            text: 'TODO: Allow subtitle',
+            text: '(Multi-select question)',
           },
 
           title: {
-            text: 'TODO: Allow title',
+            text: 'Which version(s) of Ember are in use in your apps?',
           },
 
           tooltip: {
-            pointFormat: '{point.y:.1f}%',
+            pointFormat: '{series.name}: {point.y:.1f}%',
           },
 
-          xAxis: {},
+          xAxis: {
+            categories: [
+              '1.x',
+              '2.x',
+              '3.0-3.4',
+              '3.5-3.8',
+              '3.9-3.12',
+              '3.13-3.16',
+            ],
+            type: 'category',
+          },
 
-          yAxis: {},
+          yAxis: {
+            title: {
+              text: 'Percent of responses',
+            },
+          },
         },
         'We get the correct value.'
       );
@@ -47,8 +99,6 @@ module('Unit | Utility | highcharts/area-spline-chart', function () {
             100 * (443 / 1232),
             100 * (488 / 1232),
             100 * (675 / 1232),
-            undefined,
-            undefined,
           ],
         },
         {
@@ -78,7 +128,7 @@ module('Unit | Utility | highcharts/area-spline-chart', function () {
         },
         {
           color: '#1E719B',
-          data: [6, 36, 40, 55, NaN, NaN],
+          data: [6, 36, 40, 55],
           name: '2019',
         },
         'We get the correct data for the 1st series.'
