@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import Controller from '@ember/controller';
 import { AreaSplineChart } from 'ember-website/utils/highcharts';
 
@@ -2290,54 +2289,54 @@ export default class EmberCommunitySurvey2019Controller extends Controller {
 
   // DEMO OF AUTO-GENERATED EXPORTS
   //=============================================================================
-  // SS_Q101 = SS_Q101;
-  // SS_Q104 = SS_Q104;
-  // SS_Q105 = SS_Q105;
-  // SS_Q106 = SS_Q106;
-  // SS_Q107 = SS_Q107;
-  // SS_Q108 = SS_Q108;
-  // SS_Q109 = SS_Q109;
-  // SS_Q203 = SS_Q203;
+  SS_Q101 = SS_Q101; // unused
+  SS_Q104 = SS_Q104; // unused
+  SS_Q105 = SS_Q105; // unused
+  SS_Q106 = SS_Q106; // unused
+  SS_Q107 = SS_Q107; // unused
+  SS_Q108 = SS_Q108; // unused
+  SS_Q109 = SS_Q109; // unused
+  SS_Q203 = SS_Q203; // unused
   SS_Q204 = SS_Q204;
   SS_Q205 = SS_Q205;
-  // SS_Q301 = SS_Q301;
+  SS_Q301 = SS_Q301; // unused
   SS_Q302 = SS_Q302;
-  // SS_Q303 = SS_Q303;
-  // SS_Q305 = SS_Q305;
+  SS_Q303 = SS_Q303; // unused
+  SS_Q305 = SS_Q305; // unused
   SS_Q306 = SS_Q306;
   SS_Q405 = SS_Q405;
   SS_Q410 = SS_Q410;
-  // SS_Q418 = SS_Q418;
-  // SS_Q419 = SS_Q419;
+  SS_Q418 = SS_Q418; // unused
+  SS_Q419 = SS_Q419; // unused
   SS_Q501 = SS_Q501;
-  // SS_Q502 = SS_Q502;
+  SS_Q502 = SS_Q502; // unused
   //=============================================================================
   MS_Q103 = MS_Q103;
-  // MS_Q110 = MS_Q110;
+  MS_Q110 = MS_Q110; // unused
   MS_Q111 = MS_Q111;
   MS_Q112 = MS_Q112;
-  // MS_Q113 = MS_Q113;
-  // MS_Q114 = MS_Q114;
-  // MS_Q115 = MS_Q115;
-  // MS_Q201 = MS_Q201;
-  // MS_Q202 = MS_Q202;
+  MS_Q113 = MS_Q113; // unused
+  MS_Q114 = MS_Q114; // unused
+  MS_Q115 = MS_Q115; // unused
+  MS_Q201 = MS_Q201; // unused
+  MS_Q202 = MS_Q202; // unused
   MS_Q304 = MS_Q304;
-  // MS_Q307 = MS_Q307;
+  MS_Q307 = MS_Q307; // unused
   MS_Q401 = MS_Q401;
-  // MS_Q402 = MS_Q402;
-  // MS_Q403 = MS_Q403;
+  MS_Q402 = MS_Q402; // unused
+  MS_Q403 = MS_Q403; // unused
   MS_Q406 = MS_Q406;
-  // MS_Q407 = MS_Q407;
-  // MS_Q408 = MS_Q408;
+  MS_Q407 = MS_Q407; // unused
+  MS_Q408 = MS_Q408; // unused
   MS_Q409 = MS_Q409;
-  // MS_Q411 = MS_Q411;
-  // MS_Q412 = MS_Q412;
+  MS_Q411 = MS_Q411; // unused
+  MS_Q412 = MS_Q412; // unused
   MS_Q413 = MS_Q413;
-  // MS_Q414 = MS_Q414;
-  // MS_Q415 = MS_Q415;
-  // MS_Q416 = MS_Q416;
-  // MS_Q417 = MS_Q417;
-  // MS_Q504 = MS_Q504;
+  MS_Q414 = MS_Q414; // unused
+  MS_Q415 = MS_Q415; // unused
+  MS_Q416 = MS_Q416; // unused
+  MS_Q417 = MS_Q417; // unused
+  MS_Q504 = MS_Q504; // unused
   MS_Q601 = MS_Q601;
   //=============================================================================
 }
