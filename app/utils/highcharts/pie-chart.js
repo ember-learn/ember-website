@@ -18,6 +18,10 @@ export default class PieChart {
           type: 'pie',
         },
 
+        subtitle: {
+          text: chart.subtitle,
+        },
+
         title: {
           text: chart.title,
         },
