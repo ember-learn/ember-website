@@ -32,7 +32,7 @@ const orangePalette = {
 // Default Color Assignments for Yearly Graph Data Series
 var color2017 = darkGrayColor;
 var color2018 = emberColors.gray;
-var color2019 = orangePalette.blue;
+var color2019 = emberColors.blue;
 var color2020 = orangePalette.orangeDarkest;
 // eslint-disable-next-line no-unused-vars
 // var colorFutureYear = emberColors.yellow;
