@@ -8,7 +8,38 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function () {
     test('highchartsOptions returns an options object', function (assert) {
       const { options } = new VerticalBarChart().highchartsOptions;
 
-      assert.deepEqual(options, {}, 'We get the correct value.');
+      assert.deepEqual(
+        options,
+        {
+          chart: {
+            type: 'column',
+          },
+
+          subtitle: {
+            text: 'TODO: Allow subtitle',
+          },
+
+          title: {
+            text: 'TODO: Allow title',
+          },
+
+          tooltip: {
+            pointFormat: '{series.name}: {point.y:.1f}%',
+          },
+
+          xAxis: {
+            categories: [],
+            type: 'category',
+          },
+
+          yAxis: {
+            title: {
+              text: 'Percent of responses',
+            },
+          },
+        },
+        'We get the correct value.'
+      );
     });
   });
 
