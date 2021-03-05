@@ -52,6 +52,8 @@ Router.map(function () {
     this.route('payment-sent');
   });
 
+  this.route('not-found', { path: '/*path' });
+
   this.route('releases', function () {
     this.route('beta');
     this.route('canary');
