@@ -11,8 +11,6 @@ Router.map(function () {
     this.route('legal');
   });
 
-  this.route('blog', function () {});
-
   this.route('browser-support');
 
   this.route('community', function () {
