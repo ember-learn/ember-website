@@ -2,9 +2,16 @@
   https://api.highcharts.com/highcharts/plotOptions.column
 */
 export default class VerticalBarChart {
+  constructor({ chart, rawData }) {
+    this.chart = chart;
+    this.series = createSeries(rawData);
+  }
+
   get highchartsOptions() {
+    const { chart, series } = this;
+
     return {
-      data: [],
+      data: series,
 
       options: {
         chart: {
@@ -12,11 +19,11 @@ export default class VerticalBarChart {
         },
 
         subtitle: {
-          text: 'TODO: Allow subtitle',
+          text: chart.subtitle,
         },
 
         title: {
-          text: 'TODO: Allow title',
+          text: chart.title,
         },
 
         tooltip: {
@@ -24,7 +31,7 @@ export default class VerticalBarChart {
         },
 
         xAxis: {
-          categories: [],
+          categories: chart.categories,
           type: 'category',
         },
 

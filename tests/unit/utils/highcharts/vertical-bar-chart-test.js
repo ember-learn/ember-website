@@ -6,7 +6,35 @@ import { module, test } from 'qunit';
 module('Unit | Utility | highcharts/vertical-bar-chart', function () {
   module('VerticalBarChart', function () {
     test('highchartsOptions returns an options object', function (assert) {
-      const { options } = new VerticalBarChart().highchartsOptions;
+      const { options } = new VerticalBarChart({
+        chart: {
+          categories: ['Beginner', 'Intermediate', 'Advanced'],
+          title: 'Rank your web skills',
+        },
+
+        rawData: [
+          {
+            color: '#1A5E9A',
+            label: 'ARIA',
+            values: [68.3, 25.7, 6],
+          },
+          {
+            color: '#32AADE',
+            label: 'CSS',
+            values: [9.6, 47.0, 43.4],
+          },
+          {
+            color: '#F2682A',
+            label: 'HTML',
+            values: [1.9, 36.0, 62.1],
+          },
+          {
+            color: '#F1BF28',
+            label: 'JavaScript',
+            values: [2.7, 35.9, 61.4],
+          },
+        ],
+      }).highchartsOptions;
 
       assert.deepEqual(
         options,
@@ -16,11 +44,11 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function () {
           },
 
           subtitle: {
-            text: 'TODO: Allow subtitle',
+            text: undefined,
           },
 
           title: {
-            text: 'TODO: Allow title',
+            text: 'Rank your web skills',
           },
 
           tooltip: {
@@ -28,7 +56,7 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function () {
           },
 
           xAxis: {
-            categories: [],
+            categories: ['Beginner', 'Intermediate', 'Advanced'],
             type: 'category',
           },
 
