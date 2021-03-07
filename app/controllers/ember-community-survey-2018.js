@@ -1,5 +1,8 @@
 import Controller from '@ember/controller';
-import { HorizontalBarChart } from 'ember-website/utils/highcharts';
+import {
+  HorizontalBarChart,
+  VerticalBarChart,
+} from 'ember-website/utils/highcharts';
 
 var emberOrange = '#f23818',
   darkGrayColor = '#4b4b4b',
@@ -341,33 +344,32 @@ const browserRequirements = {
   ],
 };
 
-const recommendingEmber = {
-  options: {
-    chart: { type: 'spline' },
-    title: { text: 'How Likely Are You To Recommend Ember?' },
-    subtitle: { text: '' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Responses' } },
+const recommendingEmber = new VerticalBarChart({
+  chart: {
+    categories: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+    subtitle: '1 = Unlikely, 10 = Likely',
+    title: 'How likely are you to recommend Ember?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2018',
       color: color2018,
-      data: [
-        [1, 25],
-        [2, 14],
-        [3, 22],
-        [4, 17],
-        [5, 42],
-        [6, 58],
-        [7, 144],
-        [8, 307],
-        [9, 195],
-        [10, 445],
+      label: '2018',
+      values: [
+        100 * (25 / 1269),
+        100 * (14 / 1269),
+        100 * (22 / 1269),
+        100 * (17 / 1269),
+        100 * (42 / 1269),
+        100 * (58 / 1269),
+        100 * (144 / 1269),
+        100 * (307 / 1269),
+        100 * (195 / 1269),
+        100 * (445 / 1269),
       ],
     },
   ],
-};
+}).highchartsOptions;
 
 const editorTool = {
   options: {

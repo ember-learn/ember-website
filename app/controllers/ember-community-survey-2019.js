@@ -1,5 +1,8 @@
 import Controller from '@ember/controller';
-import { AreaSplineChart } from 'ember-website/utils/highcharts';
+import {
+  AreaSplineChart,
+  VerticalBarChart,
+} from 'ember-website/utils/highcharts';
 
 // 2018 Color Palette
 // eslint-disable-next-line no-unused-vars
@@ -77,34 +80,32 @@ const stackSkillsChart = {
 };
 
 // Data Updated
-const recommendingEmber = {
-  options: {
-    chart: { type: 'spline' },
-    title: { text: 'How Likely Are You To Recommend Ember?' },
-    subtitle: { text: '' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Responses' } },
+const recommendingEmber = new VerticalBarChart({
+  chart: {
+    categories: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+    subtitle: '1 = Unlikely, 10 = Likely',
+    title: 'How likely are you to recommend Ember?',
   },
-  data: [
+
+  rawData: [
     {
-      showInLegend: false,
-      name: '2019',
       color: color2019,
-      data: [
-        [1, 39],
-        [2, 19],
-        [3, 34],
-        [4, 36],
-        [5, 36],
-        [6, 67],
-        [7, 148],
-        [8, 278],
-        [9, 186],
-        [10, 384],
+      label: '2019',
+      values: [
+        100 * (39 / 1227),
+        100 * (19 / 1227),
+        100 * (34 / 1227),
+        100 * (36 / 1227),
+        100 * (36 / 1227),
+        100 * (67 / 1227),
+        100 * (148 / 1227),
+        100 * (278 / 1227),
+        100 * (186 / 1227),
+        100 * (384 / 1227),
       ],
     },
   ],
-};
+}).highchartsOptions;
 
 // DEMO OF AUTO-GENERATED HighCharts
 //=============================================================================

@@ -92,31 +92,27 @@ const stackSkillsChart = new VerticalBarChart({
 // Q1.01: How likely are you to recommend Ember to your friends and colleagues?
 //------------------------------------------------
 
-const SS_Q101 = {
-  options: {
-    chart: { type: 'spline' },
-    title: {
-      text: 'How likely are you to recommend Ember?',
-    },
-    subtitle: { text: 'On a scale of 1-5' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent of Responses' } },
+const SS_Q101 = new VerticalBarChart({
+  chart: {
+    categories: ['1', '2', '3', '4', '5'],
+    subtitle: '1 = Unlikely, 5 = Likely',
+    title: 'How likely are you to recommend Ember?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2020',
       color: color2020,
-      data: [
-        { name: '1', y: (100 / 699) * 35 },
-        { name: '2', y: (100 / 699) * 25 },
-        { name: '3', y: (100 / 699) * 94 },
-        { name: '4', y: (100 / 699) * 201 },
-        { name: '5', y: (100 / 699) * 344 },
+      label: '2020',
+      values: [
+        100 * (35 / 699),
+        100 * (25 / 699),
+        100 * (94 / 699),
+        100 * (201 / 699),
+        100 * (344 / 699),
       ],
     },
   ],
-};
+}).highchartsOptions;
 
 // Q1.04: How long have you been working with Ember?
 //------------------------------------------------
