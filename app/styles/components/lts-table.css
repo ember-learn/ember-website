@@ -1,0 +1,17 @@
+.lts-table {
+  border-spacing: 0;
+}
+
+.lts-table th {
+  text-align: left;
+}
+
+.lts-table td,
+.lts-table th {
+  padding: 0 var(--spacing-2) var(--spacing-1) 0;
+}
+
+.lts-table td:last-child,
+.lts-table th:last-child {
+  padding-right: 0;
+}
