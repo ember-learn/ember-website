@@ -78,6 +78,21 @@ module.exports = function (defaults) {
         'teams',
       ],
     },
+
+    'responsive-image': {
+      images: [
+        {
+          include: 'images/team/*',
+          widths: [100, 200],
+          lqip: {
+            type: 'blurhash',
+          },
+          removeSource: true,
+          // don't scale images, just copy as-is in dev mode, to not slow down the build
+          justCopy: process.env.EMBER_ENV !== 'production',
+        },
+      ],
+    },
   });
 
   return app.toTree();
