@@ -20,12 +20,12 @@ const chartHowlong = new VerticalBarChart({
   rawData: [
     {
       color: color2015,
-      label: '2015 Survey',
+      label: '2015',
       values: [12.5, 10.8, 20.9, 13, 10.5, 13.1, 14.6],
     },
     {
       color: color2016,
-      label: '2016 Survey',
+      label: '2016',
       values: [27, 16, 16, 9, 9, 10, 10],
     },
   ],
@@ -47,12 +47,12 @@ const chartEmberAtTheOffice = [
     rawData: [
       {
         color: color2015,
-        label: '2015 Survey',
+        label: '2015',
         values: [67.3, 22.8, 24.4, 13.4, 0],
       },
       {
         color: color2016,
-        label: '2016 Survey',
+        label: '2016',
         values: [59, 15, 16, 11, 23],
       },
     ],
@@ -67,12 +67,12 @@ const chartEmberAtTheOffice = [
     rawData: [
       {
         color: color2015,
-        label: '2015 Survey',
+        label: '2015',
         values: [15.5, 78, 3.7, 1.7, 0.8, 0.3],
       },
       {
         color: color2016,
-        label: '2016 Survey',
+        label: '2016',
         values: [12, 74, 6, 4, 2, 1],
       },
     ],
@@ -107,7 +107,7 @@ const chartNewReleaseAdoptionEmber = new VerticalBarChart({
   rawData: [
     {
       color: color2016,
-      label: '2016 Ember Community Survey',
+      label: '2016',
       values: [
         4, // 'Pre 1.6',
         2, // '1.6',
@@ -153,7 +153,7 @@ const chartNewReleaseAdoptionEmberData = new VerticalBarChart({
   rawData: [
     {
       color: color2016,
-      label: '2016 Ember Community Survey',
+      label: '2016',
       values: [
         11, // 'Pre 1.13',
         27, // '1.13',
@@ -188,7 +188,7 @@ const chartLongLivedCodebases = new VerticalBarChart({
   rawData: [
     {
       color: color2015,
-      label: '2015 Survey',
+      label: '2015',
       values: [
         1.9, // '> 24 Months',
         9.2, // '18–24 Months',
@@ -201,7 +201,7 @@ const chartLongLivedCodebases = new VerticalBarChart({
     },
     {
       color: color2016,
-      label: '2016 Survey',
+      label: '2016',
       values: [
         15, // '> 24 Months',
         16, // '18–24 Months',
@@ -237,7 +237,7 @@ const chartServerSide = [
     rawData: [
       {
         color: color2016,
-        label: '2016 Ember Community Survey',
+        label: '2016',
         values: [
           41, // 'Ruby',
           24, // 'Javascript',
@@ -276,7 +276,7 @@ const chartServerSide = [
     rawData: [
       {
         color: color2016,
-        label: '2016 Ember Community Survey',
+        label: '2016',
         values: [
           49, // 'Ruby',
           47, // 'Javascript',
@@ -313,7 +313,7 @@ const chartBrowserSuppor = [
     rawData: [
       {
         color: color2016,
-        label: '2016 Ember Community Survey',
+        label: '2016',
         values: [
           94, // 'Modern browsers (last two versions)',
           49, // 'Mobile browsers',
@@ -344,7 +344,7 @@ const chartBrowserSuppor = [
     rawData: [
       {
         color: color2016,
-        label: '2016 Ember Community Survey',
+        label: '2016',
         values: [
           94, // 'Modern browsers (last two versions)',
           57, // 'Mobile browsers',
@@ -369,7 +369,7 @@ const chartEmberEcosystem = [
     rawData: [
       {
         color: color2016,
-        label: '2016 Ember Community Survey',
+        label: '2016',
         values: [
           48, // '0',
           36, // '1–3',
@@ -389,7 +389,7 @@ const chartEmberEcosystem = [
     rawData: [
       {
         color: color2015,
-        label: '2015 Survey',
+        label: '2015',
         values: [
           15.6, // 'All',
           22.1, // 'Some',
@@ -399,7 +399,7 @@ const chartEmberEcosystem = [
       },
       {
         color: color2016,
-        label: '2016 Survey',
+        label: '2016',
         values: [
           23, // 'All',
           27, // 'Some',
@@ -427,7 +427,7 @@ const chartSEO = new VerticalBarChart({
   rawData: [
     {
       color: color2016,
-      label: '2016 Ember Community Survey',
+      label: '2016',
       values: [
         73, // 'App is private,...',
         16, // 'Google\'s Javascript Execution',
