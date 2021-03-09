@@ -1,6 +1,9 @@
 import Controller from '@ember/controller';
 import { VerticalBarChart } from 'ember-website/utils/highcharts';
 
+const color2015 = '#CCCCCC';
+const color2016 = '#F23818';
+
 const chartHowlong = new VerticalBarChart({
   chart: {
     categories: [
@@ -16,12 +19,12 @@ const chartHowlong = new VerticalBarChart({
 
   rawData: [
     {
-      color: '#cccccc',
+      color: color2015,
       label: '2015 Survey',
       values: [12.5, 10.8, 20.9, 13, 10.5, 13.1, 14.6],
     },
     {
-      color: '#f23818',
+      color: color2016,
       label: '2016 Survey',
       values: [27, 16, 16, 9, 9, 10, 10],
     },
@@ -43,12 +46,12 @@ const chartEmberAtTheOffice = [
 
     rawData: [
       {
-        color: '#cccccc',
+        color: color2015,
         label: '2015 Survey',
         values: [67.3, 22.8, 24.4, 13.4, 0],
       },
       {
-        color: '#f23818',
+        color: color2016,
         label: '2016 Survey',
         values: [59, 15, 16, 11, 23],
       },
@@ -63,12 +66,12 @@ const chartEmberAtTheOffice = [
 
     rawData: [
       {
-        color: '#cccccc',
+        color: color2015,
         label: '2015 Survey',
         values: [15.5, 78, 3.7, 1.7, 0.8, 0.3],
       },
       {
-        color: '#f23818',
+        color: color2016,
         label: '2016 Survey',
         values: [12, 74, 6, 4, 2, 1],
       },
@@ -103,7 +106,7 @@ const chartNewReleaseAdoptionEmber = new VerticalBarChart({
 
   rawData: [
     {
-      color: '#f23818',
+      color: color2016,
       label: '2016 Ember Community Survey',
       values: [
         4, // 'Pre 1.6',
@@ -149,7 +152,7 @@ const chartNewReleaseAdoptionEmberData = new VerticalBarChart({
 
   rawData: [
     {
-      color: '#f23818',
+      color: color2016,
       label: '2016 Ember Community Survey',
       values: [
         11, // 'Pre 1.13',
@@ -184,7 +187,7 @@ const chartLongLivedCodebases = new VerticalBarChart({
 
   rawData: [
     {
-      color: '#cccccc',
+      color: color2015,
       label: '2015 Survey',
       values: [
         1.9, // '> 24 Months',
@@ -197,7 +200,7 @@ const chartLongLivedCodebases = new VerticalBarChart({
       ],
     },
     {
-      color: '#f23818',
+      color: color2016,
       label: '2016 Survey',
       values: [
         15, // '> 24 Months',
@@ -233,7 +236,7 @@ const chartServerSide = [
 
     rawData: [
       {
-        color: '#f23818',
+        color: color2016,
         label: '2016 Ember Community Survey',
         values: [
           41, // 'Ruby',
@@ -272,7 +275,7 @@ const chartServerSide = [
 
     rawData: [
       {
-        color: '#f23818',
+        color: color2016,
         label: '2016 Ember Community Survey',
         values: [
           49, // 'Ruby',
@@ -309,7 +312,7 @@ const chartBrowserSuppor = [
 
     rawData: [
       {
-        color: '#f23818',
+        color: color2016,
         label: '2016 Ember Community Survey',
         values: [
           94, // 'Modern browsers (last two versions)',
@@ -340,7 +343,7 @@ const chartBrowserSuppor = [
 
     rawData: [
       {
-        color: '#f23818',
+        color: color2016,
         label: '2016 Ember Community Survey',
         values: [
           94, // 'Modern browsers (last two versions)',
@@ -365,7 +368,7 @@ const chartEmberEcosystem = [
 
     rawData: [
       {
-        color: '#f23818',
+        color: color2016,
         label: '2016 Ember Community Survey',
         values: [
           48, // '0',
@@ -385,7 +388,7 @@ const chartEmberEcosystem = [
 
     rawData: [
       {
-        color: '#cccccc',
+        color: color2015,
         label: '2015 Survey',
         values: [
           15.6, // 'All',
@@ -395,7 +398,7 @@ const chartEmberEcosystem = [
         ],
       },
       {
-        color: '#f23818',
+        color: color2016,
         label: '2016 Survey',
         values: [
           23, // 'All',
@@ -423,7 +426,7 @@ const chartSEO = new VerticalBarChart({
 
   rawData: [
     {
-      color: '#f23818',
+      color: color2016,
       label: '2016 Ember Community Survey',
       values: [
         73, // 'App is private,...',
