@@ -78,24 +78,20 @@ module.exports = function (defaults) {
       ],
     },
 
-    'responsive-image': [
-      {
-        include: 'images/team/*',
-        widths: [100, 200],
-        lqip: {
-          type: 'blurhash',
+    'responsive-image': {
+      images: [
+        {
+          include: 'images/team/*',
+          widths: [100, 200],
+          lqip: {
+            type: 'blurhash',
+          },
+          removeSource: true,
+          // don't scale images, just copy as-is in dev mode, to not slow down the build
+          justCopy: process.env.EMBER_ENV !== 'production',
         },
-        // Firefox running as part of percy.io tests has trouble rendering AVIF files, eventually due to wrong MIME type
-        // when served locally, causing false negatives
-        formats:
-          process.env.EMBER_ENV === 'production'
-            ? ['avif', 'webp', 'jpeg']
-            : ['webp', 'jpeg'],
-        removeSource: true,
-        // don't scale images, just copy as-is in dev mode, to not slow down the build
-        justCopy: process.env.EMBER_ENV !== 'production',
-      },
-    ],
+      ],
+    },
   });
 
   return app.toTree();
