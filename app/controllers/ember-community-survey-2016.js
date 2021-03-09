@@ -1,127 +1,111 @@
 import Controller from '@ember/controller';
+import { VerticalBarChart } from 'ember-website/utils/highcharts';
 
-const chartHowlong = {
-  options: {
-    xAxis: {
-      categories: [
-        '> 24 months',
-        '18–24 months',
-        '12–18 months',
-        '9–12 monts',
-        '6–9 months',
-        '3–6 months',
-        'Less than 3 months',
-      ],
-    },
+const chartHowlong = new VerticalBarChart({
+  chart: {
+    categories: [
+      '> 24 months',
+      '18–24 months',
+      '12–18 months',
+      '9–12 monts',
+      '6–9 months',
+      '3–6 months',
+      'Less than 3 months',
+    ],
   },
 
-  data: [
+  rawData: [
     {
-      name: '2015 Survey',
       color: '#cccccc',
-      data: [12.5, 10.8, 20.9, 13, 10.5, 13.1, 14.6],
+      label: '2015 Survey',
+      values: [12.5, 10.8, 20.9, 13, 10.5, 13.1, 14.6],
     },
     {
-      name: '2016 Survey',
       color: '#f23818',
-      data: [27, 16, 16, 9, 9, 10, 10],
+      label: '2016 Survey',
+      values: [27, 16, 16, 9, 9, 10, 10],
     },
   ],
-};
+}).highchartsOptions;
 
 const chartEmberAtTheOffice = [
-  {
-    options: {
-      title: {
-        text: 'What best describes your employment situation:',
-      },
-      xAxis: {
-        categories: [
-          'Working on product',
-          'Doing consultant/client work',
-          'Independent product developer',
-          'Independent consultant',
-          'Internal ember products',
-        ],
-      },
+  new VerticalBarChart({
+    chart: {
+      categories: [
+        'Working on product',
+        'Doing consultant / client work',
+        'Independent product developer',
+        'Independent consultant',
+        'Internal ember products',
+      ],
+      title: 'What best describes your employment situation:',
     },
-    data: [
+
+    rawData: [
       {
-        name: '2015 Survey',
         color: '#cccccc',
-        data: [67.3, 22.8, 24.4, 13.4, 0],
+        label: '2015 Survey',
+        values: [67.3, 22.8, 24.4, 13.4, 0],
       },
       {
-        name: '2016 Survey',
         color: '#f23818',
-        data: [59, 15, 16, 11, 23],
+        label: '2016 Survey',
+        values: [59, 15, 16, 11, 23],
       },
     ],
-  },
-  {
-    options: {
-      title: {
-        text: 'How many developers at your company work with Ember?',
-      },
-      xAxis: {
-        categories: [
-          'None',
-          '1–10',
-          '10–20',
-          '20–50',
-          '50–100',
-          'More than 100',
-        ],
-      },
+  }).highchartsOptions,
+
+  new VerticalBarChart({
+    chart: {
+      categories: ['None', '1–10', '10–20', '20–50', '50–100', 'More than 100'],
+      title: 'How many developers at your company work with Ember?',
     },
-    data: [
+
+    rawData: [
       {
-        name: '2015 Survey',
         color: '#cccccc',
-        data: [15.5, 78, 3.7, 1.7, 0.8, 0.3],
+        label: '2015 Survey',
+        values: [15.5, 78, 3.7, 1.7, 0.8, 0.3],
       },
       {
-        name: '2016 Survey',
         color: '#f23818',
-        data: [12, 74, 6, 4, 2, 1],
+        label: '2016 Survey',
+        values: [12, 74, 6, 4, 2, 1],
       },
     ],
-  },
+  }).highchartsOptions,
 ];
 
-const chartNewReleaseAdoptionEmber = {
-  options: {
-    title: {
-      text: 'Which version(s) of Ember are used in your apps?',
-    },
-    xAxis: {
-      categories: [
-        'Pre 1.6',
-        '1.6',
-        '1.7',
-        '1.8',
-        '1.9',
-        '1.10',
-        '1.11',
-        '1.12',
-        '1.13',
-        '2.0',
-        '2.1',
-        '2.2',
-        '2.3',
-        '2.4',
-        '2.5 Beta',
-        'Canary (master)',
-        'Custom Fork',
-        "I don't know",
-      ],
-    },
+const chartNewReleaseAdoptionEmber = new VerticalBarChart({
+  chart: {
+    categories: [
+      'Pre 1.6',
+      '1.6',
+      '1.7',
+      '1.8',
+      '1.9',
+      '1.10',
+      '1.11',
+      '1.12',
+      '1.13',
+      '2.0',
+      '2.1',
+      '2.2',
+      '2.3',
+      '2.4',
+      '2.5 Beta',
+      'Canary (master)',
+      'Custom Fork',
+      "I don't know",
+    ],
+    title: 'Which version(s) of Ember are used in your apps?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2016 Ember Community Survey',
       color: '#f23818',
-      data: [
+      label: '2016 Ember Community Survey',
+      values: [
         4, // 'Pre 1.6',
         2, // '1.6',
         3, // '1.7',
@@ -143,34 +127,31 @@ const chartNewReleaseAdoptionEmber = {
       ],
     },
   ],
-};
+}).highchartsOptions;
 
-const chartNewReleaseAdoptionEmberData = {
-  options: {
-    title: {
-      text: 'Ember Data',
-    },
-    xAxis: {
-      categories: [
-        'Pre 1.13',
-        '1.13',
-        '2.0',
-        '2.1',
-        '2.2',
-        '2.3',
-        '2.4',
-        '2.5 Beta',
-        'Canary (master)',
-        'Custom Fork',
-        "I don't know",
-      ],
-    },
+const chartNewReleaseAdoptionEmberData = new VerticalBarChart({
+  chart: {
+    categories: [
+      'Pre 1.13',
+      '1.13',
+      '2.0',
+      '2.1',
+      '2.2',
+      '2.3',
+      '2.4',
+      '2.5 Beta',
+      'Canary (master)',
+      'Custom Fork',
+      "I don't know",
+    ],
+    title: 'Ember Data',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2016 Ember Community Survey',
       color: '#f23818',
-      data: [
+      label: '2016 Ember Community Survey',
+      values: [
         11, // 'Pre 1.13',
         27, // '1.13',
         6, // '2.0',
@@ -185,30 +166,27 @@ const chartNewReleaseAdoptionEmberData = {
       ],
     },
   ],
-};
+}).highchartsOptions;
 
-const chartLongLivedCodebases = {
-  options: {
-    title: {
-      text: 'How old are your Ember applications?',
-    },
-    xAxis: {
-      categories: [
-        '> 24 Months',
-        '18–24 Months',
-        '12–18 Months',
-        '9–12 Months',
-        '6–9 Months',
-        '3–6 Months',
-        '< 3 Months',
-      ],
-    },
+const chartLongLivedCodebases = new VerticalBarChart({
+  chart: {
+    categories: [
+      '> 24 Months',
+      '18–24 Months',
+      '12–18 Months',
+      '9–12 Months',
+      '6–9 Months',
+      '3–6 Months',
+      '< 3 Months',
+    ],
+    title: 'How old are your Ember applications?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2015 Survey',
       color: '#cccccc',
-      data: [
+      label: '2015 Survey',
+      values: [
         1.9, // '> 24 Months',
         9.2, // '18–24 Months',
         18.4, // '12–18 Months',
@@ -219,9 +197,9 @@ const chartLongLivedCodebases = {
       ],
     },
     {
-      name: '2016 Survey',
       color: '#f23818',
-      data: [
+      label: '2016 Survey',
+      values: [
         15, // '> 24 Months',
         16, // '18–24 Months',
         23, // '12–18 Months',
@@ -232,35 +210,32 @@ const chartLongLivedCodebases = {
       ],
     },
   ],
-};
+}).highchartsOptions;
 
 const chartServerSide = [
-  {
-    options: {
-      title: {
-        text: 'What is the primary language of your server-side stack?',
-      },
-      xAxis: {
-        categories: [
-          'Ruby',
-          'Javascript',
-          'Java',
-          'PHP',
-          'Python',
-          '.NET',
-          'Elixir/Erlang',
-          'Go',
-          'Scala',
-          'Rust',
-          'Other',
-        ],
-      },
+  new VerticalBarChart({
+    chart: {
+      categories: [
+        'Ruby',
+        'Javascript',
+        'Java',
+        'PHP',
+        'Python',
+        '.NET',
+        'Elixir/Erlang',
+        'Go',
+        'Scala',
+        'Rust',
+        'Other',
+      ],
+      title: 'What is the primary language of your server-side stack?',
     },
-    data: [
+
+    rawData: [
       {
-        name: '2016 Ember Community Survey',
         color: '#f23818',
-        data: [
+        label: '2016 Ember Community Survey',
+        values: [
           41, // 'Ruby',
           24, // 'Javascript',
           17, // 'Java',
@@ -275,33 +250,31 @@ const chartServerSide = [
         ],
       },
     ],
-  },
-  {
-    options: {
-      title: {
-        text: 'What are your preferred server-side languages',
-      },
-      xAxis: {
-        categories: [
-          'Ruby',
-          'Javascript',
-          'Java',
-          'PHP',
-          'Python',
-          '.NET',
-          'Elixir/Erlang',
-          'Go',
-          'Scala',
-          'Rust',
-          'Other',
-        ],
-      },
+  }).highchartsOptions,
+
+  new VerticalBarChart({
+    chart: {
+      categories: [
+        'Ruby',
+        'Javascript',
+        'Java',
+        'PHP',
+        'Python',
+        '.NET',
+        'Elixir/Erlang',
+        'Go',
+        'Scala',
+        'Rust',
+        'Other',
+      ],
+      title: 'What are your preferred server-side languages',
     },
-    data: [
+
+    rawData: [
       {
-        name: '2016 Ember Community Survey',
         color: '#f23818',
-        data: [
+        label: '2016 Ember Community Survey',
+        values: [
           49, // 'Ruby',
           47, // 'Javascript',
           16, // 'Java',
@@ -316,32 +289,29 @@ const chartServerSide = [
         ],
       },
     ],
-  },
+  }).highchartsOptions,
 ];
 
 const chartBrowserSuppor = [
-  {
-    options: {
-      title: {
-        text: 'What browsers do Ember apps support?',
-      },
-      xAxis: {
-        categories: [
-          'Modern browsers (last two versions)',
-          'Mobile browsers',
-          'IE 11',
-          'IE 10',
-          'Legacy Chrome, Firefox, Safari',
-          'IE 9',
-          'IE 8',
-        ],
-      },
+  new VerticalBarChart({
+    chart: {
+      categories: [
+        'Modern browsers (last two versions)',
+        'Mobile browsers',
+        'IE 11',
+        'IE 10',
+        'Legacy Chrome, Firefox, Safari',
+        'IE 9',
+        'IE 8',
+      ],
+      title: 'What browsers do Ember apps support?',
     },
-    data: [
+
+    rawData: [
       {
-        name: '2016 Ember Community Survey',
         color: '#f23818',
-        data: [
+        label: '2016 Ember Community Survey',
+        values: [
           94, // 'Modern browsers (last two versions)',
           49, // 'Mobile browsers',
           40, // 'IE 11',
@@ -352,29 +322,27 @@ const chartBrowserSuppor = [
         ],
       },
     ],
-  },
-  {
-    options: {
-      title: {
-        text: 'What will they support next year?',
-      },
-      xAxis: {
-        categories: [
-          'Modern browsers (last two versions)',
-          'Mobile browsers',
-          'IE 11',
-          'IE 10',
-          'Legacy Chrome, Firefox, Safari',
-          'IE 9',
-          'IE 8',
-        ],
-      },
+  }).highchartsOptions,
+
+  new VerticalBarChart({
+    chart: {
+      categories: [
+        'Modern browsers (last two versions)',
+        'Mobile browsers',
+        'IE 11',
+        'IE 10',
+        'Legacy Chrome, Firefox, Safari',
+        'IE 9',
+        'IE 8',
+      ],
+      title: 'What will they support next year?',
     },
-    data: [
+
+    rawData: [
       {
-        name: '2016 Ember Community Survey',
         color: '#f23818',
-        data: [
+        label: '2016 Ember Community Survey',
+        values: [
           94, // 'Modern browsers (last two versions)',
           57, // 'Mobile browsers',
           35, // 'IE 11',
@@ -385,24 +353,21 @@ const chartBrowserSuppor = [
         ],
       },
     ],
-  },
+  }).highchartsOptions,
 ];
 
 const chartEmberEcosystem = [
-  {
-    options: {
-      title: {
-        text: 'Number of addons written per participant',
-      },
-      xAxis: {
-        categories: ['0', '1–3', '4–6', '> 6'],
-      },
+  new VerticalBarChart({
+    chart: {
+      categories: ['0', '1–3', '4–6', '> 6'],
+      title: 'Number of addons written per participant',
     },
-    data: [
+
+    rawData: [
       {
-        name: '2016 Ember Community Survey',
         color: '#f23818',
-        data: [
+        label: '2016 Ember Community Survey',
+        values: [
           48, // '0',
           36, // '1–3',
           8, // '4–6',
@@ -410,21 +375,19 @@ const chartEmberEcosystem = [
         ],
       },
     ],
-  },
-  {
-    options: {
-      title: {
-        text: 'Are your addons unit tested?',
-      },
-      xAxis: {
-        categories: ['All', 'Some', 'None', 'Unknown'],
-      },
+  }).highchartsOptions,
+
+  new VerticalBarChart({
+    chart: {
+      categories: ['All', 'Some', 'None', 'Unknown'],
+      title: 'Are your addons unit tested?',
     },
-    data: [
+
+    rawData: [
       {
-        name: '2015 Survey',
         color: '#cccccc',
-        data: [
+        label: '2015 Survey',
+        values: [
           15.6, // 'All',
           22.1, // 'Some',
           48, // 'None',
@@ -432,9 +395,9 @@ const chartEmberEcosystem = [
         ],
       },
       {
-        name: '2016 Survey',
         color: '#f23818',
-        data: [
+        label: '2016 Survey',
+        values: [
           23, // 'All',
           27, // 'Some',
           36, // 'None',
@@ -442,30 +405,27 @@ const chartEmberEcosystem = [
         ],
       },
     ],
-  },
+  }).highchartsOptions,
 ];
 
-const chartSEO = {
-  options: {
-    title: {
-      text: 'What method do you rely on for search engine indexing?',
-    },
-    xAxis: {
-      categories: [
-        'App is private, behind authentication flow, or this question generally does not apply',
-        "Google's Javascript Execution",
-        "Our app is indexable, but I don't know how",
-        'phantomjs or other pre-rendering (including Prerender.io)',
-        'FastBoot or other use of the "visit" API',
-        'noscript tags',
-      ],
-    },
+const chartSEO = new VerticalBarChart({
+  chart: {
+    categories: [
+      'App is private, behind authentication flow, or this question generally does not apply',
+      "Google's Javascript Execution",
+      "Our app is indexable, but I don't know how",
+      'phantomjs or other pre-rendering (including Prerender.io)',
+      'FastBoot or other use of the "visit" API',
+      'noscript tags',
+    ],
+    title: 'What method do you rely on for search engine indexing?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2016 Ember Community Survey',
       color: '#f23818',
-      data: [
+      label: '2016 Ember Community Survey',
+      values: [
         73, // 'App is private,...',
         16, // 'Google\'s Javascript Execution',
         12, // 'Our app is indexable, but I don\'t know how',
@@ -475,7 +435,7 @@ const chartSEO = {
       ],
     },
   ],
-};
+}).highchartsOptions;
 
 export default class EmberCommunitySurvey2016Controller extends Controller {
   chartHowlong = chartHowlong;
