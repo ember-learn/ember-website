@@ -57,11 +57,11 @@ const stackColors = {
   ariaDark: '#1A5E9A',
 };
 const stackData = {
-  htmlData: [1.4, 26.1, 72.5],
-  cssData: [6.5, 42.1, 51.4],
-  jsData: [2.7, 32.6, 64.7],
-  ariaData: [69.5, 26, 4.5],
-  emberData: [11.3, 40.7, 48],
+  htmlData: [100 * (17 / 1232), 100 * (319 / 1232), 100 * (888 / 1232)],
+  cssData: [100 * (80 / 1232), 100 * (515 / 1232), 100 * (630 / 1232)],
+  jsData: [100 * (33 / 1232), 100 * (397 / 1232), 100 * (787 / 1232)],
+  ariaData: [100 * (836 / 1232), 100 * (313 / 1232), 100 * (54 / 1232)],
+  emberData: [100 * (138 / 1232), 100 * (499 / 1232), 100 * (589 / 1232)],
 };
 const stackSkillsChart = {
   options: {
@@ -139,136 +139,6 @@ const SS_Q104 = {
         { name: '4 - 5 years', y: (100 / 1232) * 200 },
         { name: '5+ years', y: (100 / 1232) * 253 },
         // {name: 'Started on Sproutcore 2 (or before!)', y: (100/1232)*34}
-      ],
-    },
-  ],
-};
-*/
-
-// Q1.05: Grade your knowledge of HTML:
-//------------------------------------------------
-/*
-const SS_Q105 = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'Grade your knowledge of HTML:' },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
-  },
-  data: [
-    {
-      name: '2019',
-      color: color2019,
-      data: [
-        { name: 'Beginner', y: (100 / 1232) * 17 },
-        { name: 'Intermediate', y: (100 / 1232) * 319 },
-        { name: 'Advanced', y: (100 / 1232) * 888 },
-      ],
-    },
-  ],
-};
-*/
-
-// Q1.06: Grade your knowledge of CSS:
-//------------------------------------------------
-/*
-const SS_Q106 = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'Grade your knowledge of CSS:' },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
-  },
-  data: [
-    {
-      name: '2019',
-      color: color2019,
-      data: [
-        { name: 'Beginner', y: (100 / 1232) * 80 },
-        { name: 'Intermediate', y: (100 / 1232) * 515 },
-        { name: 'Advanced', y: (100 / 1232) * 630 },
-      ],
-    },
-  ],
-};
-*/
-
-// Q1.07: Grade your knowledge of JavaScript:
-//------------------------------------------------
-/*
-const SS_Q107 = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'Grade your knowledge of JavaScript:' },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
-  },
-  data: [
-    {
-      name: '2019',
-      color: color2019,
-      data: [
-        { name: 'Beginner', y: (100 / 1232) * 33 },
-        { name: 'Intermediate', y: (100 / 1232) * 397 },
-        { name: 'Advanced', y: (100 / 1232) * 787 },
-      ],
-    },
-  ],
-};
-*/
-
-// Q1.08: Grade your knowledge of ARIA:
-//------------------------------------------------
-/*
-const SS_Q108 = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'Grade your knowledge of ARIA:' },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
-  },
-  data: [
-    {
-      name: '2019',
-      color: color2019,
-      data: [
-        { name: 'Beginner', y: (100 / 1232) * 836 },
-        { name: 'Intermediate', y: (100 / 1232) * 313 },
-        { name: 'Advanced', y: (100 / 1232) * 54 },
-      ],
-    },
-  ],
-};
-*/
-
-// Q1.09: Grade your knowledge of Ember.js:
-//------------------------------------------------
-/*
-const SS_Q109 = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'Grade your knowledge of Ember.js:' },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
-  },
-  data: [
-    {
-      name: '2019',
-      color: color2019,
-      data: [
-        { name: 'Beginner', y: (100 / 1232) * 138 },
-        { name: 'Intermediate', y: (100 / 1232) * 499 },
-        { name: 'Advanced', y: (100 / 1232) * 589 },
       ],
     },
   ],
@@ -2283,11 +2153,6 @@ export default class EmberCommunitySurvey2019Controller extends Controller {
   //=============================================================================
   SS_Q101 = SS_Q101;
   // SS_Q104 = SS_Q104; // unused
-  // SS_Q105 = SS_Q105; // unused
-  // SS_Q106 = SS_Q106; // unused
-  // SS_Q107 = SS_Q107; // unused
-  // SS_Q108 = SS_Q108; // unused
-  // SS_Q109 = SS_Q109; // unused
   // SS_Q203 = SS_Q203; // unused
   SS_Q204 = SS_Q204;
   SS_Q205 = SS_Q205;
