@@ -56,28 +56,41 @@ const stackColors = {
   jsLight: '#F1BF28',
   ariaDark: '#1A5E9A',
 };
-const stackData = {
-  htmlData: [100 * (17 / 1232), 100 * (319 / 1232), 100 * (888 / 1232)],
-  cssData: [100 * (80 / 1232), 100 * (515 / 1232), 100 * (630 / 1232)],
-  jsData: [100 * (33 / 1232), 100 * (397 / 1232), 100 * (787 / 1232)],
-  ariaData: [100 * (836 / 1232), 100 * (313 / 1232), 100 * (54 / 1232)],
-  emberData: [100 * (138 / 1232), 100 * (499 / 1232), 100 * (589 / 1232)],
-};
-const stackSkillsChart = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'Grade your knowledge of various skills' },
-    yAxis: { title: { text: 'Percent' } },
-    xAxis: { categories: ['Beginner', 'Intermediate', 'Advanced'] },
+
+const stackSkillsChart = new VerticalBarChart({
+  chart: {
+    categories: ['Beginner', 'Intermediate', 'Advanced'],
+    title: 'Grade your knowledge of various skills',
   },
-  data: [
-    { name: 'HTML', color: stackColors.htmlLight, data: stackData.htmlData },
-    { name: 'CSS', color: stackColors.cssLight, data: stackData.cssData },
-    { name: 'JavaScript', color: stackColors.jsLight, data: stackData.jsData },
-    { name: 'ARIA', color: stackColors.ariaDark, data: stackData.ariaData },
-    { name: 'Ember.js', color: emberColors.ember, data: stackData.emberData },
+
+  rawData: [
+    {
+      color: stackColors.htmlLight,
+      label: 'HTML',
+      values: [100 * (17 / 1232), 100 * (319 / 1232), 100 * (888 / 1232)],
+    },
+    {
+      color: stackColors.cssLight,
+      label: 'CSS',
+      values: [100 * (80 / 1232), 100 * (515 / 1232), 100 * (630 / 1232)],
+    },
+    {
+      color: stackColors.jsLight,
+      label: 'JavaScript',
+      values: [100 * (33 / 1232), 100 * (397 / 1232), 100 * (787 / 1232)],
+    },
+    {
+      color: stackColors.ariaDark,
+      label: 'ARIA',
+      values: [100 * (836 / 1232), 100 * (313 / 1232), 100 * (54 / 1232)],
+    },
+    {
+      color: emberColors.ember,
+      label: 'Ember.js',
+      values: [100 * (138 / 1232), 100 * (499 / 1232), 100 * (589 / 1232)],
+    },
   ],
-};
+}).highchartsOptions;
 
 // DEMO OF AUTO-GENERATED HighCharts
 //=============================================================================
@@ -115,269 +128,225 @@ const SS_Q101 = new VerticalBarChart({
 // Q1.04: How long have you been working with Ember?
 //------------------------------------------------
 /*
-const SS_Q104 = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'How long have you been working with Ember?' },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
+const SS_Q104 = new VerticalBarChart({
+  chart: {
+    categories: [
+      // '< 3 months',
+      // '3 - 6 months',
+      // '6 - 12 months',
+      '< 1 year',
+      '1 - 2 years',
+      '2 - 3 years',
+      '3 - 4 years',
+      '4 - 5 years',
+      '5+ years',
+      // 'Started on Sproutcore 2 (or before!)',
+    ],
+    title: 'How long have you been working with Ember?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2019',
       color: color2019,
-      data: [
-        // {name: '< 3 months', y: (100/1232)*47},
-        // {name: '3 - 6 months', y: (100/1232)*56},
-        // {name: '6 - 12 months', y: (100/1232)*78},
-        { name: '< 1 year', y: (100 / 1232) * 181 },
-        { name: '1 - 2 years', y: (100 / 1232) * 173 },
-        { name: '2 - 3 years', y: (100 / 1232) * 213 },
-        { name: '3 - 4 years', y: (100 / 1232) * 209 },
-        { name: '4 - 5 years', y: (100 / 1232) * 200 },
-        { name: '5+ years', y: (100 / 1232) * 253 },
-        // {name: 'Started on Sproutcore 2 (or before!)', y: (100/1232)*34}
+      label: '2019',
+      values: [
+        // 100 * (47 / 1232),
+        // 100 * (56 / 1232),
+        // 100 * (78 / 1232),
+        100 * (181 / 1232),
+        100 * (173 / 1232),
+        100 * (213 / 1232),
+        100 * (209 / 1232),
+        100 * (200 / 1232),
+        100 * (253 / 1232),
+        // 100 * (34 / 1232),
       ],
     },
   ],
-};
+}).highchartsOptions;
 */
 
 // Q2.03: I use Ember for work:
 //------------------------------------------------
 /*
-const SS_Q203 = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'I use Ember for work:' },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
+const SS_Q203 = new VerticalBarChart({
+  chart: {
+    categories: [
+      'All of the time',
+      'Most of the time',
+      'Some of the time',
+      'Never',
+    ],
+    title: 'I use Ember for work:',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2019',
       color: color2019,
-      data: [
-        { name: 'All of the time', y: (100 / 1232) * 564 },
-        { name: 'Most of the time', y: (100 / 1232) * 406 },
-        { name: 'Some of the time', y: (100 / 1232) * 209 },
-        { name: 'Never', y: (100 / 1232) * 42 },
+      label: '2019',
+      values: [
+        100 * (564 / 1232),
+        100 * (406 / 1232),
+        100 * (209 / 1232),
+        100 * (42 / 1232),
       ],
     },
   ],
-};
+}).highchartsOptions;
 */
 
 // Q2.04: When taking your most recent job:
 //------------------------------------------------
 
-const SS_Q204 = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'When taking your most recent job:' },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
+const SS_Q204 = new VerticalBarChart({
+  chart: {
+    categories: [
+      'My employer was not using Ember',
+      'My employer was already using Ember',
+      'Does not apply (e.g. I am a student)',
+    ],
+    title: 'When taking your most recent job:',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2017',
       color: color2017,
-      data: [
-        { name: 'My employer was not using Ember', y: 53.63 },
-        { name: 'My employer was already using Ember', y: 38.74 },
-        { name: 'Does not apply (e.g. I am a student)', y: 6.56 },
-      ],
+      label: '2017',
+      values: [53.63, 38.74, 6.56],
     },
     {
-      name: '2018',
       color: color2018,
-      data: [
-        { name: 'My employer was not using Ember', y: 43.1 },
-        { name: 'My employer was already using Ember', y: 52.3 },
-        { name: 'Does not apply (e.g. I am a student)', y: 4.5 },
-      ],
+      label: '2018',
+      values: [43.1, 52.3, 4.5],
     },
     {
-      name: '2019',
       color: color2019,
-      data: [
-        { name: 'My employer was already using Ember', y: (100 / 1232) * 718 },
-        { name: 'My employer was not using Ember', y: (100 / 1232) * 453 },
-        { name: 'Does not apply (e.g. I am a student)', y: (100 / 1232) * 49 },
-      ],
+      label: '2019',
+      values: [100 * (453 / 1232), 100 * (718 / 1232), 100 * (49 / 1232)],
     },
   ],
-};
+}).highchartsOptions;
 
 // Q2.05: When taking your most recent job your pre-existing knowledge of Ember.js was:
 //------------------------------------------------
 
-const SS_Q205 = {
-  options: {
-    chart: { type: 'column' },
-    title: {
-      text:
-        'When taking your most recent job your pre-existing knowledge of Ember.js was:',
-    },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
+const SS_Q205 = new VerticalBarChart({
+  chart: {
+    categories: [
+      'I did not know Ember',
+      'Unimportant',
+      'Important',
+      'Very important',
+    ],
+    title:
+      'When taking your most recent job, your pre-existing knowledge of Ember.js was:',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2017',
       color: color2017,
-      data: [
-        { name: 'I did not know Ember', y: 47.13 },
-        { name: 'Unimportant', y: 25.49 },
-        { name: 'Very important', y: 12.87 },
-        { name: 'Important', y: 12.87 },
-      ],
+      label: '2017',
+      values: [47.13, 25.49, 12.87, 12.87],
     },
     {
-      name: '2018',
       color: color2018,
-      data: [
-        { name: 'I did not know Ember', y: 40.9 },
-        { name: 'Unimportant', y: 27.2 },
-        { name: 'Very important', y: 18.1 },
-        { name: 'Important', y: 13.8 },
-      ],
+      label: '2018',
+      values: [40.9, 27.2, 13.8, 18.1],
     },
     {
-      name: '2019',
       color: color2019,
-      data: [
-        { name: 'Very important', y: (100 / 1232) * 235 },
-        { name: 'Important', y: (100 / 1232) * 178 },
-        { name: 'Unimportant', y: (100 / 1232) * 268 },
-        { name: 'I did not know Ember', y: (100 / 1232) * 532 },
+      label: '2019',
+      values: [
+        100 * (532 / 1232),
+        100 * (268 / 1232),
+        100 * (178 / 1232),
+        100 * (235 / 1232),
       ],
     },
   ],
-};
+}).highchartsOptions;
 
 // Q3.01: How many developers at your company are responsible for writing Front-End code?
 //------------------------------------------------
 /*
-const SS_Q301 = {
-  options: {
-    chart: { type: 'column' },
-    title: {
-      text:
-        'How many developers at your company are responsible for writing Front-End code?',
-    },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
+const SS_Q301 = new VerticalBarChart({
+  chart: {
+    categories: [
+      '1-10',
+      '11-20',
+      '21-50',
+      '51-100',
+      '101-500',
+      '> 500',
+      'I do not know',
+    ],
+    title:
+      'How many developers at your company are responsible for writing Front-End code?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2019',
       color: color2019,
-      data: [
-        { name: '1-10', y: (100 / 1232) * 699 },
-        { name: '11-20', y: (100 / 1232) * 160 },
-        { name: '21-50', y: (100 / 1232) * 95 },
-        { name: '51-100', y: (100 / 1232) * 68 },
-        { name: '101-500', y: (100 / 1232) * 76 },
-        { name: '> 500', y: (100 / 1232) * 82 },
-        { name: 'I do not know', y: (100 / 1232) * 39 },
+      label: '2019',
+      values: [
+        100 * (699 / 1232),
+        100 * (160 / 1232),
+        100 * (95 / 1232),
+        100 * (68 / 1232),
+        100 * (76 / 1232),
+        100 * (82 / 1232),
+        100 * (39 / 1232),
       ],
     },
   ],
-};
+}).highchartsOptions;
 */
 
 // Q3.02: How many developers at your company are responsible for writing Ember code?
 //------------------------------------------------
 
-const SS_Q302 = {
-  options: {
-    chart: { type: 'column' },
-    title: {
-      text:
-        'How many developers at your company are responsible for writing Ember code?',
-    },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { categories: ['1–10', '11–20', '21–50', '51–100', '> 100'] },
-    yAxis: { title: { text: 'Percent' } },
+const SS_Q302 = new VerticalBarChart({
+  chart: {
+    categories: ['1–10', '11–20', '21–50', '51–100', '> 100'],
+    title:
+      'How many developers at your company are responsible for writing Ember code?',
   },
-  data: [
-    {
-      name: '2015',
-      color: color2015,
-      data: [
-        // 15.5,
-        78,
-        3.7,
-        1.7,
-        0.8,
-        0.3,
-      ],
-    },
-    {
-      name: '2016',
-      color: color2016,
-      data: [
-        //12,
-        74,
-        6,
-        4,
-        2,
-        1,
-      ],
-    },
-    {
-      name: '2017',
-      color: color2017,
-      data: [
-        // 8.7,
-        69.8,
-        6.8,
-        4.8,
-        2.5,
-        2,
-      ],
-    },
-    {
-      name: '2018',
-      color: color2018,
-      data: [
-        // 7.2,
-        62.5,
-        9.4,
-        5.3,
-        3.9,
-        6.4,
-      ],
-    },
 
+  rawData: [
     {
-      name: '2019',
+      color: color2015,
+      label: '2015',
+      values: [78, 3.7, 1.7, 0.8, 0.3],
+    },
+    {
+      color: color2016,
+      label: '2016',
+      values: [74, 6, 4, 2, 1],
+    },
+    {
+      color: color2017,
+      label: '2017',
+      values: [69.8, 6.8, 4.8, 2.5, 2],
+    },
+    {
+      color: color2018,
+      label: '2018',
+      values: [62.5, 9.4, 5.3, 3.9, 6.4],
+    },
+    {
       color: color2019,
-      data: [
-        { name: '1-10', y: (100 / 1232) * 833 },
-        { name: '11-20', y: (100 / 1232) * 101 },
-        { name: '21-50', y: (100 / 1232) * 79 },
-        { name: '51-100', y: (100 / 1232) * 47 },
-        // {name: '101-500', y: (100/1232)*58},
-        // {name: '> 500', y: (100/1232)*36},
-        { name: '> 100', y: (100 / 1232) * 94 },
-        // {name: 'I do not know', y: (100/1232)*59}
+      label: '2019',
+      values: [
+        100 * (833 / 1232),
+        100 * (101 / 1232),
+        100 * (79 / 1232),
+        100 * (47 / 1232),
+        100 * (94 / 1232), // 58 from 101-500, 36 from > 500
+        // 100 * (59 / 1232), // I do not know
       ],
     },
   ],
-};
+}).highchartsOptions;
 
 // Q3.03: At this time next year, how many Ember developers does your company plan to employ?
 //------------------------------------------------
