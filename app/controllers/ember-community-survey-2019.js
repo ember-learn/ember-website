@@ -79,8 +79,13 @@ const stackSkillsChart = {
   ],
 };
 
-// Data Updated
-const recommendingEmber = new VerticalBarChart({
+// DEMO OF AUTO-GENERATED HighCharts
+//=============================================================================
+
+// Q1.01: How likely are you to recommend Ember to your friends and colleagues?
+//------------------------------------------------
+
+const SS_Q101 = new VerticalBarChart({
   chart: {
     categories: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
     subtitle: '1 = Unlikely, 10 = Likely',
@@ -106,45 +111,6 @@ const recommendingEmber = new VerticalBarChart({
     },
   ],
 }).highchartsOptions;
-
-// DEMO OF AUTO-GENERATED HighCharts
-//=============================================================================
-
-// Q1.01: How likely are you to recommend Ember to your friends and colleagues?
-//------------------------------------------------
-/*
-const SS_Q101 = {
-  options: {
-    chart: { type: 'column' },
-    title: {
-      text:
-        'How likely are you to recommend Ember to your friends and colleagues?',
-    },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
-  },
-  data: [
-    {
-      name: '2019',
-      color: color2019,
-      data: [
-        { name: '10', y: (100 / 1232) * 384 },
-        { name: '9', y: (100 / 1232) * 186 },
-        { name: '8', y: (100 / 1232) * 278 },
-        { name: '7', y: (100 / 1232) * 148 },
-        { name: '6', y: (100 / 1232) * 67 },
-        { name: '5', y: (100 / 1232) * 36 },
-        { name: '4', y: (100 / 1232) * 36 },
-        { name: '3', y: (100 / 1232) * 34 },
-        { name: '2', y: (100 / 1232) * 19 },
-        { name: '1', y: (100 / 1232) * 39 },
-      ],
-    },
-  ],
-};
-*/
 
 // Q1.04: How long have you been working with Ember?
 //------------------------------------------------
@@ -2311,12 +2277,11 @@ const MS_Q601 = {
 
 //=============================================================================
 export default class EmberCommunitySurvey2019Controller extends Controller {
-  recommendingEmber = recommendingEmber;
   stackSkillsChart = stackSkillsChart;
 
   // DEMO OF AUTO-GENERATED EXPORTS
   //=============================================================================
-  // SS_Q101 = SS_Q101; // unused
+  SS_Q101 = SS_Q101;
   // SS_Q104 = SS_Q104; // unused
   // SS_Q105 = SS_Q105; // unused
   // SS_Q106 = SS_Q106; // unused
