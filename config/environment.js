@@ -78,6 +78,7 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV.APP.host = 'https://emberjs.com'; // For twitter:image etc to have full URL 
   }
 
   return ENV;
