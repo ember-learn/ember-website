@@ -20,6 +20,8 @@ jobs:
       - name: Check out a copy of the repo
         uses: actions/checkout@v2
 
+      - uses: mansona/npm-lockfile-version@v1
+
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v2
         with:
