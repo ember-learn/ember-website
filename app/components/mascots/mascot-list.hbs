@@ -1,6 +1,6 @@
 <ul class="unstyled grid {{if (eq @display "small") "sm:grid-2 lg:grid-3" "sm:grid-1 lg:grid-2"}}">
   {{#each @mascots as |mascot|}}
-    <li id={{mascot.id}} data-test-mascot>
+    <li data-test-mascot>
       <Mascots::MascotList::Item
         @mascot={{mascot}}
       />

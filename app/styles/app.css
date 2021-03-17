@@ -13,6 +13,7 @@
 @import "components/team-list.css";
 @import "components/terminal-code.css";
 @import "components/callout-banner.css";
+@import "components/mascots.css";
 @import "legacy/form.css";
 
 @media only percy {
