@@ -30,7 +30,7 @@ module('Integration | Component | mascots/mascot-list/item', function (hooks) {
       .dom('[data-test-field="Image"]')
       .hasAttribute(
         'src',
-        '/images/tomsters/austin-zoey.png',
+        /\/images\/tomsters\/austin-zoey.*\.png/,
         'We see the correct src for the image.'
       );
 
@@ -62,7 +62,7 @@ module('Integration | Component | mascots/mascot-list/item', function (hooks) {
       .dom('[data-test-field="Image"]')
       .hasAttribute(
         'src',
-        '/images/tomsters/a11y-zoey.png',
+        /\/images\/tomsters\/a11y-zoey.*\.png/,
         'We see the correct src for the image.'
       );
 
