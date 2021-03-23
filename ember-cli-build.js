@@ -15,7 +15,6 @@ module.exports = function (defaults) {
     emberHighCharts: {
       includeHighCharts: true,
       includeHighChartsMore: true,
-      includeModules: ['drilldown'],
     },
 
     'ember-leaflet': {

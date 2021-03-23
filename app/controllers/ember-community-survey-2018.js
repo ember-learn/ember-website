@@ -627,43 +627,6 @@ const demographicsRegion = {
     subtitle: { text: '' },
     xAxis: { type: 'category' },
     yAxis: { title: { text: 'Percent' } },
-    /*
-    TODO get the data for this, add "drilldown" keys above
-    drilldown: {
-      series: [{
-        name: 'North America',
-        id: 'North America',
-        data: [
-          {name: 'White', y: 80},
-          {name: 'Asian', y: 7.2},
-          {name: 'Prefer not to answer', y: 6.2},
-          {name: 'Hispanic, Latino, or Spanish origin', y: 6.1},
-          {name: 'Black or African American', y: 2.2},
-          {name: 'Middle Eastern or North African', y: 1.1}
-        ]
-      },{
-        name: 'Europe',
-        id: 'Europe',
-        data: [
-          {name: 'White', y: 81},
-          {name: 'Prefer not to answer', y: 10.1},
-          {name: 'Hispanic, Latino, or Spanish origin', y: 5.4},
-          {name: 'American Indian or Alaskan Native', y: 6.1},
-          {name: 'Middle Eastern or North African', y: 1.9},
-          {name: 'Asian', y: 1},
-          {name: 'Black or African American', y: 0.8}
-        ]
-      },{
-        name: 'Asia',
-        id: 'Asia',
-        data: [
-          {name: 'Asian', y: 67},
-          {name: 'White', y: 12},
-          {name: 'Prefer not to answer', y: 8.9}
-        ]
-      }]
-    }
-    */
   },
   data: [
     {
