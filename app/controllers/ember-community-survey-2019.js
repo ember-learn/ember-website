@@ -906,94 +906,101 @@ const MS_Q112 = {
 // Q1.13: Which operating system(s) do you use for development?
 //------------------------------------------------
 /*
-const MS_Q113 = {
-  options: {
-    chart: { type: 'column' },
-    title: {
-      text: 'Which operating system(s) do you use for development?',
-    },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
+const MS_Q113 = new VerticalBarChart({
+  chart: {
+    categories: ['Mac OS', 'Linux/Unix', 'Windows', 'Other'],
+    title: 'Which operating system(s) do you use for development?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2019',
       color: color2019,
-      data: [
-        { name: 'Mac OS', y: (100 / 1232) * 979 },
-        { name: 'Linux/Unix', y: (100 / 1232) * 338 },
-        { name: 'Windows', y: (100 / 1232) * 205 },
-        // {name: 'Other', y: (100/1232)*1}
+      label: '2019',
+      values: [
+        100 * (979 / 1232),
+        100 * (338 / 1232),
+        100 * (205 / 1232),
+        100 * (1 / 1232),
       ],
     },
   ],
-};
+}).highchartsOptions;
 */
 
 // Q1.14: With which of these other front-end framework(s) do you have some level of experience?
 //------------------------------------------------
 /*
-const MS_Q114 = {
-  options: {
-    chart: { type: 'column' },
-    title: {
-      text:
-        'With which of these other front-end framework(s) do you have experience?',
-    },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
+const MS_Q114 = new VerticalBarChart({
+  chart: {
+    categories: [
+      'Angular 1.x',
+      // 'Angular 2.x',
+      // 'Backbone',
+      // 'Ionic',
+      'jQuery / jQuery Mobile',
+      // 'Knockout',
+      // 'Marionette',
+      // 'Meteor',
+      // 'Polymer',
+      // 'Preact',
+      'React',
+      // 'Sencha (ExtJS/Sencha Touch)',
+      // 'Sproutcore',
+      'Vue',
+      'None (Ember is my first framework)',
+      // 'Other',
+    ],
+    title:
+      'With which of these other front-end framework(s) do you have experience?',
   },
-  data: [
+
+  rawData: [
     {
-      name: 'Some Experience',
       color: color2019,
-      data: [
-        { name: 'Angular 1.x', y: (100 / 1232) * 414 },
-        // {name: 'Angular 2.x', y: (100/1232)*207},
-        // {name: 'Backbone', y: (100/1232)*368},
-        // {name: 'Ionic', y: (100/1232)*95},
-        { name: 'jQuery / jQuery Mobile', y: (100 / 1232) * 950 },
-        // {name: 'Knockout', y: (100/1232)*123},
-        // {name: 'Marionette', y: (100/1232)*94},
-        // {name: 'Meteor', y: (100/1232)*72},
-        // {name: 'Polymer', y: (100/1232)*73},
-        // {name: 'Preact', y: (100/1232)*79},
-        { name: 'React', y: (100 / 1232) * 690 },
-        // {name: 'Sencha (ExtJS/Sencha Touch)', y: (100/1232)*91},
-        // {name: 'Sproutcore', y: (100/1232)*31},
-        { name: 'Vue', y: (100 / 1232) * 333 },
-        { name: 'None (Ember is my first framework)', y: (100 / 1232) * 106 },
-        // {name: 'Other', y: (100/1232)*94}
+      label: 'Some Experience',
+      values: [
+        100 * (414 / 1232), // Angular 1.x
+        // 100 * (207 / 1232), // Angular 2.x
+        // 100 * (368 / 1232), // Backbone
+        // 100 * (95 / 1232), // Ionic
+        100 * (950 / 1232), // jQuery / jQuery Mobile
+        // 100 * (123 / 1232), // Knockout
+        // 100 * (94 / 1232), // Marionette
+        // 100 * (72 / 1232), // Meteor
+        // 100 * (73 / 1232), // Polymer
+        // 100 * (79 / 1232), // Preact
+        100 * (690 / 1232), // React
+        // 100 * (91 / 1232), // Sencha (ExtJS/Sencha Touch)
+        // 100 * (31 / 1232), // Sproutcore
+        100 * (333 / 1232), // Vue
+        100 * (106 / 1232), // None (Ember is my first framework)
+        // 100 * (94 / 1232), // Other
       ],
     },
     {
-      name: 'Advanced Experience',
-      color: emberColors.lightBlue,
-      data: [
-        { name: 'Angular 1.x', y: (100 / 1232) * 126 },
-        // {name: 'Angular 2.x', y: (100/1232)*73},
-        // {name: 'Backbone', y: (100/1232)*129},
-        // {name: 'Ionic', y: (100/1232)*20},
-        { name: 'jQuery / jQuery Mobile', y: (100 / 1232) * 453 },
-        // {name: 'Knockout', y: (100/1232)*28},
-        // {name: 'Marionette', y: (100/1232)*38},
-        // {name: 'Meteor', y: (100/1232)*12},
-        // {name: 'Polymer', y: (100/1232)*16},
-        // {name: 'Preact', y: (100/1232)*22},
-        { name: 'React', y: (100 / 1232) * 286 },
-        // {name: 'Sencha (ExtJS/Sencha Touch)', y: (100/1232)*25},
-        // {name: 'Sproutcore', y: (100/1232)*7},
-        { name: 'Vue', y: (100 / 1232) * 79 },
-        { name: 'None (Ember is my first framework)', y: (100 / 1232) * 327 },
-        // {name: 'Other', y: (100/1232)*51}
+      color: color2019,
+      label: 'Advanced Experience',
+      values: [
+        100 * (126 / 1232), // Angular 1.x
+        // 100 * (73 / 1232), // Angular 2.x
+        // 100 * (129 / 1232), // Backbone
+        // 100 * (20 / 1232), // Ionic
+        100 * (453 / 1232), // jQuery / jQuery Mobile
+        // 100 * (28 / 1232), // Knockout
+        // 100 * (38 / 1232), // Marionette
+        // 100 * (12 / 1232), // Meteor
+        // 100 * (16 / 1232), // Polymer
+        // 100 * (22 / 1232), // Preact
+        100 * (286 / 1232), // React
+        // 100 * (25 / 1232), // Sencha (ExtJS/Sencha Touch)
+        // 100 * (7 / 1232), // Sproutcore
+        100 * (79 / 1232), // Vue
+        100 * (327 / 1232), // None (Ember is my first framework)
+        // 100 * (51 / 1232), // Other
       ],
     },
   ],
-};
+}).highchartsOptions;
 */
 
 // Q1.15: With which of these other front-end framework(s) do you have an advanced level of experience?

@@ -15,44 +15,40 @@ var color2017 = darkGrayColor;
 var color2018 = emberOrange;
 var colorFutureYear = lightGreenColor;
 
-const overallAdoption = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'Breakdown of Ember use by Version' },
-    subtitle: { text: '' },
-    yAxis: { title: { text: 'Percent' } },
-    xAxis: {
-      categories: [
-        'Pre 1.13',
-        '1.13',
-        '2.0',
-        '2.1',
-        '2.2',
-        '2.3',
-        '2.4 LTS',
-        '2.5',
-        '2.6',
-        '2.7',
-        '2.8 LTS',
-        '2.9',
-        '2.10',
-        '2.11',
-        '2.12',
-        '2.13',
-        '2.14',
-        '2.15',
-        '2.16',
-        '2.17',
-        '2.18',
-        '3.0',
-      ],
-    },
+const overallAdoption = new VerticalBarChart({
+  chart: {
+    categories: [
+      'Pre 1.13',
+      '1.13',
+      '2.0',
+      '2.1',
+      '2.2',
+      '2.3',
+      '2.4 LTS',
+      '2.5',
+      '2.6',
+      '2.7',
+      '2.8 LTS',
+      '2.9',
+      '2.10',
+      '2.11',
+      '2.12',
+      '2.13',
+      '2.14',
+      '2.15',
+      '2.16',
+      '2.17',
+      '2.18',
+      '3.0',
+    ],
+    title: 'Breakdown of Ember use by Version',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2016',
-      color: color2016,
-      data: [
+      color: lightGrayColor,
+      label: '2016',
+      values: [
         4 + 2 + 3 + 4 + 3 + 4 + 6 + 6,
         36,
         8,
@@ -78,9 +74,9 @@ const overallAdoption = {
       ],
     },
     {
-      name: '2017',
-      color: color2017,
-      data: [
+      color: darkGrayColor,
+      label: '2017',
+      values: [
         9.46,
         14.45,
         2.97,
@@ -106,9 +102,9 @@ const overallAdoption = {
       ],
     },
     {
-      name: '2018',
-      color: color2018,
-      data: [
+      color: emberOrange,
+      label: '2018',
+      values: [
         5,
         7.8,
         0,
@@ -134,7 +130,7 @@ const overallAdoption = {
       ],
     },
   ],
-};
+}).highchartsOptions;
 
 const communityParticipation = new HorizontalBarChart({
   chart: {
@@ -164,185 +160,137 @@ const communityParticipation = new HorizontalBarChart({
   ],
 }).highchartsOptions;
 
-const longLivedCodebases = {
-  options: {
-    chart: { type: 'column' },
-    title: {
-      text: 'Do you maintain an app started between March 2014 and March 2015?',
-    },
-    subtitle: {
-      text:
-        'Percent of Survey Participants Currently Maintaining an Ember App Created in 2014',
-    },
-    xAxis: {},
-    tooltip: { enabled: false },
-    yAxis: { title: { text: 'Percent' } },
+const longLivedCodebases = new VerticalBarChart({
+  chart: {
+    title: 'Do you maintain an app started between March 2014 and March 2015?',
+    subtitle:
+      'Percent of Survey Participants Currently Maintaining an Ember App Created in 2014',
   },
-  data: [
+
+  rawData: [
     {
       color: color2015,
-      name: '2015',
-      data: [79.5],
+      label: '2015',
+      values: [79.5],
     },
     {
       color: color2016,
-      name: '2016',
-      data: [38.6],
+      label: '2016',
+      values: [38.6],
     },
     {
       color: color2017,
-      name: '2017',
-      data: [34.3],
+      label: '2017',
+      values: [34.3],
     },
     {
       color: color2018,
-      name: '2018',
-      data: [31.3],
+      label: '2018',
+      values: [31.3],
     },
   ],
-};
+}).highchartsOptions;
 
-const serverSide = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'What is the primary language of your server-side stack?' },
-    subtitle: { text: '' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
+const serverSide = new VerticalBarChart({
+  chart: {
+    categories: [
+      'Ruby',
+      'Java',
+      'JavaScript',
+      'Python',
+      '.NET',
+      'PHP',
+      'Elixir / Erlang',
+      'Go',
+      'Scala',
+      'TypeScript',
+    ],
+    title: 'What is the primary language of your server-side stack?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2016',
       color: color2016,
-      data: [
-        { y: 41, name: 'Ruby' },
-        { y: 17, name: 'Java' },
-        { y: 24, name: 'JavaScript' },
-        { y: 12, name: 'Python' },
-        { y: 8, name: '.NET' },
-        { y: 13, name: 'PHP' },
-        { y: 6, name: 'Elixir / Erlang' },
-        { y: 5, name: 'Go' },
-        { y: 2, name: 'Scala' },
-        { y: 0, name: 'TypeScript' },
-      ],
+      label: '2016',
+      values: [41, 17, 24, 12, 8, 13, 6, 5, 2, 0],
     },
     {
-      name: '2017',
       color: color2017,
-      data: [
-        { name: 'Ruby', y: 36.97 },
-        { name: 'Java', y: 20.57 },
-        { name: 'JavaScript', y: 24.54 },
-        { name: 'Python', y: 13.5 },
-        { name: '.NET', y: 8.71 },
-        { name: 'PHP', y: 12.43 },
-        { name: 'Elixir / Erlang', y: 7.95 },
-        { name: 'Go', y: 6.44 },
-        { name: 'Scala', y: 2.65 },
-        { name: 'TypeScript', y: 1.58 },
-      ],
+      label: '2017',
+      values: [36.97, 20.57, 24.54, 13.5, 8.71, 12.43, 7.95, 6.44, 2.65, 1.58],
     },
     {
-      name: '2018',
       color: color2018,
-      data: [
-        { name: 'Ruby', y: 33.7 },
-        { name: 'Java', y: 26.4 },
-        { name: 'JavaScript', y: 22.1 },
-        { name: 'Python', y: 11.9 },
-        { name: '.NET', y: 10.5 },
-        { name: 'PHP', y: 10.3 },
-        { name: 'Elixir / Erlang', y: 9.2 },
-        { name: 'Go', y: 6.5 },
-        { name: 'Scala', y: 2.6 },
-        { name: 'TypeScript', y: 2.6 },
-      ],
+      label: '2018',
+      values: [33.7, 26.4, 22.1, 11.9, 10.5, 10.3, 9.2, 6.5, 2.6, 2.6],
     },
   ],
-};
+}).highchartsOptions;
 
-const serverSideFrameworks = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'Which server-side framework(s) do you use?' },
-    subtitle: { text: 'Top 8' },
-    xAxis: {
-      categories: [
-        'Rails (Ruby)',
-        'Express (JavaScript)',
-        'Phoenix (Elixir)',
-        'Spring / Spring Boot (Java)',
-        'Django (Python)',
-        'MVC (.NET)',
-        'None*',
-        'Flask (Python)',
-      ],
-    },
-    yAxis: { title: { text: 'Percent' } },
+const serverSideFrameworks = new VerticalBarChart({
+  chart: {
+    categories: [
+      'Rails (Ruby)',
+      'Express (JavaScript)',
+      'Phoenix (Elixir)',
+      'Spring / Spring Boot (Java)',
+      'Django (Python)',
+      'MVC (.NET)',
+      'None*',
+      'Flask (Python)',
+    ],
+    title: 'Which server-side framework(s) do you use?',
+    subtitle: 'Top 8',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2016',
       color: color2016,
-      data: [46.1, 25.8, 10.6, 11.0, 9, 7.6, 0, 5.7],
+      label: '2016',
+      values: [46.1, 25.8, 10.6, 11.0, 9, 7.6, 0, 5.7],
     },
     {
-      name: '2017',
       color: color2017,
-      data: [37.9, 20.4, 10.1, 8.8, 10.0, 6.2, 0, 5.8],
+      label: '2017',
+      values: [37.9, 20.4, 10.1, 8.8, 10.0, 6.2, 0, 5.8],
     },
     {
-      name: '2018',
       color: color2018,
-      data: [35.0, 21.6, 12.5, 20.5, 8.2, 7.7, 7.6, 5.7],
+      label: '2018',
+      values: [35.0, 21.6, 12.5, 20.5, 8.2, 7.7, 7.6, 5.7],
     },
   ],
-};
+}).highchartsOptions;
 
-const browserRequirements = {
-  options: {
-    chart: {
-      type: 'column',
-    },
-    title: {
-      text: 'Which browser versions do your applications target?',
-    },
-    subtitle: {
-      text: '',
-    },
-    xAxis: {
-      categories: ['Modern browsers', 'Mobile browsers', 'IE 11', 'IE 10'],
-    },
-    yAxis: {
-      title: {
-        text: 'Percent',
-      },
-    },
+const browserRequirements = new VerticalBarChart({
+  chart: {
+    categories: ['Modern browsers', 'Mobile browsers', 'IE 11', 'IE 10'],
+    title: 'Which browser versions do your applications target?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2016',
       color: color2016,
-      data: [93.6, 49.0, 39.6, 27.7],
+      label: '2016',
+      values: [93.6, 49.0, 39.6, 27.7],
     },
     {
-      name: '2017',
       color: color2017,
-      data: [94.26, 44.2, 38.5, 19.2],
+      label: '2017',
+      values: [94.26, 44.2, 38.5, 19.2],
     },
     {
-      name: '2018',
       color: color2018,
-      data: [96.5, 52, 45.8, 10.1],
+      label: '2018',
+      values: [96.5, 52, 45.8, 10.1],
     },
     {
-      name: 'Expected for 2019',
+      label: 'Expected for 2019',
       color: colorFutureYear,
-      data: [97.7, 57.3, 29.7, 3.7],
+      values: [97.7, 57.3, 29.7, 3.7],
     },
   ],
-};
+}).highchartsOptions;
 
 const recommendingEmber = new VerticalBarChart({
   chart: {
@@ -371,74 +319,64 @@ const recommendingEmber = new VerticalBarChart({
   ],
 }).highchartsOptions;
 
-const editorTool = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'What is your preferred text editor?' },
-    subtitle: { text: '' },
-    xAxis: {
-      // TODO: reorganize these to be in decreasing order of 2018 popularity?
-      categories: [
-        'Atom',
-        'Sublime Text',
-        'Vim',
-        'WebStorm / IntelliJ',
-        'VS Code',
-        'Emacs',
-        'Visual Studio',
-        'Notepad++',
-      ],
-    },
-    yAxis: { title: { text: 'Percent' } },
+const editorTool = new VerticalBarChart({
+  chart: {
+    categories: [
+      'Atom',
+      'Sublime Text',
+      'Vim',
+      'WebStorm / IntelliJ',
+      'VS Code',
+      'Emacs',
+      'Visual Studio',
+      'Notepad++',
+    ],
+    title: 'What is your preferred text editor?',
   },
-  data: [
-    {
-      name: '2016',
-      color: color2016,
-      data: [39, 39.2, 29.24, 20.6, 6, 3.9, 5, 3.2],
-    },
-    {
-      name: '2017',
-      color: color2017,
-      data: [38.11, 26.56, 26.37, 21.08, 19.31, 4.04, 3.97, 2.27],
-    },
-    {
-      name: '2018',
-      color: color2018,
-      data: [28.2, 20.3, 20.5, 19, 37.9, 3.5, 0, 1.9],
-    },
-  ],
-};
 
-const productionApps = {
-  options: {
-    chart: { type: 'column' },
-    title: {
-      text:
-        'Which of these best describes your use of Ember in production applications?',
-    },
-    subtitle: { text: '2018 Results Only' },
-    xAxis: {
-      categories: [
-        'Prototypes only',
-        'Tens of users',
-        'Hundreds of users',
-        'Thousands of users',
-        '10s of Thousands of users',
-        '100s of Thousands of users',
-        'Millions of users',
-      ],
-    },
-    yAxis: { title: { text: 'Percent' } },
-  },
-  data: [
+  rawData: [
     {
-      name: '2018',
+      color: color2016,
+      label: '2016',
+      values: [39, 39.2, 29.24, 20.6, 6, 3.9, 5, 3.2],
+    },
+    {
+      color: color2017,
+      label: '2017',
+      values: [38.11, 26.56, 26.37, 21.08, 19.31, 4.04, 3.97, 2.27],
+    },
+    {
       color: color2018,
-      data: [9.1, 23.3, 34.5, 30.7, 17.7, 11.1, 9.8],
+      label: '2018',
+      values: [28.2, 20.3, 20.5, 19, 37.9, 3.5, 0, 1.9],
     },
   ],
-};
+}).highchartsOptions;
+
+const productionApps = new VerticalBarChart({
+  chart: {
+    categories: [
+      'Prototypes only',
+      'Tens of users',
+      'Hundreds of users',
+      'Thousands of users',
+      '10s of Thousands of users',
+      '100s of Thousands of users',
+      'Millions of users',
+    ],
+    title:
+      'Which of these best describes your use of Ember in production applications?',
+    subtitle: '2018 Results Only',
+  },
+
+  rawData: [
+    {
+      color: color2018,
+      label: '2018',
+      values: [9.1, 23.3, 34.5, 30.7, 17.7, 11.1, 9.8],
+    },
+  ],
+}).highchartsOptions;
 
 const emberenoEmployment = new HorizontalBarChart({
   chart: {
@@ -471,217 +409,135 @@ const emberenoEmployment = new HorizontalBarChart({
   ],
 }).highchartsOptions;
 
-const applicationUsers = {
-  options: {
-    chart: {
-      type: 'column',
-    },
-    title: {
-      text: 'Who uses your applications?',
-    },
-    subtitle: {
-      text: '',
-    },
-    xAxis: {
-      categories: ['B2B', 'B2C', 'Internal users'],
-    },
-    yAxis: {
-      title: {
-        text: 'Percent',
-      },
-    },
-    colors: [color2016, color2017, color2018, lightGreenColor],
-    credits: {
-      enabled: false,
-    },
+const applicationUsers = new VerticalBarChart({
+  chart: {
+    categories: ['B2B', 'B2C', 'Internal users'],
+    title: 'Who uses your applications?',
   },
-  data: [
-    {
-      name: '2016',
-      data: [62.6, 48.6, 43.8],
-    },
-    {
-      name: '2017',
-      data: [65.6, 49, 39],
-    },
-    {
-      name: '2018',
-      data: [69.5, 49.4, 39.9],
-    },
-  ],
-};
 
-const teamSize = {
-  options: {
-    chart: {
-      type: 'column',
-    },
-    title: {
-      text: 'How many developers at your company work with Ember?',
-    },
-    subtitle: {
-      text: '',
-    },
-    xAxis: {
-      categories: ['None', '1–10', '11–20', '21–50', '51–100', 'More than 100'],
-    },
-    yAxis: {
-      title: {
-        text: 'Percent',
-      },
-    },
-  },
-  data: [
+  rawData: [
     {
-      name: '2015',
-      color: color2015,
-      data: [15.5, 78, 3.7, 1.7, 0.8, 0.3],
-    },
-    {
-      name: '2016',
       color: color2016,
-      data: [12, 74, 6, 4, 2, 1],
+      label: '2016',
+      values: [62.6, 48.6, 43.8],
     },
     {
-      name: '2017',
       color: color2017,
-      data: [8.7, 69.8, 6.8, 4.8, 2.5, 2],
+      label: '2017',
+      values: [65.6, 49, 39],
     },
     {
-      name: '2018',
       color: color2018,
-      data: [7.2, 62.5, 9.4, 5.3, 3.9, 6.4],
+      label: '2018',
+      values: [69.5, 49.4, 39.9],
     },
   ],
-};
+}).highchartsOptions;
 
-const employerUsingEmber = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'When starting your most recent job...' },
-    subtitle: { text: '' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
+const teamSize = new VerticalBarChart({
+  chart: {
+    categories: ['None', '1–10', '11–20', '21–50', '51–100', 'More than 100'],
+    title: 'How many developers at your company work with Ember?',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2017',
+      color: color2015,
+      label: '2015',
+      values: [15.5, 78, 3.7, 1.7, 0.8, 0.3],
+    },
+    {
+      color: color2016,
+      label: '2016',
+      values: [12, 74, 6, 4, 2, 1],
+    },
+    {
       color: color2017,
-      data: [
-        { name: 'My employer was not using Ember', y: 53.63 },
-        { name: 'My employer was already using Ember', y: 38.74 },
-        { name: 'Does not apply (e.g. I am a student)', y: 6.56 },
-      ],
+      label: '2017',
+      values: [8.7, 69.8, 6.8, 4.8, 2.5, 2],
     },
     {
-      name: '2018',
       color: color2018,
-      data: [
-        { name: 'My employer was not using Ember', y: 43.1 },
-        { name: 'My employer was already using Ember', y: 52.3 },
-        { name: 'Does not apply (e.g. I am a student)', y: 4.5 },
-      ],
+      label: '2018',
+      values: [7.2, 62.5, 9.4, 5.3, 3.9, 6.4],
     },
   ],
-};
+}).highchartsOptions;
 
-const gettingHired = {
-  options: {
-    chart: { type: 'column' },
-    title: {
-      text:
-        'When getting hired to your most recent job, your pre-existing knowledge of Ember was...',
-    },
-    subtitle: { text: '' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
+const employerUsingEmber = new VerticalBarChart({
+  chart: {
+    categories: [
+      'My employer was not using Ember',
+      'My employer was already using Ember',
+      'Does not apply (e.g. I am a student)',
+    ],
+    title: 'When starting your most recent job...',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2017',
       color: color2017,
-      data: [
-        { name: 'I did not know Ember', y: 47.13 },
-        { name: 'Unimportant', y: 25.49 },
-        { name: 'Very important', y: 12.87 },
-        { name: 'Important', y: 12.87 },
-      ],
+      label: '2017',
+      values: [53.63, 38.74, 6.56],
     },
     {
-      name: '2018',
       color: color2018,
-      data: [
-        { name: 'I did not know Ember', y: 40.9 },
-        { name: 'Unimportant', y: 27.2 },
-        { name: 'Very important', y: 18.1 },
-        { name: 'Important', y: 13.8 },
-      ],
+      label: '2018',
+      values: [43.1, 52.3, 4.5],
     },
   ],
-};
+}).highchartsOptions;
 
-const demographicsRegion = {
-  options: {
-    chart: { type: 'column' },
-    title: { text: 'In which region do you live?' },
-    subtitle: { text: '' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
-    /*
-    TODO get the data for this, add "drilldown" keys above
-    drilldown: {
-      series: [{
-        name: 'North America',
-        id: 'North America',
-        data: [
-          {name: 'White', y: 80},
-          {name: 'Asian', y: 7.2},
-          {name: 'Prefer not to answer', y: 6.2},
-          {name: 'Hispanic, Latino, or Spanish origin', y: 6.1},
-          {name: 'Black or African American', y: 2.2},
-          {name: 'Middle Eastern or North African', y: 1.1}
-        ]
-      },{
-        name: 'Europe',
-        id: 'Europe',
-        data: [
-          {name: 'White', y: 81},
-          {name: 'Prefer not to answer', y: 10.1},
-          {name: 'Hispanic, Latino, or Spanish origin', y: 5.4},
-          {name: 'American Indian or Alaskan Native', y: 6.1},
-          {name: 'Middle Eastern or North African', y: 1.9},
-          {name: 'Asian', y: 1},
-          {name: 'Black or African American', y: 0.8}
-        ]
-      },{
-        name: 'Asia',
-        id: 'Asia',
-        data: [
-          {name: 'Asian', y: 67},
-          {name: 'White', y: 12},
-          {name: 'Prefer not to answer', y: 8.9}
-        ]
-      }]
-    }
-    */
+const gettingHired = new VerticalBarChart({
+  chart: {
+    categories: [
+      'I did not know Ember',
+      'Unimportant',
+      'Very important',
+      'Important',
+    ],
+    title:
+      'When getting hired to your most recent job, your pre-existing knowledge of Ember was...',
   },
-  data: [
+
+  rawData: [
     {
-      name: '2018',
+      color: color2017,
+      label: '2017',
+      values: [47.13, 25.49, 12.87, 12.87],
+    },
+    {
       color: color2018,
-      data: [
-        { name: 'North America	', y: 53.7 },
-        { name: 'Europe	', y: 32.7 },
-        { name: 'Asia	', y: 7.8 },
-        { name: 'Oceania	', y: 3.4 },
-        { name: 'South America	', y: 3.2 },
-        { name: 'Africa	', y: 0.5 },
-        { name: 'Central America	', y: 0.5 },
-        { name: 'Other', y: 0.4 },
-      ],
+      label: '2018',
+      values: [40.9, 27.2, 18.1, 13.8],
     },
   ],
-};
+}).highchartsOptions;
+
+const demographicsRegion = new VerticalBarChart({
+  chart: {
+    categories: [
+      'North America',
+      'Europe',
+      'Asia',
+      'Oceania',
+      'South America',
+      'Africa',
+      'Central America',
+      'Other',
+    ],
+    title: 'In which region do you live?',
+  },
+
+  rawData: [
+    {
+      color: color2018,
+      label: '2018',
+      values: [53.7, 32.7, 7.8, 3.4, 3.2, 0.5, 0.5, 0.4],
+    },
+  ],
+}).highchartsOptions;
+
 function makeVersionChart(versionData, title) {
   var seriesData = [];
 

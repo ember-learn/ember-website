@@ -3,14 +3,14 @@
 <div class="container">
   <h1 class="text-center">The Team Behind Ember</h1>
 
-  <div class="mb-3">
+  <div class="mb-6">
     <p class="text-center">
       Ember is an Open Source project that relies on the tireless support of individual contributors. These are the teams
       that guide the development and instruction of Ember.js.
     </p>
   </div>
 
-  <section class="mb-3">
+  <section class="mb-6">
     <Teams::Team
       @description="The Steering Committee is responsible for the overall governance of the Ember project."
       @members={{this.steeringCommitteeMembers}}
@@ -18,14 +18,14 @@
     />
   </section>
 
-  <section class="mb-3">
+  <section class="mb-6">
     <Teams::Team
       @members={{this.coreTeamMembers}}
       @name="The Ember.js Core Team"
     />
   </section>
 
-  <section class="mb-3">
+  <section class="mb-6">
     <Teams::Team
       @description="The Ember CLI core team is responsible for maintaining ember-cli, the command line interface for managing and packaging Ember.js applications and addons. The team also maintains many of the addons in the default blueprint as well as fastboot."
       @members={{this.coreCLITeamMembers}}
@@ -33,7 +33,7 @@
     />
   </section>
 
-  <section class="mb-3">
+  <section class="mb-6">
     <Teams::Team
       @description="The Ember Data core team is responsible for the official data persistence library for Ember.js applications."
       @members={{this.dataTeamMembers}}
@@ -41,7 +41,7 @@
     />
   </section>
 
-  <section class="mb-3">
+  <section class="mb-6">
     <Teams::Team
       @description="The mission of the Ember Learning core team is to empower Ember users to learn, build and teach. This team is responsible for keeping the guides and API documentation updated, and manages the initiatives that support learning Ember."
       @members={{this.learningTeamMembers}}
