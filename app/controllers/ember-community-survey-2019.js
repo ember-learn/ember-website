@@ -414,30 +414,24 @@ const SS_Q305 = {
 // Q3.06: Does your business require applications to be internationalized?
 //------------------------------------------------
 
-const SS_Q306 = {
-  options: {
-    chart: { type: 'column' },
-    title: {
-      text: 'Does your business require applications to be internationalized?',
-    },
-    subtitle: { text: '' },
-    tooltip: { pointFormat: '{point.y:.2f}%' },
-    xAxis: { type: 'category' },
-    yAxis: { title: { text: 'Percent' } },
+const SS_Q306 = new VerticalBarChart({
+  chart: {
+    categories: ['Yes', 'No', 'I do not know'],
+    title: 'Does your business require applications to be internationalized?',
   },
-  data: [
+
+  rawData: [
     {
-      showInLegend: false,
-      name: '2019',
       color: color2019,
-      data: [
-        { name: 'Yes', y: (100 / 1232) * 695 },
-        { name: 'No', y: (100 / 1232) * 472 },
-        { name: 'I do not know', y: (100 / 1232) * 46 },
+      label: '2019',
+      values: [
+        100 * (695 / 1232),
+        100 * (472 / 1232), 
+        100 * (46 / 1232), 
       ],
     },
   ],
-};
+}).highchartsOptions;
 
 // Q4.05: What is the primary language of your server-side stack?
 //------------------------------------------------
