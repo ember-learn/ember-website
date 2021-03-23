@@ -518,8 +518,8 @@ const demographicsRegion = new VerticalBarChart({
   chart: {
     categories: [
       'North America',
-      'Europe	',
-      'Asia	',
+      'Europe',
+      'Asia',
       'Oceania',
       'South America',
       'Africa',
