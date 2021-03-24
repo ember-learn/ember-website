@@ -12,22 +12,23 @@
 <h2>How to Install</h2>
 
 <div class="mb-2">
-  <Releases::HowToInstall
-    @project={{@model}}
-  />
+  <Releases::HowToInstall @project={{@model}} />
 </div>
 
 
 <h2>What is an LTS release?</h2>
 
 <p>
-  Once a release of Ember gets promoted to LTS, it receives <strong>bugfixes for 36 weeks</strong> and <strong>security updates for 54 weeks</strong>.
+  Once a release of Ember gets promoted to LTS, it receives <strong>bugfixes for 36 weeks</strong> and <strong>security
+    updates for 54 weeks</strong>.
 </p>
 
 <p>
-  An LTS release is the best version to use if you won't be updating your app frequently, but want to help your app stay secure and working smoothly.
+  An LTS release is the best version to use if you won't be updating your app frequently, but want to help your app stay
+  secure and working smoothly.
 
-  Another reason to use an LTS is if you have a very large, complex app, since LTS versions get even more testing and scrutiny than usual.
+  Another reason to use an LTS is if you have a very large, complex app, since LTS versions get even more testing and
+  scrutiny than usual.
 </p>
 
 <p>
@@ -35,11 +36,13 @@
 
   The last minor version before the next major release is also considered to be an LTS.
 
-  For example, in Ember 2.x, the following versions were considered LTS's: 2.4, 2.8, 2.12, 2.16, and 2.18 (last version).
+  For example, in Ember 2.x, the following versions were considered LTS's: 2.4, 2.8, 2.12, 2.16, and 2.18 (last
+  version).
 </p>
 
 <p>
-  Before a version can be called an "LTS" release, it has to spend at least 6 weeks as a stable release, where it is used and tested by thousands of developers.
+  Before a version can be called an "LTS" release, it has to spend at least 6 weeks as a stable release, where it is
+  used and tested by thousands of developers.
 </p>
 
 
@@ -62,17 +65,19 @@
 
     <tbody>
       {{#each this.currentlySupportedLTS as |release|}}
-        <tr>
-          <td>{{release.version}}</td>
-          <td>{{format-date-time release.promotionDate "MMMM D, YYYY"}}</td>
-          <td>{{format-date-time (add-weeks release.promotionDate 36) "MMMM D, YYYY"}}</td>
-          <td>{{format-date-time (add-weeks release.promotionDate 54) "MMMM D, YYYY"}}</td>
-        </tr>
+      <tr>
+        <td>{{release.version}}</td>
+        <td>{{format-date-time release.promotionDate "MMMM D, YYYY"}}</td>
+        <td>{{format-date-time (add-weeks release.promotionDate 36) "MMMM D, YYYY"}}</td>
+        <td>{{format-date-time (add-weeks release.promotionDate 54) "MMMM D, YYYY"}}</td>
+      </tr>
       {{/each}}
     </tbody>
   </table>
 </div>
 
 <p>
-  These LTS versions are no longer maintained: 3.12 (Oct 2020), 3.8 (Aug 2019), 3.4 (Jan 2019), 2.18 (Feb 2018), 2.16 (Feb 2018), 2.12 (Apr 2017), 2.8 (Nov 2016), and 2.4 (Apr 2016). Their last minor release dates are shown in parentheses.
+  These LTS versions are no longer maintained: 3.16 (May 2020), 3.12 (Oct 2020), 3.8 (Aug 2019), 3.4 (Jan 2019), 2.18
+  (Feb 2018), 2.16 (Feb 2018), 2.12 (Apr 2017), 2.8 (Nov 2016), and 2.4 (Apr 2016). Their last minor release dates are
+  shown in parentheses.
 </p>
