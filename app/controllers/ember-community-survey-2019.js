@@ -424,11 +424,7 @@ const SS_Q306 = new VerticalBarChart({
     {
       color: color2019,
       label: '2019',
-      values: [
-        100 * (695 / 1232),
-        100 * (472 / 1232), 
-        100 * (46 / 1232), 
-      ],
+      values: [100 * (695 / 1232), 100 * (472 / 1232), 100 * (46 / 1232)],
     },
   ],
 }).highchartsOptions;
@@ -438,14 +434,8 @@ const SS_Q306 = new VerticalBarChart({
 
 const SS_Q405 = new VerticalBarChart({
   chart: {
-    categories: [ 
-      'Ruby',
-      'Java',
-      'JavaScript',
-      'Python',      
-      'PHP',],
-    title:
-      'What is the primary language of your server-side stack?',
+    categories: ['Ruby', 'Java', 'JavaScript', 'Python', 'PHP'],
+    title: 'What is the primary language of your server-side stack?',
   },
 
   rawData: [
@@ -495,7 +485,7 @@ const SS_Q410 = new VerticalBarChart({
         100 * (354 / 1232),
         100 * (701 / 1232),
         100 * (100 / 1232),
-        100 * (58 / 1232)      
+        100 * (58 / 1232),
       ],
     },
   ],
@@ -561,12 +551,12 @@ const SS_Q419 = {
 const SS_Q501 = new VerticalBarChart({
   chart: {
     categories: [
-      'North America', 
+      'North America',
       'Europe',
       'Asia',
       'Oceania',
       'South America',
-      'Other'
+      'Other',
     ],
     title: 'In which region do you live?',
   },
@@ -584,9 +574,9 @@ const SS_Q501 = new VerticalBarChart({
         100 * (566 / 1232),
         100 * (468 / 1232),
         100 * (87 / 1232),
-        100 * (40 / 1232),       
+        100 * (40 / 1232),
         100 * (32 / 1232),
-        100 * (17  / 1232),
+        100 * (17 / 1232),
       ],
     },
   ],
@@ -621,9 +611,8 @@ const SS_Q502 = {
 // Q1.03: What are the ways you learn about and stay up to date with Ember?
 //------------------------------------------------
 
-
 const MS_Q103 = new VerticalBarChart({
-  chart: {    
+  chart: {
     title: 'What are the ways you learn about and stay up to date with Ember?',
   },
 
@@ -749,34 +738,17 @@ const MS_Q111 = new VerticalBarChart({
     {
       color: color2016,
       label: '2016',
-      values: [ 
-        39,
-        39.2,
-        29.24,
-        20.6,
-        6,],
+      values: [39, 39.2, 29.24, 20.6, 6],
     },
     {
       color: color2017,
       label: '2017',
-      values: [
-        38.11,
-        26.56,
-        26.37,
-        21.08,
-        19.31,
-      ],
+      values: [38.11, 26.56, 26.37, 21.08, 19.31],
     },
     {
       color: color2018,
       label: '2018',
-      values: [
-        28.2,
-        20.3,
-        20.5,
-        19,
-        37.9,
-      ],
+      values: [28.2, 20.3, 20.5, 19, 37.9],
     },
     {
       color: color2019,
@@ -803,7 +775,7 @@ const MS_Q111 = new VerticalBarChart({
 //------------------------------------------------
 
 const MS_Q112 = new VerticalBarChart({
-  chart: {   
+  chart: {
     title: 'Describe your participation in the Ember community:',
   },
 
@@ -811,7 +783,7 @@ const MS_Q112 = new VerticalBarChart({
     {
       color: color2019,
       label: '2019',
-      values: [ 
+      values: [
         { name: 'Answering community questions', y: 100 * (194 / 1232) },
         { name: 'Attending meetups / conferences', y: 100 * (437 / 1232) },
         { name: 'Maintaining a library or addon', y: 100 * (327 / 1232) },
@@ -822,9 +794,9 @@ const MS_Q112 = new VerticalBarChart({
         { name: 'Presenting at events / lectures', y: 100 * (152 / 1232) },
         { name: 'Writing blog posts / articles', y: 100 * (178 / 1232) },
         // {name: 'None of these', y: (100/1232)*396},
-        { name: 'Other', y: 100 * (75 / 1232) },          
+        { name: 'Other', y: 100 * (75 / 1232) },
       ],
-      }
+    },
   ],
 }).highchartsOptions;
 
@@ -1066,12 +1038,12 @@ const MS_Q202 = {
 //------------------------------------------------
 
 const MS_Q304 = new VerticalBarChart({
-  chart: {   
+  chart: {
     title: 'What are the accessibility requirements for your business?',
   },
 
   rawData: [
-      {
+    {
       color: color2019,
       label: '2019',
       values: [
@@ -1081,7 +1053,7 @@ const MS_Q304 = new VerticalBarChart({
         },
         { name: 'Self-imposed requirement', y: 100 * (473 / 1232) },
         { name: 'No requirements', y: 100 * (462 / 1232) },
-        { name: 'I do not know', y: 100 * (201 /1232) },
+        { name: 'I do not know', y: 100 * (201 / 1232) },
       ],
     },
   ],
@@ -1497,7 +1469,7 @@ const MS_Q406 = new VerticalBarChart({
   },
 
   rawData: [
-    {   
+    {
       color: color2016,
       label: '2016',
       values: [
@@ -1510,7 +1482,7 @@ const MS_Q406 = new VerticalBarChart({
         // , 0, 5.7
       ],
     },
-    {   
+    {
       color: color2017,
       label: '2017',
       values: [
@@ -1523,7 +1495,7 @@ const MS_Q406 = new VerticalBarChart({
         // , 0, 5.8
       ],
     },
-    {   
+    {
       color: color2018,
       label: '2018',
       values: [
@@ -1539,7 +1511,7 @@ const MS_Q406 = new VerticalBarChart({
     {
       color: color2019,
       label: '2019',
-      values: [ 
+      values: [
         { name: 'Rails', y: (100 / 1209) * 435 },
         { name: 'Express', y: (100 / 1209) * 239 },
         // {name: 'Flask (Python)', y: (100/1232)*74},
@@ -1557,9 +1529,9 @@ const MS_Q406 = new VerticalBarChart({
         // {name: 'None (no server-side framework)', y: (100/1232)*61},
         // {name: 'Other', y: (100/1232)*150},
         { name: 'Django', y: (100 / 1209) * 93 },
-        { name: 'MVC/WebAPI', y: (100 / 1209) * 97 }, 
+        { name: 'MVC/WebAPI', y: (100 / 1209) * 97 },
       ],
-      }
+    },
   ],
 }).highchartsOptions;
 
@@ -1646,7 +1618,7 @@ const MS_Q409 = new VerticalBarChart({
   rawData: [
     {
       color: color2019,
-      label: '2019',      
+      label: '2019',
       values: [
         { name: '< 6 months', y: 100 * (190 / 1232) },
         { name: '6 - 12 months', y: 100 * (209 / 1232) },
@@ -1995,10 +1967,10 @@ const MS_Q504 = {
 //------------------------------------------------
 
 const MS_Q601 = new VerticalBarChart({
-  chart: {    
+  chart: {
     title: 'Did you participate in any of the following surveys?',
   },
-  rawData: [  
+  rawData: [
     {
       label: '2019',
       color: color2019,
