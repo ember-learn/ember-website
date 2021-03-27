@@ -613,58 +613,56 @@ const SS_Q502 = {
 
 const MS_Q103 = new VerticalBarChart({
   chart: {
+    categories: [
+      'Guides & API Docs',
+      'Ember Blog',
+      'RFCs',
+      'Code samples',
+      'Blog posts',
+      'Stack Overflow',
+      'Newsletters',
+      'Discord',
+      'Social media',
+      'GitHub PRs',
+      // 'discuss.emberjs.com',
+      // 'Attending conferences',
+      // 'Screencasts or video training',
+      // 'Podcasts',
+      // 'Local meetups',
+      // 'Books / e-Books',
+      // 'Ember Core notes repo',
+      // 'In-person or other formal training',
+      // 'Reddit',
+      // 'Other',
+    ],
     title: 'What are the ways you learn about and stay up to date with Ember?',
   },
 
   rawData: [
     {
-      color: color2017,
-      label: '2017',
-      values: [
-        // {name: 'Writing RFCs', y:1.9},
-        // {name: 'Commenting on RFCs', y:5.2},
-        { name: 'RFCs', y: 33.3 },
-        { name: 'Github PRs', y: 16.4 },
-        { name: 'Stack Overflow', y: 41.6 },
-        { name: 'emberjs.com blog', y: 49.8 },
-      ],
-    },
-    {
-      color: color2018,
-      label: '2018',
-      values: [
-        // {name: 'Writing RFCs', y:3.0},
-        // {name: 'Commenting on RFCs', y:9.8},
-        { name: 'RFCs', y: 52.2 },
-        { name: 'Github PRs', y: 23.8 },
-        { name: 'Stack Overflow', y: 34.2 },
-        { name: 'emberjs.com blog', y: 57.8 },
-      ],
-    },
-    {
       color: color2019,
       label: '2019',
       values: [
-        // {name: 'Books / ebooks', y: (100/1232)*174},
-        // {name: 'Attending conferences', y: (100/1232)*313},
-        // {name: 'discuss.emberjs.com', y: (100/1232)*349},
-        // {name: 'Ember Core Notes Repo', y: (100/1232)*154},
-        { name: 'Github PRs', y: 100 * (372 / 1232) },
-        { name: 'Guides & API Docs', y: 100 * (878 / 1232) },
-        { name: 'RFCs', y: 100 * (638 / 1232) },
-        { name: 'Discord server (chat)', y: 100 * (398 / 1232) },
-        { name: 'emberjs.com blog', y: 100 * (668 / 1232) },
-        { name: 'Blog posts', y: 100 * (575 / 1232) },
-        // {name: 'In-person or other formal training', y: (100/1232)*142},
-        // {name: 'Local meetups', y: (100/1232)*218},
-        { name: 'Newsletters', y: 100 * (413 / 1232) },
-        // {name: 'Podcasts', y: (100/1232)*248},
-        { name: 'Code Samples', y: 100 * (626 / 1232) },
-        // {name: 'Reddit', y: (100/1232)*124},
-        // {name: 'Screencasts or video training', y: (100/1232)*255},
-        { name: 'Stack Overflow', y: 100 * (419 / 1232) },
-        { name: 'Social Media', y: 100 * (398 / 1232) },
-        //{name: 'Other', y: (100/1232)*75}
+        100 * (878 / 1232), // Guides & API Docs
+        100 * (669 / 1232), // Ember Blog
+        100 * (638 / 1232), // RFCs
+        100 * (626 / 1232), // Code samples
+        100 * (575 / 1232), // Blog posts
+        100 * (419 / 1232), // Stack Overflow
+        100 * (413 / 1232), // Newsletters
+        100 * (398 / 1232), // Discord
+        100 * (398 / 1232), // Social media
+        100 * (372 / 1232), // GitHub PRs
+        // 100 * (349 / 1232), // discuss.emberjs.com
+        // 100 * (313 / 1232), // Attending conferences
+        // 100 * (255 / 1232), // Screencasts or video training
+        // 100 * (248 / 1232), // Podcasts
+        // 100 * (218 / 1232), // Local meetups
+        // 100 * (174 / 1232), // Books / e-Books
+        // 100 * (154 / 1232), // Ember Core notes repo
+        // 100 * (142 / 1232), // In-person or other formal training
+        // 100 * (124 / 1232), // Reddit
+        // 100 * (75 / 1232), // Other
       ],
     },
   ],
@@ -776,6 +774,19 @@ const MS_Q111 = new VerticalBarChart({
 
 const MS_Q112 = new VerticalBarChart({
   chart: {
+    categories: [
+      'Answering community questions',
+      'Attending meetups / conferences',
+      'Maintaining a library or addon',
+      'Opening issues',
+      'Opening PRs',
+      'Creating RFCs',
+      'Commenting on RFCs',
+      'Presenting at events / lectures',
+      'Writing blog posts / articles',
+      // 'None of these',
+      'Other',
+    ],
     title: 'Describe your participation in the Ember community:',
   },
 
@@ -784,17 +795,17 @@ const MS_Q112 = new VerticalBarChart({
       color: color2019,
       label: '2019',
       values: [
-        { name: 'Answering community questions', y: 100 * (194 / 1232) },
-        { name: 'Attending meetups / conferences', y: 100 * (437 / 1232) },
-        { name: 'Maintaining a library or addon', y: 100 * (327 / 1232) },
-        { name: 'Opening issues', y: 100 * (436 / 1232) },
-        { name: 'Opening PRs', y: 100 * (299 / 1232) },
-        { name: 'Creating RFCs', y: 100 * (42 / 1232) },
-        { name: 'Commenting on RFCs', y: 100 * (160 / 1232) },
-        { name: 'Presenting at events / lectures', y: 100 * (152 / 1232) },
-        { name: 'Writing blog posts / articles', y: 100 * (178 / 1232) },
-        // {name: 'None of these', y: (100/1232)*396},
-        { name: 'Other', y: 100 * (75 / 1232) },
+        100 * (194 / 1232),
+        100 * (437 / 1232),
+        100 * (327 / 1232),
+        100 * (436 / 1232),
+        100 * (299 / 1232),
+        100 * (42 / 1232),
+        100 * (160 / 1232),
+        100 * (152 / 1232),
+        100 * (178 / 1232),
+        // 100 * (396 / 1232),
+        100 * (75 / 1232),
       ],
     },
   ],
@@ -1039,6 +1050,12 @@ const MS_Q202 = {
 
 const MS_Q304 = new VerticalBarChart({
   chart: {
+    categories: [
+      'Required by law to provide accessibility',
+      'Self-imposed requirement',
+      'No requirements',
+      'I do not know',
+    ],
     title: 'What are the accessibility requirements for your business?',
   },
 
@@ -1047,13 +1064,10 @@ const MS_Q304 = new VerticalBarChart({
       color: color2019,
       label: '2019',
       values: [
-        {
-          name: 'Required by law to provide accessibility',
-          y: (100 / 1232) * 224,
-        },
-        { name: 'Self-imposed requirement', y: 100 * (473 / 1232) },
-        { name: 'No requirements', y: 100 * (462 / 1232) },
-        { name: 'I do not know', y: 100 * (201 / 1232) },
+        100 * (224 / 1232),
+        100 * (473 / 1232),
+        100 * (462 / 1232),
+        100 * (201 / 1232),
       ],
     },
   ],
@@ -1462,8 +1476,8 @@ const MS_Q406 = new VerticalBarChart({
       'Spring',
       'Django',
       'MVC/WebAPI',
-      // 'None*',
       // 'Flask (Python)'
+      // 'None',
     ],
     title: 'Which of these server-side frameworks do you use?',
   },
@@ -1479,7 +1493,8 @@ const MS_Q406 = new VerticalBarChart({
         11.0,
         9,
         7.6,
-        // , 0, 5.7
+        // 5.7,
+        // 0,
       ],
     },
     {
@@ -1492,7 +1507,8 @@ const MS_Q406 = new VerticalBarChart({
         8.8,
         10.0,
         6.2,
-        // , 0, 5.8
+        // 5.8,
+        // 0,
       ],
     },
     {
@@ -1505,31 +1521,32 @@ const MS_Q406 = new VerticalBarChart({
         20.5,
         8.2,
         7.7,
-        // , 7.6, 5.7
+        // 5.7,
+        // 7.6,
       ],
     },
     {
       color: color2019,
       label: '2019',
       values: [
-        { name: 'Rails', y: (100 / 1209) * 435 },
-        { name: 'Express', y: (100 / 1209) * 239 },
-        // {name: 'Flask (Python)', y: (100/1232)*74},
-        // {name: 'Hapi (JavaScript)', y: (100/1232)*26},
-        // {name: 'Koa (JavaScript)', y: (100/1232)*34},
-        // {name: 'Laravel (PHP)', y: (100/1232)*63},
-        // {name: 'MVC (.NET)', y: (100/1232)*48},
-        { name: 'Phoenix', y: (100 / 1209) * 133 },
-        // {name: 'Play (Scala & Java)', y: (100/1232)*71},
-        // {name: 'Sails.js (JavaScript)', y: (100/1232)*14},
-        // {name: 'Sinatra (Ruby)', y: (100/1232)*37},
-        { name: 'Spring', y: (100 / 1209) * 115 },
-        // {name: 'Spring Boot (Java)', y: (100/1232)*92},
-        // {name: 'Symfony (PHP)', y: (100/1232)*38},
-        // {name: 'None (no server-side framework)', y: (100/1232)*61},
-        // {name: 'Other', y: (100/1232)*150},
-        { name: 'Django', y: (100 / 1209) * 93 },
-        { name: 'MVC/WebAPI', y: (100 / 1209) * 97 },
+        100 * (435 / 1209), // Rails
+        100 * (239 / 1209), // Express
+        100 * (133 / 1209), // Phoenix
+        100 * (115 / 1209), // Spring
+        100 * (93 / 1209), // Django
+        100 * (97 / 1209), // MVC/WebAPI
+        // 100 * (74 / 1209), // Flask (Python)
+        // 100 * (61 / 1209), // None
+        // 100 * (150 / 1232), // Other
+        // 100 * (92 / 1232), // Spring Boot (Java)
+        // 100 * (71 / 1232), // Play (Scala & Java)
+        // 100 * (63 / 1232), // Laravel (PHP)
+        // 100 * (48 / 1232), // MVC (.NET)
+        // 100 * (38 / 1232), // Symfony (PHP)
+        // 100 * (37 / 1232), // Sinatra (Ruby)
+        // 100 * (34 / 1232), // Koa (JavaScript)
+        // 100 * (26 / 1232), // Hapi (JavaScript)
+        // 100 * (14 / 1232), // Sails.js (JavaScript)
       ],
     },
   ],
@@ -1613,6 +1630,14 @@ const MS_Q408 = {
 
 const MS_Q409 = new VerticalBarChart({
   chart: {
+    categories: [
+      '< 6 months',
+      '6 - 12 months',
+      '1 - 2 years',
+      '2 - 3 years',
+      '3 - 4 years',
+      '4+ years',
+    ],
     title: 'How old are your Ember applications?',
   },
   rawData: [
@@ -1620,12 +1645,12 @@ const MS_Q409 = new VerticalBarChart({
       color: color2019,
       label: '2019',
       values: [
-        { name: '< 6 months', y: 100 * (190 / 1232) },
-        { name: '6 - 12 months', y: 100 * (209 / 1232) },
-        { name: '1 - 2 years', y: 100 * (361 / 1232) },
-        { name: '2 - 3 years', y: 100 * (399 / 1232) },
-        { name: '3 - 4 years', y: 100 * (312 / 1232) },
-        { name: '4+ years', y: 100 * (336 / 1232) },
+        100 * (190 / 1232),
+        100 * (209 / 1232),
+        100 * (361 / 1232),
+        100 * (399 / 1232),
+        100 * (312 / 1232),
+        100 * (336 / 1232),
       ],
     },
   ],
@@ -1761,11 +1786,7 @@ const MS_Q413 = new VerticalBarChart({
     {
       label: '2019',
       color: color2019,
-      values: [
-        { name: 'Business consumers (B2B)', y: 100 * (888 / 1232) },
-        { name: 'The general public (B2C)', y: 100 * (613 / 1232) },
-        { name: 'Internal users', y: 100 * (479 / 1232) },
-      ],
+      values: [100 * (888 / 1232), 100 * (613 / 1232), 100 * (479 / 1232)],
     },
   ],
 }).highchartsOptions;
@@ -1968,6 +1989,12 @@ const MS_Q504 = {
 
 const MS_Q601 = new VerticalBarChart({
   chart: {
+    categories: [
+      '2018 NPM JavaScript EcoSystem Survey',
+      '2018 StackOverflow Developer Survey',
+      'GitLab 2018 Global Developer Survey',
+      'The State of JavaScript 2018',
+    ],
     title: 'Did you participate in any of the following surveys?',
   },
   rawData: [
@@ -1975,11 +2002,10 @@ const MS_Q601 = new VerticalBarChart({
       label: '2019',
       color: color2019,
       values: [
-        { name: '2018 NPM JavaScript EcoSystem Survey', y: 100 * (261 / 1232) },
-        { name: '2018 StackOverflow Developer Survey', y: 100 * (311 / 1232) },
-        { name: 'GitLab 2018 Global Developer Survey', y: 100 * (45 / 1232) },
-        { name: 'The State of JavaScript 2018', y: 100 * (484 / 1232) },
-        // {name: 'Other(s)', y: (100/1232)*0}
+        100 * (261 / 1232),
+        100 * (311 / 1232),
+        100 * (45 / 1232),
+        100 * (484 / 1232),
       ],
     },
   ],
