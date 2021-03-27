@@ -409,19 +409,19 @@ const browserRequirements = new VerticalBarChart({
 
   rawData: [
     {
+      color: lightGrayColor,
       label: '2016',
       values: [94, 49, 40, 28, 13, 12, 3],
-      color: lightGrayColor,
     },
     {
+      color: darkGrayColor,
       label: '2017',
       values: [94.26, 43.22, 37.67, 18.8, 9.15, 6.37, 1.39],
-      color: darkGrayColor,
     },
     {
+      color: emberOrange,
       label: 'What is expected next year?',
       values: [93.69, 51.36, 28.26, 9.84, 7.82, 2.9, 0.76],
-      color: emberOrange,
     },
   ],
 }).highchartsOptions;
@@ -470,13 +470,13 @@ const textEditor = new VerticalBarChart({
 
   rawData: [
     {
-      label: '2016',
       color: darkGrayColor,
+      label: '2016',
       values: [39, 39.2, 29.24, 20.6, 6, 3.9, 5, 3.2],
     },
     {
-      label: '2017',
       color: emberOrange,
+      label: '2017',
       values: [38.11, 26.56, 26.37, 21.08, 19.31, 4.04, 3.97, 2.27],
     },
   ],
@@ -497,13 +497,13 @@ const productionUsers = new VerticalBarChart({
 
   rawData: [
     {
-      label: '2016',
       color: darkGrayColor,
+      label: '2016',
       values: [15.11, 26.2, 34.2, 39.6, 8.2],
     },
     {
-      label: '2017',
       color: emberOrange,
+      label: '2017',
       values: [12.24, 24.42, 36.85, 42.4, 9.27],
     },
   ],
@@ -521,8 +521,8 @@ const whenStarting = new VerticalBarChart({
 
   rawData: [
     {
-      label: '2017',
       color: emberOrange,
+      label: '2017',
       values: [53.63, 38.74, 6.56],
     },
   ],
@@ -542,8 +542,8 @@ const preExistingKnowledge = new VerticalBarChart({
 
   rawData: [
     {
-      label: '2017',
       color: emberOrange,
+      label: '2017',
       values: [47.13, 25.49, 12.87, 12.87],
     },
   ],
@@ -565,8 +565,8 @@ const demographics = new VerticalBarChart({
 
   rawData: [
     {
-      label: '2017',
       color: emberOrange,
+      label: '2017',
       values: [49, 33.6, 7.8, 3.7, 3.5, 0.8, 0.4],
     },
   ],

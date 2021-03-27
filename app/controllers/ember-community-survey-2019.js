@@ -1769,23 +1769,23 @@ const MS_Q413 = new VerticalBarChart({
   },
   rawData: [
     {
-      label: '2016',
       color: color2016,
+      label: '2016',
       values: [62.6, 48.6, 43.8],
     },
     {
-      label: '2017',
       color: color2017,
+      label: '2017',
       values: [65.6, 49, 39],
     },
     {
-      label: '2018',
       color: color2018,
+      label: '2018',
       values: [69.5, 49.4, 39.9],
     },
     {
-      label: '2019',
       color: color2019,
+      label: '2019',
       values: [100 * (888 / 1232), 100 * (613 / 1232), 100 * (479 / 1232)],
     },
   ],
@@ -1999,8 +1999,8 @@ const MS_Q601 = new VerticalBarChart({
   },
   rawData: [
     {
-      label: '2019',
       color: color2019,
+      label: '2019',
       values: [
         100 * (261 / 1232),
         100 * (311 / 1232),
