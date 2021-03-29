@@ -25,16 +25,7 @@ module('Acceptance | sponsors', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/sponsors');
-    await a11yAudit({
-      rules: {
-        'link-name': {
-          enabled: false,
-        },
-        list: {
-          enabled: false,
-        },
-      },
-    });
+    await a11yAudit({});
 
     assert.hasPageTitle('Sponsors - Ember.js');
   });
