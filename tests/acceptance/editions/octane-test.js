@@ -1,6 +1,6 @@
 import { visit } from '@ember/test-helpers';
-import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
+import percySnapshot from '@percy/ember';
 import { setupMirage } from 'ember-cli-mirage/test-support';
 import { setupApplicationTest } from 'ember-qunit';
 import loadDefaultScenario from 'ember-website/mirage/scenarios/default';
@@ -25,16 +25,7 @@ module('Acceptance | editions/octane', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/editions/octane');
-    await a11yAudit({
-      rules: {
-        'aria-valid-attr-value': {
-          enabled: false,
-        },
-        'heading-order': {
-          enabled: false,
-        },
-      },
-    });
+    await a11yAudit();
 
     assert.hasPageTitle('Octane - Editions - Ember.js');
   });
