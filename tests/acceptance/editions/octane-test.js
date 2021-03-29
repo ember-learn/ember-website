@@ -24,6 +24,7 @@ module('Acceptance | editions/octane', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/editions/octane');
+    await a11yAudit();
 
     assert.hasPageTitle('Octane - Editions - Ember.js');
   });
