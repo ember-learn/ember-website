@@ -30,9 +30,6 @@ module('Acceptance | sponsors', function (hooks) {
         'link-name': {
           enabled: false,
         },
-        list: {
-          enabled: false,
-        },
       },
     });
 
