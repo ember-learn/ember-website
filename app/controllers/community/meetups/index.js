@@ -7,9 +7,12 @@ export default class CommunityMeetupsIndexController extends Controller {
   @service fastboot;
 
   @tracked leafletPackageLoaded = false;
-  @tracked lat = 20;
-  @tracked lng = 0;
-  @tracked zoom = 2;
+
+  leafletConfiguration = {
+    latitude: 20,
+    longitude: 0,
+    zoom: 2,
+  };
 
   get meetupsByArea() {
     const meetups = (this.model ?? []).toArray();

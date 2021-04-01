@@ -8,9 +8,9 @@
     {{#if this.leafletPackageLoaded}}
       <LeafletMap
         @class="leaflet-container"
-        @lat={{this.lat}}
-        @lng={{this.lng}}
-        @zoom={{this.zoom}}
+        @lat={{this.leafletConfiguration.latitude}}
+        @lng={{this.leafletConfiguration.longitude}}
+        @zoom={{this.leafletConfiguration.zoom}}
         as |layers|
       >
         <layers.tile
