@@ -78,6 +78,7 @@ module.exports = function (defaults) {
       ],
     },
 
+    /*
     'responsive-image': {
       images: [
         {
@@ -92,6 +93,7 @@ module.exports = function (defaults) {
         },
       ],
     },
+    */
   });
 
   return app.toTree();

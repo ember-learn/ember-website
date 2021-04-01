@@ -2,12 +2,12 @@
   class="text-center"
   data-test-member={{@member.name}}
 >
-  <ResponsiveImage
-    @src="/images/team/{{@member.image}}"
-    @width={{100}}
+  <img
     alt=""
     class="team-image"
+    loading="lazy"
     role="presentation"
+    src="/images/team/{{@member.image}}"
   />
 
   <div data-test-field="Name">
