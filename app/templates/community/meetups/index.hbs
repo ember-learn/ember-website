@@ -4,13 +4,26 @@
 
   <section aria-labelledby="meetups" class="mb-3">
     <h2 id="meetups">Find a meetup in your city</h2>
+
     {{#if this.leafletPackageLoaded}}
-      <LeafletMap @class="leaflet-container" @lat={{this.lat}} @lng={{this.lng}} @zoom={{this.zoom}}>
-        <TileLayer @url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" />
+      <LeafletMap
+        @class="leaflet-container"
+        @lat={{this.lat}}
+        @lng={{this.lng}}
+        @zoom={{this.zoom}}
+        as |layers|
+      >
+        <layers.tile
+          @url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+        />
 
         {{#each @model as |meetup|}}
-          <MarkerLayer @lat={{meetup.lat}} @lng={{meetup.lng}}>
-            <PopupLayer>
+          <layers.marker
+            @lat={{meetup.lat}}
+            @lng={{meetup.lng}}
+            as |marker|
+          >
+            <marker.popup>
               <a
                 href={{meetup.url}}
                 target="_blank"
@@ -18,8 +31,8 @@
               >
                 {{meetup.location}}
               </a>
-            </PopupLayer>
-          </MarkerLayer>
+            </marker.popup>
+          </layers.marker>
         {{/each}}
       </LeafletMap>
     {{else}}
