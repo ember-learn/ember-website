@@ -39,7 +39,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 ### Linting
 
 * `npm run lint`
-* `npm run lint --fix`
+* `npm run lint:fix`
 
 ### Building
 
@@ -47,7 +47,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+The app is continuously deployed to Netlify when a pull request is merged and passes continuous integration.
 
 ## Further Reading / Useful Links
 
