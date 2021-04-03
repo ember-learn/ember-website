@@ -12,6 +12,46 @@ env:
   PERCY_PARALLEL_TOTAL: 4
 
 jobs:
+  build-app:
+    name: Build app for testing
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Update npm
+        run: npm i -g npm@7
+
+      - name: Cache npm cache and node_modules
+        id: cache-dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
+
+      - name: Install dependencies
+        run: npm install
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+
+      - name: Build app
+        run: npm run build:test
+
+      - name: Upload app
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: dist
+
+
   lint:
     name: Lint files
     runs-on: ubuntu-latest
@@ -54,6 +94,7 @@ jobs:
 
   test-app:
     name: Test app
+    needs: [build-app]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
@@ -63,7 +104,7 @@ jobs:
           - 2
           - 3
           - 4
-    timeout-minutes: 5
+    timeout-minutes: 3
     steps:
       - name: Check out a copy of the repo
         uses: actions/checkout@v2
@@ -94,10 +135,16 @@ jobs:
         run: npm ci
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
+      - name: Download app
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: dist
+
       - name: Test
         uses: percy/exec-action@v0.3.1
         with:
-          custom-command: npm test -- --partition=${{ matrix.partition }}
+          custom-command: npm test -- --partition=${{ matrix.partition }} --path=dist
         env:
           PERCY_PARALLEL_NONCE: ${{ env.PERCY_PARALLEL_NONCE }}
           PERCY_PARALLEL_TOTAL: ${{ env.PERCY_PARALLEL_TOTAL }}

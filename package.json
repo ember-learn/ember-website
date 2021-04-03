@@ -15,6 +15,7 @@
   },
   "scripts": {
     "build": "ember build --environment=production",
+    "build:test": "ember build --environment=test",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:!(fix)'",
     "lint:css": "stylelint app/**/*.css",
     "lint:css:fix": "stylelint app/**/*.css --fix",
