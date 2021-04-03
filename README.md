@@ -34,7 +34,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 ### Running Tests
 
 * `npm test`
-* `npm test --server`
+* `npm test -- --server`
 
 ### Linting
 

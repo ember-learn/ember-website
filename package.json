@@ -24,7 +24,7 @@
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "start": "ember serve",
-    "test": "percy exec -- ember test"
+    "test": "percy exec -- ember exam --split=4 --parallel=1"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
@@ -57,6 +57,7 @@
     "ember-cli-terser": "^4.0.1",
     "ember-composable-helpers": "^4.4.1",
     "ember-data": "~3.25.0",
+    "ember-exam": "^6.1.0",
     "ember-export-application-global": "^2.0.1",
     "ember-fetch": "^8.0.4",
     "ember-href-to": "^4.1.0",

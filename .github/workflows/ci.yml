@@ -9,7 +9,7 @@ on:
 env:
   NODE_VERSION: 14
   PERCY_PARALLEL_NONCE: ${{ github.run_id }}-${{ github.run_number }}
-  PERCY_PARALLEL_TOTAL: 1
+  PERCY_PARALLEL_TOTAL: 4
 
 jobs:
   lint:
@@ -55,6 +55,14 @@ jobs:
   test-app:
     name: Test app
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        partition:
+          - 1
+          - 2
+          - 3
+          - 4
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -89,7 +97,7 @@ jobs:
       - name: Test
         uses: percy/exec-action@v0.3.1
         with:
-          custom-command: npm test
+          custom-command: npm test -- --partition=${{ matrix.partition }}
         env:
           PERCY_PARALLEL_NONCE: ${{ env.PERCY_PARALLEL_NONCE }}
           PERCY_PARALLEL_TOTAL: ${{ env.PERCY_PARALLEL_TOTAL }}
