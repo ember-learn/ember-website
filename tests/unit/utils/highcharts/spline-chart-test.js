@@ -84,7 +84,7 @@ module('Unit | Utility | highcharts/spline-chart', function () {
 
           tooltip: {
             crosshairs: true,
-            tooltip: () => {
+            formatter: function tooltip() {
               return `${this.point}`;
             },
             shared: true,
@@ -93,6 +93,12 @@ module('Unit | Utility | highcharts/spline-chart', function () {
           xAxis: {
             categories: ['6', '5', '4', '3', '2', '1', '0'],
             type: 'category',
+          },
+
+          yAxis: {
+            title: {
+              text: 'Percent',
+            },
           },
         },
         'We get the correct value.'

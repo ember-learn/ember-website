@@ -44,6 +44,12 @@ export default class SplineChart {
           categories: chart.categories,
           type: 'category',
         },
+
+        yAxis: {
+          title: {
+            text: 'Percent',
+          },
+        },
       },
     };
   }
