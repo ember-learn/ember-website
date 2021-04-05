@@ -2,22 +2,52 @@
  https://api.highcharts.com/highcharts/plotOptions.spline
 */
 export default class SplineChart {
-    constructor({chart, rawData}) {
-        this.chart = chart;
-        this.series = createSeries(rawData);
-    }
+  //   constructor({ chart, rawData }) {
+  //     this.chart = chart;
+  //     this.series = createSeries(rawData);
+  //   }
 
-    get highchartsOptions() {
-        const { chart, series } = this;
-        
-        return {
-            data: series,
+  get highchartsOptions() {
+    // const { chart, series } = this;
 
-            options: {},
-        }
-    }
+    return {
+      data: [],
+
+      options: {
+        chart: {
+          type: 'spline',
+        },
+
+        subtitle: {
+          text: 'TODO: Allow subtitle',
+        },
+
+        title: {
+          text: 'TODO: Allow title',
+        },
+
+        tooltip: {
+          crosshairs: true,
+          formatter: 'TODO',
+          shared: true,
+        },
+
+        plotOptions: {
+          series: {
+            marker: {
+              enabled: false,
+            },
+          },
+        },
+
+        xAxis: {
+          /* TODO */
+        },
+      },
+    };
+  }
 }
 
 export function createSeries(rawData = []) {
-    return rawData;
+  return rawData;
 }

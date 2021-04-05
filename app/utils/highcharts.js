@@ -22,7 +22,7 @@ const defaultChartOptions = {
     },
 
     title: {
-      text: null, 
+      text: null,
     },
   },
 };
