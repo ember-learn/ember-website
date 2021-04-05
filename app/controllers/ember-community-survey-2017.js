@@ -1,135 +1,105 @@
 import Controller from '@ember/controller';
-import { VerticalBarChart } from 'ember-website/utils/highcharts';
+import { SplineChart, VerticalBarChart } from 'ember-website/utils/highcharts';
 
 const emberOrange = '#f23818';
 const darkGrayColor = '#4b4b4b';
 const lightGrayColor = '#cccccc';
 
-const makeChartData = (data) =>
-  data.map((datum) => ({
-    name: datum.year,
-    data: datum.data.map((item) => ({
-      y: item && item.value,
-      label: item && item.label,
-      color: item && item.color,
-    })),
-    color: datum.color,
-  }));
+const chartHowlong = new SplineChart({
+  chart: {
+    title: 'Which version(s) of Ember are used in your apps?',
+    subtitle: 'Releases Prior to Survey',
+    formatter: function () {
+      let s = `<b>${+this.x} Release${
+        Number(this.x) !== 1 ? 's' : ''
+      } Prior to Survey</b>`;
 
-const chartHowlong = {
-  options: {
-    chart: {
-      type: 'spline',
-    },
-    title: {
-      text: 'Which version(s) of Ember are used in your apps?',
-    },
-    tooltip: {
-      shared: true,
-      crosshairs: true,
-      formatter: function () {
-        let s = `<b>${+this.x} Release${
-          Number(this.x) !== 1 ? 's' : ''
-        } Prior to Survey</b>`;
+      this.points.forEach((point) => {
+        s += `<br/><span style="color: ${point.color}">●</span>${point.series.name}: ${point.point.label} Release (${point.y}%)`;
+      });
 
-        this.points.forEach((point) => {
-          s += `<br/><span style="color: ${point.color}">●</span>${point.series.name}: ${point.point.label} Release (${point.y}%)`;
-        });
+      return s;
+    },
 
-        return s;
-      },
-    },
-    plotOptions: {
-      series: {
-        marker: {
-          enabled: false,
-        },
-      },
-    },
-    xAxis: {
-      categories: [
-        '13',
-        '12',
-        '11',
-        '10',
-        '9',
-        '8',
-        '7',
-        '6',
-        '5',
-        '4',
-        '3',
-        '2',
-        '1',
-        '0',
-      ],
-      title: {
-        text: 'Releases Prior to Survey',
-      },
-    },
+    categories: [
+      '13',
+      '12',
+      '11',
+      '10',
+      '9',
+      '8',
+      '7',
+      '6',
+      '5',
+      '4',
+      '3',
+      '2',
+      '1',
+      '0',
+    ],
   },
-  data: makeChartData([
+  rawData: [
     {
-      year: '2015',
-      data: [
+      label: '2015',
+      values: [
         null,
         null,
         null,
-        { value: 3, label: '1.0' },
-        { value: 1, label: '1.1' },
-        { value: 0.7, label: '1.2' },
-        { value: 2, label: '1.3' },
-        { value: 2.6, label: '1.4' },
-        { value: 3.9, label: '1.5' },
-        { value: 6.8, label: '1.6' },
-        { value: 15, label: '1.7' },
-        { value: 31.7, label: '1.8' },
-        { value: 39.5, label: '1.9' },
-        { value: 35, label: '1.10' },
+        { y: 3, label: '1.0' },
+        { y: 1, label: '1.1' },
+        { y: 0.7, label: '1.2' },
+        { y: 2, label: '1.3' },
+        { y: 2.6, label: '1.4' },
+        { y: 3.9, label: '1.5' },
+        { y: 6.8, label: '1.6' },
+        { y: 15, label: '1.7' },
+        { y: 31.7, label: '1.8' },
+        { y: 39.5, label: '1.9' },
+        { y: 35, label: '1.10' },
       ],
       color: lightGrayColor,
     },
     {
-      year: '2016',
-      data: [
-        { value: 1.8, label: '1.6' },
-        { value: 2.7, label: '1.7' },
-        { value: 3.5, label: '1.8' },
-        { value: 2.6, label: '1.9' },
-        { value: 3.9, label: '1.10' },
-        { value: 6, label: '1.11' },
-        { value: 5.8, label: '1.12' },
-        { value: 36, label: '1.13' },
-        { value: 8.2, label: '2.0' },
-        { value: 6.3, label: '2.1' },
-        { value: 11.5, label: '2.2' },
-        { value: 27, label: '2.3' },
-        { value: 47, label: '2.4' },
+      label: '2016',
+      values: [
+        { y: 1.8, label: '1.6' },
+        { y: 2.7, label: '1.7' },
+        { y: 3.5, label: '1.8' },
+        { y: 2.6, label: '1.9' },
+        { y: 3.9, label: '1.10' },
+        { y: 6, label: '1.11' },
+        { y: 5.8, label: '1.12' },
+        { y: 36, label: '1.13' },
+        { y: 8.2, label: '2.0' },
+        { y: 6.3, label: '2.1' },
+        { y: 11.5, label: '2.2' },
+        { y: 27, label: '2.3' },
+        { y: 47, label: '2.4' },
       ],
       color: darkGrayColor,
     },
     {
-      year: '2017',
-      data: [
-        { value: 14.5, label: '1.13' },
-        { value: 3, label: '2.0' },
-        { value: 2.1, label: '2.1' },
-        { value: 2, label: '2.2' },
-        { value: 4.5, label: '2.3' },
-        { value: 11.3, label: '2.4' },
-        { value: 4.4, label: '2.5' },
-        { value: 4.5, label: '2.6' },
-        { value: 5.8, label: '2.7' },
-        { value: 21.2, label: '2.8' },
-        { value: 10, label: '2.9' },
-        { value: 22, label: '2.10' },
-        { value: 41, label: '2.11' },
-        { value: 19.3, label: 'stable (2.12)' },
+      label: '2017',
+      values: [
+        { y: 14.5, label: '1.13' },
+        { y: 3, label: '2.0' },
+        { y: 2.1, label: '2.1' },
+        { y: 2, label: '2.2' },
+        { y: 4.5, label: '2.3' },
+        { y: 11.3, label: '2.4' },
+        { y: 4.4, label: '2.5' },
+        { y: 4.5, label: '2.6' },
+        { y: 5.8, label: '2.7' },
+        { y: 21.2, label: '2.8' },
+        { y: 10, label: '2.9' },
+        { y: 22, label: '2.10' },
+        { y: 41, label: '2.11' },
+        { y: 19.3, label: 'stable (2.12)' },
       ],
       color: emberOrange,
     },
-  ]),
-};
+  ],
+}).highchartsOptions;
 
 const chartSnapshotEmberDevelopers = new VerticalBarChart({
   chart: {
