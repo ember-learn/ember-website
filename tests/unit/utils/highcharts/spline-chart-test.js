@@ -6,15 +6,16 @@ import { module, test } from 'qunit';
 module('Unit | Utility | highcharts/spline-chart', function () {
   module('SplineChart', function () {
     test('highchartsOptions returns an options object', function (assert) {
+      const noOp = () => {};
+
       const { options } = new SplineChart({
         chart: {
           categories: ['6', '5', '4', '3', '2', '1', '0'],
           title: 'Which versions of Ember Data are used in your apps?',
           subtitle: 'Some subtitle',
-          tooltip: () => {
-            return `${this.point}`;
-          },
+          tooltip: noOp,
         },
+
         rawData: [
           {
             label: '2016',
@@ -59,6 +60,9 @@ module('Unit | Utility | highcharts/spline-chart', function () {
         ],
       }).highchartsOptions;
 
+      // Don't check tooltip.formatter (a function) in tests
+      delete options.tooltip.formatter;
+
       assert.deepEqual(
         options,
         {
@@ -84,9 +88,6 @@ module('Unit | Utility | highcharts/spline-chart', function () {
 
           tooltip: {
             crosshairs: true,
-            formatter: function tooltip() {
-              return `${this.point}`;
-            },
             shared: true,
           },
 
