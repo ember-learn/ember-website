@@ -11,7 +11,7 @@ module('Unit | Utility | highcharts/spline-chart', function () {
           categories: ['6', '5', '4', '3', '2', '1', '0'],
           title: 'Which versions of Ember Data are used in your apps?',
           subtitle: 'Some subtitle',
-          formatter: () => {
+          tooltip: () => {
             return `${this.point}`;
           },
         },
@@ -84,7 +84,7 @@ module('Unit | Utility | highcharts/spline-chart', function () {
 
           tooltip: {
             crosshairs: true,
-            formatter: () => {
+            tooltip: () => {
               return `${this.point}`;
             },
             shared: true,

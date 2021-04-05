@@ -9,7 +9,7 @@ const chartHowlong = new SplineChart({
   chart: {
     title: 'Which version(s) of Ember are used in your apps?',
     subtitle: 'Releases Prior to Survey',
-    formatter: function () {
+    tooltip: function () {
       let s = `<b>${+this.x} Release${
         Number(this.x) !== 1 ? 's' : ''
       } Prior to Survey</b>`;

@@ -28,7 +28,7 @@ export default class SplineChart {
 
         tooltip: {
           crosshairs: true,
-          formatter: chart.formatter,
+          formatter: chart.tooltip,
           shared: true,
         },
 
