@@ -1,9 +1,9 @@
 import Controller from '@ember/controller';
 import {
   HorizontalBarChart,
+  SplineChart,
   VerticalBarChart,
 } from 'ember-website/utils/highcharts';
-import { SplineChart } from '../utils/highcharts';
 
 var emberOrange = '#f23818',
   darkGrayColor = '#4b4b4b',

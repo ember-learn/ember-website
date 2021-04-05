@@ -608,7 +608,6 @@ const priorVersionsData = new SplineChart({
           ': ';
         var labels;
         for (var j = 0; j < versionData.length; ++j) {
-          console.log(versionData[j])
           if (versionData[j].label === seriesName) {
             labels = versionData[j].values;
           }
