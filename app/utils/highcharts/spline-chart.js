@@ -2,16 +2,16 @@
  https://api.highcharts.com/highcharts/plotOptions.spline
 */
 export default class SplineChart {
-  //   constructor({ chart, rawData }) {
-  //     this.chart = chart;
-  //     this.series = createSeries(rawData);
-  //   }
+  constructor({ chart, rawData }) {
+    this.chart = chart;
+    this.series = createSeries(rawData);
+  }
 
   get highchartsOptions() {
-    // const { chart, series } = this;
+    const { chart, series } = this;
 
     return {
-      data: [],
+      data: series,
 
       options: {
         chart: {
@@ -19,16 +19,16 @@ export default class SplineChart {
         },
 
         subtitle: {
-          text: 'TODO: Allow subtitle',
+          text: chart.subtitle,
         },
 
         title: {
-          text: 'TODO: Allow title',
+          text: chart.title,
         },
 
         tooltip: {
           crosshairs: true,
-          formatter: 'TODO',
+          formatter: chart.formatter,
           shared: true,
         },
 
@@ -41,7 +41,8 @@ export default class SplineChart {
         },
 
         xAxis: {
-          /* TODO */
+          categories: chart.categories,
+          type: 'category',
         },
       },
     };
@@ -57,7 +58,7 @@ export function createSeries(rawData = []) {
     data.push({
       color,
       data: values,
-      year: label,
+      name: label,
     });
   });
 
