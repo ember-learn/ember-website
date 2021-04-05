@@ -3,6 +3,7 @@ import {
   HorizontalBarChart,
   VerticalBarChart,
 } from 'ember-website/utils/highcharts';
+import { SplineChart } from '../utils/highcharts';
 
 var emberOrange = '#f23818',
   darkGrayColor = '#4b4b4b',
@@ -543,9 +544,8 @@ function makeVersionChart(versionData, title) {
 
   for (var i = 0; i < versionData.length; ++i) {
     var _series = {
-      name: versionData[i].year,
-      type: 'spline',
-      data: versionData[i].data.map(function (d) {
+      label: versionData[i].year,
+      values: versionData[i].data.map(function (d) {
         return d && d.value;
       }),
     };
@@ -555,70 +555,57 @@ function makeVersionChart(versionData, title) {
     seriesData.push(_series);
   }
 
-  return {
-    options: {
-      title: { text: title },
-      subtitle: { text: '' },
-      tooltip: {
-        shared: true,
-        crosshairs: true,
-        formatter: function () {
-          var releasesPrior = +this.x;
-          var s =
-            '<b>' +
-            +this.x +
-            ' Release' +
-            (releasesPrior !== 1 ? 's' : '') +
-            ' Prior to Survey</b>';
-          for (var i = 0; i < this.points.length; ++i) {
-            var point = this.points[i],
-              seriesName = point.series.name;
-            s +=
-              '<br/><span style="color:' +
-              point.color +
-              '">●</span>' +
-              seriesName +
-              ': ';
-            var labels;
-            for (var j = 0; j < versionData.length; ++j) {
-              if (versionData[j].year === seriesName) {
-                labels = versionData[j].data;
-              }
+  return new SplineChart({
+    chart: {
+      title: title,
+      subtitle: 'Releases Prior to Survey',
+      formatter: function () {
+        var releasesPrior = +this.x;
+        var s =
+          '<b>' +
+          +this.x +
+          ' Release' +
+          (releasesPrior !== 1 ? 's' : '') +
+          ' Prior to Survey</b>';
+        for (var i = 0; i < this.points.length; ++i) {
+          var point = this.points[i],
+            seriesName = point.series.name;
+          s +=
+            '<br/><span style="color:' +
+            point.color +
+            '">●</span>' +
+            seriesName +
+            ': ';
+          var labels;
+          for (var j = 0; j < versionData.length; ++j) {
+            if (versionData[j].year === seriesName) {
+              labels = versionData[j].data;
             }
-            var label = labels[labels.length - 1 - releasesPrior].label;
-            s += label + ' Release (' + point.y + '%)';
           }
-          return s;
-        },
+          var label = labels[labels.length - 1 - releasesPrior].label;
+          s += label + ' Release (' + point.y + '%)';
+        }
+        return s;
       },
-      plotOptions: { series: { marker: { enabled: false } } },
-      yAxis: {
-        title: { text: 'Percent' },
-      },
-      xAxis: {
-        categories: [
-          '13',
-          '12',
-          '11',
-          '10',
-          '9',
-          '8',
-          '7',
-          '6',
-          '5',
-          '4',
-          '3',
-          '2',
-          '1',
-          '0',
-        ],
-        title: {
-          text: 'Releases Prior to Survey',
-        },
-      },
+      categories: [
+        '13',
+        '12',
+        '11',
+        '10',
+        '9',
+        '8',
+        '7',
+        '6',
+        '5',
+        '4',
+        '3',
+        '2',
+        '1',
+        '0',
+      ],
     },
-    data: seriesData,
-  };
+    rawData: seriesData,
+  }).highchartsOptions;
 }
 
 var emberVersionData = [
