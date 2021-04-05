@@ -49,5 +49,17 @@ export default class SplineChart {
 }
 
 export function createSeries(rawData = []) {
-  return rawData;
+  const data = [];
+
+  rawData.forEach((datum) => {
+    const { color, label, values } = datum;
+
+    data.push({
+      color,
+      data: values,
+      year: label,
+    });
+  });
+
+  return data;
 }
