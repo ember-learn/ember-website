@@ -16,123 +16,6 @@ var color2017 = darkGrayColor;
 var color2018 = emberOrange;
 var colorFutureYear = lightGreenColor;
 
-const overallAdoption = new VerticalBarChart({
-  chart: {
-    categories: [
-      'Pre 1.13',
-      '1.13',
-      '2.0',
-      '2.1',
-      '2.2',
-      '2.3',
-      '2.4 LTS',
-      '2.5',
-      '2.6',
-      '2.7',
-      '2.8 LTS',
-      '2.9',
-      '2.10',
-      '2.11',
-      '2.12',
-      '2.13',
-      '2.14',
-      '2.15',
-      '2.16',
-      '2.17',
-      '2.18',
-      '3.0',
-    ],
-    title: 'Breakdown of Ember use by Version',
-  },
-
-  rawData: [
-    {
-      color: lightGrayColor,
-      label: '2016',
-      values: [
-        4 + 2 + 3 + 4 + 3 + 4 + 6 + 6,
-        36,
-        8,
-        6,
-        12,
-        27,
-        47,
-        3,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-      ],
-    },
-    {
-      color: darkGrayColor,
-      label: '2017',
-      values: [
-        9.46,
-        14.45,
-        2.97,
-        2.1,
-        2.02,
-        4.48,
-        11.29,
-        4.35,
-        4.48,
-        5.8,
-        21.2,
-        10.09,
-        21.6,
-        40.88,
-        19.31,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-      ],
-    },
-    {
-      color: emberOrange,
-      label: '2018',
-      values: [
-        5,
-        7.8,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1.4,
-        7,
-        2,
-        2.7,
-        2.7,
-        11.4, // 2.12
-        7,
-        8,
-        6.6,
-        23.5, // 2.16
-        9.3,
-        43.2,
-        27.8, // 3.0
-      ],
-    },
-  ],
-}).highchartsOptions;
-
 const communityParticipation = new HorizontalBarChart({
   chart: {
     categories: [
@@ -859,7 +742,6 @@ const emberDataAdoption = new SplineChart({
 
 export default class EmberCommunitySurvey2018Controller extends Controller {
   newReleaseAdoption = newReleaseAdoption;
-  overallAdoption = overallAdoption;
   emberDataAdoption = emberDataAdoption;
   recommendingEmber = recommendingEmber;
   employerUsingEmber = employerUsingEmber;

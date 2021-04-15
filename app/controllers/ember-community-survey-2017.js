@@ -175,74 +175,6 @@ const chartSnapshotEmberDevelopers = new VerticalBarChart({
   ],
 }).highchartsOptions;
 
-const chartBreakdownByVersion = new VerticalBarChart({
-  chart: {
-    categories: [
-      'Pre 1.13',
-      '1.13',
-      '2.0',
-      '2.1',
-      '2.2',
-      '2.3',
-      '2.4 LTS',
-      '2.5',
-      '2.6',
-      '2.7',
-      '2.8 LTS',
-      '2.9',
-      '2.10',
-      '2.11',
-      '2.12',
-    ],
-    title: 'Breakdown of Ember use by Version',
-  },
-
-  rawData: [
-    {
-      color: darkGrayColor,
-      label: '2016',
-      values: [
-        4 + 2 + 3 + 4 + 3 + 4 + 6 + 6,
-        36,
-        8,
-        6,
-        12,
-        27,
-        47,
-        3,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-      ],
-    },
-    {
-      color: emberOrange,
-      label: '2017',
-      values: [
-        9.46,
-        14.45,
-        2.97,
-        2.1,
-        2.02,
-        4.48,
-        11.29,
-        4.35,
-        4.48,
-        5.8,
-        21.2,
-        10.09,
-        21.6,
-        40.88,
-        19.31,
-      ],
-    },
-  ],
-}).highchartsOptions;
-
 const employmentSituation = new VerticalBarChart({
   chart: {
     categories: [
@@ -651,7 +583,6 @@ const priorVersionsData = new SplineChart({
 export default class EmberCommunitySurvey2017Controller extends Controller {
   chartHowlong = chartHowlong;
   chartSnapshotEmberDevelopers = chartSnapshotEmberDevelopers;
-  chartBreakdownByVersion = chartBreakdownByVersion;
   priorVersionsData = priorVersionsData;
   recommendingEmber = recommendingEmber;
   whenStarting = whenStarting;

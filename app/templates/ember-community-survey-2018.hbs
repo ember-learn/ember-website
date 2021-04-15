@@ -17,19 +17,10 @@
   @sectionTitle="Ember Version"
 >
   <:charts>
-    <div>
-      <Highcharts
-        @chartOptions={{this.newReleaseAdoption.options}}
-        @data={{this.newReleaseAdoption.data}}
-      />
-    </div>
-
-    <div class="mt-3">
-      <Highcharts
-        @chartOptions={{this.overallAdoption.options}}
-        @data={{this.overallAdoption.data}}
-      />
-    </div>
+    <Highcharts
+      @chartOptions={{this.newReleaseAdoption.options}}
+      @data={{this.newReleaseAdoption.data}}
+    />
   </:charts>
 
   <:body>
