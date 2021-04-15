@@ -1,5 +1,5 @@
 /*
- https://api.highcharts.com/highcharts/plotOptions.spline
+  https://api.highcharts.com/highcharts/plotOptions.spline
 */
 export default class SplineChart {
   constructor({ chart, rawData }) {
@@ -18,6 +18,14 @@ export default class SplineChart {
           type: 'spline',
         },
 
+        plotOptions: {
+          series: {
+            marker: {
+              enabled: false,
+            },
+          },
+        },
+
         subtitle: {
           text: chart.subtitle,
         },
@@ -27,17 +35,7 @@ export default class SplineChart {
         },
 
         tooltip: {
-          crosshairs: true,
-          formatter: chart.tooltip,
-          shared: true,
-        },
-
-        plotOptions: {
-          series: {
-            marker: {
-              enabled: false,
-            },
-          },
+          pointFormat: '{series.name}: {point.y:.1f}%',
         },
 
         xAxis: {
@@ -46,8 +44,9 @@ export default class SplineChart {
         },
 
         yAxis: {
+          min: 0,
           title: {
-            text: 'Percent',
+            text: 'Percent of responses',
           },
         },
       },
