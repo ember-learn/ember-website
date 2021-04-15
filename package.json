@@ -32,7 +32,7 @@
     "@ember/test-helpers": "^2.2.5",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
-    "@percy/cli": "*",
+    "@percy/cli": "^1.0.0-beta.48",
     "@percy/ember": "^3.0.0",
     "algoliasearch": "^3.33.0",
     "babel-eslint": "^10.1.0",
