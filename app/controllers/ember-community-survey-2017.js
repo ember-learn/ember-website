@@ -7,96 +7,137 @@ const lightGrayColor = '#cccccc';
 
 const chartHowlong = new SplineChart({
   chart: {
-    title: 'Which version(s) of Ember are used in your apps?',
-    subtitle: 'Releases Prior to Survey',
-    tooltip: function () {
-      let s = `<b>${+this.x} Release${
-        Number(this.x) !== 1 ? 's' : ''
-      } Prior to Survey</b>`;
-
-      this.points.forEach((point) => {
-        s += `<br/><span style="color: ${point.color}">●</span>${point.series.name}: ${point.point.label} Release (${point.y}%)`;
-      });
-
-      return s;
-    },
-
     categories: [
-      '13',
-      '12',
-      '11',
-      '10',
-      '9',
-      '8',
-      '7',
-      '6',
-      '5',
-      '4',
-      '3',
-      '2',
-      '1',
-      '0',
+      '1.0',
+      '1.1',
+      '1.2',
+      '1.3',
+      '1.4',
+      '1.5',
+      '1.6',
+      '1.7',
+      '1.8',
+      '1.9',
+      '1.10',
+      '1.11',
+      '1.12',
+      '1.13',
+      '2.0',
+      '2.1',
+      '2.2',
+      '2.3',
+      '2.4',
+      '2.5',
+      '2.6',
+      '2.7',
+      '2.8',
+      '2.9',
+      '2.10',
+      '2.11',
+      '2.12',
     ],
+    title: 'Which versions of Ember are used in your apps?',
   },
+
   rawData: [
     {
+      color: lightGrayColor,
       label: '2015',
       values: [
-        null,
-        null,
-        null,
-        { y: 3, label: '1.0' },
-        { y: 1, label: '1.1' },
-        { y: 0.7, label: '1.2' },
-        { y: 2, label: '1.3' },
-        { y: 2.6, label: '1.4' },
-        { y: 3.9, label: '1.5' },
-        { y: 6.8, label: '1.6' },
-        { y: 15, label: '1.7' },
-        { y: 31.7, label: '1.8' },
-        { y: 39.5, label: '1.9' },
-        { y: 35, label: '1.10' },
+        3, // '1.0'
+        1, // '1.1'
+        0.7, // '1.2'
+        2, // '1.3'
+        2.6, // '1.4'
+        3.9, // '1.5'
+        6.8, // '1.6'
+        15, // '1.7'
+        31.7, //'1.8'
+        39.5, // '1.9'
+        35, // '1.10'
+        null, // '1.11'
+        null, // '1.12'
+        null, // '1.13'
+        null, // '2.0'
+        null, // '2.1'
+        null, // '2.2'
+        null, // '2.3'
+        null, // '2.4'
+        null, // '2.5'
+        null, // '2.6'
+        null, // '2.7'
+        null, // '2.8'
+        null, // '2.9'
+        null, // '2.10'
+        null, // '2.11'
+        null, // '2.12'
       ],
-      color: lightGrayColor,
     },
     {
+      color: darkGrayColor,
       label: '2016',
       values: [
-        { y: 1.8, label: '1.6' },
-        { y: 2.7, label: '1.7' },
-        { y: 3.5, label: '1.8' },
-        { y: 2.6, label: '1.9' },
-        { y: 3.9, label: '1.10' },
-        { y: 6, label: '1.11' },
-        { y: 5.8, label: '1.12' },
-        { y: 36, label: '1.13' },
-        { y: 8.2, label: '2.0' },
-        { y: 6.3, label: '2.1' },
-        { y: 11.5, label: '2.2' },
-        { y: 27, label: '2.3' },
-        { y: 47, label: '2.4' },
+        null, // '1.0'
+        null, // '1.1'
+        null, // '1.2'
+        null, // '1.3'
+        null, // '1.4'
+        null, // '1.5'
+        1.8, // '1.6'
+        2.7, // '1.7'
+        3.5, //'1.8'
+        2.6, // '1.9'
+        3.9, // '1.10'
+        6, // '1.11'
+        5.8, // '1.12'
+        36, // '1.13'
+        8.2, // '2.0'
+        6.3, // '2.1'
+        11.5, // '2.2'
+        27, // '2.3'
+        47, // '2.4'
+        null, // '2.5'
+        null, // '2.6'
+        null, // '2.7'
+        null, // '2.8'
+        null, // '2.9'
+        null, // '2.10'
+        null, // '2.11'
+        null, // '2.12'
       ],
-      color: darkGrayColor,
     },
     {
+      color: emberOrange,
       label: '2017',
       values: [
-        { y: 14.5, label: '1.13' },
-        { y: 3, label: '2.0' },
-        { y: 2.1, label: '2.1' },
-        { y: 2, label: '2.2' },
-        { y: 4.5, label: '2.3' },
-        { y: 11.3, label: '2.4' },
-        { y: 4.4, label: '2.5' },
-        { y: 4.5, label: '2.6' },
-        { y: 5.8, label: '2.7' },
-        { y: 21.2, label: '2.8' },
-        { y: 10, label: '2.9' },
-        { y: 22, label: '2.10' },
-        { y: 41, label: '2.11' },
-        { y: 19.3, label: 'stable (2.12)' },
+        null, // '1.0'
+        null, // '1.1'
+        null, // '1.2'
+        null, // '1.3'
+        null, // '1.4'
+        null, // '1.5'
+        null, // '1.6'
+        null, // '1.7'
+        null, //'1.8'
+        null, // '1.9'
+        null, // '1.10'
+        null, // '1.11'
+        null, // '1.12'
+        14.5, // '1.13'
+        3, // '2.0'
+        2.1, // '2.1'
+        2, // '2.2'
+        4.5, // '2.3'
+        11.3, // '2.4'
+        4.4, // '2.5'
+        4.5, // '2.6'
+        5.8, // '2.7'
+        21.2, // '2.8'
+        10, // '2.9'
+        22, // '2.10'
+        41, // '2.11'
+        19.3, // '2.12'
       ],
-      color: emberOrange,
     },
   ],
 }).highchartsOptions;
@@ -542,119 +583,71 @@ const demographics = new VerticalBarChart({
   ],
 }).highchartsOptions;
 
-const versionData = [
-  {
-    label: '2016',
-    color: darkGrayColor,
-    values: [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      { value: 27, label: '1.13' },
-      { value: 6, label: '2.0' },
-      { value: 4, label: '2.1' },
-      { value: 8, label: '2.2' },
-      { value: 21, label: '2.3' },
-      { value: 42, label: '2.4' },
-      null,
-    ],
-  },
-  {
-    label: '2017',
-    color: emberOrange,
-    values: [
-      { value: 9, label: '1.13' },
-      { value: 2.15, label: '2.0' },
-      { value: 2.1, label: '2.1' },
-      { value: 1.5, label: '2.2' },
-      { value: 2.8, label: '2.3' },
-      { value: 7, label: '2.4' },
-      { value: 3, label: '2.5' },
-      { value: 4, label: '2.6' },
-      { value: 4, label: '2.7' },
-      { value: 13.8, label: '2.8' },
-      { value: 7, label: '2.9' },
-      { value: 21.6, label: '2.10' },
-      { value: 34.9, label: '2.11' },
-      { value: 17, label: 'stable (2.12)' },
-    ],
-  },
-];
-
 const priorVersionsData = new SplineChart({
   chart: {
-    title: 'Which versions of Ember Data are used in your apps?',
-    subtitle: 'Releases Prior to Survey',
-    tooltip: function () {
-      var releasesPrior = +this.x;
-      var s =
-        '<b>' +
-        +this.x +
-        ' Release' +
-        (releasesPrior !== 1 ? 's' : '') +
-        ' Prior to Survey</b>';
-      for (var i = 0; i < this.points.length; ++i) {
-        var point = this.points[i],
-          seriesName = point.series.name;
-        s +=
-          '<br/><span style="color:' +
-          point.color +
-          '">●</span>' +
-          seriesName +
-          ': ';
-        var labels;
-        for (var j = 0; j < versionData.length; ++j) {
-          if (versionData[j].label === seriesName) {
-            labels = versionData[j].values;
-          }
-        }
-        var label = labels[labels.length - 1 - releasesPrior].label;
-        s += label + ' Release (' + point.y + '%)';
-      }
-      return s;
-    },
     categories: [
-      '13',
-      '12',
-      '11',
-      '10',
-      '9',
-      '8',
-      '7',
-      '6',
-      '5',
-      '4',
-      '3',
-      '2',
-      '1',
-      '0',
+      '1.13',
+      '2.0',
+      '2.1',
+      '2.2',
+      '2.3',
+      '2.4',
+      '2.5',
+      '2.6',
+      '2.7',
+      '2.8',
+      '2.9',
+      '2.10',
+      '2.11',
+      '2.12',
     ],
+    title: 'Which versions of Ember Data are used in your apps?',
   },
-  rawData: makeVersionChartData(versionData),
+
+  rawData: [
+    {
+      color: darkGrayColor,
+      label: '2016',
+      values: [
+        27, // '1.13'
+        6, // '2.0'
+        4, // '2.1'
+        8, // '2.2'
+        21, // '2.3'
+        42, // '2.4'
+        null, // '2.5'
+        null, // '2.6'
+        null, // '2.7'
+        null, // '2.8'
+        null, // '2.9'
+        null, // '2.10'
+        null, // '2.11'
+        null, // '2.12'
+      ],
+    },
+    {
+      color: emberOrange,
+      label: '2017',
+      values: [
+        9, // '1.13'
+        2.15, // '2.0'
+        2.1, // '2.1'
+        1.5, // '2.2'
+        2.8, // '2.3'
+        7, // '2.4'
+        3, // '2.5'
+        4, // '2.6'
+        4, // '2.7'
+        13.8, // '2.8'
+        7, // '2.9'
+        21.6, // '2.10'
+        34.9, // '2.11'
+        17, // '2.12'
+      ],
+    },
+  ],
 }).highchartsOptions;
 
-function makeVersionChartData(versionData) {
-  var seriesData = [];
-
-  for (var i = 0; i < versionData.length; ++i) {
-    var _series = {
-      label: versionData[i].label,
-      values: versionData[i].values.map(function (d) {
-        return d && d.value;
-      }),
-    };
-    if (versionData[i].color) {
-      _series.color = versionData[i].color;
-    }
-    seriesData.push(_series);
-  }
-
-  return seriesData;
-}
 export default class EmberCommunitySurvey2017Controller extends Controller {
   chartHowlong = chartHowlong;
   chartSnapshotEmberDevelopers = chartSnapshotEmberDevelopers;
