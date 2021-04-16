@@ -6,21 +6,38 @@ import { module, test } from 'qunit';
 module('Unit | Utility | highcharts/spline-chart', function () {
   module('SplineChart', function () {
     test('highchartsOptions returns an options object', function (assert) {
-      const noOp = () => {};
-
       const { options } = new SplineChart({
         chart: {
-          categories: ['6', '5', '4', '3', '2', '1', '0'],
+          categories: [
+            '1.13',
+            '2.0',
+            '2.1',
+            '2.2',
+            '2.3',
+            '2.4',
+            '2.5',
+            '2.6',
+            '2.7',
+            '2.8',
+            '2.9',
+            '2.10',
+            '2.11',
+            '2.12',
+          ],
           title: 'Which versions of Ember Data are used in your apps?',
-          subtitle: 'Some subtitle',
-          tooltip: noOp,
         },
 
         rawData: [
           {
+            color: '#4b4b4b',
             label: '2016',
-            color: '#1E1E1E',
             values: [
+              27,
+              6,
+              4,
+              8,
+              21,
+              42,
               null,
               null,
               null,
@@ -28,40 +45,31 @@ module('Unit | Utility | highcharts/spline-chart', function () {
               null,
               null,
               null,
-              { value: 27, label: '1.13' },
-              { value: 6, label: '2.0' },
-              { value: 4, label: '2.1' },
-              { value: 8, label: '2.2' },
-              { value: 21, label: '2.3' },
-              { value: 42, label: '2.4' },
               null,
             ],
           },
           {
+            color: '#f23818',
             label: '2017',
-            color: '#FFFFFF',
             values: [
-              { value: 9, label: '1.13' },
-              { value: 2.15, label: '2.0' },
-              { value: 2.1, label: '2.1' },
-              { value: 1.5, label: '2.2' },
-              { value: 2.8, label: '2.3' },
-              { value: 7, label: '2.4' },
-              { value: 3, label: '2.5' },
-              { value: 4, label: '2.6' },
-              { value: 4, label: '2.7' },
-              { value: 13.8, label: '2.8' },
-              { value: 7, label: '2.9' },
-              { value: 21.6, label: '2.10' },
-              { value: 34.9, label: '2.11' },
-              { value: 17, label: 'stable (2.12)' },
+              9,
+              2.15,
+              2.1,
+              1.5,
+              2.8,
+              7,
+              3,
+              4,
+              4,
+              13.8,
+              7,
+              21.6,
+              34.9,
+              17,
             ],
           },
         ],
       }).highchartsOptions;
-
-      // Don't check tooltip.formatter (a function) in tests
-      delete options.tooltip.formatter;
 
       assert.deepEqual(
         options,
@@ -79,7 +87,7 @@ module('Unit | Utility | highcharts/spline-chart', function () {
           },
 
           subtitle: {
-            text: 'Some subtitle',
+            text: undefined,
           },
 
           title: {
@@ -87,18 +95,33 @@ module('Unit | Utility | highcharts/spline-chart', function () {
           },
 
           tooltip: {
-            crosshairs: true,
-            shared: true,
+            pointFormat: '{series.name}: {point.y:.1f}%',
           },
 
           xAxis: {
-            categories: ['6', '5', '4', '3', '2', '1', '0'],
+            categories: [
+              '1.13',
+              '2.0',
+              '2.1',
+              '2.2',
+              '2.3',
+              '2.4',
+              '2.5',
+              '2.6',
+              '2.7',
+              '2.8',
+              '2.9',
+              '2.10',
+              '2.11',
+              '2.12',
+            ],
             type: 'category',
           },
 
           yAxis: {
+            min: 0,
             title: {
-              text: 'Percent',
+              text: 'Percent of responses',
             },
           },
         },
@@ -111,9 +134,15 @@ module('Unit | Utility | highcharts/spline-chart', function () {
     test('returns the series object', function (assert) {
       const rawData = [
         {
+          color: '#4b4b4b',
           label: '2016',
-          color: '#555',
           values: [
+            27,
+            6,
+            4,
+            8,
+            21,
+            42,
             null,
             null,
             null,
@@ -121,34 +150,13 @@ module('Unit | Utility | highcharts/spline-chart', function () {
             null,
             null,
             null,
-            { value: 27, label: '1.13' },
-            { value: 6, label: '2.0' },
-            { value: 4, label: '2.1' },
-            { value: 8, label: '2.2' },
-            { value: 21, label: '2.3' },
-            { value: 42, label: '2.4' },
             null,
           ],
         },
         {
+          color: '#f23818',
           label: '2017',
-          color: '#444',
-          values: [
-            { value: 9, label: '1.13' },
-            { value: 2.15, label: '2.0' },
-            { value: 2.1, label: '2.1' },
-            { value: 1.5, label: '2.2' },
-            { value: 2.8, label: '2.3' },
-            { value: 7, label: '2.4' },
-            { value: 3, label: '2.5' },
-            { value: 4, label: '2.6' },
-            { value: 4, label: '2.7' },
-            { value: 13.8, label: '2.8' },
-            { value: 7, label: '2.9' },
-            { value: 21.6, label: '2.10' },
-            { value: 34.9, label: '2.11' },
-            { value: 17, label: 'stable (2.12)' },
-          ],
+          values: [9, 2.15, 2.1, 1.5, 2.8, 7, 3, 4, 4, 13.8, 7, 21.6, 34.9, 17],
         },
       ];
 
@@ -158,14 +166,16 @@ module('Unit | Utility | highcharts/spline-chart', function () {
 
       // Check series 1
       assert.deepEqual(
+        series[0],
         {
-          color: series[0].color,
-          data: series[0].data,
-          year: series[0].name,
-        },
-        {
-          color: '#555',
+          color: '#4b4b4b',
           data: [
+            27,
+            6,
+            4,
+            8,
+            21,
+            42,
             null,
             null,
             null,
@@ -173,45 +183,20 @@ module('Unit | Utility | highcharts/spline-chart', function () {
             null,
             null,
             null,
-            { value: 27, label: '1.13' },
-            { value: 6, label: '2.0' },
-            { value: 4, label: '2.1' },
-            { value: 8, label: '2.2' },
-            { value: 21, label: '2.3' },
-            { value: 42, label: '2.4' },
             null,
           ],
-          year: '2016',
+          name: '2016',
         },
         'We get the correct data for the 1st series.'
       );
 
       // Check series 2
       assert.deepEqual(
+        series[1],
         {
-          color: series[1].color,
-          data: series[1].data,
-          year: series[1].name,
-        },
-        {
-          color: '#444',
-          data: [
-            { value: 9, label: '1.13' },
-            { value: 2.15, label: '2.0' },
-            { value: 2.1, label: '2.1' },
-            { value: 1.5, label: '2.2' },
-            { value: 2.8, label: '2.3' },
-            { value: 7, label: '2.4' },
-            { value: 3, label: '2.5' },
-            { value: 4, label: '2.6' },
-            { value: 4, label: '2.7' },
-            { value: 13.8, label: '2.8' },
-            { value: 7, label: '2.9' },
-            { value: 21.6, label: '2.10' },
-            { value: 34.9, label: '2.11' },
-            { value: 17, label: 'stable (2.12)' },
-          ],
-          year: '2017',
+          color: '#f23818',
+          data: [9, 2.15, 2.1, 1.5, 2.8, 7, 3, 4, 4, 13.8, 7, 21.6, 34.9, 17],
+          name: '2017',
         },
         'We get the correct data for the 2nd series.'
       );
