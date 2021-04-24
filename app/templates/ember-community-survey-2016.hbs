@@ -18,8 +18,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.chartHowlong.options}}
-      @data={{this.chartHowlong.data}}
+      @chart={{this.chartHowlong}}
     />
   </:charts>
 
@@ -41,8 +40,7 @@
     <div class="grid lg:grid-2">
       {{#each this.chartEmberAtTheOffice as |chart|}}
         <Highcharts
-          @chartOptions={{chart.options}}
-          @data={{chart.data}}
+          @chart={{chart}}
         />
       {{/each}}
     </div>
@@ -70,8 +68,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.chartNewReleaseAdoptionEmber.options}}
-      @data={{this.chartNewReleaseAdoptionEmber.data}}
+      @chart={{this.chartNewReleaseAdoptionEmber}}
     />
   </:charts>
 
@@ -94,8 +91,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.chartNewReleaseAdoptionEmberData.options}}
-      @data={{this.chartNewReleaseAdoptionEmberData.data}}
+      @chart={{this.chartNewReleaseAdoptionEmberData}}
     />
   </:charts>
 
@@ -112,8 +108,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.chartLongLivedCodebases.options}}
-      @data={{this.chartLongLivedCodebases.data}}
+      @chart={{this.chartLongLivedCodebases}}
     />
   </:charts>
 
@@ -132,8 +127,7 @@
     <div class="grid lg:grid-2">
       {{#each this.chartServerSide as |chart|}}
         <Highcharts
-          @chartOptions={{chart.options}}
-          @data={{chart.data}}
+          @chart={{chart}}
         />
       {{/each}}
     </div>
@@ -157,8 +151,7 @@
     <div class="grid lg:grid-2">
       {{#each this.chartBrowserSuppor as |chart|}}
         <Highcharts
-          @chartOptions={{chart.options}}
-          @data={{chart.data}}
+          @chart={{chart}}
         />
       {{/each}}
     </div>
@@ -185,8 +178,7 @@
     <div class="grid lg:grid-2">
       {{#each this.chartEmberEcosystem as |chart|}}
         <Highcharts
-          @chartOptions={{chart.options}}
-          @data={{chart.data}}
+          @chart={{chart}}
         />
       {{/each}}
     </div>
@@ -205,8 +197,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.chartSEO.options}}
-      @data={{this.chartSEO.data}}
+      @chart={{this.chartSEO}}
     />
   </:charts>
 

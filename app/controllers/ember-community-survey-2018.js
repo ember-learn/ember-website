@@ -42,7 +42,7 @@ const communityParticipation = new HorizontalBarChart({
       values: [3.0, 9.8, 52.2, 23.8, 34.2, 57.8],
     },
   ],
-}).highchartsOptions;
+});
 
 const longLivedCodebases = new VerticalBarChart({
   chart: {
@@ -73,7 +73,7 @@ const longLivedCodebases = new VerticalBarChart({
       values: [31.3],
     },
   ],
-}).highchartsOptions;
+});
 
 const serverSide = new VerticalBarChart({
   chart: {
@@ -109,7 +109,7 @@ const serverSide = new VerticalBarChart({
       values: [33.7, 26.4, 22.1, 11.9, 10.5, 10.3, 9.2, 6.5, 2.6, 2.6],
     },
   ],
-}).highchartsOptions;
+});
 
 const serverSideFrameworks = new VerticalBarChart({
   chart: {
@@ -144,7 +144,7 @@ const serverSideFrameworks = new VerticalBarChart({
       values: [35.0, 21.6, 12.5, 20.5, 8.2, 7.7, 7.6, 5.7],
     },
   ],
-}).highchartsOptions;
+});
 
 const browserRequirements = new VerticalBarChart({
   chart: {
@@ -174,7 +174,7 @@ const browserRequirements = new VerticalBarChart({
       values: [97.7, 57.3, 29.7, 3.7],
     },
   ],
-}).highchartsOptions;
+});
 
 const recommendingEmber = new VerticalBarChart({
   chart: {
@@ -201,7 +201,7 @@ const recommendingEmber = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 const editorTool = new VerticalBarChart({
   chart: {
@@ -235,7 +235,7 @@ const editorTool = new VerticalBarChart({
       values: [28.2, 20.3, 20.5, 19, 37.9, 3.5, 0, 1.9],
     },
   ],
-}).highchartsOptions;
+});
 
 const productionApps = new VerticalBarChart({
   chart: {
@@ -260,7 +260,7 @@ const productionApps = new VerticalBarChart({
       values: [9.1, 23.3, 34.5, 30.7, 17.7, 11.1, 9.8],
     },
   ],
-}).highchartsOptions;
+});
 
 const emberenoEmployment = new HorizontalBarChart({
   chart: {
@@ -291,7 +291,7 @@ const emberenoEmployment = new HorizontalBarChart({
       values: [80.2, 12.7, 11.8, 10.6],
     },
   ],
-}).highchartsOptions;
+});
 
 const applicationUsers = new VerticalBarChart({
   chart: {
@@ -316,7 +316,7 @@ const applicationUsers = new VerticalBarChart({
       values: [69.5, 49.4, 39.9],
     },
   ],
-}).highchartsOptions;
+});
 
 const teamSize = new VerticalBarChart({
   chart: {
@@ -346,7 +346,7 @@ const teamSize = new VerticalBarChart({
       values: [7.2, 62.5, 9.4, 5.3, 3.9, 6.4],
     },
   ],
-}).highchartsOptions;
+});
 
 const employerUsingEmber = new VerticalBarChart({
   chart: {
@@ -370,7 +370,7 @@ const employerUsingEmber = new VerticalBarChart({
       values: [43.1, 52.3, 4.5],
     },
   ],
-}).highchartsOptions;
+});
 
 const gettingHired = new VerticalBarChart({
   chart: {
@@ -396,7 +396,7 @@ const gettingHired = new VerticalBarChart({
       values: [40.9, 27.2, 18.1, 13.8],
     },
   ],
-}).highchartsOptions;
+});
 
 const demographicsRegion = new VerticalBarChart({
   chart: {
@@ -420,7 +420,7 @@ const demographicsRegion = new VerticalBarChart({
       values: [53.7, 32.7, 7.8, 3.4, 3.2, 0.5, 0.5, 0.4],
     },
   ],
-}).highchartsOptions;
+});
 
 const newReleaseAdoption = new SplineChart({
   chart: {
@@ -625,7 +625,7 @@ const newReleaseAdoption = new SplineChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 const emberDataAdoption = new SplineChart({
   chart: {
@@ -738,7 +738,7 @@ const emberDataAdoption = new SplineChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 export default class EmberCommunitySurvey2018Controller extends Controller {
   newReleaseAdoption = newReleaseAdoption;

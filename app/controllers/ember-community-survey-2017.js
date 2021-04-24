@@ -140,7 +140,7 @@ const chartHowlong = new SplineChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 const chartSnapshotEmberDevelopers = new VerticalBarChart({
   chart: {
@@ -173,7 +173,7 @@ const chartSnapshotEmberDevelopers = new VerticalBarChart({
       values: [44, 15, 14, 7, 7, 6.4, 6.3],
     },
   ],
-}).highchartsOptions;
+});
 
 const employmentSituation = new VerticalBarChart({
   chart: {
@@ -204,7 +204,7 @@ const employmentSituation = new VerticalBarChart({
       values: [74.2, 13.9, 13.6, 10.4, 12.7],
     },
   ],
-}).highchartsOptions;
+});
 
 const emberDevelopers = new VerticalBarChart({
   chart: {
@@ -229,7 +229,7 @@ const emberDevelopers = new VerticalBarChart({
       values: [8.7, 69.8, 6.8, 4.8, 2.5, 2],
     },
   ],
-}).highchartsOptions;
+});
 
 const longLived = new VerticalBarChart({
   chart: {
@@ -286,7 +286,7 @@ const longLived = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 const serverLanguage = new VerticalBarChart({
   chart: {
@@ -334,7 +334,7 @@ const serverLanguage = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 const browserRequirements = new VerticalBarChart({
   chart: {
@@ -367,7 +367,7 @@ const browserRequirements = new VerticalBarChart({
       values: [93.69, 51.36, 28.26, 9.84, 7.82, 2.9, 0.76],
     },
   ],
-}).highchartsOptions;
+});
 
 const recommendingEmber = new VerticalBarChart({
   chart: {
@@ -394,7 +394,7 @@ const recommendingEmber = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 const textEditor = new VerticalBarChart({
   chart: {
@@ -423,7 +423,7 @@ const textEditor = new VerticalBarChart({
       values: [38.11, 26.56, 26.37, 21.08, 19.31, 4.04, 3.97, 2.27],
     },
   ],
-}).highchartsOptions;
+});
 
 const productionUsers = new VerticalBarChart({
   chart: {
@@ -450,7 +450,7 @@ const productionUsers = new VerticalBarChart({
       values: [12.24, 24.42, 36.85, 42.4, 9.27],
     },
   ],
-}).highchartsOptions;
+});
 
 const whenStarting = new VerticalBarChart({
   chart: {
@@ -469,7 +469,7 @@ const whenStarting = new VerticalBarChart({
       values: [53.63, 38.74, 6.56],
     },
   ],
-}).highchartsOptions;
+});
 
 const preExistingKnowledge = new VerticalBarChart({
   chart: {
@@ -490,7 +490,7 @@ const preExistingKnowledge = new VerticalBarChart({
       values: [47.13, 25.49, 12.87, 12.87],
     },
   ],
-}).highchartsOptions;
+});
 
 const demographics = new VerticalBarChart({
   chart: {
@@ -513,7 +513,7 @@ const demographics = new VerticalBarChart({
       values: [49, 33.6, 7.8, 3.7, 3.5, 0.8, 0.4],
     },
   ],
-}).highchartsOptions;
+});
 
 const priorVersionsData = new SplineChart({
   chart: {
@@ -578,7 +578,7 @@ const priorVersionsData = new SplineChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 export default class EmberCommunitySurvey2017Controller extends Controller {
   chartHowlong = chartHowlong;
