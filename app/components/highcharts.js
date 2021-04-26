@@ -16,8 +16,13 @@ export default class HighchartsComponent extends Component {
   @tracked isChartDrawn = false;
 
   get chartOptions() {
-    const { options: chartOptions, data } =
-      this.args.chart?.highchartsOptions || {};
+    const { chart } = this.args;
+
+    if (!chart) {
+      return {};
+    }
+
+    const { options: chartOptions, data } = chart.highchartsOptions;
 
     return createChartOptions({ chartOptions, data });
   }
