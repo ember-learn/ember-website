@@ -84,7 +84,7 @@ const stackSkillsChart = new VerticalBarChart({
     },
     */
   ],
-}).highchartsOptions;
+});
 
 // AUTO-GENERATED HighCharts
 //=============================================================================
@@ -112,7 +112,7 @@ const SS_Q101 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q1.04: How long have you been working with Ember?
 //------------------------------------------------
@@ -142,7 +142,7 @@ const SS_Q104 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q2.04: Are you still required to support versions of Internet Explorer?
 //------------------------------------------------
@@ -156,7 +156,7 @@ const SS_Q204 = new PieChart({
     { color: emberColors.blue, label: 'Yes', value: 311 },
     { color: emberColors.ember, label: 'No', value: 443 },
   ],
-}).highchartsOptions;
+});
 
 // Q3.01: How many developers at your company are responsible for writing Front-End code?
 //------------------------------------------------
@@ -200,7 +200,7 @@ const SS_Q301 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q3.02: How many developers at your company are responsible for writing Ember code?
@@ -242,7 +242,7 @@ const SS_Q302 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Prose for Q3.06
 // Q3.05: What is the primary language of apps developed at your business?
@@ -267,7 +267,7 @@ const SS_Q305 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q3.06: Does your business require applications to be internationalized?
 //------------------------------------------------
@@ -281,7 +281,7 @@ const SS_Q306 = new PieChart({
     { color: emberColors.blue, label: 'Yes', value: 480 },
     { color: emberColors.ember, label: 'No', value: 267 },
   ],
-}).highchartsOptions;
+});
 
 // Q1.03: What are the ways you learn about and stay up to date with Ember?
 //------------------------------------------------
@@ -315,7 +315,7 @@ const MS_Q103 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q1.11: Which text editors do you use for development?
 //------------------------------------------------
@@ -349,7 +349,7 @@ const MS_Q111 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q1.12: Choose the option(s) that best describe your participation in the Ember community:
 //------------------------------------------------
@@ -381,7 +381,7 @@ const MS_Q112 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q3.04: What are the accessibility requirements for your business?
 //------------------------------------------------
@@ -411,7 +411,7 @@ const MS_Q304 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q4.01: Which version(s) of Ember are in use in your apps?
 //------------------------------------------------
@@ -447,7 +447,7 @@ const MS_Q401 = new AreaSplineChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q4.06: Which of these server-side frameworks do you use?
 //------------------------------------------------
@@ -486,7 +486,7 @@ const MS_Q406 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q4.08: What testing framework(s) do you use in your Ember apps?
 //------------------------------------------------
@@ -509,7 +509,7 @@ const MS_Q408 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.12: What is the primary target platform for your Ember apps?
@@ -528,7 +528,7 @@ const MS_Q412 = new VerticalBarChart({
       values: [100 * (471 / 754), 100 * (281 / 754), 100 * (2 / 754)],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.13: Who uses your application(s)?
@@ -551,7 +551,7 @@ const MS_Q413 = new HorizontalBarChart({
       values: [100 * (408 / 781), 100 * (282 / 781), 100 * (91 / 781)],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q6.01: Did you participate in any of the following surveys?
 //------------------------------------------------
@@ -566,7 +566,7 @@ const MS_Q601 = new PieChart({
     { color: emberColors.ember, label: 'No', value: 198 },
     { color: orangePalette.orangeDarkest, label: 'No Response', value: 241 },
   ],
-}).highchartsOptions;
+});
 
 //=============================================================================
 export default class EmberCommunitySurvey2020Controller extends Controller {

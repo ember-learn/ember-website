@@ -29,7 +29,7 @@ const chartHowlong = new VerticalBarChart({
       values: [27, 16, 16, 9, 9, 10, 10],
     },
   ],
-}).highchartsOptions;
+});
 
 const chartEmberAtTheOffice = [
   new VerticalBarChart({
@@ -56,7 +56,7 @@ const chartEmberAtTheOffice = [
         values: [59, 15, 16, 11, 23],
       },
     ],
-  }).highchartsOptions,
+  }),
 
   new VerticalBarChart({
     chart: {
@@ -76,7 +76,7 @@ const chartEmberAtTheOffice = [
         values: [12, 74, 6, 4, 2, 1],
       },
     ],
-  }).highchartsOptions,
+  }),
 ];
 
 const chartNewReleaseAdoptionEmber = new VerticalBarChart({
@@ -130,7 +130,7 @@ const chartNewReleaseAdoptionEmber = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 const chartNewReleaseAdoptionEmberData = new VerticalBarChart({
   chart: {
@@ -169,7 +169,7 @@ const chartNewReleaseAdoptionEmberData = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 const chartLongLivedCodebases = new VerticalBarChart({
   chart: {
@@ -213,7 +213,7 @@ const chartLongLivedCodebases = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 const chartServerSide = [
   new VerticalBarChart({
@@ -253,7 +253,7 @@ const chartServerSide = [
         ],
       },
     ],
-  }).highchartsOptions,
+  }),
 
   new VerticalBarChart({
     chart: {
@@ -292,7 +292,7 @@ const chartServerSide = [
         ],
       },
     ],
-  }).highchartsOptions,
+  }),
 ];
 
 const chartBrowserSuppor = [
@@ -325,7 +325,7 @@ const chartBrowserSuppor = [
         ],
       },
     ],
-  }).highchartsOptions,
+  }),
 
   new VerticalBarChart({
     chart: {
@@ -356,7 +356,7 @@ const chartBrowserSuppor = [
         ],
       },
     ],
-  }).highchartsOptions,
+  }),
 ];
 
 const chartEmberEcosystem = [
@@ -378,7 +378,7 @@ const chartEmberEcosystem = [
         ],
       },
     ],
-  }).highchartsOptions,
+  }),
 
   new VerticalBarChart({
     chart: {
@@ -408,7 +408,7 @@ const chartEmberEcosystem = [
         ],
       },
     ],
-  }).highchartsOptions,
+  }),
 ];
 
 const chartSEO = new VerticalBarChart({
@@ -438,7 +438,7 @@ const chartSEO = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 export default class EmberCommunitySurvey2016Controller extends Controller {
   chartHowlong = chartHowlong;

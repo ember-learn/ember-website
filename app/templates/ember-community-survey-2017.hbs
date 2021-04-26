@@ -18,8 +18,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.chartHowlong.options}}
-      @data={{this.chartHowlong.data}}
+      @chart={{this.chartHowlong}}
     />
   </:charts>
 
@@ -42,8 +41,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.priorVersionsData.options}}
-      @data={{this.priorVersionsData.data}}
+      @chart={{this.priorVersionsData}}
     />
   </:charts>
 </EmberCommunitySurvey::Section>
@@ -54,8 +52,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.recommendingEmber.options}}
-      @data={{this.recommendingEmber.data}}
+      @chart={{this.recommendingEmber}}
     />
   </:charts>
 
@@ -214,13 +211,11 @@
   <:charts>
     <div class="grid lg:grid-2">
       <Highcharts
-        @chartOptions={{this.whenStarting.options}}
-        @data={{this.whenStarting.data}}
+        @chart={{this.whenStarting}}
       />
 
       <Highcharts
-        @chartOptions={{this.preExistingKnowledge.options}}
-        @data={{this.preExistingKnowledge.data}}
+        @chart={{this.preExistingKnowledge}}
       />
     </div>
   </:charts>
@@ -245,13 +240,11 @@
   <:charts>
     <div class="grid lg:grid-2">
       <Highcharts
-        @chartOptions={{this.employmentSituation.options}}
-        @data={{this.employmentSituation.data}}
+        @chart={{this.employmentSituation}}
       />
 
       <Highcharts
-        @chartOptions={{this.emberDevelopers.options}}
-        @data={{this.emberDevelopers.data}}
+        @chart={{this.emberDevelopers}}
       />
     </div>
   </:charts>
@@ -272,8 +265,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.chartSnapshotEmberDevelopers.options}}
-      @data={{this.chartSnapshotEmberDevelopers.data}}
+      @chart={{this.chartSnapshotEmberDevelopers}}
     />
   </:charts>
 
@@ -290,8 +282,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.productionUsers.options}}
-      @data={{this.productionUsers.data}}
+      @chart={{this.productionUsers}}
     />
   </:charts>
 
@@ -311,8 +302,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.longLived.options}}
-      @data={{this.longLived.data}}
+      @chart={{this.longLived}}
     />
   </:charts>
 
@@ -329,8 +319,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.serverLanguage.options}}
-      @data={{this.serverLanguage.data}}
+      @chart={{this.serverLanguage}}
     />
   </:charts>
 
@@ -350,8 +339,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.textEditor.options}}
-      @data={{this.textEditor.data}}
+      @chart={{this.textEditor}}
     />
   </:charts>
 
@@ -368,8 +356,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.browserRequirements.options}}
-      @data={{this.browserRequirements.data}}
+      @chart={{this.browserRequirements}}
     />
   </:charts>
 
@@ -389,8 +376,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.demographics.options}}
-      @data={{this.demographics.data}}
+      @chart={{this.demographics}}
     />
   </:charts>
 

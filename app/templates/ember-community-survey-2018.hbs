@@ -18,8 +18,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.newReleaseAdoption.options}}
-      @data={{this.newReleaseAdoption.data}}
+      @chart={{this.newReleaseAdoption}}
     />
   </:charts>
 
@@ -39,8 +38,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.emberDataAdoption.options}}
-      @data={{this.emberDataAdoption.data}}
+      @chart={{this.emberDataAdoption}}
     />
   </:charts>
 
@@ -60,8 +58,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.recommendingEmber.options}}
-      @data={{this.recommendingEmber.data}}
+      @chart={{this.recommendingEmber}}
     />
   </:charts>
 
@@ -226,13 +223,11 @@
   <:charts>
     <div class="grid lg:grid-2">
       <Highcharts
-        @chartOptions={{this.employerUsingEmber.options}}
-        @data={{this.employerUsingEmber.data}}
+        @chart={{this.employerUsingEmber}}
       />
 
       <Highcharts
-        @chartOptions={{this.gettingHired.options}}
-        @data={{this.gettingHired.data}}
+        @chart={{this.gettingHired}}
       />
     </div>
   </:charts>
@@ -251,15 +246,13 @@
   <:charts>
     <div>
       <Highcharts
-        @chartOptions={{this.productionApps.options}}
-        @data={{this.productionApps.data}}
+        @chart={{this.productionApps}}
       />
     </div>
 
     <div class="mt-3">
       <Highcharts
-        @chartOptions={{this.applicationUsers.options}}
-        @data={{this.applicationUsers.data}}
+        @chart={{this.applicationUsers}}
       />
     </div>
   </:charts>
@@ -277,8 +270,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.emberenoEmployment.options}}
-      @data={{this.emberenoEmployment.data}}
+      @chart={{this.emberenoEmployment}}
     />
   </:charts>
 
@@ -295,8 +287,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.teamSize.options}}
-      @data={{this.teamSize.data}}
+      @chart={{this.teamSize}}
     />
   </:charts>
 
@@ -313,8 +304,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.longLivedCodebases.options}}
-      @data={{this.longLivedCodebases.data}}
+      @chart={{this.longLivedCodebases}}
     />
   </:charts>
 
@@ -334,8 +324,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.communityParticipation.options}}
-      @data={{this.communityParticipation.data}}
+      @chart={{this.communityParticipation}}
     />
   </:charts>
 
@@ -353,15 +342,13 @@
   <:charts>
     <div>
       <Highcharts
-        @chartOptions={{this.serverSide.options}}
-        @data={{this.serverSide.data}}
+        @chart={{this.serverSide}}
       />
     </div>
 
     <div class="mt-3">
       <Highcharts
-        @chartOptions={{this.serverSideFrameworks.options}}
-        @data={{this.serverSideFrameworks.data}}
+        @chart={{this.serverSideFrameworks}}
       />
     </div>
   </:charts>
@@ -389,8 +376,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.editorTool.options}}
-      @data={{this.editorTool.data}}
+      @chart={{this.editorTool}}
     />
   </:charts>
 
@@ -407,8 +393,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.browserRequirements.options}}
-      @data={{this.browserRequirements.data}}
+      @chart={{this.browserRequirements}}
     />
   </:charts>
 
@@ -428,8 +413,7 @@
 >
   <:charts>
     <Highcharts
-      @chartOptions={{this.demographicsRegion.options}}
-      @data={{this.demographicsRegion.data}}
+      @chart={{this.demographicsRegion}}
     />
   </:charts>
 

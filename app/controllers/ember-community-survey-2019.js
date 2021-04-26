@@ -90,7 +90,7 @@ const stackSkillsChart = new VerticalBarChart({
       values: [100 * (138 / 1232), 100 * (499 / 1232), 100 * (589 / 1232)],
     },
   ],
-}).highchartsOptions;
+});
 
 // DEMO OF AUTO-GENERATED HighCharts
 //=============================================================================
@@ -123,7 +123,7 @@ const SS_Q101 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q1.04: How long have you been working with Ember?
 //------------------------------------------------
@@ -163,7 +163,7 @@ const SS_Q104 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q2.03: I use Ember for work:
@@ -192,7 +192,7 @@ const SS_Q203 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q2.04: When taking your most recent job:
@@ -225,7 +225,7 @@ const SS_Q204 = new VerticalBarChart({
       values: [100 * (453 / 1232), 100 * (718 / 1232), 100 * (49 / 1232)],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q2.05: When taking your most recent job your pre-existing knowledge of Ember.js was:
 //------------------------------------------------
@@ -264,7 +264,7 @@ const SS_Q205 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q3.01: How many developers at your company are responsible for writing Front-End code?
 //------------------------------------------------
@@ -299,7 +299,7 @@ const SS_Q301 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q3.02: How many developers at your company are responsible for writing Ember code?
@@ -346,7 +346,7 @@ const SS_Q302 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q3.03: At this time next year, how many Ember developers does your company plan to employ?
 //------------------------------------------------
@@ -370,7 +370,7 @@ const SS_Q303 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Prose for Q3.06
@@ -406,7 +406,7 @@ const SS_Q305 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q3.06: Does your business require applications to be internationalized?
@@ -425,7 +425,7 @@ const SS_Q306 = new VerticalBarChart({
       values: [100 * (695 / 1232), 100 * (472 / 1232), 100 * (46 / 1232)],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q4.05: What is the primary language of your server-side stack?
 //------------------------------------------------
@@ -464,7 +464,7 @@ const SS_Q405 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q4.10: How many Ember apps do you work on?
 //------------------------------------------------
@@ -487,7 +487,7 @@ const SS_Q410 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q4.18: How many addons have you written (including private, unpublished libraries)?
 //------------------------------------------------
@@ -510,7 +510,7 @@ const SS_Q418 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.19: How many addons have you published publicly?
@@ -534,7 +534,7 @@ const SS_Q419 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q5.01: In which region do you live?
@@ -572,7 +572,7 @@ const SS_Q501 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q5.02: Do you have a disability?
 //------------------------------------------------
@@ -590,7 +590,7 @@ const SS_Q502 = new VerticalBarChart({
       values: [100 * (26 / 1232), 100 * (1175 / 1232), 100 * (0 / 1232)],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q1.03: What are the ways you learn about and stay up to date with Ember?
@@ -651,7 +651,7 @@ const MS_Q103 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q1.10: When learning Ember yourself, or teaching it to someone new, what topics were difficult to understand?
 //------------------------------------------------
@@ -712,7 +712,7 @@ const MS_Q110 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q1.11: Which text editors do you use for development?
@@ -765,7 +765,7 @@ const MS_Q111 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q1.12: Choose the option(s) that best describe your participation in the Ember community:
 //------------------------------------------------
@@ -807,7 +807,7 @@ const MS_Q112 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q1.13: Which operating system(s) do you use for development?
 //------------------------------------------------
@@ -830,7 +830,7 @@ const MS_Q113 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q1.14: With which of these other front-end framework(s) do you have some level of experience?
@@ -906,7 +906,7 @@ const MS_Q114 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q2.01: What best describes your role at work?
@@ -943,7 +943,7 @@ const MS_Q201 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q2.02: Choose the option(s) that best describe your employment situation:
@@ -990,7 +990,7 @@ const MS_Q202 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q3.04: What are the accessibility requirements for your business?
@@ -1019,7 +1019,7 @@ const MS_Q304 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q3.07: In which sector(s) does your employer operate? Select all that apply:
 //------------------------------------------------
@@ -1073,7 +1073,7 @@ const MS_Q307 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.01: Which version(s) of Ember are in use in your apps?
@@ -1229,7 +1229,7 @@ const MS_Q401 = new AreaSplineChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q4.02: If you use Ember Data, which version(s) are used in your apps?
 //------------------------------------------------
@@ -1376,7 +1376,7 @@ const MS_Q402 = new AreaSplineChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.03: If you use Ember CLI, which version(s) are used in your apps?
@@ -1441,7 +1441,7 @@ const MS_Q403 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.06: Which of these server-side frameworks do you use?
@@ -1530,7 +1530,7 @@ const MS_Q406 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q4.07: What standards do you follow for HTTP API design?
 //------------------------------------------------
@@ -1568,7 +1568,7 @@ const MS_Q407 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.08: What testing framework(s) do you use in your Ember apps?
@@ -1609,7 +1609,7 @@ const MS_Q408 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.09: How old are your Ember applications?
@@ -1641,7 +1641,7 @@ const MS_Q409 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q4.11: What technologies are part of your deployment stack?
 //------------------------------------------------
@@ -1725,7 +1725,7 @@ const MS_Q411 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.12: What is the primary target platform for your Ember apps?
@@ -1758,7 +1758,7 @@ const MS_Q412 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.13: Who uses your application(s)?
@@ -1795,7 +1795,7 @@ const MS_Q413 = new VerticalBarChart({
       values: [100 * (888 / 1232), 100 * (613 / 1232), 100 * (479 / 1232)],
     },
   ],
-}).highchartsOptions;
+});
 
 // Q4.14: What browser versions do your applications target?
 //------------------------------------------------
@@ -1828,7 +1828,7 @@ const MS_Q414 = new VerticalBarChart({
       values: [92.7, 54.8, 25.4, 2.5],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.15: At this time next year, what browser versions do you expect your applications to target?
@@ -1862,7 +1862,7 @@ const MS_Q415 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.16: Which of these best describes your use of Ember in production applications?
@@ -1904,7 +1904,7 @@ const MS_Q416 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q4.17: What method do you rely on for search engine indexing?
@@ -1941,7 +1941,7 @@ const MS_Q417 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q5.04: Which categories describe you?
@@ -1980,7 +1980,7 @@ const MS_Q504 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 */
 
 // Q6.01: Did you participate in any of the following surveys?
@@ -2008,7 +2008,7 @@ const MS_Q601 = new VerticalBarChart({
       ],
     },
   ],
-}).highchartsOptions;
+});
 
 //=============================================================================
 export default class EmberCommunitySurvey2019Controller extends Controller {
