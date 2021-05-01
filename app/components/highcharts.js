@@ -2,10 +2,7 @@ import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import merge from 'deepmerge';
-import {
-  createChartOptions,
-  highchartsOptions,
-} from 'ember-website/utils/highcharts';
+import { highchartsOptions } from 'ember-website/utils/highcharts';
 
 export default class HighchartsComponent extends Component {
   /*
@@ -21,10 +18,7 @@ export default class HighchartsComponent extends Component {
     if (!chart) {
       return {};
     }
-
-    const { options: chartOptions, data } = chart.highchartsOptions;
-
-    return createChartOptions({ chartOptions, data });
+    return chart.highchartsOptions;
   }
 
   get isSettled() {
