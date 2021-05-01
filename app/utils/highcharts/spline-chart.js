@@ -1,6 +1,7 @@
 /*
   https://api.highcharts.com/highcharts/plotOptions.spline
 */
+
 export default class SplineChart {
   constructor({ chart, rawData }) {
     this.chart = chart;
@@ -11,43 +12,42 @@ export default class SplineChart {
     const { chart, series } = this;
 
     return {
-      data: series,
+      chart: {
+        backgroundColor: 'transparent',
+        type: 'spline',
+      },
 
-      options: {
-        chart: {
-          type: 'spline',
-        },
-
-        plotOptions: {
-          series: {
-            marker: {
-              enabled: false,
-            },
+      plotOptions: {
+        series: {
+          marker: {
+            enabled: false,
           },
         },
+      },
 
-        subtitle: {
-          text: chart.subtitle,
-        },
+      series,
 
+      subtitle: {
+        text: chart.subtitle,
+      },
+
+      title: {
+        text: chart.title,
+      },
+
+      tooltip: {
+        pointFormat: '{series.name}: {point.y:.1f}%',
+      },
+
+      xAxis: {
+        categories: chart.categories,
+        type: 'category',
+      },
+
+      yAxis: {
+        min: 0,
         title: {
-          text: chart.title,
-        },
-
-        tooltip: {
-          pointFormat: '{series.name}: {point.y:.1f}%',
-        },
-
-        xAxis: {
-          categories: chart.categories,
-          type: 'category',
-        },
-
-        yAxis: {
-          min: 0,
-          title: {
-            text: 'Percent of responses',
-          },
+          text: 'Percent of responses',
         },
       },
     };

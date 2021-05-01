@@ -1,6 +1,7 @@
 /*
   https://api.highcharts.com/highcharts/plotOptions.column
 */
+
 export default class VerticalBarChart {
   constructor({ chart, rawData }) {
     this.chart = chart;
@@ -9,36 +10,34 @@ export default class VerticalBarChart {
 
   get highchartsOptions() {
     const { chart, series } = this;
-
     return {
-      data: series,
+      chart: {
+        backgroundColor: 'transparent',
+        type: 'column',
+      },
 
-      options: {
-        chart: {
-          type: 'column',
-        },
+      series,
 
-        subtitle: {
-          text: chart.subtitle,
-        },
+      subtitle: {
+        text: chart.subtitle,
+      },
 
+      title: {
+        text: chart.title,
+      },
+
+      tooltip: {
+        pointFormat: '{series.name}: {point.y:.1f}%',
+      },
+
+      xAxis: {
+        categories: chart.categories,
+        type: 'category',
+      },
+
+      yAxis: {
         title: {
-          text: chart.title,
-        },
-
-        tooltip: {
-          pointFormat: '{series.name}: {point.y:.1f}%',
-        },
-
-        xAxis: {
-          categories: chart.categories,
-          type: 'category',
-        },
-
-        yAxis: {
-          title: {
-            text: 'Percent of responses',
-          },
+          text: 'Percent of responses',
         },
       },
     };

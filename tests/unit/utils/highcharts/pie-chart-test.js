@@ -6,7 +6,7 @@ import { module, test } from 'qunit';
 module('Unit | Utility | highcharts/pie-chart', function () {
   module('PieChart', function () {
     test('highchartsOptions returns an options object', function (assert) {
-      const { options } = new PieChart({
+      const options = new PieChart({
         chart: {
           title: 'Do you internationalize your applications?',
         },
@@ -17,10 +17,13 @@ module('Unit | Utility | highcharts/pie-chart', function () {
         ],
       }).highchartsOptions;
 
+      delete options.series;
+
       assert.deepEqual(
         options,
         {
           chart: {
+            backgroundColor: 'transparent',
             type: 'pie',
           },
 

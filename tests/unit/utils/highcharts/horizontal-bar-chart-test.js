@@ -6,7 +6,7 @@ import { module, test } from 'qunit';
 module('Unit | Utility | highcharts/horizontal-bar-chart', function () {
   module('HorizontalBarChart', function () {
     test('highchartsOptions returns an options object', function (assert) {
-      const { options } = new HorizontalBarChart({
+      const options = new HorizontalBarChart({
         chart: {
           categories: [
             'Writing RFCs',
@@ -34,10 +34,13 @@ module('Unit | Utility | highcharts/horizontal-bar-chart', function () {
         ],
       }).highchartsOptions;
 
+      delete options.series;
+
       assert.deepEqual(
         options,
         {
           chart: {
+            backgroundColor: 'transparent',
             type: 'bar',
           },
 

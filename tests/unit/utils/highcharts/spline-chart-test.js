@@ -6,7 +6,7 @@ import { module, test } from 'qunit';
 module('Unit | Utility | highcharts/spline-chart', function () {
   module('SplineChart', function () {
     test('highchartsOptions returns an options object', function (assert) {
-      const { options } = new SplineChart({
+      const options = new SplineChart({
         chart: {
           categories: [
             '1.13',
@@ -71,10 +71,13 @@ module('Unit | Utility | highcharts/spline-chart', function () {
         ],
       }).highchartsOptions;
 
+      delete options.series;
+
       assert.deepEqual(
         options,
         {
           chart: {
+            backgroundColor: 'transparent',
             type: 'spline',
           },
 

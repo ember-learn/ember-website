@@ -6,7 +6,7 @@ import { module, test } from 'qunit';
 module('Unit | Utility | highcharts/vertical-bar-chart', function () {
   module('VerticalBarChart', function () {
     test('highchartsOptions returns an options object', function (assert) {
-      const { options } = new VerticalBarChart({
+      const options = new VerticalBarChart({
         chart: {
           categories: ['Beginner', 'Intermediate', 'Advanced'],
           title: 'Rank your web skills',
@@ -36,10 +36,13 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function () {
         ],
       }).highchartsOptions;
 
+      delete options.series;
+
       assert.deepEqual(
         options,
         {
           chart: {
+            backgroundColor: 'transparent',
             type: 'column',
           },
 
