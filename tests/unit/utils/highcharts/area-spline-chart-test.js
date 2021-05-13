@@ -80,6 +80,9 @@ module('Unit | Utility | highcharts/area-spline-chart', function () {
           },
 
           yAxis: {
+            labels: {
+              format: '{value} %',
+            },
             title: {
               text: 'Percent of responses',
             },

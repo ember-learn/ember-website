@@ -36,6 +36,9 @@ export default class HorizontalBarChart {
       },
 
       yAxis: {
+        labels: {
+          format: '{value} %',
+        },
         min: 0,
         title: {
           text: 'Percent of responses',

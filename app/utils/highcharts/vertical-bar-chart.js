@@ -36,6 +36,9 @@ export default class VerticalBarChart {
       },
 
       yAxis: {
+        labels: {
+          format: '{value} %',
+        },
         title: {
           text: 'Percent of responses',
         },

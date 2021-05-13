@@ -64,6 +64,9 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function () {
           },
 
           yAxis: {
+            labels: {
+              format: '{value} %',
+            },
             title: {
               text: 'Percent of responses',
             },

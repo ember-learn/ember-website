@@ -122,6 +122,9 @@ module('Unit | Utility | highcharts/spline-chart', function () {
           },
 
           yAxis: {
+            labels: {
+              format: '{value} %',
+            },
             min: 0,
             title: {
               text: 'Percent of responses',

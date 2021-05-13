@@ -45,6 +45,9 @@ export default class SplineChart {
       },
 
       yAxis: {
+        labels: {
+          format: '{value} %',
+        },
         min: 0,
         title: {
           text: 'Percent of responses',

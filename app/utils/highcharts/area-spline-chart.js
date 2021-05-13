@@ -36,6 +36,9 @@ export default class AreaSplineChart {
       },
 
       yAxis: {
+        labels: {
+          format: '{value} %',
+        },
         title: {
           text: 'Percent of responses',
         },
