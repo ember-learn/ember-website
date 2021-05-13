@@ -45,7 +45,6 @@ const highchartsOptions = {
 };
 
 export {
-  createChartOptions,
   highchartsOptions,
   AreaSplineChart,
   HorizontalBarChart,
