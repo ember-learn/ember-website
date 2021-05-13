@@ -27,16 +27,6 @@ const defaultChartOptions = {
   },
 };
 
-function createChartOptions({
-  chartOptions = {},
-  data = [{ color: '#aaaaaa', data: 0, id: 'placeholder' }],
-} = {}) {
-  // Note, `merge(A, B)` means that B overrides A
-  const combinedChartOptions = merge(defaultChartOptions, chartOptions);
-
-  return assign({ series: data }, combinedChartOptions);
-}
-
 const highchartsOptions = {
   credits: {
     enabled: false,
