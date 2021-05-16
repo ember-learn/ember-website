@@ -2,7 +2,23 @@ import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import merge from 'deepmerge';
-import { highchartsOptions } from 'ember-website/utils/highcharts';
+
+const optionsForAllCharts = {
+  credits: {
+    enabled: false,
+  },
+
+  plotOptions: {
+    series: {
+      animation: false,
+      shadow: false,
+    },
+  },
+
+  time: {
+    timezoneOffset: new Date().getTimezoneOffset(),
+  },
+};
 
 export default class HighchartsComponent extends Component {
   /*
@@ -31,7 +47,7 @@ export default class HighchartsComponent extends Component {
       const module = await import('highcharts');
 
       this.highcharts = module.default;
-      this.highcharts.setOptions(highchartsOptions);
+      this.highcharts.setOptions(optionsForAllCharts);
 
       this.isHighchartsImported = true;
     } catch (e) {
