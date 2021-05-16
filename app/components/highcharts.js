@@ -18,6 +18,7 @@ export default class HighchartsComponent extends Component {
     if (!chart) {
       return {};
     }
+
     return chart.highchartsOptions;
   }
 

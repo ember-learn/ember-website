@@ -5,8 +5,8 @@ import { module, test } from 'qunit';
 
 module('Unit | Utility | highcharts/pie-chart', function () {
   module('PieChart', function () {
-    test('highchartsOptions returns an options object', function (assert) {
-      const options = new PieChart({
+    test('highchartsOptions returns an object that is compatible with Highcharts', function (assert) {
+      const { highchartsOptions } = new PieChart({
         chart: {
           title: 'Do you internationalize your applications?',
         },
@@ -15,12 +15,13 @@ module('Unit | Utility | highcharts/pie-chart', function () {
           { color: '#1E719B', label: 'Yes', value: 480 },
           { color: '#E04E39', label: 'No', value: 267 },
         ],
-      }).highchartsOptions;
+      });
 
-      delete options.series;
+      // series has been tested through the createSeries test module
+      delete highchartsOptions.series;
 
       assert.deepEqual(
-        options,
+        highchartsOptions,
         {
           chart: {
             backgroundColor: 'transparent',

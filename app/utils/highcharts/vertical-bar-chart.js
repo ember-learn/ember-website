@@ -1,7 +1,6 @@
 /*
   https://api.highcharts.com/highcharts/plotOptions.column
 */
-
 export default class VerticalBarChart {
   constructor({ chart, rawData }) {
     this.chart = chart;
@@ -10,6 +9,7 @@ export default class VerticalBarChart {
 
   get highchartsOptions() {
     const { chart, series } = this;
+
     return {
       chart: {
         backgroundColor: 'transparent',

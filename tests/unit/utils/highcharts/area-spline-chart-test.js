@@ -5,8 +5,8 @@ import { module, test } from 'qunit';
 
 module('Unit | Utility | highcharts/area-spline-chart', function () {
   module('AreaSplineChart', function () {
-    test('highchartsOptions returns an options object with default options merged', function (assert) {
-      const options = new AreaSplineChart({
+    test('highchartsOptions returns an object that is compatible with Highcharts', function (assert) {
+      const { highchartsOptions } = new AreaSplineChart({
         chart: {
           categories: [
             '1.x',
@@ -19,6 +19,7 @@ module('Unit | Utility | highcharts/area-spline-chart', function () {
           subtitle: '(Multi-select question)',
           title: 'Which version(s) of Ember are in use in your apps?',
         },
+
         rawData: [
           {
             color: '#1E719B',
@@ -43,12 +44,13 @@ module('Unit | Utility | highcharts/area-spline-chart', function () {
             ],
           },
         ],
-      }).highchartsOptions;
+      });
 
-      delete options.series;
+      // series has been tested through the createSeries test module
+      delete highchartsOptions.series;
 
       assert.deepEqual(
-        options,
+        highchartsOptions,
         {
           chart: {
             backgroundColor: 'transparent',

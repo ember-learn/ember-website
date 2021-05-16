@@ -1,7 +1,6 @@
 /*
   https://api.highcharts.com/highcharts/plotOptions.spline
 */
-
 export default class SplineChart {
   constructor({ chart, rawData }) {
     this.chart = chart;

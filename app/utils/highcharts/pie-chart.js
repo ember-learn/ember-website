@@ -1,7 +1,6 @@
 /*
   https://api.highcharts.com/highcharts/plotOptions.pie
 */
-
 export default class PieChart {
   constructor({ chart, rawData }) {
     this.chart = chart;
