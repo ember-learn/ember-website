@@ -11,34 +11,36 @@ export default class AreaSplineChart {
     const { chart, series } = this;
 
     return {
-      data: series,
+      chart: {
+        backgroundColor: 'transparent',
+        type: 'areaspline',
+      },
 
-      options: {
-        chart: {
-          type: 'areaspline',
+      series,
+
+      subtitle: {
+        text: chart.subtitle,
+      },
+
+      title: {
+        text: chart.title,
+      },
+
+      tooltip: {
+        pointFormat: '{series.name}: {point.y:.1f}%',
+      },
+
+      xAxis: {
+        categories: chart.categories,
+        type: 'category',
+      },
+
+      yAxis: {
+        labels: {
+          format: '{value} %',
         },
-
-        subtitle: {
-          text: chart.subtitle,
-        },
-
         title: {
-          text: chart.title,
-        },
-
-        tooltip: {
-          pointFormat: '{series.name}: {point.y:.1f}%',
-        },
-
-        xAxis: {
-          categories: chart.categories,
-          type: 'category',
-        },
-
-        yAxis: {
-          title: {
-            text: 'Percent of responses',
-          },
+          text: 'Percent of responses',
         },
       },
     };

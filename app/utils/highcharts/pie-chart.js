@@ -11,24 +11,23 @@ export default class PieChart {
     const { chart, series } = this;
 
     return {
-      data: series,
+      chart: {
+        backgroundColor: 'transparent',
+        type: 'pie',
+      },
 
-      options: {
-        chart: {
-          type: 'pie',
-        },
+      series,
 
-        subtitle: {
-          text: chart.subtitle,
-        },
+      subtitle: {
+        text: chart.subtitle,
+      },
 
-        title: {
-          text: chart.title,
-        },
+      title: {
+        text: chart.title,
+      },
 
-        tooltip: {
-          pointFormat: '{point.y:.1f}%',
-        },
+      tooltip: {
+        pointFormat: '{point.y:.1f}%',
       },
     };
   }

@@ -5,8 +5,8 @@ import { module, test } from 'qunit';
 
 module('Unit | Utility | highcharts/area-spline-chart', function () {
   module('AreaSplineChart', function () {
-    test('highchartsOptions returns an options object', function (assert) {
-      const { options } = new AreaSplineChart({
+    test('highchartsOptions returns an object that is compatible with Highcharts', function (assert) {
+      const { highchartsOptions } = new AreaSplineChart({
         chart: {
           categories: [
             '1.x',
@@ -27,8 +27,8 @@ module('Unit | Utility | highcharts/area-spline-chart', function () {
             values: [
               100 * (79 / 1232), // 1.x
               100 * (443 / 1232), // 2.x
-              100 * (488 / 1232), // 3.0-3.4
-              100 * (675 / 1232), // 3.5-3.8
+              100 * (488 / 1232), // 3.0 - 3.4
+              100 * (675 / 1232), // 3.5 - 3.8
             ],
           },
           {
@@ -37,19 +37,23 @@ module('Unit | Utility | highcharts/area-spline-chart', function () {
             values: [
               100 * (27 / 1006), // 1.x
               100 * (111 / 1006), // 2.x
-              100 * (121 / 1006), // 3.0-3.4
-              100 * (148 / 1006), // 3.5-3.8
-              100 * (291 / 1006), // 3.9-3.12
-              100 * (524 / 1006), // 3.13-3.16
+              100 * (121 / 1006), // 3.0 - 3.4
+              100 * (148 / 1006), // 3.5 - 3.8
+              100 * (291 / 1006), // 3.9 - 3.12
+              100 * (524 / 1006), // 3.13 - 3.16
             ],
           },
         ],
-      }).highchartsOptions;
+      });
+
+      // series has been tested through the createSeries test module
+      delete highchartsOptions.series;
 
       assert.deepEqual(
-        options,
+        highchartsOptions,
         {
           chart: {
+            backgroundColor: 'transparent',
             type: 'areaspline',
           },
 
@@ -78,6 +82,9 @@ module('Unit | Utility | highcharts/area-spline-chart', function () {
           },
 
           yAxis: {
+            labels: {
+              format: '{value} %',
+            },
             title: {
               text: 'Percent of responses',
             },

@@ -5,8 +5,8 @@ import { module, test } from 'qunit';
 
 module('Unit | Utility | highcharts/vertical-bar-chart', function () {
   module('VerticalBarChart', function () {
-    test('highchartsOptions returns an options object', function (assert) {
-      const { options } = new VerticalBarChart({
+    test('highchartsOptions returns an object that is compatible with Highcharts', function (assert) {
+      const { highchartsOptions } = new VerticalBarChart({
         chart: {
           categories: ['Beginner', 'Intermediate', 'Advanced'],
           title: 'Rank your web skills',
@@ -34,12 +34,16 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function () {
             values: [2.7, 35.9, 61.4],
           },
         ],
-      }).highchartsOptions;
+      });
+
+      // series has been tested through the createSeries test module
+      delete highchartsOptions.series;
 
       assert.deepEqual(
-        options,
+        highchartsOptions,
         {
           chart: {
+            backgroundColor: 'transparent',
             type: 'column',
           },
 
@@ -61,6 +65,9 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function () {
           },
 
           yAxis: {
+            labels: {
+              format: '{value} %',
+            },
             title: {
               text: 'Percent of responses',
             },

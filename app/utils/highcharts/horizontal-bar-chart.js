@@ -11,35 +11,37 @@ export default class HorizontalBarChart {
     const { chart, series } = this;
 
     return {
-      data: series,
+      chart: {
+        backgroundColor: 'transparent',
+        type: 'bar',
+      },
 
-      options: {
-        chart: {
-          type: 'bar',
+      series,
+
+      subtitle: {
+        text: chart.subtitle,
+      },
+
+      title: {
+        text: chart.title,
+      },
+
+      tooltip: {
+        pointFormat: '{series.name}: {point.y:.1f}%',
+      },
+
+      xAxis: {
+        categories: chart.categories,
+        type: 'category',
+      },
+
+      yAxis: {
+        labels: {
+          format: '{value} %',
         },
-
-        subtitle: {
-          text: chart.subtitle,
-        },
-
+        min: 0,
         title: {
-          text: chart.title,
-        },
-
-        tooltip: {
-          pointFormat: '{series.name}: {point.y:.1f}%',
-        },
-
-        xAxis: {
-          categories: chart.categories,
-          type: 'category',
-        },
-
-        yAxis: {
-          min: 0,
-          title: {
-            text: 'Percent of responses',
-          },
+          text: 'Percent of responses',
         },
       },
     };
