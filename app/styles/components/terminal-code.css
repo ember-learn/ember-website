@@ -5,11 +5,11 @@
 }
 
 .terminal-code .dot {
-  height: 0.8em;
-  width: 0.8em;
   border-radius: 50%;
   display: inline-block;
+  height: 0.8em;
   margin: 3px;
+  width: 0.8em;
 }
 
 .terminal-code .dot.red {
@@ -25,10 +25,10 @@
 }
 
 .terminal-code code {
-  display: block;
+  background-color: var(--color-gray-900);
   color: var(--color-light);
-  padding-top: 15px;
-  padding-bottom: 10px;
+  display: block;
   font-size: 1em;
+  padding: 0.5em 0;
   overflow-x: auto;
 }
