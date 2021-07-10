@@ -99,7 +99,7 @@ module.exports = function (defaults) {
             242, // desktop
             484, // desktop 2x
           ],
-          removeSource: true,
+          removeSource: false,
           // don't scale images, just copy as-is in dev mode, to not slow down the build
           justCopy: process.env.EMBER_ENV !== 'production',
         },
