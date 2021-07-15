@@ -11,7 +11,7 @@ let expectedReleaseDates = {
   '3.25.0': new Date('2021-02-08 12:00:00 GMT'),
   '3.26.0': new Date('2021-03-22 12:00:00 GMT'),
   '3.27.0': new Date('2021-05-03 12:00:00 GMT'),
-  '3.28.0': new Date('2021-06-14 12:00:00 GMT'),
+  '3.28.0': new Date('2021-08-09 12:00:00 GMT'),
 };
 
 module('Integration | Data | releases', function (hooks) {
