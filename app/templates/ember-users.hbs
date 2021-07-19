@@ -25,11 +25,18 @@
       }}
         <li>
           <a href={{user.url}} rel="nofollow noopener noreferrer" target="_blank" class="well well-16/9">
-            <img
-              alt={{user.name}}
-              src="/images/users/{{user.image}}"
-              loading="lazy"
-            >
+            {{#if (eq (file-extension user.image) "svg")}}
+              <img
+                alt={{user.name}}
+                src="/images/users/{{user.image}}"
+                loading="lazy"
+              >
+            {{else}}
+              <ResponsiveImage
+                @src="/images/users/{{user.image}}"
+                alt={{user.name}}
+              />
+            {{/if}}
           </a>
         </li>
       {{/each}}

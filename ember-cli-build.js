@@ -103,6 +103,18 @@ module.exports = function (defaults) {
           // don't scale images, just copy as-is in dev mode, to not slow down the build
           justCopy: process.env.EMBER_ENV !== 'production',
         },
+        {
+          include: 'images/users/*.png',
+          widths: [
+            58, // mobile
+            116, // mobile 2x
+            88, // desktop
+            176, // desktop 2x, iPhone 2x
+          ],
+          removeSource: true,
+          // don't scale images, just copy as-is in dev mode, to not slow down the build
+          justCopy: process.env.EMBER_ENV !== 'production',
+        },
       ],
     },
   });
