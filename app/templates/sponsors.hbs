@@ -21,7 +21,18 @@
         <li>
           <figure>
             <a href={{sponsor.url}} rel="nofollow noopener noreferrer" target="_blank" class="well well-16/9">
-              <img src="/images/users/{{sponsor.image}}" alt="{{sponsor.name}} website" loading="lazy">
+              {{#if (eq (file-extension sponsor.image) "svg")}}
+                <img
+                  alt="{{sponsor.name}} website"
+                  src="/images/sponsors/{{sponsor.image}}"
+                  loading="lazy"
+                >
+              {{else}}
+                <ResponsiveImage
+                  @src="/images/sponsors/{{sponsor.image}}"
+                  alt="{{sponsor.name}} website"
+                />
+              {{/if}}
             </a>
             <figcaption class="text-muted">
               <p>
@@ -49,7 +60,18 @@
         <li>
           <figure>
             <a href={{sponsor.url}} rel="nofollow noopener noreferrer" target="_blank" class="well well-16/9">
-              <img src="/images/users/{{sponsor.image}}" alt="{{sponsor.name}} website" loading="lazy">
+              {{#if (eq (file-extension sponsor.image) "svg")}}
+                <img
+                  alt="{{sponsor.name}} website"
+                  src="/images/sponsors/{{sponsor.image}}"
+                  loading="lazy"
+                >
+              {{else}}
+                <ResponsiveImage
+                  @src="/images/sponsors/{{sponsor.image}}"
+                  alt="{{sponsor.name}} website"
+                />
+              {{/if}}
             </a>
             <figcaption class="text-muted">
               <p>

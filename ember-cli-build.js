@@ -106,10 +106,23 @@ module.exports = function (defaults) {
         {
           include: 'images/users/*.png',
           widths: [
-            58, // mobile
-            116, // mobile 2x
-            88, // desktop
-            176, // desktop 2x, iPhone 2x
+            60, // mobile
+            120, // mobile 2x
+            90, // desktop
+            180, // desktop 2x, iPhone 2x
+          ],
+          removeSource: true,
+          // don't scale images, just copy as-is in dev mode, to not slow down the build
+          justCopy: process.env.EMBER_ENV !== 'production',
+        },
+        {
+          include: 'images/sponsors/*.png',
+          widths: [
+            60, // mobile
+            120, // mobile 2x
+            180, // iPhone 2x
+            234, // desktop
+            468, // desktop 2x
           ],
           removeSource: true,
           // don't scale images, just copy as-is in dev mode, to not slow down the build
