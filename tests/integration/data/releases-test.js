@@ -24,17 +24,18 @@ module('Integration | Data | releases', function (hooks) {
   test('ember beta dates are correct', async function (assert) {
     let data = await store.find('project', 'ember/beta');
 
-    assert.ok(
-      data.cycleEstimatedFinishDate.getDay() === 1,
+    assert.strictEqual(
+      data.cycleEstimatedFinishDate.getDay(),
+      1,
       `${data.cycleEstimatedFinishDate} should be a Monday`
     );
 
     let nextVersion = data.finalVersion;
     let nextExpectedRelease = expectedReleaseDates[nextVersion];
 
-    assert.ok(
-      data.cycleEstimatedFinishDate.toString() ===
-        nextExpectedRelease.toString(),
+    assert.strictEqual(
+      data.cycleEstimatedFinishDate.toString(),
+      nextExpectedRelease.toString(),
       `the next expected release should be on ${nextExpectedRelease} but we have set ${data.cycleEstimatedFinishDate}`
     );
   });
