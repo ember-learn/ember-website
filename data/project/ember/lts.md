@@ -7,8 +7,8 @@ filter:
 repo: emberjs/ember.js
 initialVersion: 3.24.0
 initialReleaseDate: 2020-12-28
-lastRelease: 3.24.3
-futureVersion: 3.24.4
+lastRelease: 3.24.5
+futureVersion: 3.24.6
 channel: lts
 date: 2021-02-25
 changelogPath: CHANGELOG.md
