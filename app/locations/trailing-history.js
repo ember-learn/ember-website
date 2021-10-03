@@ -6,6 +6,9 @@ export default class TrailingHistoryLocation extends HistoryLocation {
 
     if (url.includes('#')) {
       return url.replace(/([^/])#(.*)/, '$1/#$2');
+    }
+    if (url.includes('?')) {
+      return url.replace(/\/?$/, '');
     } else {
       return url.replace(/\/?$/, '/');
     }
