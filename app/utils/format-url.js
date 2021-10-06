@@ -1,4 +1,4 @@
-export function formatURLConditional(url) {
+export function formatURL(url) {
   if (url.includes('#')) {
     return url.replace(/([^/])#(.*)/, '$1/#$2');
   }
