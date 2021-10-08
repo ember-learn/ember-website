@@ -24,7 +24,7 @@
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "start": "ember serve",
-    "test": "percy exec -- ember test"
+    "test": "ember test"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
