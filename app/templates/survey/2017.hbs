@@ -1,0 +1,399 @@
+{{page-title '2017 Ember Community Survey'}}
+<EmberCommunitySurvey::Introduction
+  @surveyLogoAlt="Ember Community Survey 2017"
+  @surveyLogoSrc="/images/survey/logo2017.svg"
+>
+  <p>
+    A project to learn who is using Ember and how.
+  </p>
+  <p>
+    With nearly 1600 responses, here are the 2017 survey results!
+  </p>
+</EmberCommunitySurvey::Introduction>
+<EmberCommunitySurvey::Section
+  @sectionId="ember-version"
+  @sectionTitle="Ember Version"
+>
+  <:charts>
+    <Highcharts @chart={{this.chartHowlong}} />
+  </:charts>
+  <:body>
+    <p>
+      During the course of the survey, Ember 2.12 became the latest stable release of the framework.
+    </p>
+    <p>
+      The 2.x release cycle began in August 2015, and although 14% of developers still maintain a 1.13 app the largest segment of developers work with the last one or two Ember releases.
+    </p>
+    <p>
+      Ember's Long-Term Support releases have emerged as a visible trend, and 21% of participants use the 2.8-LTS release (the most recent during the survey).
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="ember-data-version"
+  @sectionTitle="Ember Data Version"
+>
+  <:charts>
+    <Highcharts @chart={{this.priorVersionsData}} />
+  </:charts>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="recommending-ember"
+  @sectionTitle="Recommending Ember"
+>
+  <:charts>
+    <Highcharts @chart={{this.recommendingEmber}} />
+  </:charts>
+  <:body>
+    <p>
+      We asked respondents how likely they were to recommend Ember to a friend or colleague. An average recommendation score is 8.4, and the calculated
+      <a
+        href="https://en.wikipedia.org/wiki/Net_Promoter"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Net Promoter Score
+      </a>
+      is 42. The majority of responses were a perfect 10.
+    </p>
+    <p>
+      Using the recommendation scores we created three segments of Detractors (1-6), Passives (7-8), and Promoters (9-10). Participants reported their reasoning for their score as free-form text, and below we've provided the most frequent category of responses in each segment based on similarity analysis.
+    </p>
+    <div class="nps mb-3">
+      <div class="nps-row">
+        <div class="nps-cell nps-cell-header">
+          Detractors
+        </div>
+        <div class="nps-cell nps-cell-header">
+          Passives
+        </div>
+        <div class="nps-cell nps-cell-header">
+          Promoters
+        </div>
+      </div>
+      <div class="nps-row">
+        <div class="nps-cell bg-light">
+          Learning Curve
+        </div>
+        <div class="nps-cell bg-light">
+          Learning Curve
+        </div>
+        <div class="nps-cell bg-light">
+          Community
+        </div>
+      </div>
+      <div class="nps-row">
+        <div class="nps-cell bg-light">
+          React
+        </div>
+        <div class="nps-cell bg-light">
+          Not always the right tool for the job
+        </div>
+        <div class="nps-cell bg-light">
+          Ember CLI
+        </div>
+      </div>
+      <div class="nps-row">
+        <div class="nps-cell bg-light">
+          Easy to use
+        </div>
+        <div class="nps-cell bg-light">
+          Convention over configuration
+        </div>
+        <div class="nps-cell bg-light">
+          Convention over configuration
+        </div>
+      </div>
+      <div class="nps-row">
+        <div class="nps-cell bg-light">
+          Hard to learn
+        </div>
+        <div class="nps-cell bg-light">
+          Ember CLI
+        </div>
+        <div class="nps-cell bg-light">
+          I love it!
+        </div>
+      </div>
+    </div>
+    <p>
+      Here is a flavor of what reasons participants gave for their scoring:
+    </p>
+    <ul class="list-unstyled scoring-list">
+      <EsCard class="my-2">
+        <p class="text-center large">
+          Score: 9
+        </p>
+        <blockquote class="quote">
+          I've worked with Ember professionally now for over 3 years, and select employment opportunities around whether or not I can continue working with it.
+          <br />
+          <br />
+          While the community is smaller, the seamlessness of all the tooling and the overall developer experience is simply the best the open source community has to offer. My out of the box productivity on a new project and onboarding experience to new projects reaffirms so many decisions I didn't have to make.
+        </blockquote>
+      </EsCard>
+      <EsCard class="my-2">
+        <p class="text-center large">
+          Score: 2
+        </p>
+        <blockquote class="quote">
+          I haven't found a scale of project for which Ember is suitable. The sheer amount of files and project complexity makes it impractical for small projects, and Ember Data doesn't scale for large projects. Documentation is often incomplete, types are often not specified, everything is mutable and unpredictable.
+        </blockquote>
+      </EsCard>
+    </ul>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="improving-ember"
+  @sectionTitle="Improving Ember"
+>
+  <:body>
+    <p>
+      As the last question of the survey we asked participants: "What is the most important thing the Ember project can do today?"
+    </p>
+    <p>
+      Using text similarity analysis, we identified the most commonly mentioned topics. Here they are with a selected quote.
+    </p>
+    <ul class="list-unstyled scoring-list">
+      <EsCard class="my-2">
+        <p class="text-center large">
+          Better Documentation, Examples, and Guides
+        </p>
+        <blockquote class="quote">
+          Documentation is getting better, but I would love to see more detailed documentation of framework methods and properties and an easier way to know what the core team is currently working or focusing on...
+          <br />
+          <br />
+          I would also love to understand more about broccoli, which continues to be a confusing part of the cli that I don't quite understand how to extend.
+        </blockquote>
+      </EsCard>
+      <EsCard class="my-2">
+        <p class="text-center large">
+          Ember Data
+        </p>
+        <blockquote class="quote">
+          I'd like to see more stability/maturity from Ember Data. We've been able to get our API/back-end team to (sometimes reluctantly) adhere to JSON-API, but there are some features that we'd like a more complete answer for: multiple record updates/creates in one transaction, optimistic concurrency control (using ETag headers), and relationship updating/rollback on errors.
+        </blockquote>
+      </EsCard>
+      <EsCard class="my-2">
+        <p class="text-center large">
+          Routable Components
+        </p>
+        <blockquote class="quote">
+          Provide more updates on the future direction of the project, especially when it comes to routable components and how they will replace controllers.
+        </blockquote>
+      </EsCard>
+      <EsCard class="my-2">
+        <p class="text-center large">
+          Performance
+        </p>
+        <blockquote class="quote">
+          Cut down Ember's size, allow code splitting, improve performance and keep on stealing good ideas from other frameworks.
+        </blockquote>
+      </EsCard>
+      <EsCard class="my-2">
+        <p class="text-center large">
+          Marketing Ember
+        </p>
+        <blockquote class="quote">
+          Communication / marketing. Ember is a great framework, but it's sometimes difficult to show that greatness to non-Ember devs, or to business folks making decisions.
+        </blockquote>
+      </EsCard>
+      <EsCard class="my-2">
+        <p class="text-center large">
+          Tree Shaking
+        </p>
+        <blockquote class="quote">
+          In general, I think that reducing the size and boot-up time of the application hasn't gotten enough attention. Tree-shaking and lazy code evaluation are important features to have these days, especially for larger applications. Also, bundling everything in one minified file maybe doesn't make as much sense anymore in an HTTP2 age.
+        </blockquote>
+      </EsCard>
+    </ul>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="ember-in-enterprise-stack-and-onboarding"
+  @sectionTitle="Ember in Enterprise: Stack & Onboarding"
+>
+  <:charts>
+    <div class="grid lg:grid-2">
+      <Highcharts @chart={{this.whenStarting}} />
+      <Highcharts @chart={{this.preExistingKnowledge}} />
+    </div>
+  </:charts>
+  <:body>
+    <p>
+      Employers are choosing Ember despite challenges in finding experienced Ember developers in the job market.
+    </p>
+    <p>
+      Among survey participants, 66% of developers who learned Ember this year did not know Ember when they were hired to their current job, and 49% of developers who learned Ember this year were hired by a company that adopted Ember after they were hired.
+    </p>
+    <p>
+      Companies clearly believe in the benefits that Ember can bring their business and are willing to invest in training their developers.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="ember-in-enterprise-employment-status-and-size"
+  @sectionTitle="Ember in Enterprise: Employment Status & Size"
+>
+  <:charts>
+    <div class="grid lg:grid-2">
+      <Highcharts @chart={{this.employmentSituation}} />
+      <Highcharts @chart={{this.emberDevelopers}} />
+    </div>
+  </:charts>
+  <:body>
+    <p>
+      Ember developers continue to most commonly work on product with a small team.
+    </p>
+    <p>
+      Their roles are becoming more focused on the framework over time. In another question, participants reported 45% of them now work with Ember "all the time." This number is up from 32% in 2016.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="developer-experience"
+  @sectionTitle="Developer Experience"
+>
+  <:charts>
+    <Highcharts @chart={{this.chartSnapshotEmberDevelopers}} />
+  </:charts>
+  <:body>
+    <p>
+      Almost half of survey participants have been using Ember for over two years.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="ember-in-enterprise-target-audience"
+  @sectionTitle="Ember in Enterprise: Target Audience"
+>
+  <:charts>
+    <Highcharts @chart={{this.productionUsers}} />
+  </:charts>
+  <:body>
+    <p>
+      Most developers work on an Ember application that targets hundreds or thousands of users.
+    </p>
+    <p>
+      In responses to another question in the survey, we noted that more developers work on B2B or B2C apps than internal tools compared to last year.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="maintenance"
+  @sectionTitle="Maintenance"
+>
+  <:charts>
+    <Highcharts @chart={{this.longLived}} />
+  </:charts>
+  <:body>
+    <p>
+      Nearly one-third of Ember developers work with an app that is more than two years old. One out of five Ember developers is working with an app create in the last three months.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="server-side-development"
+  @sectionTitle="Server-Side Development"
+>
+  <:charts>
+    <Highcharts @chart={{this.serverLanguage}} />
+  </:charts>
+  <:body>
+    <p>
+      Ruby retains the top spot in desired and actual server-side languages, however it also dropped 4% as a production platform.
+    </p>
+    <p>
+      The only notable mover further down the list is Java, which jumped almost 4% in popularity over the past year.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="text-editors"
+  @sectionTitle="Text Editors"
+>
+  <:charts>
+    <Highcharts @chart={{this.textEditor}} />
+  </:charts>
+  <:body>
+    <p>
+      Atom moved up a spot to become the editor of choice primarily due to a drop in Sublime share. Interestingly, VS Code saw a 13% surge over the past year.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="browser-requirements"
+  @sectionTitle="Browser Requirements"
+>
+  <:charts>
+    <Highcharts @chart={{this.browserRequirements}} />
+  </:charts>
+  <:body>
+    <p>
+      Developers need to support browsers before IE 11 less than ever before. As Ember 3.0 only supports IE 11 and up, most developers now have a browser support requirement un-related to specific browser versions.
+    </p>
+    <p>
+      Next year we're going to look for a new way to ask this question that captures Chrome-only sites, the UCBrowser, and other data points we feel are missing.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="demographics"
+  @sectionTitle="Demographics"
+>
+  <:charts>
+    <Highcharts @chart={{this.demographics}} />
+  </:charts>
+  <:body>
+    <p>
+      Note, 3% of participants report a disability and 92% of participants were male.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="closing-thoughts"
+  @sectionTitle="Closing Thoughts"
+>
+  <:body>
+    <p>
+      We would like to thank everyone who took the time to participate in the 2017 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
+    </p>
+    <p>
+      You can view a
+      <a
+        href="https://embersurvey.typeform.com/report/GmJTvy/S9Nt"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        summary of the responses to all questions
+      </a>
+      from the survey, as well as the
+      <a
+        href="/ember-community-survey-2017/ember-community-survey-2017-results.csv"
+      >
+        raw survey data
+      </a>
+      . You can also view the
+      <a
+        href="/ember-community-survey-2017/ember-community-survey-2017-demographics.csv"
+      >
+        demographic data
+      </a>
+      , which has been decoupled from the primary corpora.
+    </p>
+    <p>
+      Questions? Feedback? Please email
+      <a href="mailto:survey@201-created.com">
+        survey@201-created.com
+      </a>
+      .
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Sponsor
+  @hasDarkBackground={{true}}
+  @sponsor={{hash
+    logoAlt='201 Created'
+    logoSrc='/images/survey/201-Created-Square@1x.png'
+    website='https://www.201-created.com/'
+  }}
+/>

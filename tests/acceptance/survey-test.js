@@ -14,15 +14,15 @@ module('Acceptance | survey', function (hooks) {
     loadDefaultScenario(this.server);
   });
 
-  test('When a user visits /survey, we redirect them to /ember-community-survey-2021', async function (assert) {
+  test('When a user visits /survey, we redirect them to /survey/2021', async function (assert) {
     await visit('/survey');
 
     assert.strictEqual(
       currentURL(),
-      '/ember-community-survey-2021',
+      '/survey/results-2021',
       'The URL is correct.'
     );
 
-    assert.hasPageTitle('Ember Community Survey 2021 - Ember.js');
+    assert.hasPageTitle('Ember Community Survey - Ember.js');
   });
 });
