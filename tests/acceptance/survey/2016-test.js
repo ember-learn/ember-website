@@ -4,10 +4,11 @@ import { a11yAudit } from 'ember-a11y-testing/test-support';
 import { setupMirage } from 'ember-cli-mirage/test-support';
 import { setupApplicationTest } from 'ember-qunit';
 import loadDefaultScenario from 'ember-website/mirage/scenarios/default';
+import { waitUntilAllChartsAreDrawn } from 'ember-website/tests/helpers/highcharts';
 import { setupPageTitleTest } from 'ember-website/tests/helpers/page-title';
 import { module, test } from 'qunit';
 
-module('Acceptance | ember-community-survey-2021', function (hooks) {
+module('Acceptance | survey/2016', function (hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
   setupPageTitleTest(hooks);
@@ -17,16 +18,18 @@ module('Acceptance | ember-community-survey-2021', function (hooks) {
   });
 
   test('Percy snapshot', async function (assert) {
-    await visit('/ember-community-survey-2021');
+    await visit('/survey/results-2016');
+    await waitUntilAllChartsAreDrawn();
     await percySnapshot(assert);
 
     assert.ok(true);
   });
 
   test('Accessibility audit', async function (assert) {
-    await visit('/ember-community-survey-2021');
+    await visit('/survey/results-2016');
+    await waitUntilAllChartsAreDrawn();
     await a11yAudit();
 
-    assert.hasPageTitle('Ember Community Survey 2021 - Ember.js');
+    assert.hasPageTitle('Community Survey 2016 - Ember.js');
   });
 });

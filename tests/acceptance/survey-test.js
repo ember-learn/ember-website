@@ -23,6 +23,6 @@ module('Acceptance | survey', function (hooks) {
       'The URL is correct.'
     );
 
-    assert.hasPageTitle('Ember Community Survey - Ember.js');
+    assert.hasPageTitle('Community Survey 2021 - Ember.js');
   });
 });

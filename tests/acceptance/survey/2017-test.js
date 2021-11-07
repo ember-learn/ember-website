@@ -8,7 +8,7 @@ import { waitUntilAllChartsAreDrawn } from 'ember-website/tests/helpers/highchar
 import { setupPageTitleTest } from 'ember-website/tests/helpers/page-title';
 import { module, test } from 'qunit';
 
-module('Acceptance | ember-community-survey-2018', function (hooks) {
+module('Acceptance | survey/2017', function (hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
   setupPageTitleTest(hooks);
@@ -18,7 +18,7 @@ module('Acceptance | ember-community-survey-2018', function (hooks) {
   });
 
   test('Percy snapshot', async function (assert) {
-    await visit('/ember-community-survey-2018');
+    await visit('/survey/results-2017');
     await waitUntilAllChartsAreDrawn();
     await percySnapshot(assert);
 
@@ -26,10 +26,10 @@ module('Acceptance | ember-community-survey-2018', function (hooks) {
   });
 
   test('Accessibility audit', async function (assert) {
-    await visit('/ember-community-survey-2018');
+    await visit('/survey/results-2017');
     await waitUntilAllChartsAreDrawn();
     await a11yAudit();
 
-    assert.hasPageTitle('Community Survey 2018 - Ember.js');
+    assert.hasPageTitle('Community Survey 2017 - Ember.js');
   });
 });

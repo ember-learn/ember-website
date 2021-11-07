@@ -11,8 +11,8 @@ module(
     test('We can display a survey reminder', async function (assert) {
       await render(hbs`
         <CtaEmberCommunitySurvey
-          @surveyRoute="ember-community-survey-2020"
-          @surveyTitle="2020 Ember Community Survey"
+          @surveyRoute="survey.2020"
+          @surveyTitle="Community Survey 2020"
         />
       `);
 
@@ -20,22 +20,18 @@ module(
 
       assert
         .dom('[data-test-message]')
-        .hasText('Take the 2020 Ember Community Survey');
+        .hasText('Take the Community Survey 2020');
 
       assert
         .dom('[data-test-link]')
-        .hasAttribute(
-          'href',
-          '/ember-community-survey-2020',
-          '2020 Ember Community Survey'
-        );
+        .hasAttribute('href', '/survey/results-2020', 'Community Survey 2020');
     });
 
     test('We can click the Close button to hide the survey reminder', async function (assert) {
       await render(hbs`
         <CtaEmberCommunitySurvey
-          @surveyRoute="ember-community-survey-2020"
-          @surveyTitle="2020 Ember Community Survey"
+          @surveyRoute="/survey/results-2020"
+          @surveyTitle="Community Survey 2020"
         />
       `);
 
