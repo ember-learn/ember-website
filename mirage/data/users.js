@@ -27,16 +27,16 @@ const mapIdToAttributes = new Map([
     },
   ],
   [
-    'clark-smart-insurance',
+    'clark',
     {
       added: new Date('2016-12-17'),
       content:
-        "Clark's consumer ui is powered by Ember.js - available on our website and integrated into our iOS & Android apps.",
+        "Clark's consumer UI is powered by Ember.js - available on our website and integrated into our iOS & Android apps.",
       featured: undefined,
-      id: 'clark-smart-insurance',
-      image: 'clark_x2.png',
+      id: 'clark',
+      image: 'clark.png',
       inactive: undefined,
-      name: 'Clark - Smart Insurance',
+      name: 'Clark',
       url: 'https://www.clark.de',
     },
   ],
