@@ -6,7 +6,9 @@
   a 6-week release cycle, and a strong commitment to <a href="https://semver.org/" target="_blank" rel="noopener noreferrer">Semantic Versioning</a>.
 </p>
 
-<h2>Create an app using the latest release:</h2>
+<h2>Latest Release: {{this.emberReleaseProject.lastRelease}}</h2>
+
+<p>Create an app:</p>
 
 <div class="mb-3">
   <TerminalCode>
@@ -24,12 +26,6 @@
   and <LinkTo @route="releases.canary">canary</LinkTo>
   releases.
 </p>
-
-<h2 class="hide-on-mobile">Upcoming releases</h2>
-
-<Releases::ReleaseTimeline
-  @emberBetaProject={{this.emberBetaProject}}
-/>
 
 <h2>Strategy</h2>
 <p>
