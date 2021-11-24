@@ -1,9 +1,9 @@
 import Controller from '@ember/controller';
 
 export default class ReleasesIndexController extends Controller {
-  get emberBetaProject() {
+  get emberReleaseProject() {
     return this.model.find((project) => {
-      return project.name === 'Ember' && project.channel === 'beta';
+      return project.name === 'Ember' && project.channel === 'release';
     });
   }
 }

@@ -21,12 +21,12 @@ module('Unit | Controller | releases/index', function (hooks) {
   });
 
   test('We can find the Ember beta project', function (assert) {
-    const { emberBetaProject } = this.controller;
+    const { emberReleaseProject } = this.controller;
 
     assert.strictEqual(
-      emberBetaProject?.id,
-      'ember/beta',
-      'We found the Ember beta project.'
+      emberReleaseProject?.id,
+      'ember/release',
+      'We found the Ember release project.'
     );
   });
 });
