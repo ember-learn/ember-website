@@ -25,13 +25,6 @@ Router.map(function () {
     this.route('octane');
   });
 
-  this.route('ember-community-survey-2016');
-  this.route('ember-community-survey-2017');
-  this.route('ember-community-survey-2018');
-  this.route('ember-community-survey-2019');
-  this.route('ember-community-survey-2020');
-  this.route('ember-community-survey-2021');
-
   this.route('ember-users');
 
   this.route('guidelines');
@@ -63,7 +56,14 @@ Router.map(function () {
 
   this.route('sponsors');
 
-  this.route('survey');
+  this.route('survey', function () {
+    this.route('2016');
+    this.route('2017');
+    this.route('2018');
+    this.route('2019');
+    this.route('2020');
+    this.route('2021');
+  });
 
   this.route('team-redirect', { path: 'team' });
   this.route('teams');

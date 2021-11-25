@@ -1,0 +1,363 @@
+{{page-title "Ember Community Survey 2020"}}
+
+<EmberCommunitySurvey::Introduction
+  @surveyLogoAlt="Ember Community Survey 2020"
+  @surveyLogoSrc="/images/survey/logo2020.svg"
+>
+  <p>
+    We gathered responses from over 1,000 developers for the 2020 survey, despite coinciding with the global pandemic breakout and subsequent quarantine for many countries across the globe. This year we also included outreach to developers who don't use Ember yet. They made up for approximately 10% of the total responses that we received.
+  </p>
+</EmberCommunitySurvey::Introduction>
+
+<EmberCommunitySurvey::Section
+  @sectionId="recommending-ember"
+  @sectionTitle="Recommending Ember"
+>
+  <:charts>
+    <Highcharts
+      @chart={{this.SS_Q101}}
+    />
+  </:charts>
+
+  <:body>
+    <p>
+      We asked respondents how likely they were to recommend Ember to others, on a scale of 1-5. About 78% of people who use Ember are likely to recommend it to others.
+    </p>
+    <p>
+      Participants reported their reasoning for their score as free-form text, and below, we've provided a sample of responses alongside their corresponding recommendation score.
+    </p>
+    <p>
+      As in previous years, we did not observe a great deal of variety in the written responses that corresponded to values of three or less. Like previous years, we saw the opposite effect in the upper ranges—that is, <strong>community members simply have a lot of different reasons to recommend Ember</strong>!
+    </p>
+    <p>
+      Here is a flavor of what reasons participants gave for their scoring:
+    </p>
+
+    <ul class="list-unstyled scoring-list">
+      <EsCard class="my-2">
+        <p class="text-center large">
+          Score: 5
+        </p>
+
+        <blockquote class="quote">
+          Ember has been a solid choice for our team. The conventions allow us to manage several products with a handful of devs. It contains everything needed to successfully deliver out of the box, or within a handful of highly refined community offerings, like <a href="http://ember-concurrency.com/">concurrency</a> or <a href="https://miragejs.com/">mirage</a>.
+        </blockquote>
+      </EsCard>
+
+      <EsCard class="my-2">
+        <p class="text-center large">
+          Score: 3
+        </p>
+
+        <blockquote class="quote">
+          (translated) The distribution of this framework in China is not very high. In addition to the absence of relevant Chinese documents, the number of users is very small.
+        </blockquote>
+      </EsCard>
+
+      <EsCard class="my-2">
+        <p class="text-center large">
+          Score: 5
+        </p>
+
+        <blockquote class="quote">
+          Ember is the anti-fatigue framework. It doesn’t pretend to be all things to all people. It acknowledges its flaws while also making clear the plan to address them. It details a clear roadmap for the future and delivers on it incrementally.  Simply put, working with Ember makes me happy.
+        </blockquote>
+      </EsCard>
+
+      <EsCard class="my-2">
+        <p class="text-center large">
+          Score: 5
+        </p>
+
+        <blockquote class="quote">
+          Ember is powerful and flexible, without being overly complicated. There's a wealth of learning materials, and strong community support, plus the ease of updating to gain the latest features and fixes "for free" is a big bonus.
+        </blockquote>
+      </EsCard>
+    </ul>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="ember-version"
+  @sectionTitle="Ember Version"
+>
+  <:charts>
+    <Highcharts
+      @chart={{this.MS_Q401}}
+    />
+  </:charts>
+
+  <:body>
+    <p>
+      At the time the survey was released, Ember 3.16 became the latest stable release of the framework.
+      Legacy 2.x and 1.x numbers dropped, indicating a continued upgrade process for developers on legacy versions of Ember.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+<EmberCommunitySurvey::Section
+  @sectionId="time-in-service"
+  @sectionTitle="Time in Framework"
+>
+  <:charts>
+    <Highcharts
+      @chart={{this.SS_Q104}}
+    />
+  </:charts>
+
+  <:body>
+    <p>
+      But for how long have folks been using Ember? Of course, we are always curious to see these numbers!
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+
+<EmberCommunitySurvey::Section
+  @sectionId="learning-resources"
+  @sectionTitle="Learning Resources"
+>
+  <:charts>
+    <Highcharts
+      @chart={{this.MS_Q103}}
+    />
+  </:charts>
+
+  <:body>
+    <p>
+      We added more options this year, as there are more ways than ever before to keep up with all things Ember. We'll be interested to see what directions the trends go in the coming years!
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="self-reported-skills"
+  @sectionTitle="Self-Reported Skills: Front End Development"
+>
+  <:charts>
+    <Highcharts
+      @chart={{this.stackSkillsChart}}
+    />
+  </:charts>
+
+  <:body>
+    <p>
+      Accessibility has very clearly been self-identified as "the final frontier" for Ember developers!
+    </p>
+    <p>
+      When compared to last year, more developers identified themselves as having little to no knowledge about accessibility. Did you know that the Ember guides have some help to get you started? Check out <a href="https://guides.emberjs.com/release/accessibility/">the accessibility section</a> of the guides.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="text-editors"
+  @sectionTitle="Text Editors"
+>
+  <:charts>
+    <Highcharts
+      @chart={{this.MS_Q111}}
+    />
+  </:charts>
+
+  <:body>
+    <p>
+      With reported usage at 63%, VS Code is now clearly the dominant editor to consider when creating tooling for Ember. Make sure to check out the available extensions in VS Code that especially support Ember development!
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="participation-in-ember-community"
+  @sectionTitle="Participation in Ember Community"
+>
+  <:charts>
+    <Highcharts
+      @chart={{this.MS_Q112}}
+    />
+  </:charts>
+
+  <:body>
+    <p>
+      There are many different ways to contribute to Ember- but less than half the survey respondents indicated that they participate in the community, identifying it as a growth area for our community! If you want to help out but don't know how to get started, why not check the <a href="https://help-wanted.emberjs.com">Help Wanted board</a> for issues that need your help? Also, check out the #dev-ember-learning channel and see if the Ember Learning Core Team needs any help!
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="ember-in-enterprise-size"
+  @sectionTitle="Ember in Enterprise: Size"
+>
+  <:charts>
+    <Highcharts
+      @chart={{this.SS_Q302}}
+    />
+  </:charts>
+
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="ember-in-enterprise-accessibility"
+  @sectionTitle="Ember in Enterprise: Accessibility"
+>
+  <:charts>
+    <Highcharts
+      @chart={{this.MS_Q304}}
+    />
+  </:charts>
+
+  <:body>
+    <p>
+      We hope that this question inspired those who don't know, to find out! We encourage all Ember developers to advocate for accessibility as a marker of quality code and help turn this into more of a self-imposed requirement for next year.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="ember-in-enterprise-internet-explorer"
+  @sectionTitle="Ember in Enterprise: IE Support"
+>
+  <:charts>
+    <Highcharts
+      @chart={{this.SS_Q204}}
+    />
+  </:charts>
+
+  <:body>
+    <p>
+      We anticipate that this number will drop sharply in 2021, especially with the release of Microsoft Edge.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="ember-in-enterprise-internationalization"
+  @sectionTitle="Global Ember: Internationalization"
+>
+  <:charts>
+    <div class="grid lg:grid-2">
+      <Highcharts
+        @chart={{this.SS_Q306}}
+      />
+      <Highcharts
+        @chart={{this.SS_Q305}}
+      />
+    </div>
+  </:charts>
+
+  <:body>
+    <p>
+      While English was the primary language for survey respondents, new languages like Chinese, Portuguese, Czech and even Udmurt showed up this year! Many global apps require internationalization—-and of course, there's an addon for that. Check out <a href="https://github.com/ember-intl/ember-intl" rel="noopener noreferrer" target="_blank">ember-intl</a> and see the possibilities!
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="server-side-development"
+  @sectionTitle="Server-Side Development"
+>
+  <:charts>
+      <Highcharts
+        @chart={{this.MS_Q406}}
+      />
+  </:charts>
+
+  <:body>
+    <p>
+      Rails continues to be the most popular pairing with an Ember codebase, but there is a long tail of other frameworks used by the community for server-side development.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="target-audience"
+  @sectionTitle="Target Audience"
+>
+  <:charts>
+    <Highcharts
+      @chart={{this.MS_Q413}}
+    />
+  </:charts>
+
+  <:body>
+    <p>
+      The use of Ember for enterprise and B2B applications continues
+      to grow. The framework continues to be an excellent tool for
+      dashboard-like apps.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="participation-in-other-surveys"
+  @sectionTitle="Participation in Other Surveys"
+>
+  <:charts>
+    <Highcharts
+      @chart={{this.MS_Q601}}
+    />
+  </:charts>
+
+  <:body>
+    <p>
+      We wanted to know if our community was well-represented in other mainstream surveys that were published in 2020. The data suggests that the Ember community is not well-represented in other surveys. We believe this is due to specific outreach methods we use to ensure a wide-range of participation.
+    </p>
+    <p>
+      We think that this data could be useful to other tech survey writers, and we will attempt to share our outreach methods, in order to help them obtain a more accurate sampling of the Ember community at large.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="improving-ember"
+  @sectionTitle="Anything Else?"
+>
+  <:body>
+    <p>
+      As the last question of the survey, we asked participants:
+      "Is there anything else you'd like to tell us?" About 20% of respondents chose to leave some final remarks. 70% of those remarks were overwhelmingly positive and encouraging, 25% were final requests for new features or neutral comments, and 5% were negative responses.
+    </p>
+
+    <ul class="list-unstyled scoring-list">
+      <EsCard class="my-2">
+        <blockquote class="quote">
+          Thank you all the various core teams and wider community for all the work you do. While Ember may not be the cool kid on the block you enable us all to just focus on building awesome products for our customers rather than focus on the technicals [sic].
+        </blockquote>
+      </EsCard>
+
+      <EsCard class="my-2">
+        <blockquote class="quote">
+          Keep up the good work. Impressed with the strict versioning, (almost no) breaking changes and the smooth version upgrade pattern. Also commendable transparency of the roadmap and where the whole framework is headed.
+        </blockquote>
+      </EsCard>
+
+      <EsCard class="my-2">
+        <blockquote class="quote">
+          I want to say big <em>Thank You</em> for all the folks that are spending hundreds of hours making Ember more accessible, powerful and developer-friendly! Thank you!
+        </blockquote>
+      </EsCard>
+
+      <EsCard class="my-2">
+        <blockquote class="quote">
+          I am a network/systems administrator for a small public school district. I used Ember to create an application to help manage inventory. I have only a few hours a week that I can dedicate to developing, and I am grateful that the Ember community has created a framework that makes it possible for people who are not full-time developers to create applications.
+        </blockquote>
+      </EsCard>
+    </ul>
+  </:body>
+</EmberCommunitySurvey::Section>
+
+<EmberCommunitySurvey::Section
+  @sectionId="closing-thoughts"
+  @sectionTitle="Closing Thoughts"
+>
+  <:body>
+    <p>
+      We would like to thank everyone who took the time to participate in the 2020 Ember Community Survey! While the global pandemic certainly affected on our ability to release the results in the usual timely fashion, we hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
+    </p>
+    <p>
+      This is the 6th year of the Ember Community Survey. To see results for previous years, you can visit the <LinkTo @route="survey.2019">2019</LinkTo>, <LinkTo @route="survey.2018">2018</LinkTo>, <LinkTo @route="survey.2017">2017</LinkTo>, <LinkTo @route="survey.2016">2016</LinkTo>, and <a href="https://www.201-created.com/ember-community-survey-2015/" rel="noopener noreferrer" target="_blank">2015</a> survey results pages.
+    </p>
+    <p>
+      If you have any questions about this survey—the data, the methods used, or any other feedback—please email us at <a href="mailto:survey@emberjs.com">survey@emberjs.com</a>.
+    </p>
+  </:body>
+</EmberCommunitySurvey::Section>
