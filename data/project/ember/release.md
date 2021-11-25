@@ -7,8 +7,8 @@ filter:
 repo: emberjs/ember.js
 initialVersion: 3.28.0 # Manually update, see https://libraries.io/npm/ember-source throughout
 initialReleaseDate: 2021-08-10 # Manually update
-lastRelease: 3.28.1 # Manually update
-futureVersion: 3.28.2 # Manually update
+lastRelease: 3.28.6 # Manually update
+futureVersion: 3.28.7 # Manually update
 channel: release
 date: 2021-09-07 # Manually update, is today's date
 changelogPath: CHANGELOG.md
