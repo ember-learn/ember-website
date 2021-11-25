@@ -18,7 +18,7 @@ module('Acceptance | survey/2020', function (hooks) {
   });
 
   test('Percy snapshot', async function (assert) {
-    await visit('/survey/results-2020');
+    await visit('/survey/2020');
     await waitUntilAllChartsAreDrawn();
     await percySnapshot(assert);
 
@@ -26,10 +26,10 @@ module('Acceptance | survey/2020', function (hooks) {
   });
 
   test('Accessibility audit', async function (assert) {
-    await visit('/survey/results-2020');
+    await visit('/survey/2020');
     await waitUntilAllChartsAreDrawn();
     await a11yAudit();
 
-    assert.hasPageTitle('Community Survey 2020 - Ember.js');
+    assert.hasPageTitle('Ember Community Survey 2020 - Ember.js');
   });
 });

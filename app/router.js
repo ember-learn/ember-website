@@ -57,12 +57,12 @@ Router.map(function () {
   this.route('sponsors');
 
   this.route('survey', function () {
-    this.route('2016', { path: 'results-2016' });
-    this.route('2017', { path: 'results-2017' });
-    this.route('2018', { path: 'results-2018' });
-    this.route('2019', { path: 'results-2019' });
-    this.route('2020', { path: 'results-2020' });
-    this.route('2021', { path: 'results-2021' });
+    this.route('2016');
+    this.route('2017');
+    this.route('2018');
+    this.route('2019');
+    this.route('2020');
+    this.route('2021');
   });
 
   this.route('team-redirect', { path: 'team' });

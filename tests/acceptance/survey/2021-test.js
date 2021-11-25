@@ -17,16 +17,16 @@ module('Acceptance | survey/2021', function (hooks) {
   });
 
   test('Percy snapshot', async function (assert) {
-    await visit('/survey/results-2021');
+    await visit('/survey/2021');
     await percySnapshot(assert);
 
     assert.ok(true);
   });
 
   test('Accessibility audit', async function (assert) {
-    await visit('/survey/results-2021');
+    await visit('/survey/2021');
     await a11yAudit();
 
-    assert.hasPageTitle('Community Survey 2021 - Ember.js');
+    assert.hasPageTitle('Ember Community Survey 2021 - Ember.js');
   });
 });

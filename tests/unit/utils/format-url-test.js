@@ -4,25 +4,21 @@ import { module, test } from 'qunit';
 module('Unit | Utility | format-url', function () {
   module('When # is in the URL', function () {
     test('We add / before #', function (assert) {
-      const url = formatURL(
-        'https://emberjs.com/ember-community-survey-2019#ember-version'
-      );
+      const url = formatURL('https://emberjs.com/survey/2019#ember-version');
 
       assert.strictEqual(
         url,
-        'https://emberjs.com/ember-community-survey-2019/#ember-version',
+        'https://emberjs.com/survey/2019/#ember-version',
         'If # in URL, we add / before #'
       );
     });
 
     test('formatURL is idempotent', function (assert) {
-      const url = formatURL(
-        'https://emberjs.com/ember-community-survey-2019#ember-version'
-      );
+      const url = formatURL('https://emberjs.com/survey/2019#ember-version');
 
       assert.strictEqual(
         formatURL(url),
-        'https://emberjs.com/ember-community-survey-2019/#ember-version',
+        'https://emberjs.com/survey/2019/#ember-version',
         'We get the same URL back.'
       );
     });
