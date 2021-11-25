@@ -4,8 +4,8 @@ baseFileName: ember-data
 filter:
  - /ember-data\./
 repo: emberjs/data
-lastRelease: 4.0.0-beta.2 # Manually update, see https://libraries.io/npm/ember-data throughout
-futureVersion: 4.0.0-beta.3 # Manually update
+lastRelease: 4.0.0-beta.4 # Manually update, see https://libraries.io/npm/ember-data throughout
+futureVersion: 4.0.0-beta.5 # Manually update
 finalVersion: 4.0.0 # Manually update
 channel: beta
 date: 2021-09-05 # Manually update, get date for `lastRelease` 
