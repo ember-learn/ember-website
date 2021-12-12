@@ -7,5 +7,5 @@ twitter:
 image: ilee.jpg
 added: 2020-06-18T21:00:00.000Z
 teams:
-  - learning
+  - alumni
 ---
