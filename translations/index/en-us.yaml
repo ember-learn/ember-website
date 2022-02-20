@@ -1,1 +1,228 @@
 subtitle: " - A framework for ambitious web developers"
+
+hero:
+  title: |
+    A framework for ambitious <br class="hide-on-mobile">web developers.
+  sub: |
+    Ember.js is a productive, battle-tested JavaScript framework for building modern
+    web applications. It includes everything you need to build rich UIs that work on any device.
+  cta: Read the Tutorial
+  ctaTitle: |
+    New to building websites, or just want a more in-depth introduction to Ember? The tutorial is for you!
+
+intro:
+  title: |
+    Build with the teams that never stop shipping.
+  sub1: |
+    Some of the best development teams in the world have been iterating on their products for
+    years with Ember. With scalable UI architecture baked-in from the start, you'll be working
+    with the same patterns these organizations use every step of the way.
+  sub2: |
+    It's time to start building from the 20th floor.
+
+batteries:
+  title: Batteries are included
+  sub: |
+    Ember’s out-of-the-box experience has everything you need to start building on day one and
+    keep shipping for years. Benefit from our years of experience to help your team be
+    productive—faster. You'll never have to wire together your own framework ever again!
+
+  build:
+    title: Build pipeline
+    sub: |
+      Ember CLI is the backbone of modern Ember apps, providing code generators to
+      create new entities and putting the necessary files in the right place, every time.
+      Ember apps come with a <strong>built-in development environment</strong> with fast rebuilds,
+      auto-reload, and a test runner! <br><br> Ready to deploy? That's easy, too!
+      build your app for production with a single command.
+
+routing:
+  title: Routing
+  sub: |
+    The URL has always been one of the major strengths of the web, and Ember apps respect that.
+    Ember's built-in router is a <strong>best-in-class solution</strong> that incorporates
+    async data loading with dynamic url segments and query parameters.
+    The Ember router seamlessly supports nested urls with incremental data fetching,
+    nested loading, and error substates.
+
+data-layer:
+  title: Data layer
+  sub: |
+    While you can use any data layer for your app, every new Ember app includes a fully-featured
+    data access library called <a href="https://guides.emberjs.com/release/models/">Ember Data</a>.
+    <br><br>Ember Data allows you to access data across multiple sources at once,
+    setup asynchronous relationships, and keep models up-to-date across your app.
+
+testing:
+  title: Testing
+  sub: |
+    Enjoy a fully-featured, modern test harness built into every application by default.
+    Every time an entity is generated in an Ember app, tests are also generated for that same entity.
+    Ember apps support three levels of testing that are handy for testing everything from
+    individual components to acceptance tests that can boot your whole app and interact with it
+    to verify everything is working as it should be. <br><br>Tests are also run in the browser,
+    providing that extra peace of mind.
+
+performance:
+  title: Performance
+  sub: |
+    Ember is built on the Glimmer rendering engine, one of the fastest rendering technologies on
+    the market today, thanks to the way it compiles templates down to a highly-performant
+    virtual machine. <br><br>Due to our holistic performance approach, <strong>performance
+    upgrades are often free</strong> with version upgrades— no extra work necessary!
+
+upgrades:
+  title: Easy upgrades
+  sub: |
+    Ember follows a 6-week release cycle, releasing a new minor version every 6 weeks.
+    With a <strong>strong commitment to stability</strong>, upgrades between minor versions are
+    straightforward and fast. The well-thought-out deprecation mechanism that gives you ample
+    warning of code that would need to change in the next major version, and deprecated or
+    upgraded features often come with codemods that can be run to automatically update your
+    codebase. <br><br>If you do happen to get stuck, our friendly community is ready and willing to help!
+
+ecosystem:
+  title: The Ember Ecosystem
+  sub: |
+    There's never been a better time to be a JavaScript developer,
+    and Ember embraces everything that modern JS has to offer.
+    When you're ready for more, choose from hundreds of high-quality,
+    curated community Ember Addons to super-power your application.
+  js:
+    title: Use the modern JavaScript you know and love
+    sub: |
+      ES6 classes, fat arrow functions, even decorators-
+      it's easy to use the latest and greatest JavaScript features in your app,
+      zero configuration required. Love Typescript? We've got great support for that too!
+      And tools like Prettier pair perfectly with your Ember app's JavaScript code.
+  addons:
+    title: |
+      Meet Addons: high-quality, curated npm packages that supercharge your app
+    sub: |
+      <p>
+        While Ember CLI makes it easy to add any third-party node module,
+        Ember Addons provide capabilities that go way beyond your typical npm package.
+      </p>
+      <p>
+        By hooking into Ember CLI's standardized tooling,
+        Addons can modify your app's build steps, help you out with deployment,
+        inline images and more.
+      </p>
+      <p>
+        With all this power wrapped up into a single install command,
+        and no additional build tool or configuration required,
+        you'll wonder how you could ever go back to wiring up dependencies on your own again.
+      </p>
+  ember-observer:
+    title: |
+      Ember Observer: your dependency co-pilot
+    sub: |
+      <p>
+        Tired of wondering if your project's next dependency is well-maintained?
+        Have you ever had to make a choice between multiple packages with no clear guidance
+        about which one's better?
+      </p>
+      <p>
+        With <a href="https://emberobserver.com">Ember Observer</a>,
+        you'll never have to assess the quality of your project's dependencies on your own.
+        Up-to-date rankings make it easy to see an addon's position within the community.
+        Metrics like great documentation,
+        recent releases and automated tests across multiple Ember versions mean you can be
+        confident that your next dependency won't become a liability.
+      </p>
+
+community:
+  title: A vibrant, welcoming community
+  sub: |
+    Ember's first commit was in 2011, but today our community is more active than ever.
+    Whether it's one of our annual conferences, dozens of Meetup groups,
+    or initiatives like Women Helping Women, we're always working hard to foster a friendly,
+    professional, and welcoming environment for our developers.
+
+
+  emberconf: Learn about EmberConf
+  meetups: Ember Meetups
+
+communication:
+  title: Our official communication channels to get in touch with the community
+  forum:
+    title: Discussion forum
+    sub: |
+      Post and search longer-form questions in our public forum.
+  discord:
+    title: Discord community chat
+    sub: |
+      Join our real-time chat server to connect with other developers and get answers.
+
+learning:
+  sub: |
+    Beyond our official core online channels,
+    you can dig deeper with these additional learning resources from enthusiastic members
+    of our welcoming community!
+  podcasts:
+    title: Podcasts
+    list: |
+      <li><a href="https://emberweekend.com/episodes">Ember Weekend</a></li>
+      <li><a href="https://embermap.com/podcast">Ember Map Podcast</a></li>
+  reading:
+    title: |
+      Books & blogs
+    list: |
+      <li><a href="https://blog.emberjs.com/tags/newsletter.html" title="Ember.js newsletter">
+        The Ember Times
+      </a></li>
+      <li><a href="https://www.balinterdi.com/rock-and-roll-with-emberjs/" title="a book that helps you learn Ember">
+        Rock and Roll with Ember.js
+      </a></li>
+      <li><a href="https://www.pzuraq.com/tag/octane/" title="a blog series by pzuraq">
+        Octane: the blog series
+      </a></li>
+      <li><a href="https://www.emberweekly.com/" title="latest Ember news and articles">
+        Ember Weekly
+      </a></li>
+  videos:
+    title: Videos
+    list: |
+      <li><a href="https://www.youtube.com/watch?v=Cvz-9ccflKQ">
+        Ember.js: The Documentary
+      </a></li>
+      <li><a href="https://embermap.com/">
+        Ember Map
+      </a></li>
+      <li><a href="https://www.youtube.com/channel/UCMmzJ82sCmooDdtzVY8FxEA/videos">
+        Ember Videos
+      </a></li>
+
+work:
+  sub: |
+    Looking for your next job? Community members have put together a dedicated platform for
+    matching Ember job seekers with Ember job opportunities.
+  emberwork:
+    title: "EMBERWORK - jobs board"
+    sub: |
+      Find all the Ember job offers in one single place;
+      a dedicated platform for Ember jobs, curated by community members.
+
+shipping:
+  title: |
+    Ready to start shipping?
+  sub: |
+    If you're ready to dive in, the Quickstart is the fastest way to get going with Ember.js.
+    Are you new to web development or a recent bootcamp grad?
+    The Intro tutorial is a great place to start.
+  quickstart: Quickstart
+  github: View on Github
+
+guides:
+  title: Read the Guides
+  sub: |
+    If you're familiar with JavaScript and web application development,
+    our Guides will teach you everything you need to know to get started building with Ember.
+
+blog:
+  title: Read Our Blog
+  sub: |
+    Find out about the newest releases and latest work happening in the ecosystem by
+    visiting the official Ember Blog.
+
+

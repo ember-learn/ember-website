@@ -3,9 +3,11 @@
 <section aria-labelledby="hero-title" class="bg-shape-boxes-bottom bg-dark">
   <div class="container layout">
     <div class="lg:col-5">
-      <h1 class="text-hero-xl" id="hero-title">A framework for ambitious <br class="hide-on-mobile">web developers.</h1>
-      <p class="text-hero-base mb-2">Ember.js is a productive, battle-tested JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device.</p>
-      <a href="https://guides.emberjs.com/release/tutorial/" class="es-button" title="New to building websites, or just want a more in-depth introduction to Ember? The tutorial is for you!">Read the Tutorial</a>
+      <h1 class="text-hero-xl" id="hero-title">{{t "index.hero.title" htmlSafe=true}}</h1>
+      <p class="text-hero-base mb-2">{{t "index.hero.sub"}}</p>
+      <a href="https://guides.emberjs.com/release/tutorial/" class="es-button" title={{t "index.hero.ctaTitle"}}>
+        {{t "index.hero.cta"}}
+      </a>
     </div>
   </div>
 </section>
@@ -13,13 +15,9 @@
 <section aria-labelledby="section-intro" class="bg-light">
   <div class="container layout">
     <div class="lg:col-4 lg:start-2 text-center mb-3">
-      <h2 class="text-xl" id="section-intro">Build with the teams that never stop shipping.</h2>
-      <p>
-        Some of the best development teams in the world have been iterating on their products for years with Ember. With scalable UI architecture baked-in from the start, you'll be working with the same patterns these organizations use every step of the way.
-      </p>
-      <p>
-        <strong>It's time to start building from the 20th floor.</strong>
-      </p>
+      <h2 class="text-xl" id="section-intro">{{t "index.intro.title"}}</h2>
+      <p>{{t "index.intro.sub1"}}</p>
+      <p><strong>{{t "index.intro.sub2"}}</strong></p>
     </div>
     <div class="text-center">
       <img class="max-width" src="/images/home/landing-logos.svg" alt="" role="presentation">
@@ -32,18 +30,16 @@
 <section aria-labelledby="section-batteries-included" class="bg-light-muted">
   <div class="container layout">
     <div class="lg:col-4 lg:start-2 text-center">
-      <h2 class="text-xl" id="section-batteries-included">Batteries are included</h2>
-      <p class="mt-4">
-        Ember’s out-of-the-box experience has everything you need to start building on day one and keep shipping for years. Benefit from our years of experience to help your team be productive—faster. You'll never have to wire together your own framework ever again!
-      </p>
+      <h2 class="text-xl" id="section-batteries-included">{{t "index.batteries.title"}}</h2>
+      <p class="mt-4">{{t "index.batteries.sub"}}</p>
     </div>
     <div class="layout">
       <div class="lg:col-4 lg:start-3">
         <img class="img-fluid" alt="" src="/images/home/ember-build.svg" role="presentation" width="636" height="424">
       </div>
       <div class="lg:col-2">
-        <h3 class="text-lg">Build pipeline</h3>
-        <p>Ember CLI is the backbone of modern Ember apps, providing code generators to create new entities and putting the necessary files in the right place, every time. Ember apps come with a <strong>built-in development environment</strong> with fast rebuilds, auto-reload, and a test runner! <br><br> Ready to deploy? That's easy, too! build your app for production with a single command.</p>
+        <h3 class="text-lg">{{t "index.batteries.build.title"}}</h3>
+        <p>{{t "index.batteries.build.sub" htmlSafe=true}}</p>
       </div>
     </div>
     <div class="layout mt-4">
@@ -51,8 +47,8 @@
         <img class="img-fluid" src="/images/home/ember-routing.svg" alt="" role="presentation" width="636" height="424">
       </div>
       <div class="lg:col-2">
-        <h3 class="text-lg">Routing</h3>
-        <p>The URL has always been one of the major strengths of the web, and Ember apps respect that. Ember's built-in router is a <strong>best-in-class solution</strong> that incorporates async data loading with dynamic url segments and query parameters. The Ember router seamlessly supports nested urls with incremental data fetching, nested loading, and error substates.</p>
+        <h3 class="text-lg">{{t "index.routing.title"}}</h3>
+        <p>{{t "index.routing.sub" htmlSafe=true}}</p>
       </div>
     </div>
     <div class="layout mt-4">
@@ -60,10 +56,8 @@
         <img class="img-fluid" src="/images/home/ember-data.svg" alt="" role="presentation" width="636" height="424">
       </div>
       <div class="lg:col-2">
-        <h3 class="text-lg">Data layer</h3>
-        <p>
-          While you can use any data layer for your app, every new Ember app includes a fully-featured data access library called <a href="https://guides.emberjs.com/release/models/">Ember Data</a>. <br><br>Ember Data allows you to access data across multiple sources at once, setup asynchronous relationships, and keep models up-to-date across your app.
-        </p>
+        <h3 class="text-lg">{{t "index.data-layer.title"}}</h3>
+        <p>{{t "index.data-layer.sub" htmlSafe=true}}</p>
       </div>
     </div>
     <div class="layout mt-4">
@@ -71,10 +65,8 @@
         <img src="/images/home/ember-testing.svg" alt="" role="presentation" width="636" height="424">
       </div>
       <div class="lg:col-2">
-        <h3 class="text-lg">Testing</h3>
-        <p>
-          Enjoy a fully-featured, modern test harness built into every application by default. Every time an entity is generated in an Ember app, tests are also generated for that same entity. Ember apps support three levels of testing that are handy for testing everything from individual components to acceptance tests that can boot your whole app and interact with it to verify everything is working as it should be. <br><br>Tests are also run in the browser, providing that extra peace of mind.
-        </p>
+        <h3 class="text-lg">{{t "index.testing.title"}}</h3>
+        <p>{{t "index.testing.sub" htmlSafe=true}}</p>
       </div>
     </div>
     <div class="layout mt-4">
@@ -82,10 +74,8 @@
         <img class="img-fluid" src="/images/home/ember-performance.svg" alt="" role="presentation" width="636" height="424">
       </div>
       <div class="lg:col-2">
-        <h3 class="text-lg">Performance</h3>
-        <p>
-          Ember is built on the Glimmer rendering engine, one of the fastest rendering technologies on the market today, thanks to the way it compiles templates down to a highly-performant virtual machine. <br><br>Due to our holistic performance approach, <strong>performance upgrades are often free</strong> with version upgrades— no extra work necessary!
-        </p>
+        <h3 class="text-lg">{{t "index.performance.title"}}</h3>
+        <p>{{t "index.performance.sub" htmlSafe=true}}</p>
       </div>
     </div>
     <div class="layout mt-4">
@@ -93,10 +83,8 @@
         <img src="/images/home/ember-upgrades.svg" alt="" role="presentation" width="636" height="424">
       </div>
       <div class="lg:col-2">
-        <h3 class="text-lg">Easy upgrades</h3>
-        <p>
-          Ember follows a 6-week release cycle, releasing a new minor version every 6 weeks. With a <strong>strong commitment to stability</strong>, upgrades between minor versions are straightforward and fast. The well-thought-out deprecation mechanism that gives you ample warning of code that would need to change in the next major version, and deprecated or upgraded features often come with codemods that can be run to automatically update your codebase. <br><br>If you do happen to get stuck, our friendly community is ready and willing to help!
-        </p>
+        <h3 class="text-lg">{{t "index.upgrades.title"}}</h3>
+        <p>{{t "index.upgrades.sub" htmlSafe=true}}</p>
       </div>
     </div>
   </div>
@@ -110,10 +98,10 @@
     </div>
 
     <div class="lg:col-3">
-      <h2 class="text-xl" id="section-ecosystem">The Ember Ecosystem</h2>
-      <p>There's never been a better time to be a JavaScript developer, and Ember embraces everything that modern JS has to offer. When you're ready for more, choose from hundreds of high-quality, curated community Ember Addons to super-power your application.</p>
-      <h3 class="text-lg">Use the modern JavaScript you know and love</h3>
-      <p>ES6 classes, fat arrow functions, even decorators- it's easy to use the latest and greatest JavaScript features in your app, zero configuration required. Love Typescript? We've got great support for that too! And tools like Prettier pair perfectly with your Ember app's JavaScript code.</p>
+      <h2 class="text-xl" id="section-ecosystem">{{t "index.ecosystem.title"}}</h2>
+      <p>{{t "index.ecosystem.sub"}}</p>
+      <h3 class="text-lg">{{t "index.ecosystem.js.title"}}</h3>
+      <p>{{t "index.ecosystem.js.sub"}}</p>
     </div>
 
     <div class="lg:col-3 text-center">
@@ -121,10 +109,8 @@
     </div>
 
     <div class="lg:col-3">
-      <h3 class="text-lg">Meet Addons: high-quality, curated npm packages that supercharge your app</h3>
-      <p>While Ember CLI makes it easy to add any third-party node module, Ember Addons provide capabilities that go way beyond your typical npm package.</p>
-      <p>By hooking into Ember CLI's standardized tooling, Addons can modify your app's build steps, help you out with deployment, inline images and more.</p>
-      <p>With all this power wrapped up into a single install command, and no additional build tool or configuration required, you'll wonder how you could ever go back to wiring up dependencies on your own again.</p>
+      <h3 class="text-lg">{{t "index.ecosystem.addons.title"}}</h3>
+      {{t "index.ecosystem.addons.sub" htmlSafe=true}}
     </div>
 
     <div class="lg:col-3 lg:start-4 text-center">
@@ -134,9 +120,8 @@
     </div>
 
     <div class="lg:col-3">
-      <h3 class="text-lg">Ember Observer: your dependency co-pilot</h3>
-      <p>Tired of wondering if your project's next dependency is well-maintained? Have you ever had to make a choice between multiple packages with no clear guidance about which one's better?</p>
-      <p>With <a href="https://emberobserver.com">Ember Observer</a>, you'll never have to assess the quality of your project's dependencies on your own. Up-to-date rankings make it easy to see an addon's position within the community. Metrics like great documentation, recent releases and automated tests across multiple Ember versions mean you can be confident that your next dependency won't become a liability.</p>
+      <h3 class="text-lg">{{t "index.ecosystem.ember-observer.title"}}</h3>
+      {{t "index.ecosystem.ember-observer.sub"}}
     </div>
   </div>
 </section>
@@ -145,13 +130,8 @@
   <div class="container">
     <div class="layout text-light text-center">
       <div class="lg:col-4 lg:start-2">
-        <h2 class="text-xl" id="section-community">
-          A vibrant, welcoming community
-        </h2>
-
-        <p>
-          Ember's first commit was in 2011, but today our community is more active than ever. Whether it's one of our annual conferences, dozens of Meetup groups, or initiatives like Women Helping Women, we're always working hard to foster a friendly, professional, and welcoming environment for our developers.
-        </p>
+        <h2 class="text-xl" id="section-community">{{t "index.community.title"}}</h2>
+        <p>{{t "index.community.sub"}}</p>
       </div>
     </div>
   </div>
@@ -163,54 +143,48 @@
   <div class="layout container">
     <div class="lg:col-4 lg:start-2 text-center">
       <a href="https://emberconf.com" class="es-button mb-1">
-        Learn about EmberConf
+        {{t "index.community.emberconf"}}
       </a>
       <LinkTo @route="community.meetups" class="es-button-secondary ml-1">
-        Ember Meetups
+        {{t "index.community.meetups"}}
       </LinkTo>
     </div>
 
     <div class="lg:col-4 lg:start-2 my-3 text-center">
-      <h3 class="text-lg">
-        Our official communication channels to get in touch with the community
-      </h3>
+      <h3 class="text-lg">{{t "index.communication.title"}}</h3>
     </div>
 
     <ul class="grid lg:grid-2 list-unstyled">
       <EsLinkCard
         class="lg:col-3"
         @icon="discourse"
-        @title="Discussion forum"
+        @title={{t "index.communication.forum.title"}}
         @href="http://discuss.emberjs.com"
       >
-        <p>Post and search longer-form questions in our public forum.</p>
+        <p>{{t "index.communication.forum.sub"}}</p>
       </EsLinkCard>
 
       <EsLinkCard
         class="lg:col-3"
         @icon="discord"
-        @title="Discord community chat"
+        @title={{t "index.communication.discord.title"}}
         @href="https://discord.gg/emberjs"
       >
-        <p>Join our real-time chat server to connect with other developers and get answers.</p>
+        <p>{{t "index.communication.discord.sub"}}</p>
       </EsLinkCard>
     </ul>
 
-    <p class="lg:col-4 lg:start-2 my-3 text-center">
-      Beyond our official core online channels, you can dig deeper with these additional learning resources from enthusiastic members of our
-      welcoming community!
-    </p>
+    <p class="lg:col-4 lg:start-2 my-3 text-center">{{t "index.learning.sub"}}</p>
 
     <ul class="list-unstyled layout">
       <EsCard
         class="lg:col-2 text-center"
         @icon="podcasts"
       >
-        <h4 class="text-md">Podcasts</h4>
+        <h4 class="text-md">{{t "index.learning.podcasts.title"}}</h4>
 
         <ul class="list-unstyled">
-          <li><a href="https://emberweekend.com/episodes">Ember Weekend</a></li>
-          <li><a href="https://embermap.com/podcast">Ember Map Podcast</a></li>
+          {{t "index.learning.podcasts.list" htmlSafe=true}}
         </ul>
       </EsCard>
 
@@ -218,13 +192,10 @@
         class="lg:col-2 text-center"
         @icon="books"
       >
-        <h4 class="text-md">Books & blogs</h4>
+        <h4 class="text-md">{{t "index.learning.reading.title"}}</h4>
 
         <ul class="list-unstyled">
-          <li><a href="https://blog.emberjs.com/tags/newsletter.html" title="Ember.js newsletter">The Ember Times</a></li>
-          <li><a href="https://www.balinterdi.com/rock-and-roll-with-emberjs/" title="a book that helps you learn Ember">Rock and Roll with Ember.js</a></li>
-          <li><a href="https://www.pzuraq.com/tag/octane/" title="a blog series by pzuraq">Octane: the blog series</a></li>
-          <li><a href="https://www.emberweekly.com/" title="latest Ember news and articles">Ember Weekly</a></li>
+          {{t "index.learning.reading.list" htmlSafe=true}}
         </ul>
       </EsCard>
 
@@ -232,28 +203,24 @@
         class="lg:col-2 text-center"
         @icon="videos"
       >
-        <h4 class="text-md">Videos</h4>
+        <h4 class="text-md">{{t "index.learning.videos.title"}}</h4>
 
         <ul class="list-unstyled">
-          <li><a href="https://www.youtube.com/watch?v=Cvz-9ccflKQ">Ember.js: The Documentary</a></li>
-          <li><a href="https://embermap.com/">Ember Map</a></li>
-          <li><a href="https://www.youtube.com/channel/UCMmzJ82sCmooDdtzVY8FxEA/videos">Ember Videos</a></li>
+          {{t "index.learning.videos.list" htmlSafe=true}}
         </ul>
       </EsCard>
     </ul>
 
-    <p class="lg:col-4 lg:start-2 my-3 text-center">
-      Looking for your next job? Community members have put together a dedicated platform for matching Ember job seekers with Ember job opportunities.
-    </p>
+    <p class="lg:col-4 lg:start-2 my-3 text-center">{{t "index.work.sub"}}</p>
 
     <ul class="layout list-unstyled">
       <EsLinkCard
         class="lg:col-4 lg:start-2"
         @icon="emberwork"
-        @title="EMBERWORK - jobs board"
+        @title={{t "index.work.emberwork.title"}}
         @href="https://emberwork.com/"
       >
-        <p>Find all the Ember job offers in one single place; a dedicated platform for Ember jobs, curated by community members.</p>
+        <p>{{t "index.work.emberwork.sub"}}</p>
       </EsLinkCard>
     </ul>
   </div>
@@ -263,12 +230,16 @@
   <div class="container">
     <div class="layout mb-3">
       <div class="lg:col-3">
-        <h2 class="text-xl" id="section-shipping">Ready to start shipping?</h2>
-        <p>If you're ready to dive in, the Quickstart is the fastest way to get going with Ember.js. Are you new to web development or a recent bootcamp grad? The Intro tutorial is a great place to start.</p>
+        <h2 class="text-xl" id="section-shipping">{{t "index.shipping.title"}}</h2>
+        <p>{{t "index.shipping.sub"}}</p>
 
         <p class="mt-4">
-          <a href="https://guides.emberjs.com/release/getting-started/quick-start/" class="es-button mb-1 mr-1">Quickstart</a>
-          <a href="https://github.com/emberjs" class="es-button-secondary">View on Github</a>
+          <a href="https://guides.emberjs.com/release/getting-started/quick-start/" class="es-button mb-1 mr-1">
+            {{t "index.shipping.quickstart"}}
+          </a>
+          <a href="https://github.com/emberjs" class="es-button-secondary">
+            {{t "index.shipping.github"}}
+          </a>
         </p>
       </div>
     </div>
@@ -276,18 +247,18 @@
     <ul class="grid lg:grid-2 mt-4 list-unstyled">
       <EsLinkCard
         @icon="guides"
-        @title="Read the Guides"
+        @title={{t "index.guides.title"}}
         @href="https://guides.emberjs.com/release/"
       >
-        <p>If you're familiar with JavaScript and web application development, our Guides will teach you everything you need to know to get started building with Ember.</p>
+        <p>{{t "index.guides.sub"}}</p>
       </EsLinkCard>
 
       <EsLinkCard
         @icon="blog"
-        @title="Read Our Blog"
+        @title={{t "index.blog.title"}}
         @href="https://blog.emberjs.com"
       >
-        <p>Find out about the newest releases and latest work happening in the ecosystem by visiting the official Ember Blog.</p>
+        <p>{{t "index.blog.sub"}}</p>
       </EsLinkCard>
     </ul>
   </div>
