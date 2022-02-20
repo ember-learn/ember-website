@@ -7,6 +7,10 @@ export default class AplicationRoute extends Route {
   @service fastboot;
   @service router;
 
+  queryParams = {
+    locale: {},
+  };
+
   constructor() {
     super(...arguments);
 

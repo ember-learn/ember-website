@@ -1,0 +1,17 @@
+<PopperJS as |reference popover|>
+  <EsButton
+    {{reference}}
+    type="button"
+    @secondary={{true}}
+    @onClicked={{this.toggle}}
+  >
+    {{yield to="trigger"}}
+  </EsButton>
+
+  {{#if this.isOpen}}
+    {{!-- TODO: escape also has to close this --}}
+    <div {{popover}} {{focus-trap}} class="popover-content">
+      {{yield this.toggle to="content"}}
+    </div>
+  {{/if}}
+</PopperJS>

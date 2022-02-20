@@ -1,0 +1,11 @@
+subtitle: " - Un marco para desarrolladores web ambiciosos"
+
+hero:
+  title: |
+    Un marco para desarrolladores<br class="hide-on-mobile"> web ambiciosos
+  sub: |
+    Ember.js es un marco JavaScript productivo y probado en batalla para construir
+     aplicaciones web. Incluye todo lo que necesita para crear interfaces de usuario enriquecidas que funcionen en cualquier dispositivo.
+  cta: Lee el tutorial
+  ctaTitle: |
+    ¿Eres nuevo en la creación de sitios web o simplemente quieres una introducción más profunda a Ember? ¡El tutorial es para ti!

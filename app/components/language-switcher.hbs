@@ -1,0 +1,23 @@
+<div id="language-switcher">
+  <Popover>
+    <:trigger>{{this.current}}</:trigger>
+    <:content as |close|>
+      {{!--
+        These are not translated, because someone who knows the language knows what
+        their language is called in their language, and it doesn't matter if
+        non-speakers can read it.
+      --}}
+      <LinkTo @query={{hash locale="en-us"}} {{on 'click' close}}>English</LinkTo>
+      <LinkTo @query={{hash locale="es-es"}} {{on 'click' close}}>Español</LinkTo>
+      <LinkTo @query={{hash locale="cmn"}} {{on 'click' close}}>中国语訳</LinkTo>
+      <LinkTo @query={{hash locale="ru"}} {{on 'click' close}}>Pусский</LinkTo>
+      <LinkTo @query={{hash locale="ja-jp"}} {{on 'click' close}}>日本</LinkTo>
+
+      <div class="language-links">
+        <a href="https://github.com/ember-learn/ember-website/issues/new?assignees=&labels=&template=general_issue.md">
+          Preferred language missing? Open an issue
+        </a>
+      </div>
+    </:content>
+  </Popover>
+</div>
