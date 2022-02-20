@@ -1,6 +1,6 @@
 /* jshint node:true */
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let isProduction = environment === 'production';
 
   return {
@@ -92,6 +92,6 @@ module.exports = function(environment) {
      */
     requiresTranslation(/* key, locale */) {
       return true;
-    }
+    },
   };
 };
