@@ -29,3 +29,5 @@ jsconfig.json
 /package.json.ember-try
 
 /.lighthouseci/
+
+/.idea/

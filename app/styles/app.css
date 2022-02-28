@@ -11,6 +11,7 @@
 @import "components/surveys.css";
 @import "components/team-list.css";
 @import "components/terminal-code.css";
+@import "components/invasion-of-ukraine-banner.css";
 @import "legacy/form.css";
 
 @media only percy {

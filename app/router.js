@@ -19,6 +19,7 @@ Router.map(function () {
       this.route('assets');
     });
     this.route('meetups-getting-started');
+    this.route('invasion-of-ukraine');
   });
 
   this.route('editions', function () {
