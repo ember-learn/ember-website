@@ -1,15 +1,12 @@
-{{page-title "Browser Support"}}
+{{page-title (t "browser-support.title")}}
+
 <div class="container layout">
   <section aria-labelledby="section-browser-support-policy">
-    <h1 id="section-browser-support-policy">Ember.js Browser Support Policy</h1>
+    <h1 id="section-browser-support-policy">{{t "browser-support.heading"}}</h1>
 
-    <h2>Ember 3.0.0</h2>
+    <h2>{{t "browser-support.ember3.heading"}}</h2>
 
-    <p>
-      Ember currently targets Internet Explorer 11 as a baseline for support. This means that generally all modern and relatively recent browsers will work with Ember, since browsers are backwards compatible by design. Ember runs tests against the latest desktop versions of the following browsers:
-    </p>
-
-
+    <p>{{t "browser-support.ember3.support"}}</p>
 
     <div class="layout my-3">
       <div class="card lg:col-2 lg:start-3">
@@ -25,15 +22,13 @@
       </div>
     </div>
 
-    <h2>Ember 4.0.0</h2>
+    <h2>{{t "browser-support.ember4.heading"}}</h2>
 
-    <p>
-      In Ember 4.0.0, the framework will support the following major browsers:
-    </p>
+    <p>{{t "browser-support.ember4.support"}}</p>
 
     <ul class="list-unstyled layout my-3">
       <EsCard class="lg:col-2">
-        <div class="text-center text-md">Desktop</div>
+        <div class="text-center text-md">{{t "form-factors.desktop"}}</div>
         <ul>
           <li>Google Chrome</li>
           <li>Mozilla Firefox</li>
@@ -42,7 +37,7 @@
         </ul>
       </EsCard>
       <EsCard class="lg:col-2">
-        <div class="text-center text-md">Mobile</div>
+        <div class="text-center text-md">{{t "form-factors.mobile"}}</div>
         <ul>
           <li>Google Chrome</li>
           <li>Mozilla Firefox</li>
@@ -50,7 +45,7 @@
         </ul>
       </EsCard>
       <EsCard class="lg:col-2">
-        <div class="text-center text-md">Testing</div>
+        <div class="text-center text-md">{{t "form-factors.testing"}}</div>
         <ul>
           <li>Google Chrome</li>
           <li>Mozilla Firefox</li>
@@ -58,22 +53,14 @@
       </EsCard>
     </ul>
 
-    <p>
-      Other browsers may work with Ember.js, but are not explicitly supported. If you
-      would like to add support for a new browser, please <a href="https://github.com/emberjs/rfcs">submit an RFC or RFC issue for discussion</a>!
-    </p>
+    <p>{{t "browser-support.ember4.other-browsers" htmlSafe=true}}</p>
+    <p>{{t "browser-support.ember4.evergreen.support" htmlSafe=true}}</p>
 
-
-    <p>
-      We determine support on a browser-by-browser basis. Browsers are categorized as
-      either <em>evergreen</em> or <em>non-evergreen</em>. The categorization is as follows:
-    </p>
-
-    <h3 class="text-center">Evergreen</h3>
+    <h3 class="text-center">{{t "browser-support.ember4.evergreen.sub-heading"}}</h3>
 
     <ul class="list-unstyled layout my-3">
       <EsCard class="lg:col-2">
-        <div class="text-center text-md">Desktop</div>
+        <div class="text-center text-md">{{t "form-factors.desktop"}}</div>
         <ul>
           <li>Google Chrome</li>
           <li>Mozilla Firefox</li>
@@ -81,14 +68,14 @@
         </ul>
       </EsCard>
       <EsCard class="lg:col-2">
-        <div class="text-center text-md">Mobile</div>
+        <div class="text-center text-md">{{t "form-factors.mobile"}}</div>
         <ul>
           <li>Google Chrome</li>
           <li>Mozilla Firefox</li>
         </ul>
       </EsCard>
       <EsCard class="lg:col-2">
-        <div class="text-center text-md">Testing</div>
+        <div class="text-center text-md">{{t "form-factors.testing"}}</div>
         <ul>
           <li>Google Chrome</li>
           <li>Mozilla Firefox</li>
@@ -96,18 +83,18 @@
       </EsCard>
     </ul>
 
-    <h3 class="text-center">Non-evergreen</h3>
+    <h3 class="text-center">{{t "browser-support.ember4.non-evergreen.sub-heading"}}</h3>
 
     <div class="layout">
       <ul class="list-unstyled layout lg:col-4 lg:start-2 my-3">
         <EsCard class="lg:col-3">
-          <div class="text-center text-md">Desktop</div>
+          <div class="text-center text-md">{{t "form-factors.desktop"}}</div>
           <ul>
             <li>Safari</li>
           </ul>
         </EsCard>
         <EsCard class="lg:col-3">
-          <div class="text-center text-md">Mobile</div>
+          <div class="text-center text-md">{{t "form-factors.mobile"}}</div>
           <ul>
             <li>Safari</li>
           </ul>
@@ -115,54 +102,31 @@
       </ul>
     </div>
 
-    <p>
-      For evergreen browsers, the minimum version of the browser that we support is
-      determined at the time of every minor release, following this formula:
-    </p>
+    <p>{{t "browser-support.ember4.formula.intro"}}</p>
 
     <div class="layout my-3">
       <div class="card">
         <div class="card__content">
-          <p>Whichever browser version is greater/more recent out of:</p>
+          <p>{{t "browser-support.ember4.formula.query"}}</p>
 
-          <ol>
-            <li>
-              The lowest/least recent version that fulfills any one of these properties:
-              <ul>
-                <li>It is the latest version of the browser.</li>
-                <li>It is the latest LTS/extended support version of the browser (such as Firefox ESR).</li>
-                <li>It has at least <em>0.25%</em> of global marketshare usage across mobile and
-              desktop, based on <a href="https://gs.statcounter.com/">statcounter</a>.</li>
-              </ul>
-            </li>
-            <li>
-              The minimum version supported in the previous release
-            </li>
-          </ol>
+          {{t "browser-support.ember4.formula.properties" htmlSafe=true}}
         </div>
       </div>
     </div>
 
-    <p>
-      To simplify, the supported version either moves forward or stays the same for
-      each release based on overall usage and LTS/current release versions.
-    </p>
-
-    <p>
-      For non-evergreen browsers, support is locked at a specific major version, and
-      we support all major versions above that version:
-    </p>
+    <p>{{t "browser-support.ember4.formula.p1"}}</p>
+    <p>{{t "browser-support.ember4.formula.p2"}}</p>
 
     <div class="layout">
       <ul class="list-unstyled layout lg:col-4 lg:start-2 my-3">
         <EsCard class="lg:col-3">
-          <div class="text-center text-md">Desktop</div>
+          <div class="text-center text-md">{{t "form-factors.desktop"}}</div>
           <ul>
             <li>Safari: 12</li>
           </ul>
         </EsCard>
         <EsCard class="lg:col-3">
-          <div class="text-center text-md">Mobile</div>
+          <div class="text-center text-md">{{t "form-factors.mobile"}}</div>
           <ul>
             <li>Safari: 12</li>
           </ul>
@@ -170,6 +134,7 @@
       </ul>
     </div>
 
-    Within a version of a browser, we only support the most recent patch release.
+
+    {{t "browser-support.ember4.patch-stipulation"}}
   </section>
 </div>

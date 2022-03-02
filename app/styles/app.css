@@ -51,3 +51,31 @@ h1 + *,
 .mt-4 {
   margin-top: var(--spacing-4);
 }
+
+/**
+  temporary hack to get this styled in the proper place
+  while we discuss UX, etc
+ */
+#language-switcher {
+  position: absolute;
+  right: 0.5rem;
+  margin-top: -1rem;
+}
+
+#language-switcher .es-button-secondary {
+  padding: calc(var(--spacing-1) * 0.5) var(--spacing-1);
+  font-size: var(--font-size-sm);
+}
+
+.popover-content {
+  min-width: 200px;
+  padding: var(--spacing-2);
+  background: white;
+  display: grid;
+  gap: var(--spacing-1);
+}
+
+.popover-content .language-links {
+  border-top: 1px solid;
+  font-size: var(--font-size-sm);
+}

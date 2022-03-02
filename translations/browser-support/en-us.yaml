@@ -1,0 +1,61 @@
+title: "Browser Support"
+heading: "Ember.js Browser Support Policy"
+
+ember3:
+  heading: "Ember 3.0.0"
+  support: |
+    Ember currently targets Internet Explorer 11 as a baseline for support.
+    This means that generally all modern and relatively recent browsers will work with Ember,
+    since browsers are backwards compatible by design.
+    Ember runs tests against the latest desktop versions of the following browsers:
+
+ember4:
+  heading: "Ember 4.0.0"
+  support: |
+    In Ember 4.0.0, the framework will support the following major browsers:
+  other-browsers: |
+      Other browsers may work with Ember.js, but are not explicitly supported.
+      If you would like to add support for a new browser, please
+      <a href="https://github.com/emberjs/rfcs">submit an RFC or RFC issue for discussion</a>!
+  evergreen:
+    support: |
+      We determine support on a browser-by-browser basis.
+      Browsers are categorized as either <em>evergreen</em> or <em>non-evergreen</em>.
+      The categorization is as follows:
+    sub-heading: Evergreen
+  non-evergreen:
+    sub-heading: Non-evergreen
+
+  formula:
+    intro: |
+      For evergreen browsers, the minimum version of the browser that we support is
+      determined at the time of every minor release, following this formula:
+    query: |
+      Whichever browser version is greater/more recent out of:
+    properties: |
+      <ol>
+        <li>
+          The lowest/least recent version that fulfills any one of these properties:
+          <ul>
+            <li>It is the latest version of the browser.</li>
+            <li>It is the latest LTS/extended support version of the browser (such as Firefox ESR).</li>
+            <li>It has at least <em>0.25%</em> of global marketshare usage across mobile and
+          desktop, based on <a href="https://gs.statcounter.com/">statcounter</a>.</li>
+          </ul>
+        </li>
+        <li>
+          The minimum version supported in the previous release
+        </li>
+      </ol>
+    p1: |
+      To simplify, the supported version either moves forward or stays the same for
+      each release based on overall usage and LTS/current release versions.
+    p2: |
+      For non-evergreen browsers, support is locked at a specific major version, and
+      we support all major versions above that version:
+
+
+
+
+  patch-stipulation: |
+    Within a version of a browser, we only support the most recent patch release.

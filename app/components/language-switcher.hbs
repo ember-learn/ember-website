@@ -1,0 +1,19 @@
+<div id="language-switcher">
+  <Popover>
+    <:trigger>{{this.current}}</:trigger>
+    <:content as |close|>
+      {{#each this.locales as |info|}}
+        <LinkTo @query={{hash locale=info.locale}} {{on 'click' close}}>
+          {{info.localName}}
+        </LinkTo>
+      {{/each}}
+
+
+      <div class="language-links">
+        <a href="https://github.com/ember-learn/ember-website/issues/new?assignees=&labels=&template=general_issue.md">
+          Preferred language missing? Open an issue
+        </a>
+      </div>
+    </:content>
+  </Popover>
+</div>

@@ -1,0 +1,4 @@
+form-factors:
+  desktop: Desktop
+  mobile: Mobile
+  testing: Testing
