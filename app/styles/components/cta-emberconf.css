@@ -1,12 +1,8 @@
 .emberconf-announcement {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   border-top: 1px solid var(--color-gray-400);
-  max-width: 40rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 .emberconf-announcement h2 {
@@ -18,8 +14,7 @@
 }
 
 .emberconf-announcement .logo {
-  flex-basis: 100%;
-  max-width: 11rem;
+  width: 9rem;
   transform: translateX(-7.5%);
   margin-top: -4.5rem;
 }
@@ -29,25 +24,29 @@
 }
 
 .emberconf-announcement .text {
-  flex-basis: 100%;
   margin-top: 1rem;
 }
 
 @media screen and (min-width: 450px) {
   .emberconf-announcement {
-    justify-content: space-between;
     padding-top: 3rem;
     margin-top: -5rem;
   }
 
+  .emberconf-announcement .inner {
+    display: flex;
+    align-items: center;
+  }
+
   .emberconf-announcement .logo {
-    flex-basis: 11rem;
+    width: 11rem;
+    margin-right: 2rem;
     transform: translateY(-10%);
     margin-top: 0;
+    flex-shrink: 0;
   }
 
   .emberconf-announcement .text {
-    flex-basis: calc(100% - 13rem);
     margin-top: 0;
   }
 }
