@@ -102,20 +102,17 @@ export default [
         type: 'link',
       },
       {
+        href: 'https://emberjs.com/community/black-lives-matter/',
+        name: 'Black Lives Matter',
+        type: 'link',
+      },
+      {
+        type: 'divider',
+      },
+      {
         href: 'https://help-wanted.emberjs.com/',
         name: 'Help Wanted',
         type: 'link',
-      },
-      {
-        type: 'divider',
-      },
-      {
-        href: 'https://emberjs.com/community/meetups',
-        name: 'Meetups',
-        type: 'link',
-      },
-      {
-        type: 'divider',
       },
       {
         href: 'https://emberjs.com/survey',
@@ -123,8 +120,16 @@ export default [
         type: 'link',
       },
       {
+        type: 'divider',
+      },
+      {
         href: 'https://emberconf.com/',
         name: 'EmberConf',
+        type: 'link',
+      },
+      {
+        href: 'https://emberjs.com/community/meetups',
+        name: 'Meetups',
         type: 'link',
       },
     ],
