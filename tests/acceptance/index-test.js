@@ -119,10 +119,11 @@ module('Acceptance | index', function (hooks) {
       [
         { href: '/community', label: 'The Ember Community' },
         { href: '/guidelines', label: 'Guidelines' },
+        { href: '/community/black-lives-matter/', label: 'Black Lives Matter' },
         { href: 'https://help-wanted.emberjs.com/', label: 'Help Wanted' },
-        { href: '/community/meetups', label: 'Meetups' },
         { href: '/survey', label: 'Ember Community Survey' },
         { href: 'https://emberconf.com/', label: 'EmberConf' },
+        { href: '/community/meetups', label: 'Meetups' },
       ],
       parentNavItems[3]
     );
