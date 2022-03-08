@@ -1,11 +1,12 @@
 /about*  /
 /blog/*  https://blog.emberjs.com/:splat
-/branding  /logos
 /brand  /logos
+/branding  /logos
 /builds/*  /releases/:splat
 /dashboard  /statusboard
 /deprecations/*  https://deprecations.emberjs.com/:splat
 /documentation/*  https://guides.emberjs.com/release/:splat
+/ember-community-survey-* /survey/:splat
 /guides/*  https://guides.emberjs.com/release/:splat
 /internal  /api
 /legal  /about/legal
@@ -15,6 +16,7 @@
 /team  /teams
 /tomster/*  /mascots/:splat
 /zoey  /mascots
+
 
 ### API Redirects
 
