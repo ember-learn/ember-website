@@ -1,13 +1,13 @@
 import Controller from '@ember/controller';
-import { createCache, getValue } from '@glimmer/tracking/primitives/cache';
+import { cached } from '@glimmer/tracking';
 
-function inTeam(team) {
-  return (teamMember) => (teamMember.teams ?? []).includes(team);
-}
+const inTeam = (team) => (teamMember) =>
+  (teamMember.teams ?? []).includes(team);
 
 export default class TeamsController extends Controller {
-  #sortedTeamMembers = createCache(() => {
-    const teamMembers = (this.model ?? []).toArray();
+  @cached
+  get sortedTeamMembers() {
+    const teamMembers = this.model?.slice() ?? [];
 
     return teamMembers.sort((teamMember1, teamMember2) => {
       const surname1 = teamMember1.last ?? '';
@@ -24,10 +24,6 @@ export default class TeamsController extends Controller {
 
       return comparisonResult;
     });
-  });
-
-  get sortedTeamMembers() {
-    return getValue(this.#sortedTeamMembers);
   }
 
   get alumniTeamMembers() {
