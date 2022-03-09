@@ -8,4 +8,5 @@ image: ckrycho.jpg
 added: 2022-02-14T11:10:00.000Z
 teams:
   - corejs
+  - typescript
 ---

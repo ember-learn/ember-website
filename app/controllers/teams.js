@@ -50,6 +50,10 @@ export default class TeamsController extends Controller {
     return this.sortedTeamMembers.filter(inTeam('learning'));
   }
 
+  get typescriptTeamMembers() {
+    return this.sortedTeamMembers.filter(inTeam('typescript'));
+  }
+
   get steeringCommitteeMembers() {
     return this.sortedTeamMembers.filter(inTeam('steering'));
   }
