@@ -1,0 +1,31 @@
+.hero-callout {
+  margin-top: -25px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-callout-label {
+  text-transform: uppercase;
+  color: var(--color-gray-900);
+  background-color: var(--color-yellow);
+  border-radius: 1.5px;
+  padding: 2px 4px;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  margin-right: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  transform: skewX(-10deg);
+}
+
+.hero-callout-text > a:link {
+  color: #74B0CE;
+  background: none;
+  text-decoration: underline;
+}
+
+.hero-callout-text > a:link:hover {
+  color: var(--color-gray-500);
+}
