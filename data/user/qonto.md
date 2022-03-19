@@ -1,5 +1,5 @@
 ---
-url: 'https://app.qonto.eu'
+url: 'https://qonto.com'
 image: qonto.png
 name: Qonto
 added: 2018-01-17T10:43:31.000Z
