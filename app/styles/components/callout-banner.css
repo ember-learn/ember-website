@@ -1,0 +1,45 @@
+.callout-banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-brand-hc-dark);
+  padding: 8px 8px 10px;
+}
+
+.callout-banner a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-white-40);
+  background: none;
+  font-size: 16px;
+  line-height: 15px;
+}
+
+.callout-banner a + a {
+  margin-left: 20px;
+  position: relative;
+}
+
+.callout-banner a + a::before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: block;
+  left: -10px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.callout-banner .toggle-close {
+  color: white;
+  position: absolute;
+  right: 20px;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: var(--font-size-lg);
+}

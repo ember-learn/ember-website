@@ -2,16 +2,16 @@
 @import "components/brand-logos.css";
 @import "components/ecosystem-icons.css";
 @import "components/cta-emberconf.css";
-@import "components/ember-survey.css";
 @import "components/faqs.css";
 @import "components/homepage-image-grid.css";
+@import "components/homepage-hero-callout.css";
 @import "components/lts-table.css";
 @import "components/release-timeline.css";
 @import "components/survey-section.css";
 @import "components/surveys.css";
 @import "components/team-list.css";
 @import "components/terminal-code.css";
-@import "components/invasion-of-ukraine-banner.css";
+@import "components/callout-banner.css";
 @import "legacy/form.css";
 
 @media only percy {
@@ -50,4 +50,8 @@ h1 + *,
 
 .mt-4 {
   margin-top: var(--spacing-4);
+}
+
+button:not([disabled]) {
+  cursor: pointer;
 }
