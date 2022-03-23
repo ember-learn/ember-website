@@ -14,9 +14,8 @@ module('Integration | Component | callout-banner', function (hooks) {
     `);
 
     assert
-      .dom('.callout-banner')
-      .exists()
-      .hasText('I have an announcement to make');
+      .dom('[data-test-callout-banner]')
+      .hasText('I have an announcement to make', 'We see the correct message');
   });
 
   test('callouts can be made dismissible', async function (assert) {
@@ -25,8 +24,15 @@ module('Integration | Component | callout-banner', function (hooks) {
         You can dismiss this announcement
       </CalloutBanner>
     `);
-    assert.dom('.callout-banner').exists();
-    await click('.toggle-close');
-    assert.dom('.callout-banner').doesNotExist();
+
+    assert
+      .dom('[data-test-callout-banner]')
+      .exists('We see the callout banner.');
+
+    await click('[data-test-button="Close"]');
+
+    assert
+      .dom('[data-test-callout-banner]')
+      .doesNotExist('The banner hides on close');
   });
 });

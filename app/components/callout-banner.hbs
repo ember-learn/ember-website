@@ -1,5 +1,8 @@
 {{#if this.isShown}}
-  <div class="callout-banner">
+  <div
+    class="callout-banner"
+    data-test-callout-banner
+  >
     {{yield}}
 
     {{#if @dismissible}}
