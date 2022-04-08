@@ -3,3 +3,7 @@
   height: 100px;
   border-radius: 50%;
 }
+
+.social-links .icon {
+  background: none;
+}
