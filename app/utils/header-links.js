@@ -102,11 +102,6 @@ export default [
         type: 'link',
       },
       {
-        href: 'https://emberjs.com/community/black-lives-matter/',
-        name: 'Black Lives Matter',
-        type: 'link',
-      },
-      {
         type: 'divider',
       },
       {
