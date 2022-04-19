@@ -2,6 +2,11 @@
   height: 160px;
 }
 
+ /* TODO this could be better, probably */
+.survey-sponsor-link {
+  background: transparent !important;
+}
+
 .survey-sponsor-logo {
   max-width: 320px;
 }
