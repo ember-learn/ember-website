@@ -50,6 +50,27 @@ const stackColors = {
 
 // Begin Chart Definitions
 
+const S01_Q01_SS__TIME_USE = new VerticalBarChart({
+  chart: {
+    title: `How long have you been using Ember?`,
+    categories: [
+      `I haven't used Ember yet`,
+      `Less than 1 year`,
+      `Between 1 - 3 years`,
+      `Between 4 - 6 years`,
+      `Between 7 - 9 years`,
+      `Greater than 10 years`,
+    ],
+  },
+  rawData: [
+    {
+      color: color2022,
+      label: '2022',
+      values: [0.68, 8.16, 17.52, 34.86, 27.04, 10.37],
+    },
+  ],
+});
+
 const S01_Q02_MS__OTHER_FRAMEWORKS = new VerticalBarChart({
   chart: {
     title: `In addition to Ember, with which of these frameworks do you have some experience?`,
@@ -524,6 +545,7 @@ const S06_QM01_SS__MERGED_GLOBAL_LOC = new PieChart({
 
 //=============================================================================
 export default class Survey2022Controller extends Controller {
+  S01_Q01_SS__TIME_USE = S01_Q01_SS__TIME_USE;
   S01_Q02_MS__OTHER_FRAMEWORKS = S01_Q02_MS__OTHER_FRAMEWORKS;
   S01_Q03_MS__OTHER_UI_LIBS = S01_Q03_MS__OTHER_UI_LIBS;
   S01_Q04_MS__OTHER_SSG = S01_Q04_MS__OTHER_SSG;
