@@ -38,7 +38,7 @@
     <Highcharts @chart={{this.S01_Q06_SS__KNOW_ARIA}} />
     <Highcharts @chart={{this.S01_Q07_SS__KNOW_CSS}} />
     <Highcharts @chart={{this.S01_Q08_SS__KNOW_JS}} /> --}}
-    <Highcharts @chart={{this.S01_QM01_SS__WEB_SKILLS_MERGED}} />
+    <Highcharts @chart={{this.S01_QM01_SS__MERGED_WEB_SKILLS}} />
   </:charts>
 </EmberCommunitySurvey::Section>
 
@@ -53,7 +53,7 @@
     <Highcharts @chart={{this.S02_Q01_SS__OS_PREF}} />
     <Highcharts @chart={{this.S02_Q02_SS__OS_WORK}} />
     <Highcharts @chart={{this.S02_Q03_SS__OS_HOME}} />
-    <Highcharts @chart={{this.S02_Q04_SS__IDE_PREF}} />
+    <Highcharts @chart={{this.S02_QM01_SS__MERGED_IDE_PREF}} />
   </:charts>
 </EmberCommunitySurvey::Section>
 
@@ -65,11 +65,14 @@
     PlaceholderText
   </:body> --}}
   <:charts>
-    <Highcharts @chart={{this.S03_Q02_MS__WORK_SECTOR}} />
+    {{!-- <Highcharts @chart={{this.S03_Q02_MS__WORK_SECTOR}} /> --}}
+    <Highcharts @chart={{this.S03_QM01_MS__MERGED_WORK_SECTOR}} />
     <Highcharts @chart={{this.S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED}} />
-    <Highcharts @chart={{this.S03_Q15_SS__WORK_TEST_FW}} />
+    {{!-- <Highcharts @chart={{this.S03_Q15_SS__WORK_TEST_FW}} /> --}}
+    <Highcharts @chart={{this.S03_QM02_SS__MERGED_WORK_TEST_FW}} />
     <Highcharts @chart={{this.S03_Q17_SS__SERVER_SIDE_FRAMEWORK_WORK}} />
-    <Highcharts @chart={{this.S03_Q18_SS__DEPLOY_WORK}} />
+    {{!-- <Highcharts @chart={{this.S03_Q18_SS__DEPLOY_WORK}} /> --}}
+    <Highcharts @chart={{this.S03_QM03_SS__MERGED_DEPLOY_WORK}} />
   </:charts>
 </EmberCommunitySurvey::Section>
 
