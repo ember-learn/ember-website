@@ -111,7 +111,6 @@ const S01_Q04_MS__OTHER_SSG = new VerticalBarChart({
     },
   ],
 });
-//TODO: Consolidate into single 'self-assessment' chart
 const S01_Q05_SS__KNOW_HTML = new VerticalBarChart({
   chart: {
     title: `How well do you know HTML?`,
@@ -154,7 +153,7 @@ const S01_Q07_SS__KNOW_CSS = new VerticalBarChart({
     { color: color2022, label: '2022', values: [0.0, 3.54, 53.03, 43.43] },
   ],
 });
-const S01_QM01_SS__WEB_SKILLS_MERGED = new VerticalBarChart({
+const S01_QM01_SS__MERGED_WEB_SKILLS = new VerticalBarChart({
   chart: {
     categories: [
       `None`,
@@ -229,18 +228,7 @@ const S02_Q03_SS__OS_HOME = new VerticalBarChart({
     { color: color2022, label: '2022', values: [19.8, 58.38, 21.49, 0.34] },
   ],
 });
-//TODO: `Other` text responses can often be re-bucketed, e.g. `NeoVim` -> `Vim`
-/*
-Other:
-  20 total answers in other-text
-  16 that selected other as value
-  VS Code: +2 -1
-  Atom: +1
-  VIM: +9
-  Sublime: Textmate +1
-  FAR Nova Eclipse RStudio: 4
-*/
-const S02_Q04_SS__IDE_PREF = new VerticalBarChart({
+const S02_QM01_SS__MERGED_IDE_PREF = new VerticalBarChart({
   chart: {
     title: `Which is your preferred text editor or development environment?`,
     categories: [
@@ -269,7 +257,6 @@ const S02_Q04_SS__IDE_PREF = new VerticalBarChart({
     },
   ],
 });
-//TODO: `Other` text responses
 const S03_Q02_MS__WORK_SECTOR = new VerticalBarChart({
   chart: {
     title: `In which industry or sector(s) does your employer operate?`,
@@ -304,6 +291,58 @@ const S03_Q02_MS__WORK_SECTOR = new VerticalBarChart({
     },
   ],
 });
+const S03_QM01_MS__MERGED_WORK_SECTOR = new VerticalBarChart({
+  chart: {
+    title: `In which industry or sector(s) does your employer operate?`,
+    categories: [
+      `Agriculture`,
+      `Advertising`,
+      `Arts & Entertainment`,
+      `Business Administration & Legal`,
+      `Consulting`,
+      `Education`,
+      `Financial Services`,
+      `Government`,
+      `Health Care`,
+      `Insurance`,
+      `Manufacturing, Scientific, Industrial`,
+      `Real Estate`,
+      `Retailers (Including Online)`,
+      `Technology`,
+      `Utilities (Telecom/Energy)`,
+      `Transportation`,
+      `Hospitality`,
+      `Other`,
+    ],
+  },
+  rawData: [
+    {
+      color: color2022,
+      label: '2022',
+      values: [
+        100 * (11 / 584),
+        100 * (27 / 584),
+        100 * (35 / 584),
+        100 * (15 / 584),
+        100 * (57 / 584),
+        100 * (36 / 584),
+        100 * (90 / 584),
+        100 * (24 / 584),
+        100 * (52 / 584),
+        100 * (17 / 584),
+        100 * (37 / 584),
+        100 * (13 / 584),
+        100 * (40 / 584),
+        100 * (326 / 584),
+        100 * (19 / 584),
+        100 * (17 / 584),
+        100 * (16 / 584),
+        100 * (10 / 584),
+      ],
+    },
+  ],
+});
+
 const S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED = new VerticalBarChart({
   chart: {
     title: `What version(s) of Ember do you regularly work with at your job?`,
@@ -339,13 +378,6 @@ const S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED = new VerticalBarChart({
     },
   ],
 });
-//TODO: Review `Other` responses for potential future named option
-/*
-  Other:
-    Total: 22
-    Cypress: 10
-
-*/
 const S03_Q15_SS__WORK_TEST_FW = new VerticalBarChart({
   chart: {
     title: `What testing framework do you use most frequently in your Ember apps at work?`,
@@ -360,7 +392,32 @@ const S03_Q15_SS__WORK_TEST_FW = new VerticalBarChart({
     { color: color2022, label: '2022', values: [6.18, 80.39, 9.19, 4.24] },
   ],
 });
-//TODO: Review `Other` responses for potential future named option
+const S03_QM02_SS__MERGED_WORK_TEST_FW = new VerticalBarChart({
+  chart: {
+    title: `What testing framework do you use most frequently in your Ember apps at work?`,
+    categories: [
+      `Cypress`,
+      `Mocha (via ember-mocha or ember-cli-mocha)`,
+      `QUnit (via ember-quinit or ember-cli-qunit)`,
+      `I don't write tests`,
+      `Other`,
+    ],
+  },
+  rawData: [
+    {
+      color: color2022,
+      label: '2022',
+      values: [
+        100 * (11 / 566),
+        100 * (35 / 566),
+        100 * (455 / 566),
+        100 * (53 / 566),
+        100 * (12 / 566),
+      ],
+    },
+  ],
+});
+//FIXME: CANNOT RESOLVE 'OTHER' INTO VALUES: NEXT YEAR ASK FOR 'OTHER'
 const S03_Q17_SS__SERVER_SIDE_FRAMEWORK_WORK = new VerticalBarChart({
   chart: {
     title: `Which of these server-side frameworks do you primarily use in your Ember apps at work?`,
@@ -388,15 +445,6 @@ const S03_Q17_SS__SERVER_SIDE_FRAMEWORK_WORK = new VerticalBarChart({
     },
   ],
 });
-//TODO: Review `Other` responses for potential future named option
-/*
-  Other:
-    Total:
-    Google Cloud:
-    Linode:
-    OVH:
-
-*/
 const S03_Q18_SS__DEPLOY_WORK = new VerticalBarChart({
   chart: {
     title: `Where do you primarily deploy your Ember apps at work?`,
@@ -420,6 +468,42 @@ const S03_Q18_SS__DEPLOY_WORK = new VerticalBarChart({
     },
   ],
 });
+const S03_QM03_SS__MERGED_DEPLOY_WORK = new VerticalBarChart({
+  chart: {
+    title: `Where do you primarily deploy your Ember apps at work?`,
+    categories: [
+      `Amazon Web Services (AWS)`,
+      `Azure`,
+      `Digital Ocean`,
+      `Google Cloud`,
+      `Heroku`,
+      `Netlify`,
+      `OVH`,
+      `Self-hosted`,
+      `Vercel`,
+      `Other`,
+    ],
+  },
+  rawData: [
+    {
+      color: color2022,
+      label: '2022',
+      values: [
+        100 * (243 / 566),
+        100 * (27 / 566),
+        100 * (15 / 566),
+        100 * (23 / 566),
+        100 * (55 / 566),
+        100 * (13 / 566),
+        100 * (7 / 566),
+        100 * (141 / 566),
+        100 * (7 / 566),
+        100 * (35 / 566),
+      ],
+    },
+  ],
+});
+
 const S05_Q01_MS__FB_OCTANE = new VerticalBarChart({
   chart: {
     title: `Have you integrated any of these Octane features into any of your Ember apps?`,
@@ -553,11 +637,9 @@ export default class Survey2022Controller extends Controller {
   S01_Q06_SS__KNOW_ARIA = S01_Q06_SS__KNOW_ARIA;
   S01_Q07_SS__KNOW_CSS = S01_Q07_SS__KNOW_CSS;
   S01_Q08_SS__KNOW_JS = S01_Q08_SS__KNOW_JS;
-  S01_QM01_SS__WEB_SKILLS_MERGED = S01_QM01_SS__WEB_SKILLS_MERGED;
   S02_Q01_SS__OS_PREF = S02_Q01_SS__OS_PREF;
   S02_Q02_SS__OS_WORK = S02_Q02_SS__OS_WORK;
   S02_Q03_SS__OS_HOME = S02_Q03_SS__OS_HOME;
-  S02_Q04_SS__IDE_PREF = S02_Q04_SS__IDE_PREF;
   S03_Q02_MS__WORK_SECTOR = S03_Q02_MS__WORK_SECTOR;
   S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED =
     S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED;
@@ -569,6 +651,12 @@ export default class Survey2022Controller extends Controller {
   S05_Q02_MS__FB_NEW_FEAT = S05_Q02_MS__FB_NEW_FEAT;
   S05_Q04_MS__FFEAT = S05_Q04_MS__FFEAT;
   S06_Q03_MS__DEV_SURVEY_ADD = S06_Q03_MS__DEV_SURVEY_ADD;
+  // MERGED / PROCESSED CHARTS
+  S01_QM01_SS__MERGED_WEB_SKILLS = S01_QM01_SS__MERGED_WEB_SKILLS;
+  S02_QM01_SS__MERGED_IDE_PREF = S02_QM01_SS__MERGED_IDE_PREF;
+  S03_QM01_MS__MERGED_WORK_SECTOR = S03_QM01_MS__MERGED_WORK_SECTOR;
+  S03_QM02_SS__MERGED_WORK_TEST_FW = S03_QM02_SS__MERGED_WORK_TEST_FW;
+  S03_QM03_SS__MERGED_DEPLOY_WORK = S03_QM03_SS__MERGED_DEPLOY_WORK;
   S06_QM01_SS__MERGED_GLOBAL_LOC = S06_QM01_SS__MERGED_GLOBAL_LOC;
   //=============================================================================
 }
