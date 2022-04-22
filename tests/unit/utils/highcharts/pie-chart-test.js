@@ -3,21 +3,26 @@ import PieChart, {
 } from 'ember-website/utils/highcharts/pie-chart';
 import { module, test } from 'qunit';
 
-module('Unit | Utility | highcharts/pie-chart', function () {
-  module('PieChart', function () {
-    test('highchartsOptions returns an object that is compatible with Highcharts', function (assert) {
-      const { highchartsOptions } = new PieChart({
-        chart: {
-          title: 'Do you internationalize your applications?',
-        },
+module('Unit | Utility | highcharts/pie-chart', function (hooks) {
+  hooks.beforeEach(function () {
+    this.chart = {
+      title: 'Do you internationalize your applications?',
+    };
 
-        rawData: [
-          { color: '#1E719B', label: 'Yes', value: 480 },
-          { color: '#E04E39', label: 'No', value: 267 },
-        ],
+    this.rawData = [
+      { color: '#1E719B', label: 'Yes', value: 480 },
+      { color: '#E04E39', label: 'No', value: 267 },
+    ];
+  });
+
+  module('highchartsOptions', function () {
+    test('returns a configuration object that is compatible with Highcharts', function (assert) {
+      const { highchartsOptions } = new PieChart({
+        chart: this.chart,
+        rawData: this.rawData,
       });
 
-      // series has been tested through the createSeries test module
+      // We tested `series` in a separate module
       delete highchartsOptions.series;
 
       assert.deepEqual(
@@ -46,13 +51,8 @@ module('Unit | Utility | highcharts/pie-chart', function () {
   });
 
   module('createSeries', function () {
-    test('returns the series object', function (assert) {
-      const rawData = [
-        { color: '#1E719B', label: 'Yes', value: 480 },
-        { color: '#E04E39', label: 'No', value: 267 },
-      ];
-
-      const series = createSeries(rawData);
+    test('transforms rawData into an array that is compatible with Highcharts', function (assert) {
+      const series = createSeries(this.rawData);
 
       assert.strictEqual(series.length, 1, 'We see 1 series of data.');
 
