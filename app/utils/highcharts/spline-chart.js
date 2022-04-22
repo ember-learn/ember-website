@@ -13,12 +13,16 @@ export default class SplineChart {
   }
 
   get highchartsOptions() {
-    const { chart, series } = this;
+    const { chart, isLegendEnabled, series } = this;
 
     return {
       chart: {
         backgroundColor: 'transparent',
         type: 'spline',
+      },
+
+      legend: {
+        enabled: isLegendEnabled,
       },
 
       plotOptions: {
@@ -58,6 +62,12 @@ export default class SplineChart {
         },
       },
     };
+  }
+
+  get isLegendEnabled() {
+    const { series } = this;
+
+    return series.length > 1;
   }
 
   get series() {
