@@ -13,12 +13,16 @@ export default class VerticalBarChart {
   }
 
   get highchartsOptions() {
-    const { chart, series } = this;
+    const { chart, isLegendEnabled, series } = this;
 
     return {
       chart: {
         backgroundColor: 'transparent',
         type: 'column',
+      },
+
+      legend: {
+        enabled: isLegendEnabled,
       },
 
       series,
@@ -49,6 +53,12 @@ export default class VerticalBarChart {
         },
       },
     };
+  }
+
+  get isLegendEnabled() {
+    const { series } = this;
+
+    return series.length > 1;
   }
 
   get series() {
