@@ -1,6 +1,4 @@
-import SplineChart, {
-  createSeries,
-} from 'ember-website/utils/highcharts/spline-chart';
+import SplineChart from 'ember-website/utils/highcharts/spline-chart';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | highcharts/spline-chart', function (hooks) {
@@ -127,9 +125,12 @@ module('Unit | Utility | highcharts/spline-chart', function (hooks) {
     });
   });
 
-  module('createSeries', function () {
+  module('series', function () {
     test('transforms rawData into an array that is compatible with Highcharts', function (assert) {
-      const series = createSeries(this.rawData);
+      const { series } = new SplineChart({
+        chart: this.chart,
+        rawData: this.rawData,
+      });
 
       assert.strictEqual(series.length, 2, 'We see 2 series of data.');
 
