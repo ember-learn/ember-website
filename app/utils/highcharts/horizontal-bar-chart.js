@@ -1,19 +1,28 @@
 /*
   https://api.highcharts.com/highcharts/plotOptions.bar
 */
+import { tracked } from '@glimmer/tracking';
+
 export default class HorizontalBarChart {
+  @tracked chart;
+  @tracked rawData;
+
   constructor({ chart, rawData }) {
     this.chart = chart;
-    this.series = createSeries(rawData);
+    this.rawData = rawData;
   }
 
   get highchartsOptions() {
-    const { chart, series } = this;
+    const { chart, isLegendEnabled, series } = this;
 
     return {
       chart: {
         backgroundColor: 'transparent',
         type: 'bar',
+      },
+
+      legend: {
+        enabled: isLegendEnabled,
       },
 
       series,
@@ -46,9 +55,19 @@ export default class HorizontalBarChart {
       },
     };
   }
+
+  get isLegendEnabled() {
+    const { series } = this;
+
+    return series.length > 1;
+  }
+
+  get series() {
+    return createSeries(this.rawData);
+  }
 }
 
-export function createSeries(rawData = []) {
+function createSeries(rawData = []) {
   const data = [];
 
   rawData.forEach((datum) => {

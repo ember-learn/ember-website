@@ -1,19 +1,28 @@
 /*
   https://api.highcharts.com/highcharts/plotOptions.spline
 */
+import { tracked } from '@glimmer/tracking';
+
 export default class SplineChart {
+  @tracked chart;
+  @tracked rawData;
+
   constructor({ chart, rawData }) {
     this.chart = chart;
-    this.series = createSeries(rawData);
+    this.rawData = rawData;
   }
 
   get highchartsOptions() {
-    const { chart, series } = this;
+    const { chart, isLegendEnabled, series } = this;
 
     return {
       chart: {
         backgroundColor: 'transparent',
         type: 'spline',
+      },
+
+      legend: {
+        enabled: isLegendEnabled,
       },
 
       plotOptions: {
@@ -54,9 +63,19 @@ export default class SplineChart {
       },
     };
   }
+
+  get isLegendEnabled() {
+    const { series } = this;
+
+    return series.length > 1;
+  }
+
+  get series() {
+    return createSeries(this.rawData);
+  }
 }
 
-export function createSeries(rawData = []) {
+function createSeries(rawData = []) {
   const data = [];
 
   rawData.forEach((datum) => {

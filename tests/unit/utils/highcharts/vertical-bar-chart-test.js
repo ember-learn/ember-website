@@ -1,42 +1,48 @@
-import VerticalBarChart, {
-  createSeries,
-} from 'ember-website/utils/highcharts/vertical-bar-chart';
+import VerticalBarChart from 'ember-website/utils/highcharts/vertical-bar-chart';
 import { module, test } from 'qunit';
 
-module('Unit | Utility | highcharts/vertical-bar-chart', function () {
-  module('VerticalBarChart', function () {
-    test('highchartsOptions returns an object that is compatible with Highcharts', function (assert) {
-      const { highchartsOptions } = new VerticalBarChart({
-        chart: {
-          categories: ['Beginner', 'Intermediate', 'Advanced'],
-          title: 'Rank your web skills',
-        },
+module('Unit | Utility | highcharts/vertical-bar-chart', function (hooks) {
+  hooks.beforeEach(function () {
+    this.chart = {
+      categories: ['Beginner', 'Intermediate', 'Advanced'],
+      title: 'Rank your web skills',
+    };
 
-        rawData: [
-          {
-            color: '#1A5E9A',
-            label: 'ARIA',
-            values: [68.3, 25.7, 6],
-          },
-          {
-            color: '#32AADE',
-            label: 'CSS',
-            values: [9.6, 47.0, 43.4],
-          },
-          {
-            color: '#F2682A',
-            label: 'HTML',
-            values: [1.9, 36.0, 62.1],
-          },
-          {
-            color: '#F1BF28',
-            label: 'JavaScript',
-            values: [2.7, 35.9, 61.4],
-          },
-        ],
+    this.rawData = [
+      {
+        color: '#1A5E9A',
+        label: 'ARIA',
+        values: [68.3, 25.7, 6],
+      },
+      {
+        color: '#32AADE',
+        label: 'CSS',
+        values: [9.6, 47.0, 43.4],
+      },
+      {
+        color: '#F2682A',
+        label: 'HTML',
+        values: [1.9, 36.0, 62.1],
+      },
+      {
+        color: '#F1BF28',
+        label: 'JavaScript',
+        values: [2.7, 35.9, 61.4],
+      },
+    ];
+  });
+
+  module('highchartsOptions', function () {
+    test('returns a configuration object that is compatible with Highcharts', function (assert) {
+      const { highchartsOptions } = new VerticalBarChart({
+        chart: this.chart,
+        rawData: this.rawData,
       });
 
-      // series has been tested through the createSeries test module
+      // We tested `legend` in a separate module
+      delete highchartsOptions.legend;
+
+      // We tested `series` in a separate module
       delete highchartsOptions.series;
 
       assert.deepEqual(
@@ -78,32 +84,47 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function () {
     });
   });
 
-  module('createSeries', function () {
-    test('returns the series object', function (assert) {
-      const rawData = [
-        {
-          color: '#1A5E9A',
-          label: 'ARIA',
-          values: [68.3, 25.7, 6],
-        },
-        {
-          color: '#32AADE',
-          label: 'CSS',
-          values: [9.6, 47.0, 43.4],
-        },
-        {
-          color: '#F2682A',
-          label: 'HTML',
-          values: [1.9, 36.0, 62.1],
-        },
-        {
-          color: '#F1BF28',
-          label: 'JavaScript',
-          values: [2.7, 35.9, 61.4],
-        },
-      ];
+  module('isLegendEnabled', function () {
+    test('returns true when series has more than 1 element', function (assert) {
+      const rawData = this.rawData;
 
-      const series = createSeries(rawData);
+      const { isLegendEnabled } = new VerticalBarChart({
+        chart: this.chart,
+        rawData,
+      });
+
+      assert.true(isLegendEnabled, 'We get the correct value.');
+    });
+
+    test('returns false when series has 1 element', function (assert) {
+      const rawData = [this.rawData[0]];
+
+      const { isLegendEnabled } = new VerticalBarChart({
+        chart: this.chart,
+        rawData,
+      });
+
+      assert.false(isLegendEnabled, 'We get the correct value.');
+    });
+
+    test('returns false when series has 0 elements', function (assert) {
+      const rawData = [];
+
+      const { isLegendEnabled } = new VerticalBarChart({
+        chart: this.chart,
+        rawData,
+      });
+
+      assert.false(isLegendEnabled, 'We get the correct value.');
+    });
+  });
+
+  module('series', function () {
+    test('transforms rawData into an array that is compatible with Highcharts', function (assert) {
+      const { series } = new VerticalBarChart({
+        chart: this.chart,
+        rawData: this.rawData,
+      });
 
       assert.strictEqual(series.length, 4, 'We see 4 series of data.');
 
