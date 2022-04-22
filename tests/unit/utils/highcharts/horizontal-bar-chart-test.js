@@ -3,38 +3,43 @@ import HorizontalBarChart, {
 } from 'ember-website/utils/highcharts/horizontal-bar-chart';
 import { module, test } from 'qunit';
 
-module('Unit | Utility | highcharts/horizontal-bar-chart', function () {
-  module('HorizontalBarChart', function () {
-    test('highchartsOptions returns an object that is compatible with Highcharts', function (assert) {
-      const { highchartsOptions } = new HorizontalBarChart({
-        chart: {
-          categories: [
-            'Writing RFCs',
-            'Commenting on RFCs',
-            'Reading RFCs',
-            'Opening PRs',
-            'Stack Overflow',
-            'emberjs.com blog',
-          ],
-          subtitle: 'Movers and Shakers from Last Year',
-          title: 'How do you stay up to date with Ember?',
-        },
+module('Unit | Utility | highcharts/horizontal-bar-chart', function (hooks) {
+  hooks.beforeEach(function () {
+    this.chart = {
+      categories: [
+        'Writing RFCs',
+        'Commenting on RFCs',
+        'Reading RFCs',
+        'Opening PRs',
+        'Stack Overflow',
+        'emberjs.com blog',
+      ],
+      subtitle: 'Movers and Shakers from Last Year',
+      title: 'How do you stay up to date with Ember?',
+    };
 
-        rawData: [
-          {
-            color: '#4B4B4B',
-            label: '2017',
-            values: [1.9, 5.2, 33.3, 16.4, 41.6, 49.8],
-          },
-          {
-            color: '#F23818',
-            label: '2018',
-            values: [3.0, 9.8, 52.2, 23.8, 34.2, 57.8],
-          },
-        ],
+    this.rawData = [
+      {
+        color: '#4B4B4B',
+        label: '2017',
+        values: [1.9, 5.2, 33.3, 16.4, 41.6, 49.8],
+      },
+      {
+        color: '#F23818',
+        label: '2018',
+        values: [3.0, 9.8, 52.2, 23.8, 34.2, 57.8],
+      },
+    ];
+  });
+
+  module('highchartsOptions', function () {
+    test('returns a configuration object that is compatible with Highcharts', function (assert) {
+      const { highchartsOptions } = new HorizontalBarChart({
+        chart: this.chart,
+        rawData: this.rawData,
       });
 
-      // series has been tested through the createSeries test module
+      // We tested `series` in a separate module
       delete highchartsOptions.series;
 
       assert.deepEqual(
@@ -85,21 +90,8 @@ module('Unit | Utility | highcharts/horizontal-bar-chart', function () {
   });
 
   module('createSeries', function () {
-    test('returns the series object', function (assert) {
-      const rawData = [
-        {
-          color: '#4B4B4B',
-          label: '2017',
-          values: [1.9, 5.2, 33.3, 16.4, 41.6, 49.8],
-        },
-        {
-          color: '#F23818',
-          label: '2018',
-          values: [3.0, 9.8, 52.2, 23.8, 34.2, 57.8],
-        },
-      ];
-
-      const series = createSeries(rawData);
+    test('transforms rawData into an array that is compatible with Highcharts', function (assert) {
+      const series = createSeries(this.rawData);
 
       assert.strictEqual(series.length, 2, 'We see 2 series of data.');
 
