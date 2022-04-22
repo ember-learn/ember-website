@@ -1,6 +1,4 @@
-import AreaSplineChart, {
-  createSeries,
-} from 'ember-website/utils/highcharts/area-spline-chart';
+import AreaSplineChart from 'ember-website/utils/highcharts/area-spline-chart';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
@@ -93,9 +91,12 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
     });
   });
 
-  module('createSeries', function () {
+  module('series', function () {
     test('transforms rawData into an array that is compatible with Highcharts', function (assert) {
-      const series = createSeries(this.rawData);
+      const { series } = new AreaSplineChart({
+        chart: this.chart,
+        rawData: this.rawData,
+      });
 
       assert.strictEqual(series.length, 2, 'We see 2 series of data.');
 
