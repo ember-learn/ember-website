@@ -3,50 +3,48 @@ import AreaSplineChart, {
 } from 'ember-website/utils/highcharts/area-spline-chart';
 import { module, test } from 'qunit';
 
-module('Unit | Utility | highcharts/area-spline-chart', function () {
-  module('AreaSplineChart', function () {
-    test('highchartsOptions returns an object that is compatible with Highcharts', function (assert) {
-      const { highchartsOptions } = new AreaSplineChart({
-        chart: {
-          categories: [
-            '1.x',
-            '2.x',
-            '3.0-3.4',
-            '3.5-3.8',
-            '3.9-3.12',
-            '3.13-3.16',
-          ],
-          subtitle: '(Multi-select question)',
-          title: 'Which version(s) of Ember are in use in your apps?',
-        },
+module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
+  hooks.beforeEach(function () {
+    this.chart = {
+      categories: ['1.x', '2.x', '3.0-3.4', '3.5-3.8', '3.9-3.12', '3.13-3.16'],
+      subtitle: '(Multi-select question)',
+      title: 'Which version(s) of Ember are in use in your apps?',
+    };
 
-        rawData: [
-          {
-            color: '#1E719B',
-            label: '2019',
-            values: [
-              100 * (79 / 1232), // 1.x
-              100 * (443 / 1232), // 2.x
-              100 * (488 / 1232), // 3.0 - 3.4
-              100 * (675 / 1232), // 3.5 - 3.8
-            ],
-          },
-          {
-            color: '#9B2918',
-            label: '2020',
-            values: [
-              100 * (27 / 1006), // 1.x
-              100 * (111 / 1006), // 2.x
-              100 * (121 / 1006), // 3.0 - 3.4
-              100 * (148 / 1006), // 3.5 - 3.8
-              100 * (291 / 1006), // 3.9 - 3.12
-              100 * (524 / 1006), // 3.13 - 3.16
-            ],
-          },
+    this.rawData = [
+      {
+        color: '#1E719B',
+        label: '2019',
+        values: [
+          100 * (79 / 1232), // 1.x
+          100 * (443 / 1232), // 2.x
+          100 * (488 / 1232), // 3.0 - 3.4
+          100 * (675 / 1232), // 3.5 - 3.8
         ],
+      },
+      {
+        color: '#9B2918',
+        label: '2020',
+        values: [
+          100 * (27 / 1006), // 1.x
+          100 * (111 / 1006), // 2.x
+          100 * (121 / 1006), // 3.0 - 3.4
+          100 * (148 / 1006), // 3.5 - 3.8
+          100 * (291 / 1006), // 3.9 - 3.12
+          100 * (524 / 1006), // 3.13 - 3.16
+        ],
+      },
+    ];
+  });
+
+  module('highchartsOptions', function () {
+    test('returns a configuration object that is compatible with Highcharts', function (assert) {
+      const { highchartsOptions } = new AreaSplineChart({
+        chart: this.chart,
+        rawData: this.rawData,
       });
 
-      // series has been tested through the createSeries test module
+      // We tested `series` in a separate module
       delete highchartsOptions.series;
 
       assert.deepEqual(
@@ -96,33 +94,8 @@ module('Unit | Utility | highcharts/area-spline-chart', function () {
   });
 
   module('createSeries', function () {
-    test('returns the series object', function (assert) {
-      const rawData = [
-        {
-          color: '#1E719B',
-          label: '2019',
-          values: [
-            100 * (79 / 1232),
-            100 * (443 / 1232),
-            100 * (488 / 1232),
-            100 * (675 / 1232),
-          ],
-        },
-        {
-          color: '#9B2918',
-          label: '2020',
-          values: [
-            100 * (27 / 1006),
-            100 * (111 / 1006),
-            100 * (121 / 1006),
-            100 * (148 / 1006),
-            100 * (291 / 1006),
-            100 * (524 / 1006),
-          ],
-        },
-      ];
-
-      const series = createSeries(rawData);
+    test('transforms rawData into an array that is compatible with Highcharts', function (assert) {
+      const series = createSeries(this.rawData);
 
       assert.strictEqual(series.length, 2, 'We see 2 series of data.');
 
