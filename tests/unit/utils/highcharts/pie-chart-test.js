@@ -1,6 +1,4 @@
-import PieChart, {
-  createSeries,
-} from 'ember-website/utils/highcharts/pie-chart';
+import PieChart from 'ember-website/utils/highcharts/pie-chart';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | highcharts/pie-chart', function (hooks) {
@@ -50,9 +48,12 @@ module('Unit | Utility | highcharts/pie-chart', function (hooks) {
     });
   });
 
-  module('createSeries', function () {
+  module('series', function () {
     test('transforms rawData into an array that is compatible with Highcharts', function (assert) {
-      const series = createSeries(this.rawData);
+      const { series } = new PieChart({
+        chart: this.chart,
+        rawData: this.rawData,
+      });
 
       assert.strictEqual(series.length, 1, 'We see 1 series of data.');
 
