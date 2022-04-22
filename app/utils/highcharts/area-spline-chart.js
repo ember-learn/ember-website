@@ -13,12 +13,16 @@ export default class AreaSplineChart {
   }
 
   get highchartsOptions() {
-    const { chart, series } = this;
+    const { chart, isLegendEnabled, series } = this;
 
     return {
       chart: {
         backgroundColor: 'transparent',
         type: 'areaspline',
+      },
+
+      legend: {
+        enabled: isLegendEnabled,
       },
 
       series,
@@ -49,6 +53,12 @@ export default class AreaSplineChart {
         },
       },
     };
+  }
+
+  get isLegendEnabled() {
+    const { series } = this;
+
+    return series.length > 1;
   }
 
   get series() {

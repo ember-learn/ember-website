@@ -42,6 +42,9 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
         rawData: this.rawData,
       });
 
+      // We tested `legend` in a separate module
+      delete highchartsOptions.legend;
+
       // We tested `series` in a separate module
       delete highchartsOptions.series;
 
@@ -88,6 +91,41 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
         },
         'We get the correct value.'
       );
+    });
+  });
+
+  module('isLegendEnabled', function () {
+    test('returns true when series has more than 1 element', function (assert) {
+      const rawData = this.rawData;
+
+      const { isLegendEnabled } = new AreaSplineChart({
+        chart: this.chart,
+        rawData,
+      });
+
+      assert.true(isLegendEnabled, 'We get the correct value.');
+    });
+
+    test('returns false when series has 1 element', function (assert) {
+      const rawData = [this.rawData[0]];
+
+      const { isLegendEnabled } = new AreaSplineChart({
+        chart: this.chart,
+        rawData,
+      });
+
+      assert.false(isLegendEnabled, 'We get the correct value.');
+    });
+
+    test('returns false when series has 0 elements', function (assert) {
+      const rawData = [];
+
+      const { isLegendEnabled } = new AreaSplineChart({
+        chart: this.chart,
+        rawData,
+      });
+
+      assert.false(isLegendEnabled, 'We get the correct value.');
     });
   });
 
