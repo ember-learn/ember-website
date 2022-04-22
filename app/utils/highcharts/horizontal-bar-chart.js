@@ -13,12 +13,16 @@ export default class HorizontalBarChart {
   }
 
   get highchartsOptions() {
-    const { chart, series } = this;
+    const { chart, isLegendEnabled, series } = this;
 
     return {
       chart: {
         backgroundColor: 'transparent',
         type: 'bar',
+      },
+
+      legend: {
+        enabled: isLegendEnabled,
       },
 
       series,
@@ -50,6 +54,12 @@ export default class HorizontalBarChart {
         },
       },
     };
+  }
+
+  get isLegendEnabled() {
+    const { series } = this;
+
+    return series.length > 1;
   }
 
   get series() {
