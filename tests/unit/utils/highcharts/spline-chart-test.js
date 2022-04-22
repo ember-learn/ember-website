@@ -3,62 +3,65 @@ import SplineChart, {
 } from 'ember-website/utils/highcharts/spline-chart';
 import { module, test } from 'qunit';
 
-module('Unit | Utility | highcharts/spline-chart', function () {
-  module('SplineChart', function () {
-    test('highchartsOptions returns an object that is compatible with Highcharts', function (assert) {
-      const { highchartsOptions } = new SplineChart({
-        chart: {
-          categories: [
-            '1.13',
-            '2.0',
-            '2.1',
-            '2.2',
-            '2.3',
-            '2.4',
-            '2.5',
-            '2.6',
-            '2.7',
-            '2.8',
-            '2.9',
-            '2.10',
-            '2.11',
-            '2.12',
-          ],
-          title: 'Which versions of Ember Data are used in your apps?',
-        },
+module('Unit | Utility | highcharts/spline-chart', function (hooks) {
+  hooks.beforeEach(function () {
+    this.chart = {
+      categories: [
+        '1.13',
+        '2.0',
+        '2.1',
+        '2.2',
+        '2.3',
+        '2.4',
+        '2.5',
+        '2.6',
+        '2.7',
+        '2.8',
+        '2.9',
+        '2.10',
+        '2.11',
+        '2.12',
+      ],
+      title: 'Which versions of Ember Data are used in your apps?',
+    };
 
-        rawData: [
-          {
-            color: '#4b4b4b',
-            label: '2016',
-            values: [
-              27,
-              6,
-              4,
-              8,
-              21,
-              42,
-              null,
-              null,
-              null,
-              null,
-              null,
-              null,
-              null,
-              null,
-            ],
-          },
-          {
-            color: '#f23818',
-            label: '2017',
-            values: [
-              9, 2.15, 2.1, 1.5, 2.8, 7, 3, 4, 4, 13.8, 7, 21.6, 34.9, 17,
-            ],
-          },
+    this.rawData = [
+      {
+        color: '#4b4b4b',
+        label: '2016',
+        values: [
+          27,
+          6,
+          4,
+          8,
+          21,
+          42,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
         ],
+      },
+      {
+        color: '#f23818',
+        label: '2017',
+        values: [9, 2.15, 2.1, 1.5, 2.8, 7, 3, 4, 4, 13.8, 7, 21.6, 34.9, 17],
+      },
+    ];
+  });
+
+  module('highchartsOptions', function () {
+    test('returns a configuration object that is compatible with Highcharts', function (assert) {
+      const { highchartsOptions } = new SplineChart({
+        chart: this.chart,
+        rawData: this.rawData,
       });
 
-      // series has been tested through the createSeries test module
+      // We tested `series` in a separate module
       delete highchartsOptions.series;
 
       assert.deepEqual(
@@ -125,36 +128,8 @@ module('Unit | Utility | highcharts/spline-chart', function () {
   });
 
   module('createSeries', function () {
-    test('returns the series object', function (assert) {
-      const rawData = [
-        {
-          color: '#4b4b4b',
-          label: '2016',
-          values: [
-            27,
-            6,
-            4,
-            8,
-            21,
-            42,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-          ],
-        },
-        {
-          color: '#f23818',
-          label: '2017',
-          values: [9, 2.15, 2.1, 1.5, 2.8, 7, 3, 4, 4, 13.8, 7, 21.6, 34.9, 17],
-        },
-      ];
-
-      const series = createSeries(rawData);
+    test('transforms rawData into an array that is compatible with Highcharts', function (assert) {
+      const series = createSeries(this.rawData);
 
       assert.strictEqual(series.length, 2, 'We see 2 series of data.');
 
