@@ -92,8 +92,7 @@ const S01_Q03_MS__OTHER_UI_LIBS = new VerticalBarChart({
   rawData: [
     {
       color: color2022,
-      // TODO label should be optional since we don't always need both label and title
-      label: '',
+      label: '2022',
       values: [11.51, 68.87, 1.7, 18.49, 40.75],
     },
   ],
