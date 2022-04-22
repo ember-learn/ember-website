@@ -1,10 +1,15 @@
 /*
   https://api.highcharts.com/highcharts/plotOptions.column
 */
+import { tracked } from '@glimmer/tracking';
+
 export default class VerticalBarChart {
+  @tracked chart;
+  @tracked rawData;
+
   constructor({ chart, rawData }) {
     this.chart = chart;
-    this.series = createSeries(rawData);
+    this.rawData = rawData;
   }
 
   get highchartsOptions() {
@@ -45,9 +50,13 @@ export default class VerticalBarChart {
       },
     };
   }
+
+  get series() {
+    return createSeries(this.rawData);
+  }
 }
 
-export function createSeries(rawData = []) {
+function createSeries(rawData = []) {
   const data = [];
 
   rawData.forEach((datum) => {

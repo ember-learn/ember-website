@@ -1,6 +1,4 @@
-import VerticalBarChart, {
-  createSeries,
-} from 'ember-website/utils/highcharts/vertical-bar-chart';
+import VerticalBarChart from 'ember-website/utils/highcharts/vertical-bar-chart';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | highcharts/vertical-bar-chart', function (hooks) {
@@ -83,9 +81,12 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function (hooks) {
     });
   });
 
-  module('createSeries', function () {
+  module('series', function () {
     test('transforms rawData into an array that is compatible with Highcharts', function (assert) {
-      const series = createSeries(this.rawData);
+      const { series } = new VerticalBarChart({
+        chart: this.chart,
+        rawData: this.rawData,
+      });
 
       assert.strictEqual(series.length, 4, 'We see 4 series of data.');
 
