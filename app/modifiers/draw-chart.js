@@ -4,7 +4,21 @@ import Modifier from 'ember-modifier';
 import Highcharts from 'highcharts';
 import highchartsAccessibilty from 'highcharts/modules/accessibility';
 
-const optionsForAllCharts = {};
+const optionsForAllCharts = {
+  credits: {
+    enabled: false,
+  },
+
+  plotOptions: {
+    series: {
+      animation: false,
+    },
+  },
+
+  time: {
+    timezoneOffset: new Date().getTimezoneOffset(),
+  },
+};
 
 export default class DrawChartModifier extends Modifier {
   constructor(owner, args) {
