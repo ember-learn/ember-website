@@ -1,7 +1,6 @@
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
-import { waitUntilAllChartsAreDrawn } from 'ember-website/tests/helpers/highcharts';
 import { module, test } from 'qunit';
 
 module(
@@ -88,15 +87,11 @@ module(
         </EmberCommunitySurvey::Section>
       `);
 
-      await waitUntilAllChartsAreDrawn();
-
       assert
         .dom('[data-test-container="Charts"]')
         .exists('We see the charts container.');
 
-      assert
-        .dom('[data-test-highcharts-container]')
-        .exists({ count: 1 }, 'We see 1 chart.');
+      assert.dom('[data-test-chart]').exists({ count: 1 }, 'We see 1 chart.');
 
       assert
         .dom('[data-test-container="Body"]')
@@ -128,15 +123,11 @@ module(
         </EmberCommunitySurvey::Section>
       `);
 
-      await waitUntilAllChartsAreDrawn();
-
       assert
         .dom('[data-test-container="Charts"]')
         .exists('We see the charts container.');
 
-      assert
-        .dom('[data-test-highcharts-container]')
-        .exists({ count: 2 }, 'We see 2 charts.');
+      assert.dom('[data-test-chart]').exists({ count: 2 }, 'We see 2 charts.');
 
       assert
         .dom('[data-test-container="Body"]')
