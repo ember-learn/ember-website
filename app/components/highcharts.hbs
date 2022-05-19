@@ -1,8 +1,5 @@
 <div
   class="pt-4"
-  data-render-state={{if this.isSettled "settled"}}
-  data-test-highcharts-container
-  {{did-insert this.importHighcharts}}
-  {{did-update this.drawChart this.isHighchartsImported}}
-  {{will-destroy this.destroyChart}}
+  data-test-chart
+  {{draw-chart @chart}}
 />
