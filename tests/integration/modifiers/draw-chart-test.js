@@ -1,6 +1,7 @@
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
+import { waitUntilAllChartsAreDrawn } from 'ember-website/tests/helpers/highcharts';
 import { module, test } from 'qunit';
 
 module('Integration | Modifier | draw-chart', function (hooks) {
@@ -34,6 +35,8 @@ module('Integration | Modifier | draw-chart', function (hooks) {
       >
       </div>
     `);
+
+    await waitUntilAllChartsAreDrawn();
 
     assert
       .dom('[data-test-chart] svg')

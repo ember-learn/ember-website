@@ -1,4 +1,5 @@
 import { registerDestructor } from '@ember/destroyable';
+import merge from 'deepmerge';
 import Modifier from 'ember-modifier';
 import Highcharts from 'highcharts';
 import highchartsAccessibilty from 'highcharts/modules/accessibility';
@@ -30,7 +31,20 @@ export default class DrawChartModifier extends Modifier {
   }
 
   drawChart({ chart, element }) {
-    const chartOptions = chart.highchartsOptions;
+    element.removeAttribute('data-render-state', 'settled');
+
+    const chartOptions = merge(
+      {
+        chart: {
+          events: {
+            render: () => {
+              element.setAttribute('data-render-state', 'settled');
+            },
+          },
+        },
+      },
+      chart.highchartsOptions
+    );
 
     this.chartInstance = this.highcharts.chart(element, chartOptions);
   }
