@@ -28,7 +28,10 @@ module('Acceptance | survey/2019', function (hooks) {
   test('Accessibility audit', async function (assert) {
     await visit('/survey/2019');
     await waitUntilAllChartsAreDrawn();
-    await a11yAudit();
+    await a11yAudit({
+      exclude: [['[data-test-chart]']],
+      include: [['#ember-testing-container']],
+    });
 
     assert.hasPageTitle('Ember Community Survey 2019 - Ember.js');
   });
