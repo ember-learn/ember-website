@@ -457,8 +457,7 @@ const mapIdToAttributes = new Map([
       image: 'pwagenet.jpg',
       last: 'Wagenet',
       name: 'Peter Wagenet',
-      teams: ['alumni'],
-      twitter: 'https://twitter.com/wagenet',
+      teams: ['corejs'],
     },
   ],
   [

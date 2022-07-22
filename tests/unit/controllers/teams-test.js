@@ -63,6 +63,7 @@ module('Unit | Controller | teams', function (hooks) {
         'leah-silber',
         'melanie-sumner',
         'igor-terzic',
+        'peter-wagenet',
       ],
       'We get the correct output.'
     );
@@ -155,7 +156,6 @@ module('Unit | Controller | teams', function (hooks) {
         'stefan-penner',
         'christoffer-persson',
         'stanley-stuart',
-        'peter-wagenet',
       ],
       'We get the correct output.'
     );
