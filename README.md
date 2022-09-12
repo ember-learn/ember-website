@@ -6,6 +6,19 @@
 This project contains the current emberjs.com website, using server-side rendering techniques to generate a static website.
 Components come from [ember-styleguide](https://github.com/ember-learn/ember-styleguide).
 
+Ember.js is a productive, battle-tested JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device. It does so by providing developers many features that are essential to manage complexity in modern web applications, as well as an integrated development toolkit that enables rapid iteration. Ember has been around since 2011. It's also not the product it was in 2011, and has adapted/evolved into an experienced, dependable ecosystem. Ember components are everything you never knew you always wanted. It's not just about the components, it's about component isolation. There is a long running list of companies that make use of Ember.js like Netflix, Square, Bustle, TED, Microsoft, Linkedin and many more. 
+
+Ember is an Open Source project that relies on the tireless support of individual contributors. These are the teams that guide the development and instruction of Ember.js.
+* Matthew Beale
+* Edward Faulkner
+* Katie Gengler
+* Yehuda Katz
+* Kenigbolo Meya Stephen
+* Leah Silber
+
+Ember is a framework for building applications that run in the browser, which means that they are made with HTML, CSS, and JavaScript. 
+Before getting started it is important to note that HTML, CSS, and Javascript knowledge is a prerequisite for using emberjs. 
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -56,6 +69,12 @@ The app is continuously deployed to Netlify when a pull request is merged and pa
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+## Community Learning Resources
+* FrontendMasters: https://frontendmasters.com/courses/ember-octane/
+* Weekly Ember ecosystem updates: https://emberweekly.com/
+* Build Ambitious Apps with Confidence: https://balinterdi.com/rock-and-roll-with-emberjs/
+* Videos on EmberMap: https://embermap.com/
 
 ## Sponsors
 
