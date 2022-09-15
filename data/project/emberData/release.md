@@ -4,7 +4,7 @@ baseFileName: ember-data
 filter:
   - /ember-data\./
 repo: emberjs/data
-initialVersion: 4.6.0 # Manually update, see https://libraries.io/npm/ember-data throughout
+initialVersion: 4.7.0 # Manually update, see https://libraries.io/npm/ember-data throughout
 initialReleaseDate: 2022-09-06 # Manually update, get date for `initialVersion`
 lastRelease: 4.7.1 # Manually update
 futureVersion: 4.8.0 # Manually update
