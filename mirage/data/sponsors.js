@@ -120,15 +120,15 @@ const mapIdToAttributes = new Map([
     },
   ],
   [
-    'simplabs',
+    'Mainmatter',
     {
       content: 'Ember Websites',
       end: undefined,
-      id: 'simplabs',
-      image: 'simplabs-logo.svg',
-      name: 'simplabs',
+      id: 'mainmatter',
+      image: 'mainmatter-logo.svg',
+      name: 'Mainmatter',
       start: new Date('2019-01-01'),
-      url: 'https://www.simplabs.com',
+      url: 'https://mainmatter.com',
     },
   ],
   [
