@@ -45,7 +45,7 @@
     infrequently can keep getting security updates and bugfixes
   </li>
   <li>
-    Make a minor release about every six weeks, so teams that use Ember can plan their work
+    Make a minor release about every six weeks and a major release about every eighteen months, so teams that use Ember can plan their work
   </li>
   <li>
     Follow a public RFC (request for comments) process so that all users and companies
@@ -55,7 +55,7 @@
     Provide automated tooling for upgrades and syntax changes
   </li>
   <li>
-    Only cut a new major version (i.e. make a breaking change) when we really, really have to
+    Only make breaking changes when we really, really have to
   </li>
   <li>
     Give developers a way to test drive the latest and greatest features, on their own terms.
@@ -72,16 +72,46 @@
 </p>
 
 <p>
-  You might notice that although Ember has been around for a long time, it's version number is low.
-  That is because Ember aims to ship new features in minor releases, and make
-  major releases as rare as possible.
-  When you see a library or framework that has <i>many</i> major versions, each one of those numbers
-  represents a "breaking change."
-  Breaking changes force development teams to spend time researching
-  the changes and modifying their codebase before they can upgrade.
-  The bigger the codebase, or the more complex the app, the more time and effort it takes.
-  Ember is committed to providing a better experience than that.
+  Ember aims to ship new features in minor releases, to make breaking changes
+  rare, and to make major releases predictable. Breaking changes force
+  development teams to spend time researching the changes and modifying their
+  codebase before they can upgrade. The bigger the codebase, or the more complex
+  the app, the more time and effort it takes. Ember is committed to providing a
+  better experience than that:
 </p>
+
+<ol>
+  <li>
+    <p>
+      <strong>
+        We never couple the addition of new features to breaking changes.
+      </strong>
+      Instead, we introduce a new feature to replace an existing feature,
+      provide a migration path, then sometime later deprecate the old feature,
+      and finally remove the old feature in a later major release.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>
+        Ember major versions only remove deprecated features. They never
+        introduce new features.
+      </strong>
+      This means major releases are not exciting, just a predictable point where
+      some cleanup happens.
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>Ember&rsquo;s big releases are <em>Editions</em>.</strong> An
+      Edition lands in a minor release and is therefore always backwards
+      compatible. It represents the point where all the features we shipped in
+      minor releases are polished, well-documented, and recommended for everyone
+      to use. <a href="https://emberjs.com/editions/">Read more here.</a>
+    </p>
+  </li>
+</ol>
+
 
 <h3>What SemVer means for your app</h3>
 <p>
