@@ -128,3 +128,36 @@
   MINOR versions may introduce new features so long as they are backwards compatible,
   and PATCH releases may include bug or security fixes.
 </p>
+
+<h3>Ecosystem tools</h3>
+<p>
+  There are additional considerations for our support policies for other major
+  ecosystem tools, specifically <a href="https://nodejs.org/en/">Node.js</a> and
+  <a href="https://www.typescriptlang.org">TypeScript</a>.
+</p>
+
+<h4>Node.js</h4>
+<p>
+  Ember supports current stable and <abbr title="long-term support">LTS</abbr>
+  releases for Node.js. When a version of Node.js goes out of its long-term
+  support window, Ember also drops support for it. <em>This is not considered a
+  breaking change.</em> However, release notes will include
+</p>
+
+<h4>TypeScript</h4>
+<p>
+  TypeScript sometimes makes breaking changes in its minor releases. Ember does
+  its best to absorb those changes, so that you can safely upgrade Ember and
+  TypeScript independently from each other. Specifically, Ember, Ember Data, and
+  Ember CLI use the “rolling window” support policy defined in the latest draft
+  of the <a href="https://www.semver-ts.org">Semantic Versioning for TypeScript
+  Types</a> spec (which the Ember community authored specifically to address
+  this problem!).
+</p>
+<p>
+  In practice, this means you can always upgrade to the latest TypeScript
+  version supported by a given Ember <abbr title="long-term support">LTS</abbr>
+  release and then upgrade to the next Ember <abbr title="long-term support">LTS</abbr>
+  release without needing to upgrade TypeScript again. For more details, read
+  <a href="https://www.semver-ts.org">the spec</a>!
+</p>
