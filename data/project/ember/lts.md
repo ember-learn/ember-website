@@ -7,10 +7,10 @@ filter:
 repo: emberjs/ember.js
 initialVersion: 4.4.0
 initialReleaseDate: 2022-05-27
-lastRelease: 4.4.0
-futureVersion: 4.4.1
+lastRelease: 4.4.3
+futureVersion: 4.4.4
 channel: lts
-date: 2022-05-27
+date: 2022-10-12
 changelogPath: CHANGELOG.md
 debugFileName: .debug.js
 ignoreFiles:
