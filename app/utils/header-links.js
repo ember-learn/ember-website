@@ -76,8 +76,8 @@ export default [
         type: 'link',
       },
       {
-        href: 'https://github.com/emberjs/rfc-tracking/issues',
-        name: 'RFC Tracking',
+        href: 'https://rfcs.emberjs.com',
+        name: 'RFCs Website',
         type: 'link',
       },
     ],
