@@ -124,7 +124,7 @@ module('Unit | Controller | teams', function (hooks) {
         'chris-manson',
         'ricardo-mendes',
         'leah-silber',
-        'robert-wagner',
+        'robbie-wagner',
         'jen-weber',
       ],
       'We get the correct output.'

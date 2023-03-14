@@ -489,17 +489,17 @@ const mapIdToAttributes = new Map([
     },
   ],
   [
-    'robert-wagner',
+    'robbie-wagner',
     {
       added: new Date('2019-06-03'),
-      first: 'Robert',
-      github: 'https://github.com/rwwagner90',
-      id: 'robert-wagner',
+      first: 'Robbie',
+      github: 'https://github.com/RobbieTheWagner',
+      id: 'robbie-wagner',
       image: 'rwagner.jpg',
       last: 'Wagner',
-      name: 'Robert Wagner',
+      name: 'Robbie Wagner',
       teams: ['learning'],
-      twitter: 'https://twitter.com/shipshapecode',
+      twitter: 'https://twitter.com/RobbieTheWagner',
     },
   ],
   [
