@@ -5,10 +5,10 @@ filter:
   - /ember\./
   - /ember-template-compiler/
 repo: emberjs/ember.js
-initialVersion: 4.11.0 # Manually update, the prior version to the current beta. See https://libraries.io/npm/ember-source throughout
-lastRelease: 4.12.0-beta.2 # Manually update
-futureVersion: 4.12.0-beta.3 # Manually update
-finalVersion: 4.12.0 # Manually update
+initialVersion: 4.12.0 # Manually update, the prior version to the current beta. See https://libraries.io/npm/ember-source throughout
+lastRelease: 5.0.0-beta.1 # Manually update
+futureVersion: 5.0.0-beta.2 # Manually update
+finalVersion: 5.0.0 # Manually update
 channel: beta
 cycleEstimatedFinishDate: 2023-04-03 12:00:00 # Manually update, the expected date of the finalVersion release
 date: 2023-02-20 12:00:00 # Manually update, get date for `initialVersion`
