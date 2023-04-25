@@ -31,7 +31,7 @@
     "@ember/test-helpers": "^2.6.0",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
-    "@percy/cli": "^1.0.0-beta.71",
+    "@percy/cli": "^1.24.0",
     "@percy/ember": "^3.0.0",
     "algoliasearch": "^3.33.0",
     "babel-eslint": "^10.1.0",
@@ -90,8 +90,8 @@
     "prettier": "^2.5.1",
     "qunit": "^2.17.2",
     "qunit-dom": "^2.0.0",
-    "stylelint": "^14.1.0",
-    "stylelint-config-standard": "^24.0.0",
+    "stylelint": "^15.6.0",
+    "stylelint-config-standard": "^33.0.0",
     "webpack": "^5.76.0"
   },
   "engines": {
