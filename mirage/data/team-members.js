@@ -378,6 +378,20 @@ const mapIdToAttributes = new Map([
     },
   ],
   [
+    'krystan-huffmenne',
+    {
+      added: new Date('2023-05-19'),
+      first: 'Krystan',
+      github: 'https://github.com/gitKrystan',
+      id: 'krystan-huffmenne',
+      image: 'khuffmenne.jpg',
+      last: 'HuffMenne',
+      name: 'Krystan HuffMenne',
+      teams: ['typescript'],
+      twitter: 'https://twitter.com/hm_krystan',
+    },
+  ],
+  [
     'leah-silber',
     {
       added: new Date('2013-04-02'),
