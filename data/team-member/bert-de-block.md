@@ -7,5 +7,5 @@ twitter:
 image: bdeblock.jpg
 added: 2022-05-02T18:41:57.703Z
 teams:
-  - cli
+  - alumni
 ---
