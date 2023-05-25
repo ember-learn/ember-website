@@ -35,6 +35,14 @@
 
   <section class="mb-6">
     <Teams::Team
+      @description="The Embroider Core Team is responsible for the Embroider build system."
+      @members={{this.embroiderTeamMembers}}
+      @name="The Embroider Core Team"
+    />
+  </section>
+
+  <section class="mb-6">
+    <Teams::Team
       @description="The Ember Data core team is responsible for the official data persistence library for Ember.js applications."
       @members={{this.dataTeamMembers}}
       @name="The Ember Data Core Team"
