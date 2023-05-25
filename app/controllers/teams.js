@@ -34,6 +34,10 @@ export default class TeamsController extends Controller {
     return this.sortedTeamMembers.filter(inTeam('cli'));
   }
 
+  get embroiderTeamMembers() {
+    return this.sortedTeamMembers.filter(inTeam('embroider'));
+  }
+
   get coreTeamMembers() {
     return this.sortedTeamMembers.filter(inTeam('corejs'));
   }
