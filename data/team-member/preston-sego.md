@@ -1,5 +1,5 @@
 ---
-name: preston-sego
+name: Preston Sego
 first: Preston
 last: Sego
 github: 'https://github.com/NullVoxPopuli/'
