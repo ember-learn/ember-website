@@ -14,7 +14,7 @@
     <ul class="unstyled grid sm:grid-2 lg:grid-3">
       {{#each
         (sort-by "order:asc" "end:desc" "start:asc"
-          (reject-by "end" @model)
+          (reject-by "end" @model.sponsors)
         )
         as |sponsor|
       }}
@@ -36,13 +36,41 @@
     </ul>
   </section>
 
+  <section class="my-5" aria-labelledby="ember-sponsors-and-friends-embroider-initiative">
+    <h2 id="ember-sponsors-and-friends-embroider-initiative">Embroider Initiative Sponsors</h2>
+
+    <ul class="unstyled grid sm:grid-2 lg:grid-3">
+      {{#each
+        (sort-by "tier:desc"
+          (reject-by "tier" 1 @model.initiativeSponsors)
+        )
+        as |sponsor|
+      }}
+        <li>
+          <figure>
+            <a href={{sponsor.url}} rel="nofollow noopener noreferrer" target="_blank" class="well well-16/9">
+              <img src="/images/users/{{sponsor.image}}" alt="{{sponsor.name}} website" class={{if sponsor.individual "team-image"}} loading="lazy">
+            </a>
+            <figcaption class="text-muted">
+              <p>
+                {{sponsor.name}}
+              </p>
+            </figcaption>
+          </figure>
+        </li>
+      {{/each}}
+    </ul>
+
+    <p class="my-5">Read more about the Embroider Initiative and see all the contributors <a href="https://mainmatter.com/embroider-initiative/">here</a>.</p>
+  </section>
+
   <section class="my-5" aria-labelledby="ember-sponsors-and-friends-past-sponsors">
     <h2 id="ember-sponsors-and-friends-past-sponsors">Past Sponsors</h2>
 
     <ul class="unstyled grid sm:grid-2 lg:grid-3">
       {{#each
         (sort-by "end:desc" "start:asc"
-          (filter-by "end" @model)
+          (filter-by "end" @model.sponsors)
         )
         as |sponsor|
       }}
