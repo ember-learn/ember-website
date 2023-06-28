@@ -1,5 +1,3 @@
-import { Response } from 'ember-cli-mirage';
-
 export default function () {
   this.get('https://s3.amazonaws.com/builds.emberjs.com/canary.json', () => {
     return {
@@ -12,33 +10,6 @@ export default function () {
 
   this.get('/data/meetups/all.json', (schema) => {
     return schema.meetups.all();
-  });
-
-  this.get('/data/projects/all.json', (schema) => {
-    return schema.projects.all();
-  });
-
-  this.get('/data/projects/:project/:release', (schema, request) => {
-    const { project, release } = request.params;
-    const id = `${project}/${release.replace('.json', '')}`;
-
-    const record = schema.projects.find(id);
-
-    if (record) {
-      return record;
-    }
-
-    /*
-      If you happen to run into this error, please check that
-      you created project(s) in your test.
-    */
-    return new Response(
-      500,
-      {},
-      {
-        errors: [`A project with id ${id} could not be found.`],
-      }
-    );
   });
 
   this.get('/data/showcases/all.json', (schema) => {
