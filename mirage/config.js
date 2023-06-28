@@ -8,10 +8,6 @@ export default function () {
     };
   });
 
-  this.get('/data/meetups/all.json', (schema) => {
-    return schema.meetups.all();
-  });
-
   this.get('/data/tomsters/all.json', (schema) => {
     return schema.tomsters.all();
   });
