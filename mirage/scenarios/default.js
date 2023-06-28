@@ -1,7 +1,3 @@
-import users from 'ember-website/mirage/data/users';
-
-export default function loadDefaultScenario(server) {
-  server.db.loadData({
-    users,
-  });
+export default function loadDefaultScenario() {
+  // noop - will delete in a following commit
 }

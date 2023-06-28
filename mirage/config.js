@@ -8,9 +8,5 @@ export default function () {
     };
   });
 
-  this.get('/data/users/all.json', (schema) => {
-    return schema.users.all();
-  });
-
   this.passthrough();
 }
