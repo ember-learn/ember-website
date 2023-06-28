@@ -12,10 +12,6 @@ export default function () {
     return schema.meetups.all();
   });
 
-  this.get('/data/showcases/all.json', (schema) => {
-    return schema.showcases.all();
-  });
-
   this.get('/data/tomsters/all.json', (schema) => {
     return schema.tomsters.all();
   });
