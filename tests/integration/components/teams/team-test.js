@@ -2,7 +2,6 @@ import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupMirage } from 'ember-cli-mirage/test-support';
 import { setupRenderingTest } from 'ember-qunit';
-import teamMembers from 'ember-website/mirage/data/team-members';
 import { module, test } from 'qunit';
 
 module('Integration | Component | teams/team', function (hooks) {
@@ -10,8 +9,6 @@ module('Integration | Component | teams/team', function (hooks) {
   setupMirage(hooks);
 
   hooks.beforeEach(async function () {
-    this.server.db.loadData({ teamMembers });
-
     const store = this.owner.lookup('service:store');
 
     this.teamMembers = await store.findAll('team-member');
@@ -41,8 +38,6 @@ module('Integration | Component | teams/team', function (hooks) {
         'We see the correct team description.'
       );
 
-    assert
-      .dom('[data-test-member]')
-      .exists({ count: 5 }, 'We see 5 team members.');
+    assert.dom('[data-test-member]').exists({ count: 7 });
   });
 });

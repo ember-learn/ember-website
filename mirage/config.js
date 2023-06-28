@@ -45,10 +45,6 @@ export default function () {
     return schema.showcases.all();
   });
 
-  this.get('/data/team-members/all.json', (schema) => {
-    return schema.teamMembers.all();
-  });
-
   this.get('/data/tomsters/all.json', (schema) => {
     return schema.tomsters.all();
   });
