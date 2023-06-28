@@ -13,7 +13,7 @@
 
     <ul class="unstyled grid sm:grid-2 lg:grid-3">
       {{#each
-        (sort-by "end:desc" "start:asc"
+        (sort-by "order:asc" "end:desc" "start:asc"
           (reject-by "end" @model)
         )
         as |sponsor|

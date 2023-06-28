@@ -1,12 +1,13 @@
 import Model, { attr } from '@ember-data/model';
 
 export default class SponsorModel extends Model {
-  @attr('string') content;
+  @attr content;
   @attr('date') end;
-  @attr('string') image;
-  @attr('string') name;
+  @attr image;
+  @attr name;
   @attr('date') start;
-  @attr('string') url;
+  @attr url;
+  @attr('number') order;
 
   get term() {
     let startYear = this.start.getFullYear();
