@@ -45,10 +45,6 @@ export default function () {
     return schema.showcases.all();
   });
 
-  this.get('/data/sponsors/all.json', (schema) => {
-    return schema.sponsors.all();
-  });
-
   this.get('/data/team-members/all.json', (schema) => {
     return schema.teamMembers.all();
   });
@@ -60,4 +56,6 @@ export default function () {
   this.get('/data/users/all.json', (schema) => {
     return schema.users.all();
   });
+
+  this.passthrough();
 }

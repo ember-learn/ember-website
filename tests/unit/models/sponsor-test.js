@@ -1,5 +1,4 @@
 import { setupTest } from 'ember-qunit';
-import { getAttributesForId } from 'ember-website/mirage/data/sponsors';
 import { module, test } from 'qunit';
 
 module('Unit | Model | sponsor', function (hooks) {
@@ -10,8 +9,10 @@ module('Unit | Model | sponsor', function (hooks) {
   });
 
   test('The model can describe a current sponsor', function (assert) {
-    const attributes = getAttributesForId('tilde');
-    const model = this.store.createRecord('sponsor', attributes);
+    const model = this.store.createRecord('sponsor', {
+      name: 'Super Corp.',
+      start: new Date('2011-01-01'),
+    });
 
     assert.ok(model, 'We can create the record.');
 
@@ -22,9 +23,12 @@ module('Unit | Model | sponsor', function (hooks) {
     );
   });
 
-  test('The model can describe a past sponsor (1)', function (assert) {
-    const attributes = getAttributesForId('201-created');
-    const model = this.store.createRecord('sponsor', attributes);
+  test('The model can describe a past sponsor that spanned multiple years', function (assert) {
+    const model = this.store.createRecord('sponsor', {
+      name: 'Super Corp.',
+      start: new Date('2015-01-01'),
+      end: new Date('2018-01-01'),
+    });
 
     assert.ok(model, 'We can create the record.');
 
@@ -35,9 +39,12 @@ module('Unit | Model | sponsor', function (hooks) {
     );
   });
 
-  test('The model can describe a past sponsor (2)', function (assert) {
-    const attributes = getAttributesForId('discourse');
-    const model = this.store.createRecord('sponsor', attributes);
+  test('The model can describe a past sponsor that only sponsored one year', function (assert) {
+    const model = this.store.createRecord('sponsor', {
+      name: 'Super Corp.',
+      start: new Date('2018-01-01'),
+      end: new Date('2018-08-01'),
+    });
 
     assert.ok(model, 'We can create the record.');
 
