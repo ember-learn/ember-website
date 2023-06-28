@@ -2,7 +2,6 @@ import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupMirage } from 'ember-cli-mirage/test-support';
 import { setupRenderingTest } from 'ember-qunit';
-import tomsters from 'ember-website/mirage/data/tomsters';
 import { module, test } from 'qunit';
 
 module('Integration | Component | mascots/mascot-list/item', function (hooks) {
@@ -10,8 +9,6 @@ module('Integration | Component | mascots/mascot-list/item', function (hooks) {
   setupMirage(hooks);
 
   hooks.beforeEach(async function () {
-    this.server.db.loadData({ tomsters });
-
     const store = this.owner.lookup('service:store');
 
     this.mascots = await store.findAll('tomster');
@@ -38,7 +35,7 @@ module('Integration | Component | mascots/mascot-list/item', function (hooks) {
       .dom('[data-test-field="Name"]')
       .hasAttribute(
         'href',
-        'https://www.meetup.com/Ember-ATX/',
+        'http://www.meetup.com/Ember-ATX/',
         'We see the correct href for the name.'
       )
       .hasTagName('a', 'We see the correct tag for the name.')

@@ -8,10 +8,6 @@ export default function () {
     };
   });
 
-  this.get('/data/tomsters/all.json', (schema) => {
-    return schema.tomsters.all();
-  });
-
   this.get('/data/users/all.json', (schema) => {
     return schema.users.all();
   });

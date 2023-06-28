@@ -37,15 +37,15 @@ module('Acceptance | mascots', function (hooks) {
 
     const mascots = findAll('[data-test-mascot]');
 
-    assert.strictEqual(mascots.length, 10, 'The user sees 10 mascots.');
+    assert.strictEqual(mascots.length, 76, 'The user sees 10 mascots.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
-      .hasText('Minnesota', 'The user sees the correct first mascot.');
+      .hasText('Europe Tomster', 'The user sees the correct first mascot.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[mascots.length - 1])
-      .hasText('Teaching Tomster', 'The user sees the correct last mascot.');
+      .hasText('Original Tomster', 'The user sees the correct last mascot.');
   });
 
   test('A user can filter mascots', async function (assert) {
@@ -60,15 +60,15 @@ module('Acceptance | mascots', function (hooks) {
 
     let mascots = findAll('[data-test-mascot]');
 
-    assert.strictEqual(mascots.length, 7, 'The user sees 7 mascots.');
+    assert.strictEqual(mascots.length, 66, 'The user sees 7 mascots.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
-      .hasText('Minnesota', 'The user sees the correct first mascot.');
+      .hasText('Europe Tomster', 'The user sees the correct first mascot.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[mascots.length - 1])
-      .hasText('Teaching Tomster', 'The user sees the correct last mascot.');
+      .hasText('Original Tomster', 'The user sees the correct last mascot.');
 
     // Try another filter
     await click('[data-test-link="Zoeys"]');
@@ -81,15 +81,15 @@ module('Acceptance | mascots', function (hooks) {
 
     mascots = findAll('[data-test-mascot]');
 
-    assert.strictEqual(mascots.length, 6, 'The user sees 6 mascots.');
+    assert.strictEqual(mascots.length, 17, 'The user sees 6 mascots.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
-      .hasText('Ember Octane', 'The user sees the correct first mascot.');
+      .hasText('Pride', 'The user sees the correct first mascot.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[mascots.length - 1])
-      .hasText('Skylight', 'The user sees the correct last mascot.');
+      .hasText('Classic Zoey', 'The user sees the correct last mascot.');
   });
 
   test('A user can change the size of mascots', async function (assert) {
@@ -105,15 +105,15 @@ module('Acceptance | mascots', function (hooks) {
 
     let mascots = findAll('[data-test-mascot]');
 
-    assert.strictEqual(mascots.length, 7, 'The user sees 7 mascots.');
+    assert.strictEqual(mascots.length, 66, 'The user sees 7 mascots.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
-      .hasText('Minnesota', 'The user sees the correct first mascot.');
+      .hasText('Europe Tomster', 'The user sees the correct first mascot.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[mascots.length - 1])
-      .hasText('Teaching Tomster', 'The user sees the correct last mascot.');
+      .hasText('Original Tomster', 'The user sees the correct last mascot.');
 
     await percySnapshot(assert);
 
@@ -129,14 +129,14 @@ module('Acceptance | mascots', function (hooks) {
 
     mascots = findAll('[data-test-mascot]');
 
-    assert.strictEqual(mascots.length, 6, 'The user sees 6 mascots.');
+    assert.strictEqual(mascots.length, 17, 'The user sees 6 mascots.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
-      .hasText('Ember Octane', 'The user sees the correct first mascot.');
+      .hasText('Pride', 'The user sees the correct first mascot.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[mascots.length - 1])
-      .hasText('Skylight', 'The user sees the correct last mascot.');
+      .hasText('Classic Zoey', 'The user sees the correct last mascot.');
   });
 });
