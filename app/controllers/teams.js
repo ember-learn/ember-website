@@ -10,19 +10,7 @@ export default class TeamsController extends Controller {
     const teamMembers = this.model?.slice() ?? [];
 
     return teamMembers.sort((teamMember1, teamMember2) => {
-      const surname1 = teamMember1.last ?? '';
-      const surname2 = teamMember2.last ?? '';
-      let comparisonResult = surname1.localeCompare(surname2);
-
-      if (comparisonResult !== 0) {
-        return comparisonResult;
-      }
-
-      const givenName1 = teamMember1.first ?? '';
-      const givenName2 = teamMember2.first ?? '';
-      comparisonResult = givenName1.localeCompare(givenName2);
-
-      return comparisonResult;
+      return teamMember1.added - teamMember2.added;
     });
   }
 

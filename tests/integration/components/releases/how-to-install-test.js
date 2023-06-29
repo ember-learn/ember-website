@@ -1,17 +1,13 @@
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
-import { setupMirage } from 'ember-cli-mirage/test-support';
+
 import { setupRenderingTest } from 'ember-qunit';
-import projects from 'ember-website/mirage/data/projects';
 import { module, test } from 'qunit';
 
 module('Integration | Component | releases/how-to-install', function (hooks) {
   setupRenderingTest(hooks);
-  setupMirage(hooks);
 
   hooks.beforeEach(async function () {
-    this.server.db.loadData({ projects });
-
     const store = this.owner.lookup('service:store');
 
     this.projects = await store.findAll('project');
@@ -34,8 +30,8 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
       .dom('[data-test-terminal-code]')
       .hasText(
         [
-          '# Install Ember Data 3.24.0:',
-          'npm install --save-dev ember-data@~3.24.0',
+          '# Install Ember Data 5.0.0:',
+          'npm install --save-dev ember-data@~5.0.0',
         ].join(' '),
         'We see the correct code.'
       );
@@ -43,7 +39,7 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
     assert
       .dom('[data-test-field="More Information"]')
       .hasText(
-        'Read the changelog for Ember Data 3.24.0.',
+        'Read the changelog for Ember Data 5.0.0.',
         'We see the correct description for more information.'
       );
 
@@ -51,7 +47,7 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
       .dom('[data-test-link="Changelog"]')
       .hasAttribute(
         'href',
-        'https://github.com/emberjs/data/blob/v3.24.0/CHANGELOG.md',
+        'https://github.com/emberjs/data/blob/v5.0.0/CHANGELOG.md',
         'We see the correct URL for the changelog.'
       );
   });
