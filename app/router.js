@@ -20,6 +20,7 @@ Router.map(function () {
     });
     this.route('meetups-getting-started');
     this.route('invasion-of-ukraine');
+    this.route('resources');
   });
 
   this.route('editions', function () {
