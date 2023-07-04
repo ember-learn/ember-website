@@ -1,5 +1,10 @@
 export default [
   {
+    name: 'Try',
+    type: 'link',
+    href: 'http://new.emberjs.com',
+  },
+  {
     name: 'Docs',
     type: 'dropdown',
     items: [
