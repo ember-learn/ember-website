@@ -24,6 +24,7 @@ Router.map(function () {
 
   this.route('editions', function () {
     this.route('octane');
+    this.route('polaris');
   });
 
   this.route('ember-users');
