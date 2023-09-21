@@ -12,9 +12,5 @@ export default class ReleasesLtsController extends Controller {
       version: '4.8',
       promotionDate: new Date('2022-11-28'),
     },
-    {
-      version: '4.4',
-      promotionDate: new Date('2022-07-13'),
-    },
   ];
 }
