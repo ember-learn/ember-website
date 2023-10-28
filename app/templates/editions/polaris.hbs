@@ -11,6 +11,21 @@
     a new <a href="https://github.com/embroider-build/embroider">build pipeline</a> that hooks into the tool of your choice (webpack, rollup, etc), and a new <a href="https://github.com/NullVoxPopuli/ember-resources">reactivity system</a>.
   </p>
 
+  <h2>The pillars of Polaris</h2>
+  <p>The polaris edition of Ember is built on top of a selection of core concepts.</p>
+
+  <h3>1. First-class TypeScript Support</h3>
+  <p>Ember has embraced TypeScript as a first-class citizen next to JavaScript. In practice this means you can build apps using TypeScript without having to worry about incompatibility with external type definitions of Ember itself. As of version 5.1, Ember ships with built-in stable types. Read all about it and how to get started <a href="https://blog.emberjs.com/stable-typescript-types-in-ember-5-1">in the announcement post.</a> Glint, the TypeScript-powered tooling for Glimmer templates, also shipped as a stable release after two years of public preview. For more information, read the <a href="https://blog.emberjs.com/glint-1-0-released">release blog post</a>.</p>
+
+  <h3>2. Template tag components</h3>
+  <p>The template tag syntax is the new authoring format for components in Ember. It addresses some long-standing issues with the current format: explicit imports prevent naming conflicts, the new ability to introduce locally-scoped code, improved interoperability with third-party JavaScript libraries in the template, and aligning test syntax with app syntax. It also unlocks the road to new capabilities such as code splitting. See the <a href="https://github.com/ember-template-imports/ember-template-imports">ember-template-imports</a> repository to get started today!</p>
+
+  <h3>3. Embroider build system</h3>
+  <p>Embroider is the next-generation build system for Ember apps. The goal is to compile Ember apps into spec-compliant, modern Javascript. This allows the integration with all the build tooling improvements seen in the wider JavaScript ecosystem.</p>
+
+  <h3>4. Reactivity improvements</h3>
+  <p>The Octane edition saw the introduction of auto-tracking which simplified the previous reactivity system, and made it more performant. Polaris builds on top of these improvements with <a href="https://github.com/tracked-tools/tracked-built-ins">extensions for non-primitive values</a>. Polaris also introduces the concept of <a href="https://github.com/NullVoxPopuli/ember-resources">resources</a> to encapsulate reactive values and co-locate resources with their cleanup logic.</p>
+
   <h2>How you can help</h2>
   <p>
     Shipping an edition is a collaborative effort that involves the entire Ember community.
