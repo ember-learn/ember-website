@@ -1,63 +1,83 @@
-{{page-title "LTS"}}
+{{page-title 'LTS'}}
 
-<h1 class="project-name">
+<h1 class='project-name'>
   LTS Channel
 </h1>
 
 <p>
-  Long Term Support (LTS) releases receive bugfixes and security updates for an extended period.
+  Long Term Support (LTS) releases receive bugfixes and security updates for an
+  extended period.
 </p>
-
 
 <h2>How to Install</h2>
 
-<div class="mb-2">
-  <Releases::HowToInstall
-    @project={{@model}}
-  />
+<div class='mb-2'>
+  <Releases::HowToInstall @project={{@model.ember}} />
 </div>
 
+<div class='mb-2'>
+  <Releases::HowToInstall @project={{@model.emberData}} />
+</div>
 
 <h2>What is an LTS release?</h2>
 
 <p>
-  Once a release of Ember gets promoted to LTS, it receives <strong>bugfixes for 36 weeks</strong> and <strong>security updates for 54 weeks</strong>.
+  Once a release of Ember gets promoted to LTS, it receives
+  <strong>bugfixes for 36 weeks</strong>
+  and
+  <strong>security updates for 54 weeks</strong>.
 </p>
 
 <p>
-  An LTS release is the best version to use if you won't be updating your app frequently, but want to help your app stay secure and working smoothly.
-
-  Another reason to use an LTS is if you have a very large, complex app, since LTS versions get even more testing and scrutiny than usual.
+  An LTS release is the best version to use if you won't be updating your app
+  frequently, but want to help your app stay secure and working smoothly.
+  Another reason to use an LTS is if you have a very large, complex app, since
+  LTS versions get even more testing and scrutiny than usual.
 </p>
 
 <p>
-  An LTS is declared roughly every 4 minor versions, excluding the x.0 minor version.
-
-  The last minor version before the next major release is also considered to be an LTS.
-
-  For example, in Ember 2.x, the following versions were considered LTS's: 2.4, 2.8, 2.12, 2.16, and 2.18 (last version).
+  An LTS is declared roughly every 4 minor versions, excluding the x.0 minor
+  version. The last minor version before the next major release is also
+  considered to be an LTS. For example, in Ember 2.x, the following versions
+  were considered LTS's: 2.4, 2.8, 2.12, 2.16, and 2.18 (last version).
 </p>
 
 <p>
-  Before a version can be called an "LTS" release, it has to spend at least 6 weeks as a stable release, where it is used and tested by thousands of developers.
+  Before a version can be called an "LTS" release, it has to spend at least 6
+  weeks as a stable release, where it is used and tested by thousands of
+  developers.
 </p>
 
 <p>
-  A complete release history for Ember is available <a href="https://github.com/emberjs/ember.js/releases" target="_blank" rel="noopener noreferrer">on GitHub</a>.
+  A complete release history for Ember is available
+  <a
+    href='https://github.com/emberjs/ember.js/releases'
+    target='_blank'
+    rel='noopener noreferrer'
+  >on GitHub</a>.
 </p>
-
 
 <h2>LTS schedule</h2>
 
 <p>
-  Ember currently supports these LTS versions for Ember.js, Ember CLI, and Ember Data.
+  Ember currently supports these LTS versions for Ember.js and Ember Data.
 </p>
 
-<div class="mb-2">
-  <table class="lts-table">
+<p>
+  <EsNote @mascot='zoey'>EmberData made updates to its versioning strategy that
+    mean it may maintain separate LTS versions from Ember.js. You can read more
+    about the updates on the
+    <a
+      href='https://blog.emberjs.com/updates-to-ember-data-versioning-strategy'
+    >Ember Blog</a>.</EsNote>
+</p>
+
+<div class='mb-2'>
+  <table class='lts-table'>
     <thead>
       <tr>
-        <th>LTS version</th>
+        <th>Project</th>
+        <th>LTS Version</th>
         <th>Promotion date</th>
         <th>Bugfixes until</th>
         <th>Security patches until</th>
@@ -68,9 +88,15 @@
       {{#each this.currentlySupportedLTS as |release|}}
         <tr>
           <td>{{release.version}}</td>
-          <td>{{format-date-time release.promotionDate "MMMM D, YYYY"}}</td>
-          <td>{{format-date-time (add-weeks release.promotionDate 30) "MMMM D, YYYY"}}</td>
-          <td>{{format-date-time (add-weeks release.promotionDate 54) "MMMM D, YYYY"}}</td>
+          <td>{{format-date-time release.promotionDate 'MMMM D, YYYY'}}</td>
+          <td>{{format-date-time
+              (add-weeks release.promotionDate 30)
+              'MMMM D, YYYY'
+            }}</td>
+          <td>{{format-date-time
+              (add-weeks release.promotionDate 54)
+              'MMMM D, YYYY'
+            }}</td>
         </tr>
       {{/each}}
     </tbody>
@@ -78,10 +104,11 @@
 </div>
 
 <p>
-  The following LTS versions are no longer maintained. The table shows their last minor release dates:
+  The following LTS versions are no longer maintained. The table shows their
+  last minor release dates:
 </p>
 
-<table class="lts-table">
+<table class='lts-table'>
   <thead>
     <tr>
       <th>LTS version</th>
@@ -104,78 +131,91 @@
       <td>December 21, 2023</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>4.4</td>
       <td>July 13, 2022</td>
       <td>February 8, 2023</td>
       <td>July 26, 2023</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.28</td>
       <td>December 20, 2021</td>
       <td>July 18, 2022</td>
       <td>January 2, 2023</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.24</td>
       <td>February 25, 2021</td>
       <td>September 23, 2021</td>
       <td>March 10, 2022</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.20</td>
       <td>September 2, 2020</td>
       <td>March 31, 2021</td>
       <td>September 15, 2021</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.16</td>
       <td>March 16, 2020</td>
       <td>October 12, 2020</td>
       <td>March 29, 2021</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.12</td>
       <td>September 25, 2019</td>
       <td>April 22, 2020</td>
       <td>October 7, 2020</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.8</td>
       <td>April 10, 2019</td>
       <td>November 6, 2019</td>
       <td>April 22, 2020</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.4</td>
       <td>October 15, 2018</td>
       <td>May 13, 2019</td>
       <td>October 28, 2019</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>2.18</td>
       <td>February 14, 2018</td>
       <td>September 12, 2018</td>
       <td>February 27, 2019</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>2.16</td>
       <td>November 20, 2017</td>
       <td>June 18, 2018</td>
       <td>December 3, 2018</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>2.12</td>
       <td>April 29, 2017</td>
       <td>November 25, 2017</td>
       <td>May 12, 2018</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>2.8</td>
       <td>October 17, 2016</td>
       <td>May 15, 2017</td>
       <td>October 30, 2017</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>2.4</td>
       <td>April 11, 2016</td>
       <td>November 7, 2016</td>
