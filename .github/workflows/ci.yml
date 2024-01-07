@@ -28,9 +28,6 @@ jobs:
           cache: 'npm'
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Update npm
-        run: npm i -g npm@7
-
       - name: Install dependencies
         run: npm ci
 
@@ -50,9 +47,6 @@ jobs:
         with:
           cache: 'npm'
           node-version: ${{ env.NODE_VERSION }}
-
-      - name: Update npm
-        run: npm i -g npm@7
 
       - name: Install dependencies
         run: npm ci
@@ -79,9 +73,6 @@ jobs:
         with:
           cache: 'npm'
           node-version: ${{ env.NODE_VERSION }}
-
-      - name: Update npm
-        run: npm i -g npm@7
 
       - name: Install dependencies
         run: npm ci
