@@ -84,7 +84,7 @@
     "highcharts": "^10.1.0",
     "leaflet": "^1.5.1",
     "loader.js": "^4.7.0",
-    "prember": "^1.0.3",
+    "prember": "^2.0.0",
     "prettier": "^2.8.7",
     "qunit": "^2.19.4",
     "qunit-dom": "^2.0.0",
