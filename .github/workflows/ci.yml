@@ -7,7 +7,7 @@ on:
   pull_request:
 
 env:
-  NODE_VERSION: 14
+  NODE_VERSION: 20
   PERCY_PARALLEL_NONCE: ${{ github.run_id }}-${{ github.run_number }}
   PERCY_PARALLEL_TOTAL: 1
 
@@ -28,15 +28,11 @@ jobs:
           cache: 'npm'
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Update npm
-        run: npm i -g npm@7
-
       - name: Install dependencies
         run: npm ci
 
       - name: Lint
         run: npm run lint
-
 
   test-app:
     name: Test app
@@ -52,9 +48,6 @@ jobs:
           cache: 'npm'
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Update npm
-        run: npm i -g npm@7
-
       - name: Install dependencies
         run: npm ci
 
@@ -64,7 +57,6 @@ jobs:
           PERCY_PARALLEL_NONCE: ${{ env.PERCY_PARALLEL_NONCE }}
           PERCY_PARALLEL_TOTAL: ${{ env.PERCY_PARALLEL_TOTAL }}
           PERCY_TOKEN: c08aaada222e9cb103a28b98e94d71ff8baaddb5a548237432d900f1d4a9ec27
-
 
   lighthouse-ci:
     name: Run Lighthouse
@@ -81,9 +73,6 @@ jobs:
         with:
           cache: 'npm'
           node-version: ${{ env.NODE_VERSION }}
-
-      - name: Update npm
-        run: npm i -g npm@7
 
       - name: Install dependencies
         run: npm ci
