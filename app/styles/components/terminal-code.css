@@ -13,15 +13,15 @@
 }
 
 .terminal-code .dot.red {
-  background-color: rgb(238, 90, 90);
+  background-color: rgb(238 90 90);
 }
 
 .terminal-code .dot.yellow {
-  background-color: rgb(250, 208, 109);
+  background-color: rgb(250 208 109);
 }
 
 .terminal-code .dot.green {
-  background-color: rgb(116, 173, 111);
+  background-color: rgb(116 173 111);
 }
 
 .terminal-code code {

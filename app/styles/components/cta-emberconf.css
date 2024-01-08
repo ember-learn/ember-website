@@ -27,7 +27,7 @@
   margin-top: 1rem;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (width >= 450px) {
   .emberconf-announcement {
     padding-top: 3rem;
     margin-top: -5rem;

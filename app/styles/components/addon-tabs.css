@@ -1,7 +1,11 @@
 .addon-tabs {
-  background: linear-gradient(0deg, rgba(52, 55, 62, 1) 0%, rgba(66, 69, 77, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgb(52 55 62 / 100%) 0%,
+    rgb(66 69 77 / 100%) 100%
+  );
   border-radius: 15px;
-  box-shadow: 0 5px 15px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 5px 15px -10px rgb(0 0 0 / 75%);
   min-height: 364px;
   width: 100%;
 }
