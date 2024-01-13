@@ -7,8 +7,8 @@ export default class ReleasesBetaRoute extends Route {
 
   model() {
     return hash({
-      ember: this.store.find('project', 'ember/beta'),
-      emberData: this.store.find('project', 'emberData/beta'),
+      ember: this.store.findRecord('project', 'ember/beta'),
+      emberData: this.store.findRecord('project', 'emberData/beta'),
     });
   }
 

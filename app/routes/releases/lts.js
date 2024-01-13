@@ -5,7 +5,7 @@ export default class ReleasesLtsRoute extends Route {
   @service store;
 
   model() {
-    return this.store.find('project', 'ember/lts');
+    return this.store.findRecord('project', 'ember/lts');
   }
 
   afterModel() {
