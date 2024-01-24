@@ -121,7 +121,7 @@ module('Unit | Controller | teams', function (hooks) {
       'amy-lam',
       'kenneth-larsen',
       'david-hamilton',
-      'chris-garrett',
+      'kristen-hewell-garrett',
       'isaac-lee',
       'chris-krycho',
       'dan-freeman',
