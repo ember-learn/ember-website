@@ -41,7 +41,7 @@
 
     <ul class="unstyled grid sm:grid-2 lg:grid-3">
       {{#each
-        (sort-by "tier:desc"
+        (sort-by "tier:desc" "order:asc"
           (reject-by "tier" 1 @model.initiativeSponsors)
         )
         as |sponsor|
