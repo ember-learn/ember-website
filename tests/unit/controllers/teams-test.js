@@ -83,6 +83,7 @@ module('Unit | Controller | teams', function (hooks) {
       'jared-galanis',
       'chris-ng',
       'anne-greeth-schot-van-herwijnen',
+      'ignace-maes',
     ]);
   });
 
