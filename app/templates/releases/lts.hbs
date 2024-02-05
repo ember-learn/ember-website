@@ -11,12 +11,13 @@
 
 <h2>How to Install</h2>
 
-<div class="mb-2">
-  <Releases::HowToInstall
-    @project={{@model}}
-  />
+<div class='mb-2'>
+  <Releases::HowToInstall @project={{@model.ember}} />
 </div>
 
+<div class='mb-2'>
+  <Releases::HowToInstall @project={{@model.emberData}} />
+</div>
 
 <h2>What is an LTS release?</h2>
 
@@ -42,18 +43,22 @@
   Before a version can be called an "LTS" release, it has to spend at least 6 weeks as a stable release, where it is used and tested by thousands of developers.
 </p>
 
-
 <h2>LTS schedule</h2>
 
 <p>
-  Ember currently supports these LTS versions for Ember.js, Ember CLI, and Ember Data.
+  Ember currently supports these LTS versions for Ember.js and Ember Data.
+</p>
+
+<p>
+  <EsNote @mascot="zoey">EmberData made updates to its versioning strategy that mean it may maintain separate LTS versions from Ember.js. You can read more about the updates on the <a href="https://blog.emberjs.com/updates-to-ember-data-versioning-strategy">Ember Blog</a>.</EsNote>
 </p>
 
 <div class="mb-2">
   <table class="lts-table">
     <thead>
       <tr>
-        <th>LTS version</th>
+        <th>Project</th>
+        <th>LTS Version</th>
         <th>Promotion date</th>
         <th>Bugfixes until</th>
         <th>Security patches until</th>
@@ -61,14 +66,17 @@
     </thead>
 
     <tbody>
-      {{#each this.currentlySupportedLTS as |release|}}
-        <tr>
-          <td>{{release.version}}</td>
-          <td>{{format-date-time release.promotionDate "MMMM D, YYYY"}}</td>
-          <td>{{format-date-time (add-weeks release.promotionDate 36) "MMMM D, YYYY"}}</td>
-          <td>{{format-date-time (add-weeks release.promotionDate 54) "MMMM D, YYYY"}}</td>
-        </tr>
-      {{/each}}
+      {{#each-in this.currentlySupportedLtsVerions as |project releases|}}
+        {{#each releases as |release|}}
+          <tr>
+            <td>{{project}}</td>
+            <td>{{release.version}}</td>
+            <td>{{format-date-time release.promotionDate "MMMM D, YYYY"}}</td>
+            <td>{{format-date-time (add-weeks release.promotionDate 36) "MMMM D, YYYY"}}</td>
+            <td>{{format-date-time (add-weeks release.promotionDate 54) "MMMM D, YYYY"}}</td>
+          </tr>
+        {{/each}}
+      {{/each-in}}
     </tbody>
   </table>
 </div>
@@ -80,78 +88,93 @@
 <table class="lts-table">
   <thead>
     <tr>
-      <th>LTS version</th>
+      <th>Project</th>
+      <th>Version</th>
       <th>Last minor release</th>
       <th>Last minor release date</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <td>Ember & EmberData</td>
       <td>4.8</td>
       <td>4.8.6</td>
       <td>June 2023</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>4.4</td>
       <td>4.4.5</td>
       <td>May 2023</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.28</td>
       <td>3.28.11</td>
       <td>November 2022</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.24</td>
       <td>3.24.6</td>
       <td>November 2021</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.20</td>
       <td>3.20.3</td>
       <td>August 2020</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.16</td>
       <td>3.16.10</td>
       <td>August 2020</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.12</td>
       <td>3.12.4</td>
       <td>May 2020</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.8</td>
       <td>3.8.3</td>
       <td>June 2019</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>3.4</td>
       <td>3.4.8</td>
       <td>January 2019</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>2.18</td>
       <td>2.18.2</td>
       <td>February 2018</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>2.16</td>
       <td>2.16.4</td>
       <td>February 2018</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>2.12</td>
       <td>2.12.2</td>
       <td>April 2017</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>2.8</td>
       <td>2.8.3</td>
       <td>November 2016</td>
     </tr>
     <tr>
+      <td>Ember & EmberData</td>
       <td>2.4</td>
       <td>2.4.5</td>
       <td>April 2016</td>
