@@ -3,12 +3,6 @@ code:not([class*="language-"]) {
   background-color: initial;
 }
 
-.bg-shape-swipe-top-right {
-  background-image: url("/images/swipe-top-right.svg");
-  background-repeat: no-repeat;
-  background-position: top right;
-}
-
 .inline-code {
   font-family: var(--font-family-mono);
   background-color: var(--color-gray-300);
@@ -77,5 +71,11 @@ code:not([class*="language-"]) {
 
   .code-preview__result {
     border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  }
+
+  .bg-shape-swipe-top-right {
+    background-image: url("/images/swipe-top-right.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
   }
 }
