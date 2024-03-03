@@ -21,7 +21,7 @@ import Welcome from './welcome';
       import { tracked } from '@glimmer/tracking';
       import { on } from '@ember/modifier';
    */
-  stateManagemnent = `export default class Counter extends Component {
+  stateManagemnent = `class Counter extends Component {
   @tracked count = 0;
 
   increment = () => this.count += 1;

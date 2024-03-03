@@ -1,6 +1,7 @@
 /* stylelint-disable selector-class-pattern */
 .code-preview {
   gap: 0;
+  box-shadow: 0 5px 15px -10px rgba(0, 0, 0, 75%);
 
   .shiki {
     /* Shiki sets inline background color. Force using our own. */
