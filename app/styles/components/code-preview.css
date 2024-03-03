@@ -46,3 +46,7 @@
     border-bottom-color: var(--color-gray-300);
   }
 }
+
+.code-preview__rendered {
+  padding: 16px;
+}

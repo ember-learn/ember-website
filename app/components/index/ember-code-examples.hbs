@@ -4,11 +4,13 @@
     <p>
       Ember components are a superset of HTML - that means
       <span class="inline-code">&lt;p&gt;Hello World&lt;/p&gt;</span>
-      is a fully-fledged Ember Component. Simply wrap your HTML with a <span class="inline-code">&lt;template&gt;</span> tag and that block is now a reusable component.
+      is a fully-fledged Ember Component. Simply wrap your HTML with a <span class="inline-code">&lt;template&gt;</span> tag to build a reusable component.
     </p>
   </div>
 </div>
-<CodePreview @code={{this.simpleComponent}} />
+<CodePreview @code={{this.simpleComponent}}>
+  Hello, World!
+</CodePreview>
 
 <div class="grid lg:grid-2 mt-4">
   <div class='lg:col-3'>
