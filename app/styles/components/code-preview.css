@@ -2,6 +2,7 @@
 .code-preview {
   gap: 0;
   box-shadow: 0 5px 15px -10px rgba(0, 0, 0, 75%);
+  border-radius: var(--radius-lg);
 
   .shiki {
     /* Shiki sets inline background color. Force using our own. */
@@ -26,7 +27,6 @@
 
 .code-preview__code {
   background-color: var(--color-gray-900);
-  border-radius: inherit;
   border-top-left-radius: var(--radius-lg);
   border-bottom-left-radius: var(--radius-lg);
   min-width: 0;
