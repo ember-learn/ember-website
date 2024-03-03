@@ -1,0 +1,33 @@
+/* stylelint-disable selector-class-pattern */
+.code-preview {
+  gap: 0;
+}
+
+.code-preview__title {
+  padding: 16px;
+  border-bottom: 1px solid;
+  font-weight: var(--font-weight-3);
+}
+
+.code-preview__code {
+  background-color: var(--color-gray-900);
+  border-radius: inherit;
+  border-top-left-radius: var(--radius-lg);
+  border-bottom-left-radius: var(--radius-lg);
+
+  .code-preview__title {
+    color: var(--color-gray-100);
+    border-bottom-color: var(--color-gray-700);
+  }
+}
+
+.code-preview__result {
+  background-color: var(--color-gray-100);
+  border-top-right-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+
+  .code-preview__title {
+    color: var(--color-gray-900);
+    border-bottom-color: var(--color-gray-300);
+  }
+}
