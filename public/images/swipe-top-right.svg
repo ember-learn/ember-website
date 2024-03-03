@@ -1,7 +1,7 @@
-<svg width="900" height="1031" xmlns="http://www.w3.org/2000/svg">
-
+<svg width="675" height="1031" xmlns="http://www.w3.org/2000/svg">
  <g>
   <title>Layer 1</title>
-  <path transform="rotate(-180 450 515.666)" id="svg_1" fill-rule="evenodd" fill="#e04e39" d="m899.36,11.854a16,16 0 0 1 0.64,4.482l0,805.55a16,16 0 0 1 -11.518,15.36l-664.027,193.754l-224.455,0l0,-773.392l879.518,-256.632c8.483,-2.475 17.366,2.395 19.842,10.878z"/>
+  <path transform="rotate(-180 450 515.666)" stroke="null" d="m899.36,11.854a16,16 0 0 1 0.64,4.482l0,805.55a16,16 0 0 1 -11.518,15.36l-664.027,193.754l-224.455,0l0,-773.392l879.518,-256.632c8.483,-2.475 17.366,2.395 19.842,10.878z" fill="#e04e39" fill-rule="evenodd" id="svg_1"/>
  </g>
+
 </svg>

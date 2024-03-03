@@ -11,7 +11,20 @@
 </div>
 <CodeBlock @code={{this.simpleComponent}} @language='gjs' @showCopyButton={{false}} />
 
-<div class="grid lg:grid-2">
+<div class="grid lg:grid-2 mt-4">
+  <div class='lg:col-3'>
+    <h3 class='text-lg'>Delightful reactivity</h3>
+    <p>
+      Ember components are a superset of HTML - that means
+      <span class="inline-code">@tracked</span>
+      is a fully-fledged Ember Component. To pass data into components, use the @
+      symbol along with an argument name.
+    </p>
+  </div>
+</div>
+<CodeBlock @code={{this.stateManagemnent}} @language='gjs' @showCopyButton={{false}} />
+
+<div class="grid lg:grid-2 mt-4">
   <div class='lg:col-3'>
     <h3 class='text-lg'>Delightful reactivity</h3>
     <p>

@@ -29,7 +29,7 @@ code:not([class*="language-"]) {
   background-color: var(--color-gray-300);
   padding: 3px 6px;
   border-radius: 4px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media only percy {
