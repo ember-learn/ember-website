@@ -27,9 +27,10 @@ code:not([class*="language-"]) {
 .inline-code {
   font-family: var(--font-family-mono);
   background-color: var(--color-gray-300);
-  padding: 3px 6px;
+  padding: 4px 6px;
   border-radius: 4px;
   font-weight: 600;
+  font-size: 0.875em;
 }
 
 @media only percy {

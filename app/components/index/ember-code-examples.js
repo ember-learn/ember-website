@@ -1,7 +1,20 @@
 import Component from '@glimmer/component';
 
 export default class IndexEmberAddonsComponent extends Component {
-  simpleComponent = `<template>Hello world</template>`;
+  simpleComponent = `<template>
+  <p>Hello, World!</p>
+</template>`;
+
+  composableComponent = `// components/welcome.gjs
+<template>
+  <p>Hello, {{@name}}!</p>
+</template>
+
+// components/another-component.gjs
+import Welcome from './welcome';
+<template>
+  <Welcome @name="Ember" />
+</template>`;
 
   /**
    * import Component from '@glimmer/component';

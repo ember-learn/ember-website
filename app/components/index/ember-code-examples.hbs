@@ -3,9 +3,8 @@
     <h3 class='text-lg'>Components embrace HTML</h3>
     <p>
       Ember components are a superset of HTML - that means
-      <strong>pHello Worldp</strong>
-      is a fully-fledged Ember Component. To pass data into components, use the @
-      symbol along with an argument name.
+      <span class="inline-code">&lt;p&gt;Hello World&lt;/p&gt;</span>
+      is a fully-fledged Ember Component. Simply wrap your HTML with a <span class="inline-code">&lt;template&gt;</span> tag and you're good to go.
     </p>
   </div>
 </div>
@@ -13,16 +12,13 @@
 
 <div class="grid lg:grid-2 mt-4">
   <div class='lg:col-3'>
-    <h3 class='text-lg'>Delightful reactivity</h3>
+    <h3 class='text-lg'>Simple composability</h3>
     <p>
-      Ember components are a superset of HTML - that means
-      <span class="inline-code">@tracked</span>
-      is a fully-fledged Ember Component. To pass data into components, use the @
-      symbol along with an argument name.
+      Ember components accept arguments to be made dynamic. To pass data into components, use the <span class="inline-code">@</span> symbol along with an argument name.
     </p>
   </div>
 </div>
-<CodeBlock @code={{this.stateManagemnent}} @language='gjs' @showCopyButton={{false}} />
+<CodeBlock @code={{this.composableComponent}} @language='gjs' @showCopyButton={{false}} />
 
 <div class="grid lg:grid-2 mt-4">
   <div class='lg:col-3'>
