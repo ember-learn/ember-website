@@ -20,7 +20,7 @@ code:not([class*="language-"]) {
 
 .code-preview {
   gap: 0;
-  box-shadow: 0 5px 15px -10px rgba(0, 0, 0, 75%);
+  box-shadow: 0 5px 15px -10px rgb(0 0 0 / 75%);
   border-radius: var(--radius-lg);
 }
 
