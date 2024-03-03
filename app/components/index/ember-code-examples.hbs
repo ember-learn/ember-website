@@ -4,7 +4,7 @@
     <p>
       Ember components are a superset of HTML - that means
       <span class="inline-code">&lt;p&gt;Hello World&lt;/p&gt;</span>
-      is a fully-fledged Ember Component. Simply wrap your HTML with a <span class="inline-code">&lt;template&gt;</span> tag and you're good to go.
+      is a fully-fledged Ember Component. Simply wrap your HTML with a <span class="inline-code">&lt;template&gt;</span> tag and that block is now a reusable component.
     </p>
   </div>
 </div>
@@ -24,10 +24,8 @@
   <div class='lg:col-3'>
     <h3 class='text-lg'>Delightful reactivity</h3>
     <p>
-      Ember components are a superset of HTML - that means
-      <span class="inline-code">@tracked</span>
-      is a fully-fledged Ember Component. To pass data into components, use the @
-      symbol along with an argument name.
+      State can be added to Ember components progressively by wrapping the template in a JavaScript class. Properties with the
+      <span class="inline-code">@tracked</span> decorator will automatically rerender the component when they change.
     </p>
   </div>
 </div>
