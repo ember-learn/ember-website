@@ -5,15 +5,13 @@ export default class IndexEmberAddonsComponent extends Component {
   <p>Hello, World!</p>
 </template>`;
 
-  composableComponent = `// components/welcome.gjs
-<template>
+  composableComponent = `const Welcome = <template>
   <p>Hello, {{@name}}!</p>
-</template>
+</template>;
 
-// components/another-component.gjs
-import Welcome from './welcome';
 <template>
   <Welcome @name="Ember" />
+  <p>Components can easily be reused 🚀</p>
 </template>`;
 
   /**
@@ -27,7 +25,7 @@ import Welcome from './welcome';
   increment = () => this.count += 1;
 
   <template>
-    <p>You have clicked the button {{this.count}} times.</p>
+    <p>You have clicked {{this.count}} times.</p>
     <button {{on "click" this.increment}}>Click</button>
   </template>
 }`;
