@@ -22,11 +22,11 @@ export default class IndexEmberAddonsComponent extends Component {
   stateManagemnent = `class Counter extends Component {
   @tracked count = 0;
 
-  increment = () => this.count += 1;
+  add = () => this.count += 1;
 
   <template>
     <p>You have clicked {{this.count}} times.</p>
-    <button {{on "click" this.increment}}>Click</button>
+    <button {{on "click" this.add}}>Click</button>
   </template>
 }`;
 }
