@@ -42,6 +42,9 @@ code:not([class*="language-"]) {
   background-color: var(--color-gray-900);
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   min-width: 0;
+
+  /* Makes the scrollbar dark */
+  color-scheme: dark;
 }
 
 .code-preview__code .code-preview__title {
