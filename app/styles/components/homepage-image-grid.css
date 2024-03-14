@@ -27,13 +27,11 @@
 }
 
 .homepage-image-grid__img-tall-bottom {
-  grid-row-start: 2;
-  grid-row-end: 5;
+  grid-row: 2 / 5;
 }
 
 .homepage-image-grid__img-tall-top {
-  grid-row-start: 1;
-  grid-row-end: 4;
+  grid-row: 1 / 4;
 }
 
 .homepage-image-grid__img-short {
@@ -45,13 +43,13 @@
   width: max-content;
 }
 
-[class*=well-] img {
-  width: auto;
-}
-
-/* IN ht estyleguides */
-
 img {
   max-width: 100%;
   height: auto;
 }
+
+[class*="well-"] img {
+  width: auto;
+}
+
+/* IN ht estyleguides */

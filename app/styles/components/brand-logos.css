@@ -13,7 +13,7 @@
 
 .brand-logos > li {
   border: 1px solid rgba($black, 0.3);
-  background-image: url('/images/brand/brand-bg.png');
+  background-image: url("/images/brand/brand-bg.png");
   border-radius: 4px;
   padding: 1rem 1.5rem;
 }
@@ -27,5 +27,5 @@
 }
 
 .brand-logos > li:nth-child(3) {
-  background-color: rgba(199, 52, 31, 0.9);
+  background-color: rgb(199 52 31 / 90%);
 }

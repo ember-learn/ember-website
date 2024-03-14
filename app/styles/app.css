@@ -1,18 +1,18 @@
-@import "components/addon-tabs.css";
-@import "components/brand-logos.css";
-@import "components/ecosystem-icons.css";
-@import "components/cta-emberconf.css";
-@import "components/faqs.css";
-@import "components/homepage-image-grid.css";
-@import "components/homepage-hero-callout.css";
-@import "components/lts-table.css";
-@import "components/release-timeline.css";
-@import "components/survey-section.css";
-@import "components/surveys.css";
-@import "components/team-list.css";
-@import "components/terminal-code.css";
-@import "components/callout-banner.css";
-@import "legacy/form.css";
+@import url("components/addon-tabs.css");
+@import url("components/brand-logos.css");
+@import url("components/ecosystem-icons.css");
+@import url("components/cta-emberconf.css");
+@import url("components/faqs.css");
+@import url("components/homepage-image-grid.css");
+@import url("components/homepage-hero-callout.css");
+@import url("components/lts-table.css");
+@import url("components/release-timeline.css");
+@import url("components/survey-section.css");
+@import url("components/surveys.css");
+@import url("components/team-list.css");
+@import url("components/terminal-code.css");
+@import url("components/callout-banner.css");
+@import url("legacy/form.css");
 
 @media only percy {
   .hide-in-percy {

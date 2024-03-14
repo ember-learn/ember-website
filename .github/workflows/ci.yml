@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - main
-  pull_request:
+  pull_request: {}
+
+concurrency:
+  group: ci-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 env:
   NODE_VERSION: 20
@@ -18,14 +22,16 @@ jobs:
     timeout-minutes: 3
     steps:
       - name: Check out a copy of the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - uses: mansona/npm-lockfile-version@v1
+        with:
+          version: 3
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          cache: 'npm'
+          cache: "npm"
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install dependencies
@@ -40,12 +46,12 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          cache: 'npm'
+          cache: "npm"
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install dependencies
@@ -64,14 +70,14 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          cache: 'npm'
+          cache: "npm"
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install dependencies

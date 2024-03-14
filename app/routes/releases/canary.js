@@ -8,11 +8,18 @@ export default class ReleasesCanaryRoute extends Route {
 
   model() {
     return hash({
-      ember: this.store.find('project', 'ember/canary'),
-      emberData: this.store.find('project', 'emberData/canary'),
+      ember: this.store.findRecord('project', 'ember/canary'),
+      emberData: this.store.findRecord('project', 'emberData/canary'),
       canaryInfo: fetch(
         'https://s3.amazonaws.com/builds.emberjs.com/canary.json'
       ).then((response) => response.json()),
     });
+  }
+
+  afterModel() {
+    // ember-data runs flushAllPendingFetches using setTimeout, so outside of the Ember runloop.
+    // Under prember this causes `Attempted to call store.adapterFor(), but the store instance has already been destroyed.`
+    // So wait a bit
+    return new Promise((resolve) => setTimeout(resolve, 10));
   }
 }
