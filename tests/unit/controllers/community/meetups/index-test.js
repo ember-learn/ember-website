@@ -60,10 +60,7 @@ module('Unit | Controller | community/meetups/index', function (hooks) {
         name: 'North America',
       },
       {
-        meetupIds: [
-          'melbourne-australia',
-          'wellington-new-zealand',
-        ],
+        meetupIds: ['melbourne-australia', 'wellington-new-zealand'],
         name: 'Oceania',
       },
       {
