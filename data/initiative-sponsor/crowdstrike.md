@@ -1,6 +1,6 @@
 ---
 name: Crowdstrike
-image: crowdstrike.svg
+image: crowdstrike.png
 url: https://www.crowdstrike.com/
 tier: 3
 ---
