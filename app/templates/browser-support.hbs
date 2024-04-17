@@ -134,6 +134,8 @@
       either <em>evergreen</em> or <em>non-evergreen</em>. The categorization is as follows:
     </p>
 
+    <h2>Ember >=6.0.0</h2>
+
     <h3 class="text-center">Evergreen</h3>
 
     <ul class="list-unstyled layout my-3">
@@ -202,6 +204,111 @@
       we support all major versions above that version.
       However, all supported browsers are considered evergreen.
     </p>
+
+    Within a version of a browser, we only support the most recent patch release.
+
+    <h2>Ember >=4.0.x to <=5.12.x</h2>
+    
+    <h3 class="text-center">Evergreen</h3>
+
+    <ul class="list-unstyled layout my-3">
+      <EsCard class="lg:col-2">
+        <div class="text-center text-md">Desktop</div>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Mozilla Firefox</li>
+          <li>Microsoft Edge</li>
+        </ul>
+      </EsCard>
+      <EsCard class="lg:col-2">
+        <div class="text-center text-md">Mobile</div>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Mozilla Firefox</li>
+        </ul>
+      </EsCard>
+      <EsCard class="lg:col-2">
+        <div class="text-center text-md">Testing</div>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Mozilla Firefox</li>
+        </ul>
+      </EsCard>
+    </ul>
+
+    <h3 class="text-center">Non-evergreen</h3>
+
+    <div class="layout">
+      <ul class="list-unstyled layout lg:col-4 lg:start-2 my-3">
+        <EsCard class="lg:col-3">
+          <div class="text-center text-md">Desktop</div>
+          <ul>
+            <li>Safari</li>
+          </ul>
+        </EsCard>
+        <EsCard class="lg:col-3">
+          <div class="text-center text-md">Mobile</div>
+          <ul>
+            <li>Safari</li>
+          </ul>
+        </EsCard>
+      </ul>
+    </div>
+
+    <p>
+      For evergreen browsers, the minimum version of the browser that we support is
+      determined at the time of every minor release, following this formula:
+    </p>
+
+    <div class="layout my-3">
+      <div class="card">
+        <div class="card__content">
+          <p>Whichever browser version is greater/more recent out of:</p>
+
+          <ol>
+            <li>
+              The lowest/least recent version that fulfills any one of these properties:
+              <ul>
+                <li>It is the latest version of the browser.</li>
+                <li>It is the latest LTS/extended support version of the browser (such as Firefox ESR).</li>
+                <li>It has at least <em>0.25%</em> of global marketshare usage across mobile and
+              desktop, based on <a href="https://gs.statcounter.com/">statcounter</a>.</li>
+              </ul>
+            </li>
+            <li>
+              The minimum version supported in the previous release
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      To simplify, the supported version either moves forward or stays the same for
+      each release based on overall usage and LTS/current release versions.
+    </p>
+
+    <p>
+      For non-evergreen browsers, support is locked at a specific major version, and
+      we support all major versions above that version:
+    </p>
+
+    <div class="layout">
+      <ul class="list-unstyled layout lg:col-4 lg:start-2 my-3">
+        <EsCard class="lg:col-3">
+          <div class="text-center text-md">Desktop</div>
+          <ul>
+            <li>Safari: 12</li>
+          </ul>
+        </EsCard>
+        <EsCard class="lg:col-3">
+          <div class="text-center text-md">Mobile</div>
+          <ul>
+            <li>Safari: 12</li>
+          </ul>
+        </EsCard>
+      </ul>
+    </div>
 
     Within a version of a browser, we only support the most recent patch release.
   </section>
