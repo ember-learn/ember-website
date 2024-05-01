@@ -65,7 +65,7 @@ module('Unit | Controller | teams', function (hooks) {
     // Create an intermediate data structure for assertion
     const output = dataTeamMembers.map((teamMember) => teamMember.id);
 
-    assert.deepEqual(output, ['chris-thoburn', 'krystan-huffMenne']);
+    assert.deepEqual(output, ['chris-thoburn', 'krystan-huffmenne']);
   });
 
   test('We sort Learning team members by when they were first added', function (assert) {
