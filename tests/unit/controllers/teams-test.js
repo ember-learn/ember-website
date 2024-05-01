@@ -127,6 +127,7 @@ module('Unit | Controller | teams', function (hooks) {
       'chris-krycho',
       'dan-freeman',
       'bert-de-block',
+      'scott-newcomer',
     ]);
   });
 });
