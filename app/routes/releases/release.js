@@ -7,8 +7,15 @@ export default class ReleasesReleaseRoute extends Route {
 
   model() {
     return hash({
-      ember: this.store.find('project', 'ember/release'),
-      emberData: this.store.find('project', 'emberData/release'),
+      ember: this.store.findRecord('project', 'ember/release'),
+      emberData: this.store.findRecord('project', 'emberData/release'),
     });
+  }
+
+  afterModel() {
+    // ember-data runs flushAllPendingFetches using setTimeout, so outside of the Ember runloop.
+    // Under prember this causes `Attempted to call store.adapterFor(), but the store instance has already been destroyed.`
+    // So wait a bit
+    return new Promise((resolve) => setTimeout(resolve, 10));
   }
 }

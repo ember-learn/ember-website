@@ -8,10 +8,7 @@
   align-items: flex-start;
   display: grid;
   grid-column-gap: 0.5rem;
-  grid-template-areas:
-    "hyperlink title";
-  grid-template-columns: auto 1fr;
-  grid-template-rows: 1fr;
+  grid-template: "hyperlink title" 1fr / auto 1fr;
 }
 
 .survey-section__title-container__title {
