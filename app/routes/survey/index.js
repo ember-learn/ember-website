@@ -6,7 +6,7 @@ export default class SurveyIndexRoute extends Route {
 
   redirect(model, transition) {
     if (transition.to.localName === 'index') {
-      this.router.transitionTo('survey.2022');
+      this.router.transitionTo('survey.2024');
     }
   }
 }
