@@ -73,19 +73,20 @@
 </p>
 
 <div class='mb-2'>
+  <h2>Ember.js</h2>
   <table class='lts-table'>
     <thead>
       <tr>
-        <th>Project</th>
         <th>LTS Version</th>
         <th>Promotion date</th>
         <th>Bugfixes until</th>
         <th>Security patches until</th>
+        <th>Status</th>
       </tr>
     </thead>
 
     <tbody>
-      {{#each this.currentlySupportedLTS as |release|}}
+      {{#each this.emberLtsReleases as |release|}}
         <tr>
           <td>{{release.version}}</td>
           <td>{{format-date-time release.promotionDate 'MMMM D, YYYY'}}</td>
@@ -97,129 +98,41 @@
               (add-weeks release.promotionDate 54)
               'MMMM D, YYYY'
             }}</td>
+          <td>{{if release.isActive 'Active' 'End of life'}}</td>
         </tr>
       {{/each}}
     </tbody>
   </table>
 </div>
+<div class='mb-2'>
+  <h2>EmberData</h2>
+  <table class='lts-table'>
+    <thead>
+      <tr>
+        <th>LTS Version</th>
+        <th>Promotion date</th>
+        <th>Bugfixes until</th>
+        <th>Security patches until</th>
+        <th>Status</th>
+      </tr>
+    </thead>
 
-<p>
-  The following LTS versions are no longer maintained. The table shows their
-  last minor release dates:
-</p>
-
-<table class='lts-table'>
-  <thead>
-    <tr>
-      <th>LTS version</th>
-      <th>LTS promotion</th>
-      <th>Bugfixes until</th>
-      <th>Security patches until</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>4.12</td>
-      <td>May 14, 2023</td>
-      <td>December 10, 2023</td>
-      <td>May 26, 2024</td>
-    </tr>
-    <tr>
-      <td>4.8</td>
-      <td>December 8, 2022</td>
-      <td>July 6, 2023</td>
-      <td>December 21, 2023</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>4.4</td>
-      <td>July 13, 2022</td>
-      <td>February 8, 2023</td>
-      <td>July 26, 2023</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>3.28</td>
-      <td>December 20, 2021</td>
-      <td>July 18, 2022</td>
-      <td>January 2, 2023</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>3.24</td>
-      <td>February 25, 2021</td>
-      <td>September 23, 2021</td>
-      <td>March 10, 2022</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>3.20</td>
-      <td>September 2, 2020</td>
-      <td>March 31, 2021</td>
-      <td>September 15, 2021</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>3.16</td>
-      <td>March 16, 2020</td>
-      <td>October 12, 2020</td>
-      <td>March 29, 2021</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>3.12</td>
-      <td>September 25, 2019</td>
-      <td>April 22, 2020</td>
-      <td>October 7, 2020</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>3.8</td>
-      <td>April 10, 2019</td>
-      <td>November 6, 2019</td>
-      <td>April 22, 2020</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>3.4</td>
-      <td>October 15, 2018</td>
-      <td>May 13, 2019</td>
-      <td>October 28, 2019</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>2.18</td>
-      <td>February 14, 2018</td>
-      <td>September 12, 2018</td>
-      <td>February 27, 2019</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>2.16</td>
-      <td>November 20, 2017</td>
-      <td>June 18, 2018</td>
-      <td>December 3, 2018</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>2.12</td>
-      <td>April 29, 2017</td>
-      <td>November 25, 2017</td>
-      <td>May 12, 2018</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>2.8</td>
-      <td>October 17, 2016</td>
-      <td>May 15, 2017</td>
-      <td>October 30, 2017</td>
-    </tr>
-    <tr>
-      <td>Ember & EmberData</td>
-      <td>2.4</td>
-      <td>April 11, 2016</td>
-      <td>November 7, 2016</td>
-      <td>April 24, 2017</td>
-    </tr>
-  </tbody>
-</table>
+    <tbody>
+      {{#each this.dataLtsReleases as |release|}}
+        <tr>
+          <td>{{release.version}}</td>
+          <td>{{format-date-time release.promotionDate 'MMMM D, YYYY'}}</td>
+          <td>{{format-date-time
+              (add-weeks release.promotionDate 30)
+              'MMMM D, YYYY'
+            }}</td>
+          <td>{{format-date-time
+              (add-weeks release.promotionDate 54)
+              'MMMM D, YYYY'
+            }}</td>
+          <td>{{if release.isActive 'Active' 'End of life'}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
