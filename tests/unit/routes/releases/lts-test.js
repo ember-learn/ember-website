@@ -6,7 +6,7 @@ module('Unit | Route | releases/lts', function (hooks) {
 
   test('The model hook returns the Ember LTS project', async function (assert) {
     const route = this.owner.lookup('route:releases/lts');
-    const model = await route.model();
+    const { ember: model } = await route.model();
 
     assert.strictEqual(
       model?.id,
