@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+// NOTE: node/recommended doesn't know about these globals.
+//       switch to eslint-plugin-n to resolve.
 module.exports = function () {
   return {
     buildSandboxGlobals(defaultGlobals) {
