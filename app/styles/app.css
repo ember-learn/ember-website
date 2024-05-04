@@ -56,5 +56,3 @@ h1 + *,
 button:not([disabled]) {
   cursor: pointer;
 }
-
-
