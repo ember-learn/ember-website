@@ -1,5 +1,6 @@
 @import "components/addon-tabs.css";
 @import "components/brand-logos.css";
+@import "components/community-trends.css";
 @import "components/ecosystem-icons.css";
 @import "components/cta-emberconf.css";
 @import "components/faqs.css";
@@ -55,3 +56,5 @@ h1 + *,
 button:not([disabled]) {
   cursor: pointer;
 }
+
+
