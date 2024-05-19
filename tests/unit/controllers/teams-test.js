@@ -69,6 +69,7 @@ module('Unit | Controller | teams', function (hooks) {
       'chris-thoburn',
       'krystan-huffmenne',
       'rich-glazerman',
+      'kirill-shaplyko',
     ]);
   });
 
