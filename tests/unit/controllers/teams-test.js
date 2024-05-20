@@ -86,7 +86,6 @@ module('Unit | Controller | teams', function (hooks) {
       'chris-manson',
       'robbie-wagner',
       'jared-galanis',
-      'chris-ng',
       'anne-greeth-schot-van-herwijnen',
       'ignace-maes',
     ]);
@@ -131,6 +130,7 @@ module('Unit | Controller | teams', function (hooks) {
       'isaac-lee',
       'chris-krycho',
       'dan-freeman',
+      'chris-ng',
       'bert-de-block',
       'scott-newcomer',
     ]);
