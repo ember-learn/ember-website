@@ -6,7 +6,7 @@ export default class ReleasesLtsController extends Controller {
   emberLtsReleases = [
     {
       version: '5.8',
-      promotionDate: new Date('2024-04-15'),
+      promotionDate: new Date('2024-06-03'),
       isActive: true,
     },
     {
