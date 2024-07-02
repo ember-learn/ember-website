@@ -18,8 +18,8 @@ export default class TeamsController extends Controller {
     return this.sortedTeamMembers.filter(inTeam('alumni'));
   }
 
-  get coreCLITeamMembers() {
-    return this.sortedTeamMembers.filter(inTeam('cli'));
+  get coreToolingTeamMembers() {
+    return this.sortedTeamMembers.filter(inTeam('tooling'));
   }
 
   get embroiderTeamMembers() {
