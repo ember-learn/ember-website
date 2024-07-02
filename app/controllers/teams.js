@@ -22,10 +22,6 @@ export default class TeamsController extends Controller {
     return this.sortedTeamMembers.filter(inTeam('tooling'));
   }
 
-  get embroiderTeamMembers() {
-    return this.sortedTeamMembers.filter(inTeam('embroider'));
-  }
-
   get coreTeamMembers() {
     return this.sortedTeamMembers.filter(inTeam('corejs'));
   }
@@ -36,10 +32,6 @@ export default class TeamsController extends Controller {
 
   get learningTeamMembers() {
     return this.sortedTeamMembers.filter(inTeam('learning'));
-  }
-
-  get typescriptTeamMembers() {
-    return this.sortedTeamMembers.filter(inTeam('typescript'));
   }
 
   get steeringCommitteeMembers() {
