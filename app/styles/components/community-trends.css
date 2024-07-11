@@ -1,0 +1,25 @@
+.uwu-logo {
+  position: fixed;
+  right: 50%;
+  transform: translateX(800px);
+  top: -1rem;
+  max-width: 600px;
+}
+
+@media (max-width: 1500px) {
+  .uwu-logo {
+    transform: none;
+    right: 0;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .uwu-logo {
+    transform: none;
+    right: unset;
+    left: 0;
+    max-width: 200px;
+  }
+}
+
