@@ -22,6 +22,6 @@ module('Integration | Component | mascots/mascot-list', function (hooks) {
 
     assert
       .dom('[data-test-mascot]')
-      .exists({ count: 76 }, 'We see 10 mascots.');
+      .exists({ count: 78 }, 'We see 10 mascots.');
   });
 });
