@@ -33,7 +33,7 @@ module('Acceptance | mascots', function (hooks) {
 
     const mascots = findAll('[data-test-mascot]');
 
-    assert.strictEqual(mascots.length, 76, 'The user sees 10 mascots.');
+    assert.strictEqual(mascots.length, 78, 'The user sees 10 mascots.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
@@ -56,7 +56,7 @@ module('Acceptance | mascots', function (hooks) {
 
     let mascots = findAll('[data-test-mascot]');
 
-    assert.strictEqual(mascots.length, 66, 'The user sees 7 mascots.');
+    assert.strictEqual(mascots.length, 67, 'The user sees 7 mascots.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
@@ -101,7 +101,7 @@ module('Acceptance | mascots', function (hooks) {
 
     let mascots = findAll('[data-test-mascot]');
 
-    assert.strictEqual(mascots.length, 66, 'The user sees 7 mascots.');
+    assert.strictEqual(mascots.length, 67, 'The user sees 7 mascots.');
 
     assert
       .dom('[data-test-field="Name"]', mascots[0])
