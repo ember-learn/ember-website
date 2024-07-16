@@ -5,8 +5,7 @@ module.exports = function (environment) {
     modulePrefix: 'ember-website',
     environment,
     rootURL: '/',
-    locationType: 'trailing-history',
-    historySupportMiddleware: true,
+    locationType: 'history',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

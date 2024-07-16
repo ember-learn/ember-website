@@ -1,0 +1,45 @@
+<div class="grid lg:grid-2">
+  <div class='lg:col-3'>
+    <h3 class='text-lg'>Components embrace HTML</h3>
+    <p>
+      Ember components are a superset of HTML - that means
+      <span class="inline-code">&lt;p&gt;Hello World&lt;/p&gt;</span>
+      is a fully-fledged Ember Component. Simply wrap your HTML with a <span class="inline-code">&lt;template&gt;</span> tag to make it a reusable component.
+    </p>
+  </div>
+</div>
+<CodePreview @code={{this.simpleComponent}}>
+  Hello, World!
+</CodePreview>
+
+<div class="grid lg:grid-2 mt-4">
+  <div class='lg:col-3'>
+    <h3 class='text-lg'>Simple composability</h3>
+    <p>
+      Ember components accept arguments to make them dynamic. To pass data into components, use the <span class="inline-code">@</span> symbol along with an argument name.
+    </p>
+  </div>
+</div>
+<CodePreview @code={{this.composableComponent}}>
+  Hello, Ember!
+  <p>Components can easily be reused 🚀</p>
+</CodePreview>
+
+<div class="grid lg:grid-2 mt-4">
+  <div class='lg:col-3'>
+    <h3 class='text-lg'>Delightful reactivity</h3>
+    <p>
+      State can be added to Ember components progressively by wrapping the template in a JavaScript class. The component will automatically rerender when a property decorated with
+      <span class="inline-code">@tracked</span> is changed.
+    </p>
+  </div>
+</div>
+<CodePreview @code={{this.stateManagemnent}}>
+  <Index::EmberCodeExamples::Counter />
+</CodePreview>
+
+<div class="lg:col-4 lg:start-2 text-center">
+  <p class="mt-4 text-gray">
+    The code examples above use the <a href="https://guides.emberjs.com/release/components/template-tag-format/">Template Tag format</a>. It is a powerful, new way to write components in Ember as a single-file format that combines the JavaScript and Glimmer template code. The format is part of the <a href="https://emberjs.com/editions/polaris/">Ember Polaris edition</a>.
+  </p>
+</div>
