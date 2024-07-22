@@ -58,6 +58,7 @@
     "ember-cli-terser": "^4.0.2",
     "ember-composable-helpers": "^5.0.0",
     "ember-data": "~3.28.0",
+    "ember-data-fastboot": "github:cardstack/ember-data-fastboot",
     "ember-export-application-global": "^2.0.1",
     "ember-fetch": "^8.1.1",
     "ember-href-to": "^5.0.0",
