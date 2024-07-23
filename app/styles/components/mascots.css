@@ -1,0 +1,3 @@
+.mascot-item:target .well {
+  border: 2px solid var(--color-brand-40);
+}
