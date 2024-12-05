@@ -59,7 +59,7 @@ jobs:
           PERCY_TOKEN: c08aaada222e9cb103a28b98e94d71ff8baaddb5a548237432d900f1d4a9ec27
 
   lighthouse-ci:
-    name: Run Lighthouse
+    name: Run Gravity
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -80,8 +80,7 @@ jobs:
       - name: Build production app
         run: npm run build
 
-      - name: Run Lighthouse
-        run: npx @lhci/cli@0.6.x autorun
+      - name: Run Gravity
+        run: npm run gravityci './dist/**/*'
         env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-          LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}
+          GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}

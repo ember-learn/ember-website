@@ -24,13 +24,15 @@
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "gravityci": "gravityci"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.6.0",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
+    "@gravityci/cli": "^0.0.4",
     "@percy/cli": "^1.0.0-beta.71",
     "@percy/ember": "^3.0.0",
     "algoliasearch": "^3.33.0",
