@@ -37,6 +37,7 @@
     "algoliasearch": "^3.33.0",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
+    "broccoli-merge-trees": "^4.2.0",
     "broccoli-static-site-json": "^4.4.1",
     "dayjs": "^1.10.7",
     "deepmerge": "^4.0.0",
