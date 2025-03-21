@@ -1,6 +1,6 @@
 ---
 location: 'London, UK'
-url: 'http://emberlondon.com'
+url: 'https://www.meetup.com/london-emberjs-user-group'
 image: 11london.png
 lat: 51.52086
 lng: -0.077703
