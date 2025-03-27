@@ -46,7 +46,6 @@ jobs:
         env:
           PERCY_PARALLEL_NONCE: ${{ env.PERCY_PARALLEL_NONCE }}
           PERCY_PARALLEL_TOTAL: ${{ env.PERCY_PARALLEL_TOTAL }}
-          PERCY_TOKEN: c08aaada222e9cb103a28b98e94d71ff8baaddb5a548237432d900f1d4a9ec27
 
   lighthouse-ci:
     name: Run Lighthouse
