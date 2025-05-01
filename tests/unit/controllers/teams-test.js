@@ -50,13 +50,25 @@ module('Unit | Controller | teams', function (hooks) {
     ]);
   });
 
-  test('We sort CLI team members by when they were first added', function (assert) {
-    const { coreCLITeamMembers } = this.controller;
+  test('We sort Tooling team members by when they were first added', function (assert) {
+    const { coreToolingTeamMembers } = this.controller;
 
     // Create an intermediate data structure for assertion
-    const output = coreCLITeamMembers.map((teamMember) => teamMember.id);
+    const output = coreToolingTeamMembers.map((teamMember) => teamMember.id);
 
-    assert.deepEqual(output, ['katie-gengler', 'kelly-selden']);
+    assert.deepEqual(output, [
+      'peter-wagenet',
+      'edward-faulkner',
+      'katie-gengler',
+      'kelly-selden',
+      'chris-manson',
+      'james-davis',
+      'krystan-huffmenne',
+      'aaron-chambers',
+      'preston-sego',
+      'simon-ihmig',
+      'peter-meehan',
+    ]);
   });
 
   test('We sort Data team members by when they were first added', function (assert) {
@@ -65,7 +77,12 @@ module('Unit | Controller | teams', function (hooks) {
     // Create an intermediate data structure for assertion
     const output = dataTeamMembers.map((teamMember) => teamMember.id);
 
-    assert.deepEqual(output, ['chris-thoburn', 'scott-newcomer']);
+    assert.deepEqual(output, [
+      'chris-thoburn',
+      'krystan-huffmenne',
+      'rich-glazerman',
+      'kirill-shaplyko',
+    ]);
   });
 
   test('We sort Learning team members by when they were first added', function (assert) {
@@ -81,7 +98,6 @@ module('Unit | Controller | teams', function (hooks) {
       'chris-manson',
       'robbie-wagner',
       'jared-galanis',
-      'chris-ng',
       'anne-greeth-schot-van-herwijnen',
       'ignace-maes',
     ]);
@@ -126,7 +142,9 @@ module('Unit | Controller | teams', function (hooks) {
       'isaac-lee',
       'chris-krycho',
       'dan-freeman',
+      'chris-ng',
       'bert-de-block',
+      'scott-newcomer',
     ]);
   });
 });

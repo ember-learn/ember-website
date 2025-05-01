@@ -7,5 +7,5 @@ image: pwagenet.jpg
 added: 2013-04-02T09:02:00.000Z
 teams:
   - corejs
-  - typescript
+  - tooling
 ---

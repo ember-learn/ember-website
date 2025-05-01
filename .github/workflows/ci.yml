@@ -6,6 +6,10 @@ on:
       - main
   pull_request:
 
+concurrency:
+  group: ci-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 env:
   NODE_VERSION: 20
   PERCY_PARALLEL_NONCE: ${{ github.run_id }}-${{ github.run_number }}
@@ -17,71 +21,52 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - name: Check out a copy of the repo
-        uses: actions/checkout@v2
-
-      - uses: mansona/npm-lockfile-version@v1
-
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          cache: 'npm'
+          cache: 'pnpm'
           node-version: ${{ env.NODE_VERSION }}
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Lint
-        run: npm run lint
+      - run: pnpm i --frozen-lockfile
+      - run: pnpm run lint
 
   test-app:
     name: Test app
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Check out a copy of the repo
-        uses: actions/checkout@v2
-
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          cache: 'npm'
+          cache: 'pnpm'
           node-version: ${{ env.NODE_VERSION }}
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Test
-        run: npx percy exec -- npm run test
+      - run: pnpm i --frozen-lockfile
+      - run: pnpm percy exec -- npm run test
         env:
           PERCY_PARALLEL_NONCE: ${{ env.PERCY_PARALLEL_NONCE }}
           PERCY_PARALLEL_TOTAL: ${{ env.PERCY_PARALLEL_TOTAL }}
-          PERCY_TOKEN: c08aaada222e9cb103a28b98e94d71ff8baaddb5a548237432d900f1d4a9ec27
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
   lighthouse-ci:
     name: Run Lighthouse
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Check out a copy of the repo
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          cache: 'npm'
+          cache: 'pnpm'
           node-version: ${{ env.NODE_VERSION }}
-
-      - name: Install dependencies
-        run: npm ci
-
+      - run: pnpm i --frozen-lockfile
       - name: Build production app
-        run: npm run build
+        run: pnpm run build
 
       - name: Run Lighthouse
-        run: npx @lhci/cli@0.6.x autorun
+        run: pnpm lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
           LHCI_TOKEN: ${{ secrets.LHCI_TOKEN }}

@@ -66,6 +66,7 @@ Router.map(function () {
     this.route('2020');
     this.route('2021');
     this.route('2022');
+    this.route('2024');
   });
 
   this.route('team-redirect', { path: 'team' });

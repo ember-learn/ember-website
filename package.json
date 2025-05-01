@@ -28,14 +28,18 @@
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
+    "@ember/string": "^4.0.1",
     "@ember/test-helpers": "^2.6.0",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
+    "@lhci/cli": "0.6.1",
     "@percy/cli": "^1.0.0-beta.71",
     "@percy/ember": "^3.0.0",
     "algoliasearch": "^3.33.0",
     "babel-eslint": "^10.1.0",
+    "blurhash": "^2.0.5",
     "broccoli-asset-rev": "^3.0.0",
+    "broccoli-merge-trees": "^4.2.0",
     "broccoli-static-site-json": "^4.4.1",
     "dayjs": "^1.10.7",
     "deepmerge": "^4.0.0",
@@ -58,6 +62,7 @@
     "ember-cli-terser": "^4.0.2",
     "ember-composable-helpers": "^5.0.0",
     "ember-data": "~3.28.0",
+    "ember-data-fastboot": "github:cardstack/ember-data-fastboot",
     "ember-export-application-global": "^2.0.1",
     "ember-fetch": "^8.1.1",
     "ember-href-to": "^5.0.0",
@@ -84,6 +89,7 @@
     "highcharts": "^10.1.0",
     "leaflet": "^1.5.1",
     "loader.js": "^4.7.0",
+    "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
     "prember": "^1.0.3",
     "prettier": "^2.5.1",
@@ -107,7 +113,16 @@
   "fastbootDependencies": [
     "algoliasearch"
   ],
-  "volta": {
-    "node": "20.10.0"
-  }
+  "pnpm": {
+    "overrides": {
+      "sharp": "^0.33.5"
+    },
+    "onlyBuiltDependencies": [
+      "@percy/core",
+      "core-js",
+      "fsevents",
+      "sharp"
+    ]
+  },
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
 }
