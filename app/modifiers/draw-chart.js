@@ -1,8 +1,6 @@
 import { registerDestructor } from '@ember/destroyable';
 import merge from 'deepmerge';
 import Modifier from 'ember-modifier';
-import Highcharts from 'highcharts';
-import highchartsAccessibilty from 'highcharts/modules/accessibility';
 
 const optionsForAllCharts = {
   credits: {
@@ -21,26 +19,33 @@ const optionsForAllCharts = {
 };
 
 export default class DrawChartModifier extends Modifier {
-  constructor(owner, args) {
-    super(owner, args);
+  highcharts;
 
-    this.initializeHighcharts();
-  }
-
-  modify(element, [chart]) {
+  async modify(element, [chart]) {
     if (!chart) {
       return;
     }
+
+    await this.initializeHighcharts();
 
     this.drawChart({ chart, element });
 
     registerDestructor(this, this.destroyChart.bind(this));
   }
 
-  initializeHighcharts() {
-    highchartsAccessibilty(Highcharts);
+  async initializeHighcharts() {
+    if (this.highcharts) {
+      return;
+    }
 
-    this.highcharts = Highcharts;
+    const { default: highcharts } = await import('highcharts');
+    const { default: highchartsAccessibilty } = await import(
+      'highcharts/modules/accessibility'
+    );
+
+    highchartsAccessibilty(highcharts);
+
+    this.highcharts = highcharts;
     this.highcharts.setOptions(optionsForAllCharts);
   }
 
