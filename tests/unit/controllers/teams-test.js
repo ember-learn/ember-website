@@ -144,7 +144,7 @@ module('Unit | Controller | teams', function (hooks) {
       'chris-ng',
       'bert-de-block',
       'scott-newcomer',
-      'peter-meehan'
+      'peter-meehan',
     ]);
   });
 });
