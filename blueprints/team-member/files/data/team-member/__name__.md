@@ -2,7 +2,9 @@
 name: <%= dasherizedModuleName %>
 first:
 last:
+bluesky:
 github:
+mastodon:
 twitter:
 image:
 added: <%= date %>
