@@ -9,6 +9,7 @@ export default class TeamMemberModel extends Model {
   @attr last;
   @attr mastodon;
   @attr name;
+  @attr social;
   @attr teams;
   @attr twitter;
 }

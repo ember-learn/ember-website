@@ -66,5 +66,18 @@
         {{~! ~}}{{svg-jar "bluesky"}}{{~! ~}}
       </a>
     {{/if}}
+
+    {{#if @member.social}}
+      <a
+        aria-label="{{@member.name}} generic social link"
+        class="icon"
+        data-test-link="Social"
+        href={{@member.social}}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img src="/images/link.png" alt="chain-link" class="icon"/>
+      </a>
+    {{/if}}
   </div>
 </div>
