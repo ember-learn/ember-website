@@ -64,7 +64,6 @@ module('Unit | Controller | teams', function (hooks) {
       'chris-manson',
       'james-davis',
       'krystan-huffmenne',
-      'aaron-chambers',
       'preston-sego',
       'simon-ihmig',
     ]);
@@ -144,6 +143,7 @@ module('Unit | Controller | teams', function (hooks) {
       'chris-ng',
       'bert-de-block',
       'scott-newcomer',
+      'aaron-chambers',
       'peter-meehan',
     ]);
   });
