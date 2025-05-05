@@ -40,5 +40,31 @@
         {{~! ~}}{{svg-jar "twitter"}}{{~! ~}}
       </a>
     {{/if}}
+
+    {{#if @member.mastodon}}
+      <a
+        aria-label="{{@member.name}} Mastodon"
+        class="icon"
+        data-test-link="Mastodon"
+        href={{@member.mastodon}}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {{~! ~}}{{svg-jar "mastodon"}}{{~! ~}}
+      </a>
+    {{/if}}
+
+    {{#if @member.bluesky}}
+      <a
+        aria-label="{{@member.name}} Bluesky"
+        class="icon"
+        data-test-link="Bluesky"
+        href={{@member.bluesky}}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {{~! ~}}{{svg-jar "bluesky"}}{{~! ~}}
+      </a>
+    {{/if}}
   </div>
 </div>
