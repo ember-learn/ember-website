@@ -67,7 +67,6 @@ module('Unit | Controller | teams', function (hooks) {
       'aaron-chambers',
       'preston-sego',
       'simon-ihmig',
-      'peter-meehan',
     ]);
   });
 
@@ -145,6 +144,7 @@ module('Unit | Controller | teams', function (hooks) {
       'chris-ng',
       'bert-de-block',
       'scott-newcomer',
+      'peter-meehan'
     ]);
   });
 });
