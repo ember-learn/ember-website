@@ -5,6 +5,7 @@ last:
 bluesky:
 github:
 mastodon:
+social:
 twitter:
 image:
 added: <%= date %>
