@@ -70,5 +70,7 @@ Router.map(function () {
   });
 
   this.route('team-redirect', { path: 'team' });
-  this.route('teams');
+  this.route('teams', function () {
+    this.route('emeritus');
+  });
 });
