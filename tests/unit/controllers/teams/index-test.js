@@ -1,7 +1,7 @@
 import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
-module('Unit | Controller | teams', function (hooks) {
+module('Unit | Controller | teams/index', function (hooks) {
   setupTest(hooks);
 
   hooks.beforeEach(async function () {
@@ -10,7 +10,7 @@ module('Unit | Controller | teams', function (hooks) {
     const model = await store.findAll('team-member');
 
     // Run setupController hook
-    this.controller = this.owner.lookup('controller:teams');
+    this.controller = this.owner.lookup('controller:teams/index');
     this.controller.model = model;
   });
 
@@ -98,53 +98,6 @@ module('Unit | Controller | teams', function (hooks) {
       'jared-galanis',
       'anne-greeth-schot-van-herwijnen',
       'ignace-maes',
-    ]);
-  });
-
-  test('We sort Emertius team members by when they were first added', function (assert) {
-    const { alumniTeamMembers } = this.controller;
-
-    // Create an intermediate data structure for assertion
-    const output = alumniTeamMembers.map((teamMember) => teamMember.id);
-
-    assert.deepEqual(output, [
-      'trek-glowacki',
-      'erik-bryn',
-      'kris-selden',
-      'stefan-penner',
-      'alex-matchneer',
-      'robert-jackson',
-      'igor-terzic',
-      'martin-munoz',
-      'brendan-mc-loughlin',
-      'david-baker',
-      'chad-hietala',
-      'todd-jordan',
-      'christoffer-persson',
-      'dan-gebhardt',
-      'clemens-muller',
-      'stanley-stuart',
-      'jacob-bixby',
-      'nathan-hammond',
-      'tobias-bieniek',
-      'godfrey-chan',
-      'krati-ahuja',
-      'sivakumar-kailasam',
-      'terence-lee',
-      'jessica-jordan',
-      'alex-navasardyan',
-      'amy-lam',
-      'kenneth-larsen',
-      'david-hamilton',
-      'kristen-hewell-garrett',
-      'isaac-lee',
-      'chris-krycho',
-      'dan-freeman',
-      'chris-ng',
-      'bert-de-block',
-      'scott-newcomer',
-      'aaron-chambers',
-      'peter-meehan',
     ]);
   });
 });

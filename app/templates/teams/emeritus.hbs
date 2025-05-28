@@ -1,0 +1,18 @@
+{{page-title 'Emeritus'}}
+
+<div class='container'>
+  <h1 class='text-center'>Emeritus of Ember.js</h1>
+  <section>
+    <p class='text-center' data-test-field='Team Description'>
+      Serving as a member of the Core Team(s) of an open source project like
+      Ember is a huge amount of work. These are the emeritus members of the
+      Ember Core Teams, to whom we will always be grateful.
+    </p>
+
+    <div class='grid lg:grid-5'>
+      {{#each this.alumniTeamMembers as |member|}}
+        <Teams::Team::Member @member={{member}} />
+      {{/each}}
+    </div>
+  </section>
+</div>
