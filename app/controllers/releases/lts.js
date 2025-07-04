@@ -5,14 +5,19 @@ export default class ReleasesLtsController extends Controller {
   // you can run `npm info ember-source time` to see a list
   emberLtsReleases = [
     {
+      version: '6.4',
+      promotionDate: new Date('2025-06-09'),
+      isActive: true,
+    },
+    {
       version: '5.12',
       promotionDate: new Date('2024-09-30'),
-      isActive: true,
+      isActive: false,
     },
     {
       version: '5.8',
       promotionDate: new Date('2024-06-03'),
-      isActive: true,
+      isActive: false,
     },
     {
       version: '5.4',
