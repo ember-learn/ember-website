@@ -10,6 +10,7 @@ export default class ProjectModel extends Model {
   @attr filter;
   @attr ignoreFiles;
   @attr('string') lastRelease;
+  @attr('string') tagName;
   @attr('string') name;
   @attr('string') repo;
 
@@ -18,6 +19,8 @@ export default class ProjectModel extends Model {
       return '';
     }
 
-    return `https://github.com/${this.repo}/blob/v${this.lastRelease}/${this.changelogPath}`;
+    const tagName = this.tagName ?? `v${this.lastRelease}`;
+
+    return `https://github.com/${this.repo}/blob/${tagName}/${this.changelogPath}`;
   }
 }
