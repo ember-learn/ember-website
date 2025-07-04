@@ -39,7 +39,7 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
     assert
       .dom('[data-test-field="More Information"]')
       .hasText(
-        'Read the changelog for Ember Data 5.4.0.',
+        'Read the changelog for Ember Data 5.5.0.',
         'We see the correct description for more information.'
       );
 
