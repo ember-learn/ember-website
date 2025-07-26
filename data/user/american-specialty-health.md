@@ -1,6 +1,7 @@
 ---
 url: 'https://www.ashcompanies.com/'
 image: american-specialty-health.png
+inactive: true
 name: American Specialty Health
 added: 2019-06-20T17:35:42.670Z
 ---

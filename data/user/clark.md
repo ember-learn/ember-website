@@ -1,6 +1,7 @@
 ---
 url: 'https://www.clark.de'
 image: clark.png
+inactive: true
 name: Clark
 added: 2016-12-17T12:55:36.000Z
 ---

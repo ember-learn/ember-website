@@ -1,6 +1,7 @@
 ---
 url: "https://www.camilyo.com"
 image: camilyo.png
+inactive: true
 name: Camilyo Online
 added: 2019-03-30T09:47:37.679Z
 ---

@@ -1,6 +1,7 @@
 ---
 url: 'https://privatt.io'
 image: privatt.png
+inactive: true
 name: Privatt
 added: 2015-08-11T19:38:21.000Z
 ---

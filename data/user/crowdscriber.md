@@ -1,6 +1,7 @@
 ---
 url: 'https://crowdscriber.com/'
 image: crowdscriber.png
+inactive: true
 name: Crowdscriber
 added: 2017-10-04T16:43:42.000Z
 ---
