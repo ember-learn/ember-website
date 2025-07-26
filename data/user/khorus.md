@@ -1,6 +1,7 @@
 ---
 url: 'https://www.khorus.com/'
 image: khorus.png
+inactive: true
 name: Khorus
 added: 2018-01-11T14:52:14.000Z
 ---

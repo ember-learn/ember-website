@@ -1,6 +1,7 @@
 ---
 url: 'http://www.newsninja.com'
 image: news-ninja-emberjs.png
+inactive: true
 name: NewsNinja.com
 added: 2015-08-07T22:18:43.000Z
 ---

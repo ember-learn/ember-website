@@ -1,6 +1,7 @@
 ---
 url: 'https://www.samewave.com'
 image: samewave.png
+inactive: true
 name: Samewave
 added: 2018-02-26T07:04:50.000Z
 ---

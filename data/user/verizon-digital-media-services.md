@@ -1,6 +1,7 @@
 ---
 url: 'https://www.verizondigitalmedia.com/'
 image: verizon-digital-media-services.png
+inactive: true
 name: Verizon Digital Media Services
 added: 2018-04-26T08:34:59.000Z
 ---

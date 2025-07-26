@@ -1,6 +1,7 @@
 ---
 url: 'http://www.mapc.org/'
 image: mapc_logo.png
+inactive: true
 name: Metropolitan Area Planning Council
 added: 2017-05-26T15:44:30.000Z
 ---

@@ -1,6 +1,7 @@
 ---
 url: 'https://digitalmark360.com'
 image: digitalmark360.png
+inactive: true
 name: Digital Mark 360
 added: 2019-06-14T11:07:13.082Z
 ---

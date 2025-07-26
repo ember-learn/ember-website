@@ -1,6 +1,7 @@
 ---
 url: 'https://www.streamrail.com/'
 image: streamrail.png
+inactive: true
 name: Streamrail
 added: 2015-10-13T19:36:35.000Z
 ---

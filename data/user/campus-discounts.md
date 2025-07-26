@@ -1,6 +1,7 @@
 ---
 url: 'https://campus-discounts.com'
 image: campus-discounts.png
+inactive: true
 name: Campus Discounts
 added: 2017-05-07T03:18:40.000Z
 ---

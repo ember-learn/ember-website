@@ -1,6 +1,7 @@
 ---
 url: 'https://mammothhr.com'
 image: mammothhr.png
+inactive: true
 name: MammothHR
 added: 2016-04-13T18:01:38.000Z
 ---

@@ -1,6 +1,7 @@
 ---
 url: 'http://societyofgrownups.com'
 image: societyofgrownups.png
+inactive: true
 name: Society of Grownups
 added: 2016-03-10T20:44:02.000Z
 ---
