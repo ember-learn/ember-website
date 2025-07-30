@@ -55,6 +55,7 @@ Router.map(function () {
   });
 
   this.route('security');
+  this.route('node-support');
 
   this.route('sponsors');
 
