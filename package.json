@@ -76,7 +76,7 @@
     "ember-resolver": "^8.0.3",
     "ember-responsive-image": "^3.4.0",
     "ember-source": "~3.28.8",
-    "ember-styleguide": "^8.4.0",
+    "ember-styleguide": "^11.1.0",
     "ember-template-lint": "^3.14.0",
     "ember-tether": "^2.0.1",
     "ember-truth-helpers": "^3.0.0",
