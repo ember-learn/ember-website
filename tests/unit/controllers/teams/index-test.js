@@ -66,6 +66,7 @@ module('Unit | Controller | teams/index', function (hooks) {
       'krystan-huffmenne',
       'preston-sego',
       'simon-ihmig',
+      'liam-potter',
     ]);
   });
 
