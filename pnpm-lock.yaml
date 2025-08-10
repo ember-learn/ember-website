@@ -156,7 +156,7 @@ importers:
         specifier: ^3.4.0
         version: 3.4.0(@babel/core@7.26.9)(ember-source@3.28.12(@babel/core@7.26.9))(rollup@2.79.2)(webpack@5.98.0)
       ember-source:
-        specifier: ~3.28.12
+        specifier: ~3.28.8
         version: 3.28.12(@babel/core@7.26.9)
       ember-styleguide:
         specifier: ^8.4.0
