@@ -6,7 +6,7 @@ bluesky:
 github:
 mastodon:
 social:
-twitter:
+x:
 image:
 added: <%= date %>
 teams:

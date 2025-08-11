@@ -35,11 +35,11 @@ module('Integration | Component | teams/team/member', function (hooks) {
       );
 
     assert
-      .dom('[data-test-link="Twitter"]')
+      .dom('[data-test-link="X"]')
       .hasAttribute(
         'href',
-        'https://twitter.com/locks',
-        'We see the correct URL for Twitter.'
+        'https://x.com/locks',
+        'We see the correct URL for X.'
       );
   });
 });

@@ -11,5 +11,5 @@ export default class TeamMemberModel extends Model {
   @attr name;
   @attr social;
   @attr teams;
-  @attr twitter;
+  @attr x;
 }
