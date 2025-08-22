@@ -159,8 +159,8 @@ importers:
         specifier: ~3.28.8
         version: 3.28.12(@babel/core@7.26.9)
       ember-styleguide:
-        specifier: ^11.1.0
-        version: 11.1.0(ember-source@3.28.12(@babel/core@7.26.9))(webpack@5.98.0)
+        specifier: ^11.2.0
+        version: 11.2.0(ember-source@3.28.12(@babel/core@7.26.9))(webpack@5.98.0)
       ember-template-lint:
         specifier: ^3.14.0
         version: 3.16.0
@@ -3907,8 +3907,8 @@ packages:
     resolution: {integrity: sha512-I7M+oZ+poYYOP7n521rYv7kkYZbxotL8VbtHYxLQ3tasRZYQJ21qfu3vVjydSjwyE3w7EZRgKngBoMhKSAEZnw==}
     engines: {node: 12.* || 14.* || >= 16}
 
-  ember-styleguide@11.1.0:
-    resolution: {integrity: sha512-Uq4gNYwhdHEjODqEfdnG4On2LWISdGAchbgiOuOHpa5ubf6F66pHy+W7kEOhY7MIwo71xg8FEL3vxKQ0uj9P5w==}
+  ember-styleguide@11.2.0:
+    resolution: {integrity: sha512-Tm1NV9tWFfV/Mwb/AnHgv/zXV7HwTEM3q4wNc0STrQJ6tLge/TcDOFwRuWHC80t6nWJoo5MJv0V5szgdfZOJYA==}
     engines: {node: 18.* || >= 20}
 
   ember-template-lint@3.16.0:
@@ -14420,7 +14420,7 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  ember-styleguide@11.1.0(ember-source@3.28.12(@babel/core@7.26.9))(webpack@5.98.0):
+  ember-styleguide@11.2.0(ember-source@3.28.12(@babel/core@7.26.9))(webpack@5.98.0):
     dependencies:
       '@babel/core': 7.26.9
       '@ember/render-modifiers': 2.1.0(@babel/core@7.26.9)(ember-source@3.28.12(@babel/core@7.26.9))
