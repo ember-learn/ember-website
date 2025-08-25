@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Ember.js - A framework for ambitious web developers</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {{content-for "head"}}
-    {{content-for "test-head"}}
+    {{content-for "head"}} {{content-for "test-head"}}
 
-    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link rel="stylesheet" href="{{rootURL}}assets/ember-website.css">
-    <link rel="stylesheet" href="{{rootURL}}assets/test-support.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css" />
+    <link rel="stylesheet" href="{{rootURL}}assets/ember-website.css" />
+    <link rel="stylesheet" href="{{rootURL}}assets/test-support.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600"
+      rel="stylesheet"
+    />
 
-    {{content-for "head-footer"}}
-    {{content-for "test-head-footer"}}
+    {{content-for "head-footer"}} {{content-for "test-head-footer"}}
   </head>
   <body>
-    {{content-for "body"}}
-    {{content-for "test-body"}}
+    {{content-for "body"}} {{content-for "test-body"}}
 
     <div id="qunit"></div>
     <div id="qunit-fixture">
@@ -36,7 +39,6 @@
     <script src="{{rootURL}}assets/ember-website.js"></script>
     <script src="{{rootURL}}assets/tests.js"></script>
 
-    {{content-for "body-footer"}}
-    {{content-for "test-body-footer"}}
+    {{content-for "body-footer"}} {{content-for "test-body-footer"}}
   </body>
 </html>
