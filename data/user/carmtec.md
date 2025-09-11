@@ -1,4 +1,4 @@
+url: "https://www.carmatec.com/"
+image: "/images/users/carmtec.png"
 name: "Carmatec"
-website: "https://www.carmatec.com/"
-logo: "/images/users/carmtec.png"
 description: "We created this for our client"
