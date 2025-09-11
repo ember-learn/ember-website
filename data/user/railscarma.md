@@ -1,4 +1,6 @@
-name: "RailsCarma"
-website: "https://www.railscarma.com"
-logo: "/images/users/railscarma.png"
-description: "RailsCarma is a Ruby on Rails and AI development company."
+url: 'https://www.railscarma.com'
+image: railscarma.png
+name: railscarma
+added: 2025-09-07T14:01:22.429Z
+---
+RailsCarma is using Ember.js to power its main web application
