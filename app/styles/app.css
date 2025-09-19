@@ -57,3 +57,9 @@ h1 + *,
 button:not([disabled]) {
   cursor: pointer;
 }
+
+.cta-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
