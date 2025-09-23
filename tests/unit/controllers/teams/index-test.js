@@ -26,7 +26,6 @@ module('Unit | Controller | teams/index', function (hooks) {
       'matthew-beale',
       'edward-faulkner',
       'katie-gengler',
-      'melanie-sumner',
       'kenigbolo-meya-stephen',
     ]);
   });
@@ -46,7 +45,6 @@ module('Unit | Controller | teams/index', function (hooks) {
       'edward-faulkner',
       'ricardo-mendes',
       'katie-gengler',
-      'melanie-sumner',
     ]);
   });
 
