@@ -45,6 +45,7 @@ module('Unit | Controller | teams/emeritus', function (hooks) {
       'sivakumar-kailasam',
       'terence-lee',
       'jessica-jordan',
+      'melanie-sumner',
       'alex-navasardyan',
       'amy-lam',
       'kenneth-larsen',

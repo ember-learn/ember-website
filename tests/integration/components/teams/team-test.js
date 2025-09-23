@@ -37,6 +37,6 @@ module('Integration | Component | teams/team', function (hooks) {
         'We see the correct team description.'
       );
 
-    assert.dom('[data-test-member]').exists({ count: 7 });
+    assert.dom('[data-test-member]').exists({ count: 6 });
   });
 });
