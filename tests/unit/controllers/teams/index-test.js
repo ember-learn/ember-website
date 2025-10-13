@@ -43,7 +43,6 @@ module('Unit | Controller | teams/index', function (hooks) {
       'leah-silber',
       'matthew-beale',
       'edward-faulkner',
-      'ricardo-mendes',
       'katie-gengler',
     ]);
   });
