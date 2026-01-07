@@ -12,7 +12,7 @@ export default class ReleasesLtsController extends Controller {
     {
       version: '6.4',
       promotionDate: new Date('2025-06-09'),
-      isActive: false,
+      isActive: true,
     },
     {
       version: '5.12',
