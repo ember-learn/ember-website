@@ -12,7 +12,7 @@ resources:
     url: https://github.com/emberjs/rfcs/blob/master/text/0010-engines.md
   - type: documentation
     name: Documentation
-    url: https://ember-engines.com
+    url: https://ember-engines.netlify.app/
 champions:
   - name: No one
     image:
