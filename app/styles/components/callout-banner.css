@@ -22,7 +22,7 @@
 }
 
 .callout-banner a + a::before {
-  content: '';
+  content: "";
   width: 3px;
   height: 3px;
   background: white;

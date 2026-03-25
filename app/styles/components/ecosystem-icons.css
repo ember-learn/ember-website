@@ -17,7 +17,7 @@
   margin: auto;
 }
 
-@media (max-width: 1007px) {
+@media (width <= 1007px) {
   .ecosystem-icons {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     width: inherit;
