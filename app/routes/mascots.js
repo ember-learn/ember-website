@@ -4,7 +4,7 @@ import { inject as service } from '@ember/service';
 export default class MascotsRoute extends Route {
   @service store;
 
-  model() {
-    return this.store.findAll('tomster');
+  async model() {
+    return (await this.store.findAll('tomster')).slice();
   }
 }

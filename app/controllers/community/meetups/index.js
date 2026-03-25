@@ -15,7 +15,7 @@ export default class CommunityMeetupsIndexController extends Controller {
   };
 
   get meetupsByArea() {
-    const meetups = (this.model ?? []).toArray();
+    const meetups = (this.model ?? []).slice();
     const groupMeetupsByArea = new Map();
 
     meetups.forEach((meetup) => {
