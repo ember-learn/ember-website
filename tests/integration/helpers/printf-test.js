@@ -9,7 +9,7 @@ module('Integration | Helper | printf', function (hooks) {
   test('The helper does not error when string is undefined', async function (assert) {
     await render(hbs`
       <div data-test-value>
-        {{printf}}
+        {{printf undefined}}
       </div>
     `);
 
