@@ -8,6 +8,12 @@ module.exports = function (defaults) {
       plugins: [require.resolve('ember-auto-import/babel-plugin')],
     },
 
+    autoImport: {
+      alias: {
+        'ember-composable-helpers': '@nullvoxpopuli/ember-composable-helpers',
+      },
+    },
+
     'ember-composable-helpers': {
       only: ['filter-by', 'reject-by', 'sort-by'],
     },
