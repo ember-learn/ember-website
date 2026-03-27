@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import replaceLinks from 'ember-website/utils/replace-links';
 import { module, test } from 'qunit';
 

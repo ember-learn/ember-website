@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { registerDestructor } from '@ember/destroyable';
 import merge from 'deepmerge';
 import Modifier from 'ember-modifier';

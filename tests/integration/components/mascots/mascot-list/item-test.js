@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
