@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-block-no-redundant-longhand-properties, no-descending-specificity, prettier/prettier, selector-attribute-quotes, selector-class-pattern */
 .homepage-image-grid {
   overflow-x: auto;
 }
