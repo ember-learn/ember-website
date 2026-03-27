@@ -18,7 +18,7 @@ module('Unit | Model | project', function (hooks) {
 
       assert.strictEqual(
         model.lastReleaseChangelogUrl,
-        'https://github.com/face/mine.js/blob/v7/CHANGELOG.md'
+        'https://github.com/face/mine.js/blob/v7/CHANGELOG.md',
       );
     });
 

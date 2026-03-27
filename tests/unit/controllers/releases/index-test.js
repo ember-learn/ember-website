@@ -20,7 +20,7 @@ module('Unit | Controller | releases/index', function (hooks) {
     assert.strictEqual(
       emberReleaseProject?.id,
       'ember/release',
-      'We found the Ember release project.'
+      'We found the Ember release project.',
     );
   });
 });

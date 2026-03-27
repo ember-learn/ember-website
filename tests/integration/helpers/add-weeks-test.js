@@ -41,7 +41,7 @@ module('Integration | Helper | add-weeks', function (hooks) {
       .dom('[data-test-column="Security Patches"]')
       .hasText(
         'March 4, 2020',
-        'We see the correct date for security patches.'
+        'We see the correct date for security patches.',
       );
   });
 
@@ -80,7 +80,7 @@ module('Integration | Helper | add-weeks', function (hooks) {
       .dom('[data-test-column="Security Patches"]')
       .hasText(
         'March 17, 2021',
-        'We see the correct date for security patches.'
+        'We see the correct date for security patches.',
       );
   });
 });

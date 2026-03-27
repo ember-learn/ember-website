@@ -11,7 +11,7 @@ module('Unit | Route | releases/lts', function (hooks) {
     assert.strictEqual(
       model?.id,
       'ember/lts',
-      'We found the Ember LTS project.'
+      'We found the Ember LTS project.',
     );
   });
 });

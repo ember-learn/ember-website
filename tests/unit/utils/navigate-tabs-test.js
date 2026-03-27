@@ -7,13 +7,13 @@ module('Unit | Utility | navigate-tabs', function () {
       assert.strictEqual(
         getTabIdIncrement({ key: 'ArrowLeft' }),
         -1,
-        'We get the correct output.'
+        'We get the correct output.',
       );
 
       assert.strictEqual(
         getTabIdIncrement({ key: 'Left' }),
         -1,
-        'We get the correct output.'
+        'We get the correct output.',
       );
     });
 
@@ -21,13 +21,13 @@ module('Unit | Utility | navigate-tabs', function () {
       assert.strictEqual(
         getTabIdIncrement({ key: 'ArrowRight' }),
         1,
-        'We get the correct output.'
+        'We get the correct output.',
       );
 
       assert.strictEqual(
         getTabIdIncrement({ key: 'Right' }),
         1,
-        'We get the correct output.'
+        'We get the correct output.',
       );
     });
 
@@ -35,13 +35,13 @@ module('Unit | Utility | navigate-tabs', function () {
       assert.strictEqual(
         getTabIdIncrement({ key: 'ArrowDown' }),
         undefined,
-        'We get the correct output.'
+        'We get the correct output.',
       );
 
       assert.strictEqual(
         getTabIdIncrement({ key: 'Tab' }),
         undefined,
-        'We get the correct output.'
+        'We get the correct output.',
       );
     });
   });
@@ -55,25 +55,25 @@ module('Unit | Utility | navigate-tabs', function () {
       assert.strictEqual(
         modulus(0, this.numTabs),
         0,
-        'We get the correct output.'
+        'We get the correct output.',
       );
 
       assert.strictEqual(
         modulus(1, this.numTabs),
         1,
-        'We get the correct output.'
+        'We get the correct output.',
       );
 
       assert.strictEqual(
         modulus(2, this.numTabs),
         2,
-        'We get the correct output.'
+        'We get the correct output.',
       );
 
       assert.strictEqual(
         modulus(3, this.numTabs),
         3,
-        'We get the correct output.'
+        'We get the correct output.',
       );
     });
 
@@ -81,25 +81,25 @@ module('Unit | Utility | navigate-tabs', function () {
       assert.strictEqual(
         modulus(-4, this.numTabs),
         0,
-        'We get the correct output.'
+        'We get the correct output.',
       );
 
       assert.strictEqual(
         modulus(-3, this.numTabs),
         1,
-        'We get the correct output.'
+        'We get the correct output.',
       );
 
       assert.strictEqual(
         modulus(-2, this.numTabs),
         2,
-        'We get the correct output.'
+        'We get the correct output.',
       );
 
       assert.strictEqual(
         modulus(-1, this.numTabs),
         3,
-        'We get the correct output.'
+        'We get the correct output.',
       );
     });
   });

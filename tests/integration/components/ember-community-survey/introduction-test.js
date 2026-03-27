@@ -21,12 +21,12 @@ module(
         .hasAttribute(
           'alt',
           'Ember Community Survey 2016',
-          'We see the correct alt for the image.'
+          'We see the correct alt for the image.',
         )
         .hasAttribute(
           'src',
           '/images/survey/logo.png',
-          'We see the correct src for the image.'
+          'We see the correct src for the image.',
         );
 
       assert
@@ -54,20 +54,20 @@ module(
         .hasAttribute(
           'alt',
           'Ember Community Survey 2016',
-          'We see the correct alt for the image.'
+          'We see the correct alt for the image.',
         )
         .hasAttribute(
           'src',
           '/images/survey/logo.png',
-          'We see the correct src for the image.'
+          'We see the correct src for the image.',
         );
 
       assert
         .dom('[data-test-section="Introduction"]')
         .hasText(
           'A project to learn who is using Ember and how. With over 1800 responses, here are the 2016 survey results!',
-          'We see the correct text in the introduction.'
+          'We see the correct text in the introduction.',
         );
     });
-  }
+  },
 );

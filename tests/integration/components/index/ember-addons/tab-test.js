@@ -23,12 +23,12 @@ module('Integration | Component | index/ember-addons/tab', function (hooks) {
       .hasAttribute(
         'aria-controls',
         'ember-addons-panel-0',
-        'We see the correct aria-controls.'
+        'We see the correct aria-controls.',
       )
       .hasAttribute(
         'aria-selected',
         'true',
-        'We see the correct aria-selected.'
+        'We see the correct aria-selected.',
       )
       .hasAttribute('id', 'ember-addons-tab-0', 'We see the correct id.')
       .hasAttribute('role', 'tab', 'We see the correct role.')
@@ -54,19 +54,19 @@ module('Integration | Component | index/ember-addons/tab', function (hooks) {
       .hasAttribute(
         'aria-controls',
         'ember-addons-panel-0',
-        'We see the correct aria-controls.'
+        'We see the correct aria-controls.',
       )
       .hasAttribute(
         'aria-selected',
         'false',
-        'We see the correct aria-selected.'
+        'We see the correct aria-selected.',
       )
       .hasAttribute('id', 'ember-addons-tab-0', 'We see the correct id.')
       .hasAttribute('role', 'tab', 'We see the correct role.')
       .hasAttribute('tabindex', '-1', 'We see the correct tabindex.')
       .doesNotHaveClass(
         'active-tab',
-        'We should not see the .active-tab class.'
+        'We should not see the .active-tab class.',
       )
       .hasText('Manage State', 'We see the label.');
   });

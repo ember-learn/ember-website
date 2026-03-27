@@ -31,7 +31,7 @@ module('Integration | Component | teams/team/member', function (hooks) {
       .hasAttribute(
         'href',
         'https://github.com/locks',
-        'We see the correct URL for GitHub.'
+        'We see the correct URL for GitHub.',
       );
 
     assert
@@ -39,7 +39,7 @@ module('Integration | Component | teams/team/member', function (hooks) {
       .hasAttribute(
         'href',
         'https://twitter.com/locks',
-        'We see the correct URL for Twitter.'
+        'We see the correct URL for Twitter.',
       );
   });
 });

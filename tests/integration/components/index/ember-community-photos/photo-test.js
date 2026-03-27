@@ -22,17 +22,17 @@ module(
         .hasAttribute(
           'alt',
           'Ember core team members gather around the Ember sign at EmberConf',
-          'We see the correct alternate text.'
+          'We see the correct alternate text.',
         )
         .doesNotHaveAttribute(
           'role',
           '',
-          'We should not see the role attribute.'
+          'We should not see the role attribute.',
         )
         .hasAttribute(
           'src',
           '/images/community/tinified/EmberConf19-13.jpg',
-          'We see the correct src.'
+          'We see the correct src.',
         );
     });
 
@@ -51,8 +51,8 @@ module(
         .hasAttribute(
           'src',
           '/images/community/zoey.png',
-          'We see the correct src.'
+          'We see the correct src.',
         );
     });
-  }
+  },
 );

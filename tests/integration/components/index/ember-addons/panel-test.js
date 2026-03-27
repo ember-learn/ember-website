@@ -21,12 +21,12 @@ module('Integration | Component | index/ember-addons/panel', function (hooks) {
       .hasAttribute(
         'aria-labelledby',
         'ember-addons-tab-0',
-        'We see the correct aria-labelledby.'
+        'We see the correct aria-labelledby.',
       )
       .doesNotHaveAttribute(
         'hidden',
         '',
-        'We should not see the hidden attribute.'
+        'We should not see the hidden attribute.',
       )
       .hasAttribute('id', 'ember-addons-panel-0', 'We see the correct id.')
       .hasAttribute('role', 'tabpanel', 'We see the correct role.')
@@ -34,7 +34,7 @@ module('Integration | Component | index/ember-addons/panel', function (hooks) {
       .hasClass('active-tab', 'We see the .active-tab class.')
       .hasText(
         'Ember Concurrency is an Ember addon...',
-        'We see the block content.'
+        'We see the block content.',
       );
   });
 
@@ -53,7 +53,7 @@ module('Integration | Component | index/ember-addons/panel', function (hooks) {
       .hasAttribute(
         'aria-labelledby',
         'ember-addons-tab-0',
-        'We see the correct aria-labelledby.'
+        'We see the correct aria-labelledby.',
       )
       .hasAttribute('hidden', '', 'We see the correct hidden.')
       .hasAttribute('id', 'ember-addons-panel-0', 'We see the correct id.')
@@ -61,11 +61,11 @@ module('Integration | Component | index/ember-addons/panel', function (hooks) {
       .hasAttribute('tabindex', '0', 'We see the correct tabindex.')
       .doesNotHaveClass(
         'active-tab',
-        'We should not see the .active-tab class.'
+        'We should not see the .active-tab class.',
       )
       .hasText(
         'Ember Concurrency is an Ember addon...',
-        'We see the block content.'
+        'We see the block content.',
       );
   });
 });

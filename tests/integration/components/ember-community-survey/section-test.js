@@ -20,7 +20,7 @@ module(
         .dom('[data-test-field="Title"]')
         .hasText(
           'Closing Thoughts',
-          'We see the correct title for the section.'
+          'We see the correct title for the section.',
         );
 
       assert
@@ -28,7 +28,7 @@ module(
         .hasAttribute(
           'href',
           '#closing-thoughts',
-          'We see the correct href for the hyperlink.'
+          'We see the correct href for the hyperlink.',
         );
 
       assert
@@ -39,7 +39,7 @@ module(
         .dom('[data-test-container="Body"]')
         .hasNoText(
           'We would like to thank everyone who took the time to participate in the 2016 Ember Community Survey!',
-          "We don't see text in the body."
+          "We don't see text in the body.",
         );
     });
 
@@ -65,7 +65,7 @@ module(
         .dom('[data-test-container="Body"]')
         .hasText(
           'We would like to thank everyone who took the time to participate in the 2016 Ember Community Survey!',
-          'We see the correct text in the body.'
+          'We see the correct text in the body.',
         );
     });
 
@@ -97,7 +97,7 @@ module(
         .dom('[data-test-container="Body"]')
         .hasText(
           'Explanation for the chart goes here.',
-          'We see the correct text in the body.'
+          'We see the correct text in the body.',
         );
     });
 
@@ -133,8 +133,8 @@ module(
         .dom('[data-test-container="Body"]')
         .hasText(
           'Explanation for both charts goes here.',
-          'We see the correct text in the body.'
+          'We see the correct text in the body.',
         );
     });
-  }
+  },
 );

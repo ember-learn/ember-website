@@ -33,14 +33,14 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
           '# Install Ember Data 5.8.0:',
           'npm install --save-dev ember-data@~5.8.0',
         ].join(' '),
-        'We see the correct code.'
+        'We see the correct code.',
       );
 
     assert
       .dom('[data-test-field="More Information"]')
       .hasText(
         'Read the changelog for Ember Data 5.8.0.',
-        'We see the correct description for more information.'
+        'We see the correct description for more information.',
       );
 
     assert
@@ -48,7 +48,7 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
       .hasAttribute(
         'href',
         'https://github.com/emberjs/data/blob/v5.8.0/CHANGELOG.md',
-        'We see the correct URL for the changelog.'
+        'We see the correct URL for the changelog.',
       );
   });
 
@@ -78,7 +78,7 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
           '# Install the latest Ember canary:',
           'npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com/...',
         ].join(' '),
-        'We see the correct code.'
+        'We see the correct code.',
       );
 
     assert

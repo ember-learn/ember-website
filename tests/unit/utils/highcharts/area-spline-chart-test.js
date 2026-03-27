@@ -89,7 +89,7 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
             },
           },
         },
-        'We get the correct value.'
+        'We get the correct value.',
       );
     });
   });
@@ -150,7 +150,7 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
           data: [6, 36, 40, 55],
           name: '2019',
         },
-        'We get the correct data for the 1st series.'
+        'We get the correct data for the 1st series.',
       );
 
       // Check series 2
@@ -165,7 +165,7 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
           data: [3, 11, 12, 15, 29, 52],
           name: '2020',
         },
-        'We get the correct data for the 2nd series.'
+        'We get the correct data for the 2nd series.',
       );
     });
   });

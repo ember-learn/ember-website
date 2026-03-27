@@ -27,7 +27,7 @@ module('Integration | Component | mascots/mascot-list/item', function (hooks) {
       .hasAttribute(
         'src',
         /\/images\/tomsters\/austin-zoey.*\.png/,
-        'We see the correct src for the image.'
+        'We see the correct src for the image.',
       );
 
     assert
@@ -35,7 +35,7 @@ module('Integration | Component | mascots/mascot-list/item', function (hooks) {
       .hasAttribute(
         'href',
         'http://www.meetup.com/Ember-ATX/',
-        'We see the correct href for the name.'
+        'We see the correct href for the name.',
       )
       .hasTagName('a', 'We see the correct tag for the name.')
       .hasText('Austin Zoey', 'We see the correct name.');
@@ -59,7 +59,7 @@ module('Integration | Component | mascots/mascot-list/item', function (hooks) {
       .hasAttribute(
         'src',
         /\/images\/tomsters\/a11y-zoey.*\.png/,
-        'We see the correct src for the image.'
+        'We see the correct src for the image.',
       );
 
     assert

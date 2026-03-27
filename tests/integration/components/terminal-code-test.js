@@ -19,7 +19,7 @@ module('Integration | Component | terminal-code', function (hooks) {
       .dom('[data-test-terminal-code]')
       .hasText(
         ['npm install -g ember-cli', 'ember new my-app-name'].join(' '),
-        'We see the code.'
+        'We see the code.',
       );
   });
 });

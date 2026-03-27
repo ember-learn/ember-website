@@ -39,9 +39,8 @@ export default class DrawChartModifier extends Modifier {
     }
 
     const { default: highcharts } = await import('highcharts');
-    const { default: highchartsAccessibilty } = await import(
-      'highcharts/modules/accessibility'
-    );
+    const { default: highchartsAccessibilty } =
+      await import('highcharts/modules/accessibility');
 
     highchartsAccessibilty(highcharts);
 
@@ -62,7 +61,7 @@ export default class DrawChartModifier extends Modifier {
           },
         },
       },
-      chart.highchartsOptions
+      chart.highchartsOptions,
     );
 
     this.chartInstance = this.highcharts.chart(element, chartOptions);

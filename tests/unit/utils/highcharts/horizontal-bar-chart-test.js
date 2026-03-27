@@ -85,7 +85,7 @@ module('Unit | Utility | highcharts/horizontal-bar-chart', function (hooks) {
             },
           },
         },
-        'We get the correct value.'
+        'We get the correct value.',
       );
     });
   });
@@ -142,7 +142,7 @@ module('Unit | Utility | highcharts/horizontal-bar-chart', function (hooks) {
           data: [1.9, 5.2, 33.3, 16.4, 41.6, 49.8],
           name: '2017',
         },
-        'We get the correct data for the 1st series.'
+        'We get the correct data for the 1st series.',
       );
 
       // Check series 2
@@ -153,7 +153,7 @@ module('Unit | Utility | highcharts/horizontal-bar-chart', function (hooks) {
           data: [3.0, 9.8, 52.2, 23.8, 34.2, 57.8],
           name: '2018',
         },
-        'We get the correct data for the 2nd series.'
+        'We get the correct data for the 2nd series.',
       );
     });
   });

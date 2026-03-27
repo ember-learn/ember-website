@@ -16,7 +16,7 @@ module('Integration | Component | mascots/mascot-filters', function (hooks) {
       assert.strictEqual(
         links.length,
         expectedOutput.length,
-        `The user sees ${expectedOutput.length} links.`
+        `The user sees ${expectedOutput.length} links.`,
       );
 
       if (links.length !== expectedOutput.length) {
@@ -29,11 +29,11 @@ module('Integration | Component | mascots/mascot-filters', function (hooks) {
           .hasAttribute(
             'href',
             expectedOutput[index].href,
-            `The URL for the link is correct. (${index + 1})`
+            `The URL for the link is correct. (${index + 1})`,
           )
           .hasText(
             expectedOutput[index].label,
-            `The label for the link is correct. (${index + 1})`
+            `The label for the link is correct. (${index + 1})`,
           );
       });
     };

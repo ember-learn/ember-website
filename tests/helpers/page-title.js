@@ -11,7 +11,7 @@ function setUpCustomAssertions(assert) {
     assert.strictEqual(
       getPageTitle(),
       expectedValue,
-      'We render the correct page title.'
+      'We render the correct page title.',
     );
 
     // Check meta tags created by `ember-cli-head`
@@ -20,7 +20,7 @@ function setUpCustomAssertions(assert) {
       .hasAttribute(
         'content',
         expectedValue,
-        'We render an Open Graph meta tag.'
+        'We render an Open Graph meta tag.',
       );
   };
 }

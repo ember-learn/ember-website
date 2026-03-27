@@ -51,7 +51,7 @@ module('Acceptance | mascots', function (hooks) {
     assert.strictEqual(
       currentURL(),
       '/mascots?filter=tomster',
-      'The URL is correct.'
+      'The URL is correct.',
     );
 
     let mascots = findAll('[data-test-mascot]');
@@ -72,7 +72,7 @@ module('Acceptance | mascots', function (hooks) {
     assert.strictEqual(
       currentURL(),
       '/mascots?filter=zoey',
-      'The URL is correct.'
+      'The URL is correct.',
     );
 
     mascots = findAll('[data-test-mascot]');
@@ -96,7 +96,7 @@ module('Acceptance | mascots', function (hooks) {
     assert.strictEqual(
       currentURL(),
       '/mascots?display=large&filter=tomster',
-      'The URL is correct.'
+      'The URL is correct.',
     );
 
     let mascots = findAll('[data-test-mascot]');
@@ -120,7 +120,7 @@ module('Acceptance | mascots', function (hooks) {
     assert.strictEqual(
       currentURL(),
       '/mascots?filter=zoey',
-      'The URL is correct.'
+      'The URL is correct.',
     );
 
     mascots = findAll('[data-test-mascot]');
