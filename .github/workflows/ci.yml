@@ -23,12 +23,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
+      - name: Install Node
       - uses: actions/setup-node@v4
         with:
           cache: 'pnpm'
           node-version: ${{ env.NODE_VERSION }}
-      - run: pnpm i --frozen-lockfile
-      - run: pnpm run lint
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Lint
+        run: pnpm lint
 
   test-app:
     name: Test app
@@ -37,12 +40,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
+      - name: Install Node
       - uses: actions/setup-node@v4
         with:
           cache: 'pnpm'
           node-version: ${{ env.NODE_VERSION }}
-      - run: pnpm i --frozen-lockfile
-      - run: pnpm percy exec -- npm run test
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Run Tests
+      - run: pnpm percy exec -- pnpm run test
         env:
           PERCY_PARALLEL_NONCE: ${{ env.PERCY_PARALLEL_NONCE }}
           PERCY_PARALLEL_TOTAL: ${{ env.PERCY_PARALLEL_TOTAL }}
