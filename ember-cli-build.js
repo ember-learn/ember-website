@@ -2,7 +2,7 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function (defaults) {
+module.exports = async function (defaults) {
   const app = new EmberApp(defaults, {
     babel: {
       plugins: [require.resolve('ember-auto-import/babel-plugin')],
@@ -104,6 +104,14 @@ module.exports = function (defaults) {
           justCopy: process.env.EMBER_ENV !== 'production',
         },
       ],
+    },
+  });
+
+  const { setConfig } = await import('@warp-drive/build-config');
+  setConfig(app, __dirname, {
+    // mark individual deprecations as resolved by setting them to `false`
+    deprecations: {
+      DEPRECATE_EMBER_INFLECTOR: false
     },
   });
 
