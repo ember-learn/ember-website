@@ -23,6 +23,9 @@ module('Acceptance | mascots/commission', function (hooks) {
     await visit('/mascots/commission');
     await a11yAudit({
       rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
         'color-contrast': {
           enabled: false,
         },

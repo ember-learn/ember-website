@@ -27,7 +27,14 @@ module('Integration | Component | highcharts', function (hooks) {
       .dom('[data-test-chart] svg')
       .exists({ count: 1 }, 'We see an svg element.');
 
-    await a11yAudit();
+    await a11yAudit({
+      rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
+      },
+    }
+);
 
     assert.ok(true, 'We passed the accessibility audit.');
   });

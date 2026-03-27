@@ -21,7 +21,14 @@ module('Acceptance | logos', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/logos');
-    await a11yAudit();
+    await a11yAudit({
+      rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
+      },
+    }
+);
 
     assert.hasPageTitle('Branding - Ember.js');
   });

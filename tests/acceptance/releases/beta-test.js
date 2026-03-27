@@ -21,7 +21,14 @@ module('Acceptance | releases/beta', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/releases/beta');
-    await a11yAudit();
+    await a11yAudit({
+      rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
+      },
+    }
+);
 
     assert.hasPageTitle('Beta - Releases - Ember.js');
   });

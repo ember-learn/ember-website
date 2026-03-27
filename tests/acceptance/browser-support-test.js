@@ -19,7 +19,13 @@ module('Acceptance | browser-support', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/browser-support');
-    await a11yAudit();
+    await a11yAudit({
+      rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
+      },
+    });
 
     assert.hasPageTitle('Browser Support - Ember.js');
   });

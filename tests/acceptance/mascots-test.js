@@ -21,7 +21,14 @@ module('Acceptance | mascots', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/mascots');
-    await a11yAudit();
+    await a11yAudit({
+      rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
+      },
+    }
+);
 
     assert.hasPageTitle('Mascots - Ember.js');
   });

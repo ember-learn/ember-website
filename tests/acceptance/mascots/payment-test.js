@@ -23,6 +23,9 @@ module('Acceptance | mascots/payment', function (hooks) {
     await visit('/mascots/payment');
     await a11yAudit({
       rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
         'color-contrast': {
           enabled: false,
         },

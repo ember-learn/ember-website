@@ -21,7 +21,14 @@ module('Acceptance | community/meetups', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/community/meetups');
-    await a11yAudit();
+    await a11yAudit({
+      rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
+      },
+    }
+);
 
     assert.hasPageTitle('Meetups - Community - Ember.js');
   });

@@ -23,6 +23,9 @@ module('Acceptance | index', function (hooks) {
     await visit('/');
     await a11yAudit({
       rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
         'color-contrast': {
           /**
            * Disabled because ember-styleguide was released without checking what

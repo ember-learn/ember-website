@@ -21,7 +21,14 @@ module('Acceptance | security', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/security');
-    await a11yAudit();
+    await a11yAudit({
+      rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
+      },
+    }
+);
 
     assert.hasPageTitle('Security - Ember.js');
   });

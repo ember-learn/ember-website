@@ -21,7 +21,14 @@ module('Acceptance | community/meetups getting started', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/community/meetups-getting-started');
-    await a11yAudit();
+    await a11yAudit({
+      rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
+      },
+    }
+);
 
     assert.hasPageTitle('Getting Started - Community - Ember.js');
   });

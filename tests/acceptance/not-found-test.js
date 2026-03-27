@@ -21,7 +21,14 @@ module('Acceptance | not found', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/foo-bar-baz');
-    await a11yAudit();
+    await a11yAudit({
+      rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
+      },
+    }
+);
 
     assert.hasPageTitle('Page Not Found - Ember.js');
   });

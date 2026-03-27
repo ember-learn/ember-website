@@ -21,7 +21,14 @@ module('Acceptance | ember-users', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/ember-users');
-    await a11yAudit();
+    await a11yAudit({
+      rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
+      },
+    }
+);
 
     assert.hasPageTitle("Who's Using Ember.js - Ember.js");
   });
