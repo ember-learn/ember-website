@@ -35,6 +35,9 @@ importers:
       '@lhci/cli':
         specifier: 0.6.1
         version: 0.6.1
+      '@nullvoxpopuli/ember-composable-helpers':
+        specifier: ^5.3.1
+        version: 5.3.1(@babel/core@7.26.9)
       '@percy/cli':
         specifier: ^1.0.0-beta.71
         version: 1.30.7
@@ -116,9 +119,6 @@ importers:
       ember-cli-terser:
         specifier: ^4.0.2
         version: 4.0.2
-      ember-composable-helpers:
-        specifier: ^5.0.0
-        version: 5.0.0
       ember-data:
         specifier: ~4.12.0
         version: 4.12.8(@babel/core@7.26.9)(@ember/string@4.0.1)(@glimmer/tracking@1.1.2)(ember-source@4.12.4(@babel/core@7.26.9)(@glimmer/component@1.1.2(@babel/core@7.26.9))(webpack@5.98.0))(webpack@5.98.0)
@@ -1426,6 +1426,9 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
+  '@nullvoxpopuli/ember-composable-helpers@5.3.1':
+    resolution: {integrity: sha512-9K8jG/kb5TsgwoNWMEQi8KbvHKIi7lswfoyX+7qoMgPEW5YCNH/165VH99pxffbweFYAkGvwz23b1RQ7IDqNtA==}
+
   '@percy/cli-app@1.30.7':
     resolution: {integrity: sha512-MPgCCH5a7RRncy0ik7JDJorW216WshC5mRimYh4NWE8DB1t0z0zphust4LSy8dQU2Sz5pR9eWiGFJrYpa4QXJQ==}
     engines: {node: '>=14'}
@@ -2666,10 +2669,6 @@ packages:
 
   broccoli-funnel@1.2.0:
     resolution: {integrity: sha512-0pbFNUA5Ml+gPPd58Rj/M26OS21+bMiV0F+m6+9OVzAhAdppVLxylSsXfWAt2WOD3kS+D8UsDv6GSmnZhbw/dw==}
-
-  broccoli-funnel@2.0.1:
-    resolution: {integrity: sha512-C8Lnp9TVsSSiZMGEF16C0dCiNg2oJqUKwuZ1K4kVC6qRPG/2Cj/rtB5kRCC9qEbwqhX71bDbfHROx0L3J7zXQg==}
-    engines: {node: ^4.5 || 6.* || >= 7.*}
 
   broccoli-funnel@2.0.2:
     resolution: {integrity: sha512-/vDTqtv7ipjEZQOVqO4vGDVAOZyuYzQ/EgGoyewfOgh1M7IQAToBKZI0oAQPgMBeFPPlIbfMuAngk+ohPBuaHQ==}
@@ -4090,10 +4089,6 @@ packages:
     engines: {node: 16.* || >= 18}
     peerDependencies:
       ember-source: ^3.8 || ^4.0.0 || >= 5.0.0
-
-  ember-composable-helpers@5.0.0:
-    resolution: {integrity: sha512-gyUrjiSju4QwNrsCLbBpP0FL6VDFZaELNW7Kbcp60xXhjvNjncYgzm4zzYXhT+i1lLA6WEgRZ3lOGgyBORYD0w==}
-    engines: {node: 12.* || 14.* || >= 16}
 
   ember-concurrency@2.3.7:
     resolution: {integrity: sha512-sz6sTIXN/CuLb5wdpauFa+rWXuvXXSnSHS4kuNzU5GSMDX1pLBWSuovoUk61FUe6CYRqBmT1/UushObwBGickQ==}
@@ -10817,6 +10812,14 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.0
 
+  '@nullvoxpopuli/ember-composable-helpers@5.3.1(@babel/core@7.26.9)':
+    dependencies:
+      '@embroider/addon-shim': 1.9.0
+      decorator-transforms: 2.3.1(@babel/core@7.26.9)
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
+
   '@percy/cli-app@1.30.7':
     dependencies:
       '@percy/cli-command': 1.30.7
@@ -12698,24 +12701,6 @@ snapshots:
       broccoli-plugin: 1.3.1
       debug: 2.6.9
       exists-sync: 0.0.4
-      fast-ordered-set: 1.0.3
-      fs-tree-diff: 0.5.9
-      heimdalljs: 0.2.6
-      minimatch: 3.1.2
-      mkdirp: 0.5.6
-      path-posix: 1.0.0
-      rimraf: 2.7.1
-      symlink-or-copy: 1.3.1
-      walk-sync: 0.3.4
-    transitivePeerDependencies:
-      - supports-color
-
-  broccoli-funnel@2.0.1:
-    dependencies:
-      array-equal: 1.0.2
-      blank-object: 1.0.2
-      broccoli-plugin: 1.3.1
-      debug: 2.6.9
       fast-ordered-set: 1.0.3
       fs-tree-diff: 0.5.9
       heimdalljs: 0.2.6
@@ -14890,15 +14875,6 @@ snapshots:
       - '@glint/template'
       - supports-color
       - webpack
-
-  ember-composable-helpers@5.0.0:
-    dependencies:
-      '@babel/core': 7.26.9
-      broccoli-funnel: 2.0.1
-      ember-cli-babel: 7.26.11
-      resolve: 1.22.10
-    transitivePeerDependencies:
-      - supports-color
 
   ember-concurrency@2.3.7(@babel/core@7.26.9):
     dependencies:
