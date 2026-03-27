@@ -66,7 +66,7 @@
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
     "ember-data": "~5.3.8",
-    "ember-data-fastboot": "github:cardstack/ember-data-fastboot",
+    "ember-data-fastboot": "^0.1.2",
     "ember-fetch": "^8.1.2",
     "ember-href-to": "^5.0.0",
     "ember-inflector": "^6.0.0",
@@ -131,7 +131,10 @@
       "core-js",
       "fsevents",
       "sharp"
-    ]
+    ],
+    "patchedDependencies": {
+      "ember-data-fastboot": "patches/ember-data-fastboot.patch"
+    }
   },
   "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
 }
