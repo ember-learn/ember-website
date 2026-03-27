@@ -111,7 +111,7 @@ module.exports = async function (defaults) {
   setConfig(app, __dirname, {
     // mark individual deprecations as resolved by setting them to `false`
     deprecations: {
-      DEPRECATE_EMBER_INFLECTOR: false
+      DEPRECATE_EMBER_INFLECTOR: false,
     },
   });
 
