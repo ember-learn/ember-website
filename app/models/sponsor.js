@@ -7,7 +7,7 @@ export default class SponsorModel extends Model {
   @attr name;
   @attr('date') start;
   @attr url;
-  @attr('number') order;
+  @attr order;
 
   get term() {
     let startYear = this.start.getFullYear();

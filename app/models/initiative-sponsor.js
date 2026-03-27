@@ -5,6 +5,6 @@ export default class SponsorModel extends Model {
   @attr image;
   @attr name;
   @attr url;
-  @attr('number') tier;
-  @attr('number') order;
+  @attr tier;
+  @attr order;
 }
