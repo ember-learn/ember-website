@@ -47,7 +47,7 @@
     "concurrently": "^8.2.2",
     "dayjs": "^1.10.7",
     "deepmerge": "^4.0.0",
-    "ember-a11y-testing": "^4.3.0",
+    "ember-a11y-testing": "^6.1.1",
     "ember-auto-import": "^2.8.1",
     "ember-body-class": "^2.1.1",
     "ember-cached-decorator-polyfill": "^0.1.4",
