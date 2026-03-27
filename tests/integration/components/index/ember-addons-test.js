@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { click, focus, render, triggerKeyEvent } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';

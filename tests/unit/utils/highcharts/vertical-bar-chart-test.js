@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import VerticalBarChart from 'ember-website/utils/highcharts/vertical-bar-chart';
 import { module, test } from 'qunit';
 

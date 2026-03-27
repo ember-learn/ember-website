@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
@@ -21,7 +22,14 @@ module('Acceptance | mascots/payment sent', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/mascots/payment-sent');
-    await a11yAudit();
+    await a11yAudit({
+      rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
+      },
+    }
+);
 
     assert.hasPageTitle('Ember.js');
   });

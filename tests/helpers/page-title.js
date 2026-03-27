@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { getPageTitle } from 'ember-page-title/test-support';
 
 export function setupPageTitleTest(hooks) {

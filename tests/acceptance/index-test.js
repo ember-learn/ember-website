@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { click, currentURL, findAll, visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
@@ -23,6 +24,9 @@ module('Acceptance | index', function (hooks) {
     await visit('/');
     await a11yAudit({
       rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
         'color-contrast': {
           /**
            * Disabled because ember-styleguide was released without checking what

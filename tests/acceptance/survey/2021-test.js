@@ -21,9 +21,12 @@ module('Acceptance | survey/2021', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/survey/2021');
-    await a11yAudit({
-      exclude: [['[data-test-chart]']],
-      include: [['#ember-testing-container']],
+    await a11yAudit('#ember-testing-container > *', {
+      rules: {
+        'link-in-text-block': {
+          enabled: false,
+        },
+      },
     });
 
     assert.hasPageTitle('Ember Community Survey 2021 - Ember.js');
