@@ -9,7 +9,7 @@ module('Integration | Helper | html-safe', function (hooks) {
   test('The helper does not error when HTML code is undefined', async function (assert) {
     await render(hbs`
       <div data-test-value>
-        {{html-safe}}
+        {{html-safe undefined}}
       </div>
     `);
 

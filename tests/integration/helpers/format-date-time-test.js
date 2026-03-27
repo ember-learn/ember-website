@@ -13,7 +13,7 @@ module('Integration | Helper | format-date-time', function (hooks) {
   test('The helper does not error when date is undefined', async function (assert) {
     await render(hbs`
       <div data-test-value>
-        {{format-date-time}}
+        {{format-date-time undefined}}
       </div>
     `);
 
