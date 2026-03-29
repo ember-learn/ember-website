@@ -5,6 +5,13 @@ const macros = buildMacros({
     config.setGlobalConfig(import.meta.filename, '@embroider/core', {
       active: true,
     });
+    config.setGlobalConfig(import.meta.filename, 'WarpDrive', {
+      env: { DEBUG: false, TESTING: false },
+      debug: {},
+      activeLogging: {},
+      deprecations: {},
+      features: {},
+    });
   },
 });
 

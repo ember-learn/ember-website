@@ -1,23 +1,24 @@
-'use strict';
+"use strict";
 
 module.exports = {
   root: true,
-  parser: '@babel/eslint-parser',
+  parser: "@babel/eslint-parser",
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
     requireConfigFile: false,
     babelOptions: {
+      configFile: false,
       plugins: [
-        ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
+        ["@babel/plugin-proposal-decorators", { decoratorsBeforeExport: true }],
       ],
     },
   },
-  plugins: ['ember'],
+  plugins: ["ember"],
   extends: [
-    'eslint:recommended',
-    'plugin:ember/recommended',
-    'plugin:prettier/recommended',
+    "eslint:recommended",
+    "plugin:ember/recommended",
+    "plugin:prettier/recommended",
   ],
   env: {
     browser: true,
@@ -27,31 +28,31 @@ module.exports = {
     // node files
     {
       files: [
-        './.eslintrc.cjs',
-        './.prettierrc.cjs',
-        './.stylelintrc.cjs',
-        './.template-lintrc.cjs',
-        './testem.cjs',
-        './blueprints/*/index.js',
-        './config/**/*.js',
-        './lib/*/index.js',
-        './scripts/**/*.mjs',
+        "./.eslintrc.cjs",
+        "./.prettierrc.cjs",
+        "./.stylelintrc.cjs",
+        "./.template-lintrc.cjs",
+        "./testem.cjs",
+        "./blueprints/*/index.cjs",
+        "./config/**/*.js",
+        "./lib/*/index.js",
+        "./scripts/**/*.mjs",
       ],
       parserOptions: {
-        sourceType: 'script',
+        sourceType: "script",
       },
       env: {
         browser: false,
         node: true,
       },
-      extends: ['plugin:n/recommended'],
+      extends: ["plugin:n/recommended"],
     },
     {
       // test files
-      files: ['tests/**/*-test.{js,ts}'],
-      extends: ['plugin:qunit/recommended'],
+      files: ["tests/**/*-test.{js,ts}"],
+      extends: ["plugin:qunit/recommended"],
       rules: {
-        'qunit/require-expect': 'off',
+        "qunit/require-expect": "off",
       },
     },
   ],
