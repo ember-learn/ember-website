@@ -47,6 +47,9 @@ importers:
       '@rollup/plugin-babel':
         specifier: ^7.0.0
         version: 7.0.0(@babel/core@7.26.9)(rollup@4.60.0)
+      '@warp-drive/build-config':
+        specifier: ^5.8.1
+        version: 5.8.1(@babel/core@7.26.9)(@glint/template@1.7.4)
       algoliasearch:
         specifier: ^3.33.0
         version: 3.35.1
@@ -9374,7 +9377,7 @@ snapshots:
       postcss-modules-values: 4.0.0(postcss@8.5.2)
       postcss-value-parser: 4.2.0
       schema-utils: 3.3.0
-      semver: 7.7.1
+      semver: 7.7.4
       webpack: 4.47.0
 
   css-tree@2.3.1:
@@ -9751,7 +9754,7 @@ snapshots:
       hash-for-dep: 1.5.1
       heimdalljs-logger: 0.1.10
       json-stable-stringify: 1.2.1
-      semver: 7.7.1
+      semver: 7.7.4
       silent-error: 1.1.1
       strip-bom: 4.0.0
       walk-sync: 2.2.0
@@ -10248,7 +10251,7 @@ snapshots:
   eslint-compat-utils@0.5.1(eslint@8.57.1):
     dependencies:
       eslint: 8.57.1
-      semver: 7.7.1
+      semver: 7.7.4
 
   eslint-config-prettier@9.1.2(eslint@8.57.1):
     dependencies:
@@ -11939,7 +11942,7 @@ snapshots:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.16.1
-      semver: 7.7.1
+      semver: 7.7.4
       validate-npm-package-license: 3.0.4
 
   normalize-path@2.1.1:
@@ -13670,7 +13673,7 @@ snapshots:
   validate-peer-dependencies@1.2.0:
     dependencies:
       resolve-package-path: 3.1.0
-      semver: 7.7.1
+      semver: 7.7.4
 
   vary@1.1.2: {}
 

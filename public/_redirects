@@ -1,0 +1,32 @@
+/about*  /
+/blog/*  https://blog.emberjs.com/:splat
+/brand  /logos
+/branding  /logos
+/builds/*  /releases/:splat
+/dashboard  /statusboard
+/deprecations/*  https://deprecations.emberjs.com/:splat
+/documentation/*  https://guides.emberjs.com/release/:splat
+/ember-community-survey-* /survey/:splat
+/guides/*  https://guides.emberjs.com/release/:splat
+/internal  /api
+/legal  /about/legal
+/meetup-assets  /community/meetups/assets
+/statusboard  https://github.com/emberjs/rfc-tracking/issues
+/survey  /survey/2024
+/team  /teams
+/tomster/*  /mascots/:splat
+/zoey  /mascots
+
+
+### API Redirects
+
+# query params
+/api/* anchor=:anchor type=:type  https://api.emberjs.com/:splat?anchor=:anchor&type=:type
+/api/* anchor=:anchor             https://api.emberjs.com/:splat?anchor=:anchor
+/api/* type=:type                 https://api.emberjs.com/:splat?type=:type
+
+# base case
+/api/*                            https://api.emberjs.com/:splat
+
+# Fallback for non prembered route (single-page app)
+/*    /_empty.html   200

@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import { extensions, ember, hbs } from '@embroider/vite';
 import { babel } from '@rollup/plugin-babel';
-import { buildMacros } from '@embroider/macros/babel';
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 
@@ -44,21 +43,6 @@ function emberSourceResolver() {
   };
 }
 
-const warpDriveMacros = buildMacros({
-  configure(config) {
-    config.setGlobalConfig(import.meta.filename, '@embroider/core', {
-      active: true,
-    });
-    config.setGlobalConfig(import.meta.filename, 'WarpDrive', {
-      env: { DEBUG: false, TESTING: false },
-      debug: {},
-      activeLogging: {},
-      deprecations: {},
-      features: {},
-    });
-  },
-});
-
 export default defineConfig({
   optimizeDeps: {
     exclude: ['ember-source'],
@@ -67,21 +51,10 @@ export default defineConfig({
     hbs(),
     emberSourceResolver(),
     ember(),
-    // Main babel pass: everything except @warp-drive (its dist breaks with decorator-transforms)
     babel({
       babelHelpers: 'runtime',
       extensions,
       configFile: './babel.config.mjs',
-      exclude: /@warp-drive/,
-    }),
-    // Second pass: only macros for @warp-drive files
-    babel({
-      babelHelpers: 'bundled',
-      extensions: ['.js'],
-      configFile: false,
-      babelrc: false,
-      plugins: [...warpDriveMacros.babelMacros],
-      include: /@warp-drive/,
     }),
   ],
 });

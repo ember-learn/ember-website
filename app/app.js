@@ -1,6 +1,9 @@
 import Application from 'ember-strict-application-resolver';
 import PageTitleService from 'ember-page-title/services/page-title';
 
+// TODO: Re-add once ember-styleguide v2 conversion is complete
+// import * as NavbarService from 'ember-styleguide/services/navbar';
+
 import Router from './router.js';
 
 export default class App extends Application {

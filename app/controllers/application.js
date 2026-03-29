@@ -1,9 +1,9 @@
 import Controller from '@ember/controller';
 
-// TODO: Restore once ember-styleguide is converted to v2 addon
+// TODO: Restore once ember-styleguide v2 conversion is complete
 // import { infoLinks } from 'ember-styleguide/constants/es-footer';
 // import headerLinks from 'ember-styleguide/constants/links';
-// import replaceLinks from '../utils/replace-links.js';
+// import replaceLinks from 'ember-website/utils/replace-links';
 
 export default class ApplicationController extends Controller {
   queryParams = ['uwu'];

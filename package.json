@@ -37,6 +37,7 @@
     "@glimmer/component": "^2.0.0",
     "@nullvoxpopuli/ember-composable-helpers": "^5.3.1",
     "@rollup/plugin-babel": "^7.0.0",
+    "@warp-drive/build-config": "^5.8.1",
     "algoliasearch": "^3.33.0",
     "babel-plugin-ember-template-compilation": "^3.1.0",
     "blurhash": "^2.0.5",
