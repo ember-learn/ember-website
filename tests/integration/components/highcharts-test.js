@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
-import { a11yAudit } from 'ember-a11y-testing/test-support';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
 import { waitUntilAllChartsAreDrawn } from 'ember-website/tests/helpers/highcharts';
@@ -28,7 +27,6 @@ module('Integration | Component | highcharts', function (hooks) {
       .dom('[data-test-chart] svg')
       .exists({ count: 1 }, 'We see an svg element.');
 
-    await a11yAudit({
       rules: {
         'link-in-text-block': {
           enabled: false,

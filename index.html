@@ -11,29 +11,19 @@
     <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
     <meta name="twitter:image" content="https://blog.emberjs.com/images/logos/e-icon.png" />
 
-    {{content-for "head"}}
-
-    <link integrity="" rel="stylesheet" href="/@embroider/virtual/vendor.css">
-    <link integrity="" rel="stylesheet" href="/@embroider/virtual/app.css">
+    <link rel="stylesheet" href="./app/styles/app.css">
 
     <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicons/icon.svg" type="image/svg+xml">
     <link rel="manifest" href="/favicons/manifest.webmanifest">
-
-    {{content-for "head-footer"}}
   </head>
   <body>
-    {{content-for "body"}}
-
-    <script src="/@embroider/virtual/vendor.js"></script>
     <script type="module">
-      import Application from './app/app';
-      import environment from './app/config/environment';
+      import Application from './app/app.js';
+      import config from './app/config/environment.js';
 
-      Application.create(environment.APP);
+      Application.create(config.APP);
     </script>
-
-    {{content-for "body-footer"}}
   </body>
 </html>

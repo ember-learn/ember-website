@@ -30,5 +30,8 @@ jsconfig.json
 
 /.idea/
 
+# generated content data
+/public/data/
+
 # broccoli-debug
 /DEBUG/

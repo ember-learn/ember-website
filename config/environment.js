@@ -29,10 +29,6 @@ module.exports = function (environment) {
       enabled: false,
     },
 
-    fastboot: {
-      hostWhitelist: [/^localhost:\d+$/],
-    },
-
     metricsAdapters: [
       {
         name: 'GoogleAnalytics',

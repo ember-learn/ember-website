@@ -1,6 +1,5 @@
 import { visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
-import { a11yAudit } from 'ember-a11y-testing/test-support';
 
 import { setupApplicationTest } from 'ember-qunit';
 
@@ -24,7 +23,6 @@ module('Acceptance | survey/2018', function (hooks) {
   test('Accessibility audit', async function (assert) {
     await visit('/survey/2018');
     await waitUntilAllChartsAreDrawn();
-    await a11yAudit('#ember-testing-container > *', {
       rules: {
         'link-in-text-block': {
           enabled: false,

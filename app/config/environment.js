@@ -1,27 +1,32 @@
-import loadConfigFromMeta from '@embroider/config-meta-loader';
-import { assert } from '@ember/debug';
+const environment = import.meta.env.DEV ? 'development' : 'production';
 
-const config = loadConfigFromMeta('ember-website');
+const config = {
+  modulePrefix: 'ember-website',
+  environment,
+  rootURL: '/',
+  locationType: 'trailing-history',
+  historySupportMiddleware: true,
+  EmberENV: {
+    EXTEND_PROTOTYPES: false,
+  },
 
-assert(
-  'config is not an object',
-  typeof config === 'object' && config !== null
-);
-assert(
-  'modulePrefix was not detected on your config',
-  'modulePrefix' in config && typeof config.modulePrefix === 'string'
-);
-assert(
-  'locationType was not detected on your config',
-  'locationType' in config && typeof config.locationType === 'string'
-);
-assert(
-  'rootURL was not detected on your config',
-  'rootURL' in config && typeof config.rootURL === 'string'
-);
-assert(
-  'APP was not detected on your config',
-  'APP' in config && typeof config.APP === 'object'
-);
+  APP: {},
+
+  'ember-algolia': {
+    algoliaId: 'BH4D9OD16A',
+    algoliaKey: '760969ef081fcadc7e0e60faefdb0907',
+  },
+
+  pageTitle: {
+    separator: ' - ',
+    prepend: true,
+  },
+};
+
+export function enterTestMode() {
+  config.locationType = 'none';
+  config.APP.rootElement = '#ember-testing';
+  config.APP.autoboot = false;
+}
 
 export default config;

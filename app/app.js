@@ -1,16 +1,27 @@
-import Application from '@ember/application';
-import Resolver from 'ember-resolver';
-import loadInitializers from 'ember-load-initializers';
-import config from "./config/environment";
+import Application from 'ember-strict-application-resolver';
+import PageTitleService from 'ember-page-title/services/page-title';
 
-import setupInspector from "@embroider/legacy-inspector-support/ember-source-4.12";
-import compatModules from "@embroider/virtual/compat-modules";
+import Router from './router.js';
 
 export default class App extends Application {
-  modulePrefix = config.modulePrefix;
-  podModulePrefix = config.podModulePrefix;
-  Resolver = Resolver.withModules(compatModules);
-  inspector = setupInspector(this);
-}
+  modules = {
+    './router': Router,
 
-loadInitializers(App, config.modulePrefix, compatModules);
+    // v2 addon services
+    './services/page-title': PageTitleService,
+
+    // app modules
+    ...import.meta.glob('./adapters/*.js', { eager: true }),
+    ...import.meta.glob('./components/**/*.{js,hbs}', { eager: true }),
+    ...import.meta.glob('./controllers/**/*.js', { eager: true }),
+    ...import.meta.glob('./helpers/*.js', { eager: true }),
+    ...import.meta.glob('./locations/*.js', { eager: true }),
+    ...import.meta.glob('./models/*.js', { eager: true }),
+    ...import.meta.glob('./modifiers/*.js', { eager: true }),
+    ...import.meta.glob('./routes/**/*.js', { eager: true }),
+    ...import.meta.glob('./serializers/*.js', { eager: true }),
+    ...import.meta.glob('./services/*.js', { eager: true }),
+    ...import.meta.glob('./templates/**/*.hbs', { eager: true }),
+    ...import.meta.glob('./utils/**/*.js', { eager: true }),
+  };
+}

@@ -22,25 +22,20 @@ module.exports = {
   env: {
     browser: true,
   },
-  globals: {
-    // leaflet maps global
-    L: 'writeable',
-  },
   rules: {},
   overrides: [
     // node files
     {
       files: [
-        './.eslintrc.js',
-        './.prettierrc.js',
-        './.stylelintrc.js',
-        './.template-lintrc.js',
-        './ember-cli-build.js',
-        './testem.js',
+        './.eslintrc.cjs',
+        './.prettierrc.cjs',
+        './.stylelintrc.cjs',
+        './.template-lintrc.cjs',
+        './testem.cjs',
         './blueprints/*/index.js',
         './config/**/*.js',
         './lib/*/index.js',
-        './server/**/*.js',
+        './scripts/**/*.mjs',
       ],
       parserOptions: {
         sourceType: 'script',
