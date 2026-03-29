@@ -1,5 +1,6 @@
 import { visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
+import { a11yAudit } from 'ember-a11y-testing/test-support';
 import { setupApplicationTest } from 'ember-qunit';
 
 import { setupPageTitleTest } from 'ember-website/tests/helpers/page-title';
@@ -18,6 +19,7 @@ module('Acceptance | browser-support', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/browser-support');
+    await a11yAudit({
       rules: {
         'link-in-text-block': {
           enabled: false,

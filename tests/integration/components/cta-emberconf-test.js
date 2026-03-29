@@ -1,4 +1,5 @@
 import { render } from '@ember/test-helpers';
+import { a11yAudit } from 'ember-a11y-testing/test-support';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
 import { module, test } from 'qunit';
@@ -10,6 +11,7 @@ module('Integration | Component | cta-emberconf', function (hooks) {
     await render(hbs`
       <CtaEmberconf />
     `);
+    await a11yAudit(this.element);
 
     assert.ok(true);
   });

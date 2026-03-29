@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { click, currentURL, findAll, visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
+import { a11yAudit } from 'ember-a11y-testing/test-support';
 
 import { setupApplicationTest } from 'ember-qunit';
 
@@ -21,6 +22,7 @@ module('Acceptance | mascots', function (hooks) {
 
   test('Accessibility audit', async function (assert) {
     await visit('/mascots');
+    await a11yAudit({
       rules: {
         'link-in-text-block': {
           enabled: false,

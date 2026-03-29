@@ -71,6 +71,9 @@ importers:
       deepmerge:
         specifier: ^4.0.0
         version: 4.3.1
+      ember-a11y-testing:
+        specifier: ^8.0.0
+        version: 8.0.0(@babel/core@7.26.9)(@ember/test-helpers@5.4.1(@babel/core@7.26.9)(@glint/template@1.7.4))(@ember/test-waiters@3.1.0)(axe-core@4.11.1)(qunit@2.24.1)
       ember-data:
         specifier: ~5.8.1
         version: 5.8.1(@babel/core@7.26.9)(@ember/test-helpers@5.4.1(@babel/core@7.26.9)(@glint/template@1.7.4))(@ember/test-waiters@3.1.0)(@glint/template@1.7.4)(ember-inflector@6.0.0(@babel/core@7.26.9))(qunit@2.24.1)
@@ -1915,6 +1918,10 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
+  axe-core@4.11.1:
+    resolution: {integrity: sha512-BASOg+YwO2C+346x3LZOeoovTIoTrRqEsqMa6fmfAV0P+U9mFr9NsyOEpiYvFjbc64NMrSswhV50WdXzdb/Z5A==}
+    engines: {node: '>=4'}
+
   babel-import-util@0.2.0:
     resolution: {integrity: sha512-CtWYYHU/MgK88rxMrLfkD356dApswtR/kWZ/c6JifG1m10e7tBBrs/366dFzWMAoqYmG5/JSh+94tUSpIwh+ag==}
     engines: {node: '>= 12.*'}
@@ -2873,6 +2880,18 @@ packages:
 
   elliptic@6.6.1:
     resolution: {integrity: sha512-RaddvvMatK2LJHqFJ+YA4WysVN5Ita9E35botqIYspQ4TkRAlCicdzKOjlyv/1Za5RyTNn7di//eEV0uTAfe3g==}
+
+  ember-a11y-testing@8.0.0:
+    resolution: {integrity: sha512-eKUzRPpMRliMqsWMl8MExKjCyAqgJUk6IlLKsyFKGf2dvDJwMH495MDY/XRw0Y9HhG+GXMw756YNtup01cLu9Q==}
+    engines: {node: '>= 18', pnpm: '>= 10'}
+    peerDependencies:
+      '@ember/test-helpers': ^3.0.3 || ^4.0.2 || ^5.0.0
+      '@ember/test-waiters': ^2.4.3 || ^3.0.0 || ^4.0.0
+      axe-core: ^4.0.0
+      qunit: '>= 2'
+    peerDependenciesMeta:
+      qunit:
+        optional: true
 
   ember-auto-import@2.10.0:
     resolution: {integrity: sha512-bcBFDYVTFHyqyq8BNvsj6UO3pE6Uqou/cNmee0WaqBgZ+1nQqFz0UE26usrtnFAT+YaFZSkqF2H36QW84k0/cg==}
@@ -8491,6 +8510,8 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
+  axe-core@4.11.1: {}
+
   babel-import-util@0.2.0: {}
 
   babel-import-util@2.1.1: {}
@@ -9560,6 +9581,19 @@ snapshots:
       inherits: 2.0.4
       minimalistic-assert: 1.0.1
       minimalistic-crypto-utils: 1.0.1
+
+  ember-a11y-testing@8.0.0(@babel/core@7.26.9)(@ember/test-helpers@5.4.1(@babel/core@7.26.9)(@glint/template@1.7.4))(@ember/test-waiters@3.1.0)(axe-core@4.11.1)(qunit@2.24.1):
+    dependencies:
+      '@ember/test-helpers': 5.4.1(@babel/core@7.26.9)(@glint/template@1.7.4)
+      '@ember/test-waiters': 3.1.0
+      '@embroider/addon-shim': 1.10.2
+      axe-core: 4.11.1
+      decorator-transforms: 2.3.1(@babel/core@7.26.9)
+    optionalDependencies:
+      qunit: 2.24.1
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
 
   ember-auto-import@2.10.0(@glint/template@1.7.4)(webpack@4.47.0):
     dependencies:
