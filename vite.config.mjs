@@ -55,6 +55,8 @@ export default defineConfig({
       babelHelpers: 'runtime',
       extensions,
       configFile: './babel.config.mjs',
+      // Don't recompile templates in pre-built v2 addon dist files
+      exclude: /node_modules\/(?!ember-source\/)/,
     }),
   ],
 });
