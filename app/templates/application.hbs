@@ -9,8 +9,16 @@
     </LinkTo>
   </CalloutBanner>
 
-{{!-- TODO: Restore EsHeader/EsFooter once ember-styleguide v2 is compatible with ember-source 5.12 --}}
+<EsHeader
+  @home="/"
+  @links={{this.links}}
+/>
 
 <main>
   {{outlet}}
 </main>
+
+<EsFooter
+  @contributeLink="https://github.com/ember-learn/ember-website"
+  @infoLinks={{this.infoLinks}}
+/>

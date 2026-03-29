@@ -55,8 +55,23 @@ export default defineConfig({
       babelHelpers: 'runtime',
       extensions,
       configFile: './babel.config.mjs',
-      // Don't recompile templates in pre-built v2 addon dist files
-      exclude: /node_modules\/(?!ember-source\/)/,
+      // Process ember-source and v2 addons that have uncompiled @embroider/macros.
+      // Use a function to handle pnpm's deep node_modules paths.
+      filter: {
+        exclude: {
+          id(id) {
+            if (!id.includes('node_modules')) return false;
+            // Extract the package name from the last node_modules/ segment
+            const lastNM = id.lastIndexOf('node_modules/');
+            if (lastNM === -1) return false;
+            const rest = id.slice(lastNM + 'node_modules/'.length);
+            // Include ember-source and @ember/test-waiters
+            if (rest.startsWith('ember-source/')) return false;
+            if (rest.startsWith('@ember/test-waiters/')) return false;
+            return true;
+          },
+        },
+      },
     }),
   ],
 });

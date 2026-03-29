@@ -1,5 +1,7 @@
 import Application from 'ember-strict-application-resolver';
 import PageTitleService from 'ember-page-title/services/page-title';
+import NavbarService from 'ember-styleguide/services/navbar';
+import ProgressService from 'ember-styleguide/services/progress';
 
 import Router from './router.js';
 
@@ -9,6 +11,8 @@ export default class App extends Application {
 
     // v2 addon services
     './services/page-title': PageTitleService,
+    './services/navbar': NavbarService,
+    './services/progress': ProgressService,
 
     // app modules
     ...import.meta.glob('./adapters/*.js', { eager: true }),
