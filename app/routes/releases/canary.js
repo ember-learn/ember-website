@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 import Route from '@ember/routing/route';
-import fetch from 'fetch';
 import { hash } from 'rsvp';
 import { inject as service } from '@ember/service';
 
