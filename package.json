@@ -35,7 +35,6 @@
     "@embroider/router": "^3.0.6",
     "@embroider/vite": "^1.5.2",
     "@glimmer/component": "^2.0.0",
-    "@glimmer/tracking": "^1.1.2",
     "@nullvoxpopuli/ember-composable-helpers": "^5.3.1",
     "@rollup/plugin-babel": "^7.0.0",
     "algoliasearch": "^3.33.0",
