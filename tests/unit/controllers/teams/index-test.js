@@ -45,6 +45,7 @@ module('Unit | Controller | teams/index', function (hooks) {
       'edward-faulkner',
       'katie-gengler',
       'chris-manson',
+      'preston-sego',
     ]);
   });
 
