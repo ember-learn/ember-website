@@ -1,3 +1,5 @@
+/tmp/
+
 # compiled output
 /dist/
 /declarations/
@@ -27,6 +29,9 @@ jsconfig.json
 /.lighthouseci/
 
 /.idea/
+
+# generated content data
+/public/data/
 
 # broccoli-debug
 /DEBUG/

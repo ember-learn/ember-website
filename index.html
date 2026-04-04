@@ -11,24 +11,19 @@
     <meta name="google-site-verification" content="N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM" />
     <meta name="twitter:image" content="https://blog.emberjs.com/images/logos/e-icon.png" />
 
-    {{content-for "head"}}
-
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/ember-website.css">
+    <link rel="stylesheet" href="./app/styles/app.css">
 
     <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicons/icon.svg" type="image/svg+xml">
     <link rel="manifest" href="/favicons/manifest.webmanifest">
-
-    {{content-for "head-footer"}}
   </head>
   <body>
-    {{content-for "body"}}
+    <script type="module">
+      import Application from './app/app.js';
+      import config from './app/config/environment.js';
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/ember-website.js"></script>
-
-    {{content-for "body-footer"}}
+      Application.create(config.APP);
+    </script>
   </body>
 </html>

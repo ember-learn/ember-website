@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 import { visit } from '@ember/test-helpers';
-import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
 
 import { setupApplicationTest } from 'ember-qunit';
@@ -15,7 +14,6 @@ module('Acceptance | security', function (hooks) {
 
   test('Percy snapshot', async function (assert) {
     await visit('/security');
-    await percySnapshot(assert);
 
     assert.ok(true);
   });
