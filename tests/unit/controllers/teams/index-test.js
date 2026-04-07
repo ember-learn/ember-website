@@ -39,7 +39,6 @@ module('Unit | Controller | teams/index', function (hooks) {
     assert.deepEqual(output, [
       'yehuda-katz',
       'tom-dale',
-      'peter-wagenet',
       'leah-silber',
       'matthew-beale',
       'edward-faulkner',
@@ -56,7 +55,6 @@ module('Unit | Controller | teams/index', function (hooks) {
     const output = coreToolingTeamMembers.map((teamMember) => teamMember.id);
 
     assert.deepEqual(output, [
-      'peter-wagenet',
       'edward-faulkner',
       'katie-gengler',
       'kelly-selden',
