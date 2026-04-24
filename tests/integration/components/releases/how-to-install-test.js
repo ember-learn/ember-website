@@ -31,8 +31,8 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
       .dom('[data-test-terminal-code]')
       .hasText(
         [
-          '# Install Ember Data 5.8.0:',
-          'npm install --save-dev ember-data@~5.8.0',
+          '# Install Ember Data 5.8.2:',
+          'npm install --save-dev ember-data@~5.8.2',
         ].join(' '),
         'We see the correct code.'
       );
@@ -40,7 +40,7 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
     assert
       .dom('[data-test-field="More Information"]')
       .hasText(
-        'Read the changelog for Ember Data 5.8.0.',
+        'Read the changelog for Ember Data 5.8.2.',
         'We see the correct description for more information.'
       );
 
@@ -48,7 +48,7 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
       .dom('[data-test-link="Changelog"]')
       .hasAttribute(
         'href',
-        'https://github.com/emberjs/data/blob/v5.8.0/CHANGELOG.md',
+        'https://github.com/emberjs/data/blob/v5.8.2/CHANGELOG.md',
         'We see the correct URL for the changelog.'
       );
   });
