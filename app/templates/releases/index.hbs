@@ -91,6 +91,12 @@
       provide a migration path, then sometime later deprecate the old feature,
       and finally remove the old feature in a later major release.
     </p>
+    <p>
+      Deprecation of a feature requires an accepted <a href="https://rfcs.emberjs.com">RFC</a>.
+      We only land deprecations targetting a particular major well in advance of that version.
+      Three minor releases (about 18 weeks) prior to the major version is the last minor that will add a deprecation
+      for that version.
+    </p>
   </li>
   <li>
     <p>
@@ -99,7 +105,9 @@
         introduce new features.
       </strong>
       This means major releases are not exciting, just a predictable point where
-      some cleanup happens.
+      some cleanup happens. Major releases happen about every 18 months, after 12 minor
+      releases (six weeks each). The last minor before the major version is an
+      <LinkTo @route="releases.lts">LTS</LinkTo>.
     </p>
   </li>
   <li>
