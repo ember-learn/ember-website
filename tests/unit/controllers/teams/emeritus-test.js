@@ -21,6 +21,7 @@ module('Unit | Controller | teams/emeritus', function (hooks) {
     const output = alumniTeamMembers.map((teamMember) => teamMember.id);
 
     assert.deepEqual(output, [
+      'peter-wagenet',
       'trek-glowacki',
       'erik-bryn',
       'kris-selden',
