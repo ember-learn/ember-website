@@ -5,9 +5,9 @@ filter:
   - /ember\./
   - /ember-template-compiler/
 repo: emberjs/ember.js
-lastRelease: 7.1.0-beta.1 # Manually update See https://libraries.io/npm/ember-source throughout
+lastRelease: 7.2.0-beta.1 # Manually update See https://libraries.io/npm/ember-source throughout
 channel: beta
-date: 2026-05-12 # Manually update, get date for `initialVersion`
+date: 2026-06-22 # Manually update, get date for `initialVersion`
 changelogPath: CHANGELOG.md
 debugFileName: .debug.js
 ignoreFiles:
