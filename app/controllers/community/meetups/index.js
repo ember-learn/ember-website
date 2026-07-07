@@ -1,19 +1,7 @@
-import { getOwner } from '@ember/application';
 import Controller from '@ember/controller';
-import { inject as service } from '@ember/service';
-import { tracked } from '@glimmer/tracking';
 
+// TODO: Replace with ember-maplibre-gl
 export default class CommunityMeetupsIndexController extends Controller {
-  @service fastboot;
-
-  @tracked leafletPackageLoaded = false;
-
-  leafletConfiguration = {
-    latitude: 20,
-    longitude: 0,
-    zoom: 2,
-  };
-
   get meetupsByArea() {
     const meetups = (this.model ?? []).slice();
     const groupMeetupsByArea = new Map();
@@ -33,24 +21,5 @@ export default class CommunityMeetupsIndexController extends Controller {
     });
 
     return Array.from(groupMeetupsByArea.values());
-  }
-
-  constructor() {
-    super(...arguments);
-
-    if (!this.fastboot?.isFastBoot) {
-      import('leaflet').then(() => {
-        if (this.isDestroyed || this.isDestroying) {
-          return;
-        }
-
-        let prefix = '';
-        const config = getOwner(this).resolveRegistration('config:environment');
-
-        prefix = config.rootURL;
-        L.Icon.Default.imagePath = `${prefix}assets/images/`;
-        this.leafletPackageLoaded = true;
-      });
-    }
   }
 }

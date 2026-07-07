@@ -1,6 +1,7 @@
 {
   "name": "ember-website",
   "version": "0.0.0",
+  "type": "module",
   "private": true,
   "description": "Source Code for the Ember website https://emberjs.com",
   "repository": {
@@ -9,12 +10,8 @@
   },
   "license": "MIT",
   "author": "",
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
   "scripts": {
-    "build": "ember build --environment=production",
+    "build": "node scripts/generate-content.mjs && vite build",
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:css:fix": "concurrently \"pnpm:lint:css -- --fix\"",
@@ -23,65 +20,46 @@
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
-    "start": "ember serve",
+    "start": "node scripts/generate-content.mjs && vite",
     "test": "concurrently \"pnpm:lint\" \"pnpm:test:*\" --names \"lint,test:\"",
-    "test:ember": "ember test"
+    "test:ember": "vite build --mode development && testem ci"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/eslint-parser": "^7.25.1",
-    "@babel/plugin-proposal-decorators": "^7.24.7",
-    "@ember/optional-features": "^2.1.0",
+    "@babel/plugin-transform-runtime": "^7.29.0",
     "@ember/string": "^4.0.1",
-    "@ember/test-helpers": "^3.3.1",
-    "@glimmer/component": "^1.1.2",
-    "@glimmer/tracking": "^1.1.2",
-    "@lhci/cli": "0.6.1",
+    "@ember/test-helpers": "^5.4.1",
+    "@ember/test-waiters": "^4.1.1",
+    "@embroider/core": "^4.4.3",
+    "@embroider/macros": "^1.20.2",
+    "@embroider/router": "^3.0.6",
+    "@embroider/vite": "^1.5.2",
+    "@glimmer/component": "^2.0.0",
     "@nullvoxpopuli/ember-composable-helpers": "^5.3.1",
-    "@percy/cli": "^1.0.0-beta.71",
-    "@percy/ember": "^3.0.0",
+    "@rollup/plugin-babel": "^7.0.0",
+    "@warp-drive/build-config": "^5.8.1",
     "algoliasearch": "^3.33.0",
+    "babel-plugin-ember-template-compilation": "^3.1.0",
     "blurhash": "^2.0.5",
-    "broccoli-asset-rev": "^3.0.0",
-    "broccoli-merge-trees": "^4.2.0",
-    "broccoli-static-site-json": "^4.4.1",
     "concurrently": "^8.2.2",
     "dayjs": "^1.10.7",
+    "decorator-transforms": "^2.3.1",
     "deepmerge": "^4.0.0",
-    "ember-a11y-testing": "^6.1.1",
-    "ember-auto-import": "^2.8.1",
-    "ember-body-class": "^2.1.1",
-    "ember-cached-decorator-polyfill": "^0.1.4",
-    "ember-cli": "~5.12.0",
-    "ember-cli-app-version": "^7.0.0",
-    "ember-cli-babel": "^8.2.0",
-    "ember-cli-babel-polyfills": "^2.0.1",
-    "ember-cli-clean-css": "^3.0.0",
-    "ember-cli-dependency-checker": "^3.3.2",
-    "ember-cli-fastboot": "^4.1.1",
-    "ember-cli-head": "^2.0.0",
-    "ember-cli-htmlbars": "^6.3.0",
-    "ember-cli-inject-live-reload": "^2.1.0",
-    "ember-cli-netlify": "^0.4.1",
-    "ember-cli-sri": "^2.1.1",
-    "ember-cli-terser": "^4.0.2",
-    "ember-data": "~5.3.8",
-    "ember-data-fastboot": "^0.1.2",
-    "ember-fetch": "^8.1.2",
-    "ember-href-to": "^5.0.0",
+    "ember-a11y-testing": "^8.0.0",
+    "ember-concurrency": "^5.2.0",
+    "ember-data": "~5.8.1",
     "ember-inflector": "^6.0.0",
-    "ember-leaflet": "^5.0.0",
-    "ember-load-initializers": "^2.1.2",
-    "ember-metrics": "^1.4.2",
+    "ember-load-initializers": "^3.0.1",
     "ember-modifier": "^4.2.0",
     "ember-page-title": "^8.2.3",
-    "ember-qunit": "^8.1.0",
-    "ember-resolver": "^12.0.1",
-    "ember-responsive-image": "^3.4.0",
+    "ember-primitives": "^0.55.0",
+    "ember-qunit": "^9.0.4",
+    "ember-resolver": "^13.1.1",
     "ember-source": "~5.12.0",
-    "ember-styleguide": "^11.3.0",
+    "ember-strict-application-resolver": "^0.1.1",
+    "ember-styleguide": "github:NullVoxPopuli-ai-agent/ember-styleguide#convert-to-v2-addon",
     "ember-template-lint": "^6.0.0",
-    "ember-tether": "^2.0.1",
     "ember-truth-helpers": "^3.0.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
@@ -90,51 +68,33 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-qunit": "^8.1.2",
     "highcharts": "^10.1.0",
-    "leaflet": "^1.5.1",
-    "lint-to-the-future": "^2.6.4",
-    "lint-to-the-future-ember-template": "^4.1.0",
-    "lint-to-the-future-eslint": "^3.3.0",
-    "lint-to-the-future-stylelint": "^2.1.0",
-    "loader.js": "^4.7.0",
     "normalize.css": "^8.0.1",
-    "prember": "^2.1.0",
     "prettier": "^3.3.3",
     "qunit": "^2.22.0",
     "qunit-dom": "^3.2.1",
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-prettier": "^4.1.0",
+    "testem": "^3.15.2",
     "tracked-built-ins": "^3.3.0",
-    "webpack": "^5.95.0"
+    "vite": "^8.0.3"
   },
   "engines": {
     "node": ">= 20"
   },
-  "ember": {
-    "edition": "octane"
-  },
-  "ember-addon": {
-    "paths": [
-      "lib/content-data-generator"
-    ]
-  },
-  "fastbootDependencies": [
-    "algoliasearch",
-    "crypto"
-  ],
   "pnpm": {
     "overrides": {
       "sharp": "^0.33.5"
     },
     "onlyBuiltDependencies": [
-      "@percy/core",
-      "core-js",
+      "esbuild",
       "fsevents",
       "sharp"
-    ],
-    "patchedDependencies": {
-      "ember-data-fastboot": "patches/ember-data-fastboot.patch"
-    }
+    ]
   },
-  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
+  "exports": {
+    "./tests/*": "./tests/*",
+    "./*": "./app/*"
+  }
 }

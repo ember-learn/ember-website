@@ -1,6 +1,6 @@
 /* eslint-env node */
 module.exports = {
-  description: 'Simple Blueprint to add an Ember Team-Member',
+  description: "Simple Blueprint to add a Sponsor",
 
   locals() {
     return {

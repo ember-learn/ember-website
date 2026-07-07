@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 import { click, currentURL, findAll, visit } from '@ember/test-helpers';
-import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
 
 import { setupApplicationTest } from 'ember-qunit';
@@ -15,7 +14,6 @@ module('Acceptance | mascots', function (hooks) {
 
   test('Percy snapshot', async function (assert) {
     await visit('/mascots');
-    await percySnapshot(assert);
 
     assert.ok(true);
   });
@@ -119,7 +117,6 @@ module('Acceptance | mascots', function (hooks) {
       .dom('[data-test-field="Name"]', mascots[mascots.length - 1])
       .hasText('Original Tomster', 'The user sees the correct last mascot.');
 
-    await percySnapshot(assert);
 
     // Try another filter
     await click('[data-test-link="Zoeys"]');

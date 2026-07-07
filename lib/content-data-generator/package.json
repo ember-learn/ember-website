@@ -1,9 +1,0 @@
-{
-  "name": "content-data-generator",
-  "keywords": [
-    "ember-addon"
-  ],
-  "ember-addon": {
-    "before": "prember"
-  }
-}
