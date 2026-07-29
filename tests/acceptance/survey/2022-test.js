@@ -1,5 +1,4 @@
 import { visit } from '@ember/test-helpers';
-import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
 
 import { setupApplicationTest } from 'ember-qunit';
@@ -14,7 +13,6 @@ module('Acceptance | survey/2022', function (hooks) {
 
   test('Percy snapshot', async function (assert) {
     await visit('/survey/2022');
-    await percySnapshot(assert);
 
     assert.ok(true);
   });

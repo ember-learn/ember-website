@@ -1,7 +1,7 @@
-import EmberRouter from '@ember/routing/router';
-import config from 'ember-website/config/environment';
+import EmbroiderRouter from '@embroider/router';
+import config from './config/environment.js';
 
-export default class Router extends EmberRouter {
+export default class Router extends EmbroiderRouter {
   location = config.locationType;
   rootURL = config.rootURL;
 }
