@@ -223,6 +223,12 @@ importers:
       normalize.css:
         specifier: ^8.0.1
         version: 8.0.1
+      postcss-import:
+        specifier: ^12.0.1
+        version: 12.0.1
+      postcss-preset-env:
+        specifier: ^6.7.0
+        version: 6.7.2
       prember:
         specifier: ^2.1.0
         version: 2.1.0
