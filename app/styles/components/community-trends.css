@@ -7,7 +7,7 @@
   max-width: 600px;
 }
 
-@media (max-width: 1500px) {
+@media (width <= 1500px) {
   .uwu-logo {
     transform: none;
     right: 0;
@@ -15,7 +15,7 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (width <= 1000px) {
   .uwu-logo {
     transform: none;
     right: unset;
@@ -23,4 +23,3 @@
     max-width: 200px;
   }
 }
-
