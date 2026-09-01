@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import AreaSplineChart from 'ember-website/utils/highcharts/area-spline-chart';
 import { module, test } from 'qunit';
 

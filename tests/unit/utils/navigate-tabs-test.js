@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { getTabIdIncrement, modulus } from 'ember-website/utils/navigate-tabs';
 import { module, test } from 'qunit';
 

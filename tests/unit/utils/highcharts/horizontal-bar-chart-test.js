@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import HorizontalBarChart from 'ember-website/utils/highcharts/horizontal-bar-chart';
 import { module, test } from 'qunit';
 

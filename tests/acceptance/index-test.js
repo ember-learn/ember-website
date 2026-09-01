@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { click, currentURL, findAll, visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import PieChart from 'ember-website/utils/highcharts/pie-chart';
 import { module, test } from 'qunit';
 

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { click, render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
@@ -73,10 +72,10 @@ module('Integration | Component | index/ember-addons/tab', function (hooks) {
   });
 
   test('We can click the button to call @onClick', async function (assert) {
-    assert.expect(1);
-
     this.updateCurrentTabId = (tabId) => {
       assert.strictEqual(tabId, 0, 'We get the correct tab ID.');
+
+      assert.step('updateCurrentTabId');
     };
 
     await render(hbs`
@@ -89,5 +88,7 @@ module('Integration | Component | index/ember-addons/tab', function (hooks) {
     `);
 
     await click('[data-test-button="Manage State"]');
+
+    assert.verifySteps(['updateCurrentTabId']);
   });
 });

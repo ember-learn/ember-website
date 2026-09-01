@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { formatURL } from 'ember-website/utils/format-url';
 import { module, test } from 'qunit';
 

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import SplineChart from 'ember-website/utils/highcharts/spline-chart';
 import { module, test } from 'qunit';
 
