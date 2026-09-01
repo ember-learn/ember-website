@@ -1,5 +1,5 @@
 diff --git a/fastboot/instance-initializers/ember-data-fastboot.js b/fastboot/instance-initializers/ember-data-fastboot.js
-index 3aa89511a5e4c24bc94d9705895be8c689ea5748..952af46cb3dfb0120d039b8859b934e1a63e9e06 100644
+index 3aa89511a5e4c24bc94d9705895be8c689ea5748..ff07b44e1e363c125af9f1fe457c58d020d1a140 100644
 --- a/fastboot/instance-initializers/ember-data-fastboot.js
 +++ b/fastboot/instance-initializers/ember-data-fastboot.js
 @@ -1,15 +1,39 @@
@@ -30,7 +30,7 @@ index 3aa89511a5e4c24bc94d9705895be8c689ea5748..952af46cb3dfb0120d039b8859b934e1
 +            const link = record[meta.kind](name).link();
 +
 +            if (link) {
-+              const dashName = Ember.String.dasherize(name);
++              const dashName = dasherize(name);
 +
 +              serializedRecord.data.relationships = serializedRecord.data.relationships || {}
 +              serializedRecord.data.relationships[dashName] = serializedRecord.data.relationships[dashName] || {}
