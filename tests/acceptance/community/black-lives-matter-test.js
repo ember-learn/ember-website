@@ -27,8 +27,7 @@ module('Acceptance | community/black lives matter', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Community - Ember.js');
   });

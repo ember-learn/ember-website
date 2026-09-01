@@ -27,8 +27,7 @@ module('Acceptance | sponsors', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Sponsors - Ember.js');
   });

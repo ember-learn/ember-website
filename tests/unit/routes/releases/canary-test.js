@@ -11,18 +11,18 @@ module('Unit | Route | releases/canary', function (hooks) {
     assert.strictEqual(
       model.ember?.id,
       'ember/canary',
-      'We found the Ember canary project.'
+      'We found the Ember canary project.',
     );
 
     assert.strictEqual(
       model.emberData?.id,
       'emberData/canary',
-      'We found the Ember Data canary project.'
+      'We found the Ember Data canary project.',
     );
 
     assert.ok(
       model.canaryInfo?.version,
-      'We found the metadata for canary project.'
+      'We found the metadata for canary project.',
     );
   });
 });

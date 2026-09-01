@@ -27,8 +27,7 @@ module('Acceptance | teams', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Team - Ember.js');
   });

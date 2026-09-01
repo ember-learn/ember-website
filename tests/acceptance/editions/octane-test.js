@@ -27,8 +27,7 @@ module('Acceptance | editions/octane', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Octane - Editions - Ember.js');
   });

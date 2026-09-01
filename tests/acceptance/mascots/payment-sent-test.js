@@ -27,8 +27,7 @@ module('Acceptance | mascots/payment sent', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Ember.js');
   });

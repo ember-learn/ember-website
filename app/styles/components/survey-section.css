@@ -9,8 +9,7 @@
   align-items: flex-start;
   display: grid;
   column-gap: 0.5rem;
-  grid-template-areas:
-    "hyperlink title";
+  grid-template-areas: "hyperlink title";
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
 }

@@ -27,8 +27,7 @@ module('Acceptance | logos', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Branding - Ember.js');
   });

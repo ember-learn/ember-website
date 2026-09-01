@@ -14,7 +14,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
           .hasAttribute(
             'aria-selected',
             value ? 'true' : 'false',
-            `We see the correct aria-selected for ${label} button.`
+            `We see the correct aria-selected for ${label} button.`,
           );
       }
     };
@@ -51,7 +51,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
           'Read the docs: http://ember-concurrency.com/',
           'Easy installation: > ember install ember-concurrency',
         ].join(' '),
-        'We see the correct panel on display.'
+        'We see the correct panel on display.',
       );
   });
 
@@ -77,7 +77,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
           'Read the docs: https://ember-intl.github.io/ember-intl/',
           'Easy installation: > ember install ember-intl',
         ].join(' '),
-        'We see the correct panel on display.'
+        'We see the correct panel on display.',
       );
 
     await click('[data-test-button="Deploy"]');
@@ -98,7 +98,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
           'Read the docs: http://ember-cli-deploy.com/',
           'Easy installation: > ember install ember-cli-deploy',
         ].join(' '),
-        'We see the correct panel on display.'
+        'We see the correct panel on display.',
       );
 
     await click('[data-test-button="Authenticate"]');
@@ -119,7 +119,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
           'Read the docs: https://ember-simple-auth.com/',
           'Easy installation: > ember install ember-simple-auth',
         ].join(' '),
-        'We see the correct panel on display.'
+        'We see the correct panel on display.',
       );
   });
 
@@ -131,7 +131,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
     await triggerKeyEvent(
       '[data-test-button="Manage State"]',
       'keydown',
-      'ArrowLeft'
+      'ArrowLeft',
     );
 
     assert.areTabsSelected({
@@ -150,13 +150,13 @@ module('Integration | Component | index/ember-addons', function (hooks) {
           'Read the docs: http://ember-cli-deploy.com/',
           'Easy installation: > ember install ember-cli-deploy',
         ].join(' '),
-        'We see the correct panel on display.'
+        'We see the correct panel on display.',
       );
 
     await triggerKeyEvent(
       '[data-test-button="Manage State"]',
       'keydown',
-      'ArrowRight'
+      'ArrowRight',
     );
 
     assert.areTabsSelected({
@@ -175,13 +175,13 @@ module('Integration | Component | index/ember-addons', function (hooks) {
           'Read the docs: http://ember-concurrency.com/',
           'Easy installation: > ember install ember-concurrency',
         ].join(' '),
-        'We see the correct panel on display.'
+        'We see the correct panel on display.',
       );
 
     await triggerKeyEvent(
       '[data-test-button="Manage State"]',
       'keydown',
-      'ArrowRight'
+      'ArrowRight',
     );
 
     assert.areTabsSelected({
@@ -200,7 +200,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
           'Read the docs: https://ember-simple-auth.com/',
           'Easy installation: > ember install ember-simple-auth',
         ].join(' '),
-        'We see the correct panel on display.'
+        'We see the correct panel on display.',
       );
   });
 });

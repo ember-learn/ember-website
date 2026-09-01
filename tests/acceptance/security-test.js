@@ -27,8 +27,7 @@ module('Acceptance | security', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Security - Ember.js');
   });

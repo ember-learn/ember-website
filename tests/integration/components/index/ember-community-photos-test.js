@@ -15,5 +15,5 @@ module(
 
       assert.dom('[data-test-image]').exists({ count: 8 }, 'We see 8 photos.');
     });
-  }
+  },
 );

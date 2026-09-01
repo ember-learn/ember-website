@@ -27,8 +27,7 @@ module('Acceptance | ember-users', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle("Who's Using Ember.js - Ember.js");
   });

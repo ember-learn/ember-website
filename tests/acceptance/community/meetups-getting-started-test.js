@@ -27,8 +27,7 @@ module('Acceptance | community/meetups getting started', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Getting Started - Community - Ember.js');
   });

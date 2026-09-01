@@ -35,7 +35,7 @@ module('Integration | Helper | printf', function (hooks) {
           '<br>',
           'npm install --save-dev ember-source@~3.25.0-beta.1',
         ].join(' '),
-        'We get the correct value.'
+        'We get the correct value.',
       );
   });
 });

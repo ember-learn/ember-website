@@ -1,9 +1,6 @@
 <div class="survey-section__container">
   <div class="container">
-    <section
-      aria-labelledby={{@sectionId}}
-      data-test-section={{@sectionTitle}}
-    >
+    <section aria-labelledby={{@sectionId}} data-test-section={{@sectionTitle}}>
       <div class="mb-3 survey-section__title-container">
         <h2
           class="text-lg survey-section__title-container__title"
@@ -20,7 +17,8 @@
         >
           <span aria-hidden="true">#</span>
           <span class="visually-hidden">
-            {{~! ~}}Section titled {{@sectionTitle}}{{~! ~}}
+            {{~! ~}}Section titled
+            {{@sectionTitle}}{{~! ~}}
           </span>
         </a>
       </div>

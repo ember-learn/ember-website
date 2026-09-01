@@ -27,8 +27,7 @@ module('Acceptance | releases/release', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Stable - Releases - Ember.js');
   });

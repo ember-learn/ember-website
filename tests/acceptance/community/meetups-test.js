@@ -27,8 +27,7 @@ module('Acceptance | community/meetups', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Meetups - Community - Ember.js');
   });

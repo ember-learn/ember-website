@@ -25,9 +25,18 @@ module('Integration | Helper | add-weeks', function (hooks) {
         <tbody>
           <tr>
             <td>{{this.ltsRelease.version}}</td>
-            <td>{{format-date-time this.ltsRelease.promotionDate "MMMM D, YYYY"}}</td>
-            <td data-test-column="Bugfixes">{{format-date-time (add-weeks this.ltsRelease.promotionDate) "MMMM D, YYYY"}}</td>
-            <td data-test-column="Security Patches">{{format-date-time (add-weeks this.ltsRelease.promotionDate) "MMMM D, YYYY"}}</td>
+            <td>{{format-date-time
+                this.ltsRelease.promotionDate
+                "MMMM D, YYYY"
+              }}</td>
+            <td data-test-column="Bugfixes">{{format-date-time
+                (add-weeks this.ltsRelease.promotionDate)
+                "MMMM D, YYYY"
+              }}</td>
+            <td data-test-column="Security Patches">{{format-date-time
+                (add-weeks this.ltsRelease.promotionDate)
+                "MMMM D, YYYY"
+              }}</td>
           </tr>
         </tbody>
       </table>
@@ -41,7 +50,7 @@ module('Integration | Helper | add-weeks', function (hooks) {
       .dom('[data-test-column="Security Patches"]')
       .hasText(
         'March 4, 2020',
-        'We see the correct date for security patches.'
+        'We see the correct date for security patches.',
       );
   });
 
@@ -64,9 +73,18 @@ module('Integration | Helper | add-weeks', function (hooks) {
         <tbody>
           <tr>
             <td>{{this.ltsRelease.version}}</td>
-            <td>{{format-date-time this.ltsRelease.promotionDate "MMMM D, YYYY"}}</td>
-            <td data-test-column="Bugfixes">{{format-date-time (add-weeks this.ltsRelease.promotionDate 36) "MMMM D, YYYY"}}</td>
-            <td data-test-column="Security Patches">{{format-date-time (add-weeks this.ltsRelease.promotionDate 54) "MMMM D, YYYY"}}</td>
+            <td>{{format-date-time
+                this.ltsRelease.promotionDate
+                "MMMM D, YYYY"
+              }}</td>
+            <td data-test-column="Bugfixes">{{format-date-time
+                (add-weeks this.ltsRelease.promotionDate 36)
+                "MMMM D, YYYY"
+              }}</td>
+            <td data-test-column="Security Patches">{{format-date-time
+                (add-weeks this.ltsRelease.promotionDate 54)
+                "MMMM D, YYYY"
+              }}</td>
           </tr>
         </tbody>
       </table>
@@ -80,7 +98,7 @@ module('Integration | Helper | add-weeks', function (hooks) {
       .dom('[data-test-column="Security Patches"]')
       .hasText(
         'March 17, 2021',
-        'We see the correct date for security patches.'
+        'We see the correct date for security patches.',
       );
   });
 });

@@ -27,8 +27,7 @@ module('Acceptance | community/meetups/assets', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Assets - Community - Ember.js');
   });

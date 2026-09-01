@@ -27,8 +27,7 @@ module('Acceptance | learn', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Learn - Ember.js');
   });

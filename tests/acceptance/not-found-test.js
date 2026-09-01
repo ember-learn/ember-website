@@ -27,8 +27,7 @@ module('Acceptance | not found', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Page Not Found - Ember.js');
   });

@@ -27,8 +27,7 @@ module('Acceptance | mascots/faq', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Ember.js');
   });

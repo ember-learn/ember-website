@@ -11,13 +11,13 @@ module('Unit | Route | releases/release', function (hooks) {
     assert.strictEqual(
       model.ember?.id,
       'ember/release',
-      'We found the Ember stable project.'
+      'We found the Ember stable project.',
     );
 
     assert.strictEqual(
       model.emberData?.id,
       'emberData/release',
-      'We found the Ember Data stable project.'
+      'We found the Ember Data stable project.',
     );
   });
 });

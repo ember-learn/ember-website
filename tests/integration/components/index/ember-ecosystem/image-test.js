@@ -24,13 +24,13 @@ module(
         .doesNotHaveAttribute(
           'role',
           '',
-          'We should not see the role attribute.'
+          'We should not see the role attribute.',
         )
         .hasAttribute(
           'src',
           '/images/home/logos/js.svg',
-          'We see the correct src.'
+          'We see the correct src.',
         );
     });
-  }
+  },
 );

@@ -27,8 +27,7 @@ module('Acceptance | releases/beta', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Beta - Releases - Ember.js');
   });

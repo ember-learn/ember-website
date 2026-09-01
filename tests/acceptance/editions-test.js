@@ -27,8 +27,7 @@ module('Acceptance | editions', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Editions - Ember.js');
   });

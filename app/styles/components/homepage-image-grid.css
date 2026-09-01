@@ -46,7 +46,7 @@
   width: max-content;
 }
 
-[class*=well-] img {
+[class*="well-"] img {
   width: auto;
 }
 

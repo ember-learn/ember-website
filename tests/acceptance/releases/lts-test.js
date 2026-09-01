@@ -27,8 +27,7 @@ module('Acceptance | releases/lts', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('LTS - Releases - Ember.js');
   });

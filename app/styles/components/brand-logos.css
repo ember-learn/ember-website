@@ -15,7 +15,7 @@
 .brand-logos > li {
   /* stylelint-disable-next-line declaration-property-value-no-unknown */
   border: 1px solid rgba($black, 0.3);
-  background-image: url('/images/brand/brand-bg.png');
+  background-image: url("/images/brand/brand-bg.png");
   border-radius: 4px;
   padding: 1rem 1.5rem;
 }

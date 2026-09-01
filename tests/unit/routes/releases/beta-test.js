@@ -11,13 +11,13 @@ module('Unit | Route | releases/beta', function (hooks) {
     assert.strictEqual(
       model.ember?.id,
       'ember/beta',
-      'We found the Ember beta project.'
+      'We found the Ember beta project.',
     );
 
     assert.strictEqual(
       model.emberData?.id,
       'emberData/beta',
-      'We found the Ember Data beta project.'
+      'We found the Ember Data beta project.',
     );
   });
 });

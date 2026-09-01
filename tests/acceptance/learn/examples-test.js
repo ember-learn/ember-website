@@ -27,8 +27,7 @@ module('Acceptance | learn/examples', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Ember.js');
   });

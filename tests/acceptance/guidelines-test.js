@@ -27,8 +27,7 @@ module('Acceptance | guidelines', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Community Guidelines - Ember.js');
   });
