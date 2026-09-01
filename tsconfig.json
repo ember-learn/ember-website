@@ -1,0 +1,30 @@
+{
+  "extends": "@ember/app-tsconfig",
+  "compilerOptions": {
+    "paths": {
+      "ember-website/tests/*": ["./tests/*"],
+      "ember-website/*": ["./app/*"],
+      "*": ["./types/*"]
+    },
+    "plugins": [
+      {
+        "name": "@glint/tsserver-plugin"
+      }
+    ],
+    "rootDir": ".",
+    "target": "esnext",
+    "types": ["@glint/ember-tsc/types", "@types/qunit", "ember-source/types"]
+  },
+  "include": ["app/**/*", "tests/**/*", "types/**/*"],
+  "glint": {
+    "additionalSpecialForms": {
+      "globals": {
+        "and": "&&",
+        "eq": "===",
+        "not": "!",
+        "neq": "!==",
+        "or": "||"
+      }
+    }
+  }
+}
