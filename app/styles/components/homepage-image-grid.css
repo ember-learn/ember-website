@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 100px);
-  grid-gap: 15px;
+  gap: 15px;
   grid-auto-flow: column;
   height: 445px;
   padding: 0;
