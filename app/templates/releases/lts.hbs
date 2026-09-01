@@ -1,6 +1,6 @@
-{{page-title 'LTS'}}
+{{page-title "LTS"}}
 
-<h1 class='project-name'>
+<h1 class="project-name">
   LTS Channel
 </h1>
 
@@ -11,11 +11,11 @@
 
 <h2>How to Install</h2>
 
-<div class='mb-2'>
+<div class="mb-2">
   <Releases::HowToInstall @project={{@model.ember}} />
 </div>
 
-<div class='mb-2'>
+<div class="mb-2">
   <Releases::HowToInstall @project={{@model.emberData}} />
 </div>
 
@@ -51,9 +51,9 @@
 <p>
   A complete release history for Ember is available
   <a
-    href='https://github.com/emberjs/ember.js/releases'
-    target='_blank'
-    rel='noopener noreferrer'
+    href="https://github.com/emberjs/ember.js/releases"
+    target="_blank"
+    rel="noopener noreferrer"
   >on GitHub</a>.
 </p>
 
@@ -64,17 +64,17 @@
 </p>
 
 <p>
-  <EsNote @mascot='zoey'>EmberData made updates to its versioning strategy that
+  <EsNote @mascot="zoey">EmberData made updates to its versioning strategy that
     mean it may maintain separate LTS versions from Ember.js. You can read more
     about the updates on the
     <a
-      href='https://blog.emberjs.com/updates-to-ember-data-versioning-strategy'
+      href="https://blog.emberjs.com/updates-to-ember-data-versioning-strategy"
     >Ember Blog</a>.</EsNote>
 </p>
 
-<div class='mb-2'>
+<div class="mb-2">
   <h2>Ember.js</h2>
-  <table class='lts-table'>
+  <table class="lts-table">
     <thead>
       <tr>
         <th>LTS Version</th>
@@ -89,24 +89,24 @@
       {{#each this.emberLtsReleases as |release|}}
         <tr>
           <td>{{release.version}}</td>
-          <td>{{format-date-time release.promotionDate 'MMMM D, YYYY'}}</td>
+          <td>{{format-date-time release.promotionDate "MMMM D, YYYY"}}</td>
           <td>{{format-date-time
               (add-weeks release.promotionDate 30)
-              'MMMM D, YYYY'
+              "MMMM D, YYYY"
             }}</td>
           <td>{{format-date-time
               (add-weeks release.promotionDate 54)
-              'MMMM D, YYYY'
+              "MMMM D, YYYY"
             }}</td>
-          <td>{{if release.isActive 'Active' 'End of life'}}</td>
+          <td>{{if release.isActive "Active" "End of life"}}</td>
         </tr>
       {{/each}}
     </tbody>
   </table>
 </div>
-<div class='mb-2'>
+<div class="mb-2">
   <h2>EmberData</h2>
-  <table class='lts-table'>
+  <table class="lts-table">
     <thead>
       <tr>
         <th>LTS Version</th>
@@ -121,16 +121,16 @@
       {{#each this.dataLtsReleases as |release|}}
         <tr>
           <td>{{release.version}}</td>
-          <td>{{format-date-time release.promotionDate 'MMMM D, YYYY'}}</td>
+          <td>{{format-date-time release.promotionDate "MMMM D, YYYY"}}</td>
           <td>{{format-date-time
               (add-weeks release.promotionDate 30)
-              'MMMM D, YYYY'
+              "MMMM D, YYYY"
             }}</td>
           <td>{{format-date-time
               (add-weeks release.promotionDate 54)
-              'MMMM D, YYYY'
+              "MMMM D, YYYY"
             }}</td>
-          <td>{{if release.isActive 'Active' 'End of life'}}</td>
+          <td>{{if release.isActive "Active" "End of life"}}</td>
         </tr>
       {{/each}}
     </tbody>

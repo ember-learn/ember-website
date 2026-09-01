@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
@@ -20,7 +19,7 @@ module('Unit | Model | sponsor', function (hooks) {
     assert.strictEqual(
       model.term,
       '2011 - present',
-      'We get the correct value for term.'
+      'We get the correct value for term.',
     );
   });
 
@@ -36,7 +35,7 @@ module('Unit | Model | sponsor', function (hooks) {
     assert.strictEqual(
       model.term,
       '2015 - 2018',
-      'We get the correct value for term.'
+      'We get the correct value for term.',
     );
   });
 
@@ -52,7 +51,7 @@ module('Unit | Model | sponsor', function (hooks) {
     assert.strictEqual(
       model.term,
       '2018',
-      'We get the correct value for term.'
+      'We get the correct value for term.',
     );
   });
 });

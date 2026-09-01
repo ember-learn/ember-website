@@ -14,7 +14,11 @@ module('Integration | Helper | dasherize', function (hooks) {
   test('it renders', async function (assert) {
     this.set('inputValue', 'Something Awesome');
 
-    await render(hbs`{{dasherize this.inputValue}}`);
+    await render(
+      hbs`
+        {{dasherize this.inputValue}}
+      `,
+    );
 
     assert.dom(this.element).hasText('something-awesome');
   });

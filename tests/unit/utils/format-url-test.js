@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { formatURL } from 'ember-website/utils/format-url';
 import { module, test } from 'qunit';
 
@@ -10,7 +9,7 @@ module('Unit | Utility | format-url', function () {
       assert.strictEqual(
         url,
         'https://emberjs.com/survey/2019/#ember-version',
-        'If # in URL, we add / before #'
+        'If # in URL, we add / before #',
       );
     });
 
@@ -20,7 +19,7 @@ module('Unit | Utility | format-url', function () {
       assert.strictEqual(
         formatURL(url),
         'https://emberjs.com/survey/2019/#ember-version',
-        'We get the same URL back.'
+        'We get the same URL back.',
       );
     });
   });
@@ -32,7 +31,7 @@ module('Unit | Utility | format-url', function () {
       assert.strictEqual(
         url,
         'https://emberjs.com/mascots?filter=tomster',
-        'If ? in URL, we remove trailing /'
+        'If ? in URL, we remove trailing /',
       );
     });
 
@@ -42,7 +41,7 @@ module('Unit | Utility | format-url', function () {
       assert.strictEqual(
         formatURL(url),
         'https://emberjs.com/mascots?filter=tomster',
-        'We get the same URL back.'
+        'We get the same URL back.',
       );
     });
   });
@@ -54,7 +53,7 @@ module('Unit | Utility | format-url', function () {
       assert.strictEqual(
         url,
         'https://emberjs.com/community/',
-        'If neither # nor ? in URL, we add trailing /'
+        'If neither # nor ? in URL, we add trailing /',
       );
     });
 
@@ -64,7 +63,7 @@ module('Unit | Utility | format-url', function () {
       assert.strictEqual(
         formatURL(url),
         'https://emberjs.com/community/',
-        'We get the same URL back.'
+        'We get the same URL back.',
       );
     });
   });

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
@@ -18,9 +17,7 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
     this.project = this.projects.find(({ id }) => id === 'emberData/release');
 
     await render(hbs`
-      <Releases::HowToInstall
-        @project={{this.project}}
-      />
+      <Releases::HowToInstall @project={{this.project}} />
     `);
 
     assert
@@ -34,14 +31,14 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
           '# Install Ember Data 5.8.2:',
           'npm install --save-dev ember-data@~5.8.2',
         ].join(' '),
-        'We see the correct code.'
+        'We see the correct code.',
       );
 
     assert
       .dom('[data-test-field="More Information"]')
       .hasText(
         'Read the changelog for Ember Data 5.8.2.',
-        'We see the correct description for more information.'
+        'We see the correct description for more information.',
       );
 
     assert
@@ -49,7 +46,7 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
       .hasAttribute(
         'href',
         'https://github.com/emberjs/data/blob/v5.8.2/CHANGELOG.md',
-        'We see the correct URL for the changelog.'
+        'We see the correct URL for the changelog.',
       );
   });
 
@@ -57,12 +54,10 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
     this.project = this.projects.find(({ id }) => id === 'ember/canary');
 
     await render(hbs`
-      <Releases::HowToInstall
-        @project={{this.project}}
-      >
+      <Releases::HowToInstall @project={{this.project}}>
         <TerminalCode>
           # Install the latest Ember canary:
-          <br>
+          <br />
           npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com/...
         </TerminalCode>
       </Releases::HowToInstall>
@@ -79,7 +74,7 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
           '# Install the latest Ember canary:',
           'npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com/...',
         ].join(' '),
-        'We see the correct code.'
+        'We see the correct code.',
       );
 
     assert

@@ -6,8 +6,14 @@
 
 # misc
 /coverage/
+/data/
+/public/
 !.*
 .*/
+*.html
+pnpm-lock.yaml
+CONTRIBUTING.md
+README.md
 
 # ember-try
 /.node_modules.ember-try/

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import VerticalBarChart from 'ember-website/utils/highcharts/vertical-bar-chart';
 import { module, test } from 'qunit';
 
@@ -80,7 +79,7 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function (hooks) {
             },
           },
         },
-        'We get the correct value.'
+        'We get the correct value.',
       );
     });
   });
@@ -137,7 +136,7 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function (hooks) {
           data: [68.3, 25.7, 6],
           name: 'ARIA',
         },
-        'We get the correct data for the 1st series.'
+        'We get the correct data for the 1st series.',
       );
 
       // Check series 2
@@ -148,7 +147,7 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function (hooks) {
           data: [9.6, 47.0, 43.4],
           name: 'CSS',
         },
-        'We get the correct data for the 2nd series.'
+        'We get the correct data for the 2nd series.',
       );
 
       // Check series 3
@@ -159,7 +158,7 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function (hooks) {
           data: [1.9, 36.0, 62.1],
           name: 'HTML',
         },
-        'We get the correct data for the 3rd series.'
+        'We get the correct data for the 3rd series.',
       );
 
       // Check series 4
@@ -170,7 +169,7 @@ module('Unit | Utility | highcharts/vertical-bar-chart', function (hooks) {
           data: [2.7, 35.9, 61.4],
           name: 'JavaScript',
         },
-        'We get the correct data for the 4th series.'
+        'We get the correct data for the 4th series.',
       );
     });
   });

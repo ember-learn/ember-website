@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import PieChart from 'ember-website/utils/highcharts/pie-chart';
 import { module, test } from 'qunit';
 
@@ -44,7 +43,7 @@ module('Unit | Utility | highcharts/pie-chart', function (hooks) {
             pointFormat: '{point.y:.1f}%',
           },
         },
-        'We get the correct value.'
+        'We get the correct value.',
       );
     });
   });
@@ -73,7 +72,7 @@ module('Unit | Utility | highcharts/pie-chart', function (hooks) {
       assert.deepEqual(
         colors,
         ['#1E719B', '#E04E39'],
-        'We get the correct colors for the 1st series.'
+        'We get the correct colors for the 1st series.',
       );
 
       assert.deepEqual(
@@ -88,7 +87,7 @@ module('Unit | Utility | highcharts/pie-chart', function (hooks) {
             y: 36,
           },
         ],
-        'We get the correct data for the 1st series.'
+        'We get the correct data for the 1st series.',
       );
     });
   });

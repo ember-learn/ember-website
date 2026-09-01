@@ -35,8 +35,6 @@ const emberColors = {
 // var color2019 = emberColors.blue;
 // var color2020 = orangePalette.orangeDarkest;
 var color2022 = emberColors.burntEmber;
-// eslint-disable-next-line no-unused-vars
-// var colorFutureYear = emberColors.yellow;
 
 const stackColors = {
   htmlDark: '#E45126',

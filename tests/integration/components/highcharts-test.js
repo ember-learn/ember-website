@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
 import { hbs } from 'ember-cli-htmlbars';
@@ -17,9 +16,7 @@ module('Integration | Component | highcharts', function (hooks) {
 
   test('The component renders an svg chart', async function (assert) {
     await render(hbs`
-      <Highcharts
-        @chart={{this.chart}}
-      />
+      <Highcharts @chart={{this.chart}} />
     `);
 
     await waitUntilAllChartsAreDrawn();
@@ -34,8 +31,7 @@ module('Integration | Component | highcharts', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.ok(true, 'We passed the accessibility audit.');
   });

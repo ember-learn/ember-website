@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
@@ -11,7 +10,7 @@ module('Integration | Component | terminal-code', function (hooks) {
     await render(hbs`
       <TerminalCode>
         npm install -g ember-cli
-        <br>
+        <br />
         ember new my-app-name
       </TerminalCode>
     `);
@@ -20,7 +19,7 @@ module('Integration | Component | terminal-code', function (hooks) {
       .dom('[data-test-terminal-code]')
       .hasText(
         ['npm install -g ember-cli', 'ember new my-app-name'].join(' '),
-        'We see the code.'
+        'We see the code.',
       );
   });
 });

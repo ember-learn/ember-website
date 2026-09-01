@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
@@ -36,7 +35,7 @@ module('Integration | Helper | printf', function (hooks) {
           '<br>',
           'npm install --save-dev ember-source@~3.25.0-beta.1',
         ].join(' '),
-        'We get the correct value.'
+        'We get the correct value.',
       );
   });
 });

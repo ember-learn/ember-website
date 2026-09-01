@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
@@ -31,7 +30,7 @@ module('Integration | Helper | html-safe', function (hooks) {
       .hasAttribute(
         'href',
         'https://guides.emberjs.com/release/tutorial/',
-        'We see the correct URL for the link.'
+        'We see the correct URL for the link.',
       )
       .hasText('tutorial', 'We see the correct description for the link.');
   });

@@ -8,9 +8,8 @@
 .survey-section__title-container {
   align-items: flex-start;
   display: grid;
-  grid-column-gap: 0.5rem;
-  grid-template-areas:
-    "hyperlink title";
+  column-gap: 0.5rem;
+  grid-template-areas: "hyperlink title";
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
 }
@@ -25,6 +24,7 @@
 }
 
 .survey-section__title-container__hyperlink .visually-hidden {
+  /* stylelint-disable-next-line property-no-deprecated */
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;

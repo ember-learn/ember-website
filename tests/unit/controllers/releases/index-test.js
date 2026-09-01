@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
@@ -21,7 +20,7 @@ module('Unit | Controller | releases/index', function (hooks) {
     assert.strictEqual(
       emberReleaseProject?.id,
       'ember/release',
-      'We found the Ember release project.'
+      'We found the Ember release project.',
     );
   });
 });

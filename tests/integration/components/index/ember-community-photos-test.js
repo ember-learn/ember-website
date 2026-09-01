@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
@@ -16,5 +15,5 @@ module(
 
       assert.dom('[data-test-image]').exists({ count: 8 }, 'We see 8 photos.');
     });
-  }
+  },
 );

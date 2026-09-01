@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { click, currentURL, findAll, visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
@@ -52,7 +51,7 @@ module('Acceptance | index', function (hooks) {
       assert.strictEqual(
         parentNavItems.length,
         expectedOutput.length,
-        `The user sees ${expectedOutput.length} parent navigation items.`
+        `The user sees ${expectedOutput.length} parent navigation items.`,
       );
 
       if (parentNavItems.length !== expectedOutput.length) {
@@ -66,23 +65,23 @@ module('Acceptance | index', function (hooks) {
             expectedOutput[index].label,
             `The label for the parent navigation item is correct. (${
               index + 1
-            })`
+            })`,
           );
       });
     };
 
     assert.areChildNavItemsCorrect = (
       expectedOutput = [],
-      scope = document
+      scope = document,
     ) => {
       const childNavItems = scope.querySelectorAll(
-        '.navbar-dropdown-list-item-link'
+        '.navbar-dropdown-list-item-link',
       );
 
       assert.strictEqual(
         childNavItems.length,
         expectedOutput.length,
-        `The user sees ${expectedOutput.length} child navigation items.`
+        `The user sees ${expectedOutput.length} child navigation items.`,
       );
 
       if (childNavItems.length !== expectedOutput.length) {
@@ -94,12 +93,12 @@ module('Acceptance | index', function (hooks) {
           .dom(childNavItem)
           .hasText(
             expectedOutput[index].label,
-            `The label for the child navigation item is correct. (${index + 1})`
+            `The label for the child navigation item is correct. (${index + 1})`,
           )
           .hasAttribute(
             'href',
             expectedOutput[index].href,
-            `The URL for the child navigation item is correct. (${index + 1})`
+            `The URL for the child navigation item is correct. (${index + 1})`,
           );
       });
     };
@@ -133,12 +132,12 @@ module('Acceptance | index', function (hooks) {
         { href: 'https://emberconf.com/', label: 'EmberConf' },
         { href: '/community/meetups', label: 'Meetups' },
       ],
-      parentNavItems[3]
+      parentNavItems[3],
     );
 
     // Navigate to another page
     let childNavItems = parentNavItems[3].querySelectorAll(
-      '.navbar-dropdown-list-item-link'
+      '.navbar-dropdown-list-item-link',
     );
 
     await click(childNavItems[0]);
@@ -146,7 +145,7 @@ module('Acceptance | index', function (hooks) {
     assert.strictEqual(
       currentURL(),
       '/community',
-      'The user can navigate to /community.'
+      'The user can navigate to /community.',
     );
 
     assert.hasPageTitle('Community - Ember.js');

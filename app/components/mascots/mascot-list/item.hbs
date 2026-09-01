@@ -5,7 +5,7 @@
       alt=""
       role="presentation"
       data-test-field="Image"
-      />
+    />
   </div>
 
   <figcaption class="flex-horizontal-between">
@@ -24,10 +24,7 @@
       </span>
     {{/if}}
 
-    <time
-      datetime={{@mascot.date}}
-      data-test-field="Date"
-    >
+    <time datetime={{@mascot.date}} data-test-field="Date">
       {{format-date-time @mascot.date "MMMM D, YYYY"}}
     </time>
   </figcaption>

@@ -44,11 +44,11 @@ export default class CommunityMeetupsIndexController extends Controller {
           return;
         }
 
-        let prefix = '';
         const config = getOwner(this).resolveRegistration('config:environment');
-
-        prefix = config.rootURL;
+        const prefix = config.rootURL;
+        // eslint-disable-next-line no-undef
         L.Icon.Default.imagePath = `${prefix}assets/images/`;
+
         this.leafletPackageLoaded = true;
       });
     }

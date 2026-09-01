@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
@@ -35,7 +34,7 @@ module('Integration | Component | teams/team', function (hooks) {
       .dom('[data-test-field="Team Description"]')
       .hasText(
         'The Steering Committee is responsible for the overall governance of the Ember project.',
-        'We see the correct team description.'
+        'We see the correct team description.',
       );
 
     assert.dom('[data-test-member]').exists({ count: 6 });

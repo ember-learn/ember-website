@@ -15,10 +15,7 @@ module('Integration | Modifier | draw-chart', function (hooks) {
 
   test('The modifier does not error when the chart argument is undefined', async function (assert) {
     await render(hbs`
-      <div
-        data-test-chart
-        {{draw-chart}}
-      >
+      <div data-test-chart {{draw-chart}}>
       </div>
     `);
 
@@ -29,10 +26,7 @@ module('Integration | Modifier | draw-chart', function (hooks) {
 
   test('The modifier inserts an svg element', async function (assert) {
     await render(hbs`
-      <div
-        data-test-chart
-        {{draw-chart this.chart}}
-      >
+      <div data-test-chart {{draw-chart this.chart}}>
       </div>
     `);
 

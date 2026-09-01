@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
@@ -25,13 +24,13 @@ module(
         .doesNotHaveAttribute(
           'role',
           '',
-          'We should not see the role attribute.'
+          'We should not see the role attribute.',
         )
         .hasAttribute(
           'src',
           '/images/home/logos/js.svg',
-          'We see the correct src.'
+          'We see the correct src.',
         );
     });
-  }
+  },
 );

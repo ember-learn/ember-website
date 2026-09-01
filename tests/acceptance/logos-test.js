@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
@@ -28,8 +27,7 @@ module('Acceptance | logos', function (hooks) {
           enabled: false,
         },
       },
-    }
-);
+    });
 
     assert.hasPageTitle('Branding - Ember.js');
   });

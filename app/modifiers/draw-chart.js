@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { registerDestructor } from '@ember/destroyable';
 import merge from 'deepmerge';
 import Modifier from 'ember-modifier';
@@ -40,9 +39,8 @@ export default class DrawChartModifier extends Modifier {
     }
 
     const { default: highcharts } = await import('highcharts');
-    const { default: highchartsAccessibilty } = await import(
-      'highcharts/modules/accessibility'
-    );
+    const { default: highchartsAccessibilty } =
+      await import('highcharts/modules/accessibility');
 
     highchartsAccessibilty(highcharts);
 
@@ -63,7 +61,7 @@ export default class DrawChartModifier extends Modifier {
           },
         },
       },
-      chart.highchartsOptions
+      chart.highchartsOptions,
     );
 
     this.chartInstance = this.highcharts.chart(element, chartOptions);

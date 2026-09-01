@@ -15,9 +15,7 @@ module('Integration | Component | mascots/mascot-list', function (hooks) {
 
   test('We can display mascots', async function (assert) {
     await render(hbs`
-      <Mascots::MascotList
-        @mascots={{this.mascots}}
-      />
+      <Mascots::MascotList @mascots={{this.mascots}} />
     `);
 
     assert

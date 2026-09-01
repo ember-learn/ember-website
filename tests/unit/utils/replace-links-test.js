@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import replaceLinks from 'ember-website/utils/replace-links';
 import { module, test } from 'qunit';
 
@@ -359,7 +358,7 @@ module('Unit | Utility | replace-links', function () {
           ],
         },
       ],
-      'We get the correct output.'
+      'We get the correct output.',
     );
   });
 
@@ -698,7 +697,7 @@ module('Unit | Utility | replace-links', function () {
           ],
         },
       ],
-      'We get the correct output.'
+      'We get the correct output.',
     );
   });
 });

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
@@ -18,9 +17,7 @@ module('Integration | Component | teams/team/member', function (hooks) {
     this.member = this.teamMembers.find(({ id }) => id === 'ricardo-mendes');
 
     await render(hbs`
-      <Teams::Team::Member
-        @member={{this.member}}
-      />
+      <Teams::Team::Member @member={{this.member}} />
     `);
 
     assert
@@ -32,7 +29,7 @@ module('Integration | Component | teams/team/member', function (hooks) {
       .hasAttribute(
         'href',
         'https://github.com/locks',
-        'We see the correct URL for GitHub.'
+        'We see the correct URL for GitHub.',
       );
 
     assert
@@ -40,7 +37,7 @@ module('Integration | Component | teams/team/member', function (hooks) {
       .hasAttribute(
         'href',
         'https://twitter.com/locks',
-        'We see the correct URL for Twitter.'
+        'We see the correct URL for Twitter.',
       );
   });
 });

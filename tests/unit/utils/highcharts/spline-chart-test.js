@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import SplineChart from 'ember-website/utils/highcharts/spline-chart';
 import { module, test } from 'qunit';
 
@@ -124,7 +123,7 @@ module('Unit | Utility | highcharts/spline-chart', function (hooks) {
             },
           },
         },
-        'We get the correct value.'
+        'We get the correct value.',
       );
     });
   });
@@ -196,7 +195,7 @@ module('Unit | Utility | highcharts/spline-chart', function (hooks) {
           ],
           name: '2016',
         },
-        'We get the correct data for the 1st series.'
+        'We get the correct data for the 1st series.',
       );
 
       // Check series 2
@@ -207,7 +206,7 @@ module('Unit | Utility | highcharts/spline-chart', function (hooks) {
           data: [9, 2.15, 2.1, 1.5, 2.8, 7, 3, 4, 4, 13.8, 7, 21.6, 34.9, 17],
           name: '2017',
         },
-        'We get the correct data for the 2nd series.'
+        'We get the correct data for the 2nd series.',
       );
     });
   });

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
@@ -26,7 +25,7 @@ module(
         .hasAttribute(
           'href',
           'http://www.codeallday.com/',
-          'We see the correct href for the sponsor website.'
+          'We see the correct href for the sponsor website.',
         );
 
       assert
@@ -34,13 +33,13 @@ module(
         .hasAttribute(
           'alt',
           'Code All Day',
-          'We see the correct alt for the sponsor logo.'
+          'We see the correct alt for the sponsor logo.',
         )
         .hasAttribute(
           'src',
           '/images/survey/cad-right.svg',
-          'We see the correct src for the sponsor logo.'
+          'We see the correct src for the sponsor logo.',
         );
     });
-  }
+  },
 );
