@@ -8,7 +8,7 @@
 
   https://github.com/ember-cli/ember-page-title/issues/201#issuecomment-761081734
 */
-import { inject as service } from '@ember/service';
+import { service } from '@ember/service';
 import EmberPageTitleService from 'ember-page-title/services/page-title';
 
 export default class PageTitleService extends EmberPageTitleService {
