@@ -1,0 +1,14 @@
+allowBuilds:
+  '@percy/core': true
+  core-js: true
+  fsevents: true
+  protobufjs: false
+  sharp: true
+
+autoInstallPeers: false
+
+overrides:
+  sharp: "^0.33.5"
+
+patchedDependencies:
+  ember-data-fastboot: patches/ember-data-fastboot.patch

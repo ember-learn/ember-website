@@ -107,8 +107,10 @@
     "tracked-built-ins": "^3.3.0",
     "webpack": "^5.95.0"
   },
+  "packageManager": "pnpm@11.23.0",
   "engines": {
-    "node": ">= 20"
+    "node": "22.* || >= 24",
+    "pnpm": ">= 11"
   },
   "ember": {
     "edition": "octane"
@@ -121,20 +123,5 @@
   "fastbootDependencies": [
     "algoliasearch",
     "crypto"
-  ],
-  "pnpm": {
-    "overrides": {
-      "sharp": "^0.33.5"
-    },
-    "onlyBuiltDependencies": [
-      "@percy/core",
-      "core-js",
-      "fsevents",
-      "sharp"
-    ],
-    "patchedDependencies": {
-      "ember-data-fastboot": "patches/ember-data-fastboot.patch"
-    }
-  },
-  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
+  ]
 }
