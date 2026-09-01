@@ -8,6 +8,7 @@ allowBuilds:
 autoInstallPeers: false
 
 overrides:
+  "@glimmer/component": "^2.1.1"
   sharp: "^0.33.5"
 
 patchedDependencies:
