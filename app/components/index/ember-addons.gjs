@@ -1,6 +1,10 @@
+import { fn } from '@ember/helper';
+import { on } from '@ember/modifier';
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
+import IndexEmberAddonsPanel from 'ember-website/components/index/ember-addons/panel';
+import IndexEmberAddonsTab from 'ember-website/components/index/ember-addons/tab';
 import { getTabIdIncrement, modulus } from 'ember-website/utils/navigate-tabs';
 
 export default class IndexEmberAddonsComponent extends Component {
@@ -55,4 +59,52 @@ export default class IndexEmberAddonsComponent extends Component {
     this.currentTabId = newTabId;
     tabElements[newTabId].focus();
   }
+
+  <template>
+    <div class="addon-tabs">
+      <div class="addon-tabs--header" role="tablist">
+        {{#each this.emberAddons as |emberAddon index|}}
+          <IndexEmberAddonsTab
+            @currentTabId={{this.currentTabId}}
+            @label={{emberAddon.title}}
+            @onClick={{fn this.updateCurrentTabId index}}
+            @tabId={{index}}
+            {{on "keydown" this.handleKeyboardNavigation}}
+          />
+        {{/each}}
+      </div>
+
+      <div>
+        {{#each this.emberAddons as |emberAddon index|}}
+          <IndexEmberAddonsPanel
+            @currentTabId={{this.currentTabId}}
+            @tabId={{index}}
+          >
+            <p>
+              {{emberAddon.description}}
+            </p>
+            <p>
+              Read the docs:
+              <a
+                data-test-link={{emberAddon.documentationUrl}}
+                href={{emberAddon.documentationUrl}}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {{emberAddon.documentationUrl}}
+              </a>
+            </p>
+            <p>
+              Easy installation:
+            </p>
+            <code class="addon-tabs--code">
+              <pre class="mt-3">
+          {{~! ~}}&gt; {{emberAddon.howToInstall}}{{~! ~}}
+        </pre>
+            </code>
+          </IndexEmberAddonsPanel>
+        {{/each}}
+      </div>
+    </div>
+  </template>
 }
