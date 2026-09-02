@@ -95,7 +95,7 @@ importers:
         version: 4.3.1
       ember-a11y-testing:
         specifier: ^8.0.1
-        version: 8.0.1(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.4.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(axe-core@4.11.1)(qunit@2.26.0)(supports-color@10.2.2)
+        version: 8.0.1(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.4.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.11.1)(qunit@2.26.0)(supports-color@10.2.2)
       ember-auto-import:
         specifier: ^2.13.1
         version: 2.13.1(@glint/template@1.9.0)(supports-color@10.2.2)(webpack@5.110.2(clean-css@5.3.3)(postcss@8.5.26)(uglify-js@3.19.3))
@@ -118,8 +118,8 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3(ember-cli@6.8.1(@babel/core@7.29.7(supports-color@10.2.2))(@types/node@22.13.4)(debug@4.4.3(supports-color@10.2.2))(handlebars@4.7.8)(supports-color@10.2.2)(underscore@1.13.7))
       ember-cli-fastboot:
-        specifier: ^4.1.5
-        version: 4.1.5(ember-source@6.8.4(@glimmer/component@2.1.1(supports-color@10.2.2))(rsvp@4.8.5)(supports-color@10.2.2))(supports-color@10.2.2)
+        specifier: ^5.0.2
+        version: 5.0.2(supports-color@10.2.2)
       ember-cli-head:
         specifier: ^2.0.0
         version: 2.0.0(supports-color@10.2.2)
@@ -140,7 +140,7 @@ importers:
         version: 4.0.2(supports-color@10.2.2)
       ember-data:
         specifier: ~5.7.0
-        version: 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.4.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(ember-inflector@6.0.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(qunit@2.26.0)(supports-color@10.2.2)
+        version: 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.4.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(ember-inflector@6.0.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(qunit@2.26.0)(supports-color@10.2.2)
       ember-data-fastboot:
         specifier: ^0.1.2
         version: 0.1.2(patch_hash=32da3248de941d97c233aeef4cd09b59d69a331edadf1a2f3840f1ed348ab371)(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
@@ -181,8 +181,11 @@ importers:
         specifier: ~6.8.0
         version: 6.8.4(@glimmer/component@2.1.1(supports-color@10.2.2))(rsvp@4.8.5)(supports-color@10.2.2)
       ember-styleguide:
-        specifier: ^11.3.0
-        version: 11.3.0(@glint/template@1.9.0)(ember-source@6.8.4(@glimmer/component@2.1.1(supports-color@10.2.2))(rsvp@4.8.5)(supports-color@10.2.2))(supports-color@10.2.2)(webpack@5.110.2(clean-css@5.3.3)(postcss@8.5.26)(uglify-js@3.19.3))
+        specifier: ^11.5.0
+        version: 11.5.0(@glint/template@1.9.0)(ember-source@6.8.4(@glimmer/component@2.1.1(supports-color@10.2.2))(rsvp@4.8.5)(supports-color@10.2.2))(supports-color@10.2.2)(webpack@5.110.2(clean-css@5.3.3)(postcss@8.5.26)(uglify-js@3.19.3))
+      ember-template-imports:
+        specifier: ^4.4.0
+        version: 4.4.0(supports-color@10.2.2)
       ember-truth-helpers:
         specifier: ^5.0.0
         version: 5.0.0(supports-color@10.2.2)
@@ -222,9 +225,6 @@ importers:
       prettier:
         specifier: ^3.9.6
         version: 3.9.6
-      prettier-plugin-ember-hbs-tag:
-        specifier: ^2.0.3
-        version: 2.0.3(prettier@3.9.6)
       prettier-plugin-ember-template-tag:
         specifier: ^2.1.8
         version: 2.1.8(prettier@3.9.6)(supports-color@10.2.2)
@@ -422,20 +422,6 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/plugin-proposal-nullish-coalescing-operator@7.18.6':
-    resolution: {integrity: sha512-wQxQzxYeJqHcfppzBDnm1yAY0jSRkUXR2z8RePZYrKwMKgMlE8+Z6LUno+bd6LvbGh8Gltvy74+9pIYkr+XkKA==}
-    engines: {node: '>=6.9.0'}
-    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
-  '@babel/plugin-proposal-optional-chaining@7.21.0':
-    resolution: {integrity: sha512-p4zeefM72gpmEe2fkUr/OnOXpWEf8nAgk7ZYVqqfFiyIG7oFfVZcCrU64hWn5xp4tQ9LkV4bTIa5rD0KANpKNA==}
-    engines: {node: '>=6.9.0'}
-    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
   '@babel/plugin-proposal-private-methods@7.18.6':
     resolution: {integrity: sha512-nutsvktDItsNn4rpGItSNV2sz1XwS+nfU0Rg8aCx3W3NOKVzdMjJRu0O5OkgDp3ZGICSTbgRpxZoWsxoKRvbeA==}
     engines: {node: '>=6.9.0'}
@@ -471,16 +457,6 @@ packages:
   '@babel/plugin-syntax-import-attributes@7.29.7':
     resolution: {integrity: sha512-zGYcYfq/WmZ4V+kBIXQon9dSSc8ircGZqw9ZaNhhGj9nZkeBu1jHLBDQqYYi5WA9uawvA2sIMbry2nCFhf5Djg==}
     engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
-  '@babel/plugin-syntax-nullish-coalescing-operator@7.8.3':
-    resolution: {integrity: sha512-aSff4zPII1u2QD7y+F8oDsz19ew4IGEJg9SVW+bqwpwtfFleiQDMdzA/R+UlWDzfnHFCxxleFT0PMIrR36XLNQ==}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
-  '@babel/plugin-syntax-optional-chaining@7.8.3':
-    resolution: {integrity: sha512-KoK9ErH1MBlCPxV0VANkXW2/dw4vlbGDrFgz8bmUsBGYkFRcbRwMh6cIJubdPrkxRwuGdtCk0v/wPTKbQgBjkg==}
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
@@ -796,11 +772,6 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/plugin-transform-typescript@7.8.7':
-    resolution: {integrity: sha512-7O0UsPQVNKqpHeHLpfvOG4uXmlw+MOxYvUv6Otc9uH5SYMIxvF6eBdjkWvC3f9G+VXe0RsNExyAQBeTRug/wqQ==}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
   '@babel/plugin-transform-unicode-escapes@7.29.7':
     resolution: {integrity: sha512-jCfXxSjf94lf4E0hKE0AByxF6F3/pVFqRdUUNkDJhsY0m1ZKjnN6ZYyMeHNpzflxb/0q5b7t3p+BE+SLF1WOtA==}
     engines: {node: '>=6.9.0'}
@@ -1044,9 +1015,8 @@ packages:
   '@ember/test-helpers@5.4.3':
     resolution: {integrity: sha512-WeNABJsXBidEXP87AH5gaI/KAyb0zEUYJxWa31A/Us5lqg85E3tPlHjBwCrlReOrJbSgvvArMnrdCwt7TRpjPQ==}
 
-  '@ember/test-waiters@3.1.0':
-    resolution: {integrity: sha512-bb9h95ktG2wKY9+ja1sdsFBdOms2lB19VWs8wmNpzgHv1NCetonBoV5jHBV4DHt0uS1tg9z66cZqhUVlYs96KQ==}
-    engines: {node: 10.* || 12.* || >= 14.*}
+  '@ember/test-waiters@4.1.2':
+    resolution: {integrity: sha512-zJwFaHLHjJn6mKoXYVM1SEyMT+U1JpaaSKg3JBmxHJwiIoJRI5djJ/CE33Z7N09mk5JfXd2xdhbd9LBWdlvAzg==}
 
   '@embroider/addon-shim@1.10.3':
     resolution: {integrity: sha512-GYbaiC1v9inbiwVg5s+Sd14Jc66NYxg23mEOocgWAZFCtOfhMnRLaLAA6SytW76myVVYImGHX5PFK4PVuH2yng==}
@@ -2178,9 +2148,19 @@ packages:
 
   '@volar/language-server@2.4.28':
     resolution: {integrity: sha512-NqcLnE5gERKuS4PUFwlhMxf6vqYo7hXtbMFbViXcbVkbZ905AIVWhnSo0ZNBC2V127H1/2zP7RvVOVnyITFfBw==}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@volar/language-service@2.4.28':
     resolution: {integrity: sha512-Rh/wYCZJrI5vCwMk9xyw/Z+MsWxlJY1rmMZPsxUoJKfzIRjS/NF1NmnuEcrMbEVGja00aVpCsInJfixQTMdvLw==}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@volar/source-map@2.4.28':
     resolution: {integrity: sha512-yX2BDBqJkRXfKw8my8VarTyjv48QwxdJtvRgUpNE5erCsgEUdI2DsLbpa+rOQVAJYshY99szEcRDmyHbF10ggQ==}
@@ -2190,6 +2170,11 @@ packages:
 
   '@volar/typescript@2.4.28':
     resolution: {integrity: sha512-Ja6yvWrbis2QtN4ClAKreeUZPVYMARDYZl9LMEv1iQ1QdepB6wn0jTRxA9MftYmYa4DQ4k/DaSZpFPUfxl8giw==}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@vscode/l10n@0.0.18':
     resolution: {integrity: sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==}
@@ -4139,11 +4124,9 @@ packages:
     peerDependencies:
       ember-cli: ^3.2.0 || >=4.0.0
 
-  ember-cli-fastboot@4.1.5:
-    resolution: {integrity: sha512-XVigHzn+xXMqvovdrPNQHXRCzVOkU78ij6adU8Qt7PAaF3stR9oPh/35f30aJ2vcL6jwR72glnuCyXpm3EL22A==}
-    engines: {node: 14.* || 16.* || >= 18}
-    peerDependencies:
-      ember-source: '>=3.16'
+  ember-cli-fastboot@5.0.2:
+    resolution: {integrity: sha512-Rvv3xnhZMdYBGWUsEXvopvOtCexyF8w3AobF3S6YKx1dnX1muLd0ZCFvFaRWsShHxizHzypSliyq8S5X9hMTnA==}
+    engines: {node: '>= 20.19'}
 
   ember-cli-get-component-path-option@1.0.0:
     resolution: {integrity: sha512-k47TDwcJ2zPideBCZE8sCiShSxQSpebY2BHcX2DdipMmBox5gsfyVrbKJWIHeSTTKyEUgmBIvQkqTOozEziCZA==}
@@ -4215,10 +4198,6 @@ packages:
 
   ember-cli-typescript-blueprint-polyfill@0.1.0:
     resolution: {integrity: sha512-g0weUTOnHmPGqVZzkQTl3Nbk9fzEdFkEXydCs5mT1qBjXh8eQ6VlmjjGD5/998UXKuA0pLSCVVMbSp/linLzGA==}
-
-  ember-cli-typescript@3.1.4:
-    resolution: {integrity: sha512-HJ73kL45OGRmIkPhBNFt31I1SGUvdZND+LCH21+qpq3pPlFpJG8GORyXpP+2ze8PbnITNLzwe5AwUrpyuRswdQ==}
-    engines: {node: 8.* || >= 10.*}
 
   ember-cli-typescript@4.2.1:
     resolution: {integrity: sha512-0iKTZ+/wH6UB/VTWKvGuXlmwiE8HSIGcxHamwNhEC5x1mN3z8RfvsFZdQWYUzIWFN2Tek0gmepGRPTwWdBYl/A==}
@@ -4399,17 +4378,13 @@ packages:
     resolution: {integrity: sha512-ANkYpOeI3/tkRxVz750ymb8cQBqfBTKOUOz4RPRsNys8rlaBiaKEa95XLz1JWfCXCzjmqe8i2cIdnAMix+nb3A==}
     engines: {node: 14.* || >= 16}
 
-  ember-styleguide@11.3.0:
-    resolution: {integrity: sha512-iq0VUyYZg5StVWQwF7TqQBDO5R7al25uyL4RTcuETFgDITw5LfNivqE6F7TxsFwhJlVe1773UVyVBI90sXuPwA==}
+  ember-styleguide@11.5.0:
+    resolution: {integrity: sha512-9HOkqdZ+TEx/SUIvLmJmNErIb0UFBW5astasVO6neOFEC8ZFR9QJdrZgmIEj8/Dk37TIgEBD86mSNO+PuWIoIw==}
     engines: {node: 18.* || >= 20}
 
   ember-template-imports@4.4.0:
     resolution: {integrity: sha512-HNOHabTEMbRluci1uScvh3ljMDo9E46dHHNcJAIf5yjOhIQ/zN4Y0DVDWrRfcbihlHvt4v/iF69G+8tffC1YkA==}
     engines: {node: 16.* || >= 18}
-
-  ember-test-waiters@2.1.3:
-    resolution: {integrity: sha512-xDjvq8/1C3b9z3NGpez7aslbq5gsLrxsdjD3apyziHkImh/PTeXZr2bxo/YAUgOwGOtpZ1So0fIsppiSN0u1Ng==}
-    engines: {node: 10.* || >= 12.*}
 
   ember-truth-helpers@3.1.1:
     resolution: {integrity: sha512-FHwJAx77aA5q27EhdaaiBFuy9No+8yaWNT5A7zs0sIFCmf14GbcLn69vJEp6mW7vkITezizGAWhw7gL0Wbk7DA==}
@@ -4719,10 +4694,6 @@ packages:
     resolution: {integrity: sha512-adbxcyWV46qiHyvSp50TKt05tB4tK3HcmF7/nxfAdhnox83seTDbwnaqKO4sXRy7roHAIFqJP/Rw/AuEbX61LA==}
     engines: {node: '>=6'}
 
-  execa@3.4.0:
-    resolution: {integrity: sha512-r9vdGQk4bmCuK1yKQu1KTwcT2zwfWdbdaXfCtAh+5nU/4fSX+JAb7vZGvI5naJrQlvONrEB20jeruESI69530g==}
-    engines: {node: ^8.12.0 || >=9.7.0}
-
   execa@4.1.0:
     resolution: {integrity: sha512-j5W0//W7f8UxAn8hXVnwG8tLwdiUy4FJLcSupCg6maBYZDpyBvTApK7KyuI4bKj8KOh1r2YH+6ucuYtJv1bTZA==}
     engines: {node: '>=10'}
@@ -4819,20 +4790,20 @@ packages:
     resolution: {integrity: sha512-a6Qh1RMCNbSrU1+sAyAAZH3rTe+OaWJbNZIq0S+ifZciUUOQtlVxBJwoTUE2bYhysmG/RYyI5WJFIKdBahJdrQ==}
     hasBin: true
 
-  fastboot-express-middleware@4.1.2:
-    resolution: {integrity: sha512-vnzEBV7gZ3lSoGiqG/7+006nHNA3z+ZnU/5u9jPHtKpjH28yEbvZq6PnAeTu24UR98jZVR0pnFbfX0co+O9PeA==}
-    engines: {node: 12.* || 14.* || >=16}
+  fastboot-express-middleware@5.0.1:
+    resolution: {integrity: sha512-81sl2PPSwvT6hKlhRm7J2+8VTCwBP326r3RQ01a7n+0Ijkcl8e+QHR4Nci1A7RlxTZiiMPGeMSudFabQvy2dbw==}
+    engines: {node: 20.* || 22.* || >= 24}
 
   fastboot-transform@0.1.3:
     resolution: {integrity: sha512-6otygPIJw1ARp1jJb+6KVO56iKBjhO+5x59RSC9qiZTbZRrv+HZAuP00KD3s+nWMvcFDemtdkugki9DNFTTwCQ==}
 
-  fastboot@4.1.2:
-    resolution: {integrity: sha512-VJLmF0xdCNwIIuA7DQtN1KTAKfEGsbZGJ0cfKh64h6DeMh3Fhr2FCCxkPh8zYqGoqzjXFdFbtk60WS3f6HKqBg==}
-    engines: {node: 12.* || 14.* || >=16}
-
   fastboot@4.1.5:
     resolution: {integrity: sha512-2FkJWrpxgJjy5kLb3KrYp0pKdB4WgT/6qxtQO7ozYtQqMBOAARMnp59xp/Hdosa1cE2jslZgwDAv3v11OlQfAw==}
     engines: {node: 12.* || 14.* || >=16}
+
+  fastboot@5.0.1:
+    resolution: {integrity: sha512-9ZP/jdq4e/NS5Mk0LewXdrPH1zB6KCkfES0+r/WoVxJcld3Dh8WtQ97qWOMPme1k52gezBO2onpj+nnvr4+MeQ==}
+    engines: {node: 20.* || 22.* || >= 24}
 
   fastest-levenshtein@1.0.16:
     resolution: {integrity: sha512-eRnCtTTtGZFpQCwhJiUOuxPQWRXVKYDn0b2PeHfXL6/Zi53SLAzAHfVhVWK2AryC/WH05kGfxhFIPvTF0SXQzg==}
@@ -6731,10 +6702,6 @@ packages:
     resolution: {integrity: sha512-LICb2p9CB7FS+0eR1oqWnHhp0FljGLZCWBE9aix0Uye9W8LTQPwMTYVGWQWIw9RdQiDg4+epXQODwIYJtSJaow==}
     engines: {node: '>=4'}
 
-  p-finally@2.0.1:
-    resolution: {integrity: sha512-vpm09aKwq6H9phqRQzecoDpD8TmVyGw70qmWlyq5onxY7tqyTTFVvxMykxQSQKILBSFlbXpypIw2T1Ml7+DDtw==}
-    engines: {node: '>=8'}
-
   p-is-promise@2.1.0:
     resolution: {integrity: sha512-Y3W0wlRPK8ZMRbNq97l4M5otioeA5lm1z7bkNkxCka8HSPjR0xRWmpCmc9utiaLP9Jb1eD8BgeIxTW4AIF45Pg==}
     engines: {node: '>=6'}
@@ -7144,12 +7111,6 @@ packages:
   prember@2.1.0:
     resolution: {integrity: sha512-bK3lwDIm9lP1YemNy1cLImpxT0a4XYWJ8WHztUtGtLrXPJuRGtNUXbHx9d73Pf3RfhqY4fzSQCbR2HEtBcG8jQ==}
     engines: {node: 12.* || 14.* || >= 16}
-
-  prettier-plugin-ember-hbs-tag@2.0.3:
-    resolution: {integrity: sha512-rRHzJtE54dV/sTr5jniYN6NUu2q9G3g1fLk0GaIzLj3TJTmiqJQDVEG3ZH0Efht1pzlVaekK4be2ATw4P52dcA==}
-    engines: {node: 22.* || >= 24}
-    peerDependencies:
-      prettier: ^3.0.0
 
   prettier-plugin-ember-template-tag@2.1.8:
     resolution: {integrity: sha512-ioLdBFoZ11kuiuFF9/bGwHgzjiU3vQVOF1rQhcuEqGc1jmKBH+G3i3BL2yHGum2Z2IQOE/7MPstYo5iAU0Uhlw==}
@@ -8519,8 +8480,11 @@ packages:
     resolution: {integrity: sha512-yTtM/BVT6hoyEYnDtaCyAtNhdNeS/mhTTABlBOdw3NNiRBUin3IznFJpgfjer4c6RYopiPjjQjc9VFhxVl1mLw==}
     peerDependencies:
       '@volar/language-service': ~2.4.0
+      typescript: '*'
     peerDependenciesMeta:
       '@volar/language-service':
+        optional: true
+      typescript:
         optional: true
 
   vscode-html-languageservice@5.6.2:
@@ -9121,21 +9085,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/plugin-proposal-nullish-coalescing-operator@7.18.6(@babel/core@7.29.7(supports-color@10.2.2))':
-    dependencies:
-      '@babel/core': 7.29.7(supports-color@10.2.2)
-      '@babel/helper-plugin-utils': 7.29.7
-      '@babel/plugin-syntax-nullish-coalescing-operator': 7.8.3(@babel/core@7.29.7(supports-color@10.2.2))
-
-  '@babel/plugin-proposal-optional-chaining@7.21.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)':
-    dependencies:
-      '@babel/core': 7.29.7(supports-color@10.2.2)
-      '@babel/helper-plugin-utils': 7.29.7
-      '@babel/helper-skip-transparent-expression-wrappers': 7.29.7(supports-color@10.2.2)
-      '@babel/plugin-syntax-optional-chaining': 7.8.3(@babel/core@7.29.7(supports-color@10.2.2))
-    transitivePeerDependencies:
-      - supports-color
-
   '@babel/plugin-proposal-private-methods@7.18.6(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
@@ -9169,16 +9118,6 @@ snapshots:
       '@babel/helper-plugin-utils': 7.29.7
 
   '@babel/plugin-syntax-import-attributes@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))':
-    dependencies:
-      '@babel/core': 7.29.7(supports-color@10.2.2)
-      '@babel/helper-plugin-utils': 7.29.7
-
-  '@babel/plugin-syntax-nullish-coalescing-operator@7.8.3(@babel/core@7.29.7(supports-color@10.2.2))':
-    dependencies:
-      '@babel/core': 7.29.7(supports-color@10.2.2)
-      '@babel/helper-plugin-utils': 7.29.7
-
-  '@babel/plugin-syntax-optional-chaining@7.8.3(@babel/core@7.29.7(supports-color@10.2.2))':
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@babel/helper-plugin-utils': 7.29.7
@@ -9532,15 +9471,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/plugin-transform-typescript@7.8.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)':
-    dependencies:
-      '@babel/core': 7.29.7(supports-color@10.2.2)
-      '@babel/helper-create-class-features-plugin': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
-      '@babel/helper-plugin-utils': 7.29.7
-      '@babel/plugin-syntax-typescript': 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))
-    transitivePeerDependencies:
-      - supports-color
-
   '@babel/plugin-transform-unicode-escapes@7.29.7(@babel/core@7.29.7(supports-color@10.2.2))':
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
@@ -9764,11 +9694,11 @@ snapshots:
       - '@glint/template'
       - supports-color
 
-  '@ember-data/debug@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/model@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember-data/request-utils@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(ember-inflector@6.0.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(supports-color@10.2.2))(@ember-data/store@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/tracking@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(@warp-drive/core-types@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(supports-color@10.2.2)':
+  '@ember-data/debug@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/model@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember-data/request-utils@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(ember-inflector@6.0.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(supports-color@10.2.2))(@ember-data/store@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/tracking@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(@warp-drive/core-types@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
       '@ember-data/model': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@ember-data/request-utils': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(ember-inflector@6.0.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(supports-color@10.2.2)
-      '@ember-data/store': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/tracking@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@ember-data/store': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/tracking@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@ember/edition-utils': 1.2.0
       '@embroider/macros': 1.20.2(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@warp-drive/core': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
@@ -9862,21 +9792,21 @@ snapshots:
       - '@glint/template'
       - supports-color
 
-  '@ember-data/store@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/tracking@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
+  '@ember-data/store@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/tracking@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
     dependencies:
       '@embroider/macros': 1.20.2(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@warp-drive/core': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
     optionalDependencies:
-      '@ember-data/tracking': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
-      '@ember/test-waiters': 3.1.0(supports-color@10.2.2)
+      '@ember-data/tracking': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@ember/test-waiters': 4.1.2(supports-color@10.2.2)
     transitivePeerDependencies:
       - '@babel/core'
       - '@glint/template'
       - supports-color
 
-  '@ember-data/tracking@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
+  '@ember-data/tracking@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
     dependencies:
-      '@ember/test-waiters': 3.1.0(supports-color@10.2.2)
+      '@ember/test-waiters': 4.1.2(supports-color@10.2.2)
       '@embroider/macros': 1.20.2(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@warp-drive/core': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
     transitivePeerDependencies:
@@ -9957,7 +9887,7 @@ snapshots:
 
   '@ember/test-helpers@5.4.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@ember/test-waiters': 3.1.0(supports-color@10.2.2)
+      '@ember/test-waiters': 4.1.2(supports-color@10.2.2)
       '@embroider/addon-shim': 1.10.3(supports-color@10.2.2)
       '@simple-dom/interface': 1.4.0
       decorator-transforms: 2.3.1(@babel/core@7.29.7(supports-color@10.2.2))
@@ -9966,12 +9896,9 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  '@ember/test-waiters@3.1.0(supports-color@10.2.2)':
+  '@ember/test-waiters@4.1.2(supports-color@10.2.2)':
     dependencies:
-      calculate-cache-key-for-tree: 2.0.0
-      ember-cli-babel: 7.26.11(supports-color@10.2.2)
-      ember-cli-version-checker: 5.1.2(supports-color@10.2.2)
-      semver: 7.8.5
+      '@embroider/addon-shim': 1.10.3(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -10309,17 +10236,17 @@ snapshots:
       '@glint/template': 1.9.0
       '@volar/kit': 2.4.28(typescript@5.9.3)
       '@volar/language-core': 2.4.28
-      '@volar/language-server': 2.4.28
-      '@volar/language-service': 2.4.28
+      '@volar/language-server': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
       '@volar/source-map': 2.4.28
-      '@volar/test-utils': 2.4.28
-      '@volar/typescript': 2.4.28
+      '@volar/test-utils': 2.4.28(typescript@5.9.3)
+      '@volar/typescript': 2.4.28(typescript@5.9.3)
       content-tag: 4.2.0
       ember-estree: 0.8.0
       silent-error: 1.1.1(supports-color@10.2.2)
       typescript: 5.9.3
-      volar-service-html: 0.0.71(@volar/language-service@2.4.28)
-      volar-service-typescript: 0.0.71(@volar/language-service@2.4.28)
+      volar-service-html: 0.0.71(@volar/language-service@2.4.28(typescript@5.9.3))
+      volar-service-typescript: 0.0.71(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3)
       vscode-languageserver-protocol: 3.18.3
       vscode-languageserver-textdocument: 1.0.14
       vscode-uri: 3.2.0
@@ -10334,17 +10261,17 @@ snapshots:
       '@glint/template': 1.9.0
       '@volar/kit': 2.4.28(typescript@6.0.3)
       '@volar/language-core': 2.4.28
-      '@volar/language-server': 2.4.28
-      '@volar/language-service': 2.4.28
+      '@volar/language-server': 2.4.28(typescript@6.0.3)
+      '@volar/language-service': 2.4.28(typescript@6.0.3)
       '@volar/source-map': 2.4.28
-      '@volar/test-utils': 2.4.28
-      '@volar/typescript': 2.4.28
+      '@volar/test-utils': 2.4.28(typescript@6.0.3)
+      '@volar/typescript': 2.4.28(typescript@6.0.3)
       content-tag: 4.2.0
       ember-estree: 0.8.0
       silent-error: 1.1.1(supports-color@10.2.2)
       typescript: 6.0.3
-      volar-service-html: 0.0.71(@volar/language-service@2.4.28)
-      volar-service-typescript: 0.0.71(@volar/language-service@2.4.28)
+      volar-service-html: 0.0.71(@volar/language-service@2.4.28(typescript@6.0.3))
+      volar-service-typescript: 0.0.71(@volar/language-service@2.4.28(typescript@6.0.3))(typescript@6.0.3)
       vscode-languageserver-protocol: 3.18.3
       vscode-languageserver-textdocument: 1.0.14
       vscode-uri: 3.2.0
@@ -10359,7 +10286,7 @@ snapshots:
     dependencies:
       '@glint/ember-tsc': 1.11.4(ember-source@6.8.4(@glimmer/component@2.1.1(supports-color@10.2.2))(rsvp@4.8.5)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@5.9.3)
       '@volar/language-core': 2.4.28
-      '@volar/typescript': 2.4.28
+      '@volar/typescript': 2.4.28(typescript@5.9.3)
       jiti: 2.7.0
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -11449,8 +11376,8 @@ snapshots:
 
   '@volar/kit@2.4.28(typescript@5.9.3)':
     dependencies:
-      '@volar/language-service': 2.4.28
-      '@volar/typescript': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/typescript': 2.4.28(typescript@5.9.3)
       typesafe-path: 0.2.2
       typescript: 5.9.3
       vscode-languageserver-textdocument: 1.0.14
@@ -11458,8 +11385,8 @@ snapshots:
 
   '@volar/kit@2.4.28(typescript@6.0.3)':
     dependencies:
-      '@volar/language-service': 2.4.28
-      '@volar/typescript': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@6.0.3)
+      '@volar/typescript': 2.4.28(typescript@6.0.3)
       typesafe-path: 0.2.2
       typescript: 6.0.3
       vscode-languageserver-textdocument: 1.0.14
@@ -11469,39 +11396,87 @@ snapshots:
     dependencies:
       '@volar/source-map': 2.4.28
 
-  '@volar/language-server@2.4.28':
+  '@volar/language-server@2.4.28(typescript@5.9.3)':
     dependencies:
       '@volar/language-core': 2.4.28
-      '@volar/language-service': 2.4.28
-      '@volar/typescript': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/typescript': 2.4.28(typescript@5.9.3)
       path-browserify: 1.0.1
       request-light: 0.7.0
       vscode-languageserver: 9.0.1
       vscode-languageserver-protocol: 3.18.3
       vscode-languageserver-textdocument: 1.0.14
       vscode-uri: 3.2.0
+    optionalDependencies:
+      typescript: 5.9.3
 
-  '@volar/language-service@2.4.28':
+  '@volar/language-server@2.4.28(typescript@6.0.3)':
+    dependencies:
+      '@volar/language-core': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@6.0.3)
+      '@volar/typescript': 2.4.28(typescript@6.0.3)
+      path-browserify: 1.0.1
+      request-light: 0.7.0
+      vscode-languageserver: 9.0.1
+      vscode-languageserver-protocol: 3.18.3
+      vscode-languageserver-textdocument: 1.0.14
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      typescript: 6.0.3
+
+  '@volar/language-service@2.4.28(typescript@5.9.3)':
     dependencies:
       '@volar/language-core': 2.4.28
       vscode-languageserver-protocol: 3.18.3
       vscode-languageserver-textdocument: 1.0.14
       vscode-uri: 3.2.0
+    optionalDependencies:
+      typescript: 5.9.3
+
+  '@volar/language-service@2.4.28(typescript@6.0.3)':
+    dependencies:
+      '@volar/language-core': 2.4.28
+      vscode-languageserver-protocol: 3.18.3
+      vscode-languageserver-textdocument: 1.0.14
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      typescript: 6.0.3
 
   '@volar/source-map@2.4.28': {}
 
-  '@volar/test-utils@2.4.28':
+  '@volar/test-utils@2.4.28(typescript@5.9.3)':
     dependencies:
       '@volar/language-core': 2.4.28
-      '@volar/language-server': 2.4.28
+      '@volar/language-server': 2.4.28(typescript@5.9.3)
       vscode-languageserver-textdocument: 1.0.14
       vscode-uri: 3.2.0
+    transitivePeerDependencies:
+      - typescript
 
-  '@volar/typescript@2.4.28':
+  '@volar/test-utils@2.4.28(typescript@6.0.3)':
+    dependencies:
+      '@volar/language-core': 2.4.28
+      '@volar/language-server': 2.4.28(typescript@6.0.3)
+      vscode-languageserver-textdocument: 1.0.14
+      vscode-uri: 3.2.0
+    transitivePeerDependencies:
+      - typescript
+
+  '@volar/typescript@2.4.28(typescript@5.9.3)':
     dependencies:
       '@volar/language-core': 2.4.28
       path-browserify: 1.0.1
       vscode-uri: 3.2.0
+    optionalDependencies:
+      typescript: 5.9.3
+
+  '@volar/typescript@2.4.28(typescript@6.0.3)':
+    dependencies:
+      '@volar/language-core': 2.4.28
+      path-browserify: 1.0.1
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      typescript: 6.0.3
 
   '@vscode/l10n@0.0.18': {}
 
@@ -11534,9 +11509,9 @@ snapshots:
       - '@glint/template'
       - supports-color
 
-  '@warp-drive/ember@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
+  '@warp-drive/ember@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
     dependencies:
-      '@ember/test-waiters': 3.1.0(supports-color@10.2.2)
+      '@ember/test-waiters': 4.1.2(supports-color@10.2.2)
       '@embroider/macros': 1.20.2(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@warp-drive/core': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
     transitivePeerDependencies:
@@ -13997,10 +13972,10 @@ snapshots:
 
   electron-to-chromium@1.5.417: {}
 
-  ember-a11y-testing@8.0.1(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.4.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(axe-core@4.11.1)(qunit@2.26.0)(supports-color@10.2.2):
+  ember-a11y-testing@8.0.1(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.4.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(axe-core@4.11.1)(qunit@2.26.0)(supports-color@10.2.2):
     dependencies:
       '@ember/test-helpers': 5.4.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
-      '@ember/test-waiters': 3.1.0(supports-color@10.2.2)
+      '@ember/test-waiters': 4.1.2(supports-color@10.2.2)
       '@embroider/addon-shim': 1.10.3(supports-color@10.2.2)
       axe-core: 4.11.1
       decorator-transforms: 2.3.1(@babel/core@7.29.7(supports-color@10.2.2))
@@ -14196,21 +14171,22 @@ snapshots:
       resolve: 1.22.12
       semver: 5.7.2
 
-  ember-cli-fastboot@4.1.5(ember-source@6.8.4(@glimmer/component@2.1.1(supports-color@10.2.2))(rsvp@4.8.5)(supports-color@10.2.2))(supports-color@10.2.2):
+  ember-cli-fastboot@5.0.2(supports-color@10.2.2):
     dependencies:
+      '@babel/core': 7.29.7(supports-color@10.2.2)
       broccoli-concat: 4.2.5(supports-color@10.2.2)
       broccoli-file-creator: 2.1.1
       broccoli-funnel: 3.0.8(supports-color@10.2.2)
       broccoli-merge-trees: 4.2.0(supports-color@10.2.2)
+      broccoli-persistent-filter: 3.1.3(supports-color@10.2.2)
       broccoli-plugin: 4.0.7(supports-color@10.2.2)
       chalk: 4.1.2
-      ember-cli-babel: 7.26.11(supports-color@10.2.2)
+      ember-cli-babel: 8.3.2(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
       ember-cli-lodash-subset: 2.0.1
       ember-cli-preprocess-registry: 3.3.0(supports-color@10.2.2)
       ember-cli-version-checker: 5.1.2(supports-color@10.2.2)
-      ember-source: 6.8.4(@glimmer/component@2.1.1(supports-color@10.2.2))(rsvp@4.8.5)(supports-color@10.2.2)
-      fastboot: 4.1.5(supports-color@10.2.2)
-      fastboot-express-middleware: 4.1.2(supports-color@10.2.2)
+      fastboot: 5.0.1(supports-color@10.2.2)
+      fastboot-express-middleware: 5.0.1(supports-color@10.2.2)
       fastboot-transform: 0.1.3(supports-color@10.2.2)
       fs-extra: 10.1.0
       json-stable-stringify: 1.2.1
@@ -14358,26 +14334,6 @@ snapshots:
       chalk: 4.1.2
       remove-types: 1.0.0(supports-color@10.2.2)
     transitivePeerDependencies:
-      - supports-color
-
-  ember-cli-typescript@3.1.4(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2):
-    dependencies:
-      '@babel/plugin-proposal-nullish-coalescing-operator': 7.18.6(@babel/core@7.29.7(supports-color@10.2.2))
-      '@babel/plugin-proposal-optional-chaining': 7.21.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
-      '@babel/plugin-transform-typescript': 7.8.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
-      ansi-to-html: 0.6.15
-      broccoli-stew: 3.0.0(supports-color@10.2.2)
-      debug: 4.4.3(supports-color@10.2.2)
-      ember-cli-babel-plugin-helpers: 1.1.1
-      execa: 3.4.0
-      fs-extra: 8.1.0
-      resolve: 1.22.12
-      rsvp: 4.8.5
-      semver: 6.3.1
-      stagehand: 1.0.1(supports-color@10.2.2)
-      walk-sync: 2.2.0
-    transitivePeerDependencies:
-      - '@babel/core'
       - supports-color
 
   ember-cli-typescript@4.2.1(supports-color@10.2.2):
@@ -14627,10 +14583,10 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  ember-data@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.4.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(ember-inflector@6.0.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(qunit@2.26.0)(supports-color@10.2.2):
+  ember-data@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.4.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(ember-inflector@6.0.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(qunit@2.26.0)(supports-color@10.2.2):
     dependencies:
       '@ember-data/adapter': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
-      '@ember-data/debug': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/model@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember-data/request-utils@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(ember-inflector@6.0.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(supports-color@10.2.2))(@ember-data/store@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/tracking@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(@warp-drive/core-types@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(supports-color@10.2.2)
+      '@ember-data/debug': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/model@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember-data/request-utils@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(ember-inflector@6.0.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(supports-color@10.2.2))(@ember-data/store@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/tracking@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@glint/template@1.9.0)(@warp-drive/core-types@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(supports-color@10.2.2)
       '@ember-data/graph': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@ember-data/json-api': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@ember-data/legacy-compat': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
@@ -14638,14 +14594,14 @@ snapshots:
       '@ember-data/request': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@ember-data/request-utils': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(ember-inflector@6.0.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(supports-color@10.2.2)
       '@ember-data/serializer': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
-      '@ember-data/store': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/tracking@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
-      '@ember-data/tracking': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@ember-data/store': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember-data/tracking@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@ember-data/tracking': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@ember/edition-utils': 1.2.0
-      '@ember/test-waiters': 3.1.0(supports-color@10.2.2)
+      '@ember/test-waiters': 4.1.2(supports-color@10.2.2)
       '@embroider/macros': 1.20.2(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@warp-drive/core': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@warp-drive/core-types': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
-      '@warp-drive/ember': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@3.1.0(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
+      '@warp-drive/ember': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)
       '@warp-drive/json-api': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(@warp-drive/core@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(supports-color@10.2.2)
       '@warp-drive/legacy': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(@warp-drive/core@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(@warp-drive/utilities@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(@warp-drive/core@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(supports-color@10.2.2))(supports-color@10.2.2)
       '@warp-drive/utilities': 5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(@warp-drive/core@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2))(supports-color@10.2.2)
@@ -14960,10 +14916,11 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  ember-styleguide@11.3.0(@glint/template@1.9.0)(ember-source@6.8.4(@glimmer/component@2.1.1(supports-color@10.2.2))(rsvp@4.8.5)(supports-color@10.2.2))(supports-color@10.2.2)(webpack@5.110.2(clean-css@5.3.3)(postcss@8.5.26)(uglify-js@3.19.3)):
+  ember-styleguide@11.5.0(@glint/template@1.9.0)(ember-source@6.8.4(@glimmer/component@2.1.1(supports-color@10.2.2))(rsvp@4.8.5)(supports-color@10.2.2))(supports-color@10.2.2)(webpack@5.110.2(clean-css@5.3.3)(postcss@8.5.26)(uglify-js@3.19.3)):
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@ember/render-modifiers': 2.1.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(ember-source@6.8.4(@glimmer/component@2.1.1(supports-color@10.2.2))(rsvp@4.8.5)(supports-color@10.2.2))(supports-color@10.2.2)
+      '@ember/test-waiters': 4.1.2(supports-color@10.2.2)
       '@glimmer/component': 2.1.1(supports-color@10.2.2)
       broccoli-funnel: 3.0.8(supports-color@10.2.2)
       broccoli-merge-trees: 4.2.0(supports-color@10.2.2)
@@ -14973,7 +14930,7 @@ snapshots:
       ember-cli-postcss: 8.2.0(supports-color@10.2.2)
       ember-concurrency: 2.3.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
       ember-named-blocks-polyfill: 0.2.5(supports-color@10.2.2)
-      ember-test-waiters: 2.1.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
+      ember-template-imports: 4.4.0(supports-color@10.2.2)
       ember-truth-helpers: 3.1.1(supports-color@10.2.2)
       lodash.get: 4.4.2
       normalize.css: 8.0.1
@@ -14992,16 +14949,6 @@ snapshots:
       content-tag: 4.2.0
       ember-cli-version-checker: 5.1.2(supports-color@10.2.2)
     transitivePeerDependencies:
-      - supports-color
-
-  ember-test-waiters@2.1.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2):
-    dependencies:
-      ember-cli-babel: 7.26.11(supports-color@10.2.2)
-      ember-cli-typescript: 3.1.4(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
-      ember-cli-version-checker: 5.1.2(supports-color@10.2.2)
-      semver: 7.8.5
-    transitivePeerDependencies:
-      - '@babel/core'
       - supports-color
 
   ember-truth-helpers@3.1.1(supports-color@10.2.2):
@@ -15386,19 +15333,6 @@ snapshots:
       signal-exit: 3.0.7
       strip-eof: 1.0.0
 
-  execa@3.4.0:
-    dependencies:
-      cross-spawn: 7.0.6
-      get-stream: 5.2.0
-      human-signals: 1.1.1
-      is-stream: 2.0.1
-      merge-stream: 2.0.0
-      npm-run-path: 4.0.1
-      onetime: 5.1.2
-      p-finally: 2.0.1
-      signal-exit: 3.0.7
-      strip-final-newline: 2.0.0
-
   execa@4.1.0:
     dependencies:
       cross-spawn: 7.0.6
@@ -15613,10 +15547,10 @@ snapshots:
     dependencies:
       strnum: 1.1.2
 
-  fastboot-express-middleware@4.1.2(supports-color@10.2.2):
+  fastboot-express-middleware@5.0.1(supports-color@10.2.2):
     dependencies:
       chalk: 4.1.2
-      fastboot: 4.1.2(supports-color@10.2.2)
+      fastboot: 5.0.1(supports-color@10.2.2)
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -15630,7 +15564,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  fastboot@4.1.2(supports-color@10.2.2):
+  fastboot@4.1.5(supports-color@10.2.2):
     dependencies:
       chalk: 4.1.2
       cookie: 0.4.2
@@ -15645,7 +15579,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  fastboot@4.1.5(supports-color@10.2.2):
+  fastboot@5.0.1(supports-color@10.2.2):
     dependencies:
       chalk: 4.1.2
       cookie: 0.4.2
@@ -17729,8 +17663,6 @@ snapshots:
 
   p-finally@1.0.0: {}
 
-  p-finally@2.0.1: {}
-
   p-is-promise@2.1.0: {}
 
   p-limit@1.3.0:
@@ -18180,10 +18112,6 @@ snapshots:
       - canvas
       - supports-color
       - utf-8-validate
-
-  prettier-plugin-ember-hbs-tag@2.0.3(prettier@3.9.6):
-    dependencies:
-      prettier: 3.9.6
 
   prettier-plugin-ember-template-tag@2.1.8(prettier@3.9.6)(supports-color@10.2.2):
     dependencies:
@@ -19901,15 +19829,23 @@ snapshots:
 
   vary@1.1.2: {}
 
-  volar-service-html@0.0.71(@volar/language-service@2.4.28):
+  volar-service-html@0.0.71(@volar/language-service@2.4.28(typescript@5.9.3)):
     dependencies:
       vscode-html-languageservice: 5.6.2
       vscode-languageserver-textdocument: 1.0.14
       vscode-uri: 3.2.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
 
-  volar-service-typescript@0.0.71(@volar/language-service@2.4.28):
+  volar-service-html@0.0.71(@volar/language-service@2.4.28(typescript@6.0.3)):
+    dependencies:
+      vscode-html-languageservice: 5.6.2
+      vscode-languageserver-textdocument: 1.0.14
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      '@volar/language-service': 2.4.28(typescript@6.0.3)
+
+  volar-service-typescript@0.0.71(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3):
     dependencies:
       path-browserify: 1.0.1
       semver: 7.8.5
@@ -19918,7 +19854,20 @@ snapshots:
       vscode-nls: 5.2.0
       vscode-uri: 3.2.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28
+      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      typescript: 5.9.3
+
+  volar-service-typescript@0.0.71(@volar/language-service@2.4.28(typescript@6.0.3))(typescript@6.0.3):
+    dependencies:
+      path-browserify: 1.0.1
+      semver: 7.8.5
+      typescript-auto-import-cache: 0.3.6
+      vscode-languageserver-textdocument: 1.0.14
+      vscode-nls: 5.2.0
+      vscode-uri: 3.2.0
+    optionalDependencies:
+      '@volar/language-service': 2.4.28(typescript@6.0.3)
+      typescript: 6.0.3
 
   vscode-html-languageservice@5.6.2:
     dependencies:
