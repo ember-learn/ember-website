@@ -1,0 +1,11 @@
+import { LinkTo } from '@ember/routing';
+
+<template>
+  <section class="container" aria-labelledby="commission-request-sent">
+    <h1 id="commission-request-sent">Mascot Commission Request Sent</h1>
+
+    <p>Thanks much! We'll get back to you shortly!</p>
+
+    <p><LinkTo @route="mascots">&larr; Return to Mascots</LinkTo></p>
+  </section>
+</template>

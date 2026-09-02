@@ -1,0 +1,251 @@
+import { LinkTo } from '@ember/routing';
+
+<template>
+  <section class="container layout">
+    <div class="lg:col-4">
+      <h1>Mascot Commission Requests</h1>
+
+      <p>Thanks so much for your interest in commissioning a Tomster or Zoey for
+        your User Group (UG) or Company (Corp)! As per our
+        <LinkTo @route="mascots.faq">FAQ</LinkTo>, assuming an approved use
+        case, we'd love to work with you!</p>
+
+      <p>Most of the Tomsters and Zoeys we design fit into a somewhat standard
+        mold. You can
+        <a href="/pdfs/Mascot-Pricing.pdf" download>download the pricing sheet</a>
+        to learn about the standard options.</p>
+
+      <p>Filling out this form is the first step to commissioning your custom
+        Ember Mascot. We'll get back to you as soon as we can with our thoughts
+        and next steps.</p>
+
+      <form
+        id="tomster-commission-form"
+        name="tomster-commission-form"
+        class="tomster-form wufoo topLabel page"
+        accept-charset="UTF-8"
+        autocomplete="off"
+        enctype="multipart/form-data"
+        method="post"
+        novalidate
+        action="https://tilde.wufoo.com/forms/q14mw9qi196f6oy/#public"
+      >
+        <ul>
+          <li id="foli3">
+            <label class="desc" id="title3" for="Field3">
+              Name
+              <span id="req_3" class="req">*</span>
+            </label>
+            <div>
+              <input
+                id="Field3"
+                name="Field3"
+                type="text"
+                class="field"
+                value=""
+                maxlength="255"
+                tabindex="0"
+                onkeyup=""
+                required
+              />
+            </div>
+          </li>
+          <li id="foli4">
+            <label class="desc" id="title4" for="Field4">
+              Email
+              <span id="req_4" class="req">*</span>
+            </label>
+            <div>
+              <input
+                id="Field4"
+                name="Field4"
+                type="email"
+                spellcheck="false"
+                class="field"
+                value=""
+                maxlength="255"
+                tabindex="0"
+                required
+              />
+            </div>
+          </li>
+          <li id="foli6">
+            <label class="desc" id="title6" for="Field6">
+              Please tell us what you'd like to commission an Ember Mascot for.
+              <span id="req_6" class="req">*</span>
+            </label>
+            <div>
+              <textarea
+                id="Field6"
+                name="Field6"
+                spellcheck="true"
+                tabindex="0"
+                onkeyup=""
+                required
+              />
+            </div>
+          </li>
+          <li id="foli7">
+            <label class="desc" id="title7" for="Field7">
+              Do you already have ideas for the character? If so, please do
+              share here.
+            </label>
+            <div>
+              <textarea
+                id="Field7"
+                name="Field7"
+                spellcheck="true"
+                tabindex="0"
+                onkeyup=""
+              />
+            </div>
+          </li>
+          <li id="foli8">
+            <fieldset>
+              <legend id="title8" class="desc">
+                I believe what I want fits into the following pricing category:
+                <span id="req_8" class="req">*</span>
+              </legend>
+              <div>
+                <input
+                  id="radioDefault_8"
+                  name="Field8"
+                  type="hidden"
+                  value=""
+                />
+                <span class="choice">
+                  <input
+                    id="Field8_0"
+                    name="Field8"
+                    type="radio"
+                    class="field radio"
+                    value="UG Tomster with Simple Shirt Change, $80"
+                    tabindex="0"
+                    checked="checked"
+                    required
+                  />
+                  <label for="Field8_0">
+                    UG Tomster or Zoey with Simple Shirt Change, $80
+                  </label>
+                </span>
+                <span class="choice">
+                  <input
+                    id="Field8_1"
+                    name="Field8"
+                    type="radio"
+                    class="field radio"
+                    value="UG Tomster with 1 Prop and Full Costume, $200"
+                    tabindex="0"
+                    required
+                  />
+                  <label for="Field8_1">
+                    UG Tomster or Zoey with 1 Prop and Full Costume, $200
+                  </label>
+                </span>
+                <span class="choice">
+                  <input
+                    id="Field8_2"
+                    name="Field8"
+                    type="radio"
+                    class="field radio"
+                    value="Tomster with Full Background, $300"
+                    tabindex="0"
+                    required
+                  />
+                  <label for="Field8_2">
+                    UG Tomster or Zoey with Full Background, $300
+                  </label>
+                </span>
+                <span class="choice">
+                  <input
+                    id="Field8_4"
+                    name="Field8"
+                    type="radio"
+                    class="field radio"
+                    value="Corp Tomster or Zoey, Silver Tier, $750"
+                    tabindex="0"
+                    required
+                  />
+                  <label for="Field8_4">
+                    Corp Tomster or Zoey, Silver Tier, $750
+                  </label>
+                </span>
+                <span class="choice">
+                  <input
+                    id="Field8_5"
+                    name="Field8"
+                    type="radio"
+                    class="field radio"
+                    value="Corp Tomster and Zoey, Gold Tier, $1500"
+                    tabindex="0"
+                    required
+                  />
+                  <label for="Field8_5">
+                    Corp Tomster and Zoey, Gold Tier, $1500
+                  </label>
+                </span>
+                <span class="choice">
+                  <input
+                    id="Field8_3"
+                    name="Field8"
+                    type="radio"
+                    class="field radio"
+                    value="Other"
+                    tabindex="0"
+                    onmouseup="document.getElementById('Field8_other').focus();"
+                    required
+                  />
+                  <label
+                    for="Field8_3"
+                    onmouseup="document.getElementById('Field8_other').focus();"
+                  >
+                    Other
+                  </label>
+                  <input
+                    id="Field8_other"
+                    name="Field8_other_Other"
+                    type="text"
+                    class="field text other"
+                    value=""
+                    onclick="document.getElementById('Field8_3').checked = 'checked';"
+                    tabindex="0"
+                  />
+                </span>
+              </div>
+            </fieldset>
+          </li>
+          <li class="buttons">
+            <div>
+              <input
+                id="saveForm"
+                name="saveForm"
+                class="es-button button-dark"
+                type="submit"
+                value="Submit"
+              />
+            </div>
+          </li>
+          <li class="hide">
+            <label for="comment">Do Not Fill This Out</label>
+            <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+            <input
+              type="hidden"
+              id="idstamp"
+              name="idstamp"
+              value="HzIvtB3mbwMUBgagcaKaxnTASiJAOpXIR2gxYqSusY0="
+            />
+          </li>
+        </ul>
+      </form>
+    </div>
+
+    <div class="lg:col-2 hide-on-mobile">
+      <img
+        alt=""
+        src="/images/tomster-faq.png"
+        role="presentation"
+        loading="lazy"
+      />
+    </div>
+  </section>
+</template>
