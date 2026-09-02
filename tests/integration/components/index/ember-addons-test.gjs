@@ -1,6 +1,6 @@
 import { click, focus, render, triggerKeyEvent } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
+import IndexEmberAddons from 'ember-website/components/index/ember-addons';
 import { module, test } from 'qunit';
 
 module('Integration | Component | index/ember-addons', function (hooks) {
@@ -25,9 +25,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
   });
 
   test('We show 4 Ember addons', async function (assert) {
-    await render(hbs`
-      <Index::EmberAddons />
-    `);
+    await render(<template><IndexEmberAddons /></template>);
 
     // Check tabs
     assert.dom('[data-test-button]').exists({ count: 4 }, 'We see 4 tabs.');
@@ -56,9 +54,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
   });
 
   test('We can switch tabs with a mouse click', async function (assert) {
-    await render(hbs`
-      <Index::EmberAddons />
-    `);
+    await render(<template><IndexEmberAddons /></template>);
     await click('[data-test-button="Translate"]');
 
     assert.areTabsSelected({
@@ -124,9 +120,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
   });
 
   test('We can switch tabs with left and right arrow keys', async function (assert) {
-    await render(hbs`
-      <Index::EmberAddons />
-    `);
+    await render(<template><IndexEmberAddons /></template>);
     await focus('[data-test-button="Manage State"]');
     await triggerKeyEvent(
       '[data-test-button="Manage State"]',

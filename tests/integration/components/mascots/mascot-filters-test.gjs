@@ -1,6 +1,6 @@
 import { findAll, render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
+import MascotsMascotFilters from 'ember-website/components/mascots/mascot-filters';
 import { module, test } from 'qunit';
 
 module('Integration | Component | mascots/mascot-filters', function (hooks) {
@@ -40,9 +40,7 @@ module('Integration | Component | mascots/mascot-filters', function (hooks) {
     /* END: Set up custom assertions */
 
     /* BEGIN: Test */
-    await render(hbs`
-      <Mascots::MascotFilters />
-    `);
+    await render(<template><MascotsMascotFilters /></template>);
 
     assert.areLinksCorrect([
       {

@@ -1,21 +1,21 @@
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
+import formatDateTime from 'ember-website/helpers/format-date-time';
 import { module, test } from 'qunit';
 
 module('Integration | Helper | format-date-time', function (hooks) {
   setupRenderingTest(hooks);
 
-  hooks.beforeEach(function () {
-    this.releaseDate = new Date('2021-01-07');
-  });
-
   test('The helper does not error when date is undefined', async function (assert) {
-    await render(hbs`
-      <div data-test-value>
-        {{format-date-time undefined}}
-      </div>
-    `);
+    const releaseDate = undefined;
+
+    await render(
+      <template>
+        <div data-test-value>
+          {{formatDateTime releaseDate}}
+        </div>
+      </template>,
+    );
 
     assert
       .dom('[data-test-value]')
@@ -23,11 +23,15 @@ module('Integration | Helper | format-date-time', function (hooks) {
   });
 
   test('By default, displays the month and day of the date', async function (assert) {
-    await render(hbs`
-      <div data-test-value>
-        {{format-date-time this.releaseDate}}
-      </div>
-    `);
+    const releaseDate = new Date('2021-01-07');
+
+    await render(
+      <template>
+        <div data-test-value>
+          {{formatDateTime releaseDate}}
+        </div>
+      </template>,
+    );
 
     assert
       .dom('[data-test-value]')
@@ -35,11 +39,15 @@ module('Integration | Helper | format-date-time', function (hooks) {
   });
 
   test('We can pass a second argument to format the string', async function (assert) {
-    await render(hbs`
-      <div data-test-value>
-        {{format-date-time this.releaseDate "MMMM D, YYYY"}}
-      </div>
-    `);
+    const releaseDate = new Date('2021-01-07');
+
+    await render(
+      <template>
+        <div data-test-value>
+          {{formatDateTime releaseDate "MMMM D, YYYY"}}
+        </div>
+      </template>,
+    );
 
     assert
       .dom('[data-test-value]')

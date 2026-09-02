@@ -1,7 +1,6 @@
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
-
 import { setupRenderingTest } from 'ember-qunit';
+import TeamsTeamMember from 'ember-website/components/teams/team/member';
 import { module, test } from 'qunit';
 
 module('Integration | Component | teams/team/member', function (hooks) {
@@ -14,11 +13,9 @@ module('Integration | Component | teams/team/member', function (hooks) {
   });
 
   test('We can display the member', async function (assert) {
-    this.member = this.teamMembers.find(({ id }) => id === 'ricardo-mendes');
+    const member = this.teamMembers.find(({ id }) => id === 'ricardo-mendes');
 
-    await render(hbs`
-      <Teams::Team::Member @member={{this.member}} />
-    `);
+    await render(<template><TeamsTeamMember @member={{member}} /></template>);
 
     assert
       .dom('[data-test-field="Name"]')

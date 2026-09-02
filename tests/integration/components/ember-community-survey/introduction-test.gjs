@@ -1,6 +1,6 @@
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
+import EmberCommunitySurveyIntroduction from 'ember-website/components/ember-community-survey/introduction';
 import { module, test } from 'qunit';
 
 module(
@@ -9,12 +9,14 @@ module(
     setupRenderingTest(hooks);
 
     test('We can pass @surveyLogoAlt and @surveyLogoSrc', async function (assert) {
-      await render(hbs`
-        <EmberCommunitySurvey::Introduction
-          @surveyLogoAlt="Ember Community Survey 2016"
-          @surveyLogoSrc="/images/survey/logo.png"
-        />
-      `);
+      await render(
+        <template>
+          <EmberCommunitySurveyIntroduction
+            @surveyLogoAlt="Ember Community Survey 2016"
+            @surveyLogoSrc="/images/survey/logo.png"
+          />
+        </template>,
+      );
 
       assert
         .dom('[data-test-image="Survey Logo"]')
@@ -35,19 +37,21 @@ module(
     });
 
     test('We can render a block content', async function (assert) {
-      await render(hbs`
-        <EmberCommunitySurvey::Introduction
-          @surveyLogoAlt="Ember Community Survey 2016"
-          @surveyLogoSrc="/images/survey/logo.png"
-        >
-          <p>
-            A project to learn who is using Ember and how.
-          </p>
-          <p>
-            With over 1800 responses, here are the 2016 survey results!
-          </p>
-        </EmberCommunitySurvey::Introduction>
-      `);
+      await render(
+        <template>
+          <EmberCommunitySurveyIntroduction
+            @surveyLogoAlt="Ember Community Survey 2016"
+            @surveyLogoSrc="/images/survey/logo.png"
+          >
+            <p>
+              A project to learn who is using Ember and how.
+            </p>
+            <p>
+              With over 1800 responses, here are the 2016 survey results!
+            </p>
+          </EmberCommunitySurveyIntroduction>
+        </template>,
+      );
 
       assert
         .dom('[data-test-image="Survey Logo"]')

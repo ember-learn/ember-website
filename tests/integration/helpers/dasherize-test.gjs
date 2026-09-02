@@ -1,7 +1,7 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
+import { setupRenderingTest } from 'ember-qunit';
+import dasherize from 'ember-website/helpers/dasherize';
+import { module, test } from 'qunit';
 
 module('Integration | Helper | dasherize', function (hooks) {
   setupRenderingTest(hooks);
@@ -12,13 +12,9 @@ module('Integration | Helper | dasherize', function (hooks) {
    * to make sure it's hooked up correctly
    */
   test('it renders', async function (assert) {
-    this.set('inputValue', 'Something Awesome');
+    const inputValue = 'Something Awesome';
 
-    await render(
-      hbs`
-        {{dasherize this.inputValue}}
-      `,
-    );
+    await render(<template>{{dasherize inputValue}}</template>);
 
     assert.dom(this.element).hasText('something-awesome');
   });

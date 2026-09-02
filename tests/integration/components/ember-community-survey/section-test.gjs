@@ -1,6 +1,7 @@
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
+import EmberCommunitySurveySection from 'ember-website/components/ember-community-survey/section';
+import Highcharts from 'ember-website/components/highcharts';
 import { module, test } from 'qunit';
 
 module(
@@ -9,12 +10,14 @@ module(
     setupRenderingTest(hooks);
 
     test('We can pass @sectionId and @sectionTitle to create a title and hyperlink', async function (assert) {
-      await render(hbs`
-        <EmberCommunitySurvey::Section
-          @sectionId="closing-thoughts"
-          @sectionTitle="Closing Thoughts"
-        />
-      `);
+      await render(
+        <template>
+          <EmberCommunitySurveySection
+            @sectionId="closing-thoughts"
+            @sectionTitle="Closing Thoughts"
+          />
+        </template>,
+      );
 
       assert
         .dom('[data-test-field="Title"]')
@@ -44,19 +47,21 @@ module(
     });
 
     test('We can create a section with body only', async function (assert) {
-      await render(hbs`
-        <EmberCommunitySurvey::Section
-          @sectionId="closing-thoughts"
-          @sectionTitle="Closing Thoughts"
-        >
-          <:body>
-            <p>
-              We would like to thank everyone who took the time to participate
-              in the 2016 Ember Community Survey!
-            </p>
-          </:body>
-        </EmberCommunitySurvey::Section>
-      `);
+      await render(
+        <template>
+          <EmberCommunitySurveySection
+            @sectionId="closing-thoughts"
+            @sectionTitle="Closing Thoughts"
+          >
+            <:body>
+              <p>
+                We would like to thank everyone who took the time to participate
+                in the 2016 Ember Community Survey!
+              </p>
+            </:body>
+          </EmberCommunitySurveySection>
+        </template>,
+      );
 
       assert
         .dom('[data-test-container="Charts"]')
@@ -71,22 +76,24 @@ module(
     });
 
     test('We can create a section with 1 chart', async function (assert) {
-      await render(hbs`
-        <EmberCommunitySurvey::Section
-          @sectionId="how-likely-to-recommend-ember"
-          @sectionTitle="Recommending Ember"
-        >
-          <:charts>
-            <Highcharts />
-          </:charts>
+      await render(
+        <template>
+          <EmberCommunitySurveySection
+            @sectionId="how-likely-to-recommend-ember"
+            @sectionTitle="Recommending Ember"
+          >
+            <:charts>
+              <Highcharts />
+            </:charts>
 
-          <:body>
-            <p>
-              Explanation for the chart goes here.
-            </p>
-          </:body>
-        </EmberCommunitySurvey::Section>
-      `);
+            <:body>
+              <p>
+                Explanation for the chart goes here.
+              </p>
+            </:body>
+          </EmberCommunitySurveySection>
+        </template>,
+      );
 
       assert
         .dom('[data-test-container="Charts"]')
@@ -103,26 +110,28 @@ module(
     });
 
     test('We can create a section with 2 charts', async function (assert) {
-      await render(hbs`
-        <EmberCommunitySurvey::Section
-          @sectionId="server-side-development"
-          @sectionTitle="Server-side development"
-        >
-          <:charts>
-            <div class="grid lg:grid-2">
-              <Highcharts />
+      await render(
+        <template>
+          <EmberCommunitySurveySection
+            @sectionId="server-side-development"
+            @sectionTitle="Server-side development"
+          >
+            <:charts>
+              <div class="grid lg:grid-2">
+                <Highcharts />
 
-              <Highcharts />
-            </div>
-          </:charts>
+                <Highcharts />
+              </div>
+            </:charts>
 
-          <:body>
-            <p>
-              Explanation for both charts goes here.
-            </p>
-          </:body>
-        </EmberCommunitySurvey::Section>
-      `);
+            <:body>
+              <p>
+                Explanation for both charts goes here.
+              </p>
+            </:body>
+          </EmberCommunitySurveySection>
+        </template>,
+      );
 
       assert
         .dom('[data-test-container="Charts"]')

@@ -1,7 +1,6 @@
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
-
 import { setupRenderingTest } from 'ember-qunit';
+import MascotsMascotListItem from 'ember-website/components/mascots/mascot-list/item';
 import { module, test } from 'qunit';
 
 module('Integration | Component | mascots/mascot-list/item', function (hooks) {
@@ -14,11 +13,11 @@ module('Integration | Component | mascots/mascot-list/item', function (hooks) {
   });
 
   test('We can display a mascot (with url)', async function (assert) {
-    this.mascot = this.mascots.find(({ id }) => id === 'austin-zoey');
+    const mascot = this.mascots.find(({ id }) => id === 'austin-zoey');
 
-    await render(hbs`
-      <Mascots::MascotList::Item @mascot={{this.mascot}} />
-    `);
+    await render(
+      <template><MascotsMascotListItem @mascot={{mascot}} /></template>,
+    );
 
     assert
       .dom('[data-test-field="Image"]')
@@ -44,11 +43,11 @@ module('Integration | Component | mascots/mascot-list/item', function (hooks) {
   });
 
   test('We can display a mascot (without url)', async function (assert) {
-    this.mascot = this.mascots.find(({ id }) => id === 'ember-a11y');
+    const mascot = this.mascots.find(({ id }) => id === 'ember-a11y');
 
-    await render(hbs`
-      <Mascots::MascotList::Item @mascot={{this.mascot}} />
-    `);
+    await render(
+      <template><MascotsMascotListItem @mascot={{mascot}} /></template>,
+    );
 
     assert
       .dom('[data-test-field="Image"]')

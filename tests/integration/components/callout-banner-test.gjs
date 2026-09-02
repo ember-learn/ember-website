@@ -1,17 +1,19 @@
 import { click, render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
+import CalloutBanner from 'ember-website/components/callout-banner';
 import { module, test } from 'qunit';
 
 module('Integration | Component | callout-banner', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(hbs`
-      <CalloutBanner>
-        I have an announcement to make
-      </CalloutBanner>
-    `);
+    await render(
+      <template>
+        <CalloutBanner>
+          I have an announcement to make
+        </CalloutBanner>
+      </template>,
+    );
 
     assert
       .dom('[data-test-callout-banner]')
@@ -19,11 +21,13 @@ module('Integration | Component | callout-banner', function (hooks) {
   });
 
   test('callouts can be made dismissible', async function (assert) {
-    await render(hbs`
-      <CalloutBanner @dismissible={{true}}>
-        You can dismiss this announcement
-      </CalloutBanner>
-    `);
+    await render(
+      <template>
+        <CalloutBanner @dismissible={{true}}>
+          You can dismiss this announcement
+        </CalloutBanner>
+      </template>,
+    );
 
     assert
       .dom('[data-test-callout-banner]')

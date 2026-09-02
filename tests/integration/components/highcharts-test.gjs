@@ -1,23 +1,19 @@
 import { render } from '@ember/test-helpers';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
-import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
+import Highcharts from 'ember-website/components/highcharts';
 import { waitUntilAllChartsAreDrawn } from 'ember-website/tests/helpers/highcharts';
 import { module, test } from 'qunit';
 
 module('Integration | Component | highcharts', function (hooks) {
   setupRenderingTest(hooks);
 
-  hooks.beforeEach(function () {
-    this.chart = {
+  test('The component renders an svg chart', async function (assert) {
+    const chart = {
       highchartsOptions: {},
     };
-  });
 
-  test('The component renders an svg chart', async function (assert) {
-    await render(hbs`
-      <Highcharts @chart={{this.chart}} />
-    `);
+    await render(<template><Highcharts @chart={{chart}} /></template>);
 
     await waitUntilAllChartsAreDrawn();
 

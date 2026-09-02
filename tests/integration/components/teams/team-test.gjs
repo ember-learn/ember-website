@@ -1,7 +1,6 @@
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
-
 import { setupRenderingTest } from 'ember-qunit';
+import TeamsTeam from 'ember-website/components/teams/team';
 import { module, test } from 'qunit';
 
 module('Integration | Component | teams/team', function (hooks) {
@@ -14,17 +13,19 @@ module('Integration | Component | teams/team', function (hooks) {
   });
 
   test('We can display the team', async function (assert) {
-    this.members = this.teamMembers.filter(({ teams }) => {
+    const members = this.teamMembers.filter(({ teams }) => {
       return (teams ?? []).includes('steering');
     });
 
-    await render(hbs`
-      <Teams::Team
-        @description="The Steering Committee is responsible for the overall governance of the Ember project."
-        @members={{this.members}}
-        @name="The Steering Committee"
-      />
-    `);
+    await render(
+      <template>
+        <TeamsTeam
+          @description="The Steering Committee is responsible for the overall governance of the Ember project."
+          @members={{members}}
+          @name="The Steering Committee"
+        />
+      </template>,
+    );
 
     assert
       .dom('[data-test-field="Team Name"]')

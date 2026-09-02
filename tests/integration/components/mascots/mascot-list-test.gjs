@@ -1,7 +1,6 @@
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
-
 import { setupRenderingTest } from 'ember-qunit';
+import MascotsMascotList from 'ember-website/components/mascots/mascot-list';
 import { module, test } from 'qunit';
 
 module('Integration | Component | mascots/mascot-list', function (hooks) {
@@ -14,9 +13,11 @@ module('Integration | Component | mascots/mascot-list', function (hooks) {
   });
 
   test('We can display mascots', async function (assert) {
-    await render(hbs`
-      <Mascots::MascotList @mascots={{this.mascots}} />
-    `);
+    const { mascots } = this;
+
+    await render(
+      <template><MascotsMascotList @mascots={{mascots}} /></template>,
+    );
 
     assert
       .dom('[data-test-mascot]')

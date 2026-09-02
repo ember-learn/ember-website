@@ -1,7 +1,7 @@
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
-
 import { setupRenderingTest } from 'ember-qunit';
+import ReleasesHowToInstall from 'ember-website/components/releases/how-to-install';
+import TerminalCode from 'ember-website/components/terminal-code';
 import { module, test } from 'qunit';
 
 module('Integration | Component | releases/how-to-install', function (hooks) {
@@ -14,11 +14,11 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
   });
 
   test('We can display instructions (non-canary release)', async function (assert) {
-    this.project = this.projects.find(({ id }) => id === 'emberData/release');
+    const project = this.projects.find(({ id }) => id === 'emberData/release');
 
-    await render(hbs`
-      <Releases::HowToInstall @project={{this.project}} />
-    `);
+    await render(
+      <template><ReleasesHowToInstall @project={{project}} /></template>,
+    );
 
     assert
       .dom('[data-test-field="Name"]')
@@ -51,17 +51,20 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
   });
 
   test('We can display instructions (canary release)', async function (assert) {
-    this.project = this.projects.find(({ id }) => id === 'ember/canary');
+    const project = this.projects.find(({ id }) => id === 'ember/canary');
 
-    await render(hbs`
-      <Releases::HowToInstall @project={{this.project}}>
-        <TerminalCode>
-          # Install the latest Ember canary:
-          <br />
-          npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com/...
-        </TerminalCode>
-      </Releases::HowToInstall>
-    `);
+    await render(
+      <template>
+        <ReleasesHowToInstall @project={{project}}>
+          <TerminalCode>
+            # Install the latest Ember canary:
+            <br />
+            npm install --save-dev
+            https://s3.amazonaws.com/builds.emberjs.com/...
+          </TerminalCode>
+        </ReleasesHowToInstall>
+      </template>,
+    );
 
     assert
       .dom('[data-test-field="Name"]')

@@ -1,6 +1,7 @@
+import { hash } from '@ember/helper';
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
+import EmberCommunitySurveySponsor from 'ember-website/components/ember-community-survey/sponsor';
 import { module, test } from 'qunit';
 
 module(
@@ -9,16 +10,18 @@ module(
     setupRenderingTest(hooks);
 
     test('We can pass @sponsor to show the survey sponsor', async function (assert) {
-      await render(hbs`
-        <EmberCommunitySurvey::Sponsor
-          @hasDarkBackground={{true}}
-          @sponsor={{hash
-            logoAlt="Code All Day"
-            logoSrc="/images/survey/cad-right.svg"
-            website="http://www.codeallday.com/"
-          }}
-        />
-      `);
+      await render(
+        <template>
+          <EmberCommunitySurveySponsor
+            @hasDarkBackground={{true}}
+            @sponsor={{hash
+              logoAlt="Code All Day"
+              logoSrc="/images/survey/cad-right.svg"
+              website="http://www.codeallday.com/"
+            }}
+          />
+        </template>,
+      );
 
       assert
         .dom('[data-test-link="Sponsor Website"]')

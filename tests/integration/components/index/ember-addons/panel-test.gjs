@@ -1,17 +1,19 @@
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
+import IndexEmberAddonsPanel from 'ember-website/components/index/ember-addons/panel';
 import { module, test } from 'qunit';
 
 module('Integration | Component | index/ember-addons/panel', function (hooks) {
   setupRenderingTest(hooks);
 
   test('We can render a block content', async function (assert) {
-    await render(hbs`
-      <Index::EmberAddons::Panel @currentTabId={{0}} @tabId={{0}}>
-        Ember Concurrency is an Ember addon...
-      </Index::EmberAddons::Panel>
-    `);
+    await render(
+      <template>
+        <IndexEmberAddonsPanel @currentTabId={{0}} @tabId={{0}}>
+          Ember Concurrency is an Ember addon...
+        </IndexEmberAddonsPanel>
+      </template>,
+    );
 
     assert
       .dom('[data-test-panel]')
@@ -36,11 +38,13 @@ module('Integration | Component | index/ember-addons/panel', function (hooks) {
   });
 
   test('We can visually hide a block content', async function (assert) {
-    await render(hbs`
-      <Index::EmberAddons::Panel @currentTabId={{2}} @tabId={{0}}>
-        Ember Concurrency is an Ember addon...
-      </Index::EmberAddons::Panel>
-    `);
+    await render(
+      <template>
+        <IndexEmberAddonsPanel @currentTabId={{2}} @tabId={{0}}>
+          Ember Concurrency is an Ember addon...
+        </IndexEmberAddonsPanel>
+      </template>,
+    );
 
     assert
       .dom('[data-test-panel]')

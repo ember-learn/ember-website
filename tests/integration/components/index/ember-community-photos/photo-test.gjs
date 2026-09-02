@@ -1,6 +1,6 @@
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
 import { setupRenderingTest } from 'ember-qunit';
+import IndexEmberCommunityPhotosPhoto from 'ember-website/components/index/ember-community-photos/photo';
 import { module, test } from 'qunit';
 
 module(
@@ -9,13 +9,15 @@ module(
     setupRenderingTest(hooks);
 
     test('We can display an image with alternate text', async function (assert) {
-      await render(hbs`
-        <Index::EmberCommunityPhotos::Photo
-          @alt="Ember core team members gather around the Ember sign at EmberConf"
-          @containerClass="homepage-image-grid__img-short"
-          @src="/images/community/tinified/EmberConf19-13.jpg"
-        />
-      `);
+      await render(
+        <template>
+          <IndexEmberCommunityPhotosPhoto
+            @alt="Ember core team members gather around the Ember sign at EmberConf"
+            @containerClass="homepage-image-grid__img-short"
+            @src="/images/community/tinified/EmberConf19-13.jpg"
+          />
+        </template>,
+      );
 
       assert
         .dom('[data-test-image]')
@@ -37,12 +39,14 @@ module(
     });
 
     test('We can display an image that is presentational', async function (assert) {
-      await render(hbs`
-        <Index::EmberCommunityPhotos::Photo
-          @containerClass="homepage-image-grid__img-tall-bottom"
-          @src="/images/community/zoey.png"
-        />
-      `);
+      await render(
+        <template>
+          <IndexEmberCommunityPhotosPhoto
+            @containerClass="homepage-image-grid__img-tall-bottom"
+            @src="/images/community/zoey.png"
+          />
+        </template>,
+      );
 
       assert
         .dom('[data-test-image]')
