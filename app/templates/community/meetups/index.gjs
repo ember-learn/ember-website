@@ -1,0 +1,101 @@
+import { LinkTo } from '@ember/routing';
+import { sortBy } from '@nullvoxpopuli/ember-composable-helpers';
+import LeafletMap from 'ember-leaflet/components/leaflet-map';
+import { pageTitle } from 'ember-page-title';
+
+<template>
+  {{pageTitle "Meetups"}}
+  <div class="container">
+    <h1 class="mb-3">Meetups Around the World</h1>
+
+    <section aria-labelledby="meetups" class="mb-3">
+      <h2 id="meetups">Find a meetup in your city</h2>
+
+      {{#if @controller.leafletPackageLoaded}}
+        <LeafletMap
+          @class="leaflet-container"
+          @lat={{@controller.leafletConfiguration.latitude}}
+          @lng={{@controller.leafletConfiguration.longitude}}
+          @zoom={{@controller.leafletConfiguration.zoom}}
+          as |layers|
+        >
+          <layers.tile
+            @url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+          />
+
+          {{#each @model as |meetup|}}
+            <layers.marker @lat={{meetup.lat}} @lng={{meetup.lng}} as |marker|>
+              <marker.popup>
+                <a
+                  href={{meetup.url}}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {{meetup.location}}
+                </a>
+              </marker.popup>
+            </layers.marker>
+          {{/each}}
+        </LeafletMap>
+      {{else}}
+        {{! Empty div placeholder while package loads }}
+        <div class="leaflet-container"></div>
+      {{/if}}
+
+      <div>
+        {{#each
+          (sortBy "meetups.length:desc" "name:asc" @controller.meetupsByArea)
+          as |area|
+        }}
+          <div class="mt-3">
+            <h3>{{area.name}}</h3>
+
+            <ul class="list-unstyled grid lg:grid-4 sm:grid-2">
+              {{#each area.meetups as |meetup|}}
+                <li>
+                  <img
+                    width="12"
+                    class="align-middle icon-left"
+                    src="/images/meetups/map-pin.png"
+                    alt=""
+                    role="presentation"
+                  />
+                  <a href={{meetup.url}}>{{meetup.location}}</a>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/each}}
+      </div>
+    </section>
+
+    <section aria-labelledby="start-your-meetup">
+      <h2 id="start-your-meetup">Start your own meetup</h2>
+      <img
+        alt=""
+        src="/images/community/meetup.png"
+        align="left"
+        role="presentation"
+      />
+      <p>
+        Ready to start a Meetup in your area? Fantastic news—appreciate you
+        stepping up! Running a solid meetup isn't all that complicated, but it
+        <strong>can</strong>
+        be intimidating:<br />
+        we'd love to help you ease into it.
+      </p>
+      <p>
+        <LinkTo @route="community.meetups-getting-started">We've put together
+          some tips for first-time organizers</LinkTo>
+        that should hopefully help you get off your feet. There's also a handy
+        page of
+        <LinkTo @route="community.meetups.assets">Resources and Assets for
+          organizers</LinkTo>.
+      </p>
+      <p>
+        <a href="mailto:meetups@emberjs.com">Send us a note</a>
+        if you have questions or need a hand.
+      </p>
+    </section>
+  </div>
+</template>

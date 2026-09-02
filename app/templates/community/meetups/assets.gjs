@@ -1,0 +1,361 @@
+import { LinkTo } from '@ember/routing';
+import { pageTitle } from 'ember-page-title';
+
+<template>
+  {{pageTitle "Assets"}}
+  <section class="container" aria-labelledby="ember-meetup-resources">
+    <h1 id="ember-meetup-resources">
+      Ember Meetup Resources
+    </h1>
+
+    <p>
+      Running an Ember User Group can be challenging, but
+      <em>really</em>
+      rewarding: thanks so much for stepping up! We're here to help however we
+      can.
+      <a href="mailto:meetups@emberjs.com">Reach out to Leah</a>
+      if you have questions, ideas, or anything else User Group / Meetup
+      related.
+    </p>
+
+    <p>
+      If you're looking for a little help getting started,
+      <LinkTo @route="community.meetups-getting-started">we've put together some
+        starter tips for you</LinkTo>. Hope it's helpful!
+    </p>
+
+    <section aria-labelledby="ember-meetup-resources-assets">
+      <h2 id="ember-meetup-resources-assets">
+        Assets
+      </h2>
+
+      <section
+        aria-labelledby="ember-meetup-resources-assets-branding-materials"
+      >
+        <h3 id="ember-meetup-resources-assets-branding-materials">
+          Branding Materials
+        </h3>
+
+        <p>
+          We've created user group badges and branding to help give our groups a
+          consistent feel. You can create your own by downloading our
+          <a href="/images/meetups/Ember-Meetup-Templates.zip" download>Sketch
+            and Illustrator templates (ZIP)</a>.
+        </p>
+
+        <p>
+          If you're using
+          <a
+            href="https://www.meetup.com/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Meetup</a>
+          to manage your group, you can also
+          <a href="/images/meetups/ember-meetup-header.jpg" download>download
+            our header image</a>
+          for your group's pages:
+        </p>
+
+        <div class="layout-grid">
+          <img
+            class="col-3-large"
+            src="/images/meetups/ember-meetup-header.jpg"
+            alt="Header for an Ember Meetup"
+          />
+        </div>
+      </section>
+
+      <section aria-labelledby="ember-meetup-resources-assets-logos">
+        <h3 id="ember-meetup-resources-assets-logos">
+          Logos
+        </h3>
+
+        <p>
+          Our
+          <a href="/images/meetups/Ember-Meetup-Templates.zip" download>logo
+            design templates (ZIP)</a>
+          allow you to create a meetup logo for your city in a range of formats.
+          For usage instructions, see our
+          <a href="/images/brand/Ember-Brand-Guidelines.pdf" download>brand
+            guidelines (PDF)</a>.
+        </p>
+
+        <div class="layout-grid">
+          <img
+            class="col-3-large"
+            src="/images/meetups/ember-meetup-logo-san-francisco.png"
+            srcset="/images/meetups/ember-meetup-logo-san-francisco.png 1x, /images/meetups/ember-meetup-logo-san-francisco@2x.png 2x"
+            alt="Ember Meetup header for San Francisco"
+          />
+        </div>
+
+        <p>
+          The primary Ember logo may be used the terms covered on our
+          <LinkTo @route="logos">Branding</LinkTo>
+          page. In general, manipulations of any sort are not allowed. Please
+          <a href="mailto:leah@emberjs.com">email us</a>
+          with any questions.
+        </p>
+
+        <ul>
+          <li><a href="/images/logos/ember-logo.ai" download>Logo in Illustrator
+              format</a></li>
+          <li><a href="/images/logos/ember-logo.png" download>Logo in PNG
+              format, transparent background</a></li>
+          <li><a href="/images/brand/logos-ember.zip" download>All Ember logos
+              (ZIP)</a></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="ember-meetup-resources-assets-stickers">
+        <h3 id="ember-meetup-resources-assets-stickers">
+          Stickers
+        </h3>
+
+        <p>
+          The Ember Core Team has a small stash of Ember stickers donated by the
+          folks at
+          <a
+            href="https://www.tilde.io/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Tilde</a>. These are distributed as requested while in stock. If
+          you'd like to print your own Ember stickers, here are the files you'll
+          need for the canonical ones.
+        </p>
+
+        <ul>
+          <li><a href="/images/stickers/ember-sticker.ai" download>Ember Logo
+              Stickers</a>, best printed die-cut at 3" x 1.25"</li>
+          <li><a href="/images/stickers/tomster-sticker.ai" download>Ember
+              Mascot Stickers</a>, best printed die-cut at 3" x 3"</li>
+        </ul>
+
+        <p>
+          We recommend printing your stickers with
+          <a
+            href="https://www.stickermule.com/unlock?ref_id=3368978601"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >StickerMule</a>, who are long time supporters of open source. The
+          link here will also get you $10 off your first order.
+        </p>
+      </section>
+
+      <section
+        aria-labelledby="ember-meetup-resources-assets-custom-tomsters-and-zoeys"
+      >
+        <h3 id="ember-meetup-resources-assets-custom-tomsters-and-zoeys">
+          Custom Tomsters and Zoeys
+        </h3>
+
+        <p>
+          You may have noticed that some user groups (Salt Lake City, Munich,
+          London, etc.) have their own custom Tomster and Zoey variants. These
+          have been commissioned and licensed by the groups. They paid a small
+          commission fee to have the character designed by one of the official
+          designers, and we granted them a license to use that variant for
+          non-commercial user group related purposes.
+        </p>
+
+        <ul class="list-unstyled grid lg:grid-3 my-4">
+          <li>
+            <a
+              href="https://www.meetup.com/Ember-js-Munich/"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              <div class="well well-1/1">
+                <img
+                  src="/images/community/tomsters/Ember-Munich-Half-sm.png"
+                  alt=""
+                  role="presentation"
+                />
+              </div>
+              Ember Munich
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.meetup.com/Ember-ATX/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div class="well well-1/1">
+                <img
+                  src="/images/community/tomsters/Ember-Austin-Zoey-Half-sm.png"
+                  alt=""
+                  role="presentation"
+                />
+              </div>
+              Ember Austin
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.meetup.com/Vancouver-Ember-js/"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            >
+              <div class="well well-1/1">
+                <img
+                  src="/images/community/tomsters/Ember-Vancouver-Half-sm.png"
+                  alt=""
+                  role="presentation"
+                />
+              </div>
+              Ember Vancouver
+            </a>
+          </li>
+        </ul>
+
+        <p>
+          Thankfully, our designers love Ember and therefore give us
+          ridiculously fair deals. Pricing ranges from $80 to $300, depending on
+          the extent of the request. On average, most user groups spend $200.
+        </p>
+
+        <p>
+          If you're interested in commissioning a Meetup/User Group Tomster or
+          Zoey,
+          <LinkTo @route="mascots.commission">reach out to us with details</LinkTo>.
+        </p>
+      </section>
+    </section>
+
+    <section aria-labelledby="ember-meetup-resources-recording-your-meetup">
+      <h2 id="ember-meetup-resources-recording-your-meetup">
+        Recording Your Meetup
+      </h2>
+
+      <p>
+        Many Ember Meetup organizers have done the community a tremendous
+        service by having their meetups recorded. In some cases, groups are able
+        to find sponsors, and in others, sponsors pick up either the expense
+        and/or the labor.
+      </p>
+
+      <p>
+        The London group was the first to roll their own, with Portland and
+        other cities to follow. Overall, one-time equipment cost in USD was
+        approximately $350, plus two HDMI cords and the use of an iPhone or
+        Tablet.
+      </p>
+
+      <p>
+        If you're interested in recording your meetups on your own, here are the
+        items some of those groups have had success with:
+      </p>
+
+      <ul>
+        <li>
+          <a
+            href="https://www.amazon.com/gp/product/B005KP473Q/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Lightweight tripod</a>
+          with adjustable-height legs, rubber feet and great maneuverability
+        </li>
+        <li>
+          <a
+            href="https://www.amazon.com/gp/product/B009GHYLKS/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Phone-sized mount</a>
+          so your phone can hook into the tripod
+        </li>
+        <li>
+          <a
+            href="https://www.amazon.com/gp/product/B00MIQ40JQ/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Game capture device</a>
+          for recording the presenter's slides
+        </li>
+        <li>
+          <a
+            href="https://www.amazon.com/gp/product/B003QKBVYK/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Voice recorder</a>
+          so you're recording the speaker's audio separately, and not using the
+          not-too-great cell phone video audio
+        </li>
+        <li>
+          <a
+            href="https://www.amazon.com/gp/product/B00KMILKGS/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Lavalier mic</a>
+          that plugs into the voice recorder, to allow your speakers maximum
+          maneuverability
+        </li>
+      </ul>
+
+      <p>
+        To make this setup work, you'll need a laptop, in addition to the
+        presenter's laptop. The basic process is:
+      </p>
+
+      <ol>
+        <li>
+          The presenter's laptop gets plugged via HDMI into the Video Capture
+          device (HDMI In).
+        </li>
+        <li>
+          The video capture device gets plugged via HDMI into the projector
+          (HDMI Out).
+        </li>
+        <li>
+          The video capture device
+          <em>also</em>
+          plugs into the extra laptop via USB.
+        </li>
+        <li>
+          The presenter wears the Voice Recording device in a pocket, with the
+          Lavalier mic plugged in and attached somewhere near their neck. This
+          will record your separate, clear audio stream.
+        </li>
+        <li>
+          The tripod is positioned somewhere with a good view of the speaker,
+          with the phone-specific-attachment screwed in, and then the phone
+          inserted horizontally.
+        </li>
+        <li>
+          When everything's ready to go, hit the record button on the capturing
+          laptop, hit the record button on the iPhone, hit the record button on
+          the voice recorder, and you're off to the races.
+        </li>
+        <li>
+          After the event, download all three files onto one laptop, and use
+          something like Screenflow to sync them up and produce your video.
+          Alternatively, if you have
+          <em>some</em>
+          sponsorship, you can find a local producer or videographer to do this
+          work for you for a few hundred dollars, depending on the volume of
+          content.
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="ember-meetup-resources-organizers-network">
+      <h2 id="ember-meetup-resources-organizers-network">
+        Organizers Network
+      </h2>
+
+      <p>
+        There's a great (not-so-secret) channel in the
+        <a
+          href="https://discordapp.com/invite/zT3asNS"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+        >Ember Community Discord</a>
+        for organizers. Request to be added to the
+        <dfn>meetup-organizer</dfn>
+        role in #discord-server-admin so that you can join us!
+      </p>
+    </section>
+  </section>
+</template>

@@ -1,0 +1,52 @@
+import { pageTitle } from 'ember-page-title';
+import ReleasesHowToInstall from 'ember-website/components/releases/how-to-install';
+
+<template>
+  {{pageTitle "Stable"}}
+
+  <h1 class="project-name">
+    Release Channel
+  </h1>
+
+  <p>
+    Releases are production-ready versions of Ember and Ember Data that have
+    been through a six-week beta cycle.
+  </p>
+
+  <h2>How to Install</h2>
+
+  <div class="mb-2">
+    <ReleasesHowToInstall @project={{@model.ember}} />
+  </div>
+
+  <div>
+    <ReleasesHowToInstall @project={{@model.emberData}} />
+  </div>
+
+  <h2>What is a stable release?</h2>
+
+  <p>
+    A stable release is a version of Ember that you can feel confident using in
+    production. If you are learning Ember for the first time, this is the
+    recommended version to use.
+  </p>
+
+  <p>
+    For a new feature to be included in a stable release, it first has to spend
+    six weeks in "beta," being reviewed and tested by developers who use it in
+    real-world applications. Stable releases come about every six weeks, but
+    that can vary if there are bugs to iron out in the beta.
+  </p>
+
+  <p>
+    A release is considered "done" when it has a
+    <a
+      href="https://blog.emberjs.com/tag/releases/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >Release Blog Post</a>
+    to go with it, so you should wait to upgrade your app until that post goes
+    out. It signals that the new version is ready in the Ember.js codebase,
+    Ember CLI, and Ember Data.
+  </p>
+</template>

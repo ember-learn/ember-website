@@ -1,0 +1,135 @@
+import { pageTitle } from 'ember-page-title';
+
+<template>
+  {{pageTitle "Support the Ukranian People"}}
+
+  <section
+    aria-labelledby="hero-title"
+    class="bg-shape-boxes-bottom bg-dark temp-fullpage"
+  >
+    <div class="container layout">
+      <div class="lg:col-5">
+        <h1 class="text-hero-xl" id="hero-title">
+          Support Ukraine
+        </h1>
+        <h2>
+          What is happening in Ukraine?
+        </h2>
+        <p class="text-hero-base mb-2">
+          Right now, the world's media is focused upon Ukraine. We understand
+          that not all people may know what is happening in Ukraine. We have
+          collected information to help you better understand what the Ukrainian
+          people are now experiencing.
+        </p>
+        <ul>
+          <li class="text-hero-base mb-2">
+            On February 24th, around 5 a.m., the Russian military began the
+            full-scale military invasion of Ukraine based on orders from
+            Vladimir Putin, the president of Russia.
+          </li>
+          <li class="text-hero-base mb-2">
+            Russian troops launched missile strikes against Ukrainian cities
+            from various directions, including the temporarily occupied Donbas
+            and Crimea and the northeastern region.
+          </li>
+          <li class="text-hero-base mb-2">
+            The Russian military has attacked Ukranian military and other
+            strategically critical infrastructure across the country. Borders
+            are violated from the north, east, and the administrative border
+            with Crimea. The Ukrainian Armed Forces are retaliating; there are
+            casualties on both sides.
+          </li>
+          <li class="text-hero-base mb-2">
+            This is an act of war, an attack on Ukraine's sovereignty and
+            territorial integrity, and a gross violation of the UN Charter and
+            international law's fundamental norms and principles. Accordingly,
+            Ukraine has activated its right to self-defense under international
+            law.
+          </li>
+          <li class="text-hero-base mb-2">
+            The Ukrainian people ask the world to respond as strongly as
+            possible to what is happening. Ukraine calls on international
+            partners to immediately apply a new round of meaningful sanctions
+            against Russia.
+          </li>
+        </ul>
+
+        <p class="text-hero-base mb-2">
+          Although Russia's President Vladimir Putin has called the invasion a
+          military operation, it meets the criteria of war. Ukraine needs the
+          help of foreign governments, but there are things that any civilian in
+          any country can do to help.
+        </p>
+
+        <div class="inner">
+          <h2>
+            How to show your support
+          </h2>
+
+          <p>
+            Follow and share information about the situation in Ukraine with
+            your friends through sources like the
+            <a href="https://kyivindependent.com">Kyiv Independent</a>
+            and
+            <a href="https://www.instagram.com/svidomi_eng">Svidomi (en)</a>
+            (Instagram).
+          </p>
+
+          <p>
+            Join the rallies against the Russian Federation in your city! Look
+            for a rally near you:
+            <a href="https://www.stopputin.net">Stop Putin</a>
+          </p>
+
+          <h3>
+            Donate to Charities Providing Support
+          </h3>
+          <ul>
+            <li class="text-hero-base mb-2">
+              ⛑️
+              <a href="https://redcross.org.ua/en/donate/">Donate to the Red
+                Cross in Ukraine</a>
+            </li>
+            <li class="text-hero-base mb-2">
+              🇵🇱
+              <a href="https://www.pah.org.pl/en/donate/?form=ukraine">Polish
+                Humanitarian Action</a>
+              Humanitarian aid, including food and other forms of support for
+              civilians who have had to leave their homes.
+            </li>
+            <li class="text-hero-base mb-2">
+              🆘
+              <a
+                href="https://vostok-sos.org/en/ukraine-under-fire-support-vostok-sos-aid-operation/"
+              >Vostok SOS</a>
+              Your donation will help Vostok SOS deliver medical and
+              humanitarian aid to local people, evacuate vulnerable people, and
+              provide tailored trauma support in the aftermath of shelling.
+            </li>
+            <li class="text-hero-base mb-2">
+              🇨🇦
+              <a href="https://www.saintjavelin.com/">Saint Javelin</a>
+              100% of the proceeds from the sale of the products will be donated
+              to Help Us Help, a federally registered Canadian charitable
+              organization focused on humanitarian aid and educational projects
+              in Ukraine.
+            </li>
+          </ul>
+        </div>
+
+        <h3>Show Support on Social Media</h3>
+        <p>To the whole world: Ukraine needs your voice and your support; please
+          don’t be silent. Remember that we can show our support for the people
+          of Ukraine
+          <em>without</em>
+          attacking the civilians of Russia.
+          <br />#STANDWITHUKRAINE, #UkraineUnderAttack
+        </p>
+
+        <h3>Contact Your Elected Leadership</h3>
+        <p>If you live in a country with democratically elected leadership,
+          please contact them and let them know of your support for the Ukraine.</p>
+      </div>
+    </div>
+  </section>
+</template>
