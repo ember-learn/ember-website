@@ -45,19 +45,16 @@ import EsCard from 'ember-styleguide/components/es-card';
         </div>
       </div>
 
-      <p>Supported evergreen browsers are
+      <p>
+        Supported evergreen browsers are
         <strong>Google Chrome</strong>
         and
         <strong>Mozilla Firefox</strong>
+        and
+        <strong>Apple Safari</strong>
         for desktop, mobile, and testing. Additionally,
         <strong>Microsoft Edge</strong>
-        is supported for desktop.</p>
-
-      <p>
-        Currently we support one non-evergreen browser:
-        <strong>Apple Safari</strong>
-        on desktop and mobile. Support is locked at a specific major version,
-        and we support all major versions above that version.
+        is supported for desktop.
       </p>
 
       <p>
@@ -71,9 +68,37 @@ import EsCard from 'ember-styleguide/components/es-card';
         <a href="https://github.com/emberjs/rfcs">submit an RFC for discussion</a>!
       </p>
 
-      <h2>Browser Support by Major Ember Version</h2>
+      <h2>Browser Support by Ember Version</h2>
 
-      <h3>Ember 6.x</h3>
+      <h3>Ember >= 7.4</h3>
+      <ul class="list-unstyled layout my-3">
+        <EsCard class="lg:col-2">
+          <div class="text-center text-md">Desktop</div>
+          <ul>
+            <li>Google Chrome >= 109</li>
+            <li>Mozilla Firefox >= 121</li>
+            <li>Microsoft Edge >= 149</li>
+            <li>Safari >= 16.6</li>
+          </ul>
+        </EsCard>
+        <EsCard class="lg:col-2">
+          <div class="text-center text-md">Mobile</div>
+          <ul>
+            <li>Google Chrome >= 109</li>
+            <li>Mozilla Firefox >= 121</li>
+            <li>Safari >= 16.6</li>
+          </ul>
+        </EsCard>
+        <EsCard class="lg:col-2">
+          <div class="text-center text-md">Testing</div>
+          <ul>
+            <li>Google Chrome</li>
+            <li>Mozilla Firefox</li>
+          </ul>
+        </EsCard>
+      </ul>
+
+      <h3>Ember 6.0 - Ember 7.3</h3>
 
       <p>
         As of the RFC
