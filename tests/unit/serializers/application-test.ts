@@ -1,22 +1,27 @@
+import type ApplicationSerializer from 'ember-website/serializers/application';
 import { setupTest } from 'ember-qunit';
+import type Tomster from 'ember-website/models/tomster';
 import { module, test } from 'qunit';
 
 module('Unit | Serializer | application', function (hooks) {
   setupTest(hooks);
 
-  // Replace this with your real tests.
   test('it exists', function (assert) {
-    let store = this.owner.lookup('service:store');
-    let serializer = store.serializerFor('application');
+    const store = this.owner.lookup('service:store');
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+    const serializer = store.serializerFor(
+      'application',
+    ) as ApplicationSerializer;
 
     assert.ok(serializer);
   });
 
   test('it serializes records', function (assert) {
-    let store = this.owner.lookup('service:store');
-    let record = store.createRecord('tomster', {});
+    const store = this.owner.lookup('service:store');
 
-    let serializedRecord = record.serialize();
+    const record = store.createRecord<Tomster>('tomster', {});
+    const serializedRecord = record.serialize();
 
     assert.ok(serializedRecord);
   });
