@@ -1,4 +1,3 @@
-import Controller from '@ember/controller';
 import {
   AreaSplineChart,
   VerticalBarChart,
@@ -851,23 +850,23 @@ const MS_Q601 = new VerticalBarChart({
   ],
 });
 
-export default class Survey2019Controller extends Controller {
-  stackSkillsChart = stackSkillsChart;
-  SS_Q101 = SS_Q101;
-  SS_Q204 = SS_Q204;
-  SS_Q205 = SS_Q205;
-  SS_Q302 = SS_Q302;
-  SS_Q306 = SS_Q306;
-  SS_Q405 = SS_Q405;
-  SS_Q410 = SS_Q410;
-  SS_Q501 = SS_Q501;
-  MS_Q103 = MS_Q103;
-  MS_Q111 = MS_Q111;
-  MS_Q112 = MS_Q112;
-  MS_Q304 = MS_Q304;
-  MS_Q401 = MS_Q401;
-  MS_Q406 = MS_Q406;
-  MS_Q409 = MS_Q409;
-  MS_Q413 = MS_Q413;
-  MS_Q601 = MS_Q601;
-}
+export {
+  MS_Q103,
+  MS_Q111,
+  MS_Q112,
+  MS_Q304,
+  MS_Q401,
+  MS_Q406,
+  MS_Q409,
+  MS_Q413,
+  MS_Q601,
+  SS_Q101,
+  SS_Q204,
+  SS_Q205,
+  SS_Q302,
+  SS_Q306,
+  SS_Q405,
+  SS_Q410,
+  SS_Q501,
+  stackSkillsChart,
+};

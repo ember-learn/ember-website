@@ -1,4 +1,3 @@
-import Controller from '@ember/controller';
 import { SplineChart, VerticalBarChart } from 'ember-website/utils/highcharts';
 
 const emberOrange = '#f23818';
@@ -569,19 +568,19 @@ const priorVersionsData = new SplineChart({
   ],
 });
 
-export default class Survey2017Controller extends Controller {
-  chartHowlong = chartHowlong;
-  chartSnapshotEmberDevelopers = chartSnapshotEmberDevelopers;
-  priorVersionsData = priorVersionsData;
-  recommendingEmber = recommendingEmber;
-  whenStarting = whenStarting;
-  preExistingKnowledge = preExistingKnowledge;
-  employmentSituation = employmentSituation;
-  emberDevelopers = emberDevelopers;
-  productionUsers = productionUsers;
-  longLived = longLived;
-  serverLanguage = serverLanguage;
-  textEditor = textEditor;
-  browserRequirements = browserRequirements;
-  demographics = demographics;
-}
+export {
+  browserRequirements,
+  chartHowlong,
+  chartSnapshotEmberDevelopers,
+  demographics,
+  emberDevelopers,
+  employmentSituation,
+  longLived,
+  preExistingKnowledge,
+  priorVersionsData,
+  productionUsers,
+  recommendingEmber,
+  serverLanguage,
+  textEditor,
+  whenStarting,
+};

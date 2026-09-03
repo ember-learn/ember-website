@@ -4,6 +4,17 @@ import EmberCommunitySurveyIntroduction from 'ember-website/components/ember-com
 import EmberCommunitySurveySection from 'ember-website/components/ember-community-survey/section';
 import EmberCommunitySurveySponsor from 'ember-website/components/ember-community-survey/sponsor';
 import Highcharts from 'ember-website/components/highcharts';
+import {
+  chartBrowserSupport,
+  chartEmberAtTheOffice,
+  chartEmberEcosystem,
+  chartHowlong,
+  chartLongLivedCodebases,
+  chartNewReleaseAdoptionEmber,
+  chartNewReleaseAdoptionEmberData,
+  chartServerSide,
+  chartSEO,
+} from 'ember-website/utils/surveys/2016';
 
 <template>
   {{pageTitle "Ember Community Survey 2016"}}
@@ -25,7 +36,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Developer Experience"
   >
     <:charts>
-      <Highcharts @chart={{@controller.chartHowlong}} />
+      <Highcharts @chart={{chartHowlong}} />
     </:charts>
 
     <:body>
@@ -48,7 +59,7 @@ import Highcharts from 'ember-website/components/highcharts';
   >
     <:charts>
       <div class="grid lg:grid-2">
-        {{#each @controller.chartEmberAtTheOffice as |chart|}}
+        {{#each chartEmberAtTheOffice as |chart|}}
           <Highcharts @chart={{chart}} />
         {{/each}}
       </div>
@@ -81,7 +92,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Ember Version"
   >
     <:charts>
-      <Highcharts @chart={{@controller.chartNewReleaseAdoptionEmber}} />
+      <Highcharts @chart={{chartNewReleaseAdoptionEmber}} />
     </:charts>
 
     <:body>
@@ -106,7 +117,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Ember Data Version"
   >
     <:charts>
-      <Highcharts @chart={{@controller.chartNewReleaseAdoptionEmberData}} />
+      <Highcharts @chart={{chartNewReleaseAdoptionEmberData}} />
     </:charts>
 
     <:body>
@@ -129,7 +140,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Maintenance"
   >
     <:charts>
-      <Highcharts @chart={{@controller.chartLongLivedCodebases}} />
+      <Highcharts @chart={{chartLongLivedCodebases}} />
     </:charts>
 
     <:body>
@@ -147,7 +158,7 @@ import Highcharts from 'ember-website/components/highcharts';
   >
     <:charts>
       <div class="grid lg:grid-2">
-        {{#each @controller.chartServerSide as |chart|}}
+        {{#each chartServerSide as |chart|}}
           <Highcharts @chart={{chart}} />
         {{/each}}
       </div>
@@ -173,7 +184,7 @@ import Highcharts from 'ember-website/components/highcharts';
   >
     <:charts>
       <div class="grid lg:grid-2">
-        {{#each @controller.chartBrowserSuppor as |chart|}}
+        {{#each chartBrowserSupport as |chart|}}
           <Highcharts @chart={{chart}} />
         {{/each}}
       </div>
@@ -218,7 +229,7 @@ import Highcharts from 'ember-website/components/highcharts';
   >
     <:charts>
       <div class="grid lg:grid-2">
-        {{#each @controller.chartEmberEcosystem as |chart|}}
+        {{#each chartEmberEcosystem as |chart|}}
           <Highcharts @chart={{chart}} />
         {{/each}}
       </div>
@@ -240,7 +251,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Search Engine Optimization"
   >
     <:charts>
-      <Highcharts @chart={{@controller.chartSEO}} />
+      <Highcharts @chart={{chartSEO}} />
     </:charts>
 
     <:body>

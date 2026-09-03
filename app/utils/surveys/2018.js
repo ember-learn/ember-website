@@ -1,4 +1,3 @@
-import Controller from '@ember/controller';
 import {
   HorizontalBarChart,
   SplineChart,
@@ -740,21 +739,21 @@ const emberDataAdoption = new SplineChart({
   ],
 });
 
-export default class Survey2018Controller extends Controller {
-  newReleaseAdoption = newReleaseAdoption;
-  emberDataAdoption = emberDataAdoption;
-  recommendingEmber = recommendingEmber;
-  employerUsingEmber = employerUsingEmber;
-  gettingHired = gettingHired;
-  productionApps = productionApps;
-  emberenoEmployment = emberenoEmployment;
-  applicationUsers = applicationUsers;
-  teamSize = teamSize;
-  longLivedCodebases = longLivedCodebases;
-  communityParticipation = communityParticipation;
-  serverSide = serverSide;
-  serverSideFrameworks = serverSideFrameworks;
-  editorTool = editorTool;
-  browserRequirements = browserRequirements;
-  demographicsRegion = demographicsRegion;
-}
+export {
+  applicationUsers,
+  browserRequirements,
+  communityParticipation,
+  demographicsRegion,
+  editorTool,
+  emberDataAdoption,
+  emberenoEmployment,
+  employerUsingEmber,
+  gettingHired,
+  longLivedCodebases,
+  newReleaseAdoption,
+  productionApps,
+  recommendingEmber,
+  serverSide,
+  serverSideFrameworks,
+  teamSize,
+};

@@ -5,6 +5,26 @@ import EmberCommunitySurveyIntroduction from 'ember-website/components/ember-com
 import EmberCommunitySurveySection from 'ember-website/components/ember-community-survey/section';
 import EmberCommunitySurveySponsor from 'ember-website/components/ember-community-survey/sponsor';
 import Highcharts from 'ember-website/components/highcharts';
+import {
+  S01_Q01_SS__TIME_USE,
+  S01_Q02_MS__OTHER_FRAMEWORKS,
+  S01_Q03_MS__OTHER_UI_LIBS,
+  S01_Q04_MS__OTHER_SSG,
+  S01_QM01_SS__MERGED_WEB_SKILLS,
+  S02_Q01_SS__OS_PREF,
+  S02_Q02_SS__OS_WORK,
+  S02_Q03_SS__OS_HOME,
+  S02_QM01_SS__MERGED_IDE_PREF,
+  S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED,
+  S03_Q17_SS__SERVER_SIDE_FRAMEWORK_WORK,
+  S03_QM01_MS__MERGED_WORK_SECTOR,
+  S03_QM02_SS__MERGED_WORK_TEST_FW,
+  S03_QM03_SS__MERGED_DEPLOY_WORK,
+  S05_Q01_MS__FB_OCTANE,
+  S05_Q02_MS__FB_NEW_FEAT,
+  S05_Q04_MS__FFEAT,
+  S06_QM01_SS__MERGED_GLOBAL_LOC,
+} from 'ember-website/utils/surveys/2022';
 
 <template>
   {{pageTitle "Ember Community Survey 2022"}}
@@ -26,7 +46,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Ember Users Across the Globe"
   >
     <:charts>
-      <Highcharts @chart={{@controller.S06_QM01_SS__MERGED_GLOBAL_LOC}} />
+      <Highcharts @chart={{S06_QM01_SS__MERGED_GLOBAL_LOC}} />
     </:charts>
   </EmberCommunitySurveySection>
 
@@ -35,11 +55,11 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Your Development Background"
   >
     <:charts>
-      <Highcharts @chart={{@controller.S01_Q01_SS__TIME_USE}} />
-      <Highcharts @chart={{@controller.S01_Q02_MS__OTHER_FRAMEWORKS}} />
-      <Highcharts @chart={{@controller.S01_Q03_MS__OTHER_UI_LIBS}} />
-      <Highcharts @chart={{@controller.S01_Q04_MS__OTHER_SSG}} />
-      <Highcharts @chart={{@controller.S01_QM01_SS__MERGED_WEB_SKILLS}} />
+      <Highcharts @chart={{S01_Q01_SS__TIME_USE}} />
+      <Highcharts @chart={{S01_Q02_MS__OTHER_FRAMEWORKS}} />
+      <Highcharts @chart={{S01_Q03_MS__OTHER_UI_LIBS}} />
+      <Highcharts @chart={{S01_Q04_MS__OTHER_SSG}} />
+      <Highcharts @chart={{S01_QM01_SS__MERGED_WEB_SKILLS}} />
     </:charts>
   </EmberCommunitySurveySection>
 
@@ -48,10 +68,10 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Development Preferences"
   >
     <:charts>
-      <Highcharts @chart={{@controller.S02_Q01_SS__OS_PREF}} />
-      <Highcharts @chart={{@controller.S02_Q02_SS__OS_WORK}} />
-      <Highcharts @chart={{@controller.S02_Q03_SS__OS_HOME}} />
-      <Highcharts @chart={{@controller.S02_QM01_SS__MERGED_IDE_PREF}} />
+      <Highcharts @chart={{S02_Q01_SS__OS_PREF}} />
+      <Highcharts @chart={{S02_Q02_SS__OS_WORK}} />
+      <Highcharts @chart={{S02_Q03_SS__OS_HOME}} />
+      <Highcharts @chart={{S02_QM01_SS__MERGED_IDE_PREF}} />
     </:charts>
   </EmberCommunitySurveySection>
 
@@ -60,15 +80,13 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Ember At Work"
   >
     <:charts>
-      <Highcharts @chart={{@controller.S03_QM01_MS__MERGED_WORK_SECTOR}} />
+      <Highcharts @chart={{S03_QM01_MS__MERGED_WORK_SECTOR}} />
       <Highcharts
-        @chart={{@controller.S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED}}
+        @chart={{S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED}}
       />
-      <Highcharts @chart={{@controller.S03_QM02_SS__MERGED_WORK_TEST_FW}} />
-      <Highcharts
-        @chart={{@controller.S03_Q17_SS__SERVER_SIDE_FRAMEWORK_WORK}}
-      />
-      <Highcharts @chart={{@controller.S03_QM03_SS__MERGED_DEPLOY_WORK}} />
+      <Highcharts @chart={{S03_QM02_SS__MERGED_WORK_TEST_FW}} />
+      <Highcharts @chart={{S03_Q17_SS__SERVER_SIDE_FRAMEWORK_WORK}} />
+      <Highcharts @chart={{S03_QM03_SS__MERGED_DEPLOY_WORK}} />
     </:charts>
   </EmberCommunitySurveySection>
 
@@ -77,9 +95,9 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Ember Features"
   >
     <:charts>
-      <Highcharts @chart={{@controller.S05_Q01_MS__FB_OCTANE}} />
-      <Highcharts @chart={{@controller.S05_Q02_MS__FB_NEW_FEAT}} />
-      <Highcharts @chart={{@controller.S05_Q04_MS__FFEAT}} />
+      <Highcharts @chart={{S05_Q01_MS__FB_OCTANE}} />
+      <Highcharts @chart={{S05_Q02_MS__FB_NEW_FEAT}} />
+      <Highcharts @chart={{S05_Q04_MS__FFEAT}} />
     </:charts>
   </EmberCommunitySurveySection>
 
