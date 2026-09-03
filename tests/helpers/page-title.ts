@@ -1,6 +1,6 @@
 import { getPageTitle } from 'ember-page-title/test-support';
 
-export function assertPageTitle(assert, expectedValue) {
+export function assertPageTitle(assert: Assert, expectedValue: string): void {
   // Check the <title> element
   assert.strictEqual(
     getPageTitle(),
