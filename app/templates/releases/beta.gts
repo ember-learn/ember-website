@@ -1,0 +1,50 @@
+import type { TOC } from '@ember/component/template-only';
+import { pageTitle } from 'ember-page-title';
+import ReleasesHowToInstall from 'ember-website/components/releases/how-to-install';
+import type ReleasesBetaRoute from 'ember-website/routes/releases/beta';
+import type { ModelFrom } from 'ember-website/utils/routes';
+
+interface ReleasesBetaSignature {
+  Args: {
+    model: ModelFrom<ReleasesBetaRoute>;
+  };
+}
+
+<template>
+  {{pageTitle "Beta"}}
+
+  <h1 class="project-name">
+    Beta Channel
+  </h1>
+
+  <p>
+    Features spend at least six weeks in beta before they can be included in a
+    stable release.
+  </p>
+
+  <h2>How to Install</h2>
+
+  <div class="mb-2">
+    <ReleasesHowToInstall @project={{@model.ember}} />
+  </div>
+
+  <div>
+    <ReleasesHowToInstall @project={{@model.emberData}} />
+  </div>
+
+  <h2>What is a beta release?</h2>
+
+  <p>
+    A beta release is a preview of what will eventually become the next stable
+    release. Included features are subject to change, and bugs are sometimes
+    discovered, so beta is not recommended for use in production. New features
+    stay in beta for six weeks.
+  </p>
+
+  <p>
+    Beta is used in many test suites, so that any bugs in the framework code are
+    detected quickly and fixed before the stable release. Some of Ember's key
+    contributors make a habit of working off a beta release—and even use it in
+    production—in order to volunteer their efforts as early testers.
+  </p>
+</template> satisfies TOC<ReleasesBetaSignature>;
