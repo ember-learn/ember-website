@@ -1,10 +1,13 @@
 import Route from '@ember/routing/route';
-import { service } from '@ember/service';
+import { type Registry as Services, service } from '@ember/service';
+import type Project from 'ember-website/models/project';
+
+type Model = Project[];
 
 export default class ReleasesRoute extends Route {
-  @service store;
+  @service declare store: Services['store'];
 
-  model() {
-    return this.store.findAll('project');
+  async model(): Promise<Model> {
+    return this.store.findAll<Project>('project');
   }
 }

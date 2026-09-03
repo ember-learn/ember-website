@@ -1,10 +1,10 @@
 import Route from '@ember/routing/route';
-import { service } from '@ember/service';
+import { type Registry as Services, service } from '@ember/service';
 
 export default class TeamRedirectRoute extends Route {
-  @service router;
+  @service declare router: Services['router'];
 
-  redirect() {
+  redirect(): void {
     this.router.transitionTo('teams');
   }
 }

@@ -1,19 +1,19 @@
 import type { TestContext as BaseTestContext } from '@ember/test-helpers';
-import { setupTest } from 'ember-qunit';
-import Survey2019Route from 'ember-website/routes/survey/2019';
 import { module, test } from 'qunit';
+import MascotsRoute from 'ember-website/routes/mascots';
+import { setupTest } from 'ember-website/tests/helpers';
 
 interface TestContext extends BaseTestContext {
-  route: Survey2019Route;
+  route: MascotsRoute;
 }
 
-module('Unit | Route | survey/2019', function (hooks) {
+module('Unit | Route | mascots', function (hooks) {
   setupTest(hooks);
 
   hooks.beforeEach(function (this: TestContext) {
-    this.owner.register('route:survey/2019', Survey2019Route);
+    this.owner.register('route:mascots', MascotsRoute);
 
-    this.route = this.owner.lookup('route:survey/2019') as Survey2019Route;
+    this.route = this.owner.lookup('route:mascots') as MascotsRoute;
   });
 
   test('it exists', function (this: TestContext, assert) {
