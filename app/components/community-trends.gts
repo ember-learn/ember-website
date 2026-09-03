@@ -1,4 +1,9 @@
+import type { TOC } from '@ember/component/template-only';
 import qp from 'ember-website/helpers/qp';
+
+interface CommunityTrendsSignature {
+  Args: {};
+}
 
 <template>
   {{! optional content, for meme / participating in the broader JS ecosystem, maintaining relevance }}
@@ -11,4 +16,4 @@ import qp from 'ember-website/helpers/qp';
       src="/images/ember-uwu-meme.png"
     />
   {{/if}}
-</template>
+</template> satisfies TOC<CommunityTrendsSignature>;

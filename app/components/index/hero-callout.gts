@@ -1,4 +1,9 @@
+import type { TOC } from '@ember/component/template-only';
 import { LinkTo } from '@ember/routing';
+
+interface IndexHeroCalloutSignature {
+  Args: {};
+}
 
 <template>
   <div class="hero-callout">
@@ -11,4 +16,4 @@ import { LinkTo } from '@ember/routing';
       is here!
     </div>
   </div>
-</template>
+</template> satisfies TOC<IndexHeroCalloutSignature>;

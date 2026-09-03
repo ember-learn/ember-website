@@ -2,8 +2,14 @@ import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
 import { or } from 'ember-truth-helpers';
 
-export default class GridDotsComponent extends Component {
-  get id() {
+interface IndexGridDotsSignature {
+  Args: {
+    color?: string;
+  };
+}
+
+export default class GridDotsComponent extends Component<IndexGridDotsSignature> {
+  get id(): string {
     return guidFor(this);
   }
 
@@ -17,9 +23,9 @@ export default class GridDotsComponent extends Component {
       >
         <defs>
           {{!
-      We append a unique identifier to the gradient definition so that multiple
-      <GridDots/> can be used on the same screen without conflicting with each other.
-    }}
+            We append a unique identifier to the gradient definition so that multiple
+            <GridDots/> can be used on the same screen without conflicting with each other.
+          }}
           <radialGradient
             id="grid-dots-gradient-{{this.id}}"
             cx="100%"

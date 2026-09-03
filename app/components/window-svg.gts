@@ -1,6 +1,16 @@
+import type { TOC } from '@ember/component/template-only';
+
+interface WindowSvgSignature {
+  Args: {};
+  Blocks: {
+    default: [];
+  };
+}
+
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    {{! @glint-expect-error: Incorrect type }}
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 460 360"
   ><defs />
@@ -265,28 +275,35 @@
       /></defs>
     <g fill="none" fill-rule="evenodd" transform="translate(5 2)">
       <mask id="window-svg-e" fill="#fff"><use
+          {{! @glint-expect-error: Incorrect type }}
           xlink:href="#window-svg-a"
         /></mask>
       <g fill-rule="nonzero"><use
           fill="#000"
           filter="url(#window-svg-b)"
+          {{! @glint-expect-error: Incorrect type }}
           xlink:href="#window-svg-a"
+          {{! @glint-expect-error: Incorrect type }}
         /><use fill="url(#window-svg-c)" xlink:href="#window-svg-a" /><use
           fill="#000"
           filter="url(#window-svg-d)"
+          {{! @glint-expect-error: Incorrect type }}
           xlink:href="#window-svg-a"
         /></g>
       <g mask="url(#window-svg-e)">
         <g transform="translate(0 42)">
           <mask id="window-svg-h" fill="#fff"><use
+              {{! @glint-expect-error: Incorrect type }}
               xlink:href="#window-svg-f"
             /></mask>
           <g fill-rule="nonzero"><use
               fill="#FFF"
+              {{! @glint-expect-error: Incorrect type }}
               xlink:href="#window-svg-f"
             /><use
               fill="#000"
               filter="url(#window-svg-g)"
+              {{! @glint-expect-error: Incorrect type }}
               xlink:href="#window-svg-f"
             /></g><path
             fill="#1B3A4B"
@@ -302,6 +319,7 @@
           ><use
               fill="#000"
               filter="url(#window-svg-i)"
+              {{! @glint-expect-error: Incorrect type }}
               xlink:href="#window-svg-j"
             /><path
               fill="#FFF"
@@ -315,12 +333,16 @@
       <g fill-rule="nonzero" mask="url(#window-svg-e)"><use
           fill="#000"
           filter="url(#window-svg-k)"
+          {{! @glint-expect-error: Incorrect type }}
           xlink:href="#window-svg-l"
+          {{! @glint-expect-error: Incorrect type }}
         /><use fill="#FFF" xlink:href="#window-svg-l" /></g>
       <g fill-rule="nonzero" mask="url(#window-svg-e)"><use
           fill="#000"
           filter="url(#window-svg-m)"
+          {{! @glint-expect-error: Incorrect type }}
           xlink:href="#window-svg-n"
+          {{! @glint-expect-error: Incorrect type }}
         /><use fill="#EAEBEE" xlink:href="#window-svg-n" /></g>
       <g
         fill-rule="nonzero"
@@ -355,4 +377,4 @@
       <tspan x="100" y="27">https://emberobserver.com</tspan>
     </text>
   </svg>
-</template>
+</template> satisfies TOC<WindowSvgSignature>;

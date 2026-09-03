@@ -1,5 +1,14 @@
+import type { TOC } from '@ember/component/template-only';
 import { eq } from 'ember-truth-helpers';
 import MascotsMascotListItem from 'ember-website/components/mascots/mascot-list/item';
+import type Tomster from 'ember-website/models/tomster';
+
+interface MascotsMascotListSignature {
+  Args: {
+    display?: 'small' | 'large';
+    mascots: Tomster[];
+  };
+}
 
 <template>
   <ul
@@ -12,4 +21,4 @@ import MascotsMascotListItem from 'ember-website/components/mascots/mascot-list/
       </li>
     {{/each}}
   </ul>
-</template>
+</template> satisfies TOC<MascotsMascotListSignature>;

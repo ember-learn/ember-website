@@ -8,7 +8,7 @@ module('Integration | Component | index/ember-addons/tab', function (hooks) {
   setupRenderingTest(hooks);
 
   test('We can render a tab (1)', async function (assert) {
-    const noOp = () => {};
+    const noOp = (): void => {};
 
     await render(
       <template>
@@ -41,7 +41,7 @@ module('Integration | Component | index/ember-addons/tab', function (hooks) {
   });
 
   test('We can render a tab (2)', async function (assert) {
-    const noOp = () => {};
+    const noOp = (): void => {};
 
     await render(
       <template>
@@ -77,7 +77,7 @@ module('Integration | Component | index/ember-addons/tab', function (hooks) {
   });
 
   test('We can click the button to call @onClick', async function (assert) {
-    const updateCurrentTabId = (tabId) => {
+    const updateCurrentTabId = (tabId: number): void => {
       assert.strictEqual(tabId, 0, 'We get the correct tab ID.');
 
       assert.step('updateCurrentTabId');

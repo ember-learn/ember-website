@@ -1,19 +1,18 @@
 import { render } from '@ember/test-helpers';
 import { setupRenderingTest } from 'ember-qunit';
 import TeamsTeam from 'ember-website/components/teams/team';
+import type TeamMember from 'ember-website/models/team-member';
 import { module, test } from 'qunit';
 
 module('Integration | Component | teams/team', function (hooks) {
   setupRenderingTest(hooks);
 
-  hooks.beforeEach(async function () {
+  test('We can display the team', async function (assert) {
     const store = this.owner.lookup('service:store');
 
-    this.teamMembers = await store.findAll('team-member');
-  });
+    const teamMembers = await store.findAll<TeamMember>('team-member');
 
-  test('We can display the team', async function (assert) {
-    const members = this.teamMembers.filter(({ teams }) => {
+    const steeringTeamMembers = teamMembers.filter(({ teams }) => {
       return (teams ?? []).includes('steering');
     });
 
@@ -21,7 +20,7 @@ module('Integration | Component | teams/team', function (hooks) {
       <template>
         <TeamsTeam
           @description="The Steering Committee is responsible for the overall governance of the Ember project."
-          @members={{members}}
+          @members={{steeringTeamMembers}}
           @name="The Steering Committee"
         />
       </template>,

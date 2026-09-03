@@ -3,7 +3,10 @@ import { setupRenderingTest } from 'ember-qunit';
 import IndexEmberAddons from 'ember-website/components/index/ember-addons';
 import { module, test } from 'qunit';
 
-function assertTabs(assert, expectedOutput = {}) {
+function assertTabs(
+  assert: Assert,
+  expectedOutput: Record<string, boolean> = {},
+): void {
   for (const [label, value] of Object.entries(expectedOutput)) {
     assert
       .dom(`[data-test-button="${label}"]`)

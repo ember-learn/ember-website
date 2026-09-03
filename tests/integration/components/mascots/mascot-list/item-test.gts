@@ -1,19 +1,16 @@
 import { render } from '@ember/test-helpers';
 import { setupRenderingTest } from 'ember-qunit';
 import MascotsMascotListItem from 'ember-website/components/mascots/mascot-list/item';
+import type Tomster from 'ember-website/models/tomster';
 import { module, test } from 'qunit';
 
 module('Integration | Component | mascots/mascot-list/item', function (hooks) {
   setupRenderingTest(hooks);
 
-  hooks.beforeEach(async function () {
+  test('We can display a mascot (with url)', async function (assert) {
     const store = this.owner.lookup('service:store');
 
-    this.mascots = await store.findAll('tomster');
-  });
-
-  test('We can display a mascot (with url)', async function (assert) {
-    const mascot = this.mascots.find(({ id }) => id === 'austin-zoey');
+    const mascot = await store.findRecord<Tomster>('tomster', 'austin-zoey');
 
     await render(
       <template><MascotsMascotListItem @mascot={{mascot}} /></template>,
@@ -43,7 +40,9 @@ module('Integration | Component | mascots/mascot-list/item', function (hooks) {
   });
 
   test('We can display a mascot (without url)', async function (assert) {
-    const mascot = this.mascots.find(({ id }) => id === 'ember-a11y');
+    const store = this.owner.lookup('service:store');
+
+    const mascot = await store.findRecord<Tomster>('tomster', 'ember-a11y');
 
     await render(
       <template><MascotsMascotListItem @mascot={{mascot}} /></template>,

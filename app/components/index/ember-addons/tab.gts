@@ -1,5 +1,16 @@
+import type { TOC } from '@ember/component/template-only';
 import { on } from '@ember/modifier';
 import { eq } from 'ember-truth-helpers';
+
+interface IndexEmberAddonsTabSignature {
+  Args: {
+    currentTabId: number;
+    label: string;
+    onClick: () => void;
+    tabId: number;
+  };
+  Element: HTMLButtonElement;
+}
 
 <template>
   {{#let (eq @currentTabId @tabId) as |isTabActive|}}
@@ -18,4 +29,4 @@ import { eq } from 'ember-truth-helpers';
       {{@label}}
     </button>
   {{/let}}
-</template>
+</template> satisfies TOC<IndexEmberAddonsTabSignature>;

@@ -1,3 +1,9 @@
+import type { TOC } from '@ember/component/template-only';
+
+interface CtaEmberconfSignature {
+  Args: {};
+}
+
 <template>
   <div class="container layout">
     <div class="emberconf-announcement lg:col-4 lg:start-2">
@@ -35,4 +41,4 @@
       </div>
     </div>
   </div>
-</template>
+</template> satisfies TOC<CtaEmberconfSignature>;

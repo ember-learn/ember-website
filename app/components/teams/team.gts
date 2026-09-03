@@ -1,5 +1,15 @@
+import type { TOC } from '@ember/component/template-only';
 import { dasherize } from '@ember/string';
 import TeamsTeamMember from 'ember-website/components/teams/team/member';
+import type TeamMember from 'ember-website/models/team-member';
+
+interface TeamsTeamSignature {
+  Args: {
+    description?: string;
+    members: TeamMember[];
+    name: string;
+  };
+}
 
 <template>
   <h2 class="text-center" data-test-field="Team Name" id={{dasherize @name}}>
@@ -17,4 +27,4 @@ import TeamsTeamMember from 'ember-website/components/teams/team/member';
       <TeamsTeamMember @member={{member}} />
     {{/each}}
   </div>
-</template>
+</template> satisfies TOC<TeamsTeamSignature>;

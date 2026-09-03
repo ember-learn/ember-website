@@ -23,11 +23,7 @@ module(
       assert
         .dom('[data-test-image]')
         .hasAttribute('alt', 'JavaScript', 'We see the correct alternate text.')
-        .doesNotHaveAttribute(
-          'role',
-          '',
-          'We should not see the role attribute.',
-        )
+        .doesNotHaveAttribute('role', '')
         .hasAttribute(
           'src',
           '/images/home/logos/js.svg',

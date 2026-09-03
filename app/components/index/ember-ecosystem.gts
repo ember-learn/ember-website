@@ -1,4 +1,9 @@
+import type { TOC } from '@ember/component/template-only';
 import IndexEmberEcosystemImage from 'ember-website/components/index/ember-ecosystem/image';
+
+interface IndexEmberEcosystemSignature {
+  Args: {};
+}
 
 <template>
   <div class="ecosystem-icons">
@@ -42,4 +47,4 @@ import IndexEmberEcosystemImage from 'ember-website/components/index/ember-ecosy
       @src="/images/home/logos/npm.svg"
     />
   </div>
-</template>
+</template> satisfies TOC<IndexEmberEcosystemSignature>;
