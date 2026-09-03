@@ -1,6 +1,22 @@
 import { registerDestructor } from '@ember/destroyable';
 import merge from 'deepmerge';
+import type { PositionalArgs } from 'ember-modifier';
 import Modifier from 'ember-modifier';
+
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+type Highcharts = typeof import('highcharts');
+
+type Chart = {
+  highchartsOptions: Highcharts.ChartOptions;
+};
+
+interface DrawChartSignature {
+  Args: {
+    Named: {};
+    Positional: [chart?: Chart];
+  };
+  Element: HTMLElement;
+}
 
 const optionsForAllCharts = {
   credits: {
@@ -18,10 +34,15 @@ const optionsForAllCharts = {
   },
 };
 
-export default class DrawChartModifier extends Modifier {
-  highcharts;
+export default class DrawChartModifier extends Modifier<DrawChartSignature> {
+  declare chartInstance: Highcharts.Chart;
+  declare highcharts: Highcharts;
 
-  async modify(element, [chart]) {
+  // eslint-disable-next-line @typescript-eslint/no-misused-promises
+  async modify(
+    element: HTMLElement,
+    [chart]: PositionalArgs<DrawChartSignature>,
+  ): Promise<void> {
     if (!chart) {
       return;
     }
@@ -33,7 +54,7 @@ export default class DrawChartModifier extends Modifier {
     registerDestructor(this, this.destroyChart.bind(this));
   }
 
-  async initializeHighcharts() {
+  async initializeHighcharts(): Promise<void> {
     if (this.highcharts) {
       return;
     }
@@ -48,7 +69,8 @@ export default class DrawChartModifier extends Modifier {
     this.highcharts.setOptions(optionsForAllCharts);
   }
 
-  drawChart({ chart, element }) {
+  drawChart({ chart, element }: { chart: Chart; element: HTMLElement }): void {
+    // @ts-expect-error: Incorrect type
     element.removeAttribute('data-render-state', 'settled');
 
     const chartOptions = merge(
@@ -67,7 +89,7 @@ export default class DrawChartModifier extends Modifier {
     this.chartInstance = this.highcharts.chart(element, chartOptions);
   }
 
-  destroyChart() {
+  destroyChart(): void {
     this.chartInstance.destroy();
   }
 }

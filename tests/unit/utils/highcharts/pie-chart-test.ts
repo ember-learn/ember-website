@@ -1,8 +1,15 @@
+import type { TestContext as BaseTestContext } from '@ember/test-helpers';
 import PieChart from 'ember-website/utils/highcharts/pie-chart';
+import type { Chart, RawData } from 'ember-website/utils/highcharts/pie-chart';
 import { module, test } from 'qunit';
 
+interface TestContext extends BaseTestContext {
+  chart: Chart;
+  rawData: RawData;
+}
+
 module('Unit | Utility | highcharts/pie-chart', function (hooks) {
-  hooks.beforeEach(function () {
+  hooks.beforeEach(function (this: TestContext) {
     this.chart = {
       title: 'Do you internationalize your applications?',
     };
@@ -14,17 +21,19 @@ module('Unit | Utility | highcharts/pie-chart', function (hooks) {
   });
 
   module('highchartsOptions', function () {
-    test('returns a configuration object that is compatible with Highcharts', function (assert) {
+    test('returns a configuration object that is compatible with Highcharts', function (this: TestContext, assert) {
       const { highchartsOptions } = new PieChart({
         chart: this.chart,
         rawData: this.rawData,
       });
 
       // We tested `series` in a separate module
+      // @ts-expect-error: Incorrect type
       delete highchartsOptions.series;
 
       assert.deepEqual(
         highchartsOptions,
+        // @ts-expect-error: Incorrect type
         {
           chart: {
             backgroundColor: 'transparent',
@@ -49,7 +58,7 @@ module('Unit | Utility | highcharts/pie-chart', function (hooks) {
   });
 
   module('series', function () {
-    test('transforms rawData into an array that is compatible with Highcharts', function (assert) {
+    test('transforms rawData into an array that is compatible with Highcharts', function (this: TestContext, assert) {
       const { series } = new PieChart({
         chart: this.chart,
         rawData: this.rawData,

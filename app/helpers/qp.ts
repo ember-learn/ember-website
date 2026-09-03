@@ -1,10 +1,21 @@
 import Helper from '@ember/component/helper';
-import { service } from '@ember/service';
+import { type Registry as Services, service } from '@ember/service';
 
-export default class QP extends Helper {
-  @service router;
+interface QpSignature {
+  Args: {
+    Named: {};
+    Positional: [key: string];
+  };
+  Return: string | undefined;
+}
 
-  compute([qp]) {
-    return this.router.currentRoute?.queryParams?.[qp];
+export default class QpHelper extends Helper<QpSignature> {
+  @service declare router: Services['router'];
+
+  compute([key]: QpSignature['Args']['Positional']): QpSignature['Return'] {
+    const queryParams = this.router.currentRoute?.queryParams as
+      Record<string, string> | undefined;
+
+    return queryParams?.[key];
   }
 }

@@ -14,6 +14,7 @@ const chartHowlong = new VerticalBarChart({
       '3–6 months',
       'Less than 3 months',
     ],
+    title: '',
   },
 
   rawData: [

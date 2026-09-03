@@ -1,4 +1,4 @@
-import { replaceLinks } from 'ember-website/utils/replace-links';
+import { type Link, replaceLinks } from 'ember-website/utils/replace-links';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | replace-links', function () {
@@ -9,7 +9,7 @@ module('Unit | Utility | replace-links', function () {
 
       See https://github.com/ember-learn/ember-styleguide/blob/ab1d1fc32dd023f287c49d3fd700216ba368771a/addon/constants/links.js
     */
-    const links = [
+    const links: Link[] = [
       {
         name: 'Docs',
         type: 'dropdown',
@@ -368,7 +368,7 @@ module('Unit | Utility | replace-links', function () {
 
       See https://github.com/ember-learn/ember-website/blob/d08e34a0acd403d16ee78c90ec0ec368762e3e9f/app/links.js
     */
-    const links = [
+    const links: Link[] = [
       {
         name: 'Docs',
         type: 'dropdown',

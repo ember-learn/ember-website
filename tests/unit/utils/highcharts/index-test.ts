@@ -1,4 +1,3 @@
-import { setupTest } from 'ember-qunit';
 import {
   AreaSplineChart,
   HorizontalBarChart,
@@ -6,6 +5,7 @@ import {
   SplineChart,
   VerticalBarChart,
 } from 'ember-website/utils/highcharts/index';
+import { setupTest } from 'ember-qunit';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | highcharts/index', function (hooks) {

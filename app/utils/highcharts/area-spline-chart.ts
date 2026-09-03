@@ -3,15 +3,34 @@
 */
 import { tracked } from '@glimmer/tracking';
 
-export default class AreaSplineChart {
-  @tracked chart;
-  @tracked rawData;
+export type Chart = {
+  categories: string[];
+  subtitle?: string;
+  title: string;
+};
 
-  constructor({ chart, rawData }) {
+export type RawData = {
+  color: string;
+  label: string;
+  values: number[];
+}[];
+
+type Series = {
+  color: string;
+  data: number[];
+  name: string;
+}[];
+
+export default class AreaSplineChart {
+  @tracked chart: Chart;
+  @tracked rawData?: RawData;
+
+  constructor({ chart, rawData }: { chart: Chart; rawData: RawData }) {
     this.chart = chart;
     this.rawData = rawData;
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   get highchartsOptions() {
     const { chart, isLegendEnabled, series } = this;
 
@@ -55,19 +74,19 @@ export default class AreaSplineChart {
     };
   }
 
-  get isLegendEnabled() {
+  get isLegendEnabled(): boolean {
     const { series } = this;
 
     return series.length > 1;
   }
 
-  get series() {
+  get series(): Series {
     return createSeries(this.rawData);
   }
 }
 
-function createSeries(rawData = []) {
-  const data = [];
+function createSeries(rawData: RawData = []): Series {
+  const data: Series = [];
 
   rawData.forEach((datum) => {
     const { color, label, values } = datum;
