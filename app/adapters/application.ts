@@ -1,21 +1,23 @@
 import JSONAPIAdapter from '@ember-data/adapter/json-api';
 
 export default class ApplicationAdapter extends JSONAPIAdapter {
-  shouldBackgroundReloadAll() {
+  shouldBackgroundReloadAll(): boolean {
     return false;
   }
 
-  shouldBackgroundReloadRecord() {
+  shouldBackgroundReloadRecord(): boolean {
     return false;
   }
 
-  urlForFindAll(modelName) {
+  urlForFindAll(modelName: string): string {
     const path = this.pathForType(modelName);
+
     return `/data/${path}/all.json`;
   }
 
-  urlForFindRecord(id, modelName) {
+  urlForFindRecord(id: string, modelName: string): string {
     const path = this.pathForType(modelName);
+
     return `/data/${path}/${id}.json`;
   }
 }

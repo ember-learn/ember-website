@@ -1,11 +1,14 @@
 import { setupTest } from 'ember-qunit';
+import type ApplicationAdapter from 'ember-website/adapters/application';
 import { module, test } from 'qunit';
 
 module('Unit | Adapter | application', function (hooks) {
   setupTest(hooks);
 
   test('urlForFindAll works', function (assert) {
-    const adapter = this.owner.lookup('adapter:application');
+    const adapter = this.owner.lookup(
+      'adapter:application',
+    ) as ApplicationAdapter;
 
     assert.strictEqual(
       adapter.urlForFindAll('project'),
@@ -21,7 +24,9 @@ module('Unit | Adapter | application', function (hooks) {
   });
 
   test('urlForFindRecord works', function (assert) {
-    const adapter = this.owner.lookup('adapter:application');
+    const adapter = this.owner.lookup(
+      'adapter:application',
+    ) as ApplicationAdapter;
 
     assert.strictEqual(
       adapter.urlForFindRecord('ember/release', 'project'),
