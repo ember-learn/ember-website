@@ -1,6 +1,15 @@
+import type { TOC } from '@ember/component/template-only';
 import { pageTitle } from 'ember-page-title';
 import ReleasesHowToInstall from 'ember-website/components/releases/how-to-install';
 import TerminalCode from 'ember-website/components/terminal-code';
+import type ReleasesCanaryRoute from 'ember-website/routes/releases/canary';
+import type { ModelFrom } from 'ember-website/utils/routes';
+
+interface ReleasesCanarySignature {
+  Args: {
+    model: ModelFrom<ReleasesCanaryRoute>;
+  };
+}
 
 <template>
   {{pageTitle "Canary"}}
@@ -50,4 +59,4 @@ import TerminalCode from 'ember-website/components/terminal-code';
     key contributors make a habit of working off a canary release in order to
     volunteer their efforts as early testers.
   </p>
-</template>
+</template> satisfies TOC<ReleasesCanarySignature>;

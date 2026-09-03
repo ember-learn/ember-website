@@ -1,6 +1,7 @@
 import { hash } from '@ember/helper';
 import { LinkTo } from '@ember/routing';
 import { pageTitle } from 'ember-page-title';
+// @ts-expect-error: Incorrect type
 import EsCard from 'ember-styleguide/components/es-card';
 import EmberCommunitySurveyIntroduction from 'ember-website/components/ember-community-survey/introduction';
 import EmberCommunitySurveySection from 'ember-website/components/ember-community-survey/section';

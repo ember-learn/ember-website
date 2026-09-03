@@ -3,33 +3,43 @@ import Component from '@glimmer/component';
 import { cached } from '@glimmer/tracking';
 import { pageTitle } from 'ember-page-title';
 import TeamsTeam from 'ember-website/components/teams/team';
+import type TeamMember from 'ember-website/models/team-member';
+import type TeamsRoute from 'ember-website/routes/teams';
+import type { ModelFrom } from 'ember-website/utils/routes';
 import { inTeam } from 'ember-website/utils/teams/in-team';
 
-export default class TeamsIndex extends Component {
-  get coreToolingTeamMembers() {
+interface TeamsIndexSignature {
+  Args: {
+    model: ModelFrom<TeamsRoute>;
+  };
+}
+
+export default class TeamsIndex extends Component<TeamsIndexSignature> {
+  get coreToolingTeamMembers(): TeamMember[] {
     return this.teamMembers.filter(inTeam('tooling'));
   }
 
-  get coreTeamMembers() {
+  get coreTeamMembers(): TeamMember[] {
     return this.teamMembers.filter(inTeam('corejs'));
   }
 
-  get dataTeamMembers() {
+  get dataTeamMembers(): TeamMember[] {
     return this.teamMembers.filter(inTeam('data'));
   }
 
-  get learningTeamMembers() {
+  get learningTeamMembers(): TeamMember[] {
     return this.teamMembers.filter(inTeam('learning'));
   }
 
-  get steeringCommitteeMembers() {
+  get steeringCommitteeMembers(): TeamMember[] {
     return this.teamMembers.filter(inTeam('steering'));
   }
 
-  @cached get teamMembers() {
+  @cached get teamMembers(): TeamMember[] {
     const teamMembers = this.args.model ?? [];
 
     return teamMembers.toSorted((teamMember1, teamMember2) => {
+      // @ts-expect-error: Incorrect type
       return teamMember1.added - teamMember2.added;
     });
   }

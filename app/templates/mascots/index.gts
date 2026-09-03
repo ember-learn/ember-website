@@ -1,8 +1,16 @@
+import type { TOC } from '@ember/component/template-only';
 import { LinkTo } from '@ember/routing';
 import { sortBy } from '@nullvoxpopuli/ember-composable-helpers';
 import { pageTitle } from 'ember-page-title';
 import MascotsMascotFilters from 'ember-website/components/mascots/mascot-filters';
 import MascotsMascotList from 'ember-website/components/mascots/mascot-list';
+import type MascotsIndexController from 'ember-website/controllers/mascots/index';
+
+interface MascotsIndexSignature {
+  Args: {
+    controller: MascotsIndexController;
+  };
+}
 
 <template>
   {{pageTitle "Mascots"}}
@@ -29,4 +37,4 @@ import MascotsMascotList from 'ember-website/components/mascots/mascot-list';
       @mascots={{sortBy "date:desc" @controller.filteredMascots}}
     />
   </section>
-</template>
+</template> satisfies TOC<MascotsIndexSignature>;

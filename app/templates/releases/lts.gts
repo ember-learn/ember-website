@@ -1,12 +1,22 @@
+import type { TOC } from '@ember/component/template-only';
 import { pageTitle } from 'ember-page-title';
+// @ts-expect-error: Incorrect type
 import EsNote from 'ember-styleguide/components/es-note';
 import ReleasesHowToInstall from 'ember-website/components/releases/how-to-install';
 import addWeeks from 'ember-website/helpers/add-weeks';
 import formatDateTime from 'ember-website/helpers/format-date-time';
+import type ReleasesLtsRoute from 'ember-website/routes/releases/lts';
 import {
   dataLtsReleases,
   emberLtsReleases,
 } from 'ember-website/utils/releases/lts';
+import type { ModelFrom } from 'ember-website/utils/routes';
+
+interface ReleasesLtsSignature {
+  Args: {
+    model: ModelFrom<ReleasesLtsRoute>;
+  };
+}
 
 <template>
   {{pageTitle "LTS"}}
@@ -147,4 +157,4 @@ import {
       </tbody>
     </table>
   </div>
-</template>
+</template> satisfies TOC<ReleasesLtsSignature>;

@@ -1,5 +1,14 @@
+import type { TOC } from '@ember/component/template-only';
 import { sortBy } from '@nullvoxpopuli/ember-composable-helpers';
 import { pageTitle } from 'ember-page-title';
+import type EmberUsersRoute from 'ember-website/routes/ember-users';
+import type { ModelFrom } from 'ember-website/utils/routes';
+
+interface EmberUsersSignature {
+  Args: {
+    model: ModelFrom<EmberUsersRoute>;
+  };
+}
 
 <template>
   {{pageTitle "Who's Using Ember.js"}}
@@ -71,4 +80,4 @@ import { pageTitle } from 'ember-page-title';
       </div>
     </section>
   </section>
-</template>
+</template> satisfies TOC<EmberUsersSignature>;

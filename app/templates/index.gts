@@ -1,6 +1,8 @@
 import { LinkTo } from '@ember/routing';
 import { pageTitle } from 'ember-page-title';
+// @ts-expect-error: Incorrect type
 import EsCard from 'ember-styleguide/components/es-card';
+// @ts-expect-error: Incorrect type
 import EsLinkCard from 'ember-styleguide/components/es-link-card';
 import CommunityTrends from 'ember-website/components/community-trends';
 import IndexEmberAddons from 'ember-website/components/index/ember-addons';

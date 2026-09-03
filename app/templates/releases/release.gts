@@ -1,5 +1,14 @@
+import type { TOC } from '@ember/component/template-only';
 import { pageTitle } from 'ember-page-title';
 import ReleasesHowToInstall from 'ember-website/components/releases/how-to-install';
+import type ReleasesReleaseRoute from 'ember-website/routes/releases/release';
+import type { ModelFrom } from 'ember-website/utils/routes';
+
+interface ReleasesReleaseSignature {
+  Args: {
+    model: ModelFrom<ReleasesReleaseRoute>;
+  };
+}
 
 <template>
   {{pageTitle "Stable"}}
@@ -49,4 +58,4 @@ import ReleasesHowToInstall from 'ember-website/components/releases/how-to-insta
     out. It signals that the new version is ready in the Ember.js codebase,
     Ember CLI, and Ember Data.
   </p>
-</template>
+</template> satisfies TOC<ReleasesReleaseSignature>;
