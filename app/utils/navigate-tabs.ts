@@ -3,9 +3,9 @@ const ALLOWED_KEYS = {
   ARROW_LEFT_IE11: 'Left',
   ARROW_RIGHT: 'ArrowRight',
   ARROW_RIGHT_IE11: 'Right',
-};
+} as const;
 
-export function getTabIdIncrement(event) {
+export function getTabIdIncrement(event: { key: string }): -1 | 1 | undefined {
   switch (event.key) {
     case ALLOWED_KEYS.ARROW_LEFT:
     case ALLOWED_KEYS.ARROW_LEFT_IE11: {
@@ -21,6 +21,6 @@ export function getTabIdIncrement(event) {
   return undefined;
 }
 
-export function modulus(m, n) {
+export function modulus(m: number, n: number): number {
   return ((m % n) + n) % n;
 }

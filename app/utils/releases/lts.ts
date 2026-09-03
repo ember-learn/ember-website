@@ -1,6 +1,12 @@
+type Release = {
+  isActive: boolean;
+  promotionDate: Date;
+  version: string;
+};
+
 // promotion date should be the day of the release of the following ember minor version
 // you can run `npm info ember-source time` to see a list
-export const emberLtsReleases = [
+export const emberLtsReleases: Release[] = [
   {
     version: '6.12',
     promotionDate: new Date('2026-05-12'),
@@ -108,7 +114,7 @@ export const emberLtsReleases = [
   },
 ];
 
-export const dataLtsReleases = [
+export const dataLtsReleases: Release[] = [
   {
     version: '5.3',
     promotionDate: new Date('2023-12-10'),

@@ -1,8 +1,18 @@
+import type { TestContext as BaseTestContext } from '@ember/test-helpers';
 import HorizontalBarChart from 'ember-website/utils/highcharts/horizontal-bar-chart';
+import type {
+  Chart,
+  RawData,
+} from 'ember-website/utils/highcharts/horizontal-bar-chart';
 import { module, test } from 'qunit';
 
+interface TestContext extends BaseTestContext {
+  chart: Chart;
+  rawData: RawData;
+}
+
 module('Unit | Utility | highcharts/horizontal-bar-chart', function (hooks) {
-  hooks.beforeEach(function () {
+  hooks.beforeEach(function (this: TestContext) {
     this.chart = {
       categories: [
         'Writing RFCs',
@@ -31,20 +41,23 @@ module('Unit | Utility | highcharts/horizontal-bar-chart', function (hooks) {
   });
 
   module('highchartsOptions', function () {
-    test('returns a configuration object that is compatible with Highcharts', function (assert) {
+    test('returns a configuration object that is compatible with Highcharts', function (this: TestContext, assert) {
       const { highchartsOptions } = new HorizontalBarChart({
         chart: this.chart,
         rawData: this.rawData,
       });
 
       // We tested `legend` in a separate module
+      // @ts-expect-error: Incorrect type
       delete highchartsOptions.legend;
 
       // We tested `series` in a separate module
+      // @ts-expect-error: Incorrect type
       delete highchartsOptions.series;
 
       assert.deepEqual(
         highchartsOptions,
+        // @ts-expect-error: Incorrect type
         {
           chart: {
             backgroundColor: 'transparent',
@@ -91,8 +104,8 @@ module('Unit | Utility | highcharts/horizontal-bar-chart', function (hooks) {
   });
 
   module('isLegendEnabled', function () {
-    test('returns true when series has more than 1 element', function (assert) {
-      const rawData = this.rawData;
+    test('returns true when series has more than 1 element', function (this: TestContext, assert) {
+      const rawData: RawData = this.rawData;
 
       const { isLegendEnabled } = new HorizontalBarChart({
         chart: this.chart,
@@ -102,8 +115,8 @@ module('Unit | Utility | highcharts/horizontal-bar-chart', function (hooks) {
       assert.true(isLegendEnabled, 'We get the correct value.');
     });
 
-    test('returns false when series has 1 element', function (assert) {
-      const rawData = [this.rawData[0]];
+    test('returns false when series has 1 element', function (this: TestContext, assert) {
+      const rawData: RawData = [this.rawData[0]!];
 
       const { isLegendEnabled } = new HorizontalBarChart({
         chart: this.chart,
@@ -113,8 +126,8 @@ module('Unit | Utility | highcharts/horizontal-bar-chart', function (hooks) {
       assert.false(isLegendEnabled, 'We get the correct value.');
     });
 
-    test('returns false when series has 0 elements', function (assert) {
-      const rawData = [];
+    test('returns false when series has 0 elements', function (this: TestContext, assert) {
+      const rawData: RawData = [];
 
       const { isLegendEnabled } = new HorizontalBarChart({
         chart: this.chart,
@@ -126,7 +139,7 @@ module('Unit | Utility | highcharts/horizontal-bar-chart', function (hooks) {
   });
 
   module('series', function () {
-    test('transforms rawData into an array that is compatible with Highcharts', function (assert) {
+    test('transforms rawData into an array that is compatible with Highcharts', function (this: TestContext, assert) {
       const { series } = new HorizontalBarChart({
         chart: this.chart,
         rawData: this.rawData,

@@ -3,15 +3,37 @@
 */
 import { tracked } from '@glimmer/tracking';
 
-export default class PieChart {
-  @tracked chart;
-  @tracked rawData;
+export type Chart = {
+  subtitle?: string;
+  title: string;
+};
 
-  constructor({ chart, rawData }) {
+export type RawData = {
+  color: string;
+  label: string;
+  value: number;
+}[];
+
+type Series = [
+  {
+    colors: string[];
+    data: {
+      name: string;
+      y: number;
+    }[];
+  },
+];
+
+export default class PieChart {
+  @tracked chart: Chart;
+  @tracked rawData?: RawData;
+
+  constructor({ chart, rawData }: { chart: Chart; rawData: RawData }) {
     this.chart = chart;
     this.rawData = rawData;
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   get highchartsOptions() {
     const { chart, series } = this;
 
@@ -37,14 +59,17 @@ export default class PieChart {
     };
   }
 
-  get series() {
+  get series(): Series {
     return createSeries(this.rawData);
   }
 }
 
-function createSeries(rawData = []) {
-  const colors = [];
-  const data = [];
+function createSeries(rawData: RawData = []): Series {
+  const colors: string[] = [];
+  const data: {
+    name: string;
+    y: number;
+  }[] = [];
 
   const total = rawData.reduce((accumulator, datum) => {
     const { value } = datum;

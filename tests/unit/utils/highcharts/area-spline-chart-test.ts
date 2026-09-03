@@ -1,8 +1,18 @@
+import type { TestContext as BaseTestContext } from '@ember/test-helpers';
 import AreaSplineChart from 'ember-website/utils/highcharts/area-spline-chart';
+import type {
+  Chart,
+  RawData,
+} from 'ember-website/utils/highcharts/area-spline-chart';
 import { module, test } from 'qunit';
 
+interface TestContext extends BaseTestContext {
+  chart: Chart;
+  rawData: RawData;
+}
+
 module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
-  hooks.beforeEach(function () {
+  hooks.beforeEach(function (this: TestContext) {
     this.chart = {
       categories: ['1.x', '2.x', '3.0-3.4', '3.5-3.8', '3.9-3.12', '3.13-3.16'],
       subtitle: '(Multi-select question)',
@@ -36,20 +46,23 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
   });
 
   module('highchartsOptions', function () {
-    test('returns a configuration object that is compatible with Highcharts', function (assert) {
+    test('returns a configuration object that is compatible with Highcharts', function (this: TestContext, assert) {
       const { highchartsOptions } = new AreaSplineChart({
         chart: this.chart,
         rawData: this.rawData,
       });
 
       // We tested `legend` in a separate module
+      // @ts-expect-error: Incorrect type
       delete highchartsOptions.legend;
 
       // We tested `series` in a separate module
+      // @ts-expect-error: Incorrect type
       delete highchartsOptions.series;
 
       assert.deepEqual(
         highchartsOptions,
+        // @ts-expect-error: Incorrect type
         {
           chart: {
             backgroundColor: 'transparent',
@@ -95,8 +108,8 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
   });
 
   module('isLegendEnabled', function () {
-    test('returns true when series has more than 1 element', function (assert) {
-      const rawData = this.rawData;
+    test('returns true when series has more than 1 element', function (this: TestContext, assert) {
+      const rawData: RawData = this.rawData;
 
       const { isLegendEnabled } = new AreaSplineChart({
         chart: this.chart,
@@ -106,8 +119,8 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
       assert.true(isLegendEnabled, 'We get the correct value.');
     });
 
-    test('returns false when series has 1 element', function (assert) {
-      const rawData = [this.rawData[0]];
+    test('returns false when series has 1 element', function (this: TestContext, assert) {
+      const rawData: RawData = [this.rawData[0]!];
 
       const { isLegendEnabled } = new AreaSplineChart({
         chart: this.chart,
@@ -117,8 +130,8 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
       assert.false(isLegendEnabled, 'We get the correct value.');
     });
 
-    test('returns false when series has 0 elements', function (assert) {
-      const rawData = [];
+    test('returns false when series has 0 elements', function (this: TestContext, assert) {
+      const rawData: RawData = [];
 
       const { isLegendEnabled } = new AreaSplineChart({
         chart: this.chart,
@@ -130,7 +143,7 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
   });
 
   module('series', function () {
-    test('transforms rawData into an array that is compatible with Highcharts', function (assert) {
+    test('transforms rawData into an array that is compatible with Highcharts', function (this: TestContext, assert) {
       const { series } = new AreaSplineChart({
         chart: this.chart,
         rawData: this.rawData,
@@ -141,9 +154,9 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
       // Check series 1
       assert.deepEqual(
         {
-          color: series[0].color,
-          data: series[0].data.map(Math.round),
-          name: series[0].name,
+          color: series[0]!.color,
+          data: series[0]!.data.map(Math.round),
+          name: series[0]!.name,
         },
         {
           color: '#1E719B',
@@ -156,9 +169,9 @@ module('Unit | Utility | highcharts/area-spline-chart', function (hooks) {
       // Check series 2
       assert.deepEqual(
         {
-          color: series[1].color,
-          data: series[1].data.map(Math.round),
-          name: series[1].name,
+          color: series[1]!.color,
+          data: series[1]!.data.map(Math.round),
+          name: series[1]!.name,
         },
         {
           color: '#9B2918',

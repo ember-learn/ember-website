@@ -4,14 +4,14 @@ const legacyExternalLinks = new Set([
   'https://emberjs.com/deprecations',
 ]);
 
-function isExternalLink(url) {
+function isExternalLink(url: string): boolean {
   const isExternalLink = !url.startsWith('https://emberjs.com');
   const isLegacyExternalLink = legacyExternalLinks.has(url);
 
   return isExternalLink || isLegacyExternalLink;
 }
 
-function replaceInternalLinks(url) {
+function replaceInternalLinks(url: string): string {
   if (isExternalLink(url)) {
     return url;
   }
@@ -24,16 +24,34 @@ function replaceInternalLinks(url) {
     .replace(/\/builds$/, '/releases');
 }
 
-export function replaceLinks(links) {
+type SimpleDivider = {
+  type: 'divider';
+};
+
+type SimpleLink = {
+  href: string;
+  name: string;
+  type: 'link';
+};
+
+type SimpleDropdown = {
+  items: Link[];
+  name: string;
+  type: 'dropdown';
+};
+
+export type Link = SimpleDivider | SimpleDropdown | SimpleLink;
+
+export function replaceLinks(links: Link[]): Link[] {
   return links.map((group) => {
-    if (group.items) {
+    if (group.type === 'dropdown') {
       return {
         ...group,
         items: replaceLinks(group.items),
       };
     }
 
-    if (group.href) {
+    if (group.type === 'link') {
       return {
         ...group,
         href: replaceInternalLinks(group.href),
