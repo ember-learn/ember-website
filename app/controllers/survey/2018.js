@@ -5,16 +5,16 @@ import {
   VerticalBarChart,
 } from 'ember-website/utils/highcharts';
 
-var emberOrange = '#f23818',
+const emberOrange = '#f23818',
   darkGrayColor = '#4b4b4b',
   lightGrayColor = '#c0c0c0',
   lighterGrayColor = '#dedede',
   lightGreenColor = '#489a6e';
-var color2015 = lighterGrayColor;
-var color2016 = lightGrayColor;
-var color2017 = darkGrayColor;
-var color2018 = emberOrange;
-var colorFutureYear = lightGreenColor;
+const color2015 = lighterGrayColor;
+const color2016 = lightGrayColor;
+const color2017 = darkGrayColor;
+const color2018 = emberOrange;
+const colorFutureYear = lightGreenColor;
 
 const communityParticipation = new HorizontalBarChart({
   chart: {

@@ -28,26 +28,17 @@ import Highcharts from 'ember-website/components/highcharts';
     <:charts>
       <Highcharts @chart={{@controller.S06_QM01_SS__MERGED_GLOBAL_LOC}} />
     </:charts>
-    {{! <:body>Placeholder</:body> }}
   </EmberCommunitySurveySection>
 
-  {{! START RESULTS SECTIONS }}
   <EmberCommunitySurveySection
     @sectionId="s01-background"
     @sectionTitle="Your Development Background"
   >
-    {{! <:body>
-    PlaceholderText
-  </:body> }}
     <:charts>
       <Highcharts @chart={{@controller.S01_Q01_SS__TIME_USE}} />
       <Highcharts @chart={{@controller.S01_Q02_MS__OTHER_FRAMEWORKS}} />
       <Highcharts @chart={{@controller.S01_Q03_MS__OTHER_UI_LIBS}} />
       <Highcharts @chart={{@controller.S01_Q04_MS__OTHER_SSG}} />
-      {{!-- <Highcharts @chart={{this.S01_Q05_SS__KNOW_HTML}} />
-    <Highcharts @chart={{this.S01_Q06_SS__KNOW_ARIA}} />
-    <Highcharts @chart={{this.S01_Q07_SS__KNOW_CSS}} />
-    <Highcharts @chart={{this.S01_Q08_SS__KNOW_JS}} /> --}}
       <Highcharts @chart={{@controller.S01_QM01_SS__MERGED_WEB_SKILLS}} />
     </:charts>
   </EmberCommunitySurveySection>
@@ -56,9 +47,6 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionId="s02-env-pref"
     @sectionTitle="Development Preferences"
   >
-    {{! <:body>
-    PlaceholderText
-  </:body> }}
     <:charts>
       <Highcharts @chart={{@controller.S02_Q01_SS__OS_PREF}} />
       <Highcharts @chart={{@controller.S02_Q02_SS__OS_WORK}} />
@@ -71,21 +59,15 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionId="s03-at-work"
     @sectionTitle="Ember At Work"
   >
-    {{! <:body>
-    PlaceholderText
-  </:body> }}
     <:charts>
-      {{!-- <Highcharts @chart={{this.S03_Q02_MS__WORK_SECTOR}} /> --}}
       <Highcharts @chart={{@controller.S03_QM01_MS__MERGED_WORK_SECTOR}} />
       <Highcharts
         @chart={{@controller.S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED}}
       />
-      {{!-- <Highcharts @chart={{this.S03_Q15_SS__WORK_TEST_FW}} /> --}}
       <Highcharts @chart={{@controller.S03_QM02_SS__MERGED_WORK_TEST_FW}} />
       <Highcharts
         @chart={{@controller.S03_Q17_SS__SERVER_SIDE_FRAMEWORK_WORK}}
       />
-      {{!-- <Highcharts @chart={{this.S03_Q18_SS__DEPLOY_WORK}} /> --}}
       <Highcharts @chart={{@controller.S03_QM03_SS__MERGED_DEPLOY_WORK}} />
     </:charts>
   </EmberCommunitySurveySection>
@@ -94,9 +76,6 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionId="s05-feedback"
     @sectionTitle="Ember Features"
   >
-    {{! <:body>
-    PlaceholderText
-  </:body> }}
     <:charts>
       <Highcharts @chart={{@controller.S05_Q01_MS__FB_OCTANE}} />
       <Highcharts @chart={{@controller.S05_Q02_MS__FB_NEW_FEAT}} />
@@ -104,16 +83,6 @@ import Highcharts from 'ember-website/components/highcharts';
     </:charts>
   </EmberCommunitySurveySection>
 
-  {{!-- <EmberCommunitySurvey::Section
-  @sectionId='s06-closing'
-  @sectionTitle='Closing Questions'
->
-  <:body></:body><:charts>
-    <Highcharts @chart={{this.S06_Q03_MS__DEV_SURVEY_ADD}} />
-  </:charts></EmberCommunitySurvey::Section> --}}
-  {{! END RESULTS SECTIONS }}
-
-  {{! CLOSING THOUGHTS / SPONSOR THANKS / PROMOTIONAL SHARE  }}
   <EmberCommunitySurveySection
     @sectionId="closing-thoughts"
     @sectionTitle="Closing Thoughts"
@@ -145,10 +114,6 @@ import Highcharts from 'ember-website/components/highcharts';
         or any other feedback—please email us at
         <a href="mailto:survey@emberjs.com">survey@emberjs.com</a>.
       </p>
-      {{! <p>
-      Please share this survey on social media and at work.
-    </p> }}
-
       <p>
         Questions? Feedback? Please join us in the
         <code>#dev-ember-learning</code>
@@ -158,7 +123,6 @@ import Highcharts from 'ember-website/components/highcharts';
     </:body>
   </EmberCommunitySurveySection>
 
-  {{! TODO (?) update to nicely accommodate multiple sponsors }}
   <div class="bg-dark">
     <EmberCommunitySurveySponsor
       @sponsor={{hash
