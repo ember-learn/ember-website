@@ -1,4 +1,3 @@
-import Controller from '@ember/controller';
 import {
   AreaSplineChart,
   HorizontalBarChart,
@@ -474,20 +473,20 @@ const MS_Q601 = new PieChart({
   ],
 });
 
-export default class Survey2020Controller extends Controller {
-  stackSkillsChart = stackSkillsChart;
-  SS_Q101 = SS_Q101;
-  SS_Q104 = SS_Q104;
-  SS_Q204 = SS_Q204;
-  SS_Q302 = SS_Q302;
-  SS_Q305 = SS_Q305;
-  SS_Q306 = SS_Q306;
-  MS_Q103 = MS_Q103;
-  MS_Q111 = MS_Q111;
-  MS_Q112 = MS_Q112;
-  MS_Q304 = MS_Q304;
-  MS_Q401 = MS_Q401;
-  MS_Q406 = MS_Q406;
-  MS_Q413 = MS_Q413;
-  MS_Q601 = MS_Q601;
-}
+export {
+  MS_Q103,
+  MS_Q111,
+  MS_Q112,
+  MS_Q304,
+  MS_Q401,
+  MS_Q406,
+  MS_Q413,
+  MS_Q601,
+  SS_Q101,
+  SS_Q104,
+  SS_Q204,
+  SS_Q302,
+  SS_Q305,
+  SS_Q306,
+  stackSkillsChart,
+};

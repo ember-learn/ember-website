@@ -1,4 +1,3 @@
-import Controller from '@ember/controller';
 import { VerticalBarChart } from 'ember-website/utils/highcharts';
 
 const color2015 = '#CCCCCC';
@@ -295,7 +294,7 @@ const chartServerSide = [
   }),
 ];
 
-const chartBrowserSuppor = [
+const chartBrowserSupport = [
   new VerticalBarChart({
     chart: {
       categories: [
@@ -440,14 +439,14 @@ const chartSEO = new VerticalBarChart({
   ],
 });
 
-export default class Survey2016Controller extends Controller {
-  chartHowlong = chartHowlong;
-  chartEmberAtTheOffice = chartEmberAtTheOffice;
-  chartNewReleaseAdoptionEmber = chartNewReleaseAdoptionEmber;
-  chartNewReleaseAdoptionEmberData = chartNewReleaseAdoptionEmberData;
-  chartServerSide = chartServerSide;
-  chartLongLivedCodebases = chartLongLivedCodebases;
-  chartBrowserSuppor = chartBrowserSuppor;
-  chartEmberEcosystem = chartEmberEcosystem;
-  chartSEO = chartSEO;
-}
+export {
+  chartBrowserSupport,
+  chartEmberAtTheOffice,
+  chartEmberEcosystem,
+  chartHowlong,
+  chartLongLivedCodebases,
+  chartNewReleaseAdoptionEmber,
+  chartNewReleaseAdoptionEmberData,
+  chartServerSide,
+  chartSEO,
+};
