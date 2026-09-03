@@ -1,10 +1,13 @@
 import Route from '@ember/routing/route';
-import { service } from '@ember/service';
+import { type Registry as Services, service } from '@ember/service';
+import type TeamMember from 'ember-website/models/team-member';
+
+type Model = TeamMember[];
 
 export default class TeamsRoute extends Route {
-  @service store;
+  @service declare store: Services['store'];
 
-  model() {
-    return this.store.findAll('team-member');
+  async model(): Promise<Model> {
+    return this.store.findAll<TeamMember>('team-member');
   }
 }

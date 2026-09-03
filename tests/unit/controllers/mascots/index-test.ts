@@ -1,14 +1,14 @@
 import { setupTest } from 'ember-qunit';
-import type ApplicationController from 'ember-website/controllers/application';
+import type MascotsIndexController from 'ember-website/controllers/mascots/index';
 import { module, test } from 'qunit';
 
-module('Unit | Controller | application', function (hooks) {
+module('Unit | Controller | mascots/index', function (hooks) {
   setupTest(hooks);
 
   test('it exists', function (assert) {
     const controller = this.owner.lookup(
-      'controller:application',
-    ) as ApplicationController;
+      'controller:mascots/index',
+    ) as MascotsIndexController;
 
     assert.ok(controller);
   });

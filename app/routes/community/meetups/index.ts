@@ -1,10 +1,13 @@
 import Route from '@ember/routing/route';
-import { service } from '@ember/service';
+import { type Registry as Services, service } from '@ember/service';
+import type Meetup from 'ember-website/models/meetup';
+
+type Model = Meetup[];
 
 export default class CommunityMeetupsIndexRoute extends Route {
-  @service store;
+  @service declare store: Services['store'];
 
-  model() {
-    return this.store.findAll('meetup');
+  async model(): Promise<Model> {
+    return this.store.findAll<Meetup>('meetup');
   }
 }

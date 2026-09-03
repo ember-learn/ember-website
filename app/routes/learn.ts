@@ -1,10 +1,13 @@
 import Route from '@ember/routing/route';
-import { service } from '@ember/service';
+import { type Registry as Services, service } from '@ember/service';
+import type Showcase from 'ember-website/models/showcase';
+
+type Model = Showcase[];
 
 export default class LearnRoute extends Route {
-  @service store;
+  @service declare store: Services['store'];
 
-  model() {
-    return this.store.findAll('showcase');
+  async model(): Promise<Model> {
+    return this.store.findAll<Showcase>('showcase');
   }
 }

@@ -1,10 +1,13 @@
 import Route from '@ember/routing/route';
-import { service } from '@ember/service';
+import { type Registry as Services, service } from '@ember/service';
+import type User from 'ember-website/models/user';
+
+type Model = User[];
 
 export default class EmberUsersRoute extends Route {
-  @service store;
+  @service declare store: Services['store'];
 
-  model() {
-    return this.store.findAll('user');
+  async model(): Promise<Model> {
+    return this.store.findAll<User>('user');
   }
 }
