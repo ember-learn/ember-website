@@ -1,7 +1,19 @@
+import type { TOC } from '@ember/component/template-only';
 import { LinkTo } from '@ember/routing';
 import { sortBy } from '@nullvoxpopuli/ember-composable-helpers';
+// @ts-expect-error: Incorrect type
 import LeafletMap from 'ember-leaflet/components/leaflet-map';
 import { pageTitle } from 'ember-page-title';
+import type CommunityMeetupsIndexController from 'ember-website/controllers/community/meetups/index';
+import type CommunityMeetupsIndexRoute from 'ember-website/routes/community/meetups/index';
+import type { ModelFrom } from 'ember-website/utils/routes';
+
+interface CommunityMeetupsIndexSignature {
+  Args: {
+    controller: CommunityMeetupsIndexController;
+    model: ModelFrom<CommunityMeetupsIndexRoute>;
+  };
+}
 
 <template>
   {{pageTitle "Meetups"}}
@@ -98,4 +110,4 @@ import { pageTitle } from 'ember-page-title';
       </p>
     </section>
   </div>
-</template>
+</template> satisfies TOC<CommunityMeetupsIndexSignature>;

@@ -1,5 +1,14 @@
+import type { TOC } from '@ember/component/template-only';
 import { pageTitle } from 'ember-page-title';
 import ReleasesHowToInstall from 'ember-website/components/releases/how-to-install';
+import type ReleasesBetaRoute from 'ember-website/routes/releases/beta';
+import type { ModelFrom } from 'ember-website/utils/routes';
+
+interface ReleasesBetaSignature {
+  Args: {
+    model: ModelFrom<ReleasesBetaRoute>;
+  };
+}
 
 <template>
   {{pageTitle "Beta"}}
@@ -38,4 +47,4 @@ import ReleasesHowToInstall from 'ember-website/components/releases/how-to-insta
     contributors make a habit of working off a beta release—and even use it in
     production—in order to volunteer their efforts as early testers.
   </p>
-</template>
+</template> satisfies TOC<ReleasesBetaSignature>;

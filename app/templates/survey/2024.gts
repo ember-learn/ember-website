@@ -20,6 +20,7 @@ import EmberCommunitySurveySection from 'ember-website/components/ember-communit
         href="https://tally.so/r/3XDRZV"
         rel="noopener noreferrer"
         target="_blank"
+        {{! @glint-expect-error: Incorrect type }}
         disabled
       >
         Start the survey

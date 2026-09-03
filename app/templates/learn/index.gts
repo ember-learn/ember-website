@@ -1,7 +1,17 @@
+import type { TOC } from '@ember/component/template-only';
 import { concat, hash } from '@ember/helper';
 import { trustHTML } from '@ember/template';
 import { pageTitle } from 'ember-page-title';
+// @ts-expect-error: Incorrect type
 import EsCard from 'ember-styleguide/components/es-card';
+import type LearnRoute from 'ember-website/routes/learn';
+import type { ModelFrom } from 'ember-website/utils/routes';
+
+interface LearnIndexSignature {
+  Args: {
+    model: ModelFrom<LearnRoute>;
+  };
+}
 
 <template>
   {{pageTitle "Learn"}}
@@ -250,7 +260,7 @@ import EsCard from 'ember-styleguide/components/es-card';
         might pique your interest!</p>
 
       <ul class="mt-3 mb-5 list-unstyled grid lg:grid-2">
-        {{#each @controller.model as |showcase|}}
+        {{#each @model as |showcase|}}
           <EsCard
             @image={{hash
               src=(concat "/images/showcase/" showcase.image.src)
@@ -419,4 +429,4 @@ import EsCard from 'ember-styleguide/components/es-card';
       </p>
     </section>
   </div>
-</template>
+</template> satisfies TOC<LearnIndexSignature>;

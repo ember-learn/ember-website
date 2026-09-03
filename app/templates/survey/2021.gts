@@ -20,6 +20,7 @@ import EmberCommunitySurveySection from 'ember-website/components/ember-communit
         href="/"
         rel="noopener noreferrer"
         target="_blank"
+        {{! @glint-expect-error: Incorrect type }}
         disabled
       >
         Stay Tuned for 2022!

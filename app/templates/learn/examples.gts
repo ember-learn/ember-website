@@ -1,6 +1,16 @@
+import type { TOC } from '@ember/component/template-only';
 import { concat, hash } from '@ember/helper';
 import { trustHTML } from '@ember/template';
+// @ts-expect-error: Incorrect type
 import EsCard from 'ember-styleguide/components/es-card';
+import type LearnRoute from 'ember-website/routes/learn';
+import type { ModelFrom } from 'ember-website/utils/routes';
+
+interface LearnExamplesSignature {
+  Args: {
+    model: ModelFrom<LearnRoute>;
+  };
+}
 
 <template>
   <section class="container" aria-labelledby="learning-emberjs-examples">
@@ -16,7 +26,7 @@ import EsCard from 'ember-styleguide/components/es-card';
       pique your interest!</p>
 
     <ul class="list-unstyled grid lg:grid-2">
-      {{#each @controller.model as |showcase|}}
+      {{#each @model as |showcase|}}
         <EsCard
           @alt=""
           @image={{hash src=(concat "/images/showcase/" showcase.image.src)}}
@@ -59,4 +69,4 @@ import EsCard from 'ember-styleguide/components/es-card';
       {{/each}}
     </ul>
   </section>
-</template>
+</template> satisfies TOC<LearnExamplesSignature>;

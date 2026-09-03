@@ -1,4 +1,5 @@
 import { pageTitle } from 'ember-page-title';
+// @ts-expect-error: Incorrect type
 import EsCard from 'ember-styleguide/components/es-card';
 
 <template>

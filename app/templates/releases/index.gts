@@ -1,9 +1,18 @@
 import { LinkTo } from '@ember/routing';
 import Component from '@glimmer/component';
 import TerminalCode from 'ember-website/components/terminal-code';
+import type Project from 'ember-website/models/project';
+import type ReleasesRoute from 'ember-website/routes/releases';
+import type { ModelFrom } from 'ember-website/utils/routes';
 
-export default class ReleasesIndex extends Component {
-  get emberReleaseProject() {
+interface ReleasesIndexSignature {
+  Args: {
+    model: ModelFrom<ReleasesRoute>;
+  };
+}
+
+export default class ReleasesIndex extends Component<ReleasesIndexSignature> {
+  get emberReleaseProject(): Project | undefined {
     const { model } = this.args;
 
     return model.find((project) => {
