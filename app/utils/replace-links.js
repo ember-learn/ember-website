@@ -24,7 +24,7 @@ function replaceInternalLinks(url) {
     .replace(/\/builds$/, '/releases');
 }
 
-export default function replaceLinks(links) {
+export function replaceLinks(links) {
   return links.map((group) => {
     if (group.items) {
       return {

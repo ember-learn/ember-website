@@ -1,20 +1,19 @@
-import Controller from '@ember/controller';
 import {
   HorizontalBarChart,
   SplineChart,
   VerticalBarChart,
 } from 'ember-website/utils/highcharts';
 
-var emberOrange = '#f23818',
+const emberOrange = '#f23818',
   darkGrayColor = '#4b4b4b',
   lightGrayColor = '#c0c0c0',
   lighterGrayColor = '#dedede',
   lightGreenColor = '#489a6e';
-var color2015 = lighterGrayColor;
-var color2016 = lightGrayColor;
-var color2017 = darkGrayColor;
-var color2018 = emberOrange;
-var colorFutureYear = lightGreenColor;
+const color2015 = lighterGrayColor;
+const color2016 = lightGrayColor;
+const color2017 = darkGrayColor;
+const color2018 = emberOrange;
+const colorFutureYear = lightGreenColor;
 
 const communityParticipation = new HorizontalBarChart({
   chart: {
@@ -740,21 +739,21 @@ const emberDataAdoption = new SplineChart({
   ],
 });
 
-export default class Survey2018Controller extends Controller {
-  newReleaseAdoption = newReleaseAdoption;
-  emberDataAdoption = emberDataAdoption;
-  recommendingEmber = recommendingEmber;
-  employerUsingEmber = employerUsingEmber;
-  gettingHired = gettingHired;
-  productionApps = productionApps;
-  emberenoEmployment = emberenoEmployment;
-  applicationUsers = applicationUsers;
-  teamSize = teamSize;
-  longLivedCodebases = longLivedCodebases;
-  communityParticipation = communityParticipation;
-  serverSide = serverSide;
-  serverSideFrameworks = serverSideFrameworks;
-  editorTool = editorTool;
-  browserRequirements = browserRequirements;
-  demographicsRegion = demographicsRegion;
-}
+export {
+  applicationUsers,
+  browserRequirements,
+  communityParticipation,
+  demographicsRegion,
+  editorTool,
+  emberDataAdoption,
+  emberenoEmployment,
+  employerUsingEmber,
+  gettingHired,
+  longLivedCodebases,
+  newReleaseAdoption,
+  productionApps,
+  recommendingEmber,
+  serverSide,
+  serverSideFrameworks,
+  teamSize,
+};

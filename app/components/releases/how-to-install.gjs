@@ -1,5 +1,5 @@
+import { trustHTML } from '@ember/template';
 import TerminalCode from 'ember-website/components/terminal-code';
-import htmlSafe from 'ember-website/helpers/html-safe';
 import printf from 'ember-website/helpers/printf';
 
 <template>
@@ -12,7 +12,7 @@ import printf from 'ember-website/helpers/printf';
       {{yield}}
     {{else}}
       <TerminalCode>
-        {{htmlSafe (printf @project.content @project.lastRelease)}}
+        {{trustHTML (printf @project.content @project.lastRelease)}}
       </TerminalCode>
     {{/if}}
   </div>

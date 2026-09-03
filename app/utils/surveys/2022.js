@@ -1,14 +1,5 @@
-import Controller from '@ember/controller';
-import {
-  // AreaSplineChart,
-  // HorizontalBarChart,
-  PieChart,
-  VerticalBarChart,
-} from 'ember-website/utils/highcharts';
+import { PieChart, VerticalBarChart } from 'ember-website/utils/highcharts';
 
-// TODO: 2022 Color Palette
-// eslint-disable-next-line no-unused-vars
-const darkGrayColor = '#4b4b4b';
 // Ember Branding Color Palette
 const emberColors = {
   ember: '#E04E39',
@@ -23,18 +14,8 @@ const emberColors = {
   white: '#FDFDFD',
 };
 
-// const orangePalette = {
-//   orange: '#e04e39',
-//   orangeDarker: '#c7341f',
-//   orangeDarkest: '#9b2918',
-//   orangeLighter: '#e77565',
-// };
-
 // Default Color Assignments for Yearly Graph Data Series
-// var color2018 = emberColors.gray;
-// var color2019 = emberColors.blue;
-// var color2020 = orangePalette.orangeDarkest;
-var color2022 = emberColors.burntEmber;
+const color2022 = emberColors.burntEmber;
 
 const stackColors = {
   htmlDark: '#E45126',
@@ -47,7 +28,6 @@ const stackColors = {
 };
 
 // Begin Chart Definitions
-
 const S01_Q01_SS__TIME_USE = new VerticalBarChart({
   chart: {
     title: `How long have you been using Ember?`,
@@ -108,48 +88,6 @@ const S01_Q04_MS__OTHER_SSG = new VerticalBarChart({
     },
   ],
 });
-const S01_Q05_SS__KNOW_HTML = new VerticalBarChart({
-  chart: {
-    title: `How well do you know HTML?`,
-    categories: [
-      `None`,
-      `Beginner (I use introductory tutorials as I am solving problems)`,
-      `Intermediate (I know where to look to find the information I need if I get stuck)`,
-      `Advanced (I advise others on how to use HTML effectively)`,
-    ],
-  },
-  rawData: [
-    { color: color2022, label: '2022', values: [0.0, 0.17, 35.08, 64.76] },
-  ],
-});
-const S01_Q06_SS__KNOW_ARIA = new VerticalBarChart({
-  chart: {
-    title: `How well do you know Accessibility (WAI-ARIA)?`,
-    categories: [
-      `None`,
-      `Beginner (I use introductory tutorials as I am solving problems)`,
-      `Intermediate (I know where to look to find the information I need if I get stuck)`,
-      `Advanced (I advise others on how to use ARIA effectively)`,
-    ],
-  },
-  rawData: [
-    { color: color2022, label: '2022', values: [8.26, 33.22, 52.11, 6.41] },
-  ],
-});
-const S01_Q07_SS__KNOW_CSS = new VerticalBarChart({
-  chart: {
-    title: `How well do you know Cascading Style Sheets (CSS)?`,
-    categories: [
-      `None`,
-      `Beginner (I use introductory tutorials as I am solving problems)`,
-      `Intermediate (I know where to look to find the information I need if I get stuck)`,
-      `Advanced (I advise others on how to use CSS effectively)`,
-    ],
-  },
-  rawData: [
-    { color: color2022, label: '2022', values: [0.0, 3.54, 53.03, 43.43] },
-  ],
-});
 const S01_QM01_SS__MERGED_WEB_SKILLS = new VerticalBarChart({
   chart: {
     categories: [
@@ -182,20 +120,6 @@ const S01_QM01_SS__MERGED_WEB_SKILLS = new VerticalBarChart({
       label: 'JavaScript',
       values: [0.0, 0.51, 27.78, 71.72],
     },
-  ],
-});
-const S01_Q08_SS__KNOW_JS = new VerticalBarChart({
-  chart: {
-    title: `How well do you know JavaScript?`,
-    categories: [
-      `None`,
-      `Beginner (I use introductory tutorials as I am solving problems)`,
-      `Intermediate (I know where to look to find the information I need if I get stuck)`,
-      `Advanced (I advise others on how to use JavaScript effectively)`,
-    ],
-  },
-  rawData: [
-    { color: color2022, label: '2022', values: [0.0, 0.51, 27.78, 71.72] },
   ],
 });
 const S02_Q01_SS__OS_PREF = new VerticalBarChart({
@@ -250,40 +174,6 @@ const S02_QM01_SS__MERGED_IDE_PREF = new VerticalBarChart({
         100 * (85 / 593),
         100 * (387 / 593),
         100 * (5 / 593),
-      ],
-    },
-  ],
-});
-const S03_Q02_MS__WORK_SECTOR = new VerticalBarChart({
-  chart: {
-    title: `In which industry or sector(s) does your employer operate?`,
-    categories: [
-      `Agriculture`,
-      `Advertising`,
-      `Arts & Entertainment`,
-      `Consulting`,
-      `Education`,
-      `Financial Services`,
-      `Government`,
-      `Health Care`,
-      `Insurance`,
-      `Manufacturing`,
-      `Real Estate`,
-      `Retailers (Including Online)`,
-      `Technology`,
-      `Utilities (Telecom/Energy)`,
-      `Transportation`,
-      `Hospitality`,
-      `Other`,
-    ],
-  },
-  rawData: [
-    {
-      color: color2022,
-      label: '2022',
-      values: [
-        1.89, 3.78, 4.98, 9.79, 5.84, 15.46, 3.95, 8.76, 2.92, 5.84, 2.23, 5.67,
-        54.98, 3.26, 2.92, 2.41, 9.45,
       ],
     },
   ],
@@ -375,20 +265,6 @@ const S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED = new VerticalBarChart({
     },
   ],
 });
-const S03_Q15_SS__WORK_TEST_FW = new VerticalBarChart({
-  chart: {
-    title: `What testing framework do you use most frequently in your Ember apps at work?`,
-    categories: [
-      `Mocha (via ember-mocha or ember-cli-mocha)`,
-      `QUnit (via ember-quinit or ember-cli-qunit)`,
-      `I don't write tests`,
-      `Other`,
-    ],
-  },
-  rawData: [
-    { color: color2022, label: '2022', values: [6.18, 80.39, 9.19, 4.24] },
-  ],
-});
 const S03_QM02_SS__MERGED_WORK_TEST_FW = new VerticalBarChart({
   chart: {
     title: `What testing framework do you use most frequently in your Ember apps at work?`,
@@ -439,29 +315,6 @@ const S03_Q17_SS__SERVER_SIDE_FRAMEWORK_WORK = new VerticalBarChart({
       values: [
         4.59, 8.3, 4.24, 2.47, 6.54, 7.6, 29.86, 14.31, 5.48, 5.3, 11.31,
       ],
-    },
-  ],
-});
-const S03_Q18_SS__DEPLOY_WORK = new VerticalBarChart({
-  chart: {
-    title: `Where do you primarily deploy your Ember apps at work?`,
-    categories: [
-      `Amazon Web Services (AWS)`,
-      `Azure`,
-      `Digital Ocean`,
-      `GitHub Pages`,
-      `Heroku`,
-      `Netlify`,
-      `Self-hosted`,
-      `Vercel`,
-      `Other`,
-    ],
-  },
-  rawData: [
-    {
-      color: color2022,
-      label: '2022',
-      values: [43.01, 4.78, 2.65, 0.18, 9.73, 2.3, 24.07, 1.24, 12.04],
     },
   ],
 });
@@ -577,31 +430,6 @@ const S05_Q04_MS__FFEAT = new VerticalBarChart({
     },
   ],
 });
-const S06_Q03_MS__DEV_SURVEY_ADD = new PieChart({
-  chart: {
-    title: `If you participated in any additional developer surveys in the past year, which ones did you take?`,
-    categories: [
-      `GitHub State of the Octoverse Survey`,
-      `GitLab Global Developer Survey`,
-      `JetBrains State of Developer Ecosystem Survey`,
-      `Node.js User Survey`,
-      `npm JavaScript Ecosystem Survey`,
-      `The Software House State of Frontend Survey`,
-      `StackOverflow Developer Survey`,
-      `The State of CSS Survey`,
-      `State of JavaScript Survey`,
-      `Other`,
-    ],
-  },
-  rawData: [
-    {
-      color: color2022,
-      label: '2022',
-      values: [13.87, 4.84, 7.42, 7.1, 8.06, 3.55, 42.58, 26.77, 74.52, 2.26],
-    },
-  ],
-});
-
 const S06_QM01_SS__MERGED_GLOBAL_LOC = new PieChart({
   chart: {
     title: `Where in the world do we live? (7 Continent Model)`,
@@ -624,36 +452,23 @@ const S06_QM01_SS__MERGED_GLOBAL_LOC = new PieChart({
   ],
 });
 
-//=============================================================================
-export default class Survey2022Controller extends Controller {
-  S01_Q01_SS__TIME_USE = S01_Q01_SS__TIME_USE;
-  S01_Q02_MS__OTHER_FRAMEWORKS = S01_Q02_MS__OTHER_FRAMEWORKS;
-  S01_Q03_MS__OTHER_UI_LIBS = S01_Q03_MS__OTHER_UI_LIBS;
-  S01_Q04_MS__OTHER_SSG = S01_Q04_MS__OTHER_SSG;
-  S01_Q05_SS__KNOW_HTML = S01_Q05_SS__KNOW_HTML;
-  S01_Q06_SS__KNOW_ARIA = S01_Q06_SS__KNOW_ARIA;
-  S01_Q07_SS__KNOW_CSS = S01_Q07_SS__KNOW_CSS;
-  S01_Q08_SS__KNOW_JS = S01_Q08_SS__KNOW_JS;
-  S02_Q01_SS__OS_PREF = S02_Q01_SS__OS_PREF;
-  S02_Q02_SS__OS_WORK = S02_Q02_SS__OS_WORK;
-  S02_Q03_SS__OS_HOME = S02_Q03_SS__OS_HOME;
-  S03_Q02_MS__WORK_SECTOR = S03_Q02_MS__WORK_SECTOR;
-  S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED =
-    S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED;
-  S03_Q15_SS__WORK_TEST_FW = S03_Q15_SS__WORK_TEST_FW;
-  S03_Q17_SS__SERVER_SIDE_FRAMEWORK_WORK =
-    S03_Q17_SS__SERVER_SIDE_FRAMEWORK_WORK;
-  S03_Q18_SS__DEPLOY_WORK = S03_Q18_SS__DEPLOY_WORK;
-  S05_Q01_MS__FB_OCTANE = S05_Q01_MS__FB_OCTANE;
-  S05_Q02_MS__FB_NEW_FEAT = S05_Q02_MS__FB_NEW_FEAT;
-  S05_Q04_MS__FFEAT = S05_Q04_MS__FFEAT;
-  S06_Q03_MS__DEV_SURVEY_ADD = S06_Q03_MS__DEV_SURVEY_ADD;
-  // MERGED / PROCESSED CHARTS
-  S01_QM01_SS__MERGED_WEB_SKILLS = S01_QM01_SS__MERGED_WEB_SKILLS;
-  S02_QM01_SS__MERGED_IDE_PREF = S02_QM01_SS__MERGED_IDE_PREF;
-  S03_QM01_MS__MERGED_WORK_SECTOR = S03_QM01_MS__MERGED_WORK_SECTOR;
-  S03_QM02_SS__MERGED_WORK_TEST_FW = S03_QM02_SS__MERGED_WORK_TEST_FW;
-  S03_QM03_SS__MERGED_DEPLOY_WORK = S03_QM03_SS__MERGED_DEPLOY_WORK;
-  S06_QM01_SS__MERGED_GLOBAL_LOC = S06_QM01_SS__MERGED_GLOBAL_LOC;
-  //=============================================================================
-}
+export {
+  S01_Q01_SS__TIME_USE,
+  S01_Q02_MS__OTHER_FRAMEWORKS,
+  S01_Q03_MS__OTHER_UI_LIBS,
+  S01_Q04_MS__OTHER_SSG,
+  S01_QM01_SS__MERGED_WEB_SKILLS,
+  S02_Q01_SS__OS_PREF,
+  S02_Q02_SS__OS_WORK,
+  S02_Q03_SS__OS_HOME,
+  S02_QM01_SS__MERGED_IDE_PREF,
+  S03_Q11_MS__WORK_COMPANY_APPS_EMBER_VERSIONS_USED,
+  S03_Q17_SS__SERVER_SIDE_FRAMEWORK_WORK,
+  S03_QM01_MS__MERGED_WORK_SECTOR,
+  S03_QM02_SS__MERGED_WORK_TEST_FW,
+  S03_QM03_SS__MERGED_DEPLOY_WORK,
+  S05_Q01_MS__FB_OCTANE,
+  S05_Q02_MS__FB_NEW_FEAT,
+  S05_Q04_MS__FFEAT,
+  S06_QM01_SS__MERGED_GLOBAL_LOC,
+};
