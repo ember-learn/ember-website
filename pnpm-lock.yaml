@@ -24,6 +24,18 @@ importers:
       '@babel/plugin-proposal-decorators':
         specifier: ^7.29.7
         version: 7.29.7(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
+      '@ember-data-types/adapter':
+        specifier: ~5.7.0
+        version: 5.7.0
+      '@ember-data-types/model':
+        specifier: ~5.7.0
+        version: 5.7.0
+      '@ember-data-types/serializer':
+        specifier: ~5.7.0
+        version: 5.7.0
+      '@ember-data-types/store':
+        specifier: ~5.7.0
+        version: 5.7.0
       '@ember/app-tsconfig':
         specifier: ^2.0.0
         version: 2.0.0
@@ -36,6 +48,9 @@ importers:
       '@ember/test-helpers':
         specifier: ^5.4.3
         version: 5.4.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
+      '@embroider/config-meta-loader':
+        specifier: ^1.0.0
+        version: 1.0.0
       '@eslint/js':
         specifier: ^9.39.5
         version: 9.39.5
@@ -69,6 +84,9 @@ importers:
       '@types/qunit':
         specifier: ^2.19.14
         version: 2.19.14
+      '@warp-drive-types/core-types':
+        specifier: ~5.7.0
+        version: 5.7.0
       algoliasearch:
         specifier: ^3.35.1
         version: 3.35.1(supports-color@10.2.2)
@@ -144,6 +162,9 @@ importers:
       ember-data-fastboot:
         specifier: ^0.1.2
         version: 0.1.2(patch_hash=32da3248de941d97c233aeef4cd09b59d69a331edadf1a2f3840f1ed348ab371)(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
+      ember-data-types:
+        specifier: ~5.7.0
+        version: 5.7.0
       ember-fetch:
         specifier: ^8.1.2
         version: 8.1.2(supports-color@10.2.2)
@@ -917,6 +938,18 @@ packages:
     peerDependencies:
       postcss-selector-parser: ^7.1.1
 
+  '@ember-data-types/adapter@5.7.0':
+    resolution: {integrity: sha512-hIPaB8N/VOWC13t9aIJWbAHkInDp5gInhNu2jGWlweHGecDnUkobosG4v7dbD3IXdPjFNHoIR9AcqWZQ99xg7g==}
+
+  '@ember-data-types/model@5.7.0':
+    resolution: {integrity: sha512-S20lRMWLJpH9zQwgZQyvLLLgC1kEvhAikyfOUmPQe2L+3nLDAVjdkJHSU+dh60RRdgyDvEYeNFGftghX7dzKoA==}
+
+  '@ember-data-types/serializer@5.7.0':
+    resolution: {integrity: sha512-DiB+4BxvddZVxfqpHo1pcz+7wD+aETX/RVBTy0v7f4o6RoQk7FDpcP3M1zpHWwFvxnt2e4ONVoYrl8x8rDWuEw==}
+
+  '@ember-data-types/store@5.7.0':
+    resolution: {integrity: sha512-To+Ld0xmYZUtyidUXfPBl2kp2RQ89gfdpIcyc4qv0n0Fa5K76iDvIE5BORoslMEYi5jClPg6JjHnrciEhnRAUg==}
+
   '@ember-data/adapter@5.7.0':
     resolution: {integrity: sha512-H0EWf7CNlpxwJxygFA4qoRNdpuHHwxXrY94YXdd5kh/wDUn5vNke//tHiVPXJJPAM7Ndgsq4gw3mSDP1Uhg1hQ==}
 
@@ -1020,6 +1053,10 @@ packages:
 
   '@embroider/addon-shim@1.10.3':
     resolution: {integrity: sha512-GYbaiC1v9inbiwVg5s+Sd14Jc66NYxg23mEOocgWAZFCtOfhMnRLaLAA6SytW76myVVYImGHX5PFK4PVuH2yng==}
+    engines: {node: 12.* || 14.* || >= 16}
+
+  '@embroider/config-meta-loader@1.0.0':
+    resolution: {integrity: sha512-qznkdjgEGPe6NM94hZNXvOm/WhrJwBh8FtSQZ+nGjh9TOjY42tOiTEevFuM0onNXUn6bpdGzmjwKo2xY2jxQxQ==}
     engines: {node: 12.* || 14.* || >= 16}
 
   '@embroider/macros@1.20.2':
@@ -2178,6 +2215,9 @@ packages:
 
   '@vscode/l10n@0.0.18':
     resolution: {integrity: sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==}
+
+  '@warp-drive-types/core-types@5.7.0':
+    resolution: {integrity: sha512-3FymVgRr1/FcWFyAgY+619rR69gX5eeGsbZzyg0+XLHiYg3mzG+yFZomphEYraAokijSW9dE/Uvx75GzidgWbA==}
 
   '@warp-drive/build-config@5.7.0':
     resolution: {integrity: sha512-lCltr4xG9jQmBRlM8+gMJ06o3pnOHs7uDFdIX36dIczKCFjfTvaSVbYf+n/VLEAT4GyaMoQU11xkY1zHa5XucA==}
@@ -4245,6 +4285,9 @@ packages:
   ember-data-fastboot@0.1.2:
     resolution: {integrity: sha512-aPb318FGngnG0xbDc3/oz2L7tqgFj1qLZNdiqMI1TRMu9FL4zmrxw5WAGHyRt2ECSNssrbme/Zb8WcNhWTlHkA==}
     engines: {node: ^4.5 || 6.* || >= 7.*}
+
+  ember-data-types@5.7.0:
+    resolution: {integrity: sha512-zpbyWMCeVaVeH0UZ/yLTVITdVVVll/D55BUgs8J6m4OOr/2iKN3HGGdTJbVEfsTIzg2X4x04zmnS08QDRveA2w==}
 
   ember-data@5.7.0:
     resolution: {integrity: sha512-KPs+p5/F/YSIFsc0hYg+kaER8XoMhAzy+gOVAJhdtbFrhn3oftTogcAMTGo/glUpXnzwt8dSkN+GfNMWMPmSlw==}
@@ -9679,6 +9722,14 @@ snapshots:
     dependencies:
       postcss-selector-parser: 7.1.5
 
+  '@ember-data-types/adapter@5.7.0': {}
+
+  '@ember-data-types/model@5.7.0': {}
+
+  '@ember-data-types/serializer@5.7.0': {}
+
+  '@ember-data-types/store@5.7.0': {}
+
   '@ember-data/adapter@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
     dependencies:
       '@ember/edition-utils': 1.2.0
@@ -9910,6 +9961,8 @@ snapshots:
       semver: 7.8.5
     transitivePeerDependencies:
       - supports-color
+
+  '@embroider/config-meta-loader@1.0.0': {}
 
   '@embroider/macros@1.20.2(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
     dependencies:
@@ -11479,6 +11532,8 @@ snapshots:
       typescript: 6.0.3
 
   '@vscode/l10n@0.0.18': {}
+
+  '@warp-drive-types/core-types@5.7.0': {}
 
   '@warp-drive/build-config@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@glint/template@1.9.0)(supports-color@10.2.2)':
     dependencies:
@@ -14582,6 +14637,8 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
+
+  ember-data-types@5.7.0: {}
 
   ember-data@5.7.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.4.3(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(@ember/test-waiters@4.1.2(supports-color@10.2.2))(@glint/template@1.9.0)(ember-inflector@6.0.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))(qunit@2.26.0)(supports-color@10.2.2):
     dependencies:
