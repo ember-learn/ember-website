@@ -3,26 +3,20 @@ import { setupRenderingTest } from 'ember-qunit';
 import IndexEmberAddons from 'ember-website/components/index/ember-addons';
 import { module, test } from 'qunit';
 
+function assertTabs(assert, expectedOutput = {}) {
+  for (const [label, value] of Object.entries(expectedOutput)) {
+    assert
+      .dom(`[data-test-button="${label}"]`)
+      .hasAttribute(
+        'aria-selected',
+        value ? 'true' : 'false',
+        `We see the correct aria-selected for ${label} button.`,
+      );
+  }
+}
+
 module('Integration | Component | index/ember-addons', function (hooks) {
   setupRenderingTest(hooks);
-
-  hooks.beforeEach(function (assert) {
-    assert.areTabsSelected = (expectedOutput = {}) => {
-      for (const [label, value] of Object.entries(expectedOutput)) {
-        assert
-          .dom(`[data-test-button="${label}"]`)
-          .hasAttribute(
-            'aria-selected',
-            value ? 'true' : 'false',
-            `We see the correct aria-selected for ${label} button.`,
-          );
-      }
-    };
-  });
-
-  hooks.afterEach(function (assert) {
-    delete assert.areTabsSelected;
-  });
 
   test('We show 4 Ember addons', async function (assert) {
     await render(<template><IndexEmberAddons /></template>);
@@ -30,7 +24,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
     // Check tabs
     assert.dom('[data-test-button]').exists({ count: 4 }, 'We see 4 tabs.');
 
-    assert.areTabsSelected({
+    assertTabs(assert, {
       'Manage State': true,
       Authenticate: false,
       Translate: false,
@@ -57,7 +51,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
     await render(<template><IndexEmberAddons /></template>);
     await click('[data-test-button="Translate"]');
 
-    assert.areTabsSelected({
+    assertTabs(assert, {
       'Manage State': false,
       Authenticate: false,
       Translate: true,
@@ -78,7 +72,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
 
     await click('[data-test-button="Deploy"]');
 
-    assert.areTabsSelected({
+    assertTabs(assert, {
       'Manage State': false,
       Authenticate: false,
       Translate: false,
@@ -99,7 +93,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
 
     await click('[data-test-button="Authenticate"]');
 
-    assert.areTabsSelected({
+    assertTabs(assert, {
       'Manage State': false,
       Authenticate: true,
       Translate: false,
@@ -128,7 +122,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
       'ArrowLeft',
     );
 
-    assert.areTabsSelected({
+    assertTabs(assert, {
       'Manage State': false,
       Authenticate: false,
       Translate: false,
@@ -153,7 +147,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
       'ArrowRight',
     );
 
-    assert.areTabsSelected({
+    assertTabs(assert, {
       'Manage State': true,
       Authenticate: false,
       Translate: false,
@@ -178,7 +172,7 @@ module('Integration | Component | index/ember-addons', function (hooks) {
       'ArrowRight',
     );
 
-    assert.areTabsSelected({
+    assertTabs(assert, {
       'Manage State': false,
       Authenticate: true,
       Translate: false,

@@ -1,17 +1,13 @@
 import { visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
-
 import { setupApplicationTest } from 'ember-qunit';
-
 import { waitUntilAllChartsAreDrawn } from 'ember-website/tests/helpers/highcharts';
-import { setupPageTitleTest } from 'ember-website/tests/helpers/page-title';
+import { assertPageTitle } from 'ember-website/tests/helpers/page-title';
 import { module, test } from 'qunit';
 
 module('Acceptance | survey/2019', function (hooks) {
   setupApplicationTest(hooks);
-
-  setupPageTitleTest(hooks);
 
   test('Percy snapshot', async function (assert) {
     await visit('/survey/2019');
@@ -38,6 +34,6 @@ module('Acceptance | survey/2019', function (hooks) {
       },
     });
 
-    assert.hasPageTitle('Ember Community Survey 2019 - Ember.js');
+    assertPageTitle(assert, 'Ember Community Survey 2019 - Ember.js');
   });
 });
