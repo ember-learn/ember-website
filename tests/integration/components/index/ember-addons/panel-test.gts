@@ -22,11 +22,7 @@ module('Integration | Component | index/ember-addons/panel', function (hooks) {
         'ember-addons-tab-0',
         'We see the correct aria-labelledby.',
       )
-      .doesNotHaveAttribute(
-        'hidden',
-        '',
-        'We should not see the hidden attribute.',
-      )
+      .doesNotHaveAttribute('hidden', '')
       .hasAttribute('id', 'ember-addons-panel-0', 'We see the correct id.')
       .hasAttribute('role', 'tabpanel', 'We see the correct role.')
       .hasAttribute('tabindex', '0', 'We see the correct tabindex.')

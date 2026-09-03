@@ -1,3 +1,15 @@
+import type { TOC } from '@ember/component/template-only';
+
+interface EmberCommunitySurveyIntroductionSignature {
+  Args: {
+    surveyLogoAlt: string;
+    surveyLogoSrc: string;
+  };
+  Blocks: {
+    default: [];
+  };
+}
+
 <template>
   <div class="bg-dark bg-shape-boxes">
     <div class="container">
@@ -16,4 +28,4 @@
       </p>
     </div>
   </div>
-</template>
+</template> satisfies TOC<EmberCommunitySurveyIntroductionSignature>;

@@ -1,4 +1,9 @@
+import type { TOC } from '@ember/component/template-only';
 import IndexEmberCommunityPhotosPhoto from 'ember-website/components/index/ember-community-photos/photo';
+
+interface IndexEmberCommunityPhotosSignature {
+  Args: {};
+}
 
 <template>
   <div class="homepage-image-grid">
@@ -45,4 +50,4 @@ import IndexEmberCommunityPhotosPhoto from 'ember-website/components/index/ember
       />
     </div>
   </div>
-</template>
+</template> satisfies TOC<IndexEmberCommunityPhotosSignature>;

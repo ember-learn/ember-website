@@ -26,11 +26,7 @@ module(
           'Ember core team members gather around the Ember sign at EmberConf',
           'We see the correct alternate text.',
         )
-        .doesNotHaveAttribute(
-          'role',
-          '',
-          'We should not see the role attribute.',
-        )
+        .doesNotHaveAttribute('role', '')
         .hasAttribute(
           'src',
           '/images/community/tinified/EmberConf19-13.jpg',

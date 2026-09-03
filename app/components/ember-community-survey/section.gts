@@ -1,3 +1,16 @@
+import type { TOC } from '@ember/component/template-only';
+
+interface EmberCommunitySurveySectionSignature {
+  Args: {
+    sectionId: string;
+    sectionTitle: string;
+  };
+  Blocks: {
+    body: [];
+    charts: [];
+  };
+}
+
 <template>
   <div class="survey-section__container">
     <div class="container">
@@ -39,4 +52,4 @@
       </section>
     </div>
   </div>
-</template>
+</template> satisfies TOC<EmberCommunitySurveySectionSignature>;

@@ -1,3 +1,14 @@
+import type { TOC } from '@ember/component/template-only';
+
+interface IndexEmberEcosystemImageSignature {
+  Args: {
+    alt: string;
+    backgroundColor: string;
+    rotateIcon?: boolean;
+    src: string;
+  };
+}
+
 <template>
   <div class="ecosystem-icon">
     <svg
@@ -22,4 +33,4 @@
       src={{@src}}
     />
   </div>
-</template>
+</template> satisfies TOC<IndexEmberEcosystemImageSignature>;

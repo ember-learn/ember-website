@@ -1,6 +1,17 @@
+import type { TOC } from '@ember/component/template-only';
 import { trustHTML } from '@ember/template';
 import TerminalCode from 'ember-website/components/terminal-code';
 import printf from 'ember-website/helpers/printf';
+import type Project from 'ember-website/models/project';
+
+interface ReleasesHowToInstallSignature {
+  Args: {
+    project: Project;
+  };
+  Blocks: {
+    default: [];
+  };
+}
 
 <template>
   <h3 data-test-field="Name">
@@ -31,4 +42,4 @@ import printf from 'ember-website/helpers/printf';
       {{@project.lastRelease}}.
     </p>
   {{/if}}
-</template>
+</template> satisfies TOC<ReleasesHowToInstallSignature>;

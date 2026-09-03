@@ -42,7 +42,6 @@ module(
         .dom('[data-test-container="Body"]')
         .hasNoText(
           'We would like to thank everyone who took the time to participate in the 2016 Ember Community Survey!',
-          "We don't see text in the body.",
         );
     });
 

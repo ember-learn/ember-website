@@ -7,7 +7,11 @@ import IndexEmberAddonsPanel from 'ember-website/components/index/ember-addons/p
 import IndexEmberAddonsTab from 'ember-website/components/index/ember-addons/tab';
 import { getTabIdIncrement, modulus } from 'ember-website/utils/navigate-tabs';
 
-export default class IndexEmberAddonsComponent extends Component {
+interface IndexEmberAddonsSignature {
+  Args: {};
+}
+
+export default class IndexEmberAddonsComponent extends Component<IndexEmberAddonsSignature> {
   @tracked currentTabId = 0;
 
   emberAddons = [
@@ -41,22 +45,28 @@ export default class IndexEmberAddonsComponent extends Component {
     },
   ];
 
-  @action updateCurrentTabId(tabId) {
+  @action updateCurrentTabId(tabId: number): void {
     this.currentTabId = tabId;
   }
 
-  @action handleKeyboardNavigation(event) {
+  @action handleKeyboardNavigation(event: KeyboardEvent): void {
     const tabIdIncrement = getTabIdIncrement(event);
 
-    if (!Number.isInteger(tabIdIncrement)) {
+    if (tabIdIncrement === undefined) {
       return;
     }
 
-    const tabElements = event.target.parentElement.children;
+    // @ts-expect-error: Incorrect type
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+    const tabElements = event.target!.parentElement!.children;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
     const numTabs = tabElements.length;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     const newTabId = modulus(this.currentTabId + tabIdIncrement, numTabs);
 
     this.currentTabId = newTabId;
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
     tabElements[newTabId].focus();
   }
 
@@ -99,8 +109,8 @@ export default class IndexEmberAddonsComponent extends Component {
             </p>
             <code class="addon-tabs--code">
               <pre class="mt-3">
-          {{~! ~}}&gt; {{emberAddon.howToInstall}}{{~! ~}}
-        </pre>
+                {{~! ~}}&gt; {{emberAddon.howToInstall}}{{~! ~}}
+              </pre>
             </code>
           </IndexEmberAddonsPanel>
         {{/each}}

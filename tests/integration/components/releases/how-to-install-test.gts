@@ -2,19 +2,19 @@ import { render } from '@ember/test-helpers';
 import { setupRenderingTest } from 'ember-qunit';
 import ReleasesHowToInstall from 'ember-website/components/releases/how-to-install';
 import TerminalCode from 'ember-website/components/terminal-code';
+import type Project from 'ember-website/models/project';
 import { module, test } from 'qunit';
 
 module('Integration | Component | releases/how-to-install', function (hooks) {
   setupRenderingTest(hooks);
 
-  hooks.beforeEach(async function () {
+  test('We can display instructions (non-canary release)', async function (assert) {
     const store = this.owner.lookup('service:store');
 
-    this.projects = await store.findAll('project');
-  });
-
-  test('We can display instructions (non-canary release)', async function (assert) {
-    const project = this.projects.find(({ id }) => id === 'emberData/release');
+    const project = await store.findRecord<Project>(
+      'project',
+      'emberData/release',
+    );
 
     await render(
       <template><ReleasesHowToInstall @project={{project}} /></template>,
@@ -51,7 +51,9 @@ module('Integration | Component | releases/how-to-install', function (hooks) {
   });
 
   test('We can display instructions (canary release)', async function (assert) {
-    const project = this.projects.find(({ id }) => id === 'ember/canary');
+    const store = this.owner.lookup('service:store');
+
+    const project = await store.findRecord<Project>('project', 'ember/canary');
 
     await render(
       <template>

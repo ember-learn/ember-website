@@ -1,3 +1,16 @@
+import type { TOC } from '@ember/component/template-only';
+
+interface EmberCommunitySurveySponsorSignature {
+  Args: {
+    hasDarkBackground?: boolean;
+    sponsor: {
+      logoAlt: string;
+      logoSrc: string;
+      website: string;
+    };
+  };
+}
+
 <template>
   <div class={{if @hasDarkBackground "bg-light-muted"}}>
     <div class="pt-3 pb-3 text-center">
@@ -21,4 +34,4 @@
       </a>
     </div>
   </div>
-</template>
+</template> satisfies TOC<EmberCommunitySurveySponsorSignature>;

@@ -3,10 +3,19 @@ import { action } from '@ember/object';
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 
-export default class BannerCalloutsComponent extends Component {
+interface CalloutBannerSignature {
+  Args: {
+    dismissible?: boolean;
+  };
+  Blocks: {
+    default: [];
+  };
+}
+
+export default class BannerCalloutsComponent extends Component<CalloutBannerSignature> {
   @tracked isShown = true;
 
-  @action dismiss() {
+  @action dismiss(): void {
     this.isShown = false;
   }
 

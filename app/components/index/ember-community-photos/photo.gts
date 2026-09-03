@@ -1,4 +1,13 @@
+import type { TOC } from '@ember/component/template-only';
 import { or } from 'ember-truth-helpers';
+
+interface IndexEmberCommunityPhotosPhotoSignature {
+  Args: {
+    alt?: string;
+    containerClass: string;
+    src: string;
+  };
+}
 
 <template>
   <figure class={{@containerClass}}>
@@ -11,4 +20,4 @@ import { or } from 'ember-truth-helpers';
       src={{@src}}
     />
   </figure>
-</template>
+</template> satisfies TOC<IndexEmberCommunityPhotosPhotoSignature>;

@@ -1,3 +1,12 @@
+import type { TOC } from '@ember/component/template-only';
+
+interface TerminalCodeSignature {
+  Args: {};
+  Blocks: {
+    default: [];
+  };
+}
+
 <template>
   <div class="terminal-code bg-dark">
     <span class="dot red"></span>
@@ -7,4 +16,4 @@
       {{yield}}
     </code>
   </div>
-</template>
+</template> satisfies TOC<TerminalCodeSignature>;

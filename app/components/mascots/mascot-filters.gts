@@ -2,7 +2,11 @@ import { hash } from '@ember/helper';
 import { LinkTo } from '@ember/routing';
 import Component from '@glimmer/component';
 
-export default class MascotsMascotFiltersComponent extends Component {
+interface MascotsMascotFiltersSignature {
+  Args: {};
+}
+
+export default class MascotsMascotFiltersComponent extends Component<MascotsMascotFiltersSignature> {
   displayFilters = [
     {
       label: 'Small',

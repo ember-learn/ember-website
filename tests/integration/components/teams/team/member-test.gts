@@ -1,19 +1,19 @@
 import { render } from '@ember/test-helpers';
 import { setupRenderingTest } from 'ember-qunit';
 import TeamsTeamMember from 'ember-website/components/teams/team/member';
+import type TeamMember from 'ember-website/models/team-member';
 import { module, test } from 'qunit';
 
 module('Integration | Component | teams/team/member', function (hooks) {
   setupRenderingTest(hooks);
 
-  hooks.beforeEach(async function () {
+  test('We can display the member', async function (assert) {
     const store = this.owner.lookup('service:store');
 
-    this.teamMembers = await store.findAll('team-member');
-  });
-
-  test('We can display the member', async function (assert) {
-    const member = this.teamMembers.find(({ id }) => id === 'ricardo-mendes');
+    const member = await store.findRecord<TeamMember>(
+      'team-member',
+      'ricardo-mendes',
+    );
 
     await render(<template><TeamsTeamMember @member={{member}} /></template>);
 
