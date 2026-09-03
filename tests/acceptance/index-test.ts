@@ -5,7 +5,10 @@ import { setupApplicationTest } from 'ember-qunit';
 import { assertPageTitle } from 'ember-website/tests/helpers/page-title';
 import { module, test } from 'qunit';
 
-function assertParentNavItems(assert, expectedOutput = []) {
+function assertParentNavItems(
+  assert: Assert,
+  expectedOutput: { label: string }[] = [],
+): void {
   const parentNavItems = findAll('.navbar-list-item');
 
   assert.strictEqual(
@@ -22,13 +25,17 @@ function assertParentNavItems(assert, expectedOutput = []) {
     assert
       .dom(parentNavItem)
       .hasText(
-        expectedOutput[index].label,
+        expectedOutput[index]!.label,
         `The label for the parent navigation item is correct. (${index + 1})`,
       );
   });
 }
 
-function assertChildNavItems(assert, expectedOutput = [], scope = document) {
+function assertChildNavItems(
+  assert: Assert,
+  expectedOutput: { href: string; label: string }[] = [],
+  scope: Document | Element = document,
+): void {
   const childNavItems = scope.querySelectorAll(
     '.navbar-dropdown-list-item-link',
   );
@@ -47,12 +54,12 @@ function assertChildNavItems(assert, expectedOutput = [], scope = document) {
     assert
       .dom(childNavItem)
       .hasText(
-        expectedOutput[index].label,
+        expectedOutput[index]!.label,
         `The label for the child navigation item is correct. (${index + 1})`,
       )
       .hasAttribute(
         'href',
-        expectedOutput[index].href,
+        expectedOutput[index]!.href,
         `The URL for the child navigation item is correct. (${index + 1})`,
       );
   });
@@ -111,7 +118,7 @@ module('Acceptance | index', function (hooks) {
 
     assertChildNavItems(assert, [], parentNavItems[3]);
 
-    await click(parentNavItems[3].querySelector('button'));
+    await click(parentNavItems[3]!.querySelector('button')!);
 
     assertChildNavItems(
       assert,
@@ -128,11 +135,11 @@ module('Acceptance | index', function (hooks) {
     );
 
     // Navigate to another page
-    const childNavItems = parentNavItems[3].querySelectorAll(
+    const childNavItems = parentNavItems[3]!.querySelectorAll(
       '.navbar-dropdown-list-item-link',
     );
 
-    await click(childNavItems[0]);
+    await click(childNavItems[0]!);
 
     assert.strictEqual(
       currentURL(),
