@@ -5,7 +5,6 @@ import ReleasesHowToInstall from 'ember-website/components/releases/how-to-insta
 import TerminalCode from 'ember-website/components/terminal-code';
 import type ReleasesCanaryRoute from 'ember-website/routes/releases/canary';
 import type { ModelFrom } from 'ember-website/utils/routes';
-import fetch from 'fetch';
 
 type CanaryInfo = {
   SHA: string;
@@ -32,12 +31,10 @@ export default class ReleasesCanary extends Component<ReleasesCanarySignature> {
   }
 
   private async fetchCanaryInfo(): Promise<void> {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const response = await fetch(
       'https://s3.amazonaws.com/builds.emberjs.com/canary.json',
     );
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
     this.canaryInfo = (await response.json()) as CanaryInfo;
   }
 
