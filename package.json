@@ -77,7 +77,6 @@
     "ember-data": "~5.7.0",
     "ember-data-fastboot": "^0.1.2",
     "ember-data-types": "~5.7.0",
-    "ember-fetch": "^8.1.2",
     "ember-href-to": "^5.1.1",
     "ember-inflector": "^6.0.0",
     "ember-leaflet": "^6.0.0",
