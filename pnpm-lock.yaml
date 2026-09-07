@@ -147,9 +147,6 @@ importers:
       ember-cli-inject-live-reload:
         specifier: ^2.1.0
         version: 2.1.0
-      ember-cli-netlify:
-        specifier: ^0.4.1
-        version: 0.4.1
       ember-cli-sri:
         specifier: ^2.1.1
         version: 2.1.1(supports-color@10.2.2)
@@ -4200,10 +4197,6 @@ packages:
   ember-cli-lodash-subset@2.0.1:
     resolution: {integrity: sha512-QkLGcYv1WRK35g4MWu/uIeJ5Suk2eJXKtZ+8s+qE7C9INmpCPyPxzaqZABquYzcWNzIdw6kYwz3NWAFdKYFxwg==}
     engines: {node: ^4.5 || 6.* || >= 7.*}
-
-  ember-cli-netlify@0.4.1:
-    resolution: {integrity: sha512-EDxrjRl1WoytehV7c/7hdFDyubSi++Yxcr3DbZ4wZKVKB2bdfP+A+PEcFIF+s7JG96vPnBIeOGkDNTye9K231A==}
-    engines: {node: 10.* || >= 12}
 
   ember-cli-normalize-entity-name@1.0.0:
     resolution: {integrity: sha512-rF4P1rW2P1gVX1ynZYPmuIf7TnAFDiJmIUFI1Xz16VYykUAyiOCme0Y22LeZq8rTzwBMiwBwoE3RO4GYWehXZA==}
@@ -14329,8 +14322,6 @@ snapshots:
   ember-cli-is-package-missing@1.0.0: {}
 
   ember-cli-lodash-subset@2.0.1: {}
-
-  ember-cli-netlify@0.4.1: {}
 
   ember-cli-normalize-entity-name@1.0.0(supports-color@10.2.2):
     dependencies:
