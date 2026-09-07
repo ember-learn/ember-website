@@ -1,8 +1,7 @@
 import Route from '@ember/routing/route';
-import { type Registry as Services, service } from '@ember/service';
 import type Project from 'ember-website/models/project';
-// @ts-expect-error: Incorrect type
-import { hash } from 'rsvp';
+import type ReleasesRoute from 'ember-website/routes/releases';
+import type { ModelFrom } from 'ember-website/utils/routes';
 
 type Model = {
   ember: Project;
@@ -10,13 +9,12 @@ type Model = {
 };
 
 export default class ReleasesCanaryRoute extends Route {
-  @service declare store: Services['store'];
-
   model(): Model {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-return
-    return hash({
-      ember: this.store.findRecord<Project>('project', 'ember/canary'),
-      emberData: this.store.findRecord<Project>('project', 'emberData/canary'),
-    });
+    const releases = this.modelFor('releases') as ModelFrom<ReleasesRoute>;
+
+    const ember = releases.find(({ id }) => id === 'ember/canary')!;
+    const emberData = releases.find(({ id }) => id === 'emberData/canary')!;
+
+    return { ember, emberData };
   }
 }

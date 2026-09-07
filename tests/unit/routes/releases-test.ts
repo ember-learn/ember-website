@@ -16,7 +16,20 @@ module('Unit | Route | releases', function (hooks) {
     this.route = this.owner.lookup('route:releases') as ReleasesRoute;
   });
 
-  test('it exists', function (this: TestContext, assert) {
-    assert.ok(this.route);
+  test('The model hook returns all projects', async function (this: TestContext, assert) {
+    const model = await this.route.model();
+
+    const modelIds = model.map(({ id }) => id).sort();
+
+    assert.deepEqual(modelIds, [
+      'ember/beta',
+      'ember/canary',
+      'ember/lts',
+      'ember/release',
+      'emberData/beta',
+      'emberData/canary',
+      'emberData/lts',
+      'emberData/release',
+    ]);
   });
 });

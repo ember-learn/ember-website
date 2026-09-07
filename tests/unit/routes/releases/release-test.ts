@@ -1,5 +1,6 @@
 import type { TestContext as BaseTestContext } from '@ember/test-helpers';
 import { setupTest } from 'ember-qunit';
+import type Project from 'ember-website/models/project';
 import ReleasesReleaseRoute from 'ember-website/routes/releases/release';
 import { module, test } from 'qunit';
 
@@ -10,28 +11,29 @@ interface TestContext extends BaseTestContext {
 module('Unit | Route | releases/release', function (hooks) {
   setupTest(hooks);
 
-  hooks.beforeEach(function (this: TestContext) {
-    this.owner.register('route:releases/release', ReleasesReleaseRoute);
+  hooks.beforeEach(function (this: TestContext, assert) {
+    this.owner.register(
+      'route:releases/release',
+      class extends ReleasesReleaseRoute {
+        modelFor(route: string): Pick<Project, 'id'>[] {
+          assert.step(`modelFor, ${route}`);
+
+          return [{ id: 'ember/release' }, { id: 'emberData/release' }];
+        }
+      },
+    );
 
     this.route = this.owner.lookup(
       'route:releases/release',
     ) as ReleasesReleaseRoute;
   });
 
-  test('The model hook returns the stable projects', async function (this: TestContext, assert) {
-    // eslint-disable-next-line @typescript-eslint/await-thenable
-    const model = await this.route.model();
+  test('The model hook returns the stable projects', function (this: TestContext, assert) {
+    const model = this.route.model();
 
-    assert.strictEqual(
-      model.ember.id,
-      'ember/release',
-      'We found the Ember stable project.',
-    );
+    assert.strictEqual(model.ember.id, 'ember/release');
+    assert.strictEqual(model.emberData.id, 'emberData/release');
 
-    assert.strictEqual(
-      model.emberData.id,
-      'emberData/release',
-      'We found the Ember Data stable project.',
-    );
+    assert.verifySteps(['modelFor, releases']);
   });
 });
