@@ -13,17 +13,44 @@
     ],
     "rootDir": ".",
     "target": "esnext",
-    "types": ["@glint/ember-tsc/types", "@types/qunit", "ember-source/types"]
+    "types": [
+      "@ember-data-types/adapter/unstable-preview-types",
+      "@ember-data-types/model/unstable-preview-types",
+      "@ember-data-types/serializer/unstable-preview-types",
+      "@ember-data-types/store/unstable-preview-types",
+      "@glint/ember-tsc/types",
+      "@types/qunit",
+      "@warp-drive-types/core-types/unstable-preview-types",
+      "ember-data-types/unstable-preview-types",
+      "ember-source/types"
+    ]
   },
   "include": ["app/**/*", "tests/**/*", "types/**/*"],
   "glint": {
     "additionalSpecialForms": {
-      "globals": {
-        "and": "&&",
-        "eq": "===",
-        "not": "!",
-        "neq": "!==",
-        "or": "||"
+      "imports": {
+        "ember-truth-helpers": {
+          "and": "&&",
+          "eq": "===",
+          "not": "!",
+          "not-eq": "!==",
+          "or": "||"
+        },
+        "ember-truth-helpers/helpers/and": {
+          "default": "&&"
+        },
+        "ember-truth-helpers/helpers/eq": {
+          "default": "==="
+        },
+        "ember-truth-helpers/helpers/not": {
+          "default": "!"
+        },
+        "ember-truth-helpers/helpers/not-eq": {
+          "default": "!=="
+        },
+        "ember-truth-helpers/helpers/or": {
+          "default": "||"
+        }
       }
     }
   }

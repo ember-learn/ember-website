@@ -14,6 +14,10 @@ module.exports = function (defaults) {
       },
     },
 
+    'ember-cli-babel': {
+      enableTypeScriptTransform: true,
+    },
+
     'ember-composable-helpers': {
       only: ['filter-by', 'reject-by', 'sort-by'],
     },

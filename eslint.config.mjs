@@ -85,6 +85,18 @@ export default defineConfig([
       parser: eslintPluginEmber.parser,
       parserOptions: parserOptions.esm.ts,
     },
+    rules: {
+      '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/explicit-function-return-type': 'error',
+      '@typescript-eslint/no-empty-object-type': [
+        'error',
+        {
+          allowInterfaces: 'always',
+          allowObjectTypes: 'always',
+        },
+      ],
+      '@typescript-eslint/no-import-type-side-effects': 'error',
+    },
   },
   {
     ...eslintPluginQunit.configs.recommended,
