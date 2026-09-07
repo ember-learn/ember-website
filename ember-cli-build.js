@@ -8,6 +8,25 @@ module.exports = function (defaults) {
       plugins: [require.resolve('ember-auto-import/babel-plugin')],
     },
 
+    // Owned here rather than relying on ember-styleguide injecting it;
+    // matches the config ember-styleguide has been injecting so the
+    // compiled CSS is identical.
+    postcssOptions: {
+      compile: {
+        enabled: true,
+        plugins: [
+          { module: require('postcss-import') },
+          {
+            module: require('postcss-preset-env'),
+            options: {
+              stage: 3,
+              features: { 'nesting-rules': true },
+            },
+          },
+        ],
+      },
+    },
+
     autoImport: {
       alias: {
         'ember-composable-helpers': '@nullvoxpopuli/ember-composable-helpers',
