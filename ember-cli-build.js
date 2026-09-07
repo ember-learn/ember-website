@@ -1,6 +1,9 @@
 'use strict';
 
+const { compatBuild } = require('@embroider/compat');
+const { Webpack } = require('@embroider/webpack');
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const { prerender } = require('prember');
 
 module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
@@ -8,18 +11,8 @@ module.exports = function (defaults) {
       plugins: [require.resolve('ember-auto-import/babel-plugin')],
     },
 
-    autoImport: {
-      alias: {
-        'ember-composable-helpers': '@nullvoxpopuli/ember-composable-helpers',
-      },
-    },
-
     'ember-cli-babel': {
       enableTypeScriptTransform: true,
-    },
-
-    'ember-composable-helpers': {
-      only: ['filter-by', 'reject-by', 'sort-by'],
     },
 
     emberData: {
@@ -94,5 +87,30 @@ module.exports = function (defaults) {
     },
   });
 
-  return app.toTree();
+  const options = {
+    packagerOptions: {
+      publicAssetURL: '/',
+      webpackConfig: {
+        resolve: {
+          alias: {
+            'ember-composable-helpers':
+              '@nullvoxpopuli/ember-composable-helpers',
+          },
+        },
+      },
+    },
+    skipBabel: [
+      {
+        package: 'qunit',
+      },
+    ],
+    staticAddonTestSupportTrees: true,
+    staticAddonTrees: true,
+    staticEmberSource: true,
+    staticInvokables: true,
+  };
+
+  const compiledApp = compatBuild(app, Webpack, options);
+
+  return prerender(app, compiledApp);
 };
