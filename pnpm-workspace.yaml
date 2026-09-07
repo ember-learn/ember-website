@@ -16,3 +16,4 @@ overrides:
 
 patchedDependencies:
   ember-data-fastboot: patches/ember-data-fastboot.patch
+  ember-page-title: patches/ember-page-title.patch
