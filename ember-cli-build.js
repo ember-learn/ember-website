@@ -22,6 +22,10 @@ module.exports = function (defaults) {
       only: ['filter-by', 'reject-by', 'sort-by'],
     },
 
+    'ember-fetch': {
+      preferNative: true,
+    },
+
     emberData: {
       deprecations: {
         // New projects can safely leave this deprecation disabled.

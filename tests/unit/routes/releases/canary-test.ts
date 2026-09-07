@@ -33,10 +33,5 @@ module('Unit | Route | releases/canary', function (hooks) {
       'emberData/canary',
       'We found the Ember Data canary project.',
     );
-
-    assert.ok(
-      model.canaryInfo.version,
-      'We found the metadata for canary project.',
-    );
   });
 });

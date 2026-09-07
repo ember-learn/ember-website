@@ -1,9 +1,18 @@
-import type { TOC } from '@ember/component/template-only';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 import { pageTitle } from 'ember-page-title';
 import ReleasesHowToInstall from 'ember-website/components/releases/how-to-install';
 import TerminalCode from 'ember-website/components/terminal-code';
 import type ReleasesCanaryRoute from 'ember-website/routes/releases/canary';
 import type { ModelFrom } from 'ember-website/utils/routes';
+import fetch from 'fetch';
+
+type CanaryInfo = {
+  SHA: string;
+  assetPath: string;
+  buildType: 'canary';
+  version: string;
+};
 
 interface ReleasesCanarySignature {
   Args: {
@@ -11,52 +20,74 @@ interface ReleasesCanarySignature {
   };
 }
 
-<template>
-  {{pageTitle "Canary"}}
+export default class ReleasesCanary extends Component<ReleasesCanarySignature> {
+  @tracked canaryInfo: CanaryInfo | undefined;
 
-  <h1 class="project-name">
-    Canary Channel
-  </h1>
+  constructor() {
+    // @ts-expect-error: Incorrect type
+    // eslint-disable-next-line prefer-rest-params
+    super(...arguments);
 
-  <p>
-    Canary releases are generated from each commit to the master branch of Ember
-    and Ember Data. They may contain unstable features.
-  </p>
+    void this.fetchCanaryInfo();
+  }
 
-  <h2>How to Install</h2>
+  private async fetchCanaryInfo(): Promise<void> {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const response = await fetch(
+      'https://s3.amazonaws.com/builds.emberjs.com/canary.json',
+    );
 
-  <div class="mb-2 hide-in-percy">
-    <ReleasesHowToInstall @project={{@model.ember}}>
-      <TerminalCode>
-        # Install the latest Ember canary:
-        <br />
-        npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com{{@model.canaryInfo.assetPath}}
-      </TerminalCode>
-    </ReleasesHowToInstall>
-  </div>
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+    this.canaryInfo = (await response.json()) as CanaryInfo;
+  }
 
-  <div>
-    <ReleasesHowToInstall @project={{@model.emberData}} />
-  </div>
+  <template>
+    {{pageTitle "Canary"}}
 
-  <h2>What is canary?</h2>
+    <h1 class="project-name">
+      Canary Channel
+    </h1>
 
-  <p>
-    "Canary" refers to whatever code is on the main branch of an Ember project.
-    It is not released via npm, and is not recommended for production or new
-    learners.
-  </p>
+    <p>
+      Canary releases are generated from each commit to the master branch of
+      Ember and Ember Data. They may contain unstable features.
+    </p>
 
-  <p>
-    Often, features in canary are a work-in-progress. These work-in-progress
-    features may change substantially or be removed before being released. In
-    rare cases, the features may never be released.
-  </p>
+    <h2>How to Install</h2>
 
-  <p>
-    Canary is used in many test suites, so that any bugs in the framework code
-    are detected quickly and fixed before a beta is released. Some of Ember's
-    key contributors make a habit of working off a canary release in order to
-    volunteer their efforts as early testers.
-  </p>
-</template> satisfies TOC<ReleasesCanarySignature>;
+    <div class="mb-2 hide-in-percy">
+      <ReleasesHowToInstall @project={{@model.ember}}>
+        <TerminalCode>
+          # Install the latest Ember canary:
+          <br />
+          npm install --save-dev https://s3.amazonaws.com/builds.emberjs.com{{this.canaryInfo.assetPath}}
+        </TerminalCode>
+      </ReleasesHowToInstall>
+    </div>
+
+    <div>
+      <ReleasesHowToInstall @project={{@model.emberData}} />
+    </div>
+
+    <h2>What is canary?</h2>
+
+    <p>
+      "Canary" refers to whatever code is on the main branch of an Ember
+      project. It is not released via npm, and is not recommended for production
+      or new learners.
+    </p>
+
+    <p>
+      Often, features in canary are a work-in-progress. These work-in-progress
+      features may change substantially or be removed before being released. In
+      rare cases, the features may never be released.
+    </p>
+
+    <p>
+      Canary is used in many test suites, so that any bugs in the framework code
+      are detected quickly and fixed before a beta is released. Some of Ember's
+      key contributors make a habit of working off a canary release in order to
+      volunteer their efforts as early testers.
+    </p>
+  </template>
+}

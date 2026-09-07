@@ -4,6 +4,7 @@
     "paths": {
       "ember-website/tests/*": ["./tests/*"],
       "ember-website/*": ["./app/*"],
+      "fetch": ["./node_modules/ember-fetch"],
       "*": ["./types/*"]
     },
     "plugins": [
