@@ -33,17 +33,6 @@ module.exports = function (environment) {
       hostWhitelist: [/^localhost:\d+$/],
     },
 
-    metricsAdapters: [
-      {
-        name: 'GoogleAnalytics',
-        environments: ['production'],
-        config: {
-          id: 'UA-27675533-1',
-          require: ['linkid'],
-        },
-      },
-    ],
-
     pageTitle: {
       separator: ' - ',
       prepend: true,

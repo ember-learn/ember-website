@@ -1,5 +1,7 @@
+import { isDevelopingApp, isTesting } from '@embroider/macros';
 import Route from '@ember/routing/route';
 import { type Registry as Services, service } from '@ember/service';
+import GoogleAnalytics from 'ember-metrics/metrics-adapters/google-analytics';
 
 type TrackData = {
   hostname: string;
@@ -17,6 +19,8 @@ export default class AplicationRoute extends Route {
     // eslint-disable-next-line prefer-rest-params
     super(...arguments);
 
+    this.setupMetrics();
+
     this.router.on('routeDidChange', () => {
       // @ts-expect-error: Incorrect type
       // eslint-disable-next-line @typescript-eslint/no-unsafe-call
@@ -28,6 +32,31 @@ export default class AplicationRoute extends Route {
 
       this.trackPage();
     });
+  }
+
+  private setupMetrics(): void {
+    // @ts-expect-error: Incorrect type
+    if (this.fastboot.isFastBoot) {
+      return;
+    }
+
+    if (isDevelopingApp()) {
+      return;
+    }
+
+    this.metrics.appEnvironment = isTesting() ? 'test' : 'production';
+
+    this.metrics.activateAdapters([
+      {
+        adapter: GoogleAnalytics,
+        config: {
+          id: 'UA-27675533-1',
+          require: ['linkid'],
+        },
+        environments: ['production'],
+        name: 'GoogleAnalytics',
+      },
+    ]);
   }
 
   private trackPage(): void {
@@ -42,7 +71,6 @@ export default class AplicationRoute extends Route {
       title: this.router.currentRouteName ?? 'unknown',
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
     this.metrics.trackPage(trackData);
   }
 }

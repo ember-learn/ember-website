@@ -107,6 +107,10 @@ module('Acceptance | index', function (hooks) {
     this.owner.register(
       'service:metrics',
       class MetricsService extends Service {
+        activateAdapters(): void {
+          assert.step('activateAdapters');
+        }
+
         trackPage(trackData: Record<string, unknown>): void {
           assert.deepEqual(trackData, {
             hostname: 'www.emberjs.com',
