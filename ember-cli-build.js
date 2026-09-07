@@ -32,11 +32,6 @@ module.exports = function (defaults) {
       },
     },
 
-    emberHighCharts: {
-      includeHighCharts: true,
-      includeHighChartsMore: true,
-    },
-
     'ember-leaflet': {
       excludeJS: true,
     },
