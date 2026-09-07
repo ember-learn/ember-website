@@ -1,0 +1,432 @@
+import type { TOC } from '@ember/component/template-only';
+import { concat, hash } from '@ember/helper';
+import { trustHTML } from '@ember/template';
+import { pageTitle } from 'ember-page-title';
+// @ts-expect-error: Incorrect type
+import EsCard from 'ember-styleguide/components/es-card';
+import type LearnRoute from 'ember-website/routes/learn';
+import type { ModelFrom } from 'ember-website/utils/routes';
+
+interface LearnIndexSignature {
+  Args: {
+    model: ModelFrom<LearnRoute>;
+  };
+}
+
+<template>
+  {{pageTitle "Learn"}}
+  <div class="container" aria-labelledby="learning-emberjs">
+    <h1 id="learning-emberjs">Learning Ember.js</h1>
+
+    <div class="layout mb-3">
+      <div class="lg:col-4">
+        <p>
+          Are you getting started on your Ember.js adventure? Check out our
+          official reading material:
+        </p>
+
+        <ul>
+          <li>
+            <a
+              href="https://guides.emberjs.com/release/getting-started/quick-start/"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            ><strong>Quick Start</strong></a>: An easy breezy introduction to
+            the framework.
+          </li>
+
+          <li>
+            <a
+              href="https://guides.emberjs.com/release/tutorial/"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            ><strong>Tutorial</strong></a>: Follow our tutorial to build, and
+            deploy, your first Ember.js application!
+          </li>
+
+          <li>
+            <a
+              href="https://guides.emberjs.com/release/"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+            ><strong>Guides</strong></a>: Whether you're just getting started
+            and want to get familiar with Ember, or you're looking to refresh
+            your knowledge on a certain feature, the Guides are the place for
+            you.
+          </li>
+        </ul>
+      </div>
+
+      <img
+        alt=""
+        class="lg:col-2"
+        role="presentation"
+        src="/images/tomsters/teaching-reverse.png"
+      />
+    </div>
+
+    <section class="mb-3" aria-labelledby="learning-emberjs-api-reference">
+      <h2 id="learning-emberjs-api-reference">API Reference</h2>
+
+      <p>
+        Explore the available API of the various Ember ecosystem libraries. This
+        is where you want to go to read in details about the various features,
+        including example code.
+      </p>
+
+      <ul class="mt-3 mb-5 list-unstyled grid lg:grid-3 text-center">
+        <li>
+          <a
+            href="https://api.emberjs.com/ember/release/"
+            class="well p-5"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              src="/images/learn/ember.png"
+              width="344"
+              height="130"
+              alt="Ember.js"
+            />
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://api.emberjs.com/ember-data/release/"
+            class="well p-3"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              src="/images/learn/ember-data.png"
+              width="581"
+              height="130"
+              alt="Ember Data"
+            />
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://ember-cli.com/api/"
+            class="well p-4"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              src="/images/learn/ember-cli.png"
+              width="581"
+              height="130"
+              alt="Ember CLI"
+            />
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-3" aria-labelledby="learning-emberjs-deprecation-guides">
+      <h2 id="learning-emberjs-deprecation-guides">Deprecation Guides</h2>
+
+      <p>
+        The broader JavaScript ecosystem is always changing and evolving, so
+        Ember has processes and tools in place to protect your app from churn
+        while still providing the best new web app features.
+      </p>
+      <p>
+        Ember uses a careful deprecation process to roll out changes to the API.
+        You can read our
+        <a
+          href="https://deprecations.emberjs.com/"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+        >Deprecation Guides</a>
+        to see past and upcoming deprecations. Major changes are often
+        accompanied by codemod tools, which are often announced in
+        <a
+          href="https://blog.emberjs.com/tags/releases.html"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+        >release blog posts</a>.
+      </p>
+    </section>
+
+    <section class="mb-3" aria-labelledby="learning-emberjs-ecosystem">
+      <h2 id="learning-emberjs-ecosystem">Ecosystem</h2>
+
+      <p>
+        One of the main strengths of Ember is how shared conventions enable
+        developers to build on top of each other's work and improve the
+        ecosystem for everyone. For example, here are some projects closely
+        maintained by Ember teams:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Ember CLI:</strong>
+          The official command line toolkit to develop Ember applications. Check
+          out the
+          <a
+            href="https://cli.emberjs.com/release/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Ember CLI Guides</a>, and the documentation on how to
+          <a
+            href="https://cli.emberjs.com/release/advanced-use/blueprints/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >extend Ember CLI</a>
+          as an addon developer.
+        </li>
+        <li>
+          <strong>Ember Inspector:</strong>
+          A browser plugin/bookmarklet that helps you inspect and debug
+          applications. Learn how best to use it in the
+          <a
+            href="https://guides.emberjs.com/release/ember-inspector/installation/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Ember Inspector Guides</a>.
+        </li>
+        <li>
+          <strong>Ember Animated:</strong>
+          Core animation primitives for Ember. Learn how best to use it in the
+          <a
+            href="https://ember-animation.github.io/ember-animated/docs"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Ember Animated documentation</a>.
+        </li>
+        <li>
+          <strong>Ember Twiddle:</strong>
+          Online code editor so you can share working snippets of code or
+          reproductions of bugs. Try it out
+          <a
+            href="https://ember-twiddle.com/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >today</a>!
+        </li>
+        <li>
+          <strong>FastBoot:</strong>
+          Server-side rendering library for Ember applications. Check out the
+          <a
+            href="https://ember-fastboot.com/quickstart"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Quickstart</a>
+          to get up and running, and the
+          <a
+            href="https://ember-fastboot.com/docs/user-guide"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >User Guide</a>
+          for more detailed information.
+        </li>
+        <li>
+          <strong>Ember Engines:</strong>
+          Ember addon that allows multiple logical applications to be composed
+          together into a single application from the user's perspective. Check
+          out the
+          <a
+            href="https://ember-engines.netlify.app/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Ember Engines Guides</a>.
+        </li>
+        <li>
+          <strong>Ember Observer</strong>: Ember Observer provides
+          categorization and scoring for published Ember addons. You can also
+          use Ember Observer to do a
+          <a
+            href="https://emberobserver.com/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >code search across the entire addon catalogue</a>.
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-3" aria-labelledby="learning-emberjs-showcase">
+      <h2 id="learning-emberjs-showcase">Showcase</h2>
+
+      <p>In this section, you will find applications that are maintained by the
+        Ember.js teams with the help of contributors. While software is always a
+        work in progress, the goal is to showcase patterns and solutions applied
+        in real-world applications.</p>
+
+      <p>Whether you're simply interested in checking out how some feature is
+        implemented, or you're looking to contribute, one of these projects
+        might pique your interest!</p>
+
+      <ul class="mt-3 mb-5 list-unstyled grid lg:grid-2">
+        {{#each @model as |showcase|}}
+          <EsCard
+            @image={{hash
+              src=(concat "/images/showcase/" showcase.image.src)
+              alt=""
+            }}
+          >
+            <h2>{{showcase.name}}</h2>
+
+            <h3>Description</h3>
+
+            {{trustHTML showcase.html}}
+
+            <ul>
+              {{#each showcase.features as |feature|}}
+                <li>{{trustHTML feature}}</li>
+              {{/each}}
+            </ul>
+
+            <h3>External Links</h3>
+
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href={{showcase.demo}}
+                  rel="nofollow noopener noreferrer"
+                  target="_blank"
+                >
+                  Visit website
+                </a>
+              </li>
+              <li>
+                <a
+                  href={{showcase.repository}}
+                  rel="nofollow noopener noreferrer"
+                  target="_blank"
+                >
+                  Visit repository
+                </a>
+              </li>
+            </ul>
+          </EsCard>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section class="mb-3" aria-labelledby="learning-emberjs-faq">
+      <h2 id="learning-emberjs-faq">Frequently Asked Questions</h2>
+
+      <h3 id="learning-emberjs-faq-glimmer">What is Glimmer? Do I need to learn
+        it too?</h3>
+
+      <p>
+        <a
+          href="https://glimmerjs.com/"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+        >Glimmer</a>
+        is a rendering engine used in Ember. However, in order to build Ember
+        apps, you don't need to know anything about Glimmer, other than it's
+        super fast and that the contributors to the core codebase love to geek
+        out about it. It's all behind the scenes.
+      </p>
+
+      <p>
+        If you're curious to know how the Glimmer project fits into the roadmap
+        for Ember's development, you can learn more in
+        <a
+          href="https://discuss.emberjs.com/t/readers-questions-will-breaking-up-ember-remove-the-need-for-glimmer-js/14325"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+        >Readers' Questions</a>.
+      </p>
+
+      <h3 id="learning-emberjs-faq-pitch">How do I pitch Ember at my company?</h3>
+
+      <p>
+        Here are some
+        <a
+          href="https://discuss.emberjs.com/t/readers-questions-how-do-i-pitch-ember-at-my-company/14289"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+        >strategies</a>
+        that may help you out.
+      </p>
+
+      <h3 id="learning-emberjs-faq-controllers">Is it ok to use controllers?</h3>
+
+      <p>
+        Yes. Controllers are the right place to put URL query params, actions
+        and attributes that need to be passed from the route level to
+        components, and lifecycle hook code.
+      </p>
+
+      <h3 id="learning-emberjs-faq-future-proof">How do I future-proof my
+        Ember.js application?</h3>
+
+      <p>
+        You should not try to future-proof your application. Ember.js has a
+        strong emphasis on developer productivity, which means that framework
+        developers take great care when designing new functionality and provide
+        migration paths.
+      </p>
+
+      <p>
+        Here are some ways to keep up-to-date on future changes:
+      </p>
+
+      <ul>
+        <li>
+          Feature Flags: Many new features are implemented under optional flags
+          so that users can try them out and report any issues.
+        </li>
+
+        <li>
+          RFCs: Ember.js follows a community-driven process for its development
+          that incorporates
+          <a
+            href="https://github.com/emberjs/rfcs"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >RFCs for features and deprecations</a>. An RFC is a Request for
+          Comments. Before changes are made to Ember's API, they are proposed
+          publicly and the community is asked to review and comment. Anyone can
+          create an RFC, not just Core Team members. RFCs undergo many edits to
+          incorporate community feedback. If a proposal has enough support, it
+          is merged, meaning that work may begin to integrate the functionality
+          into the codebase.
+        </li>
+
+        <li>
+          Deprecations: The
+          <a
+            href="https://deprecations.emberjs.com/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >Deprecation Guides</a>
+          contain upcoming deprecations and how to resolve them.
+        </li>
+
+        <li>
+          Codemods: When it's time for a major version upgrade, and there are
+          syntax edits to make, tools like codemods are provided to help you
+          make changes quickly.
+        </li>
+
+        <li>
+          LTS lifecycle: If you won't be updating your app versions frequently,
+          consider using the Long Term Support (LTS) versions of Ember. These
+          are usually every 4 minor releases (for example, 2.8, 2.12, 2.16) and
+          final major releases (2.18). LTS versions have extended windows for
+          bugfixes and security updates.
+        </li>
+
+        <li>
+          Release schedule: Every six weeks, candidate features are reviewed and
+          either deemed ready to be included in the stable release, or carry on
+          in beta for another cycle until the next release happens.
+        </li>
+      </ul>
+
+      <p>
+        In short, the best way to make sure you have a healthy application is to
+        comment on RFCs, clean up deprecations when you see them, and when
+        possible, test your application against beta and canary releases of
+        Ember.
+      </p>
+    </section>
+  </div>
+</template> satisfies TOC<LearnIndexSignature>;

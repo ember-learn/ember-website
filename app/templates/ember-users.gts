@@ -1,0 +1,83 @@
+import type { TOC } from '@ember/component/template-only';
+import { sortBy } from '@nullvoxpopuli/ember-composable-helpers';
+import { pageTitle } from 'ember-page-title';
+import type EmberUsersRoute from 'ember-website/routes/ember-users';
+import type { ModelFrom } from 'ember-website/utils/routes';
+
+interface EmberUsersSignature {
+  Args: {
+    model: ModelFrom<EmberUsersRoute>;
+  };
+}
+
+<template>
+  {{pageTitle "Who's Using Ember.js"}}
+  <section class="container" aria-labelledby="ember-users">
+    <div class="layout">
+      <div class="lg:col-4 lg:start-2 text-center text-muted mb-5">
+        <h1 id="ember-users">
+          See Who's Using Ember.js
+        </h1>
+
+        <p>
+          Logos are added by company representatives. These companies may or may
+          not be using Ember on their main web properties, but they're
+          definitely using it somewhere in their organizations!
+        </p>
+        <p>
+          Feel free to track down folks who work at a specific company if you're
+          looking for more detail on their specific usage.
+        </p>
+      </div>
+    </div>
+
+    <section aria-labelledby="section-ember-users-list-of-companies">
+      <h2 id="section-ember-users-list-of-companies">List of Companies</h2>
+
+      <ul class="unstyled grid sm:grid-2 lg:grid-5 mb-5">
+        {{#each (sortBy "featured:desc" "added" @model) as |user|}}
+          <li>
+            <a
+              href={{user.url}}
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+              class="well well-16/9"
+            >
+              <img
+                alt={{user.name}}
+                src="/images/users/{{user.image}}"
+                loading="lazy"
+              />
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section
+      class="layout"
+      aria-labelledby="section-ember-users-please-introduce-yourself"
+    >
+      <div class="lg:col-5">
+        <h2 id="section-ember-users-please-introduce-yourself">Please Introduce
+          Yourself!</h2>
+
+        <p>
+          To add your company or project to this page,
+          <a
+            href="https://github.com/ember-learn/ember-website"
+            rel="nofollow"
+          >submit a Pull Request</a>.<br />
+          Be sure that your logo has a transparent background and includes
+          adequate white space.<br />
+          Additional instructions are in the
+          <a
+            href="https://github.com/ember-learn/ember-website/blob/main/CONTRIBUTING.md#adding-a-user"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >contributing guide</a>.
+        </p>
+      </div>
+    </section>
+  </section>
+</template> satisfies TOC<EmberUsersSignature>;
