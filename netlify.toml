@@ -1,0 +1,106 @@
+# Headers
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "content-type"
+
+# For [[redirects]], order matters. Netlify applies the first matching rule.
+# `status` defaults to 301, so it is set explicitly only where it differs.
+[[redirects]]
+  from = "/about*"
+  to = "/"
+
+[[redirects]]
+  from = "/blog/*"
+  to = "https://blog.emberjs.com/:splat"
+
+[[redirects]]
+  from = "/brand"
+  to = "/logos"
+
+[[redirects]]
+  from = "/branding"
+  to = "/logos"
+
+[[redirects]]
+  from = "/builds/*"
+  to = "/releases/:splat"
+
+[[redirects]]
+  from = "/dashboard"
+  to = "/statusboard"
+
+[[redirects]]
+  from = "/deprecations/*"
+  to = "https://deprecations.emberjs.com/:splat"
+
+[[redirects]]
+  from = "/documentation/*"
+  to = "https://guides.emberjs.com/release/:splat"
+
+[[redirects]]
+  from = "/ember-community-survey-*"
+  to = "/survey/:splat"
+
+[[redirects]]
+  from = "/guides/*"
+  to = "https://guides.emberjs.com/release/:splat"
+
+[[redirects]]
+  from = "/internal"
+  to = "/api"
+
+[[redirects]]
+  from = "/legal"
+  to = "/about/legal"
+
+[[redirects]]
+  from = "/meetup-assets"
+  to = "/community/meetups/assets"
+
+[[redirects]]
+  from = "/statusboard"
+  to = "https://github.com/emberjs/rfc-tracking/issues"
+
+[[redirects]]
+  from = "/survey"
+  to = "/survey/2024"
+
+[[redirects]]
+  from = "/team"
+  to = "/teams"
+
+[[redirects]]
+  from = "/tomster/*"
+  to = "/mascots/:splat"
+
+[[redirects]]
+  from = "/zoey"
+  to = "/mascots"
+
+# API redirects
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.emberjs.com/:splat?anchor=:anchor&type=:type"
+  query = { anchor = ":anchor", type = ":type" }
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.emberjs.com/:splat?anchor=:anchor"
+  query = { anchor = ":anchor" }
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.emberjs.com/:splat?type=:type"
+  query = { type = ":type" }
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.emberjs.com/:splat"
+
+# Base case for SPAs
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
