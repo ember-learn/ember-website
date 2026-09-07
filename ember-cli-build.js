@@ -92,34 +92,6 @@ module.exports = function (defaults) {
         'teams',
       ],
     },
-
-    'responsive-image': {
-      images: [
-        {
-          include: 'images/team/*',
-          widths: [100, 200],
-          lqip: {
-            type: 'blurhash',
-          },
-          removeSource: true,
-          // don't scale images, just copy as-is in dev mode, to not slow down the build
-          justCopy: process.env.EMBER_ENV !== 'production',
-        },
-        {
-          include: 'images/tomsters/**/*.png',
-          widths: [
-            320, // mobile
-            640, // mobile 2x
-            750, // iPhone 2x
-            242, // desktop
-            484, // desktop 2x
-          ],
-          removeSource: false,
-          // don't scale images, just copy as-is in dev mode, to not slow down the build
-          justCopy: process.env.EMBER_ENV !== 'production',
-        },
-      ],
-    },
   });
 
   return app.toTree();
