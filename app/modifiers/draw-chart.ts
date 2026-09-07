@@ -18,22 +18,6 @@ interface DrawChartSignature {
   Element: HTMLElement;
 }
 
-const optionsForAllCharts = {
-  credits: {
-    enabled: false,
-  },
-
-  plotOptions: {
-    series: {
-      animation: false,
-    },
-  },
-
-  time: {
-    timezoneOffset: new Date().getTimezoneOffset(),
-  },
-};
-
 export default class DrawChartModifier extends Modifier<DrawChartSignature> {
   declare chartInstance: Highcharts.Chart;
   declare highcharts: Highcharts;
@@ -60,13 +44,40 @@ export default class DrawChartModifier extends Modifier<DrawChartSignature> {
     }
 
     const { default: highcharts } = await import('highcharts');
-    const { default: highchartsAccessibilty } =
-      await import('highcharts/modules/accessibility');
-
-    highchartsAccessibilty(highcharts);
+    await import('highcharts/modules/accessibility');
 
     this.highcharts = highcharts;
-    this.highcharts.setOptions(optionsForAllCharts);
+    this.highcharts.setOptions({
+      accessibility: {
+        screenReaderSection: {
+          beforeChartFormat: [
+            '<div>{chartTitle}</div>',
+            '<div>{typeDescription}</div>',
+            '<div>{chartSubtitle}</div>',
+            '<div>{chartLongdesc}</div>',
+            '<div>{playAsSoundButton}</div>',
+            '<div>{viewTableButton}</div>',
+            '<div>{xAxisDescription}</div>',
+            '<div>{yAxisDescription}</div>',
+            '<div>{annotationsTitle}{annotationsList}</div>',
+          ].join(''),
+        },
+      },
+      credits: {
+        enabled: false,
+      },
+      plotOptions: {
+        series: {
+          animation: false,
+        },
+      },
+      time: {
+        timezoneOffset: new Date().getTimezoneOffset(),
+      },
+      title: {
+        minScale: 1,
+      },
+    });
   }
 
   drawChart({ chart, element }: { chart: Chart; element: HTMLElement }): void {
