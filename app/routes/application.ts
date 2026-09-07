@@ -1,6 +1,12 @@
 import Route from '@ember/routing/route';
 import { type Registry as Services, service } from '@ember/service';
 
+type TrackData = {
+  hostname: string;
+  page: string | null;
+  title: string;
+};
+
 export default class AplicationRoute extends Route {
   @service declare navbar: Services['navbar'];
   @service declare metrics: Services['metrics'];
@@ -15,31 +21,28 @@ export default class AplicationRoute extends Route {
       // @ts-expect-error: Incorrect type
       // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       this.navbar.closePopupMenu();
+
       if (window.scrollTo) {
         window.scrollTo(0, 0);
       }
-      this._trackPage();
+
+      this.trackPage();
     });
   }
 
-  _trackPage(): void {
+  private trackPage(): void {
     // @ts-expect-error: Incorrect type
     if (this.fastboot.isFastBoot) {
       return;
     }
 
-    // @ts-expect-error: Incorrect type
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const page = this.url;
-    // @ts-expect-error: Incorrect type
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const title = this.currentRouteName ?? 'unknown';
+    const trackData: TrackData = {
+      hostname: 'www.emberjs.com',
+      page: this.router.currentURL,
+      title: this.router.currentRouteName ?? 'unknown',
+    };
 
-    // this is constant for this app and is only used to identify page views in the GA dashboard
-    const hostname = 'www.emberjs.com';
-
-    // @ts-expect-error: Incorrect type
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
-    this.metrics.trackPage({ page, title, hostname });
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+    this.metrics.trackPage(trackData);
   }
 }

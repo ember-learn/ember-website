@@ -1,3 +1,4 @@
+import Service from '@ember/service';
 import { click, currentURL, findAll, visit } from '@ember/test-helpers';
 import percySnapshot from '@percy/ember';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
@@ -100,6 +101,31 @@ module('Acceptance | index', function (hooks) {
       assert,
       'Ember.js - A framework for ambitious web developers',
     );
+  });
+
+  test('We track the visit', async function (assert) {
+    this.owner.register(
+      'service:metrics',
+      class MetricsService extends Service {
+        trackPage(trackData: Record<string, unknown>): void {
+          assert.deepEqual(trackData, {
+            hostname: 'www.emberjs.com',
+            page: '/',
+            title: 'index',
+          });
+
+          assert.step('trackPage');
+        }
+      },
+    );
+
+    await visit('/');
+
+    assert.verifySteps(['trackPage']);
+
+    // @ts-expect-error: Incorrect type
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+    this.owner.unregister('service:metrics');
   });
 
   test('A user can use the navigation menu', async function (assert) {
