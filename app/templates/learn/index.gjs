@@ -1,7 +1,7 @@
 import { concat, hash } from '@ember/helper';
+import { trustHTML } from '@ember/template';
 import { pageTitle } from 'ember-page-title';
 import EsCard from 'ember-styleguide/components/es-card';
-import htmlSafe from 'ember-website/helpers/html-safe';
 
 <template>
   {{pageTitle "Learn"}}
@@ -261,11 +261,11 @@ import htmlSafe from 'ember-website/helpers/html-safe';
 
             <h3>Description</h3>
 
-            {{htmlSafe showcase.html}}
+            {{trustHTML showcase.html}}
 
             <ul>
               {{#each showcase.features as |feature|}}
-                <li>{{htmlSafe feature}}</li>
+                <li>{{trustHTML feature}}</li>
               {{/each}}
             </ul>
 

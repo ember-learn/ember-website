@@ -3,6 +3,10 @@ import EsNote from 'ember-styleguide/components/es-note';
 import ReleasesHowToInstall from 'ember-website/components/releases/how-to-install';
 import addWeeks from 'ember-website/helpers/add-weeks';
 import formatDateTime from 'ember-website/helpers/format-date-time';
+import {
+  dataLtsReleases,
+  emberLtsReleases,
+} from 'ember-website/utils/releases/lts';
 
 <template>
   {{pageTitle "LTS"}}
@@ -93,7 +97,7 @@ import formatDateTime from 'ember-website/helpers/format-date-time';
       </thead>
 
       <tbody>
-        {{#each @controller.emberLtsReleases as |release|}}
+        {{#each emberLtsReleases as |release|}}
           <tr>
             <td>{{release.version}}</td>
             <td>{{formatDateTime release.promotionDate "MMMM D, YYYY"}}</td>
@@ -125,7 +129,7 @@ import formatDateTime from 'ember-website/helpers/format-date-time';
       </thead>
 
       <tbody>
-        {{#each @controller.dataLtsReleases as |release|}}
+        {{#each dataLtsReleases as |release|}}
           <tr>
             <td>{{release.version}}</td>
             <td>{{formatDateTime release.promotionDate "MMMM D, YYYY"}}</td>

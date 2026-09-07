@@ -4,6 +4,23 @@ import EsCard from 'ember-styleguide/components/es-card';
 import EmberCommunitySurveyIntroduction from 'ember-website/components/ember-community-survey/introduction';
 import EmberCommunitySurveySection from 'ember-website/components/ember-community-survey/section';
 import Highcharts from 'ember-website/components/highcharts';
+import {
+  MS_Q103,
+  MS_Q111,
+  MS_Q112,
+  MS_Q304,
+  MS_Q401,
+  MS_Q406,
+  MS_Q413,
+  MS_Q601,
+  SS_Q101,
+  SS_Q104,
+  SS_Q204,
+  SS_Q302,
+  SS_Q305,
+  SS_Q306,
+  stackSkillsChart,
+} from 'ember-website/utils/surveys/2020';
 
 <template>
   {{pageTitle "Ember Community Survey 2020"}}
@@ -26,7 +43,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Recommending Ember"
   >
     <:charts>
-      <Highcharts @chart={{@controller.SS_Q101}} />
+      <Highcharts @chart={{SS_Q101}} />
     </:charts>
 
     <:body>
@@ -115,7 +132,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Ember Version"
   >
     <:charts>
-      <Highcharts @chart={{@controller.MS_Q401}} />
+      <Highcharts @chart={{MS_Q401}} />
     </:charts>
 
     <:body>
@@ -131,7 +148,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Time in Framework"
   >
     <:charts>
-      <Highcharts @chart={{@controller.SS_Q104}} />
+      <Highcharts @chart={{SS_Q104}} />
     </:charts>
 
     <:body>
@@ -147,7 +164,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Learning Resources"
   >
     <:charts>
-      <Highcharts @chart={{@controller.MS_Q103}} />
+      <Highcharts @chart={{MS_Q103}} />
     </:charts>
 
     <:body>
@@ -164,7 +181,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Self-Reported Skills: Front End Development"
   >
     <:charts>
-      <Highcharts @chart={{@controller.stackSkillsChart}} />
+      <Highcharts @chart={{stackSkillsChart}} />
     </:charts>
 
     <:body>
@@ -188,7 +205,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Text Editors"
   >
     <:charts>
-      <Highcharts @chart={{@controller.MS_Q111}} />
+      <Highcharts @chart={{MS_Q111}} />
     </:charts>
 
     <:body>
@@ -206,7 +223,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Participation in Ember Community"
   >
     <:charts>
-      <Highcharts @chart={{@controller.MS_Q112}} />
+      <Highcharts @chart={{MS_Q112}} />
     </:charts>
 
     <:body>
@@ -227,7 +244,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Ember in Enterprise: Size"
   >
     <:charts>
-      <Highcharts @chart={{@controller.SS_Q302}} />
+      <Highcharts @chart={{SS_Q302}} />
     </:charts>
 
   </EmberCommunitySurveySection>
@@ -237,7 +254,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Ember in Enterprise: Accessibility"
   >
     <:charts>
-      <Highcharts @chart={{@controller.MS_Q304}} />
+      <Highcharts @chart={{MS_Q304}} />
     </:charts>
 
     <:body>
@@ -255,7 +272,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Ember in Enterprise: IE Support"
   >
     <:charts>
-      <Highcharts @chart={{@controller.SS_Q204}} />
+      <Highcharts @chart={{SS_Q204}} />
     </:charts>
 
     <:body>
@@ -272,8 +289,8 @@ import Highcharts from 'ember-website/components/highcharts';
   >
     <:charts>
       <div class="grid lg:grid-2">
-        <Highcharts @chart={{@controller.SS_Q306}} />
-        <Highcharts @chart={{@controller.SS_Q305}} />
+        <Highcharts @chart={{SS_Q306}} />
+        <Highcharts @chart={{SS_Q305}} />
       </div>
     </:charts>
 
@@ -298,7 +315,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Server-Side Development"
   >
     <:charts>
-      <Highcharts @chart={{@controller.MS_Q406}} />
+      <Highcharts @chart={{MS_Q406}} />
     </:charts>
 
     <:body>
@@ -315,7 +332,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Target Audience"
   >
     <:charts>
-      <Highcharts @chart={{@controller.MS_Q413}} />
+      <Highcharts @chart={{MS_Q413}} />
     </:charts>
 
     <:body>
@@ -331,7 +348,7 @@ import Highcharts from 'ember-website/components/highcharts';
     @sectionTitle="Participation in Other Surveys"
   >
     <:charts>
-      <Highcharts @chart={{@controller.MS_Q601}} />
+      <Highcharts @chart={{MS_Q601}} />
     </:charts>
 
     <:body>

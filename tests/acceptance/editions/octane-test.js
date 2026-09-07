@@ -1,16 +1,12 @@
 import { visit } from '@ember/test-helpers';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
 import percySnapshot from '@percy/ember';
-
 import { setupApplicationTest } from 'ember-qunit';
-
-import { setupPageTitleTest } from 'ember-website/tests/helpers/page-title';
+import { assertPageTitle } from 'ember-website/tests/helpers/page-title';
 import { module, test } from 'qunit';
 
 module('Acceptance | editions/octane', function (hooks) {
   setupApplicationTest(hooks);
-
-  setupPageTitleTest(hooks);
 
   test('Percy snapshot', async function (assert) {
     await visit('/editions/octane');
@@ -29,6 +25,6 @@ module('Acceptance | editions/octane', function (hooks) {
       },
     });
 
-    assert.hasPageTitle('Octane - Editions - Ember.js');
+    assertPageTitle(assert, 'Octane - Editions - Ember.js');
   });
 });

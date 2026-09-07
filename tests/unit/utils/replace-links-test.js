@@ -1,4 +1,4 @@
-import replaceLinks from 'ember-website/utils/replace-links';
+import { replaceLinks } from 'ember-website/utils/replace-links';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | replace-links', function () {

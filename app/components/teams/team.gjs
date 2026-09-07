@@ -1,5 +1,5 @@
+import { dasherize } from '@ember/string';
 import TeamsTeamMember from 'ember-website/components/teams/team/member';
-import dasherize from 'ember-website/helpers/dasherize';
 
 <template>
   <h2 class="text-center" data-test-field="Team Name" id={{dasherize @name}}>

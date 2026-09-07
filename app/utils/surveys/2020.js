@@ -1,4 +1,3 @@
-import Controller from '@ember/controller';
 import {
   AreaSplineChart,
   HorizontalBarChart,
@@ -6,9 +5,6 @@ import {
   VerticalBarChart,
 } from 'ember-website/utils/highcharts';
 
-// 2020 Color Palette
-// eslint-disable-next-line no-unused-vars
-const darkGrayColor = '#4b4b4b';
 // Ember Branding Color Palette
 const emberColors = {
   ember: '#E04E39',
@@ -31,12 +27,11 @@ const orangePalette = {
 };
 
 // Default Color Assignments for Yearly Graph Data Series
-var color2018 = emberColors.gray;
-var color2019 = emberColors.blue;
-var color2020 = orangePalette.orangeDarkest;
+const color2018 = emberColors.gray;
+const color2019 = emberColors.blue;
+const color2020 = orangePalette.orangeDarkest;
 
 // Begin Chart Definitions
-
 const stackColors = {
   htmlDark: '#E45126',
   htmlLight: '#F2682A',
@@ -155,51 +150,6 @@ const SS_Q204 = new PieChart({
     { color: emberColors.ember, label: 'No', value: 443 },
   ],
 });
-
-// Q3.01: How many developers at your company are responsible for writing Front-End code?
-//------------------------------------------------
-/*
-const SS_Q301 = new VerticalBarChart({
-  chart: {
-    categories: [
-      '1-10',
-      '11-20',
-      '21-50',
-      '51-100',
-      '> 100',
-      'I do not know',
-    ],
-    title: 'How many developers at your company are responsible for writing Front-End code?',
-  },
-
-  rawData: [
-    {
-      color: color2019,
-      label: '2019',
-      values: [
-        100 * (699 / 1180),
-        100 * (160 / 1180),
-        100 * (95 / 1180),
-        100 * (68 / 1180),
-        100 * (158 / 1180),
-        100 * (39 / 1180),
-      ],
-    },
-    {
-      color: color2020,
-      label: '2020',
-      values: [
-        100 * (441 / 752),
-        100 * (109 / 752),
-        100 * (61 / 752),
-        100 * (29 / 752),
-        100 * (112 / 752),
-        100 * (0 / 752),
-      ],
-    },
-  ],
-});
-*/
 
 // Q3.02: How many developers at your company are responsible for writing Ember code?
 //------------------------------------------------
@@ -486,49 +436,6 @@ const MS_Q406 = new VerticalBarChart({
   ],
 });
 
-// Q4.08: What testing framework(s) do you use in your Ember apps?
-//------------------------------------------------
-/*
-const MS_Q408 = new VerticalBarChart({
-  chart: {
-    categories: ['Mocha', 'QUnit', "I don't write tests", 'Other'],
-    title: 'What testing framework(s) do you use in your Ember apps?',
-  },
-
-  rawData: [
-    {
-      color: color2020,
-      label: '2020',
-      values: [
-        100 * (51 / 752),
-        100 * (603 / 752),
-        100 * (80 / 752),
-        100 * (18 / 752),
-      ],
-    },
-  ],
-});
-*/
-
-// Q4.12: What is the primary target platform for your Ember apps?
-//------------------------------------------------
-/*
-const MS_Q412 = new VerticalBarChart({
-  chart: {
-    categories: ['Desktop and mobile', 'Desktop only', 'Mobile only'],
-    title: 'What is the primary target platform for your Ember apps?',
-  },
-
-  rawData: [
-    {
-      color: color2020,
-      label: '2020',
-      values: [100 * (471 / 754), 100 * (281 / 754), 100 * (2 / 754)],
-    },
-  ],
-});
-*/
-
 // Q4.13: Who uses your application(s)?
 //------------------------------------------------
 // this is a single select now
@@ -566,26 +473,20 @@ const MS_Q601 = new PieChart({
   ],
 });
 
-//=============================================================================
-export default class Survey2020Controller extends Controller {
-  stackSkillsChart = stackSkillsChart;
-  SS_Q101 = SS_Q101;
-  SS_Q104 = SS_Q104;
-  SS_Q204 = SS_Q204;
-  // SS_Q301 = SS_Q301; // unused
-  SS_Q302 = SS_Q302;
-  SS_Q305 = SS_Q305;
-  SS_Q306 = SS_Q306;
-  //=============================================================================
-  MS_Q103 = MS_Q103;
-  MS_Q111 = MS_Q111;
-  MS_Q112 = MS_Q112;
-  MS_Q304 = MS_Q304;
-  MS_Q401 = MS_Q401;
-  MS_Q406 = MS_Q406;
-  // MS_Q408 = MS_Q408; // unused
-  // MS_Q412 = MS_Q412; // unused
-  MS_Q413 = MS_Q413;
-  MS_Q601 = MS_Q601;
-  //=============================================================================
-}
+export {
+  MS_Q103,
+  MS_Q111,
+  MS_Q112,
+  MS_Q304,
+  MS_Q401,
+  MS_Q406,
+  MS_Q413,
+  MS_Q601,
+  SS_Q101,
+  SS_Q104,
+  SS_Q204,
+  SS_Q302,
+  SS_Q305,
+  SS_Q306,
+  stackSkillsChart,
+};
