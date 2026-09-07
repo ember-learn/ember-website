@@ -8,7 +8,7 @@ export function assertPageTitle(assert: Assert, expectedValue: string): void {
     'We render the correct page title.',
   );
 
-  // Check meta tags created by `ember-cli-head`
+  // Check meta tags
   assert
     .dom(document.querySelector('meta[property="og:title"]'))
     .hasAttribute(

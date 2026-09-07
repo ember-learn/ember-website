@@ -1,5 +1,5 @@
-// @ts-expect-error: Incorrect type
-import HeadLayout from 'ember-cli-head/components/head-layout';
+import { type Registry as Services, service } from '@ember/service';
+import Component from '@glimmer/component';
 import { pageTitle } from 'ember-page-title';
 // @ts-expect-error: Incorrect type
 import EsFooter from 'ember-styleguide/components/es-footer';
@@ -9,21 +9,33 @@ import EsHeader from 'ember-styleguide/components/es-header';
 import { infoLinks } from 'ember-styleguide/constants/es-footer';
 // @ts-expect-error: Incorrect type
 import headerLinks from 'ember-styleguide/constants/links';
+import HeadLayout from 'ember-website/components/head-layout';
 import { replaceLinks } from 'ember-website/utils/replace-links';
 
-<template>
-  <HeadLayout />
+export default class Application extends Component {
+  @service declare headData: Services['head-data'];
 
-  {{pageTitle "Ember.js"}}
+  <template>
+    <HeadLayout>
+      {{! eslint-disable ember/template-no-forbidden-elements }}
+      {{! @glint-expect-error: Incorrect type }}
+      <meta property="st:title" content={{this.headData.pageTitle}} />
+      {{! @glint-expect-error: Incorrect type }}
+      <meta property="og:title" content={{this.headData.pageTitle}} />
+      <meta name="twitter:title" content={{this.headData.pageTitle}} />
+    </HeadLayout>
 
-  <EsHeader @home="/" @links={{replaceLinks headerLinks}} />
+    {{pageTitle "Ember.js"}}
 
-  <main>
-    {{outlet}}
-  </main>
+    <EsHeader @home="/" @links={{replaceLinks headerLinks}} />
 
-  <EsFooter
-    @contributeLink="https://github.com/ember-learn/ember-website"
-    @infoLinks={{replaceLinks infoLinks}}
-  />
-</template>
+    <main>
+      {{outlet}}
+    </main>
+
+    <EsFooter
+      @contributeLink="https://github.com/ember-learn/ember-website"
+      @infoLinks={{replaceLinks infoLinks}}
+    />
+  </template>
+}
