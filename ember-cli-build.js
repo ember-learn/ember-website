@@ -1,6 +1,9 @@
 'use strict';
 
+const { compatBuild } = require('@embroider/compat');
+const { Webpack } = require('@embroider/webpack');
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const { prerender } = require('prember');
 
 module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
@@ -8,18 +11,8 @@ module.exports = function (defaults) {
       plugins: [require.resolve('ember-auto-import/babel-plugin')],
     },
 
-    autoImport: {
-      alias: {
-        'ember-composable-helpers': '@nullvoxpopuli/ember-composable-helpers',
-      },
-    },
-
     'ember-cli-babel': {
       enableTypeScriptTransform: true,
-    },
-
-    'ember-composable-helpers': {
-      only: ['filter-by', 'reject-by', 'sort-by'],
     },
 
     emberData: {
@@ -92,35 +85,32 @@ module.exports = function (defaults) {
         'teams',
       ],
     },
-
-    'responsive-image': {
-      images: [
-        {
-          include: 'images/team/*',
-          widths: [100, 200],
-          lqip: {
-            type: 'blurhash',
-          },
-          removeSource: true,
-          // don't scale images, just copy as-is in dev mode, to not slow down the build
-          justCopy: process.env.EMBER_ENV !== 'production',
-        },
-        {
-          include: 'images/tomsters/**/*.png',
-          widths: [
-            320, // mobile
-            640, // mobile 2x
-            750, // iPhone 2x
-            242, // desktop
-            484, // desktop 2x
-          ],
-          removeSource: false,
-          // don't scale images, just copy as-is in dev mode, to not slow down the build
-          justCopy: process.env.EMBER_ENV !== 'production',
-        },
-      ],
-    },
   });
 
-  return app.toTree();
+  const options = {
+    packagerOptions: {
+      publicAssetURL: '/',
+      webpackConfig: {
+        resolve: {
+          alias: {
+            'ember-composable-helpers':
+              '@nullvoxpopuli/ember-composable-helpers',
+          },
+        },
+      },
+    },
+    skipBabel: [
+      {
+        package: 'qunit',
+      },
+    ],
+    staticAddonTestSupportTrees: true,
+    staticAddonTrees: true,
+    staticEmberSource: true,
+    staticInvokables: true,
+  };
+
+  const compiledApp = compatBuild(app, Webpack, options);
+
+  return prerender(app, compiledApp);
 };

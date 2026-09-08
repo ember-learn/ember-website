@@ -25,10 +25,6 @@ module.exports = function (environment) {
       algoliaKey: '760969ef081fcadc7e0e60faefdb0907',
     },
 
-    'ember-cli-mirage': {
-      enabled: false,
-    },
-
     fastboot: {
       hostWhitelist: [/^localhost:\d+$/],
     },
@@ -57,10 +53,6 @@ module.exports = function (environment) {
 
     ENV.APP.rootElement = '#ember-testing';
     ENV.APP.autoboot = false;
-
-    ENV['ember-cli-mirage'] = {
-      enabled: true,
-    };
   }
 
   if (environment === 'production') {

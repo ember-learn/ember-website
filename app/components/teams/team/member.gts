@@ -1,5 +1,4 @@
 import type { TOC } from '@ember/component/template-only';
-import ResponsiveImage from 'ember-responsive-image/components/responsive-image';
 // @ts-expect-error: Incorrect type
 import EsIcon from 'ember-styleguide/components/es-icon';
 import type TeamMember from 'ember-website/models/team-member';
@@ -12,9 +11,9 @@ interface TeamsTeamMemberSignature {
 
 <template>
   <div class="text-center" data-test-member={{@member.name}}>
-    <ResponsiveImage
-      @src="/images/team/{{@member.image}}"
-      @width={{100}}
+    <img
+      src="/images/team/{{@member.image}}"
+      width={{100}}
       alt=""
       class="team-image"
       role="presentation"

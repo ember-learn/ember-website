@@ -1,5 +1,4 @@
 import type { TOC } from '@ember/component/template-only';
-import ResponsiveImage from 'ember-responsive-image/components/responsive-image';
 import formatDateTime from 'ember-website/helpers/format-date-time';
 import type Tomster from 'ember-website/models/tomster';
 
@@ -12,8 +11,8 @@ interface MascotsMascotListItemSignature {
 <template>
   <figure class="mascot-item" id={{@mascot.id}}>
     <div class="well well-1/1">
-      <ResponsiveImage
-        @src="/images/tomsters/{{@mascot.image}}"
+      <img
+        src="/images/tomsters/{{@mascot.image}}"
         alt=""
         role="presentation"
         data-test-field="Image"
