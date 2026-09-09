@@ -20,8 +20,8 @@ interface EmberCommunitySurveySponsorSignature {
 
       <a
         class="survey-sponsor-link"
-        href={{@sponsor.website}}
         data-test-link="Sponsor Website"
+        href={{@sponsor.website}}
         rel="noopener noreferrer"
         target="_blank"
       >

@@ -17,11 +17,11 @@ import EmberCommunitySurveySection from 'ember-website/components/ember-communit
     <div class="mt-3">
       <a
         class="es-button"
+        {{! @glint-expect-error: Incorrect type }}
+        disabled
         href="/"
         rel="noopener noreferrer"
         target="_blank"
-        {{! @glint-expect-error: Incorrect type }}
-        disabled
       >
         Stay Tuned for 2022!
       </a>
@@ -126,8 +126,8 @@ import EmberCommunitySurveySection from 'ember-website/components/ember-communit
         {{! eslint-disable-next-line ember/template-no-forbidden-elements }}
         <script
           async
-          src="https://platform.twitter.com/widgets.js"
           charset="utf-8"
+          src="https://platform.twitter.com/widgets.js"
         ></script>
       </div>
 

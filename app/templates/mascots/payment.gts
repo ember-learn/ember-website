@@ -13,54 +13,54 @@ import { LinkTo } from '@ember/routing';
         first. 🙂</p>
 
       <form
-        id="form35"
-        name="form35"
-        class="tomster-form wufoo topLabel page1"
         accept-charset="UTF-8"
-        autocomplete="off"
-        enctype="multipart/form-data"
-        method="post"
-        novalidate=""
         action="https://tilde.wufoo.com/forms/q3qhbsp095gijb"
+        autocomplete="off"
+        class="tomster-form wufoo topLabel page1"
+        enctype="multipart/form-data"
+        id="form35"
+        method="post"
+        name="form35"
+        novalidate=""
       >
         <ul>
-          <li id="fo35li1" class="notranslate">
+          <li class="notranslate" id="fo35li1">
             <fieldset>
               <legend class="desc" id="title1">
                 Name
-                <span id="req_1" class="req">*</span>
+                <span class="req" id="req_1">*</span>
               </legend>
 
               <span>
                 <input
+                  class="field text fn"
                   id="Field1"
                   name="Field1"
-                  type="text"
-                  class="field text fn"
-                  value=""
-                  size="8"
-                  tabindex="0"
-                  onkeyup="handleInput(this);"
                   onchange="handleInput(this);"
+                  onkeyup="handleInput(this);"
                   placeholder=""
                   required=""
+                  size="8"
+                  tabindex="0"
+                  type="text"
+                  value=""
                 />
                 <label for="Field1">First</label>
               </span>
 
               <span>
                 <input
+                  class="field text ln"
                   id="Field2"
                   name="Field2"
-                  type="text"
-                  class="field text ln"
-                  value=""
-                  size="14"
-                  tabindex="0"
-                  onkeyup="handleInput(this);"
                   onchange="handleInput(this);"
+                  onkeyup="handleInput(this);"
                   placeholder=""
                   required=""
+                  size="14"
+                  tabindex="0"
+                  type="text"
+                  value=""
                 />
                 <label for="Field2">Last</label>
               </span>
@@ -68,129 +68,129 @@ import { LinkTo } from '@ember/routing';
           </li>
 
           <li
-            id="fo35li9"
-            data-wufoo-field=""
-            data-field-type="text"
             class="notranslate"
+            data-field-type="text"
+            data-wufoo-field=""
+            id="fo35li9"
           >
-            <label class="desc" id="title9" for="Field9"> Company </label>
+            <label class="desc" for="Field9" id="title9"> Company </label>
 
             <div>
               <input
-                id="Field9"
-                name="Field9"
-                type="text"
                 class="field text medium"
-                value=""
+                id="Field9"
                 maxlength="255"
-                tabindex="0"
-                onkeyup="handleInput(this); "
+                name="Field9"
                 onchange="handleInput(this);"
+                onkeyup="handleInput(this); "
                 placeholder=""
+                tabindex="0"
+                type="text"
+                value=""
               />
             </div>
           </li>
 
-          <li id="fo35li3" class="notranslate">
-            <label class="desc" id="title3" for="Field3">
+          <li class="notranslate" id="fo35li3">
+            <label class="desc" for="Field3" id="title3">
               Email
-              <span id="req_3" class="req">*</span>
+              <span class="req" id="req_3">*</span>
             </label>
 
             <div>
               <input
-                id="Field3"
-                name="Field3"
-                type="email"
-                spellcheck="false"
                 class="field text medium"
-                value=""
+                id="Field3"
                 maxlength="255"
-                tabindex="0"
-                onkeyup="handleInput(this);"
+                name="Field3"
                 onchange="handleInput(this);"
+                onkeyup="handleInput(this);"
                 placeholder=""
                 required=""
+                spellcheck="false"
+                tabindex="0"
+                type="email"
+                value=""
               />
             </div>
           </li>
 
           <li
-            id="fo35li11"
-            data-wufoo-field=""
-            data-field-type="text"
             class="notranslate"
+            data-field-type="text"
+            data-wufoo-field=""
+            id="fo35li11"
           >
-            <label class="desc" id="title11" for="Field11">
+            <label class="desc" for="Field11" id="title11">
               Which Tomster and/or Zoey is this payment for?
-              <span id="req_11" class="req">*</span>
+              <span class="req" id="req_11">*</span>
             </label>
 
             <div>
               <input
-                id="Field11"
-                name="Field11"
-                type="text"
                 class="field text medium"
-                value=""
+                id="Field11"
                 maxlength="255"
-                tabindex="0"
-                onkeyup="handleInput(this); "
+                name="Field11"
                 onchange="handleInput(this);"
-                required=""
+                onkeyup="handleInput(this); "
                 placeholder=""
+                required=""
+                tabindex="0"
+                type="text"
+                value=""
               />
             </div>
           </li>
 
-          <li id="fo35li4" class="notranslate">
+          <li class="notranslate" id="fo35li4">
             <fieldset>
               <legend class="desc" id="title4">
                 Commission Amount (USD)
-                <span id="req_4" class="req">*</span>
+                <span class="req" id="req_4">*</span>
               </legend>
 
               <span>
                 <input
+                  class="field text currency nospin"
                   id="Field4"
                   name="Field4"
-                  type="text"
-                  class="field text currency nospin"
-                  value=""
+                  onchange="handleInput(this);"
+                  onkeyup="handleInput(this);"
+                  required=""
                   size="10"
                   tabindex="0"
-                  onkeyup="handleInput(this);"
-                  onchange="handleInput(this);"
-                  required=""
+                  type="text"
+                  value=""
                 />
                 <label for="Field4">Dollars</label>
               </span>
 
               <span class="cents">
                 <input
-                  id="Field4-1"
-                  name="Field4-1"
-                  type="text"
                   class="field text nospin"
-                  value=""
-                  size="2"
+                  id="Field4-1"
                   maxlength="2"
-                  tabindex="0"
-                  onkeyup="handleInput(this);"
+                  name="Field4-1"
                   onchange="handleInput(this);"
+                  onkeyup="handleInput(this);"
+                  size="2"
+                  tabindex="0"
+                  type="text"
+                  value=""
                 />
                 <label for="Field4-1">Cents</label>
               </span>
             </fieldset>
           </li>
 
-          <li id="fo35li16" class="">
+          <li class="" id="fo35li16">
             <fieldset>
               {{![if !IE | (gte IE 8)]}}
-              <legend id="title16" class="desc notranslate">
+              <legend class="desc notranslate" id="title16">
                 I can confirm that I have already signed the Licensing agreement
                 I was previously sent via HelloSign.
-                <span id="req_16" class="req">*</span>
+                <span class="req" id="req_16">*</span>
               </legend>
               {{![endif]}}
 
@@ -205,13 +205,13 @@ import { LinkTo } from '@ember/routing';
               <div>
                 <span class="subfield">
                   <input
+                    class="field checkbox"
                     id="Field16"
                     name="Field16"
-                    type="checkbox"
-                    class="field checkbox"
-                    value="Confirmed, it's been signed!"
-                    tabindex="0"
                     onchange="handleInput(this);"
+                    tabindex="0"
+                    type="checkbox"
+                    value="Confirmed, it's been signed!"
                   />
 
                   <label class="choice" for="Field16">
@@ -223,13 +223,13 @@ import { LinkTo } from '@ember/routing';
 
                 <span class="subfield">
                   <input
+                    class="field checkbox"
                     id="Field17"
                     name="Field17"
-                    type="checkbox"
-                    class="field checkbox"
-                    value="I haven't, so I shouldn't be submitting this payment yet..."
-                    tabindex="0"
                     onchange="handleInput(this);"
+                    tabindex="0"
+                    type="checkbox"
+                    value="I haven't, so I shouldn't be submitting this payment yet..."
                   />
 
                   <label class="choice" for="Field17">
@@ -241,13 +241,13 @@ import { LinkTo } from '@ember/routing';
 
                 <span class="subfield">
                   <input
+                    class="field checkbox"
                     id="Field18"
                     name="Field18"
-                    type="checkbox"
-                    class="field checkbox"
-                    value="This payment is covering official project variants, so no licensing agreement is needed."
-                    tabindex="0"
                     onchange="handleInput(this);"
+                    tabindex="0"
+                    type="checkbox"
+                    value="This payment is covering official project variants, so no licensing agreement is needed."
                   />
 
                   <label class="choice" for="Field18">
@@ -264,49 +264,49 @@ import { LinkTo } from '@ember/routing';
           <li class="buttons">
             <div>
               <input
-                type="hidden"
-                name="currentPage"
                 id="currentPage"
+                name="currentPage"
+                type="hidden"
                 value="4MEwuslashIt71HHTl4RHHwuBejVv47f4wuslashdPwuBeUDhWl3a811Scy1w="
               />
 
               <input
+                class="es-button button-dark"
                 id="saveForm"
                 name="saveForm"
-                class="es-button button-dark"
-                type="submit"
-                value="Let's Do This!"
                 {{! eslint-disable-next-line ember/template-no-pointer-down-event-binding }}
                 onmousedown="doSubmitEvents();"
+                type="submit"
+                value="Let's Do This!"
               />
             </div>
           </li>
 
           <li class="hide">
             <label for="comment">Do Not Fill This Out</label>
-            <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+            <textarea cols="1" id="comment" name="comment" rows="1"></textarea>
             <input
-              type="hidden"
               id="idstamp"
               name="idstamp"
+              type="hidden"
               value="4hFMwfQHT3iHQJczq5EUJA=="
             />
             <input
-              type="hidden"
               id="encryptedPassword"
               name="encryptedPassword"
+              type="hidden"
               value=""
             />
             <input
-              type="hidden"
               id="stats"
               name="stats"
+              type="hidden"
               value='{"errors":0,"startTime":0,"endTime":0,"referer":null}'
             />
             <input
-              type="hidden"
               id="clickOrEnter"
               name="clickOrEnter"
+              type="hidden"
               value=""
             />
           </li>
@@ -317,9 +317,9 @@ import { LinkTo } from '@ember/routing';
     <div class="lg:col-2 hide-on-mobile">
       <img
         alt=""
-        src="/images/tomster-faq.png"
-        role="presentation"
         loading="lazy"
+        role="presentation"
+        src="/images/tomster-faq.png"
       />
     </div>
   </section>

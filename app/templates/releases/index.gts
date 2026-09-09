@@ -19,8 +19,8 @@ interface ReleasesIndexSignature {
     cycle, and a strong commitment to
     <a
       href="https://semver.org/"
-      target="_blank"
       rel="noopener noreferrer"
+      target="_blank"
     >Semantic Versioning</a>.
   </p>
 

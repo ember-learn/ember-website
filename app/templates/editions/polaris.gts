@@ -4,7 +4,7 @@ import { pageTitle } from 'ember-page-title';
 <template>
   {{pageTitle "Polaris"}}
 
-  <section class="container" aria-labelledby="octane-edition">
+  <section aria-labelledby="octane-edition" class="container">
     <h1 id="octane-edition">The Polaris Edition of Ember</h1>
     <p class="intro">
       We are now full steam ahead on getting this next edition of Ember
@@ -104,8 +104,8 @@ import { pageTitle } from 'ember-page-title';
         to join the forums or chat! The
         <a
           href="https://discord.gg/emberjs"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >Ember Discord</a>
         has channels specifically for Polaris where you can search for other
         people's questions too. Read the "welcome" and "setup profile" channels

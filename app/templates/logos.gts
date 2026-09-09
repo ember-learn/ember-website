@@ -13,8 +13,8 @@ import { pageTitle } from 'ember-page-title';
         ensure consistency across all Ember properties.</p>
       <p><a
           href="/pdfs/Ember-Brand-Guidelines.pdf"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >Download brand guidelines (PDF)</a></p>
     </section>
 
@@ -32,8 +32,8 @@ import { pageTitle } from 'ember-page-title';
         a trademark of Tilde Inc."</p>
       <p><a
           href="https://github.com/ember-learn/ember-website/tree/main/public/images/brand/Ember%20Logos"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >View logo files on GitHub</a></p>
     </section>
 
@@ -42,23 +42,23 @@ import { pageTitle } from 'ember-page-title';
       <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
         <li><img
             alt="Ember dark background"
-            src="/images/brand/ember-4c.svg"
             loading="lazy"
+            src="/images/brand/ember-4c.svg"
           /></li>
         <li><img
             alt="Ember white background"
-            src="/images/brand/ember-4c.svg"
             loading="lazy"
+            src="/images/brand/ember-4c.svg"
           /></li>
         <li><img
             alt="Ember red background white font"
-            src="/images/brand/ember-1c-on-dark-bg.svg"
             loading="lazy"
+            src="/images/brand/ember-1c-on-dark-bg.svg"
           /></li>
         <li><img
             alt="Ember black font"
-            src="/images/brand/ember-1c-on-light-bg.svg"
             loading="lazy"
+            src="/images/brand/ember-1c-on-light-bg.svg"
           /></li>
       </ul>
       <p>The Ember logo can be used on websites, mobile apps, or in printed
@@ -77,23 +77,23 @@ import { pageTitle } from 'ember-page-title';
       <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
         <li><img
             alt="Tomster lockup dark background"
-            src="/images/brand/ember-tomster-lockup-4c.svg"
             loading="lazy"
+            src="/images/brand/ember-tomster-lockup-4c.svg"
           /></li>
         <li><img
             alt="Tomster lockup light background"
-            src="/images/brand/ember-tomster-lockup-4c.svg"
             loading="lazy"
+            src="/images/brand/ember-tomster-lockup-4c.svg"
           /></li>
         <li><img
             alt="Tomster lockup red background"
-            src="/images/brand/ember-tomster-lockup-4c.svg"
             loading="lazy"
+            src="/images/brand/ember-tomster-lockup-4c.svg"
           /></li>
         <li><img
             alt="Tomster lockup transparent background"
-            src="/images/brand/ember-tomster-lockup-4c.svg"
             loading="lazy"
+            src="/images/brand/ember-tomster-lockup-4c.svg"
           /></li>
       </ul>
       <p>A fun alternative to the primary logotype is the Tomster lockup. It’s
@@ -108,18 +108,18 @@ import { pageTitle } from 'ember-page-title';
           <ul class="grid lg:grid-3 sm:grid-3 unstyled-list">
             <li><img
                 alt="Ember E square dark background"
-                src="/images/brand/ember-e-square-icon-4c.svg"
                 loading="lazy"
+                src="/images/brand/ember-e-square-icon-4c.svg"
               /></li>
             <li><img
                 alt="Ember E rounded rectangle dark background"
-                src="/images/brand/ember-e-rounded-icon-4c.svg"
                 loading="lazy"
+                src="/images/brand/ember-e-rounded-icon-4c.svg"
               /></li>
             <li><img
                 alt="Ember E circle dark background"
-                src="/images/brand/ember-e-circle-icon-4c.svg"
                 loading="lazy"
+                src="/images/brand/ember-e-circle-icon-4c.svg"
               /></li>
           </ul>
         </li>
@@ -127,18 +127,18 @@ import { pageTitle } from 'ember-page-title';
           <ul class="grid lg:grid-3 sm:grid-3 unstyled-list">
             <li><img
                 alt="Ember E square light background"
-                src="/images/brand/ember-e-square-icon-4c.svg"
                 loading="lazy"
+                src="/images/brand/ember-e-square-icon-4c.svg"
               /></li>
             <li><img
                 alt="Ember E rounded rectangle light background"
-                src="/images/brand/ember-e-rounded-icon-4c.svg"
                 loading="lazy"
+                src="/images/brand/ember-e-rounded-icon-4c.svg"
               /></li>
             <li><img
                 alt="Ember E circle light background"
-                src="/images/brand/ember-e-circle-icon-4c.svg"
                 loading="lazy"
+                src="/images/brand/ember-e-circle-icon-4c.svg"
               /></li>
           </ul>
         </li>
@@ -146,18 +146,18 @@ import { pageTitle } from 'ember-page-title';
           <ul class="grid lg:grid-3 sm:grid-3 unstyled-list">
             <li><img
                 alt="Ember E white square"
-                src="/images/brand/ember-e-square-icon-1c-on-dark-bg.svg"
                 loading="lazy"
+                src="/images/brand/ember-e-square-icon-1c-on-dark-bg.svg"
               /></li>
             <li><img
                 alt="Ember E white rounded rectangle"
-                src="/images/brand/ember-e-rounded-icon-1c-on-dark-bg.svg"
                 loading="lazy"
+                src="/images/brand/ember-e-rounded-icon-1c-on-dark-bg.svg"
               /></li>
             <li><img
                 alt="Ember E white circle"
-                src="/images/brand/ember-e-circle-icon-1c-on-dark-bg.svg"
                 loading="lazy"
+                src="/images/brand/ember-e-circle-icon-1c-on-dark-bg.svg"
               /></li>
           </ul>
         </li>
@@ -165,18 +165,18 @@ import { pageTitle } from 'ember-page-title';
           <ul class="grid lg:grid-3 sm:grid-3 unstyled-list">
             <li><img
                 alt="Ember E black square"
-                src="/images/brand/ember-e-square-icon-1c-on-light-bg.svg"
                 loading="lazy"
+                src="/images/brand/ember-e-square-icon-1c-on-light-bg.svg"
               /></li>
             <li><img
                 alt="Ember E black rounded rectangle"
-                src="/images/brand/ember-e-rounded-icon-1c-on-light-bg.svg"
                 loading="lazy"
+                src="/images/brand/ember-e-rounded-icon-1c-on-light-bg.svg"
               /></li>
             <li><img
                 alt="Ember E black circle"
-                src="/images/brand/ember-e-circle-icon-1c-on-light-bg.svg"
                 loading="lazy"
+                src="/images/brand/ember-e-circle-icon-1c-on-light-bg.svg"
               /></li>
           </ul>
         </li>
@@ -191,45 +191,45 @@ import { pageTitle } from 'ember-page-title';
       <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
         <li><img
             alt="Ember CLI dark background"
-            src="/images/brand/ember-cli-4c-on-dark-bg.svg"
             loading="lazy"
+            src="/images/brand/ember-cli-4c-on-dark-bg.svg"
           /></li>
         <li><img
             alt="Ember CLI light background"
-            src="/images/brand/ember-cli-4c-on-light-bg.svg"
             loading="lazy"
+            src="/images/brand/ember-cli-4c-on-light-bg.svg"
           /></li>
         <li><img
             alt="Ember CLI red background white font"
-            src="/images/brand/ember-cli-1c-on-dark-bg.svg"
             loading="lazy"
+            src="/images/brand/ember-cli-1c-on-dark-bg.svg"
           /></li>
         <li><img
             alt="Ember CLI black font"
-            src="/images/brand/ember-cli-1c-on-light-bg.svg"
             loading="lazy"
+            src="/images/brand/ember-cli-1c-on-light-bg.svg"
           /></li>
       </ul>
       <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
         <li><img
             alt="Ember Data dark background"
-            src="/images/brand/ember-data-4c-on-dark-bg.svg"
             loading="lazy"
+            src="/images/brand/ember-data-4c-on-dark-bg.svg"
           /></li>
         <li><img
             alt="Ember Data light background"
-            src="/images/brand/ember-data-4c-on-light-bg.svg"
             loading="lazy"
+            src="/images/brand/ember-data-4c-on-light-bg.svg"
           /></li>
         <li><img
             alt="Ember Data red background white font"
-            src="/images/brand/ember-data-1c-on-dark-bg.svg"
             loading="lazy"
+            src="/images/brand/ember-data-1c-on-dark-bg.svg"
           /></li>
         <li><img
             alt="Ember Data black font"
-            src="/images/brand/ember-data-1c-on-light-bg.svg"
             loading="lazy"
+            src="/images/brand/ember-data-1c-on-light-bg.svg"
           /></li>
       </ul>
       <p>The Ember project has numerous projects under its umbrella. These other
@@ -241,45 +241,45 @@ import { pageTitle } from 'ember-page-title';
       <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
         <li><img
             alt="Glimmer dark background"
-            src="/images/brand/glimmer-4c-on-dark-bg.svg"
             loading="lazy"
+            src="/images/brand/glimmer-4c-on-dark-bg.svg"
           /></li>
         <li><img
             alt="Glimmer light background"
-            src="/images/brand/glimmer-4c-on-light-bg.svg"
             loading="lazy"
+            src="/images/brand/glimmer-4c-on-light-bg.svg"
           /></li>
         <li><img
             alt="Glimmer red background white font"
-            src="/images/brand/glimmer-1c-on-dark-bg.svg"
             loading="lazy"
+            src="/images/brand/glimmer-1c-on-dark-bg.svg"
           /></li>
         <li><img
             alt="Glimmer black font"
-            src="/images/brand/glimmer-1c-on-light-bg.svg"
             loading="lazy"
+            src="/images/brand/glimmer-1c-on-light-bg.svg"
           /></li>
       </ul>
       <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
         <li><img
             alt="Embroider dark background"
-            src="/images/brand/embroider-4c-on-dark-bg.svg"
             loading="lazy"
+            src="/images/brand/embroider-4c-on-dark-bg.svg"
           /></li>
         <li><img
             alt="Embroider light background"
-            src="/images/brand/embroider-4c-on-light-bg.svg"
             loading="lazy"
+            src="/images/brand/embroider-4c-on-light-bg.svg"
           /></li>
         <li><img
             alt="Embroider red background white font"
-            src="/images/brand/embroider-1c-on-dark-bg.svg"
             loading="lazy"
+            src="/images/brand/embroider-1c-on-dark-bg.svg"
           /></li>
         <li><img
             alt="Embroider black font"
-            src="/images/brand/embroider-1c-on-light-bg.svg"
             loading="lazy"
+            src="/images/brand/embroider-1c-on-light-bg.svg"
           /></li>
       </ul>
       <p>There are some projects that, while independent, integrate tightly with
@@ -292,45 +292,45 @@ import { pageTitle } from 'ember-page-title';
       <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
         <li><img
             alt="Ember Discuss dark background"
-            src="/images/brand/ember-discuss-4c.svg"
             loading="lazy"
+            src="/images/brand/ember-discuss-4c.svg"
           /></li>
         <li><img
             alt="Ember Discuss light background"
-            src="/images/brand/ember-discuss-4c.svg"
             loading="lazy"
+            src="/images/brand/ember-discuss-4c.svg"
           /></li>
         <li><img
             alt="Ember Discuss red background white font"
-            src="/images/brand/ember-discuss-1c-on-dark-bg.svg"
             loading="lazy"
+            src="/images/brand/ember-discuss-1c-on-dark-bg.svg"
           /></li>
         <li><img
             alt="Ember Discuss black font"
-            src="/images/brand/ember-discuss-1c-on-light-bg.svg"
             loading="lazy"
+            src="/images/brand/ember-discuss-1c-on-light-bg.svg"
           /></li>
       </ul>
       <ul class="brand-logos grid lg:grid-4 sm:grid-2 unstyled-list">
         <li><img
             alt="Ember Times dark background"
-            src="/images/brand/the-ember-times-4c.svg"
             loading="lazy"
+            src="/images/brand/the-ember-times-4c.svg"
           /></li>
         <li><img
             alt="Ember Times light background"
-            src="/images/brand/the-ember-times-4c.svg"
             loading="lazy"
+            src="/images/brand/the-ember-times-4c.svg"
           /></li>
         <li><img
             alt="Ember Times red background white font"
-            src="/images/brand/the-ember-times-1c-on-dark-bg.svg"
             loading="lazy"
+            src="/images/brand/the-ember-times-1c-on-dark-bg.svg"
           /></li>
         <li><img
             alt="Ember Times black font"
-            src="/images/brand/the-ember-times-1c-on-light-bg.svg"
             loading="lazy"
+            src="/images/brand/the-ember-times-1c-on-light-bg.svg"
           /></li>
       </ul>
       <p>Ember communities and smaller projects have logos based on Ember’s code

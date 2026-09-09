@@ -3,7 +3,7 @@ import { pageTitle } from 'ember-page-title';
 <template>
   {{pageTitle "TypeScript Support"}}
 
-  <section class="container" aria-labelledby="typescript-support">
+  <section aria-labelledby="typescript-support" class="container">
     <div class="layout">
       <div class="lg:col-4 lg:start-2 text-muted mb-5">
         <h1 id="typescript-support">

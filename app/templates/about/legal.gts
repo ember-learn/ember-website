@@ -4,7 +4,7 @@ import { pageTitle } from 'ember-page-title';
 <template>
   {{pageTitle "Legal"}}
 
-  <section class="container" aria-labelledby="legal">
+  <section aria-labelledby="legal" class="container">
     <h1 id="legal">Legal</h1>
     <p>
       Ember is a registered trademark owned by
@@ -61,11 +61,11 @@ import { pageTitle } from 'ember-page-title';
       </div>
       <div class="lg:col-1 sm:col-1">
         <img
-          role="presentation"
           alt=""
           class="right"
-          src="/images/legal/license-cc_by_nc_sa.png"
           loading="lazy"
+          role="presentation"
+          src="/images/legal/license-cc_by_nc_sa.png"
         />
       </div>
     </div>

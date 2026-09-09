@@ -13,7 +13,7 @@ interface EmberUsersSignature {
 <template>
   {{pageTitle "Who's Using Ember.js"}}
 
-  <section class="container" aria-labelledby="ember-users">
+  <section aria-labelledby="ember-users" class="container">
     <div class="layout">
       <div class="lg:col-4 lg:start-2 text-center text-muted mb-5">
         <h1 id="ember-users">
@@ -39,15 +39,15 @@ interface EmberUsersSignature {
         {{#each (sortBy "featured:desc" "added" @model) as |user|}}
           <li>
             <a
+              class="well well-16/9"
               href={{user.url}}
               rel="nofollow noopener noreferrer"
               target="_blank"
-              class="well well-16/9"
             >
               <img
                 alt={{user.name}}
-                src="/images/users/{{user.image}}"
                 loading="lazy"
+                src="/images/users/{{user.image}}"
               />
             </a>
           </li>
@@ -56,8 +56,8 @@ interface EmberUsersSignature {
     </section>
 
     <section
-      class="layout"
       aria-labelledby="section-ember-users-please-introduce-yourself"
+      class="layout"
     >
       <div class="lg:col-5">
         <h2 id="section-ember-users-please-introduce-yourself">Please Introduce

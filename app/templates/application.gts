@@ -19,10 +19,10 @@ export default class Application extends Component {
     <HeadLayout>
       {{! eslint-disable ember/template-no-forbidden-elements }}
       {{! @glint-expect-error: Incorrect type }}
-      <meta property="st:title" content={{this.headData.pageTitle}} />
+      <meta content={{this.headData.pageTitle}} property="st:title" />
       {{! @glint-expect-error: Incorrect type }}
-      <meta property="og:title" content={{this.headData.pageTitle}} />
-      <meta name="twitter:title" content={{this.headData.pageTitle}} />
+      <meta content={{this.headData.pageTitle}} property="og:title" />
+      <meta content={{this.headData.pageTitle}} name="twitter:title" />
     </HeadLayout>
 
     {{pageTitle "Ember.js"}}

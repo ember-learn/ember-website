@@ -1,14 +1,14 @@
 import { LinkTo } from '@ember/routing';
 
 <template>
-  <section class="container" aria-labelledby="ember-editions">
+  <section aria-labelledby="ember-editions" class="container">
     <h1 id="ember-editions">Ember Editions</h1>
     <p>
       Editions are a concept that were introduced to Ember with
       <a
         href="https://github.com/emberjs/rfcs/blob/master/text/0364-roadmap-2018.md"
-        target="_blank"
         rel="noopener noreferrer"
+        target="_blank"
       >RFC #364 - Ember 2018 Roadmap</a>. An edition represents a cohesive
       programming model, and releasing a new edition represents a shift in the
       programming model due to new features and concepts being added to Ember.
@@ -39,7 +39,7 @@ import { LinkTo } from '@ember/routing';
       <li>
         <LinkTo @route="editions.octane">
           <div class="well p-5">
-            <img src="/images/tomsters/octane.png" alt="" role="presentation" />
+            <img alt="" role="presentation" src="/images/tomsters/octane.png" />
           </div>
           Octane (March 2019)
         </LinkTo>
@@ -48,9 +48,9 @@ import { LinkTo } from '@ember/routing';
         <LinkTo @route="editions.polaris">
           <div class="well p-5">
             <img
-              src="/images/tomsters/polaris.png"
               alt=""
               role="presentation"
+              src="/images/tomsters/polaris.png"
             />
           </div>
           Polaris

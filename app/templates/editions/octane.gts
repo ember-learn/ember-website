@@ -4,7 +4,7 @@ import { pageTitle } from 'ember-page-title';
 <template>
   {{pageTitle "Octane"}}
 
-  <section class="container" aria-labelledby="octane-edition">
+  <section aria-labelledby="octane-edition" class="container">
     <h1 id="octane-edition">The Octane Edition of Ember</h1>
     <p class="intro">
       It has arrived! As of version 3.15 of Ember, when you generate a new app,

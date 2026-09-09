@@ -12,7 +12,7 @@ import { LinkTo } from '@ember/routing';
 
       <p>Most of the Tomsters and Zoeys we design fit into a somewhat standard
         mold. You can
-        <a href="/pdfs/Mascot-Pricing.pdf" download>download the pricing sheet</a>
+        <a download href="/pdfs/Mascot-Pricing.pdf">download the pricing sheet</a>
         to learn about the standard options.</p>
 
       <p>Filling out this form is the first step to commissioning your custom
@@ -20,73 +20,73 @@ import { LinkTo } from '@ember/routing';
         and next steps.</p>
 
       <form
-        id="tomster-commission-form"
-        name="tomster-commission-form"
-        class="tomster-form wufoo topLabel page"
         accept-charset="UTF-8"
-        autocomplete="off"
-        enctype="multipart/form-data"
-        method="post"
-        novalidate
         action="https://tilde.wufoo.com/forms/q14mw9qi196f6oy/#public"
+        autocomplete="off"
+        class="tomster-form wufoo topLabel page"
+        enctype="multipart/form-data"
+        id="tomster-commission-form"
+        method="post"
+        name="tomster-commission-form"
+        novalidate
       >
         <ul>
           <li id="foli3">
-            <label class="desc" id="title3" for="Field3">
+            <label class="desc" for="Field3" id="title3">
               Name
-              <span id="req_3" class="req">*</span>
+              <span class="req" id="req_3">*</span>
             </label>
             <div>
               <input
-                id="Field3"
-                name="Field3"
-                type="text"
                 class="field"
-                value=""
+                id="Field3"
                 maxlength="255"
-                tabindex="0"
+                name="Field3"
                 onkeyup=""
                 required
+                tabindex="0"
+                type="text"
+                value=""
               />
             </div>
           </li>
           <li id="foli4">
-            <label class="desc" id="title4" for="Field4">
+            <label class="desc" for="Field4" id="title4">
               Email
-              <span id="req_4" class="req">*</span>
+              <span class="req" id="req_4">*</span>
             </label>
             <div>
               <input
-                id="Field4"
-                name="Field4"
-                type="email"
-                spellcheck="false"
                 class="field"
-                value=""
+                id="Field4"
                 maxlength="255"
-                tabindex="0"
+                name="Field4"
                 required
+                spellcheck="false"
+                tabindex="0"
+                type="email"
+                value=""
               />
             </div>
           </li>
           <li id="foli6">
-            <label class="desc" id="title6" for="Field6">
+            <label class="desc" for="Field6" id="title6">
               Please tell us what you'd like to commission an Ember Mascot for.
-              <span id="req_6" class="req">*</span>
+              <span class="req" id="req_6">*</span>
             </label>
             <div>
               <textarea
                 id="Field6"
                 name="Field6"
-                spellcheck="true"
-                tabindex="0"
                 onkeyup=""
                 required
+                spellcheck="true"
+                tabindex="0"
               />
             </div>
           </li>
           <li id="foli7">
-            <label class="desc" id="title7" for="Field7">
+            <label class="desc" for="Field7" id="title7">
               Do you already have ideas for the character? If so, please do
               share here.
             </label>
@@ -94,17 +94,17 @@ import { LinkTo } from '@ember/routing';
               <textarea
                 id="Field7"
                 name="Field7"
+                onkeyup=""
                 spellcheck="true"
                 tabindex="0"
-                onkeyup=""
               />
             </div>
           </li>
           <li id="foli8">
             <fieldset>
-              <legend id="title8" class="desc">
+              <legend class="desc" id="title8">
                 I believe what I want fits into the following pricing category:
-                <span id="req_8" class="req">*</span>
+                <span class="req" id="req_8">*</span>
               </legend>
               <div>
                 <input
@@ -115,14 +115,14 @@ import { LinkTo } from '@ember/routing';
                 />
                 <span class="choice">
                   <input
+                    checked="checked"
+                    class="field radio"
                     id="Field8_0"
                     name="Field8"
-                    type="radio"
-                    class="field radio"
-                    value="UG Tomster with Simple Shirt Change, $80"
-                    tabindex="0"
-                    checked="checked"
                     required
+                    tabindex="0"
+                    type="radio"
+                    value="UG Tomster with Simple Shirt Change, $80"
                   />
                   <label for="Field8_0">
                     UG Tomster or Zoey with Simple Shirt Change, $80
@@ -130,13 +130,13 @@ import { LinkTo } from '@ember/routing';
                 </span>
                 <span class="choice">
                   <input
+                    class="field radio"
                     id="Field8_1"
                     name="Field8"
-                    type="radio"
-                    class="field radio"
-                    value="UG Tomster with 1 Prop and Full Costume, $200"
-                    tabindex="0"
                     required
+                    tabindex="0"
+                    type="radio"
+                    value="UG Tomster with 1 Prop and Full Costume, $200"
                   />
                   <label for="Field8_1">
                     UG Tomster or Zoey with 1 Prop and Full Costume, $200
@@ -144,13 +144,13 @@ import { LinkTo } from '@ember/routing';
                 </span>
                 <span class="choice">
                   <input
+                    class="field radio"
                     id="Field8_2"
                     name="Field8"
-                    type="radio"
-                    class="field radio"
-                    value="Tomster with Full Background, $300"
-                    tabindex="0"
                     required
+                    tabindex="0"
+                    type="radio"
+                    value="Tomster with Full Background, $300"
                   />
                   <label for="Field8_2">
                     UG Tomster or Zoey with Full Background, $300
@@ -158,13 +158,13 @@ import { LinkTo } from '@ember/routing';
                 </span>
                 <span class="choice">
                   <input
+                    class="field radio"
                     id="Field8_4"
                     name="Field8"
-                    type="radio"
-                    class="field radio"
-                    value="Corp Tomster or Zoey, Silver Tier, $750"
-                    tabindex="0"
                     required
+                    tabindex="0"
+                    type="radio"
+                    value="Corp Tomster or Zoey, Silver Tier, $750"
                   />
                   <label for="Field8_4">
                     Corp Tomster or Zoey, Silver Tier, $750
@@ -172,13 +172,13 @@ import { LinkTo } from '@ember/routing';
                 </span>
                 <span class="choice">
                   <input
+                    class="field radio"
                     id="Field8_5"
                     name="Field8"
-                    type="radio"
-                    class="field radio"
-                    value="Corp Tomster and Zoey, Gold Tier, $1500"
-                    tabindex="0"
                     required
+                    tabindex="0"
+                    type="radio"
+                    value="Corp Tomster and Zoey, Gold Tier, $1500"
                   />
                   <label for="Field8_5">
                     Corp Tomster and Zoey, Gold Tier, $1500
@@ -186,14 +186,14 @@ import { LinkTo } from '@ember/routing';
                 </span>
                 <span class="choice">
                   <input
+                    class="field radio"
                     id="Field8_3"
                     name="Field8"
-                    type="radio"
-                    class="field radio"
-                    value="Other"
-                    tabindex="0"
                     onmouseup="document.getElementById('Field8_other').focus();"
                     required
+                    tabindex="0"
+                    type="radio"
+                    value="Other"
                   />
                   <label
                     for="Field8_3"
@@ -202,13 +202,13 @@ import { LinkTo } from '@ember/routing';
                     Other
                   </label>
                   <input
+                    class="field text other"
                     id="Field8_other"
                     name="Field8_other_Other"
-                    type="text"
-                    class="field text other"
-                    value=""
                     onclick="document.getElementById('Field8_3').checked = 'checked';"
                     tabindex="0"
+                    type="text"
+                    value=""
                   />
                 </span>
               </div>
@@ -217,9 +217,9 @@ import { LinkTo } from '@ember/routing';
           <li class="buttons">
             <div>
               <input
+                class="es-button button-dark"
                 id="saveForm"
                 name="saveForm"
-                class="es-button button-dark"
                 type="submit"
                 value="Submit"
               />
@@ -227,11 +227,11 @@ import { LinkTo } from '@ember/routing';
           </li>
           <li class="hide">
             <label for="comment">Do Not Fill This Out</label>
-            <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+            <textarea cols="1" id="comment" name="comment" rows="1"></textarea>
             <input
-              type="hidden"
               id="idstamp"
               name="idstamp"
+              type="hidden"
               value="HzIvtB3mbwMUBgagcaKaxnTASiJAOpXIR2gxYqSusY0="
             />
           </li>
@@ -242,9 +242,9 @@ import { LinkTo } from '@ember/routing';
     <div class="lg:col-2 hide-on-mobile">
       <img
         alt=""
-        src="/images/tomster-faq.png"
-        role="presentation"
         loading="lazy"
+        role="presentation"
+        src="/images/tomster-faq.png"
       />
     </div>
   </section>

@@ -73,8 +73,8 @@ interface ReleasesLtsSignature {
     A complete release history for Ember is available
     <a
       href="https://github.com/emberjs/ember.js/releases"
-      target="_blank"
       rel="noopener noreferrer"
+      target="_blank"
     >on GitHub</a>.
   </p>
 

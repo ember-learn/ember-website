@@ -54,13 +54,13 @@ interface MascotsMascotFiltersSignature {
 }
 
 <template>
-  <nav class="filter flex-horizontal-between" aria-label="mascot filters">
+  <nav aria-label="mascot filters" class="filter flex-horizontal-between">
     <span class="filter-group">
       {{#each tagFilters as |filter|}}
         <LinkTo
-          data-test-link={{filter.label}}
           @query={{hash filter=filter.value}}
           @route="mascots"
+          data-test-link={{filter.label}}
         >
           {{~! ~}}{{filter.label}}{{~! ~}}
         </LinkTo>
@@ -70,9 +70,9 @@ interface MascotsMascotFiltersSignature {
     <span>
       {{#each displayFilters as |filter|}}
         <LinkTo
-          data-test-link={{filter.label}}
           @query={{hash display=filter.value}}
           @route="mascots"
+          data-test-link={{filter.label}}
         >
           {{~! ~}}{{filter.label}}{{~! ~}}
         </LinkTo>

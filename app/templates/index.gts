@@ -26,13 +26,13 @@ import WindowSvg from 'ember-website/components/window-svg';
           everything you need to build rich UIs that work on any device.</p>
         <div class="cta-group">
           <a
-            href="https://guides.emberjs.com/release/getting-started/quick-start/"
             class="es-button"
+            href="https://guides.emberjs.com/release/getting-started/quick-start/"
             title="Get started with the framework, a quick reference to setting up new projects"
           >Get started</a>
           <a
-            href="https://guides.emberjs.com/release/tutorial/"
             class="es-button-secondary"
+            href="https://guides.emberjs.com/release/tutorial/"
             title="New to building websites, or just want a more in-depth introduction to Ember? The tutorial is for you!"
           >Read the full tutorial</a>
         </div>
@@ -59,9 +59,9 @@ import WindowSvg from 'ember-website/components/window-svg';
       </div>
       <div class="text-center">
         <img
+          alt="Netflix, Intercom, Microsoft, Square, CrowdStrike, Apple, LinkedIn, Heroku"
           class="max-width"
           src="/images/home/landing-logos.svg"
-          alt="Netflix, Intercom, Microsoft, Square, CrowdStrike, Apple, LinkedIn, Heroku"
         />
       </div>
     </div>
@@ -82,12 +82,12 @@ import WindowSvg from 'ember-website/components/window-svg';
       <div class="layout">
         <div class="lg:col-4 lg:start-3">
           <img
-            class="img-fluid"
             alt=""
-            src="/images/home/ember-build.svg"
-            role="presentation"
-            width="636"
+            class="img-fluid"
             height="424"
+            role="presentation"
+            src="/images/home/ember-build.svg"
+            width="636"
           />
         </div>
         <div class="lg:col-2">
@@ -105,12 +105,12 @@ import WindowSvg from 'ember-website/components/window-svg';
       <div class="layout mt-4">
         <div class="lg:col-4">
           <img
-            class="img-fluid"
-            src="/images/home/ember-routing.svg"
             alt=""
-            role="presentation"
-            width="636"
+            class="img-fluid"
             height="424"
+            role="presentation"
+            src="/images/home/ember-routing.svg"
+            width="636"
           />
         </div>
         <div class="lg:col-2">
@@ -126,12 +126,12 @@ import WindowSvg from 'ember-website/components/window-svg';
       <div class="layout mt-4">
         <div class="lg:col-4 lg:start-3">
           <img
-            class="img-fluid"
-            src="/images/home/ember-data.svg"
             alt=""
-            role="presentation"
-            width="636"
+            class="img-fluid"
             height="424"
+            role="presentation"
+            src="/images/home/ember-data.svg"
+            width="636"
           />
         </div>
         <div class="lg:col-2">
@@ -149,11 +149,11 @@ import WindowSvg from 'ember-website/components/window-svg';
       <div class="layout mt-4">
         <div class="lg:col-4">
           <img
-            src="/images/home/ember-testing.svg"
             alt=""
-            role="presentation"
-            width="636"
             height="424"
+            role="presentation"
+            src="/images/home/ember-testing.svg"
+            width="636"
           />
         </div>
         <div class="lg:col-2">
@@ -174,12 +174,12 @@ import WindowSvg from 'ember-website/components/window-svg';
       <div class="layout mt-4">
         <div class="lg:col-4 lg:start-3">
           <img
-            class="img-fluid"
-            src="/images/home/ember-performance.svg"
             alt=""
-            role="presentation"
-            width="636"
+            class="img-fluid"
             height="424"
+            role="presentation"
+            src="/images/home/ember-performance.svg"
+            width="636"
           />
         </div>
         <div class="lg:col-2">
@@ -197,11 +197,11 @@ import WindowSvg from 'ember-website/components/window-svg';
       <div class="layout mt-4">
         <div class="lg:col-4">
           <img
-            src="/images/home/ember-upgrades.svg"
             alt=""
-            role="presentation"
-            width="636"
             height="424"
+            role="presentation"
+            src="/images/home/ember-upgrades.svg"
+            width="636"
           />
         </div>
         <div class="lg:col-2">
@@ -267,12 +267,12 @@ import WindowSvg from 'ember-website/components/window-svg';
       <div class="lg:col-3 lg:start-4 text-center">
         <WindowSvg>
           <image
-            xmlns="http://www.w3.org/2000/svg"
-            x="140"
-            y="150"
-            width="200"
             height="200"
+            width="200"
+            x="140"
             xlink:href="/images/home/ember-observer.svg"
+            xmlns="http://www.w3.org/2000/svg"
+            y="150"
           />
         </WindowSvg>
       </div>
@@ -321,7 +321,7 @@ import WindowSvg from 'ember-website/components/window-svg';
   <section>
     <div class="layout container">
       <div class="lg:col-4 lg:start-2 text-center">
-        <a href="https://emberconf.com" class="es-button mb-1">
+        <a class="es-button mb-1" href="https://emberconf.com">
           Learn about EmberConf
         </a>
         <LinkTo @route="community.meetups" class="es-button-secondary ml-1">
@@ -337,19 +337,19 @@ import WindowSvg from 'ember-website/components/window-svg';
 
       <ul class="grid lg:grid-2 list-unstyled">
         <EsLinkCard
-          class="lg:col-3"
+          @href="http://discuss.emberjs.com"
           @icon="discourse"
           @title="Discussion forum"
-          @href="http://discuss.emberjs.com"
+          class="lg:col-3"
         >
           <p>Post and search longer-form questions in our public forum.</p>
         </EsLinkCard>
 
         <EsLinkCard
-          class="lg:col-3"
+          @href="https://discord.gg/emberjs"
           @icon="discord"
           @title="Discord community chat"
-          @href="https://discord.gg/emberjs"
+          class="lg:col-3"
         >
           <p>Join our real-time chat server to connect with other developers and
             get answers.</p>
@@ -363,7 +363,7 @@ import WindowSvg from 'ember-website/components/window-svg';
       </p>
 
       <ul class="list-unstyled layout">
-        <EsCard class="lg:col-2 text-center" @icon="podcasts">
+        <EsCard @icon="podcasts" class="lg:col-2 text-center">
           <h4 class="text-md">Podcasts</h4>
 
           <ul class="list-unstyled">
@@ -374,7 +374,7 @@ import WindowSvg from 'ember-website/components/window-svg';
           </ul>
         </EsCard>
 
-        <EsCard class="lg:col-2 text-center" @icon="books">
+        <EsCard @icon="books" class="lg:col-2 text-center">
           <h4 class="text-md">Books & blogs</h4>
 
           <ul class="list-unstyled">
@@ -397,7 +397,7 @@ import WindowSvg from 'ember-website/components/window-svg';
           </ul>
         </EsCard>
 
-        <EsCard class="lg:col-2 text-center" @icon="videos">
+        <EsCard @icon="videos" class="lg:col-2 text-center">
           <h4 class="text-md">Videos</h4>
 
           <ul class="list-unstyled">
@@ -426,30 +426,30 @@ import WindowSvg from 'ember-website/components/window-svg';
 
           <p class="mt-4">
             <a
-              href="https://guides.emberjs.com/release/getting-started/quick-start/"
               class="es-button mb-1 mr-1"
+              href="https://guides.emberjs.com/release/getting-started/quick-start/"
             >Download and Get Started</a>
             <a
-              href="https://github.com/emberjs"
               class="es-button-secondary"
+              href="https://github.com/emberjs"
             >Ready to use Ember?</a>
           </p>
         </div>
         <div class="lg:col-2 sm:col-1 flex-centered">
           <img
+            alt="Happy looking tomster"
             src="/images/tomsters/tomster.png"
             {{! eslint-disable-next-line ember/template-no-inline-styles }}
             style="max-height: 200px"
-            alt="Happy looking tomster"
           />
         </div>
       </div>
 
       <ul class="grid lg:grid-2 mt-4 list-unstyled">
         <EsLinkCard
+          @href="https://guides.emberjs.com/release/"
           @icon="guides"
           @title="Read the Guides"
-          @href="https://guides.emberjs.com/release/"
         >
           <p>If you're familiar with JavaScript and web application development,
             our Guides will teach you everything you need to know to get started
@@ -457,9 +457,9 @@ import WindowSvg from 'ember-website/components/window-svg';
         </EsLinkCard>
 
         <EsLinkCard
+          @href="https://blog.emberjs.com"
           @icon="blog"
           @title="Read Our Blog"
-          @href="https://blog.emberjs.com"
         >
           <p>Find out about the newest releases and latest work happening in the
             ecosystem by visiting the official Ember Blog.</p>

@@ -4,7 +4,7 @@ import { pageTitle } from 'ember-page-title';
   {{pageTitle "Community Guidelines"}}
 
   <div class="container layout">
-    <section class="lg:col-5" aria-labelledby="guidelines">
+    <section aria-labelledby="guidelines" class="lg:col-5">
       <h1 id="guidelines">Ember Community Guidelines</h1>
 
       <p>
@@ -26,7 +26,7 @@ import { pageTitle } from 'ember-page-title';
       </p>
     </section>
 
-    <section class="lg:col-5" aria-labelledby="general-goals">
+    <section aria-labelledby="general-goals" class="lg:col-5">
       <h2 id="general-goals">General Goals</h2>
       <p>We strive to:</p>
       <ol>
@@ -73,7 +73,7 @@ import { pageTitle } from 'ember-page-title';
       </ol>
     </section>
 
-    <section class="lg:col-5" aria-labelledby="diversity">
+    <section aria-labelledby="diversity" class="lg:col-5">
       <h2 id="diversity">Diversity: Everyone is Welcome</h2>
       <p>
         We are committed to being a community that everyone feels good about
@@ -88,7 +88,7 @@ import { pageTitle } from 'ember-page-title';
       </p>
     </section>
 
-    <section class="lg:col-5" aria-labelledby="leadership">
+    <section aria-labelledby="leadership" class="lg:col-5">
       <h2 id="leadership">Leadership, Authority and Responsibility</h2>
       <p>The following list expresses some of our many intentions on these
         topics:</p>
@@ -145,7 +145,7 @@ import { pageTitle } from 'ember-page-title';
       </ol>
     </section>
 
-    <section class="lg:col-5" aria-labelledby="conflicts-of-interest">
+    <section aria-labelledby="conflicts-of-interest" class="lg:col-5">
       <h2 id="conflicts-of-interest">Conflicts of Interest</h2>
 
       <p>
@@ -167,7 +167,7 @@ import { pageTitle } from 'ember-page-title';
       </p>
     </section>
 
-    <section class="lg:col-5" aria-labelledby="source-materials">
+    <section aria-labelledby="source-materials" class="lg:col-5">
       <h2 id="source-materials">Source Materials</h2>
       <ol>
         <li><a href="https://wiki.mozilla.org/Code_of_Conduct/Draft">Mozilla
@@ -181,7 +181,7 @@ import { pageTitle } from 'ember-page-title';
       <p>You’ll note a lot of language that appears in all three.</p>
     </section>
 
-    <section class="lg:col-5" aria-labelledby="contact">
+    <section aria-labelledby="contact" class="lg:col-5">
       <h2 id="contact">Contact</h2>
       <p>
         If you’d like to suggest tweaks to this page,

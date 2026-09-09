@@ -4,7 +4,7 @@ import { pageTitle } from 'ember-page-title';
 <template>
   {{pageTitle "Assets"}}
 
-  <section class="container" aria-labelledby="ember-meetup-resources">
+  <section aria-labelledby="ember-meetup-resources" class="container">
     <h1 id="ember-meetup-resources">
       Ember Meetup Resources
     </h1>
@@ -40,7 +40,7 @@ import { pageTitle } from 'ember-page-title';
         <p>
           We've created user group badges and branding to help give our groups a
           consistent feel. You can create your own by downloading our
-          <a href="/images/meetups/Ember-Meetup-Templates.zip" download>Sketch
+          <a download href="/images/meetups/Ember-Meetup-Templates.zip">Sketch
             and Illustrator templates (ZIP)</a>.
         </p>
 
@@ -52,16 +52,16 @@ import { pageTitle } from 'ember-page-title';
             target="_blank"
           >Meetup</a>
           to manage your group, you can also
-          <a href="/images/meetups/ember-meetup-header.jpg" download>download
+          <a download href="/images/meetups/ember-meetup-header.jpg">download
             our header image</a>
           for your group's pages:
         </p>
 
         <div class="layout-grid">
           <img
+            alt="Header for an Ember Meetup"
             class="col-3-large"
             src="/images/meetups/ember-meetup-header.jpg"
-            alt="Header for an Ember Meetup"
           />
         </div>
       </section>
@@ -73,20 +73,20 @@ import { pageTitle } from 'ember-page-title';
 
         <p>
           Our
-          <a href="/images/meetups/Ember-Meetup-Templates.zip" download>logo
+          <a download href="/images/meetups/Ember-Meetup-Templates.zip">logo
             design templates (ZIP)</a>
           allow you to create a meetup logo for your city in a range of formats.
           For usage instructions, see our
-          <a href="/images/brand/Ember-Brand-Guidelines.pdf" download>brand
+          <a download href="/images/brand/Ember-Brand-Guidelines.pdf">brand
             guidelines (PDF)</a>.
         </p>
 
         <div class="layout-grid">
           <img
+            alt="Ember Meetup header for San Francisco"
             class="col-3-large"
             src="/images/meetups/ember-meetup-logo-san-francisco.png"
             srcset="/images/meetups/ember-meetup-logo-san-francisco.png 1x, /images/meetups/ember-meetup-logo-san-francisco@2x.png 2x"
-            alt="Ember Meetup header for San Francisco"
           />
         </div>
 
@@ -99,11 +99,11 @@ import { pageTitle } from 'ember-page-title';
         </p>
 
         <ul>
-          <li><a href="/images/logos/ember-logo.ai" download>Logo in Illustrator
+          <li><a download href="/images/logos/ember-logo.ai">Logo in Illustrator
               format</a></li>
-          <li><a href="/images/logos/ember-logo.png" download>Logo in PNG
+          <li><a download href="/images/logos/ember-logo.png">Logo in PNG
               format, transparent background</a></li>
-          <li><a href="/images/brand/logos-ember.zip" download>All Ember logos
+          <li><a download href="/images/brand/logos-ember.zip">All Ember logos
               (ZIP)</a></li>
         </ul>
       </section>
@@ -126,9 +126,9 @@ import { pageTitle } from 'ember-page-title';
         </p>
 
         <ul>
-          <li><a href="/images/stickers/ember-sticker.ai" download>Ember Logo
+          <li><a download href="/images/stickers/ember-sticker.ai">Ember Logo
               Stickers</a>, best printed die-cut at 3" x 1.25"</li>
-          <li><a href="/images/stickers/tomster-sticker.ai" download>Ember
+          <li><a download href="/images/stickers/tomster-sticker.ai">Ember
               Mascot Stickers</a>, best printed die-cut at 3" x 3"</li>
         </ul>
 
@@ -168,9 +168,9 @@ import { pageTitle } from 'ember-page-title';
             >
               <div class="well well-1/1">
                 <img
-                  src="/images/community/tomsters/Ember-Munich-Half-sm.png"
                   alt=""
                   role="presentation"
+                  src="/images/community/tomsters/Ember-Munich-Half-sm.png"
                 />
               </div>
               Ember Munich
@@ -185,9 +185,9 @@ import { pageTitle } from 'ember-page-title';
             >
               <div class="well well-1/1">
                 <img
-                  src="/images/community/tomsters/Ember-Austin-Zoey-Half-sm.png"
                   alt=""
                   role="presentation"
+                  src="/images/community/tomsters/Ember-Austin-Zoey-Half-sm.png"
                 />
               </div>
               Ember Austin
@@ -202,9 +202,9 @@ import { pageTitle } from 'ember-page-title';
             >
               <div class="well well-1/1">
                 <img
-                  src="/images/community/tomsters/Ember-Vancouver-Half-sm.png"
                   alt=""
                   role="presentation"
+                  src="/images/community/tomsters/Ember-Vancouver-Half-sm.png"
                 />
               </div>
               Ember Vancouver

@@ -16,7 +16,7 @@ interface LearnIndexSignature {
 <template>
   {{pageTitle "Learn"}}
 
-  <div class="container" aria-labelledby="learning-emberjs">
+  <div aria-labelledby="learning-emberjs" class="container">
     <h1 id="learning-emberjs">Learning Ember.js</h1>
 
     <div class="layout mb-3">
@@ -66,7 +66,7 @@ interface LearnIndexSignature {
       />
     </div>
 
-    <section class="mb-3" aria-labelledby="learning-emberjs-api-reference">
+    <section aria-labelledby="learning-emberjs-api-reference" class="mb-3">
       <h2 id="learning-emberjs-api-reference">API Reference</h2>
 
       <p>
@@ -78,55 +78,55 @@ interface LearnIndexSignature {
       <ul class="mt-3 mb-5 list-unstyled grid lg:grid-3 text-center">
         <li>
           <a
-            href="https://api.emberjs.com/ember/release/"
             class="well p-5"
+            href="https://api.emberjs.com/ember/release/"
             rel="nofollow noopener noreferrer"
             target="_blank"
           >
             <img
+              alt="Ember.js"
+              height="130"
               src="/images/learn/ember.png"
               width="344"
-              height="130"
-              alt="Ember.js"
             />
           </a>
         </li>
 
         <li>
           <a
-            href="https://api.emberjs.com/ember-data/release/"
             class="well p-3"
+            href="https://api.emberjs.com/ember-data/release/"
             rel="nofollow noopener noreferrer"
             target="_blank"
           >
             <img
+              alt="Ember Data"
+              height="130"
               src="/images/learn/ember-data.png"
               width="581"
-              height="130"
-              alt="Ember Data"
             />
           </a>
         </li>
 
         <li>
           <a
-            href="https://ember-cli.com/api/"
             class="well p-4"
+            href="https://ember-cli.com/api/"
             rel="nofollow noopener noreferrer"
             target="_blank"
           >
             <img
+              alt="Ember CLI"
+              height="130"
               src="/images/learn/ember-cli.png"
               width="581"
-              height="130"
-              alt="Ember CLI"
             />
           </a>
         </li>
       </ul>
     </section>
 
-    <section class="mb-3" aria-labelledby="learning-emberjs-deprecation-guides">
+    <section aria-labelledby="learning-emberjs-deprecation-guides" class="mb-3">
       <h2 id="learning-emberjs-deprecation-guides">Deprecation Guides</h2>
 
       <p>
@@ -152,7 +152,7 @@ interface LearnIndexSignature {
       </p>
     </section>
 
-    <section class="mb-3" aria-labelledby="learning-emberjs-ecosystem">
+    <section aria-labelledby="learning-emberjs-ecosystem" class="mb-3">
       <h2 id="learning-emberjs-ecosystem">Ecosystem</h2>
 
       <p>
@@ -248,7 +248,7 @@ interface LearnIndexSignature {
       </ul>
     </section>
 
-    <section class="mb-3" aria-labelledby="learning-emberjs-showcase">
+    <section aria-labelledby="learning-emberjs-showcase" class="mb-3">
       <h2 id="learning-emberjs-showcase">Showcase</h2>
 
       <p>In this section, you will find applications that are maintained by the
@@ -264,8 +264,8 @@ interface LearnIndexSignature {
         {{#each @model as |showcase|}}
           <EsCard
             @image={{hash
-              src=(concat "/images/showcase/" showcase.image.src)
               alt=""
+              src=(concat "/images/showcase/" showcase.image.src)
             }}
           >
             <h2>{{showcase.name}}</h2>
@@ -307,7 +307,7 @@ interface LearnIndexSignature {
       </ul>
     </section>
 
-    <section class="mb-3" aria-labelledby="learning-emberjs-faq">
+    <section aria-labelledby="learning-emberjs-faq" class="mb-3">
       <h2 id="learning-emberjs-faq">Frequently Asked Questions</h2>
 
       <h3 id="learning-emberjs-faq-glimmer">What is Glimmer? Do I need to learn
