@@ -12,7 +12,7 @@ interface CalloutBannerSignature {
   };
 }
 
-export default class BannerCalloutsComponent extends Component<CalloutBannerSignature> {
+export default class CalloutBanner extends Component<CalloutBannerSignature> {
   @tracked isShown = true;
 
   @action dismiss(): void {

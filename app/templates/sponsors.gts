@@ -39,7 +39,8 @@ export default class Sponsors extends Component<SponsorsSignature> {
 
   <template>
     {{pageTitle "Sponsors"}}
-    <section class="container" aria-labelledby="ember-sponsors-and-friends">
+
+    <section aria-labelledby="ember-sponsors-and-friends" class="container">
       <h1 id="ember-sponsors-and-friends">
         Ember Sponsors and Friends
       </h1>
@@ -51,8 +52,8 @@ export default class Sponsors extends Component<SponsorsSignature> {
       </p>
 
       <section
-        class="my-5"
         aria-labelledby="ember-sponsors-and-friends-current-sponsors"
+        class="my-5"
       >
         <h2 id="ember-sponsors-and-friends-current-sponsors">Current Sponsors</h2>
 
@@ -64,15 +65,15 @@ export default class Sponsors extends Component<SponsorsSignature> {
             <li>
               <figure>
                 <a
+                  class="well well-16/9"
                   href={{sponsor.url}}
                   rel="nofollow noopener noreferrer"
                   target="_blank"
-                  class="well well-16/9"
                 >
                   <img
-                    src="/images/users/{{sponsor.image}}"
                     alt="{{sponsor.name}} website"
                     loading="lazy"
+                    src="/images/users/{{sponsor.image}}"
                   />
                 </a>
                 <figcaption class="text-muted">
@@ -89,8 +90,8 @@ export default class Sponsors extends Component<SponsorsSignature> {
       </section>
 
       <section
-        class="my-5"
         aria-labelledby="ember-sponsors-and-friends-ember-initiative"
+        class="my-5"
       >
         <h2 id="ember-sponsors-and-friends-ember-initiative">Ember Initiative
           Sponsors</h2>
@@ -103,15 +104,15 @@ export default class Sponsors extends Component<SponsorsSignature> {
             <li>
               <figure>
                 <a
+                  class="well well-16/9"
                   href={{sponsor.url}}
                   rel="nofollow noopener noreferrer"
                   target="_blank"
-                  class="well well-16/9"
                 >
                   <img
-                    src="/images/users/{{sponsor.image}}"
                     alt="{{sponsor.name}} website"
                     loading="lazy"
+                    src="/images/users/{{sponsor.image}}"
                   />
                 </a>
                 <figcaption class="text-muted">
@@ -130,8 +131,8 @@ export default class Sponsors extends Component<SponsorsSignature> {
       </section>
 
       <section
-        class="my-5"
         aria-labelledby="ember-sponsors-and-friends-past-sponsors"
+        class="my-5"
       >
         <h2 id="ember-sponsors-and-friends-past-sponsors">Past Sponsors</h2>
 
@@ -143,15 +144,15 @@ export default class Sponsors extends Component<SponsorsSignature> {
             <li>
               <figure>
                 <a
+                  class="well well-16/9"
                   href={{sponsor.url}}
                   rel="nofollow noopener noreferrer"
                   target="_blank"
-                  class="well well-16/9"
                 >
                   <img
-                    src="/images/users/{{sponsor.image}}"
                     alt="{{sponsor.name}} website"
                     loading="lazy"
+                    src="/images/users/{{sponsor.image}}"
                   />
                 </a>
                 <figcaption class="text-muted">
@@ -168,8 +169,8 @@ export default class Sponsors extends Component<SponsorsSignature> {
       </section>
 
       <section
-        class="my-5"
         aria-labelledby="ember-sponsors-and-friends-individual-sponsors"
+        class="my-5"
       >
         <h2 id="ember-sponsors-and-friends-individual-sponsors">Individual
           Sponsors</h2>

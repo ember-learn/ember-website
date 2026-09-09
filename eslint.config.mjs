@@ -68,6 +68,9 @@ export default defineConfig([
       globals: globals.browser,
       parserOptions: parserOptions.esm.js,
     },
+    rules: {
+      'ember/template-sort-invocations': 'error',
+    },
   },
   {
     extends: [
@@ -96,6 +99,8 @@ export default defineConfig([
         },
       ],
       '@typescript-eslint/no-import-type-side-effects': 'error',
+      'ember/no-unused-services': 'error',
+      'ember/template-sort-invocations': 'error',
     },
   },
   {

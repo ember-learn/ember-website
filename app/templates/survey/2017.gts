@@ -477,13 +477,13 @@ import {
         from the survey, as well as the
         <a
           href="/survey/2017/results.csv"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >raw survey data</a>. You can also view the
         <a
           href="/survey/2017/demographics.csv"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >demographic data</a>, which has been decoupled from the primary
         corpora.
       </p>

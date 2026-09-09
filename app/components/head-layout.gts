@@ -58,10 +58,10 @@ export default class HeadLayout extends Component<HeadLayoutSignature> {
   <template>
     {{#in-element this.document.head insertBefore=null}}
       {{! eslint-disable-next-line ember/template-no-forbidden-elements }}
-      <meta name="ember-cli-head-start" content="" />
+      <meta content="" name="ember-cli-head-start" />
       {{yield}}
       {{! eslint-disable-next-line ember/template-no-forbidden-elements }}
-      <meta name="ember-cli-head-end" content="" />
+      <meta content="" name="ember-cli-head-end" />
     {{/in-element}}
   </template>
 }

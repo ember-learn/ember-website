@@ -1,7 +1,7 @@
 import { LinkTo } from '@ember/routing';
 
 <template>
-  <section class="container" aria-labelledby="commission-payment-sent">
+  <section aria-labelledby="commission-payment-sent" class="container">
     <h1 id="commission-payment-sent">Tomster and Zoey Commission Payment Sent</h1>
 
     <p>Thanks much! Looking forward to getting to work :)</p>

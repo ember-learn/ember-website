@@ -11,12 +11,12 @@ module('Integration | Component | window-svg', function (hooks) {
       <template>
         <WindowSvg>
           <image
-            xmlns="http://www.w3.org/2000/svg"
-            x="140"
-            y="150"
-            width="200"
             height="200"
+            width="200"
+            x="140"
             xlink:href="/images/home/ember-observer.svg"
+            xmlns="http://www.w3.org/2000/svg"
+            y="150"
           />
         </WindowSvg>
       </template>,

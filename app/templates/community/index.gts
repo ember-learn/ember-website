@@ -1,14 +1,14 @@
 import { LinkTo } from '@ember/routing';
 
 <template>
-  <section class="container layout" aria-labelledby="section-community">
+  <section aria-labelledby="section-community" class="container layout">
     <h1 id="section-community">Get Involved: Join the Growing Ember.js Community</h1>
 
     <div class="lg:col-2">
       <img
         alt=""
-        role="presentation"
         class="img-content"
+        role="presentation"
         src="/images/community/sos.png"
       />
     </div>
@@ -38,8 +38,8 @@ import { LinkTo } from '@ember/routing';
       <p>
         <a
           href="https://dev.to/t/ember"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >DEV's Ember Community</a>
         &mdash; a great place to find interesting articles about best practices,
         application architecture and new learnings. Post your articles with the
@@ -58,7 +58,7 @@ import { LinkTo } from '@ember/routing';
     </div>
   </section>
 
-  <section class="bg-light-muted" aria-labelledby="section-latest-news">
+  <section aria-labelledby="section-latest-news" class="bg-light-muted">
     <div class="container layout">
       <div class="lg:col-4">
         <h2 id="section-latest-news">Stay Up to Date with the Latest News</h2>
@@ -88,9 +88,9 @@ import { LinkTo } from '@ember/routing';
           <img
             alt=""
             class="img-content"
-            src="/images/community/bug.png"
-            role="presentation"
             loading="lazy"
+            role="presentation"
+            src="/images/community/bug.png"
           />
         </div>
         <div class="lg:col-4">
@@ -143,18 +143,18 @@ import { LinkTo } from '@ember/routing';
 
   <div class="bg-light-muted">
     <div class="container layout">
-      <section class="layout" aria-labelledby="section-contribute-to-ember">
+      <section aria-labelledby="section-contribute-to-ember" class="layout">
         <div class="lg:col-2">
           <img
             alt=""
             class="img-content"
-            src="/images/community/give.png"
-            role="presentation"
             loading="lazy"
+            role="presentation"
+            src="/images/community/give.png"
           />
         </div>
         <div class="lg:col-4">
-          <h2 id="section-contribute-to-ember" class="text-center">In a Giving
+          <h2 class="text-center" id="section-contribute-to-ember">In a Giving
             Mood? Contribute to the Project</h2>
           <p>
             The Ember.js source is hosted on
@@ -170,13 +170,13 @@ import { LinkTo } from '@ember/routing';
         </div>
       </section>
 
-      <section class="lg:col-3 text-center" aria-labelledby="section-meetups">
+      <section aria-labelledby="section-meetups" class="lg:col-3 text-center">
         <h2 id="section-meetups">Feeling Lonely? Join a Meetup</h2>
         <img
           alt=""
-          src="/images/community/meetup.png"
-          role="presentation"
           loading="lazy"
+          role="presentation"
+          src="/images/community/meetup.png"
         />
         <p>
           Joining an Ember.js meetup is a great way to learn more about Ember,
@@ -188,13 +188,13 @@ import { LinkTo } from '@ember/routing';
         </LinkTo>
       </section>
 
-      <section class="lg:col-3 text-center" aria-labelledby="section-mascots">
+      <section aria-labelledby="section-mascots" class="lg:col-3 text-center">
         <h2 id="section-mascots">Met The Mascots? You'll Love Them!</h2>
         <img
           alt=""
-          src="/images/community/campster.png"
-          role="presentation"
           loading="lazy"
+          role="presentation"
+          src="/images/community/campster.png"
         />
         <p>
           Tomster and Zoey have been crafted with love, and are constantly
@@ -211,13 +211,13 @@ import { LinkTo } from '@ember/routing';
   <div class="container">
     <div class="embed-video">
       <iframe
-        width="854"
-        height="480"
-        src="https://www.youtube.com/embed/rY5D38RQoEg?rel=0"
-        frameborder="0"
         allowfullscreen
+        frameborder="0"
+        height="480"
         loading="lazy"
+        src="https://www.youtube.com/embed/rY5D38RQoEg?rel=0"
         title="Ember Community Meetups, 2015"
+        width="854"
       ></iframe>
     </div>
   </div>

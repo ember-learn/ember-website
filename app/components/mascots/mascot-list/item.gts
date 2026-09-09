@@ -12,10 +12,10 @@ interface MascotsMascotListItemSignature {
   <figure class="mascot-item" id={{@mascot.id}}>
     <div class="well well-1/1">
       <img
-        src="/images/tomsters/{{@mascot.image}}"
         alt=""
-        role="presentation"
         data-test-field="Image"
+        role="presentation"
+        src="/images/tomsters/{{@mascot.image}}"
       />
     </div>
 
@@ -36,7 +36,7 @@ interface MascotsMascotListItemSignature {
       {{/if}}
 
       {{! @glint-expect-error: Incorrect type }}
-      <time datetime={{@mascot.date}} data-test-field="Date">
+      <time data-test-field="Date" datetime={{@mascot.date}}>
         {{formatDateTime @mascot.date "MMMM D, YYYY"}}
       </time>
     </figcaption>

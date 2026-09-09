@@ -289,8 +289,8 @@ import {
         from the survey, as well as the
         <a
           href="/survey/2016/results.csv"
-          target="_blank"
           rel="noopener noreferrer"
+          target="_blank"
         >raw survey data</a>.
       </p>
       <p>

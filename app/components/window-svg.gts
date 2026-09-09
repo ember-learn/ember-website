@@ -9,19 +9,19 @@ interface WindowSvgSignature {
 
 <template>
   <svg
+    viewBox="0 0 460 360"
     xmlns="http://www.w3.org/2000/svg"
     {{! @glint-expect-error: Incorrect type }}
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0 0 460 360"
   ><defs />
     <defs>
       <filter
+        filterUnits="objectBoundingBox"
+        height="105.1%"
         id="window-svg-b"
         width="104%"
-        height="105.1%"
         x="-2%"
         y="-1.7%"
-        filterUnits="objectBoundingBox"
       ><feOffset
           dy="3"
           in="SourceAlpha"
@@ -35,12 +35,12 @@ interface WindowSvgSignature {
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
         /></filter>
       <filter
+        filterUnits="objectBoundingBox"
+        height="103.1%"
         id="window-svg-d"
         width="102.4%"
-        height="103.1%"
         x="-1.2%"
         y="-.7%"
-        filterUnits="objectBoundingBox"
       ><feOffset
           dy="1"
           in="SourceAlpha"
@@ -57,12 +57,12 @@ interface WindowSvgSignature {
           values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"
         /></filter>
       <filter
+        filterUnits="objectBoundingBox"
+        height="100.3%"
         id="window-svg-g"
         width="100.2%"
-        height="100.3%"
         x="-.1%"
         y="-.2%"
-        filterUnits="objectBoundingBox"
       ><feOffset
           dy="1"
           in="SourceAlpha"
@@ -79,12 +79,12 @@ interface WindowSvgSignature {
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.13 0"
         /></filter>
       <filter
+        filterUnits="objectBoundingBox"
+        height="153.1%"
         id="window-svg-i"
         width="103.7%"
-        height="153.1%"
         x="-1.8%"
         y="-20.3%"
-        filterUnits="objectBoundingBox"
       ><feMorphology
           in="SourceAlpha"
           operator="dilate"
@@ -152,12 +152,12 @@ interface WindowSvgSignature {
           /><feMergeNode in="shadowMatrixOuter3" /></feMerge>
       </filter>
       <filter
+        filterUnits="objectBoundingBox"
+        height="154.2%"
         id="window-svg-k"
         width="103.5%"
-        height="154.2%"
         x="-1.7%"
         y="-18.8%"
-        filterUnits="objectBoundingBox"
       ><feOffset
           dy="1"
           in="SourceAlpha"
@@ -200,12 +200,12 @@ interface WindowSvgSignature {
           /><feMergeNode in="shadowMatrixOuter3" /></feMerge>
       </filter>
       <filter
+        filterUnits="objectBoundingBox"
+        height="154.2%"
         id="window-svg-m"
         width="145.8%"
-        height="154.2%"
         x="-22.9%"
         y="-18.8%"
-        filterUnits="objectBoundingBox"
       ><feOffset
           dy="1"
           in="SourceAlpha"
@@ -247,14 +247,14 @@ interface WindowSvgSignature {
             in="shadowMatrixOuter2"
           /><feMergeNode in="shadowMatrixOuter3" /></feMerge>
       </filter><path
-        id="window-svg-a"
         d="M10 0h430a10 10 0 0110 10v330a10 10 0 01-10 10H10a10 10 0 01-10-10V10A10 10 0 0110 0z"
-      /><path id="window-svg-f" d="M0 0h450v308H0z" /><path
-        id="window-svg-j"
+        id="window-svg-a"
+      /><path d="M0 0h450v308H0z" id="window-svg-f" /><path
         d="M23 63h404a3 3 0 013 3v26a3 3 0 01-3 3H23a3 3 0 01-3-3V66a3 3 0 013-3z"
+        id="window-svg-j"
       /><path
-        id="window-svg-l"
         d="M90 9h309a3 3 0 013 3v18a3 3 0 01-3 3H90a3 3 0 01-3-3V12a3 3 0 013-3z"
+        id="window-svg-l"
       />
       <linearGradient
         id="window-svg-c"
@@ -266,15 +266,15 @@ interface WindowSvgSignature {
           offset="100%"
           stop-color="#D7D9DF"
         /></linearGradient><rect
-        id="window-svg-n"
-        width="24"
         height="24"
+        id="window-svg-n"
+        rx="3"
+        width="24"
         x="411"
         y="9"
-        rx="3"
       /></defs>
     <g fill="none" fill-rule="evenodd" transform="translate(5 2)">
-      <mask id="window-svg-e" fill="#fff"><use
+      <mask fill="#fff" id="window-svg-e"><use
           {{! @glint-expect-error: Incorrect type }}
           xlink:href="#window-svg-a"
         /></mask>
@@ -292,7 +292,7 @@ interface WindowSvgSignature {
         /></g>
       <g mask="url(#window-svg-e)">
         <g transform="translate(0 42)">
-          <mask id="window-svg-h" fill="#fff"><use
+          <mask fill="#fff" id="window-svg-h"><use
               {{! @glint-expect-error: Incorrect type }}
               xlink:href="#window-svg-f"
             /></mask>
@@ -306,27 +306,27 @@ interface WindowSvgSignature {
               {{! @glint-expect-error: Incorrect type }}
               xlink:href="#window-svg-f"
             /></g><path
+            d="M0 0h450v43H0z"
             fill="#1B3A4B"
             fill-rule="nonzero"
-            d="M0 0h450v43H0z"
             mask="url(#window-svg-h)"
           />
           <g
             fill-rule="nonzero"
+            mask="url(#window-svg-h)"
             stroke-linecap="round"
             stroke-linejoin="round"
-            mask="url(#window-svg-h)"
           ><use
               fill="#000"
               filter="url(#window-svg-i)"
               {{! @glint-expect-error: Incorrect type }}
               xlink:href="#window-svg-j"
             /><path
+              d="M23 62h404a4 4 0 014 4v26a4 4 0 01-4 4H23a4 4 0 01-4-4V66a4 4 0 014-4z"
               fill="#FFF"
               fill-rule="evenodd"
               stroke="#337698"
               stroke-width="2"
-              d="M23 62h404a4 4 0 014 4v26a4 4 0 01-4 4H23a4 4 0 01-4-4V66a4 4 0 014-4z"
             /></g>
         </g>
       </g>
@@ -346,25 +346,25 @@ interface WindowSvgSignature {
         /><use fill="#EAEBEE" xlink:href="#window-svg-n" /></g>
       <g
         fill-rule="nonzero"
+        mask="url(#window-svg-e)"
         stroke="#000"
         stroke-opacity=".1"
-        mask="url(#window-svg-e)"
       >
         <g transform="translate(15 15)"><circle
             cx="6"
             cy="6"
-            r="5.5"
             fill="#FF6159"
-          /><circle cx="26" cy="6" r="5.5" fill="#FFBD2D" /><circle
+            r="5.5"
+          /><circle cx="26" cy="6" fill="#FFBD2D" r="5.5" /><circle
             cx="46"
             cy="6"
-            r="5.5"
             fill="#2ACB42"
+            r="5.5"
           /></g>
       </g><path
+        d="M424 20h4a1 1 0 110 2h-4v4a1 1 0 11-2 0v-4h-4a1 1 0 110-2h4v-4a1 1 0 112 0v4z"
         fill="#686C75"
         fill-rule="nonzero"
-        d="M424 20h4a1 1 0 110 2h-4v4a1 1 0 11-2 0v-4h-4a1 1 0 110-2h4v-4a1 1 0 112 0v4z"
         mask="url(#window-svg-e)"
       /></g>
     {{yield}}

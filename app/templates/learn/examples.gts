@@ -13,7 +13,7 @@ interface LearnExamplesSignature {
 }
 
 <template>
-  <section class="container" aria-labelledby="learning-emberjs-examples">
+  <section aria-labelledby="learning-emberjs-examples" class="container">
     <h1 id="learning-emberjs-examples">Examples</h1>
 
     <p>In this section, you will find applications that are maintained by the

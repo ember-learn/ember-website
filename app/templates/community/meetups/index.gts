@@ -17,6 +17,7 @@ interface CommunityMeetupsIndexSignature {
 
 <template>
   {{pageTitle "Meetups"}}
+
   <div class="container">
     <h1 class="mb-3">Meetups Around the World</h1>
 
@@ -40,8 +41,8 @@ interface CommunityMeetupsIndexSignature {
               <marker.popup>
                 <a
                   href={{meetup.url}}
-                  target="_blank"
                   rel="noopener noreferrer"
+                  target="_blank"
                 >
                   {{meetup.location}}
                 </a>
@@ -66,11 +67,11 @@ interface CommunityMeetupsIndexSignature {
               {{#each area.meetups as |meetup|}}
                 <li>
                   <img
-                    width="12"
-                    class="align-middle icon-left"
-                    src="/images/meetups/map-pin.png"
                     alt=""
+                    class="align-middle icon-left"
                     role="presentation"
+                    src="/images/meetups/map-pin.png"
+                    width="12"
                   />
                   <a href={{meetup.url}}>{{meetup.location}}</a>
                 </li>
@@ -84,10 +85,10 @@ interface CommunityMeetupsIndexSignature {
     <section aria-labelledby="start-your-meetup">
       <h2 id="start-your-meetup">Start your own meetup</h2>
       <img
-        alt=""
-        src="/images/community/meetup.png"
         align="left"
+        alt=""
         role="presentation"
+        src="/images/community/meetup.png"
       />
       <p>
         Ready to start a Meetup in your area? Fantastic news—appreciate you

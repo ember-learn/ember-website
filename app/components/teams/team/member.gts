@@ -12,11 +12,11 @@ interface TeamsTeamMemberSignature {
 <template>
   <div class="text-center" data-test-member={{@member.name}}>
     <img
-      src="/images/team/{{@member.image}}"
-      width={{100}}
       alt=""
       class="team-image"
       role="presentation"
+      src="/images/team/{{@member.image}}"
+      width={{100}}
     />
 
     <div data-test-field="Name">
@@ -33,7 +33,7 @@ interface TeamsTeamMemberSignature {
           rel="noopener noreferrer"
           target="_blank"
         >
-          {{~! ~}}<EsIcon @icon="github-logo" @class="icon" />{{~! ~}}
+          {{~! ~}}<EsIcon @class="icon" @icon="github-logo" />{{~! ~}}
         </a>
       {{/if}}
 
@@ -46,7 +46,7 @@ interface TeamsTeamMemberSignature {
           rel="noopener noreferrer"
           target="_blank"
         >
-          {{~! ~}}<EsIcon @icon="twitter-logo" @class="icon" />{{~! ~}}
+          {{~! ~}}<EsIcon @class="icon" @icon="twitter-logo" />{{~! ~}}
         </a>
       {{/if}}
 
@@ -59,7 +59,7 @@ interface TeamsTeamMemberSignature {
           rel="noopener noreferrer"
           target="_blank"
         >
-          {{~! ~}}<EsIcon @icon="mastadon-logo" @class="icon" />{{~! ~}}
+          {{~! ~}}<EsIcon @class="icon" @icon="mastadon-logo" />{{~! ~}}
         </a>
       {{/if}}
 
@@ -72,7 +72,7 @@ interface TeamsTeamMemberSignature {
           rel="noopener noreferrer"
           target="_blank"
         >
-          {{~! ~}}<EsIcon @icon="bluesky-logo" @class="icon" />{{~! ~}}
+          {{~! ~}}<EsIcon @class="icon" @icon="bluesky-logo" />{{~! ~}}
         </a>
       {{/if}}
 
@@ -85,7 +85,7 @@ interface TeamsTeamMemberSignature {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <img src="/images/link.png" alt="chain-link" class="icon" />
+          <img alt="chain-link" class="icon" src="/images/link.png" />
         </a>
       {{/if}}
     </div>

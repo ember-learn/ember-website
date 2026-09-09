@@ -2,10 +2,11 @@ import { pageTitle } from 'ember-page-title';
 
 <template>
   {{pageTitle "Security"}}
+
   <div class="container layout">
-    <section class="lg:col-5" aria-labelledby="section-reporting-a-bug">
+    <section aria-labelledby="section-reporting-a-bug" class="lg:col-5">
       <h1>Ember.js Security Policy</h1>
-      <h2 id="section-reporting-a-bug" class="mt-3">Reporting a Bug</h2>
+      <h2 class="mt-3" id="section-reporting-a-bug">Reporting a Bug</h2>
       <p>
         We take security very seriously. Thank you for taking the time to
         responsibly disclose any issues you find.
@@ -66,7 +67,7 @@ import { pageTitle } from 'ember-page-title';
         the security team.
       </p>
     </section>
-    <section class="lg:col-5" aria-labelledby="section-disclosure-policy">
+    <section aria-labelledby="section-disclosure-policy" class="lg:col-5">
       <h2 id="section-disclosure-policy">Disclosure Policy</h2>
       <p>
         Ember.js has a 5 step disclosure policy.
@@ -114,8 +115,8 @@ import { pageTitle } from 'ember-page-title';
       </ol>
     </section>
     <section
-      class="lg:col-5"
       aria-labelledby="section-receiving-security-updates"
+      class="lg:col-5"
     >
       <h2 id="section-receiving-security-updates">Receiving Security Updates</h2>
       <p>
@@ -135,7 +136,7 @@ import { pageTitle } from 'ember-page-title';
         an early leak of the vulnerability.
       </p>
     </section>
-    <section class="lg:col-5" aria-labelledby="section-comments-on-this-policy">
+    <section aria-labelledby="section-comments-on-this-policy" class="lg:col-5">
       <h2 id="section-comments-on-this-policy">Comments on This Policy</h2>
       <p>
         If you have any suggestions to improve this policy, please send an email
