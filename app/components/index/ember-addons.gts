@@ -7,43 +7,43 @@ import IndexEmberAddonsPanel from 'ember-website/components/index/ember-addons/p
 import IndexEmberAddonsTab from 'ember-website/components/index/ember-addons/tab';
 import { getTabIdIncrement, modulus } from 'ember-website/utils/navigate-tabs';
 
+const emberAddons = [
+  {
+    description:
+      'Ember Concurrency is an Ember addon that makes state management a whole lot easier with useful primitives.',
+    documentationUrl: 'http://ember-concurrency.com/',
+    howToInstall: 'ember install ember-concurrency',
+    title: 'Manage State',
+  },
+  {
+    description:
+      'Ember Simple Auth is an Ember addon with minimal requirements, supporting all kinds of authentication and authorization mechanisms.',
+    documentationUrl: 'https://ember-simple-auth.com/',
+    howToInstall: 'ember install ember-simple-auth',
+    title: 'Authenticate',
+  },
+  {
+    description:
+      'Internationalize your Ember apps with an addon that provides support for 150+ languages with locale-aware dates and time formatting.',
+    documentationUrl: 'https://ember-intl.github.io/ember-intl/',
+    howToInstall: 'ember install ember-intl',
+    title: 'Translate',
+  },
+  {
+    description:
+      'Ember CLI Deploy is a deployment pipeline that keeps your deploy logic maintainable and reusable.',
+    documentationUrl: 'http://ember-cli-deploy.com/',
+    howToInstall: 'ember install ember-cli-deploy',
+    title: 'Deploy',
+  },
+];
+
 interface IndexEmberAddonsSignature {
   Args: {};
 }
 
 export default class IndexEmberAddons extends Component<IndexEmberAddonsSignature> {
   @tracked currentTabId = 0;
-
-  emberAddons = [
-    {
-      description:
-        'Ember Concurrency is an Ember addon that makes state management a whole lot easier with useful primitives.',
-      documentationUrl: 'http://ember-concurrency.com/',
-      howToInstall: 'ember install ember-concurrency',
-      title: 'Manage State',
-    },
-    {
-      description:
-        'Ember Simple Auth is an Ember addon with minimal requirements, supporting all kinds of authentication and authorization mechanisms.',
-      documentationUrl: 'https://ember-simple-auth.com/',
-      howToInstall: 'ember install ember-simple-auth',
-      title: 'Authenticate',
-    },
-    {
-      description:
-        'Internationalize your Ember apps with an addon that provides support for 150+ languages with locale-aware dates and time formatting.',
-      documentationUrl: 'https://ember-intl.github.io/ember-intl/',
-      howToInstall: 'ember install ember-intl',
-      title: 'Translate',
-    },
-    {
-      description:
-        'Ember CLI Deploy is a deployment pipeline that keeps your deploy logic maintainable and reusable.',
-      documentationUrl: 'http://ember-cli-deploy.com/',
-      howToInstall: 'ember install ember-cli-deploy',
-      title: 'Deploy',
-    },
-  ];
 
   @action updateCurrentTabId(tabId: number): void {
     this.currentTabId = tabId;
@@ -73,7 +73,7 @@ export default class IndexEmberAddons extends Component<IndexEmberAddonsSignatur
   <template>
     <div class="addon-tabs">
       <div class="addon-tabs--header" role="tablist">
-        {{#each this.emberAddons as |emberAddon index|}}
+        {{#each emberAddons as |emberAddon index|}}
           <IndexEmberAddonsTab
             @currentTabId={{this.currentTabId}}
             @label={{emberAddon.title}}
@@ -85,7 +85,7 @@ export default class IndexEmberAddons extends Component<IndexEmberAddonsSignatur
       </div>
 
       <div>
-        {{#each this.emberAddons as |emberAddon index|}}
+        {{#each emberAddons as |emberAddon index|}}
           <IndexEmberAddonsPanel
             @currentTabId={{this.currentTabId}}
             @tabId={{index}}

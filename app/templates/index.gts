@@ -230,7 +230,7 @@ import WindowSvg from 'ember-website/components/window-svg';
   >
     <div class="container layout">
       <div class="lg:col-3 lg:start-4 text-center ecosystem-icons-container">
-        <IndexGridDots @color="#444444" />
+        <IndexGridDots />
         <IndexEmberEcosystem />
       </div>
 

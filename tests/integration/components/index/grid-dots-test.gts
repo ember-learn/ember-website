@@ -9,6 +9,6 @@ module('Integration | Component | index/grid-dots', function (hooks) {
   test('it renders', async function (assert) {
     await render(<template><IndexGridDots /></template>);
 
-    assert.ok(true);
+    assert.dom('svg').exists();
   });
 });
