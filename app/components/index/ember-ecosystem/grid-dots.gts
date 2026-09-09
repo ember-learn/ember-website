@@ -1,6 +1,6 @@
 import type { TOC } from '@ember/component/template-only';
 
-interface IndexGridDotsSignature {
+interface IndexEmberEcosystemGridDotsSignature {
   Args: {};
 }
 
@@ -32,4 +32,4 @@ interface IndexGridDotsSignature {
       />
     </svg>
   </div>
-</template> satisfies TOC<IndexGridDotsSignature>;
+</template> satisfies TOC<IndexEmberEcosystemGridDotsSignature>;

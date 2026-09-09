@@ -1,4 +1,5 @@
 import type { TOC } from '@ember/component/template-only';
+import IndexEmberEcosystemGridDots from 'ember-website/components/index/ember-ecosystem/grid-dots';
 import IndexEmberEcosystemImage from 'ember-website/components/index/ember-ecosystem/image';
 
 interface IndexEmberEcosystemSignature {
@@ -6,6 +7,8 @@ interface IndexEmberEcosystemSignature {
 }
 
 <template>
+  <IndexEmberEcosystemGridDots />
+
   <div class="ecosystem-icons">
     <IndexEmberEcosystemImage
       @alt="Babel"

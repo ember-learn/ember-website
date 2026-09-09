@@ -8,7 +8,6 @@ import CommunityTrends from 'ember-website/components/community-trends';
 import IndexEmberAddons from 'ember-website/components/index/ember-addons';
 import IndexEmberCommunityPhotos from 'ember-website/components/index/ember-community-photos';
 import IndexEmberEcosystem from 'ember-website/components/index/ember-ecosystem';
-import IndexGridDots from 'ember-website/components/index/grid-dots';
 import WindowSvg from 'ember-website/components/window-svg';
 
 <template>
@@ -230,7 +229,6 @@ import WindowSvg from 'ember-website/components/window-svg';
   >
     <div class="container layout">
       <div class="lg:col-3 lg:start-4 text-center ecosystem-icons-container">
-        <IndexGridDots />
         <IndexEmberEcosystem />
       </div>
 
