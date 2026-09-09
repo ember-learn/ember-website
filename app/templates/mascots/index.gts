@@ -14,6 +14,7 @@ interface MascotsIndexSignature {
 
 <template>
   {{pageTitle "Mascots"}}
+
   <section aria-label="Mascots" class="container">
     <h1>Tomster and Zoey</h1>
     <p>

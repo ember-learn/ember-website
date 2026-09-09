@@ -3,6 +3,7 @@ import { pageTitle } from 'ember-page-title';
 
 <template>
   {{pageTitle "Legal"}}
+
   <section class="container" aria-labelledby="legal">
     <h1 id="legal">Legal</h1>
     <p>

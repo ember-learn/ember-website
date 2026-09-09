@@ -17,6 +17,7 @@ interface CommunityMeetupsIndexSignature {
 
 <template>
   {{pageTitle "Meetups"}}
+
   <div class="container">
     <h1 class="mb-3">Meetups Around the World</h1>
 

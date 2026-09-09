@@ -2,6 +2,7 @@ import { pageTitle } from 'ember-page-title';
 
 <template>
   {{pageTitle "Community Guidelines"}}
+
   <div class="container layout">
     <section class="lg:col-5" aria-labelledby="guidelines">
       <h1 id="guidelines">Ember Community Guidelines</h1>

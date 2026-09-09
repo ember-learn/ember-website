@@ -3,6 +3,7 @@ import { pageTitle } from 'ember-page-title';
 
 <template>
   {{pageTitle "Getting Started"}}
+
   <section
     class="container"
     aria-labelledby="getting-your-meetup-up-and-running"

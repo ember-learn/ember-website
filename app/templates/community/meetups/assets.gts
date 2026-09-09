@@ -3,6 +3,7 @@ import { pageTitle } from 'ember-page-title';
 
 <template>
   {{pageTitle "Assets"}}
+
   <section class="container" aria-labelledby="ember-meetup-resources">
     <h1 id="ember-meetup-resources">
       Ember Meetup Resources

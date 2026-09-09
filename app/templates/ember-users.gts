@@ -12,6 +12,7 @@ interface EmberUsersSignature {
 
 <template>
   {{pageTitle "Who's Using Ember.js"}}
+
   <section class="container" aria-labelledby="ember-users">
     <div class="layout">
       <div class="lg:col-4 lg:start-2 text-center text-muted mb-5">

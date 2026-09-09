@@ -11,7 +11,7 @@ interface IndexEmberAddonsSignature {
   Args: {};
 }
 
-export default class IndexEmberAddonsComponent extends Component<IndexEmberAddonsSignature> {
+export default class IndexEmberAddons extends Component<IndexEmberAddonsSignature> {
   @tracked currentTabId = 0;
 
   emberAddons = [

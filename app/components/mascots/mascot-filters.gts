@@ -6,7 +6,7 @@ interface MascotsMascotFiltersSignature {
   Args: {};
 }
 
-export default class MascotsMascotFiltersComponent extends Component<MascotsMascotFiltersSignature> {
+export default class MascotsMascotFilters extends Component<MascotsMascotFiltersSignature> {
   displayFilters = [
     {
       label: 'Small',

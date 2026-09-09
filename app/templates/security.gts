@@ -2,6 +2,7 @@ import { pageTitle } from 'ember-page-title';
 
 <template>
   {{pageTitle "Security"}}
+
   <div class="container layout">
     <section class="lg:col-5" aria-labelledby="section-reporting-a-bug">
       <h1>Ember.js Security Policy</h1>

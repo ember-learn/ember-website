@@ -4,6 +4,7 @@ import EsCard from 'ember-styleguide/components/es-card';
 
 <template>
   {{pageTitle "Browser Support"}}
+
   <div class="container layout">
     <section aria-labelledby="section-browser-support-policy">
       <h1 id="section-browser-support-policy">Ember.js Browser Support Policy</h1>

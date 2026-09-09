@@ -15,6 +15,7 @@ interface LearnIndexSignature {
 
 <template>
   {{pageTitle "Learn"}}
+
   <div class="container" aria-labelledby="learning-emberjs">
     <h1 id="learning-emberjs">Learning Ember.js</h1>
 

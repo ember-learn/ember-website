@@ -8,7 +8,7 @@ interface IndexGridDotsSignature {
   };
 }
 
-export default class GridDotsComponent extends Component<IndexGridDotsSignature> {
+export default class IndexGridDots extends Component<IndexGridDotsSignature> {
   get id(): string {
     return guidFor(this);
   }
