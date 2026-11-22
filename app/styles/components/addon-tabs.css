@@ -1,4 +1,4 @@
-/* stylelint-disable alpha-value-notation, color-function-notation, prettier/prettier, selector-class-pattern */
+/* stylelint-disable alpha-value-notation, color-function-notation, media-feature-range-notation, prettier/prettier, selector-class-pattern */
 .addon-tabs {
   background: linear-gradient(
     0deg,
@@ -30,6 +30,13 @@
   margin: 0;
   margin-left: -1px;
   padding: 0 var(--spacing-1);
+}
+
+@media (max-width: 360px) {
+  .addon-tabs--tab {
+    font-size: 0.8125rem;
+    padding: 0 4px;
+  }
 }
 
 .addon-tabs--tab.active-tab {
